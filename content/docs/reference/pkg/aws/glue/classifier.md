@@ -62,7 +62,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+		_, err = glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
 			CsvClassifier: &glue.ClassifierCsvClassifierArgs{
 				AllowSingleColumn:    pulumi.Bool(false),
 				ContainsHeader:       pulumi.String("PRESENT"),
@@ -164,7 +164,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+		_, err = glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
 			GrokClassifier: &glue.ClassifierGrokClassifierArgs{
 				Classification: pulumi.String("example"),
 				GrokPattern:    pulumi.String("example"),
@@ -244,7 +244,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+		_, err = glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
 			JsonClassifier: &glue.ClassifierJsonClassifierArgs{
 				JsonPath: pulumi.String("example"),
 			},
@@ -322,7 +322,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+		_, err = glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
 			XmlClassifier: &glue.ClassifierXmlClassifierArgs{
 				Classification: pulumi.String("example"),
 				RowTag:         pulumi.String("example"),

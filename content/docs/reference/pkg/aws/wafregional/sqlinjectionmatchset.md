@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		sqlInjectionMatchSet, err := wafregional.NewSqlInjectionMatchSet(ctx, "sqlInjectionMatchSet", &wafregional.SqlInjectionMatchSetArgs{
+		_, err = wafregional.NewSqlInjectionMatchSet(ctx, "sqlInjectionMatchSet", &wafregional.SqlInjectionMatchSetArgs{
 			SqlInjectionMatchTuples: wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleArray{
 				&wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleArgs{
 					FieldToMatch: &wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs{

@@ -142,6 +142,91 @@ class MyStack : Stack
 }
 ```
 
+## Specify Lambda permissions for API Gateway REST API
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
+    description: "This is my API for demonstration purposes",
+});
+const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
+    action: "lambda:InvokeFunction",
+    function: "MyDemoFunction",
+    principal: "apigateway.amazonaws.com",
+    sourceArn: pulumi.interpolate`${myDemoAPI.executionArn}/*/*/*`,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+lambda_permission = aws.lambda_.Permission("lambdaPermission",
+    action="lambda:InvokeFunction",
+    function="MyDemoFunction",
+    principal="apigateway.amazonaws.com",
+    source_arn=my_demo_api.execution_arn.apply(lambda execution_arn: f"{execution_arn}/*/*/*"))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+        var lambdaPermission = new Aws.Lambda.Permission("lambdaPermission", new Aws.Lambda.PermissionArgs
+        {
+            Action = "lambda:InvokeFunction",
+            Function = "MyDemoFunction",
+            Principal = "apigateway.amazonaws.com",
+            SourceArn = myDemoAPI.ExecutionArn.Apply(executionArn => $"{executionArn}/*/*/*"),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+			Description: pulumi.String("This is my API for demonstration purposes"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lambda.NewPermission(ctx, "lambdaPermission", &lambda.PermissionArgs{
+			Action:    pulumi.String("lambda:InvokeFunction"),
+			Function:  pulumi.String("MyDemoFunction"),
+			Principal: pulumi.String("apigateway.amazonaws.com"),
+			SourceArn: myDemoAPI.ExecutionArn.ApplyT(func(executionArn string) (string, error) {
+				return fmt.Sprintf("%v%v", executionArn, "/*/*/*"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a Permission Resource {#create}

@@ -69,7 +69,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		foo, err := route53.NewResolverEndpoint(ctx, "foo", &route53.ResolverEndpointArgs{
+		_, err = route53.NewResolverEndpoint(ctx, "foo", &route53.ResolverEndpointArgs{
 			Direction: pulumi.String("INBOUND"),
 			IpAddresses: route53.ResolverEndpointIpAddressArray{
 				&route53.ResolverEndpointIpAddressArgs{
@@ -84,8 +84,8 @@ func main() {
 				pulumi.String(aws_security_group.Sg1.Id),
 				pulumi.String(aws_security_group.Sg2.Id),
 			},
-			Tags: map[string]interface{}{
-				"Environment": "Prod",
+			Tags: pulumi.Map{
+				"Environment": pulumi.String("Prod"),
 			},
 		})
 		if err != nil {

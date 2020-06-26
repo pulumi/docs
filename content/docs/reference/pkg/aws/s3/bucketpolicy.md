@@ -12,6 +12,145 @@ meta_desc: "Explore the BucketPolicy resource of the s3 module, including exampl
 
 Attaches a policy to an S3 bucket resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Usage
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
+        var bucketPolicy = new Aws.S3.BucketPolicy("bucketPolicy", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = bucket.Id,
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Id"": ""MYBUCKETPOLICY"",
+  ""Statement"": [
+    {
+      ""Sid"": ""IPAllow"",
+      ""Effect"": ""Deny"",
+      ""Principal"": ""*"",
+      ""Action"": ""s3:*"",
+      ""Resource"": ""arn:aws:s3:::my_tf_test_bucket/*"",
+      ""Condition"": {
+         ""IpAddress"": {""aws:SourceIp"": ""8.8.8.8/32""}
+      }
+    }
+  ]
+}
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
+			Bucket: bucket.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"MYBUCKETPOLICY\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"IPAllow\",\n", "      \"Effect\": \"Deny\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"s3:*\",\n", "      \"Resource\": \"arn:aws:s3:::my_tf_test_bucket/*\",\n", "      \"Condition\": {\n", "         \"IpAddress\": {\"aws:SourceIp\": \"8.8.8.8/32\"}\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket")
+bucket_policy = aws.s3.BucketPolicy("bucketPolicy",
+    bucket=bucket.id,
+    policy="""{
+  "Version": "2012-10-17",
+  "Id": "MYBUCKETPOLICY",
+  "Statement": [
+    {
+      "Sid": "IPAllow",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": "arn:aws:s3:::my_tf_test_bucket/*",
+      "Condition": {
+         "IpAddress": {"aws:SourceIp": "8.8.8.8/32"}
+      }
+    }
+  ]
+}
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("b", {});
+const bucketPolicy = new aws.s3.BucketPolicy("b", {
+    bucket: bucket.id,
+    policy: `{
+  "Version": "2012-10-17",
+  "Id": "MYBUCKETPOLICY",
+  "Statement": [
+    {
+      "Sid": "IPAllow",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": "arn:aws:s3:::my_tf_test_bucket/*",
+      "Condition": {
+         "IpAddress": {"aws:SourceIp": "8.8.8.8/32"}
+      }
+    }
+  ]
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BucketPolicy Resource {#create}

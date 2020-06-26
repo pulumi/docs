@@ -18,6 +18,213 @@ Provides an AWS Config Rule.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### AWS Managed Rules
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rule = new Aws.Cfg.Rule("rule", new Aws.Cfg.RuleArgs
+        {
+            Source = new Aws.Cfg.Inputs.RuleSourceArgs
+            {
+                Owner = "AWS",
+                SourceIdentifier = "S3_BUCKET_VERSIONING_ENABLED",
+            },
+        });
+        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""config.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var foo = new Aws.Cfg.Recorder("foo", new Aws.Cfg.RecorderArgs
+        {
+            RoleArn = role.Arn,
+        });
+        var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+  	{
+  		""Action"": ""config:Put*"",
+  		""Effect"": ""Allow"",
+  		""Resource"": ""*""
+
+  	}
+  ]
+}
+
+",
+            Role = role.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
+			Source: &cfg.RuleSourceArgs{
+				Owner:            pulumi.String("AWS"),
+				SourceIdentifier: pulumi.String("S3_BUCKET_VERSIONING_ENABLED"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cfg.NewRecorder(ctx, "foo", &cfg.RecorderArgs{
+			RoleArn: role.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "  	{\n", "  		\"Action\": \"config:Put*\",\n", "  		\"Effect\": \"Allow\",\n", "  		\"Resource\": \"*\"\n", "\n", "  	}\n", "  ]\n", "}\n", "\n")),
+			Role: role.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+rule = aws.cfg.Rule("rule", source={
+    "owner": "AWS",
+    "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
+})
+role = aws.iam.Role("role", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+foo = aws.cfg.Recorder("foo", role_arn=role.arn)
+role_policy = aws.iam.RolePolicy("rolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+  	{
+  		"Action": "config:Put*",
+  		"Effect": "Allow",
+  		"Resource": "*"
+
+  	}
+  ]
+}
+
+""",
+    role=role.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const role = new aws.iam.Role("r", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const foo = new aws.cfg.Recorder("foo", {
+    roleArn: role.arn,
+});
+const rule = new aws.cfg.Rule("r", {
+    source: {
+        owner: "AWS",
+        sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
+    },
+}, { dependsOn: [foo] });
+const rolePolicy = new aws.iam.RolePolicy("p", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+  	{
+  		"Action": "config:Put*",
+  		"Effect": "Allow",
+  		"Resource": "*"
+
+  	}
+  ]
+}
+`,
+    role: role.id,
+});
+```
+
+{{% /example %}}
+
 ### Custom Rules
 {{% example csharp %}}
 ```csharp
@@ -67,7 +274,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleRecorder, err := cfg.NewRecorder(ctx, "exampleRecorder", nil)
+		_, err = cfg.NewRecorder(ctx, "exampleRecorder", nil)
 		if err != nil {
 			return err
 		}
@@ -75,7 +282,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+		_, err = lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
 			Function:  exampleFunction.Arn,
 			Principal: pulumi.String("config.amazonaws.com"),
@@ -83,7 +290,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleRule, err := cfg.NewRule(ctx, "exampleRule", &cfg.RuleArgs{
+		_, err = cfg.NewRule(ctx, "exampleRule", &cfg.RuleArgs{
 			Source: &cfg.RuleSourceArgs{
 				Owner:            pulumi.String("CUSTOM_LAMBDA"),
 				SourceIdentifier: exampleFunction.Arn,

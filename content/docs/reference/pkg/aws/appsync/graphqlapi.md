@@ -48,7 +48,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("API_KEY"),
 		})
 		if err != nil {
@@ -122,7 +122,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("AMAZON_COGNITO_USER_POOLS"),
 			UserPoolConfig: &appsync.GraphQLApiUserPoolConfigArgs{
 				AwsRegion:     pulumi.String(data.Aws_region.Current.Name),
@@ -206,7 +206,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("AWS_IAM"),
 		})
 		if err != nil {
@@ -237,6 +237,101 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.appsync.GraphQLApi("example", {
     authenticationType: "AWS_IAM",
+});
+```
+
+{{% /example %}}
+
+### With Schema
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "AWS_IAM",
+            Schema = @"schema {
+	query: Query
+}
+type Query {
+  test: Int
+}
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+			AuthenticationType: pulumi.String("AWS_IAM"),
+			Schema: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "schema {\n", "	query: Query\n", "}\n", "type Query {\n", "  test: Int\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.appsync.GraphQLApi("example",
+    authentication_type="AWS_IAM",
+    schema="""schema {
+	query: Query
+}
+type Query {
+  test: Int
+}
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.appsync.GraphQLApi("example", {
+    authenticationType: "AWS_IAM",
+    schema: `schema {
+	query: Query
+}
+type Query {
+  test: Int
+}
+`,
 });
 ```
 
@@ -278,7 +373,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("OPENID_CONNECT"),
 			OpenidConnectConfig: &appsync.GraphQLApiOpenidConnectConfigArgs{
 				Issuer: pulumi.String("https://example.com"),
@@ -363,7 +458,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
+		_, err = appsync.NewGraphQLApi(ctx, "example", &appsync.GraphQLApiArgs{
 			AdditionalAuthenticationProviders: appsync.GraphQLApiAdditionalAuthenticationProviderArray{
 				&appsync.GraphQLApiAdditionalAuthenticationProviderArgs{
 					AuthenticationType: pulumi.String("AWS_IAM"),
@@ -406,6 +501,161 @@ const example = new aws.appsync.GraphQLApi("example", {
         authenticationType: "AWS_IAM",
     }],
     authenticationType: "API_KEY",
+});
+```
+
+{{% /example %}}
+
+### Enabling Logging
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+    ""Version"": ""2012-10-17"",
+    ""Statement"": [
+        {
+        ""Effect"": ""Allow"",
+        ""Principal"": {
+            ""Service"": ""appsync.amazonaws.com""
+        },
+        ""Action"": ""sts:AssumeRole""
+        }
+    ]
+}
+
+",
+        });
+        var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
+            Role = exampleRole.Name,
+        });
+        var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+        {
+            LogConfig = new Aws.AppSync.Inputs.GraphQLApiLogConfigArgs
+            {
+                CloudwatchLogsRoleArn = exampleRole.Arn,
+                FieldLogLevel = "ERROR",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\n", "            \"Service\": \"appsync.amazonaws.com\"\n", "        },\n", "        \"Action\": \"sts:AssumeRole\"\n", "        }\n", "    ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "exampleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs"),
+			Role:      exampleRole.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+			LogConfig: &appsync.GraphQLApiLogConfigArgs{
+				CloudwatchLogsRoleArn: exampleRole.Arn,
+				FieldLogLevel:         pulumi.String("ERROR"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "appsync.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+""")
+example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
+    role=example_role.name)
+example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", log_config={
+    "cloudwatchLogsRoleArn": example_role.arn,
+    "fieldLogLevel": "ERROR",
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleRole = new aws.iam.Role("example", {
+    assumeRolePolicy: `{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "appsync.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+        }
+    ]
+}
+`,
+});
+const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("example", {
+    policyArn: "arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
+    role: exampleRole.name,
+});
+const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
+    logConfig: {
+        cloudwatchLogsRoleArn: exampleRole.arn,
+        fieldLogLevel: "ERROR",
+    },
 });
 ```
 

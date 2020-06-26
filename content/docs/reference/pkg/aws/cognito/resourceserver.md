@@ -56,7 +56,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		resource, err := cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
+		_, err = cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
 			Identifier: pulumi.String("https://example.com"),
 			UserPoolId: pool.ID(),
 		})
@@ -146,7 +146,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		resource, err := cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
+		_, err = cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
 			Identifier: pulumi.String("https://example.com"),
 			Scopes: cognito.ResourceServerScopeArray{
 				&cognito.ResourceServerScopeArgs{

@@ -60,8 +60,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "s3"
 		s3, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
-			Service: "s3",
+			Service: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -72,7 +73,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ep, err := ec2.NewVpcEndpoint(ctx, "ep", &ec2.VpcEndpointArgs{
+		_, err = ec2.NewVpcEndpoint(ctx, "ep", &ec2.VpcEndpointArgs{
 			ServiceName: pulumi.String(s3.ServiceName),
 			VpcId:       foo.ID(),
 		})
@@ -151,13 +152,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		custome, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
-			ServiceName: "com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8",
+		opt0 := "com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8"
+		_, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
+			ServiceName: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -228,14 +231,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
-			Filters: ec2.getVpcEndpointServiceFilterArray{
-				&ec2.LookupVpcEndpointServiceFilter{
+		_, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
+			Filters: []ec2.GetVpcEndpointServiceFilter{
+				ec2.GetVpcEndpointServiceFilter{
 					Name: "service-name",
 					Values: []string{
 						"some-service",
@@ -553,6 +557,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
 </span> 
@@ -707,6 +722,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -869,6 +895,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span> 
@@ -1023,6 +1060,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"

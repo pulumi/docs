@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		example1, err := iam.NewUserGroupMembership(ctx, "example1", &iam.UserGroupMembershipArgs{
+		_, err = iam.NewUserGroupMembership(ctx, "example1", &iam.UserGroupMembershipArgs{
 			Groups: pulumi.StringArray{
 				group1.Name,
 				group2.Name,
@@ -104,7 +104,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		example2, err := iam.NewUserGroupMembership(ctx, "example2", &iam.UserGroupMembershipArgs{
+		_, err = iam.NewUserGroupMembership(ctx, "example2", &iam.UserGroupMembershipArgs{
 			Groups: pulumi.StringArray{
 				group3.Name,
 			},

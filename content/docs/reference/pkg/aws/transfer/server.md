@@ -12,6 +12,194 @@ meta_desc: "Explore the Server resource of the transfer module, including exampl
 
 Provides a AWS Transfer Server resource.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooRole = new aws.iam.Role("foo", {
+    assumeRolePolicy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+`,
+});
+const fooRolePolicy = new aws.iam.RolePolicy("foo", {
+    policy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Sid": "AllowFullAccesstoCloudWatchLogs",
+		"Effect": "Allow",
+		"Action": [
+			"logs:*"
+		],
+		"Resource": "*"
+		}
+	]
+}
+`,
+    role: fooRole.id,
+});
+const fooServer = new aws.transfer.Server("foo", {
+    identityProviderType: "SERVICE_MANAGED",
+    loggingRole: fooRole.arn,
+    tags: {
+        ENV: "test",
+        NAME: "tf-acc-test-transfer-server",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+
+""")
+foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Sid": "AllowFullAccesstoCloudWatchLogs",
+		"Effect": "Allow",
+		"Action": [
+			"logs:*"
+		],
+		"Resource": "*"
+		}
+	]
+}
+
+""",
+    role=foo_role.id)
+foo_server = aws.transfer.Server("fooServer",
+    identity_provider_type="SERVICE_MANAGED",
+    logging_role=foo_role.arn,
+    tags={
+        "ENV": "test",
+        "NAME": "tf-acc-test-transfer-server",
+    })
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooRole = new Aws.Iam.Role("fooRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+		""Effect"": ""Allow"",
+		""Principal"": {
+			""Service"": ""transfer.amazonaws.com""
+		},
+		""Action"": ""sts:AssumeRole""
+		}
+	]
+}
+
+",
+        });
+        var fooRolePolicy = new Aws.Iam.RolePolicy("fooRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+		""Sid"": ""AllowFullAccesstoCloudWatchLogs"",
+		""Effect"": ""Allow"",
+		""Action"": [
+			""logs:*""
+		],
+		""Resource"": ""*""
+		}
+	]
+}
+
+",
+            Role = fooRole.Id,
+        });
+        var fooServer = new Aws.Transfer.Server("fooServer", new Aws.Transfer.ServerArgs
+        {
+            IdentityProviderType = "SERVICE_MANAGED",
+            LoggingRole = fooRole.Arn,
+            Tags = 
+            {
+                { "ENV", "test" },
+                { "NAME", "tf-acc-test-transfer-server" },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooRole, err := iam.NewRole(ctx, "fooRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Effect\": \"Allow\",\n", "		\"Principal\": {\n", "			\"Service\": \"transfer.amazonaws.com\"\n", "		},\n", "		\"Action\": \"sts:AssumeRole\"\n", "		}\n", "	]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "fooRolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Sid\": \"AllowFullAccesstoCloudWatchLogs\",\n", "		\"Effect\": \"Allow\",\n", "		\"Action\": [\n", "			\"logs:*\"\n", "		],\n", "		\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n", "\n")),
+			Role: fooRole.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = transfer.NewServer(ctx, "fooServer", &transfer.ServerArgs{
+			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
+			LoggingRole:          fooRole.Arn,
+			Tags: pulumi.Map{
+				"ENV":  pulumi.String("test"),
+				"NAME": pulumi.String("tf-acc-test-transfer-server"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a Server Resource {#create}

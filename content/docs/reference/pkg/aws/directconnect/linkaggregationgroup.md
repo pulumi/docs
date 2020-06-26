@@ -52,7 +52,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		hoge, err := directconnect.NewLinkAggregationGroup(ctx, "hoge", &directconnect.LinkAggregationGroupArgs{
+		_, err = directconnect.NewLinkAggregationGroup(ctx, "hoge", &directconnect.LinkAggregationGroupArgs{
 			ConnectionsBandwidth: pulumi.String("1Gbps"),
 			ForceDestroy:         pulumi.Bool(true),
 			Location:             pulumi.String("EqDC2"),

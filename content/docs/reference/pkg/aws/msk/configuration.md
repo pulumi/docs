@@ -14,6 +14,99 @@ Manages an Amazon Managed Streaming for Kafka configuration. More information ca
 
 > **NOTE:** The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Msk.Configuration("example", new Aws.Msk.ConfigurationArgs
+        {
+            KafkaVersions = 
+            {
+                "2.1.0",
+            },
+            ServerProperties = @"auto.create.topics.enable = true
+delete.topic.enable = true
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = msk.NewConfiguration(ctx, "example", &msk.ConfigurationArgs{
+			KafkaVersions: pulumi.StringArray{
+				pulumi.String("2.1.0"),
+			},
+			ServerProperties: pulumi.String(fmt.Sprintf("%v%v%v", "auto.create.topics.enable = true\n", "delete.topic.enable = true\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.msk.Configuration("example",
+    kafka_versions=["2.1.0"],
+    server_properties="""auto.create.topics.enable = true
+delete.topic.enable = true
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.msk.Configuration("example", {
+    kafkaVersions: ["2.1.0"],
+    serverProperties: `auto.create.topics.enable = true
+delete.topic.enable = true
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Configuration Resource {#create}

@@ -51,7 +51,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
+		_, err = storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
 			DiskId:     pulumi.String(data.Aws_storagegateway_local_disk.Example.Id),
 			GatewayArn: pulumi.String(aws_storagegateway_gateway.Example.Arn),
 		})

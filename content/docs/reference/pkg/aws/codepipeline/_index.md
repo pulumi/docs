@@ -24,7 +24,7 @@ Explore the resources and functions of the codepipeline module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.10.1</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 

@@ -15,6 +15,204 @@ allows processing and analyzing streaming data using standard SQL.
 
 For more details, see the [Amazon Kinesis Analytics Documentation](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testStream = new Aws.Kinesis.Stream("testStream", new Aws.Kinesis.StreamArgs
+        {
+            ShardCount = 1,
+        });
+        var testApplication = new Aws.Kinesis.AnalyticsApplication("testApplication", new Aws.Kinesis.AnalyticsApplicationArgs
+        {
+            Inputs = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsArgs
+            {
+                KinesisStream = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamArgs
+                {
+                    ResourceArn = testStream.Arn,
+                    RoleArn = aws_iam_role.Test.Arn,
+                },
+                NamePrefix = "test_prefix",
+                Parallelism = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismArgs
+                {
+                    Count = 1,
+                },
+                Schema = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaArgs
+                {
+                    RecordColumns = 
+                    {
+                        new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordColumnArgs
+                        {
+                            Mapping = "$.test",
+                            Name = "test",
+                            SqlType = "VARCHAR(8)",
+                        },
+                    },
+                    RecordEncoding = "UTF-8",
+                    RecordFormat = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs
+                    {
+                        MappingParameters = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs
+                        {
+                            Json = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs
+                            {
+                                RecordRowPath = "$",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testStream, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
+			ShardCount: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kinesis.NewAnalyticsApplication(ctx, "testApplication", &kinesis.AnalyticsApplicationArgs{
+			Inputs: &kinesis.AnalyticsApplicationInputsArgs{
+				KinesisStream: &kinesis.AnalyticsApplicationInputsKinesisStreamArgs{
+					ResourceArn: testStream.Arn,
+					RoleArn:     pulumi.String(aws_iam_role.Test.Arn),
+				},
+				NamePrefix: pulumi.String("test_prefix"),
+				Parallelism: &kinesis.AnalyticsApplicationInputsParallelismArgs{
+					Count: pulumi.Int(1),
+				},
+				Schema: &kinesis.AnalyticsApplicationInputsSchemaArgs{
+					RecordColumns: kinesis.AnalyticsApplicationInputsSchemaRecordColumnArray{
+						&kinesis.AnalyticsApplicationInputsSchemaRecordColumnArgs{
+							Mapping: pulumi.String(fmt.Sprintf("%v%v", "$", ".test")),
+							Name:    pulumi.String("test"),
+							SqlType: pulumi.String("VARCHAR(8)"),
+						},
+					},
+					RecordEncoding: pulumi.String("UTF-8"),
+					RecordFormat: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatArgs{
+						MappingParameters: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs{
+							Json: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs{
+								RecordRowPath: pulumi.String("$"),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_stream = aws.kinesis.Stream("testStream", shard_count=1)
+test_application = aws.kinesis.AnalyticsApplication("testApplication", inputs={
+    "kinesisStream": {
+        "resource_arn": test_stream.arn,
+        "role_arn": aws_iam_role["test"]["arn"],
+    },
+    "name_prefix": "test_prefix",
+    "parallelism": {
+        "count": 1,
+    },
+    "schema": {
+        "recordColumns": [{
+            "mapping": "$.test",
+            "name": "test",
+            "sqlType": "VARCHAR(8)",
+        }],
+        "recordEncoding": "UTF-8",
+        "recordFormat": {
+            "mappingParameters": {
+                "json": {
+                    "recordRowPath": "$",
+                },
+            },
+        },
+    },
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testStream = new aws.kinesis.Stream("test_stream", {
+    shardCount: 1,
+});
+const testApplication = new aws.kinesis.AnalyticsApplication("test_application", {
+    inputs: {
+        kinesisStream: {
+            resourceArn: testStream.arn,
+            roleArn: aws_iam_role_test.arn,
+        },
+        namePrefix: "test_prefix",
+        parallelism: {
+            count: 1,
+        },
+        schema: {
+            recordColumns: [{
+                mapping: "$.test",
+                name: "test",
+                sqlType: "VARCHAR(8)",
+            }],
+            recordEncoding: "UTF-8",
+            recordFormat: {
+                mappingParameters: {
+                    json: {
+                        recordRowPath: "$",
+                    },
+                },
+            },
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsApplication Resource {#create}
@@ -2687,8 +2885,8 @@ See Processing Configuration below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="lambda__python">
-<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
+        <span id="lambda_python">
+<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda]</a></span>
@@ -4093,8 +4291,8 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda__python">
-<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
+        <span id="lambda_python">
+<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></span>

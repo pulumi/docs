@@ -61,7 +61,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ec, err := sagemaker.NewEndpointConfiguration(ctx, "ec", &sagemaker.EndpointConfigurationArgs{
+		_, err = sagemaker.NewEndpointConfiguration(ctx, "ec", &sagemaker.EndpointConfigurationArgs{
 			ProductionVariants: sagemaker.EndpointConfigurationProductionVariantArray{
 				&sagemaker.EndpointConfigurationProductionVariantArgs{
 					InitialInstanceCount: pulumi.Int(1),
@@ -70,8 +70,8 @@ func main() {
 					VariantName:          pulumi.String("variant-1"),
 				},
 			},
-			Tags: map[string]interface{}{
-				"Name": "foo",
+			Tags: pulumi.Map{
+				"Name": pulumi.String("foo"),
 			},
 		})
 		if err != nil {

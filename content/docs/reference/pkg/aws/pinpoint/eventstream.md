@@ -12,6 +12,230 @@ meta_desc: "Explore the EventStream resource of the pinpoint module, including e
 
 Provides a Pinpoint Event Stream resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+        {
+        });
+        var testStream = new Aws.Kinesis.Stream("testStream", new Aws.Kinesis.StreamArgs
+        {
+            ShardCount = 1,
+        });
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""pinpoint.us-east-1.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var stream = new Aws.Pinpoint.EventStream("stream", new Aws.Pinpoint.EventStreamArgs
+        {
+            ApplicationId = app.ApplicationId,
+            DestinationStreamArn = testStream.Arn,
+            RoleArn = testRole.Arn,
+        });
+        var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": {
+    ""Action"": [
+      ""kinesis:PutRecords"",
+      ""kinesis:DescribeStream""
+    ],
+    ""Effect"": ""Allow"",
+    ""Resource"": [
+      ""arn:aws:kinesis:us-east-1:*:*/*""
+    ]
+  }
+}
+
+",
+            Role = testRole.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/pinpoint"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		app, err := pinpoint.NewApp(ctx, "app", nil)
+		if err != nil {
+			return err
+		}
+		testStream, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
+			ShardCount: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.us-east-1.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pinpoint.NewEventStream(ctx, "stream", &pinpoint.EventStreamArgs{
+			ApplicationId:        app.ApplicationId,
+			DestinationStreamArn: testStream.Arn,
+			RoleArn:              testRole.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"kinesis:PutRecords\",\n", "      \"kinesis:DescribeStream\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"arn:aws:kinesis:us-east-1:*:*/*\"\n", "    ]\n", "  }\n", "}\n", "\n")),
+			Role:   testRole.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+app = aws.pinpoint.App("app")
+test_stream = aws.kinesis.Stream("testStream", shard_count=1)
+test_role = aws.iam.Role("testRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "pinpoint.us-east-1.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+stream = aws.pinpoint.EventStream("stream",
+    application_id=app.application_id,
+    destination_stream_arn=test_stream.arn,
+    role_arn=test_role.arn)
+test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Action": [
+      "kinesis:PutRecords",
+      "kinesis:DescribeStream"
+    ],
+    "Effect": "Allow",
+    "Resource": [
+      "arn:aws:kinesis:us-east-1:*:*/*"
+    ]
+  }
+}
+
+""",
+    role=test_role.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const app = new aws.pinpoint.App("app", {});
+const testStream = new aws.kinesis.Stream("test_stream", {
+    shardCount: 1,
+});
+const testRole = new aws.iam.Role("test_role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "pinpoint.us-east-1.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const stream = new aws.pinpoint.EventStream("stream", {
+    applicationId: app.applicationId,
+    destinationStreamArn: testStream.arn,
+    roleArn: testRole.arn,
+});
+const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Action": [
+      "kinesis:PutRecords",
+      "kinesis:DescribeStream"
+    ],
+    "Effect": "Allow",
+    "Resource": [
+      "arn:aws:kinesis:us-east-1:*:*/*"
+    ]
+  }
+}
+`,
+    role: testRole.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventStream Resource {#create}

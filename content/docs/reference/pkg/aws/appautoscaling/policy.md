@@ -77,7 +77,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		dynamodbTableReadPolicy, err := appautoscaling.NewPolicy(ctx, "dynamodbTableReadPolicy", &appautoscaling.PolicyArgs{
+		_, err = appautoscaling.NewPolicy(ctx, "dynamodbTableReadPolicy", &appautoscaling.PolicyArgs{
 			PolicyType:        pulumi.String("TargetTrackingScaling"),
 			ResourceId:        dynamodbTableReadTarget.ResourceId,
 			ScalableDimension: dynamodbTableReadTarget.ScalableDimension,
@@ -221,7 +221,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ecsPolicy, err := appautoscaling.NewPolicy(ctx, "ecsPolicy", &appautoscaling.PolicyArgs{
+		_, err = appautoscaling.NewPolicy(ctx, "ecsPolicy", &appautoscaling.PolicyArgs{
 			PolicyType:        pulumi.String("StepScaling"),
 			ResourceId:        ecsTarget.ResourceId,
 			ScalableDimension: ecsTarget.ScalableDimension,
@@ -230,9 +230,9 @@ func main() {
 				AdjustmentType:        pulumi.String("ChangeInCapacity"),
 				Cooldown:              pulumi.Int(60),
 				MetricAggregationType: pulumi.String("Maximum"),
-				StepAdjustment: []map[string]interface{}{
-					map[string]interface{}{
-						"metricIntervalUpperBound": 0,
+				StepAdjustment: pulumi.MapArray{
+					pulumi.Map{
+						"metricIntervalUpperBound": pulumi.Float64(0),
 						"scalingAdjustment":        -1,
 					},
 				},
@@ -303,6 +303,154 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
             metricIntervalUpperBound: "0",
             scalingAdjustment: -1,
         }],
+    },
+});
+```
+
+{{% /example %}}
+
+### Aurora Read Replica Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicasTarget = new Aws.AppAutoScaling.Target("replicasTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 15,
+            MinCapacity = 1,
+            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
+            ScalableDimension = "rds:cluster:ReadReplicaCount",
+            ServiceNamespace = "rds",
+        });
+        var replicasPolicy = new Aws.AppAutoScaling.Policy("replicasPolicy", new Aws.AppAutoScaling.PolicyArgs
+        {
+            PolicyType = "TargetTrackingScaling",
+            ResourceId = replicasTarget.ResourceId,
+            ScalableDimension = replicasTarget.ScalableDimension,
+            ServiceNamespace = replicasTarget.ServiceNamespace,
+            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+            {
+                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+                {
+                    PredefinedMetricType = "RDSReaderAverageCPUUtilization",
+                },
+                ScaleInCooldown = 300,
+                ScaleOutCooldown = 300,
+                TargetValue = 75,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		replicasTarget, err := appautoscaling.NewTarget(ctx, "replicasTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(15),
+			MinCapacity:       pulumi.Int(1),
+			ResourceId:        pulumi.String(fmt.Sprintf("%v%v", "cluster:", aws_rds_cluster.Example.Id)),
+			ScalableDimension: pulumi.String("rds:cluster:ReadReplicaCount"),
+			ServiceNamespace:  pulumi.String("rds"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appautoscaling.NewPolicy(ctx, "replicasPolicy", &appautoscaling.PolicyArgs{
+			PolicyType:        pulumi.String("TargetTrackingScaling"),
+			ResourceId:        replicasTarget.ResourceId,
+			ScalableDimension: replicasTarget.ScalableDimension,
+			ServiceNamespace:  replicasTarget.ServiceNamespace,
+			TargetTrackingScalingPolicyConfiguration: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs{
+				PredefinedMetricSpecification: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs{
+					PredefinedMetricType: pulumi.String("RDSReaderAverageCPUUtilization"),
+				},
+				ScaleInCooldown:  pulumi.Int(300),
+				ScaleOutCooldown: pulumi.Int(300),
+				TargetValue:      pulumi.Float64(75),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+replicas_target = aws.appautoscaling.Target("replicasTarget",
+    max_capacity=15,
+    min_capacity=1,
+    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    scalable_dimension="rds:cluster:ReadReplicaCount",
+    service_namespace="rds")
+replicas_policy = aws.appautoscaling.Policy("replicasPolicy",
+    policy_type="TargetTrackingScaling",
+    resource_id=replicas_target.resource_id,
+    scalable_dimension=replicas_target.scalable_dimension,
+    service_namespace=replicas_target.service_namespace,
+    target_tracking_scaling_policy_configuration={
+        "predefinedMetricSpecification": {
+            "predefinedMetricType": "RDSReaderAverageCPUUtilization",
+        },
+        "scaleInCooldown": 300,
+        "scaleOutCooldown": 300,
+        "targetValue": 75,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const replicasTarget = new aws.appautoscaling.Target("replicas", {
+    maxCapacity: 15,
+    minCapacity: 1,
+    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
+    scalableDimension: "rds:cluster:ReadReplicaCount",
+    serviceNamespace: "rds",
+});
+const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
+    policyType: "TargetTrackingScaling",
+    resourceId: replicasTarget.resourceId,
+    scalableDimension: replicasTarget.scalableDimension,
+    serviceNamespace: replicasTarget.serviceNamespace,
+    targetTrackingScalingPolicyConfiguration: {
+        predefinedMetricSpecification: {
+            predefinedMetricType: "RDSReaderAverageCPUUtilization",
+        },
+        scaleInCooldown: 300,
+        scaleOutCooldown: 300,
+        targetValue: 75,
     },
 });
 ```

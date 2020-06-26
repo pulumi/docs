@@ -65,7 +65,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := wafv2.NewRegexPatternSet(ctx, "example", &wafv2.RegexPatternSetArgs{
+		_, err = wafv2.NewRegexPatternSet(ctx, "example", &wafv2.RegexPatternSetArgs{
 			Description: pulumi.String("Example regex pattern set"),
 			RegularExpressions: wafv2.RegexPatternSetRegularExpressionArray{
 				&wafv2.RegexPatternSetRegularExpressionArgs{
@@ -76,9 +76,9 @@ func main() {
 				},
 			},
 			Scope: pulumi.String("REGIONAL"),
-			Tags: map[string]interface{}{
-				"Tag1": "Value1",
-				"Tag2": "Value2",
+			Tags: pulumi.Map{
+				"Tag1": pulumi.String("Value1"),
+				"Tag2": pulumi.String("Value2"),
 			},
 		})
 		if err != nil {

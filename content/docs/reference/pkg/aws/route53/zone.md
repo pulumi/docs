@@ -47,7 +47,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := route53.NewZone(ctx, "primary", nil)
+		_, err = route53.NewZone(ctx, "primary", nil)
 		if err != nil {
 			return err
 		}
@@ -121,7 +121,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := route53.NewZone(ctx, "main", nil)
+		if err != nil {
+			return err
+		}
+		dev, err := route53.NewZone(ctx, "dev", &route53.ZoneArgs{
+			Tags: pulumi.Map{
+				"Environment": pulumi.String("dev"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = route53.NewRecord(ctx, "dev-ns", &route53.RecordArgs{
+			Name: pulumi.String("dev.example.com"),
+			Records: pulumi.StringArray{
+				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
+					return nameServers[0], nil
+				}).(pulumi.StringOutput),
+				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
+					return nameServers[1], nil
+				}).(pulumi.StringOutput),
+				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
+					return nameServers[2], nil
+				}).(pulumi.StringOutput),
+				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
+					return nameServers[3], nil
+				}).(pulumi.StringOutput),
+			},
+			Ttl:    pulumi.Int(30),
+			Type:   pulumi.String("NS"),
+			ZoneId: main.ZoneId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -214,7 +263,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		private, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
+		_, err = route53.NewZone(ctx, "private", &route53.ZoneArgs{
 			Vpcs: route53.ZoneVpcArray{
 				&route53.ZoneVpcArgs{
 					VpcId: pulumi.String(aws_vpc.Example.Id),

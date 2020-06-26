@@ -52,14 +52,17 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := lb.LookupLoadBalancer(ctx, &lb.LookupLoadBalancerArgs{
-			Arn:  lbArn,
-			Name: lbName,
+		opt0 := lbArn
+		opt1 := lbName
+		_, err := lb.LookupLoadBalancer(ctx, &lb.LookupLoadBalancerArgs{
+			Arn:  &opt0,
+			Name: &opt1,
 		}, nil)
 		if err != nil {
 			return err

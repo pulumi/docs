@@ -71,7 +71,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb, err := appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
+		_, err = appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualRouterSpecArgs{
 				Listener: &appmesh.VirtualRouterSpecListenerArgs{

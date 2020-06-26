@@ -2462,6 +2462,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourcegroupstaggingapi_csharp">
+<a href="#resourcegroupstaggingapi_csharp" style="color: inherit; text-decoration: inherit;">Resourcegroupstaggingapi</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="route53_csharp">
 <a href="#route53_csharp" style="color: inherit; text-decoration: inherit;">Route53</a>
 </span> 
@@ -3861,6 +3871,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcegroups_go">
 <a href="#resourcegroups_go" style="color: inherit; text-decoration: inherit;">Resourcegroups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupstaggingapi_go">
+<a href="#resourcegroupstaggingapi_go" style="color: inherit; text-decoration: inherit;">Resourcegroupstaggingapi</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -5276,6 +5296,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourcegroupstaggingapi_nodejs">
+<a href="#resourcegroupstaggingapi_nodejs" style="color: inherit; text-decoration: inherit;">resourcegroupstaggingapi</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="route53_nodejs">
 <a href="#route53_nodejs" style="color: inherit; text-decoration: inherit;">route53</a>
 </span> 
@@ -6393,8 +6423,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda__python">
-<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
+        <span id="lambda_python">
+<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6675,6 +6705,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcegroups_python">
 <a href="#resourcegroups_python" style="color: inherit; text-decoration: inherit;">resourcegroups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupstaggingapi_python">
+<a href="#resourcegroupstaggingapi_python" style="color: inherit; text-decoration: inherit;">resourcegroupstaggingapi</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

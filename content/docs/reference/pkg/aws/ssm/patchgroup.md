@@ -64,7 +64,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		patchgroup, err := ssm.NewPatchGroup(ctx, "patchgroup", &ssm.PatchGroupArgs{
+		_, err = ssm.NewPatchGroup(ctx, "patchgroup", &ssm.PatchGroupArgs{
 			BaselineId: production.ID(),
 			PatchGroup: pulumi.String("patch-group-name"),
 		})

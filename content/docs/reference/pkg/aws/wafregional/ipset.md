@@ -60,7 +60,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
+		_, err = wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
 			IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
 				&wafregional.IpSetIpSetDescriptorArgs{
 					Type:  pulumi.String("IPV4"),

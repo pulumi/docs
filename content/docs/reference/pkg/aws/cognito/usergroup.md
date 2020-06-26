@@ -12,6 +12,183 @@ meta_desc: "Explore the UserGroup resource of the cognito module, including exam
 
 Provides a Cognito User Group resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainUserPool = new Aws.Cognito.UserPool("mainUserPool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var groupRole = new Aws.Iam.Role("groupRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Sid"": """",
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Federated"": ""cognito-identity.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRoleWithWebIdentity"",
+      ""Condition"": {
+        ""StringEquals"": {
+          ""cognito-identity.amazonaws.com:aud"": ""us-east-1:12345678-dead-beef-cafe-123456790ab""
+        },
+        ""ForAnyValue:StringLike"": {
+          ""cognito-identity.amazonaws.com:amr"": ""authenticated""
+        }
+      }
+    }
+  ]
+}
+
+",
+        });
+        var mainUserGroup = new Aws.Cognito.UserGroup("mainUserGroup", new Aws.Cognito.UserGroupArgs
+        {
+            Description = "Managed by Pulumi",
+            Precedence = 42,
+            RoleArn = groupRole.Arn,
+            UserPoolId = mainUserPool.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainUserPool, err := cognito.NewUserPool(ctx, "mainUserPool", nil)
+		if err != nil {
+			return err
+		}
+		groupRole, err := iam.NewRole(ctx, "groupRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Federated\": \"cognito-identity.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRoleWithWebIdentity\",\n", "      \"Condition\": {\n", "        \"StringEquals\": {\n", "          \"cognito-identity.amazonaws.com:aud\": \"us-east-1:12345678-dead-beef-cafe-123456790ab\"\n", "        },\n", "        \"ForAnyValue:StringLike\": {\n", "          \"cognito-identity.amazonaws.com:amr\": \"authenticated\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cognito.NewUserGroup(ctx, "mainUserGroup", &cognito.UserGroupArgs{
+			Description: pulumi.String("Managed by Pulumi"),
+			Precedence:  pulumi.Int(42),
+			RoleArn:     groupRole.Arn,
+			UserPoolId:  mainUserPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+main_user_pool = aws.cognito.UserPool("mainUserPool")
+group_role = aws.iam.Role("groupRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "cognito-identity.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "cognito-identity.amazonaws.com:aud": "us-east-1:12345678-dead-beef-cafe-123456790ab"
+        },
+        "ForAnyValue:StringLike": {
+          "cognito-identity.amazonaws.com:amr": "authenticated"
+        }
+      }
+    }
+  ]
+}
+
+""")
+main_user_group = aws.cognito.UserGroup("mainUserGroup",
+    description="Managed by Pulumi",
+    precedence=42,
+    role_arn=group_role.arn,
+    user_pool_id=main_user_pool.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mainUserPool = new aws.cognito.UserPool("main", {});
+const groupRole = new aws.iam.Role("group_role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "cognito-identity.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "cognito-identity.amazonaws.com:aud": "us-east-1:12345678-dead-beef-cafe-123456790ab"
+        },
+        "ForAnyValue:StringLike": {
+          "cognito-identity.amazonaws.com:amr": "authenticated"
+        }
+      }
+    }
+  ]
+}
+`,
+});
+const mainUserGroup = new aws.cognito.UserGroup("main", {
+    description: "Managed by Pulumi",
+    precedence: 42,
+    roleArn: groupRole.arn,
+    userPoolId: mainUserPool.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserGroup Resource {#create}

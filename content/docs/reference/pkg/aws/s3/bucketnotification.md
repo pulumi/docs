@@ -14,6 +14,559 @@ Manages a S3 Bucket Notification Configuration. For additional information, see 
 
 > **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example "Trigger multiple Lambda functions" for an option.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Add notification configuration to SNS Topic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
+        var topic = new Aws.Sns.Topic("topic", new Aws.Sns.TopicArgs
+        {
+            Policy = bucket.Arn.Apply(arn => @$"{{
+    ""Version"":""2012-10-17"",
+    ""Statement"":[{{
+        ""Effect"": ""Allow"",
+        ""Principal"": {{""AWS"":""*""}},
+        ""Action"": ""SNS:Publish"",
+        ""Resource"": ""arn:aws:sns:*:*:s3-event-notification-topic"",
+        ""Condition"":{{
+            ""ArnLike"":{{""aws:SourceArn"":""{arn}""}}
+        }}
+    }}]
+}}
+
+"),
+        });
+        var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+        {
+            Bucket = bucket.Id,
+            Topics = 
+            {
+                new Aws.S3.Inputs.BucketNotificationTopicArgs
+                {
+                    Events = 
+                    {
+                        "s3:ObjectCreated:*",
+                    },
+                    FilterSuffix = ".log",
+                    TopicArn = topic.Arn,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
+			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\"AWS\":\"*\"},\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+			Bucket: bucket.ID(),
+			Topics: s3.BucketNotificationTopicArray{
+				&s3.BucketNotificationTopicArgs{
+					Events: pulumi.StringArray{
+						pulumi.String("s3:ObjectCreated:*"),
+					},
+					FilterSuffix: pulumi.String(".log"),
+					TopicArn:     topic.Arn,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket")
+topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
+    "Version":"2012-10-17",
+    "Statement":[{{
+        "Effect": "Allow",
+        "Principal": {{"AWS":"*"}},
+        "Action": "SNS:Publish",
+        "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
+        "Condition":{{
+            "ArnLike":{{"aws:SourceArn":"{arn}"}}
+        }}
+    }}]
+}}
+
+"""))
+bucket_notification = aws.s3.BucketNotification("bucketNotification",
+    bucket=bucket.id,
+    topics=[{
+        "events": ["s3:ObjectCreated:*"],
+        "filterSuffix": ".log",
+        "topic_arn": topic.arn,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("bucket", {});
+const topic = new aws.sns.Topic("topic", {
+    policy: pulumi.interpolate`{
+    "Version":"2012-10-17",
+    "Statement":[{
+        "Effect": "Allow",
+        "Principal": {"AWS":"*"},
+        "Action": "SNS:Publish",
+        "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
+        "Condition":{
+            "ArnLike":{"aws:SourceArn":"${bucket.arn}"}
+        }
+    }]
+}
+`,
+});
+const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+    bucket: bucket.id,
+    topics: [{
+        events: ["s3:ObjectCreated:*"],
+        filterSuffix: ".log",
+        topicArn: topic.arn,
+    }],
+});
+```
+
+{{% /example %}}
+
+### Add notification configuration to SQS Queue
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+            Policy = bucket.Arn.Apply(arn => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"": ""Allow"",
+      ""Principal"": ""*"",
+      ""Action"": ""sqs:SendMessage"",
+	  ""Resource"": ""arn:aws:sqs:*:*:s3-event-notification-queue"",
+      ""Condition"": {{
+        ""ArnEquals"": {{ ""aws:SourceArn"": ""{arn}"" }}
+      }}
+    }}
+  ]
+}}
+
+"),
+        });
+        var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+        {
+            Bucket = bucket.Id,
+            Queues = 
+            {
+                new Aws.S3.Inputs.BucketNotificationQueueArgs
+                {
+                    Events = 
+                    {
+                        "s3:ObjectCreated:*",
+                    },
+                    FilterSuffix = ".log",
+                    QueueArn = queue.Arn,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sqs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+			Bucket: bucket.ID(),
+			Queues: s3.BucketNotificationQueueArray{
+				&s3.BucketNotificationQueueArgs{
+					Events: pulumi.StringArray{
+						pulumi.String("s3:ObjectCreated:*"),
+					},
+					FilterSuffix: pulumi.String(".log"),
+					QueueArn:     queue.Arn,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket")
+queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+      "Condition": {{
+        "ArnEquals": {{ "aws:SourceArn": "{arn}" }}
+      }}
+    }}
+  ]
+}}
+
+"""))
+bucket_notification = aws.s3.BucketNotification("bucketNotification",
+    bucket=bucket.id,
+    queues=[{
+        "events": ["s3:ObjectCreated:*"],
+        "filterSuffix": ".log",
+        "queueArn": queue.arn,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("bucket", {});
+const queue = new aws.sqs.Queue("queue", {
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
+      }
+    }
+  ]
+}
+`,
+});
+const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+    bucket: bucket.id,
+    queues: [{
+        events: ["s3:ObjectCreated:*"],
+        filterSuffix: ".log",
+        queueArn: queue.arn,
+    }],
+});
+```
+
+{{% /example %}}
+
+### Add multiple notification configurations to SQS Queue
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+            Policy = bucket.Arn.Apply(arn => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"": ""Allow"",
+      ""Principal"": ""*"",
+      ""Action"": ""sqs:SendMessage"",
+	  ""Resource"": ""arn:aws:sqs:*:*:s3-event-notification-queue"",
+      ""Condition"": {{
+        ""ArnEquals"": {{ ""aws:SourceArn"": ""{arn}"" }}
+      }}
+    }}
+  ]
+}}
+
+"),
+        });
+        var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+        {
+            Bucket = bucket.Id,
+            Queues = 
+            {
+                new Aws.S3.Inputs.BucketNotificationQueueArgs
+                {
+                    Events = 
+                    {
+                        "s3:ObjectCreated:*",
+                    },
+                    FilterPrefix = "images/",
+                    Id = "image-upload-event",
+                    QueueArn = queue.Arn,
+                },
+                new Aws.S3.Inputs.BucketNotificationQueueArgs
+                {
+                    Events = 
+                    {
+                        "s3:ObjectCreated:*",
+                    },
+                    FilterPrefix = "videos/",
+                    Id = "video-upload-event",
+                    QueueArn = queue.Arn,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sqs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+			Bucket: bucket.ID(),
+			Queues: s3.BucketNotificationQueueArray{
+				&s3.BucketNotificationQueueArgs{
+					Events: pulumi.StringArray{
+						pulumi.String("s3:ObjectCreated:*"),
+					},
+					FilterPrefix: pulumi.String("images/"),
+					Id:           pulumi.String("image-upload-event"),
+					QueueArn:     queue.Arn,
+				},
+				&s3.BucketNotificationQueueArgs{
+					Events: pulumi.StringArray{
+						pulumi.String("s3:ObjectCreated:*"),
+					},
+					FilterPrefix: pulumi.String("videos/"),
+					Id:           pulumi.String("video-upload-event"),
+					QueueArn:     queue.Arn,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket")
+queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+      "Condition": {{
+        "ArnEquals": {{ "aws:SourceArn": "{arn}" }}
+      }}
+    }}
+  ]
+}}
+
+"""))
+bucket_notification = aws.s3.BucketNotification("bucketNotification",
+    bucket=bucket.id,
+    queues=[
+        {
+            "events": ["s3:ObjectCreated:*"],
+            "filterPrefix": "images/",
+            "id": "image-upload-event",
+            "queueArn": queue.arn,
+        },
+        {
+            "events": ["s3:ObjectCreated:*"],
+            "filterPrefix": "videos/",
+            "id": "video-upload-event",
+            "queueArn": queue.arn,
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("bucket", {});
+const queue = new aws.sqs.Queue("queue", {
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
+      }
+    }
+  ]
+}
+`,
+});
+const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+    bucket: bucket.id,
+    queues: [
+        {
+            events: ["s3:ObjectCreated:*"],
+            filterPrefix: "images/",
+            id: "image-upload-event",
+            queueArn: queue.arn,
+        },
+        {
+            events: ["s3:ObjectCreated:*"],
+            filterPrefix: "videos/",
+            id: "video-upload-event",
+            queueArn: queue.arn,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BucketNotification Resource {#create}

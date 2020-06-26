@@ -59,7 +59,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		channel, err := pinpoint.NewBaiduChannel(ctx, "channel", &pinpoint.BaiduChannelArgs{
+		_, err = pinpoint.NewBaiduChannel(ctx, "channel", &pinpoint.BaiduChannelArgs{
 			ApiKey:        pulumi.String(""),
 			ApplicationId: app.ApplicationId,
 			SecretKey:     pulumi.String(""),

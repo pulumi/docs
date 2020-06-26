@@ -71,7 +71,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		barNetworkAclRule, err := ec2.NewNetworkAclRule(ctx, "barNetworkAclRule", &ec2.NetworkAclRuleArgs{
+		_, err = ec2.NewNetworkAclRule(ctx, "barNetworkAclRule", &ec2.NetworkAclRuleArgs{
 			NetworkAclId: barNetworkAcl.ID(),
 			RuleNumber:   pulumi.Int(200),
 			Egress:       pulumi.Bool(false),

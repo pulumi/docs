@@ -64,7 +64,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		testCluster, err := redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
+		_, err = redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
 			SnapshotCopy: &redshift.ClusterSnapshotCopyArgs{
 				DestinationRegion: pulumi.String("us-east-2"),
 				GrantName:         testSnapshotCopyGrant.SnapshotCopyGrantName,

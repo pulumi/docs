@@ -57,7 +57,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
+		_, err = athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
 			Bucket: hogeBucket.Bucket,
 			Name:   pulumi.String("database_name"),
 		})

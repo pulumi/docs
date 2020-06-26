@@ -91,7 +91,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleService, err := servicediscovery.NewService(ctx, "exampleService", &servicediscovery.ServiceArgs{
+		_, err = servicediscovery.NewService(ctx, "exampleService", &servicediscovery.ServiceArgs{
 			DnsConfig: &servicediscovery.ServiceDnsConfigArgs{
 				DnsRecords: servicediscovery.ServiceDnsConfigDnsRecordArray{
 					&servicediscovery.ServiceDnsConfigDnsRecordArgs{

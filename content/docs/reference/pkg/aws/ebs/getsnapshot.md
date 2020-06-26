@@ -65,27 +65,29 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ebsVolume, err := ebs.LookupSnapshot(ctx, &ebs.LookupSnapshotArgs{
-			Filters: ebs.getSnapshotFilterArray{
-				&ebs.LookupSnapshotFilter{
+		opt0 := true
+		_, err := ebs.LookupSnapshot(ctx, &ebs.LookupSnapshotArgs{
+			Filters: []ebs.GetSnapshotFilter{
+				ebs.GetSnapshotFilter{
 					Name: "volume-size",
 					Values: []string{
 						"40",
 					},
 				},
-				&ebs.LookupSnapshotFilter{
+				ebs.GetSnapshotFilter{
 					Name: "tag:Name",
 					Values: []string{
 						"Example",
 					},
 				},
 			},
-			MostRecent: true,
+			MostRecent: &opt0,
 			Owners: []string{
 				"self",
 			},
@@ -501,6 +503,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the EBS Snapshot.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dataencryptionkeyid_csharp">
 <a href="#dataencryptionkeyid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Encryption<wbr>Key<wbr>Id</a>
 </span> 
@@ -687,6 +700,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the EBS Snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -879,6 +903,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the EBS Snapshot.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dataencryptionkeyid_nodejs">
 <a href="#dataencryptionkeyid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encryption<wbr>Key<wbr>Id</a>
 </span> 
@@ -1065,6 +1100,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the EBS Snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

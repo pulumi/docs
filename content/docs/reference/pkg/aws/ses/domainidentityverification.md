@@ -18,6 +18,134 @@ deploy the required DNS verification records, and wait for verification to compl
 
 > **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ses.DomainIdentity("example", new Aws.Ses.DomainIdentityArgs
+        {
+            Domain = "example.com",
+        });
+        var exampleAmazonsesVerificationRecord = new Aws.Route53.Record("exampleAmazonsesVerificationRecord", new Aws.Route53.RecordArgs
+        {
+            Name = example.Id.Apply(id => $"_amazonses.{id}"),
+            Records = 
+            {
+                example.VerificationToken,
+            },
+            Ttl = 600,
+            Type = "TXT",
+            ZoneId = aws_route53_zone.Example.Zone_id,
+        });
+        var exampleVerification = new Aws.Ses.DomainIdentityVerification("exampleVerification", new Aws.Ses.DomainIdentityVerificationArgs
+        {
+            Domain = example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ses.NewDomainIdentity(ctx, "example", &ses.DomainIdentityArgs{
+			Domain: pulumi.String("example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = route53.NewRecord(ctx, "exampleAmazonsesVerificationRecord", &route53.RecordArgs{
+			Name: example.ID().ApplyT(func(id string) (string, error) {
+				return fmt.Sprintf("%v%v", "_amazonses.", id), nil
+			}).(pulumi.StringOutput),
+			Records: pulumi.StringArray{
+				example.VerificationToken,
+			},
+			Ttl:    pulumi.Int(600),
+			Type:   pulumi.String("TXT"),
+			ZoneId: pulumi.String(aws_route53_zone.Example.Zone_id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ses.NewDomainIdentityVerification(ctx, "exampleVerification", &ses.DomainIdentityVerificationArgs{
+			Domain: example.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ses.DomainIdentity("example", domain="example.com")
+example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVerificationRecord",
+    name=example.id.apply(lambda id: f"_amazonses.{id}"),
+    records=[example.verification_token],
+    ttl="600",
+    type="TXT",
+    zone_id=aws_route53_zone["example"]["zone_id"])
+example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ses.DomainIdentity("example", {
+    domain: "example.com",
+});
+const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazonses_verification_record", {
+    name: pulumi.interpolate`_amazonses.${example.id}`,
+    records: [example.verificationToken],
+    ttl: 600,
+    type: "TXT",
+    zoneId: aws_route53_zone_example.zoneId,
+});
+const exampleVerification = new aws.ses.DomainIdentityVerification("example_verification", {
+    domain: example.id,
+}, { dependsOn: [exampleAmazonsesVerificationRecord] });
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainIdentityVerification Resource {#create}

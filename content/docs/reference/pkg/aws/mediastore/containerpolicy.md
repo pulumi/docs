@@ -34,11 +34,11 @@ class MyStack : Stack
         var exampleContainerPolicy = new Aws.MediaStore.ContainerPolicy("exampleContainerPolicy", new Aws.MediaStore.ContainerPolicyArgs
         {
             ContainerName = exampleContainer.Name,
-            Policy = Output.Tuple(currentCallerIdentity, currentCallerIdentity, currentRegion, exampleContainer.Name).Apply(values =>
+            Policy = Output.Tuple(currentCallerIdentity, currentRegion, currentCallerIdentity, exampleContainer.Name).Apply(values =>
             {
                 var currentCallerIdentity = values.Item1;
-                var currentCallerIdentity1 = values.Item2;
-                var currentRegion = values.Item3;
+                var currentRegion = values.Item2;
+                var currentCallerIdentity1 = values.Item3;
                 var name = values.Item4;
                 return @$"{{
 	""Version"": ""2012-10-17"",
@@ -47,7 +47,7 @@ class MyStack : Stack
 		""Action"": [ ""mediastore:*"" ],
 		""Principal"": {{""AWS"" : ""arn:aws:iam::{currentCallerIdentity.AccountId}:root""}},
 		""Effect"": ""Allow"",
-		""Resource"": ""arn:aws:mediastore:{currentCallerIdentity1.AccountId}:{currentRegion.Name}:container/{name}/*"",
+		""Resource"": ""arn:aws:mediastore:{currentRegion.Name}:{currentCallerIdentity1.AccountId}:container/{name}/*"",
 		""Condition"": {{
 			""Bool"": {{ ""aws:SecureTransport"": ""true"" }}
 		}}
@@ -65,7 +65,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediastore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := mediastore.NewContainer(ctx, "exampleContainer", nil)
+		if err != nil {
+			return err
+		}
+		_, err = mediastore.NewContainerPolicy(ctx, "exampleContainerPolicy", &mediastore.ContainerPolicyArgs{
+			ContainerName: exampleContainer.Name,
+			Policy: exampleContainer.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [{\n", "		\"Sid\": \"MediaStoreFullAccess\",\n", "		\"Action\": [ \"mediastore:*\" ],\n", "		\"Principal\": {\"AWS\" : \"arn:aws:iam::", currentCallerIdentity.AccountId, ":root\"},\n", "		\"Effect\": \"Allow\",\n", "		\"Resource\": \"arn:aws:mediastore:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":container/", name, "/*\",\n", "		\"Condition\": {\n", "			\"Bool\": { \"aws:SecureTransport\": \"true\" }\n", "		}\n", "	}]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,7 +123,7 @@ example_container_policy = aws.mediastore.ContainerPolicy("exampleContainerPolic
 		"Action": [ "mediastore:*" ],
 		"Principal": {{"AWS" : "arn:aws:iam::{current_caller_identity.account_id}:root"}},
 		"Effect": "Allow",
-		"Resource": "arn:aws:mediastore:{current_caller_identity.account_id}:{current_region.name}:container/{name}/*",
+		"Resource": "arn:aws:mediastore:{current_region.name}:{current_caller_identity.account_id}:container/{name}/*",
 		"Condition": {{
 			"Bool": {{ "aws:SecureTransport": "true" }}
 		}}
@@ -115,7 +153,7 @@ const exampleContainerPolicy = new aws.mediastore.ContainerPolicy("example", {
 		"Action": [ "mediastore:*" ],
 		"Principal": {"AWS" : "arn:aws:iam::${currentCallerIdentity.accountId}:root"},
 		"Effect": "Allow",
-		"Resource": "arn:aws:mediastore:${currentCallerIdentity.accountId}:${currentRegion.name!}:container/${exampleContainer.name}/*",
+		"Resource": "arn:aws:mediastore:${currentRegion.name!}:${currentCallerIdentity.accountId}:container/${exampleContainer.name}/*",
 		"Condition": {
 			"Bool": { "aws:SecureTransport": "true" }
 		}

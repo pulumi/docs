@@ -60,13 +60,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		testLambdaAlias, err := lambda.NewAlias(ctx, "testLambdaAlias", &lambda.AliasArgs{
+		_, err = lambda.NewAlias(ctx, "testLambdaAlias", &lambda.AliasArgs{
 			Description:     pulumi.String("a sample description"),
 			FunctionName:    pulumi.String(aws_lambda_function.Lambda_function_test.Arn),
 			FunctionVersion: pulumi.String("1"),
 			RoutingConfig: &lambda.AliasRoutingConfigArgs{
-				AdditionalVersionWeights: map[string]interface{}{
-					"2": 0.5,
+				AdditionalVersionWeights: pulumi.Map{
+					"2": pulumi.Float64(0.5),
 				},
 			},
 		})

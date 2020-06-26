@@ -253,6 +253,135 @@ const bar = new aws.autoscaling.Group("bar", {
 
 {{% /example %}}
 
+### With Latest Version Of Launch Template
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Aws.Ec2.LaunchTemplate("foobar", new Aws.Ec2.LaunchTemplateArgs
+        {
+            ImageId = "ami-1a2b3c",
+            InstanceType = "t2.micro",
+            NamePrefix = "foobar",
+        });
+        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            DesiredCapacity = 1,
+            LaunchTemplate = new Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs
+            {
+                Id = foobar.Id,
+                Version = "$Latest",
+            },
+            MaxSize = 1,
+            MinSize = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foobar, err := ec2.NewLaunchTemplate(ctx, "foobar", &ec2.LaunchTemplateArgs{
+			ImageId:      pulumi.String("ami-1a2b3c"),
+			InstanceType: pulumi.String("t2.micro"),
+			NamePrefix:   pulumi.String("foobar"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = autoscaling.NewGroup(ctx, "bar", &autoscaling.GroupArgs{
+			AvailabilityZones: pulumi.StringArray{
+				pulumi.String("us-east-1a"),
+			},
+			DesiredCapacity: pulumi.Int(1),
+			LaunchTemplate: &autoscaling.GroupLaunchTemplateArgs{
+				Id:      foobar.ID(),
+				Version: pulumi.String(fmt.Sprintf("%v%v", "$", "Latest")),
+			},
+			MaxSize: pulumi.Int(1),
+			MinSize: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foobar = aws.ec2.LaunchTemplate("foobar",
+    image_id="ami-1a2b3c",
+    instance_type="t2.micro",
+    name_prefix="foobar")
+bar = aws.autoscaling.Group("bar",
+    availability_zones=["us-east-1a"],
+    desired_capacity=1,
+    launch_template={
+        "id": foobar.id,
+        "version": "$Latest",
+    },
+    max_size=1,
+    min_size=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foobar = new aws.ec2.LaunchTemplate("foobar", {
+    imageId: "ami-1a2b3c",
+    instanceType: "t2.micro",
+    namePrefix: "foobar",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    launchTemplate: {
+        id: foobar.id,
+        version: "$Latest",
+    },
+    maxSize: 1,
+    minSize: 1,
+});
+```
+
+{{% /example %}}
+
 ### Mixed Instances Policy
 {{% example csharp %}}
 ```csharp
@@ -329,7 +458,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleGroup, err := autoscaling.NewGroup(ctx, "exampleGroup", &autoscaling.GroupArgs{
+		_, err = autoscaling.NewGroup(ctx, "exampleGroup", &autoscaling.GroupArgs{
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-east-1a"),
 			},
@@ -341,14 +470,14 @@ func main() {
 					LaunchTemplateSpecification: &autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs{
 						LaunchTemplateId: exampleLaunchTemplate.ID(),
 					},
-					Override: []map[string]interface{}{
-						map[string]interface{}{
-							"instanceType":     "c4.large",
-							"weightedCapacity": "3",
+					Override: pulumi.MapArray{
+						pulumi.Map{
+							"instanceType":     pulumi.String("c4.large"),
+							"weightedCapacity": pulumi.String("3"),
 						},
-						map[string]interface{}{
-							"instanceType":     "c3.large",
-							"weightedCapacity": "2",
+						pulumi.Map{
+							"instanceType":     pulumi.String("c3.large"),
+							"weightedCapacity": pulumi.String("2"),
 						},
 					},
 				},

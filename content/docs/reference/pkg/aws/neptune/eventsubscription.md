@@ -124,7 +124,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultEventSubscription, err := neptune.NewEventSubscription(ctx, "defaultEventSubscription", &neptune.EventSubscriptionArgs{
+		_, err = neptune.NewEventSubscription(ctx, "defaultEventSubscription", &neptune.EventSubscriptionArgs{
 			EventCategories: pulumi.StringArray{
 				pulumi.String("maintenance"),
 				pulumi.String("availability"),
@@ -139,13 +139,13 @@ func main() {
 				pulumi.String("configuration change"),
 				pulumi.String("read replica"),
 			},
-			SnsTopicArn: pulumi.String(defaultTopic.Arn),
+			SnsTopicArn: defaultTopic.Arn,
 			SourceIds: pulumi.StringArray{
 				example.ID(),
 			},
 			SourceType: pulumi.String("db-instance"),
-			Tags: map[string]interface{}{
-				"env": "test",
+			Tags: pulumi.Map{
+				"env": pulumi.String("test"),
 			},
 		})
 		if err != nil {

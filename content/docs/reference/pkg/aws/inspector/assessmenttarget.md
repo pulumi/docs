@@ -57,15 +57,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		bar, err := inspector.NewResourceGroup(ctx, "bar", &inspector.ResourceGroupArgs{
-			Tags: map[string]interface{}{
-				"Env":  "bar",
-				"Name": "foo",
+			Tags: pulumi.Map{
+				"Env":  pulumi.String("bar"),
+				"Name": pulumi.String("foo"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		foo, err := inspector.NewAssessmentTarget(ctx, "foo", &inspector.AssessmentTargetArgs{
+		_, err = inspector.NewAssessmentTarget(ctx, "foo", &inspector.AssessmentTargetArgs{
 			ResourceGroupArn: bar.Arn,
 		})
 		if err != nil {

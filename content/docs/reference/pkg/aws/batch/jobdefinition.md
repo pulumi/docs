@@ -12,6 +12,181 @@ meta_desc: "Explore the JobDefinition resource of the batch module, including ex
 
 Provides a Batch Job Definition resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Batch.JobDefinition("test", new Aws.Batch.JobDefinitionArgs
+        {
+            ContainerProperties = @"{
+	""command"": [""ls"", ""-la""],
+	""image"": ""busybox"",
+	""memory"": 1024,
+	""vcpus"": 1,
+	""volumes"": [
+      {
+        ""host"": {
+          ""sourcePath"": ""/tmp""
+        },
+        ""name"": ""tmp""
+      }
+    ],
+	""environment"": [
+		{""name"": ""VARNAME"", ""value"": ""VARVAL""}
+	],
+	""mountPoints"": [
+		{
+          ""sourceVolume"": ""tmp"",
+          ""containerPath"": ""/tmp"",
+          ""readOnly"": false
+        }
+	],
+    ""ulimits"": [
+      {
+        ""hardLimit"": 1024,
+        ""name"": ""nofile"",
+        ""softLimit"": 1024
+      }
+    ]
+}
+
+",
+            Type = "container",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = batch.NewJobDefinition(ctx, "test", &batch.JobDefinitionArgs{
+			ContainerProperties: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"command\": [\"ls\", \"-la\"],\n", "	\"image\": \"busybox\",\n", "	\"memory\": 1024,\n", "	\"vcpus\": 1,\n", "	\"volumes\": [\n", "      {\n", "        \"host\": {\n", "          \"sourcePath\": \"/tmp\"\n", "        },\n", "        \"name\": \"tmp\"\n", "      }\n", "    ],\n", "	\"environment\": [\n", "		{\"name\": \"VARNAME\", \"value\": \"VARVAL\"}\n", "	],\n", "	\"mountPoints\": [\n", "		{\n", "          \"sourceVolume\": \"tmp\",\n", "          \"containerPath\": \"/tmp\",\n", "          \"readOnly\": false\n", "        }\n", "	],\n", "    \"ulimits\": [\n", "      {\n", "        \"hardLimit\": 1024,\n", "        \"name\": \"nofile\",\n", "        \"softLimit\": 1024\n", "      }\n", "    ]\n", "}\n", "\n")),
+			Type: pulumi.String("container"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.batch.JobDefinition("test",
+    container_properties="""{
+	"command": ["ls", "-la"],
+	"image": "busybox",
+	"memory": 1024,
+	"vcpus": 1,
+	"volumes": [
+      {
+        "host": {
+          "sourcePath": "/tmp"
+        },
+        "name": "tmp"
+      }
+    ],
+	"environment": [
+		{"name": "VARNAME", "value": "VARVAL"}
+	],
+	"mountPoints": [
+		{
+          "sourceVolume": "tmp",
+          "containerPath": "/tmp",
+          "readOnly": false
+        }
+	],
+    "ulimits": [
+      {
+        "hardLimit": 1024,
+        "name": "nofile",
+        "softLimit": 1024
+      }
+    ]
+}
+
+""",
+    type="container")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.batch.JobDefinition("test", {
+    containerProperties: `{
+	"command": ["ls", "-la"],
+	"image": "busybox",
+	"memory": 1024,
+	"vcpus": 1,
+	"volumes": [
+      {
+        "host": {
+          "sourcePath": "/tmp"
+        },
+        "name": "tmp"
+      }
+    ],
+	"environment": [
+		{"name": "VARNAME", "value": "VARVAL"}
+	],
+	"mountPoints": [
+		{
+          "sourceVolume": "tmp",
+          "containerPath": "/tmp",
+          "readOnly": false
+        }
+	],
+    "ulimits": [
+      {
+        "hardLimit": 1024,
+        "name": "nofile",
+        "softLimit": 1024
+      }
+    ]
+}
+`,
+    type: "container",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobDefinition Resource {#create}

@@ -99,7 +99,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		route, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
 			DestinationIpv6CidrBlock: pulumi.String("::/0"),
 			EgressOnlyGatewayId:      egress.ID(),
 			RouteTableId:             pulumi.String("rtb-4fbb3ac4"),
@@ -150,7 +150,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		route, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
 			RouteTableId:           pulumi.String("rtb-4fbb3ac4"),
 			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
 			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),

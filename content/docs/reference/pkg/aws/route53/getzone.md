@@ -14,6 +14,123 @@ meta_desc: "Explore the GetZone function of the route53 module, including exampl
 
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var selected = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+        {
+            Name = "test.com.",
+            PrivateZone = true,
+        }));
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            Name = selected.Apply(selected => $"www.{selected.Name}"),
+            Records = 
+            {
+                "10.0.0.1",
+            },
+            Ttl = 300,
+            Type = "A",
+            ZoneId = selected.Apply(selected => selected.ZoneId),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "test.com."
+		opt1 := true
+		selected, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
+			Name:        &opt0,
+			PrivateZone: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = route53.NewRecord(ctx, "www", &route53.RecordArgs{
+			Name: pulumi.String(fmt.Sprintf("%v%v", "www.", selected.Name)),
+			Records: pulumi.StringArray{
+				pulumi.String("10.0.0.1"),
+			},
+			Ttl:    pulumi.Int(300),
+			Type:   pulumi.String("A"),
+			ZoneId: pulumi.String(selected.ZoneId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+selected = aws.route53.get_zone(name="test.com.",
+    private_zone=True)
+www = aws.route53.Record("www",
+    name=f"www.{selected.name}",
+    records=["10.0.0.1"],
+    ttl="300",
+    type="A",
+    zone_id=selected.zone_id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const selected = pulumi.output(aws.route53.getZone({
+    name: "test.com.",
+    privateZone: true,
+}, { async: true }));
+const www = new aws.route53.Record("www", {
+    name: pulumi.interpolate`www.${selected.name!}`,
+    records: ["10.0.0.1"],
+    ttl: 300,
+    type: "A",
+    zoneId: selected.zoneId!,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZone {#using}

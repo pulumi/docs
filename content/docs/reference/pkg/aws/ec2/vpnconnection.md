@@ -77,7 +77,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleVpnConnection, err := ec2.NewVpnConnection(ctx, "exampleVpnConnection", &ec2.VpnConnectionArgs{
+		_, err = ec2.NewVpnConnection(ctx, "exampleVpnConnection", &ec2.VpnConnectionArgs{
 			CustomerGatewayId: exampleCustomerGateway.ID(),
 			TransitGatewayId:  exampleTransitGateway.ID(),
 			Type:              exampleCustomerGateway.Type,
@@ -200,7 +200,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		main, err := ec2.NewVpnConnection(ctx, "main", &ec2.VpnConnectionArgs{
+		_, err = ec2.NewVpnConnection(ctx, "main", &ec2.VpnConnectionArgs{
 			CustomerGatewayId: customerGateway.ID(),
 			StaticRoutesOnly:  pulumi.Bool(true),
 			Type:              pulumi.String("ipsec.1"),
@@ -928,6 +928,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="customergatewayconfiguration_csharp">
 <a href="#customergatewayconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Configuration</a>
 </span> 
@@ -1094,6 +1105,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1266,6 +1288,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="customergatewayconfiguration_nodejs">
 <a href="#customergatewayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Configuration</a>
 </span> 
@@ -1432,6 +1465,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1614,7 +1658,7 @@ Get an existing VpnConnection resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>customer_gateway_configuration=None<span class="p">, </span>customer_gateway_id=None<span class="p">, </span>routes=None<span class="p">, </span>static_routes_only=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>tunnel1_address=None<span class="p">, </span>tunnel1_bgp_asn=None<span class="p">, </span>tunnel1_bgp_holdtime=None<span class="p">, </span>tunnel1_cgw_inside_address=None<span class="p">, </span>tunnel1_inside_cidr=None<span class="p">, </span>tunnel1_preshared_key=None<span class="p">, </span>tunnel1_vgw_inside_address=None<span class="p">, </span>tunnel2_address=None<span class="p">, </span>tunnel2_bgp_asn=None<span class="p">, </span>tunnel2_bgp_holdtime=None<span class="p">, </span>tunnel2_cgw_inside_address=None<span class="p">, </span>tunnel2_inside_cidr=None<span class="p">, </span>tunnel2_preshared_key=None<span class="p">, </span>tunnel2_vgw_inside_address=None<span class="p">, </span>type=None<span class="p">, </span>vgw_telemetries=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>customer_gateway_configuration=None<span class="p">, </span>customer_gateway_id=None<span class="p">, </span>routes=None<span class="p">, </span>static_routes_only=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>tunnel1_address=None<span class="p">, </span>tunnel1_bgp_asn=None<span class="p">, </span>tunnel1_bgp_holdtime=None<span class="p">, </span>tunnel1_cgw_inside_address=None<span class="p">, </span>tunnel1_inside_cidr=None<span class="p">, </span>tunnel1_preshared_key=None<span class="p">, </span>tunnel1_vgw_inside_address=None<span class="p">, </span>tunnel2_address=None<span class="p">, </span>tunnel2_bgp_asn=None<span class="p">, </span>tunnel2_bgp_holdtime=None<span class="p">, </span>tunnel2_cgw_inside_address=None<span class="p">, </span>tunnel2_inside_cidr=None<span class="p">, </span>tunnel2_preshared_key=None<span class="p">, </span>tunnel2_vgw_inside_address=None<span class="p">, </span>type=None<span class="p">, </span>vgw_telemetries=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1727,6 +1771,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1999,6 +2054,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_customergatewayconfiguration_go">
 <a href="#state_customergatewayconfiguration_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Configuration</a>
 </span> 
@@ -2268,6 +2334,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_customergatewayconfiguration_nodejs">
 <a href="#state_customergatewayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Configuration</a>
 </span> 
@@ -2534,6 +2611,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

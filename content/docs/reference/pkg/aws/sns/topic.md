@@ -11,6 +11,114 @@ meta_desc: "Explore the Topic resource of the sns module, including examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an SNS topic resource
+## Example with Delivery Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdates = new aws.sns.Topic("user_updates", {
+    deliveryPolicy: `{
+  "http": {
+    "defaultHealthyRetryPolicy": {
+      "minDelayTarget": 20,
+      "maxDelayTarget": 20,
+      "numRetries": 3,
+      "numMaxDelayRetries": 0,
+      "numNoDelayRetries": 0,
+      "numMinDelayRetries": 0,
+      "backoffFunction": "linear"
+    },
+    "disableSubscriptionOverrides": false,
+    "defaultThrottlePolicy": {
+      "maxReceivesPerSecond": 1
+    }
+  }
+}
+`,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates = aws.sns.Topic("userUpdates", delivery_policy="""{
+  "http": {
+    "defaultHealthyRetryPolicy": {
+      "minDelayTarget": 20,
+      "maxDelayTarget": 20,
+      "numRetries": 3,
+      "numMaxDelayRetries": 0,
+      "numNoDelayRetries": 0,
+      "numMinDelayRetries": 0,
+      "backoffFunction": "linear"
+    },
+    "disableSubscriptionOverrides": false,
+    "defaultThrottlePolicy": {
+      "maxReceivesPerSecond": 1
+    }
+  }
+}
+
+""")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
+        {
+            DeliveryPolicy = @"{
+  ""http"": {
+    ""defaultHealthyRetryPolicy"": {
+      ""minDelayTarget"": 20,
+      ""maxDelayTarget"": 20,
+      ""numRetries"": 3,
+      ""numMaxDelayRetries"": 0,
+      ""numNoDelayRetries"": 0,
+      ""numMinDelayRetries"": 0,
+      ""backoffFunction"": ""linear""
+    },
+    ""disableSubscriptionOverrides"": false,
+    ""defaultThrottlePolicy"": {
+      ""maxReceivesPerSecond"": 1
+    }
+  }
+}
+
+",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+			DeliveryPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"http\": {\n", "    \"defaultHealthyRetryPolicy\": {\n", "      \"minDelayTarget\": 20,\n", "      \"maxDelayTarget\": 20,\n", "      \"numRetries\": 3,\n", "      \"numMaxDelayRetries\": 0,\n", "      \"numNoDelayRetries\": 0,\n", "      \"numMinDelayRetries\": 0,\n", "      \"backoffFunction\": \"linear\"\n", "    },\n", "    \"disableSubscriptionOverrides\": false,\n", "    \"defaultThrottlePolicy\": {\n", "      \"maxReceivesPerSecond\": 1\n", "    }\n", "  }\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Example with Server-side encryption (SSE)
 
 ```typescript
@@ -53,7 +161,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		userUpdates, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+		_, err = sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
 			KmsMasterKeyId: pulumi.String("alias/aws/sns"),
 		})
 		if err != nil {
@@ -103,7 +211,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		userUpdates, err := sns.NewTopic(ctx, "userUpdates", nil)
+		_, err = sns.NewTopic(ctx, "userUpdates", nil)
 		if err != nil {
 			return err
 		}

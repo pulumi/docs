@@ -75,7 +75,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		opt1 := "^myami-\\d{3}"
+		_, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			ExecutableUsers: []string{
+				"self",
+			},
+			Filters: []aws.GetAmiFilter{
+				aws.GetAmiFilter{
+					Name: "name",
+					Values: []string{
+						"myami-*",
+					},
+				},
+				aws.GetAmiFilter{
+					Name: "root-device-type",
+					Values: []string{
+						"ebs",
+					},
+				},
+				aws.GetAmiFilter{
+					Name: "virtualization-type",
+					Values: []string{
+						"hvm",
+					},
+				},
+			},
+			MostRecent: &opt0,
+			NameRegex:  &opt1,
+			Owners: []string{
+				"self",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -532,6 +581,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="blockdevicemappings_csharp">
 <a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
 </span> 
@@ -887,6 +947,17 @@ is successfully registered and can be used to launch an instance.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1250,6 +1321,17 @@ is successfully registered and can be used to launch an instance.
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="blockdevicemappings_nodejs">
 <a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
 </span> 
@@ -1605,6 +1687,17 @@ is successfully registered and can be used to launch an instance.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
 
     <dt class="property-"

@@ -76,7 +76,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
 			CertificateArn: pulumi.String("arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"),
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
@@ -197,7 +197,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
 					Redirect: &lb.ListenerDefaultActionRedirectArgs{
@@ -322,7 +322,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
 					FixedResponse: &lb.ListenerDefaultActionFixedResponseArgs{
@@ -481,7 +481,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
 					AuthenticateCognito: &lb.ListenerDefaultActionAuthenticateCognitoArgs{
@@ -645,7 +645,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
 					AuthenticateOidc: &lb.ListenerDefaultActionAuthenticateOidcArgs{

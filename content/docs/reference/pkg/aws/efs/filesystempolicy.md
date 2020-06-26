@@ -12,6 +12,166 @@ meta_desc: "Explore the FileSystemPolicy resource of the efs module, including e
 
 Provides an Elastic File System (EFS) File System Policy resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fs = new Aws.Efs.FileSystem("fs", new Aws.Efs.FileSystemArgs
+        {
+        });
+        var policy = new Aws.Efs.FileSystemPolicy("policy", new Aws.Efs.FileSystemPolicyArgs
+        {
+            FileSystemId = fs.Id,
+            Policy = @$"{{
+    ""Version"": ""2012-10-17"",
+    ""Id"": ""ExamplePolicy01"",
+    ""Statement"": [
+        {{
+            ""Sid"": ""ExampleSatement01"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {{
+                ""AWS"": ""*""
+            }},
+            ""Resource"": ""{aws_efs_file_system.Test.Arn}"",
+            ""Action"": [
+                ""elasticfilesystem:ClientMount"",
+                ""elasticfilesystem:ClientWrite""
+            ],
+            ""Condition"": {{
+                ""Bool"": {{
+                    ""aws:SecureTransport"": ""true""
+                }}
+            }}
+        }}
+    ]
+}}
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fs, err := efs.NewFileSystem(ctx, "fs", nil)
+		if err != nil {
+			return err
+		}
+		_, err = efs.NewFileSystemPolicy(ctx, "policy", &efs.FileSystemPolicyArgs{
+			FileSystemId: fs.ID(),
+			Policy:       pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Id\": \"ExamplePolicy01\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"ExampleSatement01\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "                \"AWS\": \"*\"\n", "            },\n", "            \"Resource\": \"", aws_efs_file_system.Test.Arn, "\",\n", "            \"Action\": [\n", "                \"elasticfilesystem:ClientMount\",\n", "                \"elasticfilesystem:ClientWrite\"\n", "            ],\n", "            \"Condition\": {\n", "                \"Bool\": {\n", "                    \"aws:SecureTransport\": \"true\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+fs = aws.efs.FileSystem("fs")
+policy = aws.efs.FileSystemPolicy("policy",
+    file_system_id=fs.id,
+    policy=f"""{{
+    "Version": "2012-10-17",
+    "Id": "ExamplePolicy01",
+    "Statement": [
+        {{
+            "Sid": "ExampleSatement01",
+            "Effect": "Allow",
+            "Principal": {{
+                "AWS": "*"
+            }},
+            "Resource": "{aws_efs_file_system["test"]["arn"]}",
+            "Action": [
+                "elasticfilesystem:ClientMount",
+                "elasticfilesystem:ClientWrite"
+            ],
+            "Condition": {{
+                "Bool": {{
+                    "aws:SecureTransport": "true"
+                }}
+            }}
+        }}
+    ]
+}}
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fs = new aws.efs.FileSystem("fs", {});
+const policy = new aws.efs.FileSystemPolicy("policy", {
+    fileSystemId: fs.id,
+    policy: pulumi.interpolate`{
+    "Version": "2012-10-17",
+    "Id": "ExamplePolicy01",
+    "Statement": [
+        {
+            "Sid": "ExampleSatement01",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Resource": "${aws_efs_file_system_test.arn}",
+            "Action": [
+                "elasticfilesystem:ClientMount",
+                "elasticfilesystem:ClientWrite"
+            ],
+            "Condition": {
+                "Bool": {
+                    "aws:SecureTransport": "true"
+                }
+            }
+        }
+    ]
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileSystemPolicy Resource {#create}

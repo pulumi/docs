@@ -15,6 +15,158 @@ Provides a DynamoDB table item resource
 > **Note:** This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.
   You should perform **regular backups** of all data in the table, see [AWS docs for more](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
+        {
+            Attributes = 
+            {
+                new Aws.DynamoDB.Inputs.TableAttributeArgs
+                {
+                    Name = "exampleHashKey",
+                    Type = "S",
+                },
+            },
+            HashKey = "exampleHashKey",
+            ReadCapacity = 10,
+            WriteCapacity = 10,
+        });
+        var exampleTableItem = new Aws.DynamoDB.TableItem("exampleTableItem", new Aws.DynamoDB.TableItemArgs
+        {
+            HashKey = exampleTable.HashKey,
+            Item = @"{
+  ""exampleHashKey"": {""S"": ""something""},
+  ""one"": {""N"": ""11111""},
+  ""two"": {""N"": ""22222""},
+  ""three"": {""N"": ""33333""},
+  ""four"": {""N"": ""44444""}
+}
+
+",
+            TableName = exampleTable.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+			Attributes: dynamodb.TableAttributeArray{
+				&dynamodb.TableAttributeArgs{
+					Name: pulumi.String("exampleHashKey"),
+					Type: pulumi.String("S"),
+				},
+			},
+			HashKey:       pulumi.String("exampleHashKey"),
+			ReadCapacity:  pulumi.Int(10),
+			WriteCapacity: pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dynamodb.NewTableItem(ctx, "exampleTableItem", &dynamodb.TableItemArgs{
+			HashKey:   exampleTable.HashKey,
+			Item:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "  \"exampleHashKey\": {\"S\": \"something\"},\n", "  \"one\": {\"N\": \"11111\"},\n", "  \"two\": {\"N\": \"22222\"},\n", "  \"three\": {\"N\": \"33333\"},\n", "  \"four\": {\"N\": \"44444\"}\n", "}\n", "\n")),
+			TableName: exampleTable.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_table = aws.dynamodb.Table("exampleTable",
+    attributes=[{
+        "name": "exampleHashKey",
+        "type": "S",
+    }],
+    hash_key="exampleHashKey",
+    read_capacity=10,
+    write_capacity=10)
+example_table_item = aws.dynamodb.TableItem("exampleTableItem",
+    hash_key=example_table.hash_key,
+    item="""{
+  "exampleHashKey": {"S": "something"},
+  "one": {"N": "11111"},
+  "two": {"N": "22222"},
+  "three": {"N": "33333"},
+  "four": {"N": "44444"}
+}
+
+""",
+    table_name=example_table.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleTable = new aws.dynamodb.Table("example", {
+    attributes: [{
+        name: "exampleHashKey",
+        type: "S",
+    }],
+    hashKey: "exampleHashKey",
+    readCapacity: 10,
+    writeCapacity: 10,
+});
+const exampleTableItem = new aws.dynamodb.TableItem("example", {
+    hashKey: exampleTable.hashKey,
+    item: `{
+  "exampleHashKey": {"S": "something"},
+  "one": {"N": "11111"},
+  "two": {"N": "22222"},
+  "three": {"N": "33333"},
+  "four": {"N": "44444"}
+}
+`,
+    tableName: exampleTable.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TableItem Resource {#create}

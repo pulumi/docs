@@ -22,6 +22,450 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new Aws.Emr.Cluster("cluster", new Aws.Emr.ClusterArgs
+        {
+            AdditionalInfo = @"{
+  ""instanceAwsClientConfiguration"": {
+    ""proxyPort"": 8099,
+    ""proxyHost"": ""myproxy.example.com""
+  }
+}
+
+",
+            Applications = 
+            {
+                "Spark",
+            },
+            BootstrapActions = 
+            {
+                new Aws.Emr.Inputs.ClusterBootstrapActionArgs
+                {
+                    Args = 
+                    {
+                        "instance.isMaster=true",
+                        "echo running on master node",
+                    },
+                    Name = "runif",
+                    Path = "s3://elasticmapreduce/bootstrap-actions/run-if",
+                },
+            },
+            ConfigurationsJson = @"  [
+    {
+      ""Classification"": ""hadoop-env"",
+      ""Configurations"": [
+        {
+          ""Classification"": ""export"",
+          ""Properties"": {
+            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
+          }
+        }
+      ],
+      ""Properties"": {}
+    },
+    {
+      ""Classification"": ""spark-env"",
+      ""Configurations"": [
+        {
+          ""Classification"": ""export"",
+          ""Properties"": {
+            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
+          }
+        }
+      ],
+      ""Properties"": {}
+    }
+  ]
+
+",
+            CoreInstanceGroup = new Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs
+            {
+                AutoscalingPolicy = @"{
+""Constraints"": {
+  ""MinCapacity"": 1,
+  ""MaxCapacity"": 2
+},
+""Rules"": [
+  {
+    ""Name"": ""ScaleOutMemoryPercentage"",
+    ""Description"": ""Scale out if YARNMemoryAvailablePercentage is less than 15"",
+    ""Action"": {
+      ""SimpleScalingPolicyConfiguration"": {
+        ""AdjustmentType"": ""CHANGE_IN_CAPACITY"",
+        ""ScalingAdjustment"": 1,
+        ""CoolDown"": 300
+      }
+    },
+    ""Trigger"": {
+      ""CloudWatchAlarmDefinition"": {
+        ""ComparisonOperator"": ""LESS_THAN"",
+        ""EvaluationPeriods"": 1,
+        ""MetricName"": ""YARNMemoryAvailablePercentage"",
+        ""Namespace"": ""AWS/ElasticMapReduce"",
+        ""Period"": 300,
+        ""Statistic"": ""AVERAGE"",
+        ""Threshold"": 15.0,
+        ""Unit"": ""PERCENT""
+      }
+    }
+  }
+]
+}
+
+",
+                BidPrice = "0.30",
+                EbsConfig = 
+                {
+                    
+                    {
+                        { "size", "40" },
+                        { "type", "gp2" },
+                        { "volumesPerInstance", 1 },
+                    },
+                },
+                InstanceCount = 1,
+                InstanceType = "c4.large",
+            },
+            EbsRootVolumeSize = 100,
+            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
+            {
+                EmrManagedMasterSecurityGroup = aws_security_group.Sg.Id,
+                EmrManagedSlaveSecurityGroup = aws_security_group.Sg.Id,
+                InstanceProfile = aws_iam_instance_profile.Emr_profile.Arn,
+                SubnetId = aws_subnet.Main.Id,
+            },
+            KeepJobFlowAliveWhenNoSteps = true,
+            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
+            {
+                InstanceType = "m4.large",
+            },
+            ReleaseLabel = "emr-4.6.0",
+            ServiceRole = aws_iam_role.Iam_emr_service_role.Arn,
+            Tags = 
+            {
+                { "env", "env" },
+                { "role", "rolename" },
+            },
+            TerminationProtection = false,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = emr.NewCluster(ctx, "cluster", &emr.ClusterArgs{
+			AdditionalInfo: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"instanceAwsClientConfiguration\": {\n", "    \"proxyPort\": 8099,\n", "    \"proxyHost\": \"myproxy.example.com\"\n", "  }\n", "}\n", "\n")),
+			Applications: pulumi.StringArray{
+				pulumi.String("Spark"),
+			},
+			BootstrapActions: emr.ClusterBootstrapActionArray{
+				&emr.ClusterBootstrapActionArgs{
+					Args: pulumi.StringArray{
+						pulumi.String("instance.isMaster=true"),
+						pulumi.String("echo running on master node"),
+					},
+					Name: pulumi.String("runif"),
+					Path: pulumi.String("s3://elasticmapreduce/bootstrap-actions/run-if"),
+				},
+			},
+			ConfigurationsJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  [\n", "    {\n", "      \"Classification\": \"hadoop-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    },\n", "    {\n", "      \"Classification\": \"spark-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    }\n", "  ]\n", "\n")),
+			CoreInstanceGroup: &emr.ClusterCoreInstanceGroupArgs{
+				AutoscalingPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "\"Constraints\": {\n", "  \"MinCapacity\": 1,\n", "  \"MaxCapacity\": 2\n", "},\n", "\"Rules\": [\n", "  {\n", "    \"Name\": \"ScaleOutMemoryPercentage\",\n", "    \"Description\": \"Scale out if YARNMemoryAvailablePercentage is less than 15\",\n", "    \"Action\": {\n", "      \"SimpleScalingPolicyConfiguration\": {\n", "        \"AdjustmentType\": \"CHANGE_IN_CAPACITY\",\n", "        \"ScalingAdjustment\": 1,\n", "        \"CoolDown\": 300\n", "      }\n", "    },\n", "    \"Trigger\": {\n", "      \"CloudWatchAlarmDefinition\": {\n", "        \"ComparisonOperator\": \"LESS_THAN\",\n", "        \"EvaluationPeriods\": 1,\n", "        \"MetricName\": \"YARNMemoryAvailablePercentage\",\n", "        \"Namespace\": \"AWS/ElasticMapReduce\",\n", "        \"Period\": 300,\n", "        \"Statistic\": \"AVERAGE\",\n", "        \"Threshold\": 15.0,\n", "        \"Unit\": \"PERCENT\"\n", "      }\n", "    }\n", "  }\n", "]\n", "}\n", "\n")),
+				BidPrice:          pulumi.String("0.30"),
+				EbsConfig: pulumi.MapArray{
+					pulumi.Map{
+						"size":               pulumi.String("40"),
+						"type":               pulumi.String("gp2"),
+						"volumesPerInstance": pulumi.Float64(1),
+					},
+				},
+				InstanceCount: pulumi.Int(1),
+				InstanceType:  pulumi.String("c4.large"),
+			},
+			EbsRootVolumeSize: pulumi.Int(100),
+			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
+				EmrManagedMasterSecurityGroup: pulumi.String(aws_security_group.Sg.Id),
+				EmrManagedSlaveSecurityGroup:  pulumi.String(aws_security_group.Sg.Id),
+				InstanceProfile:               pulumi.String(aws_iam_instance_profile.Emr_profile.Arn),
+				SubnetId:                      pulumi.String(aws_subnet.Main.Id),
+			},
+			KeepJobFlowAliveWhenNoSteps: pulumi.Bool(true),
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceType: pulumi.String("m4.large"),
+			},
+			ReleaseLabel: pulumi.String("emr-4.6.0"),
+			ServiceRole:  pulumi.String(aws_iam_role.Iam_emr_service_role.Arn),
+			Tags: pulumi.Map{
+				"env":  pulumi.String("env"),
+				"role": pulumi.String("rolename"),
+			},
+			TerminationProtection: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+cluster = aws.emr.Cluster("cluster",
+    additional_info="""{
+  "instanceAwsClientConfiguration": {
+    "proxyPort": 8099,
+    "proxyHost": "myproxy.example.com"
+  }
+}
+
+""",
+    applications=["Spark"],
+    bootstrap_actions=[{
+        "args": [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+        "name": "runif",
+        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
+    }],
+    configurations_json="""  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+
+""",
+    core_instance_group={
+        "autoscaling_policy": """{
+"Constraints": {
+  "MinCapacity": 1,
+  "MaxCapacity": 2
+},
+"Rules": [
+  {
+    "Name": "ScaleOutMemoryPercentage",
+    "Description": "Scale out if YARNMemoryAvailablePercentage is less than 15",
+    "Action": {
+      "SimpleScalingPolicyConfiguration": {
+        "AdjustmentType": "CHANGE_IN_CAPACITY",
+        "ScalingAdjustment": 1,
+        "CoolDown": 300
+      }
+    },
+    "Trigger": {
+      "CloudWatchAlarmDefinition": {
+        "ComparisonOperator": "LESS_THAN",
+        "EvaluationPeriods": 1,
+        "MetricName": "YARNMemoryAvailablePercentage",
+        "Namespace": "AWS/ElasticMapReduce",
+        "Period": 300,
+        "Statistic": "AVERAGE",
+        "Threshold": 15.0,
+        "Unit": "PERCENT"
+      }
+    }
+  }
+]
+}
+
+""",
+        "bid_price": "0.30",
+        "ebsConfig": [{
+            "size": "40",
+            "type": "gp2",
+            "volumesPerInstance": 1,
+        }],
+        "instance_count": 1,
+        "instance_type": "c4.large",
+    },
+    ebs_root_volume_size=100,
+    ec2_attributes={
+        "emrManagedMasterSecurityGroup": aws_security_group["sg"]["id"],
+        "emrManagedSlaveSecurityGroup": aws_security_group["sg"]["id"],
+        "instanceProfile": aws_iam_instance_profile["emr_profile"]["arn"],
+        "subnet_id": aws_subnet["main"]["id"],
+    },
+    keep_job_flow_alive_when_no_steps=True,
+    master_instance_group={
+        "instance_type": "m4.large",
+    },
+    release_label="emr-4.6.0",
+    service_role=aws_iam_role["iam_emr_service_role"]["arn"],
+    tags={
+        "env": "env",
+        "role": "rolename",
+    },
+    termination_protection=False)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const cluster = new aws.emr.Cluster("cluster", {
+    additionalInfo: `{
+  "instanceAwsClientConfiguration": {
+    "proxyPort": 8099,
+    "proxyHost": "myproxy.example.com"
+  }
+}
+`,
+    applications: ["Spark"],
+    bootstrapActions: [{
+        args: [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+        name: "runif",
+        path: "s3://elasticmapreduce/bootstrap-actions/run-if",
+    }],
+    configurationsJson: `  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+`,
+    coreInstanceGroup: {
+        autoscalingPolicy: `{
+"Constraints": {
+  "MinCapacity": 1,
+  "MaxCapacity": 2
+},
+"Rules": [
+  {
+    "Name": "ScaleOutMemoryPercentage",
+    "Description": "Scale out if YARNMemoryAvailablePercentage is less than 15",
+    "Action": {
+      "SimpleScalingPolicyConfiguration": {
+        "AdjustmentType": "CHANGE_IN_CAPACITY",
+        "ScalingAdjustment": 1,
+        "CoolDown": 300
+      }
+    },
+    "Trigger": {
+      "CloudWatchAlarmDefinition": {
+        "ComparisonOperator": "LESS_THAN",
+        "EvaluationPeriods": 1,
+        "MetricName": "YARNMemoryAvailablePercentage",
+        "Namespace": "AWS/ElasticMapReduce",
+        "Period": 300,
+        "Statistic": "AVERAGE",
+        "Threshold": 15.0,
+        "Unit": "PERCENT"
+      }
+    }
+  }
+]
+}
+`,
+        bidPrice: "0.30",
+        ebsConfigs: [{
+            size: 40,
+            type: "gp2",
+            volumesPerInstance: 1,
+        }],
+        instanceCount: 1,
+        instanceType: "c4.large",
+    },
+    ebsRootVolumeSize: 100,
+    ec2Attributes: {
+        emrManagedMasterSecurityGroup: aws_security_group_sg.id,
+        emrManagedSlaveSecurityGroup: aws_security_group_sg.id,
+        instanceProfile: aws_iam_instance_profile_emr_profile.arn,
+        subnetId: aws_subnet_main.id,
+    },
+    keepJobFlowAliveWhenNoSteps: true,
+    masterInstanceGroup: {
+        instanceType: "m4.large",
+    },
+    releaseLabel: "emr-4.6.0",
+    serviceRole: aws_iam_role_iam_emr_service_role.arn,
+    tags: {
+        env: "env",
+        role: "rolename",
+    },
+    terminationProtection: false,
+});
+```
+
+{{% /example %}}
+
 ### Multiple Node Master Instance Group
 {{% example csharp %}}
 ```csharp
@@ -59,7 +503,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
+			MapPublicIpOnLaunch: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = emr.NewCluster(ctx, "exampleCluster", &emr.ClusterArgs{
+			CoreInstanceGroup: nil,
+			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
+				SubnetId: exampleSubnet.ID(),
+			},
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceCount: pulumi.Int(3),
+			},
+			ReleaseLabel:          pulumi.String("emr-5.24.1"),
+			TerminationProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

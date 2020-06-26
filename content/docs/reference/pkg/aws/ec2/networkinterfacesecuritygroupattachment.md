@@ -93,28 +93,51 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		instance, err := ec2.LookupInstance(ctx, &ec2.LookupInstanceArgs{
-			InstanceId: "i-1234567890abcdef0",
+		opt0 := true
+		ami, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			Filters: []aws.GetAmiFilter{
+				aws.GetAmiFilter{
+					Name: "name",
+					Values: []string{
+						"amzn-ami-hvm-*",
+					},
+				},
+			},
+			MostRecent: &opt0,
+			Owners: []string{
+				"amazon",
+			},
 		}, nil)
 		if err != nil {
 			return err
 		}
-		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
-			Tags: map[string]interface{}{
-				"type": "test-security-group",
+		instance, err := ec2.NewInstance(ctx, "instance", &ec2.InstanceArgs{
+			Ami:          pulumi.String(ami.Id),
+			InstanceType: pulumi.String("t2.micro"),
+			Tags: pulumi.Map{
+				"type": pulumi.String("test-instance"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		sgAttachment, err := ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
-			NetworkInterfaceId: pulumi.String(instance.NetworkInterfaceId),
+		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
+			Tags: pulumi.Map{
+				"type": pulumi.String("test-security-group"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
+			NetworkInterfaceId: instance.PrimaryNetworkInterfaceId,
 			SecurityGroupId:    sg.ID(),
 		})
 		if err != nil {

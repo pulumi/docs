@@ -12,6 +12,146 @@ meta_desc: "Explore the DomainPolicy resource of the elasticsearch module, inclu
 
 Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ElasticSearch.Domain("example", new Aws.ElasticSearch.DomainArgs
+        {
+            ElasticsearchVersion = "2.3",
+        });
+        var main = new Aws.ElasticSearch.DomainPolicy("main", new Aws.ElasticSearch.DomainPolicyArgs
+        {
+            AccessPolicies = example.Arn.Apply(arn => @$"{{
+    ""Version"": ""2012-10-17"",
+    ""Statement"": [
+        {{
+            ""Action"": ""es:*"",
+            ""Principal"": ""*"",
+            ""Effect"": ""Allow"",
+            ""Condition"": {{
+                ""IpAddress"": {{""aws:SourceIp"": ""127.0.0.1/32""}}
+            }},
+            ""Resource"": ""{arn}/*""
+        }}
+    ]
+}}
+
+"),
+            DomainName = example.DomainName,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+			ElasticsearchVersion: pulumi.String("2.3"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = elasticsearch.NewDomainPolicy(ctx, "main", &elasticsearch.DomainPolicyArgs{
+			AccessPolicies: example.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"es:*\",\n", "            \"Principal\": \"*\",\n", "            \"Effect\": \"Allow\",\n", "            \"Condition\": {\n", "                \"IpAddress\": {\"aws:SourceIp\": \"127.0.0.1/32\"}\n", "            },\n", "            \"Resource\": \"", arn, "/*\"\n", "        }\n", "    ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+			DomainName: example.DomainName,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.elasticsearch.Domain("example", elasticsearch_version="2.3")
+main = aws.elasticsearch.DomainPolicy("main",
+    access_policies=example.arn.apply(lambda arn: f"""{{
+    "Version": "2012-10-17",
+    "Statement": [
+        {{
+            "Action": "es:*",
+            "Principal": "*",
+            "Effect": "Allow",
+            "Condition": {{
+                "IpAddress": {{"aws:SourceIp": "127.0.0.1/32"}}
+            }},
+            "Resource": "{arn}/*"
+        }}
+    ]
+}}
+
+"""),
+    domain_name=example.domain_name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.elasticsearch.Domain("example", {
+    elasticsearchVersion: "2.3",
+});
+const main = new aws.elasticsearch.DomainPolicy("main", {
+    accessPolicies: pulumi.interpolate`{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "es:*",
+            "Principal": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "IpAddress": {"aws:SourceIp": "127.0.0.1/32"}
+            },
+            "Resource": "${example.arn}/*"
+        }
+    ]
+}
+`,
+    domainName: example.domainName,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainPolicy Resource {#create}

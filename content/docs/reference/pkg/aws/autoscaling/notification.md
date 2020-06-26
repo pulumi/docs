@@ -84,7 +84,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleNotifications, err := autoscaling.NewNotification(ctx, "exampleNotifications", &autoscaling.NotificationArgs{
+		_, err = autoscaling.NewNotification(ctx, "exampleNotifications", &autoscaling.NotificationArgs{
 			GroupNames: pulumi.StringArray{
 				bar.Name,
 				foo.Name,
@@ -95,7 +95,7 @@ func main() {
 				pulumi.String("autoscaling:EC2_INSTANCE_LAUNCH_ERROR"),
 				pulumi.String("autoscaling:EC2_INSTANCE_TERMINATE_ERROR"),
 			},
-			TopicArn: pulumi.String(example.Arn),
+			TopicArn: example.Arn,
 		})
 		if err != nil {
 			return err

@@ -12,6 +12,214 @@ meta_desc: "Explore the ResourceDataSync resource of the ssm module, including e
 
 Provides a SSM resource data sync.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hogeBucket = new Aws.S3.Bucket("hogeBucket", new Aws.S3.BucketArgs
+        {
+            Region = "us-east-1",
+        });
+        var hogeBucketPolicy = new Aws.S3.BucketPolicy("hogeBucketPolicy", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = hogeBucket.BucketName,
+            Policy = @"{
+    ""Version"": ""2012-10-17"",
+    ""Statement"": [
+        {
+            ""Sid"": ""SSMBucketPermissionsCheck"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+                ""Service"": ""ssm.amazonaws.com""
+            },
+            ""Action"": ""s3:GetBucketAcl"",
+            ""Resource"": ""arn:aws:s3:::tf-test-bucket-1234""
+        },
+        {
+            ""Sid"": "" SSMBucketDelivery"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+                ""Service"": ""ssm.amazonaws.com""
+            },
+            ""Action"": ""s3:PutObject"",
+            ""Resource"": [""arn:aws:s3:::tf-test-bucket-1234/*""],
+            ""Condition"": {
+                ""StringEquals"": {
+                    ""s3:x-amz-acl"": ""bucket-owner-full-control""
+                }
+            }
+        }
+    ]
+}
+
+",
+        });
+        var foo = new Aws.Ssm.ResourceDataSync("foo", new Aws.Ssm.ResourceDataSyncArgs
+        {
+            S3Destination = new Aws.Ssm.Inputs.ResourceDataSyncS3DestinationArgs
+            {
+                BucketName = hogeBucket.BucketName,
+                Region = hogeBucket.Region,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hogeBucket, err := s3.NewBucket(ctx, "hogeBucket", &s3.BucketArgs{
+			Region: pulumi.String("us-east-1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketPolicy(ctx, "hogeBucketPolicy", &s3.BucketPolicyArgs{
+			Bucket: hogeBucket.Bucket,
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"SSMBucketPermissionsCheck\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "                \"Service\": \"ssm.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:GetBucketAcl\",\n", "            \"Resource\": \"arn:aws:s3:::tf-test-bucket-1234\"\n", "        },\n", "        {\n", "            \"Sid\": \" SSMBucketDelivery\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "                \"Service\": \"ssm.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:PutObject\",\n", "            \"Resource\": [\"arn:aws:s3:::tf-test-bucket-1234/*\"],\n", "            \"Condition\": {\n", "                \"StringEquals\": {\n", "                    \"s3:x-amz-acl\": \"bucket-owner-full-control\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ssm.NewResourceDataSync(ctx, "foo", &ssm.ResourceDataSyncArgs{
+			S3Destination: &ssm.ResourceDataSyncS3DestinationArgs{
+				BucketName: hogeBucket.Bucket,
+				Region:     hogeBucket.Region,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+hoge_bucket = aws.s3.Bucket("hogeBucket", region="us-east-1")
+hoge_bucket_policy = aws.s3.BucketPolicy("hogeBucketPolicy",
+    bucket=hoge_bucket.bucket,
+    policy="""{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SSMBucketPermissionsCheck",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ssm.amazonaws.com"
+            },
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::tf-test-bucket-1234"
+        },
+        {
+            "Sid": " SSMBucketDelivery",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ssm.amazonaws.com"
+            },
+            "Action": "s3:PutObject",
+            "Resource": ["arn:aws:s3:::tf-test-bucket-1234/*"],
+            "Condition": {
+                "StringEquals": {
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+            }
+        }
+    ]
+}
+
+""")
+foo = aws.ssm.ResourceDataSync("foo", s3_destination={
+    "bucket_name": hoge_bucket.bucket,
+    "region": hoge_bucket.region,
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const hogeBucket = new aws.s3.Bucket("hoge", {
+    region: "us-east-1",
+});
+const hogeBucketPolicy = new aws.s3.BucketPolicy("hoge", {
+    bucket: hogeBucket.bucket,
+    policy: `{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SSMBucketPermissionsCheck",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ssm.amazonaws.com"
+            },
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::tf-test-bucket-1234"
+        },
+        {
+            "Sid": " SSMBucketDelivery",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ssm.amazonaws.com"
+            },
+            "Action": "s3:PutObject",
+            "Resource": ["arn:aws:s3:::tf-test-bucket-1234/*"],
+            "Condition": {
+                "StringEquals": {
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+            }
+        }
+    ]
+}
+`,
+});
+const foo = new aws.ssm.ResourceDataSync("foo", {
+    s3Destination: {
+        bucketName: hogeBucket.bucket,
+        region: hogeBucket.region,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ResourceDataSync Resource {#create}

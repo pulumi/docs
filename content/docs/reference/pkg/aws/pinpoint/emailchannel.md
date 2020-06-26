@@ -12,6 +12,234 @@ meta_desc: "Explore the EmailChannel resource of the pinpoint module, including 
 
 Provides a Pinpoint Email Channel resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+        {
+        });
+        var identity = new Aws.Ses.DomainIdentity("identity", new Aws.Ses.DomainIdentityArgs
+        {
+            Domain = "example.com",
+        });
+        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""pinpoint.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var email = new Aws.Pinpoint.EmailChannel("email", new Aws.Pinpoint.EmailChannelArgs
+        {
+            ApplicationId = app.ApplicationId,
+            FromAddress = "user@example.com",
+            Identity = identity.Arn,
+            RoleArn = role.Arn,
+        });
+        var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": {
+    ""Action"": [
+      ""mobileanalytics:PutEvents"",
+      ""mobileanalytics:PutItems""
+    ],
+    ""Effect"": ""Allow"",
+    ""Resource"": [
+      ""*""
+    ]
+  }
+}
+
+",
+            Role = role.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/pinpoint"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		app, err := pinpoint.NewApp(ctx, "app", nil)
+		if err != nil {
+			return err
+		}
+		identity, err := ses.NewDomainIdentity(ctx, "identity", &ses.DomainIdentityArgs{
+			Domain: pulumi.String("example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pinpoint.NewEmailChannel(ctx, "email", &pinpoint.EmailChannelArgs{
+			ApplicationId: app.ApplicationId,
+			FromAddress:   pulumi.String("user@example.com"),
+			Identity:      identity.Arn,
+			RoleArn:       role.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n", "\n")),
+			Role:   role.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+app = aws.pinpoint.App("app")
+identity = aws.ses.DomainIdentity("identity", domain="example.com")
+role = aws.iam.Role("role", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "pinpoint.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+email = aws.pinpoint.EmailChannel("email",
+    application_id=app.application_id,
+    from_address="user@example.com",
+    identity=identity.arn,
+    role_arn=role.arn)
+role_policy = aws.iam.RolePolicy("rolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Action": [
+      "mobileanalytics:PutEvents",
+      "mobileanalytics:PutItems"
+    ],
+    "Effect": "Allow",
+    "Resource": [
+      "*"
+    ]
+  }
+}
+
+""",
+    role=role.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const app = new aws.pinpoint.App("app", {});
+const identity = new aws.ses.DomainIdentity("identity", {
+    domain: "example.com",
+});
+const role = new aws.iam.Role("role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "pinpoint.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const email = new aws.pinpoint.EmailChannel("email", {
+    applicationId: app.applicationId,
+    fromAddress: "user@example.com",
+    identity: identity.arn,
+    roleArn: role.arn,
+});
+const rolePolicy = new aws.iam.RolePolicy("role_policy", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Action": [
+      "mobileanalytics:PutEvents",
+      "mobileanalytics:PutItems"
+    ],
+    "Effect": "Allow",
+    "Resource": [
+      "*"
+    ]
+  }
+}
+`,
+    role: role.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EmailChannel Resource {#create}

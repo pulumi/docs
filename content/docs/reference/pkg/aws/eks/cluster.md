@@ -61,7 +61,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"eks.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSClusterPolicy", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"),
+			Role:      example.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSServicePolicy", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSServicePolicy"),
+			Role:      example.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -169,7 +205,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleCluster, err := eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
+		_, err = eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
 			EnabledClusterLogTypes: pulumi.StringArray{
 				pulumi.String("api"),
 				pulumi.String("audit"),
@@ -178,7 +214,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
+		_, err = cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
 			RetentionInDays: pulumi.Int(7),
 		})
 		if err != nil {

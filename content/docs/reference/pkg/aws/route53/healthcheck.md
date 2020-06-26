@@ -57,14 +57,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+		_, err = route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
 			FailureThreshold: pulumi.Int(5),
 			Fqdn:             pulumi.String("example.com"),
 			Port:             pulumi.Int(80),
 			RequestInterval:  pulumi.Int(30),
 			ResourcePath:     pulumi.String("/"),
-			Tags: map[string]interface{}{
-				"Name": "tf-test-health-check",
+			Tags: pulumi.Map{
+				"Name": pulumi.String("tf-test-health-check"),
 			},
 			Type: pulumi.String("HTTP"),
 		})
@@ -156,7 +156,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+		_, err = route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
 			FailureThreshold: pulumi.Int(5),
 			Fqdn:             pulumi.String("example.com"),
 			Port:             pulumi.Int(443),
@@ -339,7 +339,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
+		_, err = route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
 			CloudwatchAlarmName:          foobar.Name,
 			CloudwatchAlarmRegion:        pulumi.String("us-west-2"),
 			InsufficientDataHealthStatus: pulumi.String("Healthy"),

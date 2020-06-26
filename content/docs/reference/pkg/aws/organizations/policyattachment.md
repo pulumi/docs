@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		account, err := organizations.NewPolicyAttachment(ctx, "account", &organizations.PolicyAttachmentArgs{
+		_, err = organizations.NewPolicyAttachment(ctx, "account", &organizations.PolicyAttachmentArgs{
 			PolicyId: pulumi.String(aws_organizations_policy.Example.Id),
 			TargetId: pulumi.String("123456789012"),
 		})
@@ -122,7 +122,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		root, err := organizations.NewPolicyAttachment(ctx, "root", &organizations.PolicyAttachmentArgs{
+		_, err = organizations.NewPolicyAttachment(ctx, "root", &organizations.PolicyAttachmentArgs{
 			PolicyId: pulumi.String(aws_organizations_policy.Example.Id),
 			TargetId: pulumi.String(aws_organizations_organization.Example.Roots[0].Id),
 		})
@@ -195,7 +195,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		unit, err := organizations.NewPolicyAttachment(ctx, "unit", &organizations.PolicyAttachmentArgs{
+		_, err = organizations.NewPolicyAttachment(ctx, "unit", &organizations.PolicyAttachmentArgs{
 			PolicyId: pulumi.String(aws_organizations_policy.Example.Id),
 			TargetId: pulumi.String(aws_organizations_organizational_unit.Example.Id),
 		})

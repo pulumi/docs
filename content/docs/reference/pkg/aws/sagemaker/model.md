@@ -81,7 +81,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		model, err := sagemaker.NewModel(ctx, "model", &sagemaker.ModelArgs{
+		_, err = sagemaker.NewModel(ctx, "model", &sagemaker.ModelArgs{
 			ExecutionRoleArn: pulumi.String(aws_iam_role.Foo.Arn),
 			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
 				Image: pulumi.String("174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1"),
@@ -90,14 +90,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		assumeRole, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		assumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"sts:AssumeRole",
 					},
-					Principals: iam.getPolicyDocumentStatementPrincipalArray{
-						&iam.LookupPolicyDocumentStatementPrincipal{
+					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+						iam.GetPolicyDocumentStatementPrincipal{
 							Identifiers: []string{
 								"sagemaker.amazonaws.com",
 							},
@@ -110,7 +110,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+		_, err = iam.NewRole(ctx, "role", &iam.RoleArgs{
 			AssumeRolePolicy: pulumi.String(assumeRole.Json),
 		})
 		if err != nil {

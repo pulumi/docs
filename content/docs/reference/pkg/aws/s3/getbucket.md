@@ -64,6 +64,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,13 +76,14 @@ func main() {
 		if err != nil {
 			return err
 		}
+		opt0 := "test.com."
 		testZone, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
-			Name: "test.com.",
+			Name: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		example, err := route53.NewRecord(ctx, "example", &route53.RecordArgs{
+		_, err = route53.NewRecord(ctx, "example", &route53.RecordArgs{
 			Aliases: route53.RecordAliasArray{
 				&route53.RecordAliasArgs{
 					Name:   pulumi.String(selected.WebsiteDomain),
@@ -184,6 +186,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -195,7 +198,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		test, err := cloudfront.NewDistribution(ctx, "test", &cloudfront.DistributionArgs{
+		_, err = cloudfront.NewDistribution(ctx, "test", &cloudfront.DistributionArgs{
 			Origins: cloudfront.DistributionOriginArray{
 				&cloudfront.DistributionOriginArgs{
 					DomainName: pulumi.String(selected.BucketDomainName),

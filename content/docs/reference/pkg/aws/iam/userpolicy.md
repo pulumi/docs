@@ -12,6 +12,152 @@ meta_desc: "Explore the UserPolicy resource of the iam module, including example
 
 Provides an IAM policy attached to a user.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lbUser = new Aws.Iam.User("lbUser", new Aws.Iam.UserArgs
+        {
+            Path = "/system/",
+        });
+        var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""ec2:Describe*""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""*""
+    }
+  ]
+}
+
+",
+            User = lbUser.Name,
+        });
+        var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
+        {
+            User = lbUser.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
+			Path: pulumi.String("/system/"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			User:   lbUser.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
+			User: lbUser.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb_user = aws.iam.User("lbUser", path="/system/")
+lb_ro = aws.iam.UserPolicy("lbRo",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    user=lb_user.name)
+lb_access_key = aws.iam.AccessKey("lbAccessKey", user=lb_user.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lbUser = new aws.iam.User("lb", {
+    path: "/system/",
+});
+const lbRo = new aws.iam.UserPolicy("lb_ro", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    user: lbUser.name,
+});
+const lbAccessKey = new aws.iam.AccessKey("lb", {
+    user: lbUser.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserPolicy Resource {#create}

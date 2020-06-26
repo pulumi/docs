@@ -12,6 +12,168 @@ meta_desc: "Explore the GetCluster function of the redshift module, including ex
 
 Provides details about a specific redshift cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testCluster = Output.Create(Aws.RedShift.GetCluster.InvokeAsync(new Aws.RedShift.GetClusterArgs
+        {
+            ClusterIdentifier = "test-cluster",
+        }));
+        var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "redshift",
+            RedshiftConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationArgs
+            {
+                ClusterJdbcurl = Output.Tuple(testCluster, testCluster).Apply(values =>
+                {
+                    var testCluster = values.Item1;
+                    var testCluster1 = values.Item2;
+                    return $"jdbc:redshift://{testCluster.Endpoint}/{testCluster1.DatabaseName}";
+                }),
+                CopyOptions = "delimiter '|'",
+                DataTableColumns = "test-col",
+                DataTableName = "test-table",
+                Password = "T3stPass",
+                RoleArn = aws_iam_role.Firehose_role.Arn,
+                Username = "testuser",
+            },
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+                BufferInterval = 400,
+                BufferSize = 10,
+                CompressionFormat = "GZIP",
+                RoleArn = aws_iam_role.Firehose_role.Arn,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testCluster, err := redshift.LookupCluster(ctx, &redshift.LookupClusterArgs{
+			ClusterIdentifier: "test-cluster",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
+			Destination: pulumi.String("redshift"),
+			RedshiftConfiguration: &kinesis.FirehoseDeliveryStreamRedshiftConfigurationArgs{
+				ClusterJdbcurl:   pulumi.String(fmt.Sprintf("%v%v%v%v", "jdbc:redshift://", testCluster.Endpoint, "/", testCluster.DatabaseName)),
+				CopyOptions:      pulumi.String("delimiter '|'"),
+				DataTableColumns: pulumi.String("test-col"),
+				DataTableName:    pulumi.String("test-table"),
+				Password:         pulumi.String("T3stPass"),
+				RoleArn:          pulumi.String(aws_iam_role.Firehose_role.Arn),
+				Username:         pulumi.String("testuser"),
+			},
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),
+				BufferInterval:    pulumi.Int(400),
+				BufferSize:        pulumi.Int(10),
+				CompressionFormat: pulumi.String("GZIP"),
+				RoleArn:           pulumi.String(aws_iam_role.Firehose_role.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_cluster = aws.redshift.get_cluster(cluster_identifier="test-cluster")
+test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
+    destination="redshift",
+    redshift_configuration={
+        "clusterJdbcurl": f"jdbc:redshift://{test_cluster.endpoint}/{test_cluster.database_name}",
+        "copyOptions": "delimiter '|'",
+        "dataTableColumns": "test-col",
+        "dataTableName": "test-table",
+        "password": "T3stPass",
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
+        "username": "testuser",
+    },
+    s3_configuration={
+        "bucketArn": aws_s3_bucket["bucket"]["arn"],
+        "bufferInterval": 400,
+        "bufferSize": 10,
+        "compressionFormat": "GZIP",
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testCluster = pulumi.output(aws.redshift.getCluster({
+    clusterIdentifier: "test-cluster",
+}, { async: true }));
+const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
+    destination: "redshift",
+    redshiftConfiguration: {
+        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        copyOptions: "delimiter '|'", // the default delimiter
+        dataTableColumns: "test-col",
+        dataTableName: "test-table",
+        password: "T3stPass",
+        roleArn: aws_iam_role_firehose_role.arn,
+        username: "testuser",
+    },
+    s3Configuration: {
+        bucketArn: aws_s3_bucket_bucket.arn,
+        bufferInterval: 400,
+        bufferSize: 10,
+        compressionFormat: "GZIP",
+        roleArn: aws_iam_role_firehose_role.arn,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCluster {#using}

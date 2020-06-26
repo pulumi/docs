@@ -127,7 +127,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		tfenvtest, err := elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
+		_, err = elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
 			Application: tftest.Name,
 			Settings: elasticbeanstalk.EnvironmentSettingArray{
 				&elasticbeanstalk.EnvironmentSettingArgs{
@@ -198,7 +198,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		tfenvtest, err := elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
+		_, err = elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
 			Application:       tftest.Name,
 			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4"),
 		})

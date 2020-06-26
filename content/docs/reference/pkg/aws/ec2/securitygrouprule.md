@@ -100,7 +100,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		allowAll, err := ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
+		_, err = ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
 			FromPort: pulumi.Int(0),
 			PrefixListIds: pulumi.StringArray{
 				myEndpoint.PrefixListId,
@@ -159,7 +159,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
+		_, err = ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
 			Type:            pulumi.String("ingress"),
 			FromPort:        pulumi.Int(0),
 			ToPort:          pulumi.Int(65535),

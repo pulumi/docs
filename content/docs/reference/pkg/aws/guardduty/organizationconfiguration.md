@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleOrganizationConfiguration, err := guardduty.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &guardduty.OrganizationConfigurationArgs{
+		_, err = guardduty.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &guardduty.OrganizationConfigurationArgs{
 			AutoEnable: pulumi.Bool(true),
 			DetectorId: exampleDetector.ID(),
 		})

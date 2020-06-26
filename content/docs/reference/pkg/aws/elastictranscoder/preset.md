@@ -12,6 +12,297 @@ meta_desc: "Explore the Preset resource of the elastictranscoder module, includi
 
 Provides an Elastic Transcoder preset resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Aws.ElasticTranscoder.Preset("bar", new Aws.ElasticTranscoder.PresetArgs
+        {
+            Audio = new Aws.ElasticTranscoder.Inputs.PresetAudioArgs
+            {
+                AudioPackingMode = "SingleTrack",
+                BitRate = "96",
+                Channels = "2",
+                Codec = "AAC",
+                SampleRate = "44100",
+            },
+            AudioCodecOptions = new Aws.ElasticTranscoder.Inputs.PresetAudioCodecOptionsArgs
+            {
+                Profile = "AAC-LC",
+            },
+            Container = "mp4",
+            Description = "Sample Preset",
+            Thumbnails = new Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs
+            {
+                Format = "png",
+                Interval = "120",
+                MaxHeight = "auto",
+                MaxWidth = "auto",
+                PaddingPolicy = "Pad",
+                SizingPolicy = "Fit",
+            },
+            Video = new Aws.ElasticTranscoder.Inputs.PresetVideoArgs
+            {
+                BitRate = "1600",
+                Codec = "H.264",
+                DisplayAspectRatio = "16:9",
+                FixedGop = "false",
+                FrameRate = "auto",
+                KeyframesMaxDist = "240",
+                MaxFrameRate = "60",
+                MaxHeight = "auto",
+                MaxWidth = "auto",
+                PaddingPolicy = "Pad",
+                SizingPolicy = "Fit",
+            },
+            VideoCodecOptions = 
+            {
+                { "ColorSpaceConversionMode", "None" },
+                { "InterlacedMode", "Progressive" },
+                { "Level", "2.2" },
+                { "MaxReferenceFrames", "3" },
+                { "Profile", "main" },
+            },
+            VideoWatermarks = 
+            {
+                new Aws.ElasticTranscoder.Inputs.PresetVideoWatermarkArgs
+                {
+                    HorizontalAlign = "Right",
+                    HorizontalOffset = "10px",
+                    Id = "Test",
+                    MaxHeight = "20%",
+                    MaxWidth = "20%",
+                    Opacity = "55.5",
+                    SizingPolicy = "ShrinkToFit",
+                    Target = "Content",
+                    VerticalAlign = "Bottom",
+                    VerticalOffset = "10px",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = elastictranscoder.NewPreset(ctx, "bar", &elastictranscoder.PresetArgs{
+			Audio: &elastictranscoder.PresetAudioArgs{
+				AudioPackingMode: pulumi.String("SingleTrack"),
+				BitRate:          pulumi.String("96"),
+				Channels:         pulumi.String("2"),
+				Codec:            pulumi.String("AAC"),
+				SampleRate:       pulumi.String("44100"),
+			},
+			AudioCodecOptions: &elastictranscoder.PresetAudioCodecOptionsArgs{
+				Profile: pulumi.String("AAC-LC"),
+			},
+			Container:   pulumi.String("mp4"),
+			Description: pulumi.String("Sample Preset"),
+			Thumbnails: &elastictranscoder.PresetThumbnailsArgs{
+				Format:        pulumi.String("png"),
+				Interval:      pulumi.String("120"),
+				MaxHeight:     pulumi.String("auto"),
+				MaxWidth:      pulumi.String("auto"),
+				PaddingPolicy: pulumi.String("Pad"),
+				SizingPolicy:  pulumi.String("Fit"),
+			},
+			Video: &elastictranscoder.PresetVideoArgs{
+				BitRate:            pulumi.String("1600"),
+				Codec:              pulumi.String("H.264"),
+				DisplayAspectRatio: pulumi.String("16:9"),
+				FixedGop:           pulumi.String("false"),
+				FrameRate:          pulumi.String("auto"),
+				KeyframesMaxDist:   pulumi.String("240"),
+				MaxFrameRate:       pulumi.String("60"),
+				MaxHeight:          pulumi.String("auto"),
+				MaxWidth:           pulumi.String("auto"),
+				PaddingPolicy:      pulumi.String("Pad"),
+				SizingPolicy:       pulumi.String("Fit"),
+			},
+			VideoCodecOptions: pulumi.Map{
+				"ColorSpaceConversionMode": pulumi.String("None"),
+				"InterlacedMode":           pulumi.String("Progressive"),
+				"Level":                    pulumi.String("2.2"),
+				"MaxReferenceFrames":       pulumi.String("3"),
+				"Profile":                  pulumi.String("main"),
+			},
+			VideoWatermarks: elastictranscoder.PresetVideoWatermarkArray{
+				&elastictranscoder.PresetVideoWatermarkArgs{
+					HorizontalAlign:  pulumi.String("Right"),
+					HorizontalOffset: pulumi.String("10px"),
+					Id:               pulumi.String("Test"),
+					MaxHeight:        pulumi.String(fmt.Sprintf("%v%v", "20", "%")),
+					MaxWidth:         pulumi.String(fmt.Sprintf("%v%v", "20", "%")),
+					Opacity:          pulumi.String("55.5"),
+					SizingPolicy:     pulumi.String("ShrinkToFit"),
+					Target:           pulumi.String("Content"),
+					VerticalAlign:    pulumi.String("Bottom"),
+					VerticalOffset:   pulumi.String("10px"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bar = aws.elastictranscoder.Preset("bar",
+    audio={
+        "audioPackingMode": "SingleTrack",
+        "bitRate": 96,
+        "channels": 2,
+        "codec": "AAC",
+        "sampleRate": 44100,
+    },
+    audio_codec_options={
+        "profile": "AAC-LC",
+    },
+    container="mp4",
+    description="Sample Preset",
+    thumbnails={
+        "format": "png",
+        "interval": 120,
+        "maxHeight": "auto",
+        "maxWidth": "auto",
+        "paddingPolicy": "Pad",
+        "sizingPolicy": "Fit",
+    },
+    video={
+        "bitRate": "1600",
+        "codec": "H.264",
+        "displayAspectRatio": "16:9",
+        "fixedGop": "false",
+        "frameRate": "auto",
+        "keyframesMaxDist": 240,
+        "maxFrameRate": "60",
+        "maxHeight": "auto",
+        "maxWidth": "auto",
+        "paddingPolicy": "Pad",
+        "sizingPolicy": "Fit",
+    },
+    video_codec_options={
+        "ColorSpaceConversionMode": "None",
+        "InterlacedMode": "Progressive",
+        "Level": "2.2",
+        "MaxReferenceFrames": 3,
+        "Profile": "main",
+    },
+    video_watermarks=[{
+        "horizontalAlign": "Right",
+        "horizontalOffset": "10px",
+        "id": "Test",
+        "maxHeight": "20%",
+        "maxWidth": "20%",
+        "opacity": "55.5",
+        "sizingPolicy": "ShrinkToFit",
+        "target": "Content",
+        "verticalAlign": "Bottom",
+        "verticalOffset": "10px",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bar = new aws.elastictranscoder.Preset("bar", {
+    audio: {
+        audioPackingMode: "SingleTrack",
+        bitRate: "96",
+        channels: "2",
+        codec: "AAC",
+        sampleRate: "44100",
+    },
+    audioCodecOptions: {
+        profile: "AAC-LC",
+    },
+    container: "mp4",
+    description: "Sample Preset",
+    thumbnails: {
+        format: "png",
+        interval: "120",
+        maxHeight: "auto",
+        maxWidth: "auto",
+        paddingPolicy: "Pad",
+        sizingPolicy: "Fit",
+    },
+    video: {
+        bitRate: "1600",
+        codec: "H.264",
+        displayAspectRatio: "16:9",
+        fixedGop: "false",
+        frameRate: "auto",
+        keyframesMaxDist: "240",
+        maxFrameRate: "60",
+        maxHeight: "auto",
+        maxWidth: "auto",
+        paddingPolicy: "Pad",
+        sizingPolicy: "Fit",
+    },
+    videoCodecOptions: {
+        ColorSpaceConversionMode: "None",
+        InterlacedMode: "Progressive",
+        Level: "2.2",
+        MaxReferenceFrames: 3,
+        Profile: "main",
+    },
+    videoWatermarks: [{
+        horizontalAlign: "Right",
+        horizontalOffset: "10px",
+        id: "Test",
+        maxHeight: "20%",
+        maxWidth: "20%",
+        opacity: "55.5",
+        sizingPolicy: "ShrinkToFit",
+        target: "Content",
+        verticalAlign: "Bottom",
+        verticalOffset: "10px",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Preset Resource {#create}

@@ -84,7 +84,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		bat, err := autoscaling.NewPolicy(ctx, "bat", &autoscaling.PolicyArgs{
+		_, err = autoscaling.NewPolicy(ctx, "bat", &autoscaling.PolicyArgs{
 			AdjustmentType:       pulumi.String("ChangeInCapacity"),
 			AutoscalingGroupName: bar.Name,
 			Cooldown:             pulumi.Int(300),

@@ -18,6 +18,81 @@ Manages an Amazon API Gateway Version 2 API.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Basic WebSocket API
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Api("example", new Aws.ApiGatewayV2.ApiArgs
+        {
+            ProtocolType = "WEBSOCKET",
+            RouteSelectionExpression = "$request.body.action",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+			ProtocolType:             pulumi.String("WEBSOCKET"),
+			RouteSelectionExpression: pulumi.String(fmt.Sprintf("%v%v", "$", "request.body.action")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigatewayv2.Api("example",
+    protocol_type="WEBSOCKET",
+    route_selection_expression="$request.body.action")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.apigatewayv2.Api("example", {
+    protocolType: "WEBSOCKET",
+    routeSelectionExpression: "$request.body.action",
+});
+```
+
+{{% /example %}}
+
 ### Basic HTTP API
 {{% example csharp %}}
 ```csharp
@@ -50,7 +125,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+		_, err = apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
 			ProtocolType: pulumi.String("HTTP"),
 		})
 		if err != nil {
