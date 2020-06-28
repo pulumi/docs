@@ -65,7 +65,7 @@ Controllers manage the state of the cluster by making changes that move the clus
 
 A Deployment is a higher-level object that manages declarative updates for Pods and ReplicaSets. But first, let’s look at ReplicaSets, which are a set of Pods running the same application at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods. A ReplicaSet creates and deletes Pods as needed to meet the criteria of the declared state, and uses Labels and Selectors to determine which Pods to manage.
 
-A Deployment is a higher-level abstraction that manages ReplicaSets by updating Pods. Deployments are commonly used instead of directly using ReplicaSets because the Deployment controller manages updates to the desired state at a controlled rate. For example, you can specify a Rolling Update to limit the downtime of an application.
+A Deployment is a higher-level abstraction that manages ReplicaSets by updating Pods. Deployments are commonly used instead of directly using ReplicaSets because the Deployment controller manages updates to the desired state at a controlled rate. For example, you can specify a rolling update to limit the downtime of an application.
 
 ## Examples
 
