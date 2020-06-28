@@ -45,7 +45,7 @@ Pod IPs are not exposed to traffic outside of the cluster. Applications require 
 - ClusterIP (default) -The Service is only addressable from within the cluster.
 - NodePort - The Service is available outside the cluster using <NodeIP>:<NodePort>.
 - LoadBalancer - Uses a load balancer to assign a fixed, external IP to the Service.
-- ExternalName - Uses a CNAME record set by *externalName* to expose a Service
+- ExternalName - Uses a CNAME record to internally expose an external Service to Kubernetes within the cluster.
 
 ## Volumes
 
