@@ -43,7 +43,7 @@ A Service routes traffic to a logical set of Pods. For example, your application
 Pod IPs are not exposed to traffic outside of the cluster. Applications require a Service to receive traffic, and by setting a ServiceSpec, they can be addressable by specifying a type:
 
 - ClusterIP (default) -The Service is only addressable from within the cluster.
-- NodePort - The Service is available outside the cluster using <NodeIP>:<NodePort>.
+- NodePort - In addition to a ClusterIP, the Service is also available outside the cluster using `<NodeIP>:<NodePort>`.
 - LoadBalancer - Uses a load balancer to assign a fixed, external IP to the Service.
 - ExternalName - Uses a CNAME record to internally expose an external Service to Kubernetes within the cluster.
 
