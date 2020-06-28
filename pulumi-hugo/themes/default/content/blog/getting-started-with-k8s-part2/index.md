@@ -22,7 +22,7 @@ There are many moving parts to Kubernetes, so let’s review the objects used to
 
 A Pod is where applications run, and it is the smallest unit of execution for Kubernetes. A Pod hosts one or more containers that make up a complete application. For example, a Pod can have a container running an entire LAMP stack for a web application, or it can run a container with NGINX that connects to a database running in another Pod.
 
-Each Pod has an IP address and can address other Pods in the same network. In the previous article, we deployed clusters in a VPC. Pods deployed in a Kubernetes cluster can communicate with each other via TCP/IP. Containers within a Pod share, e.g., think of containers as a process, share the same IP address and port space, and can communicate via localhost or IPC, such as POSIX shared memory or SystemV semaphores.
+Each Pod has an IP address and can address other Pods in the same network. In the previous article, we deployed clusters in a VPC. Pods deployed in a Kubernetes cluster can communicate with each other using TCP/IP, UDP, or SCTP. Containers within a Pod share the same IP address and port space, and can communicate via localhost or IPC, such as POSIX shared memory or SystemV semaphores.
 
 Pods have a specific [lifecycle](https://kubernetes.io/docs/concepts/workloads/Pods/Pod-lifecycle/). They are created, assigned a UID, and scheduled to run on a Node, and run until they either fail or are terminated. When a Node dies, Pods are deleted and replaced. Pods have five distinct states or phases:
 
