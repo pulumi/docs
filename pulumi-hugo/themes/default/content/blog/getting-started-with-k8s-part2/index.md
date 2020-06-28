@@ -55,7 +55,7 @@ Kubernetes supports many types of [volumes](https://kubernetes.io/docs/concepts/
 
 ## Namespaces
 
-One of the advantages of Kubernetes is multi-tenancy or the ability to host many virtual clusters in the same physical cluster. Namespaces are used to organize application clusters by providing scope for names. To this end, Namespaces must be unique, cannot be nested inside another namespace, and resources can only belong to one namespace.
+One of the advantages of Kubernetes is multi-tenancy or the ability to host many virtual clusters in the same physical cluster. Namespaces are used to organize application clusters by providing scope for names. To this end, Namespaces must be unique, cannot be nested inside another namespace, and resources can only belong to one namespace, if they are namespaced.
 
 Namespaces are typically used where there are multiple teams or projects. For example, you may have an *engineering* and a *marketing* namespace. However, it’s more efficient to use labels if the applications are only slightly different than in grouping environments such as dev, test, and prod.
 
