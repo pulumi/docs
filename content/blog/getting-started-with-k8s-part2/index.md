@@ -61,7 +61,7 @@ Namespaces are typically used where there are multiple teams or projects. For ex
 
 ## Controllers
 
-Controllers manage the state of the cluster by making changes that move the cluster to the desired state. They watch resources making sure that objects, such as Pods, meet the spec for the declared state. The [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/) in the control plane Node has a built-in set of controllers. Let’s take a look at two commonly used controllers, Deployments and ReplicaSets.
+Controllers manage the state of the cluster by making changes that move the cluster to the desired state. They watch resources making sure that objects, such as Pods, meet the spec for the declared state. The [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/) in the control plane has a built-in set of controllers. Let’s take a look at two commonly used controllers, Deployments and ReplicaSets.
 
 A Deployment is a higher-level object that manages declarative updates for Pods and ReplicaSets. But first, let’s look at ReplicaSets, which are a set of Pods running the same application at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods. A ReplicaSet creates and deletes Pods as needed to meet the criteria of the declared state, and uses Labels and Selectors to determine which Pods to manage.
 
