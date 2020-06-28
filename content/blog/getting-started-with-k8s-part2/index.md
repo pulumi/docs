@@ -24,7 +24,7 @@ A Pod is where applications run, and it is the smallest unit of execution for Ku
 
 Each Pod has an IP address and can address other Pods in the same network. In the previous article, we deployed clusters in a VPC. Pods deployed in a Kubernetes cluster can communicate with each other using TCP/IP, UDP, or SCTP. Containers within a Pod share the same IP address and port space, and can communicate via localhost or IPC, such as POSIX shared memory or SystemV semaphores.
 
-Pods have a specific [lifecycle](https://kubernetes.io/docs/concepts/workloads/Pods/Pod-lifecycle/). They are created, assigned a UID, and scheduled to run on a Node, and run until they either fail or are terminated. When a Node dies, Pods are deleted and replaced. Pods have five distinct states or phases:
+Pods have a specific [lifecycle](https://kubernetes.io/docs/concepts/workloads/Pods/Pod-lifecycle/). They are created, assigned a UID, scheduled to run on a Node, and run until they either fail or are terminated. When a Node dies, Pods are deleted and replaced onto other nodes. Pods have five distinct states or phases:
 
 - *Pending*  The Pod has been scheduled for creation, but one or more containers have not been created.
 - *Running*  The Pod has been created in the Node, all containers have been created, and at least one container is running.
