@@ -38,7 +38,7 @@ When deploying an application, you can see the status of the Pods.
 
 ## Services
 
-A Service is a logical set of loosely coupled dependent Pods that routes traffic between them. For example, your application may deploy a web application, a data store for queued requests, and an RDBMS for customer data in separate Pods. A Service groups Pods using [Labels and LabelSelectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/). Labels are key/value pairs you can use to identify objects meaningfully. Using the example above, the web application may be labeled `”tier” : ”frontend”` and the database would be labeled `”tier” : :backend”`. Labels aren’t unique, and objects can have the same label. A LabelSelector identifies a set of objects and is a way to group objects.
+A Service routes traffic to a logical set of Pods. For example, your application may deploy a web application, a data store for queued requests, and an RDBMS for customer data in separate Pods. A Service groups Pods using [Labels and LabelSelectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/). Labels are key/value pairs that you can use to identify objects meaningfully. Using the example above, the web application may be labeled `tier : frontend` and the database would be labeled `tier : backend`. Labels aren’t unique, and objects can have the same label. A LabelSelector identifies a set of objects and is a way to group objects.
 
 Pod IPs are not exposed to traffic outside of the cluster. Applications require a Service to receive traffic, and by setting a ServiceSpec, they can be addressable by specifying a type in the ServiceSpec:
 
