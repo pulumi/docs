@@ -75,7 +75,7 @@ Now that we have the basic Kubernetes objects, let's see how they are used in a 
 {{% choosable cloud aws %}}
 In this example, we’ll deploy Nginx. We’ll skip the cluster creation, which we covered in the previous installment. We set *name* to `helloworld` and use it to set the Namespace for the application and the Label (*appLabel*). The Deployment uses these parameters in the metadata section.
 
-The *spec* section of a Deployment specifies the desired state; in this example, we want one Replica, and the selector must match *appLabel*. The Deployment spec includes the application container and claims port:80 on the Pod. To make our deployment available outside the cluster, we create a LoadBalancer service that routes requests to the container. As with the Deployment, we add the Labels and Namespace to the metadata. The Service spec sets the *type* to LoadBalance and opens port 80 externally. Note that the selector uses appLabels to acquire the Pods from our Deployment.
+The *spec* section of a Deployment specifies the desired state; in this example, we want one Replica, and the selector must match *appLabel*. The Deployment spec includes the application container and claims port 80 on the Pod. To make our deployment available outside the cluster, we create a LoadBalancer service that routes requests to the container. As with the Deployment, we add the Labels and Namespace to the metadata. The Service spec sets the *type* to LoadBalance and opens port 80 externally. Note that the selector uses appLabels to acquire the Pods from our Deployment.
 
 ```ts
 ...
