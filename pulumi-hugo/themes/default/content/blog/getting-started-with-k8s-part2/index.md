@@ -14,7 +14,7 @@ Welcome to the second article in a series using infrastructure as code to deploy
 
 <!--more-->
 
-Kubernetes is complex, but it’s important to keep in mind that Kubernetes is not merely a container orchestrator. It is designed to keep applications highly available and to scale on demand. It accomplishes this by running multiple instances of application containers and replacing them as needed.
+Kubernetes has a rich feature set and it is important to keep in mind that Kubernetes is not merely a container orchestrator. It is designed to keep applications highly available and to scale on demand. It accomplishes this by running multiple instances of application containers and replacing them as needed.
 
 There are many moving parts to Kubernetes, so let’s review the objects used to deploy applications in Kubernetes.
 
