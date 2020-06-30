@@ -15,8 +15,6 @@ Provides a GitHub team resource.
 This resource allows you to add/remove teams from your organization. When applied,
 a new team will be created. When destroyed, that team will be removed.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ some_team = github.Team("someTeam",
     description="Some cool team",
     privacy="closed")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -70,6 +71,7 @@ const someTeam = new github.Team("some_team", {
     privacy: "closed",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

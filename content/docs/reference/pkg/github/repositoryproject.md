@@ -12,8 +12,6 @@ meta_desc: "Explore the RepositoryProject resource of the GitHub package, includ
 
 This resource allows you to create and manage projects for GitHub repository.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ project = github.RepositoryProject("project",
     body="This is a repository project.",
     repository=example.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -76,6 +77,7 @@ const project = new github.RepositoryProject("project", {
     repository: example.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

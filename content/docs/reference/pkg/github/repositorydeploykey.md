@@ -21,8 +21,6 @@ This resource allows you to add/remove repository deploy keys.
 Further documentation on GitHub repository deploy keys:
 - [About deploy keys](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +39,7 @@ class MyStack : Stack
         var exampleRepositoryDeployKey = new Github.RepositoryDeployKey("exampleRepositoryDeployKey", new Github.RepositoryDeployKeyArgs
         {
             Key = "ssh-rsa AAA...",
-            ReadOnly = "false",
+            ReadOnly = false,
             Repository = "test-repo",
             Title = "Repository test key",
         });
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,9 +66,11 @@ example_repository_deploy_key = github.RepositoryDeployKey("exampleRepositoryDep
     repository="test-repo",
     title="Repository test key")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -82,6 +83,7 @@ const exampleRepositoryDeployKey = new github.RepositoryDeployKey("example_repos
     title: "Repository test key",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

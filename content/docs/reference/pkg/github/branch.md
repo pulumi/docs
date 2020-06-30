@@ -15,8 +15,6 @@ This resource allows you to create and manage branches within your repository.
 Additional constraints can be applied to ensure your branch is created from
 another branch or commit.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ development = github.Branch("development",
     branch="development",
     repository="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -67,6 +68,7 @@ const development = new github.Branch("development", {
     repository: "example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

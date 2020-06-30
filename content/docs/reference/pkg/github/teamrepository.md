@@ -20,8 +20,6 @@ The repository and the team must both belong to the same organization
 on GitHub. This resource does not actually *create* any repositories;
 to do that, see `github..Repository`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ some_team_repo = github.TeamRepository("someTeamRepo",
     repository=some_repo.name,
     team_id=some_team.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -91,6 +92,7 @@ const someTeamRepo = new github.TeamRepository("some_team_repo", {
     teamId: someTeam.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

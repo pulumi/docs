@@ -15,8 +15,6 @@ as what role they have within it.
 If the user's membership in the organization is pending their acceptance of an invite,
 the role they would have once they accept will be returned.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_github as github
 
 membership_for_some_user = github.get_membership(username="SomeUser")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -63,6 +64,7 @@ const membershipForSomeUser = pulumi.output(github.getMembership({
     username: "SomeUser",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

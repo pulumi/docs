@@ -12,8 +12,6 @@ meta_desc: "Explore the OrganizationProject resource of the GitHub package, incl
 
 This resource allows you to create and manage projects for GitHub organization.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_github as github
 
 project = github.OrganizationProject("project", body="This is a organization project.")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -60,6 +61,7 @@ const project = new github.OrganizationProject("project", {
     body: "This is a organization project.",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

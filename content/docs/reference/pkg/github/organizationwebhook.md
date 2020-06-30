@@ -12,8 +12,6 @@ meta_desc: "Explore the OrganizationWebhook resource of the GitHub package, incl
 
 This resource allows you to create and manage webhooks for GitHub organization.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ foo = github.OrganizationWebhook("foo",
     },
     events=["issues"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -83,6 +84,7 @@ const foo = new github.OrganizationWebhook("foo", {
     events: ["issues"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

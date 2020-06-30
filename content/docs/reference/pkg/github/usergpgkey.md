@@ -14,8 +14,6 @@ Provides a GitHub user's GPG key resource.
 
 This resource allows you to add/remove GPG keys from your user account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ example = github.UserGpgKey("example", armored_public_key="""-----BEGIN PGP PUBL
 -----END PGP PUBLIC KEY BLOCK-----
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -70,6 +71,7 @@ const example = new github.UserGpgKey("example", {
 -----END PGP PUBLIC KEY BLOCK-----`,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

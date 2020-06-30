@@ -14,8 +14,6 @@ Provides a GitHub user's SSH key resource.
 
 This resource allows you to add/remove SSH keys from your user account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ example = github.UserSshKey("example",
     key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
     title="example title")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
@@ -68,6 +69,7 @@ const example = new github.UserSshKey("example", {
     title: "example title",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
