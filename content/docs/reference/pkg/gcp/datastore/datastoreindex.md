@@ -57,7 +57,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datastore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = datastore.NewDataStoreIndex(ctx, "default", &datastore.DataStoreIndexArgs{
+			Kind: pulumi.String("foo"),
+			Properties: datastore.DataStoreIndexPropertyArray{
+				&datastore.DataStoreIndexPropertyArgs{
+					Direction: pulumi.String("ASCENDING"),
+					Name:      pulumi.String("property_a"),
+				},
+				&datastore.DataStoreIndexPropertyArgs{
+					Direction: pulumi.String("ASCENDING"),
+					Name:      pulumi.String("property_b"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

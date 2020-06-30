@@ -58,7 +58,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		department1, err := organizations.NewFolder(ctx, "department1", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Department 1"),
+			Parent:      pulumi.String("organizations/1234567"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = organizations.NewFolder(ctx, "team-abc", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Team ABC"),
+			Parent:      department1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

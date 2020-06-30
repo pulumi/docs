@@ -14,6 +14,11 @@ Explore the resources and functions of the redis module in the GCP package.
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,7 +28,7 @@ Explore the resources and functions of the redis module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

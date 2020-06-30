@@ -64,7 +64,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
 			Target:    defaultTargetPool.ID(),
 			PortRange: pulumi.String("80"),
 		})

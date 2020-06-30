@@ -75,7 +75,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		publicRule, err := storage.NewDefaultObjectAccessControl(ctx, "publicRule", &storage.DefaultObjectAccessControlArgs{
+		_, err = storage.NewDefaultObjectAccessControl(ctx, "publicRule", &storage.DefaultObjectAccessControlArgs{
 			Bucket: bucket.Name,
 			Role:   pulumi.String("READER"),
 			Entity: pulumi.String("allUsers"),

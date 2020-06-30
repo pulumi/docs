@@ -67,7 +67,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		tenantOauthIdpConfig, err := identityplatform.NewTenantOauthIdpConfig(ctx, "tenantOauthIdpConfig", &identityplatform.TenantOauthIdpConfigArgs{
+		_, err = identityplatform.NewTenantOauthIdpConfig(ctx, "tenantOauthIdpConfig", &identityplatform.TenantOauthIdpConfigArgs{
 			Tenant:       tenant.Name,
 			DisplayName:  pulumi.String("Display Name"),
 			ClientId:     pulumi.String("client-id"),

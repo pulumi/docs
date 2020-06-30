@@ -68,7 +68,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		haGateway1, err := compute.NewHaVpnGateway(ctx, "haGateway1", &compute.HaVpnGatewayArgs{
+		_, err = compute.NewHaVpnGateway(ctx, "haGateway1", &compute.HaVpnGatewayArgs{
 			Region:  pulumi.String("us-central1"),
 			Network: network1.ID(),
 		})
@@ -326,7 +326,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		network1Subnet1, err := compute.NewSubnetwork(ctx, "network1Subnet1", &compute.SubnetworkArgs{
+		_, err = compute.NewSubnetwork(ctx, "network1Subnet1", &compute.SubnetworkArgs{
 			IpCidrRange: pulumi.String("10.0.1.0/24"),
 			Region:      pulumi.String("us-central1"),
 			Network:     network1.ID(),
@@ -334,7 +334,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		network1Subnet2, err := compute.NewSubnetwork(ctx, "network1Subnet2", &compute.SubnetworkArgs{
+		_, err = compute.NewSubnetwork(ctx, "network1Subnet2", &compute.SubnetworkArgs{
 			IpCidrRange: pulumi.String("10.0.2.0/24"),
 			Region:      pulumi.String("us-west1"),
 			Network:     network1.ID(),
@@ -342,7 +342,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		network2Subnet1, err := compute.NewSubnetwork(ctx, "network2Subnet1", &compute.SubnetworkArgs{
+		_, err = compute.NewSubnetwork(ctx, "network2Subnet1", &compute.SubnetworkArgs{
 			IpCidrRange: pulumi.String("192.168.1.0/24"),
 			Region:      pulumi.String("us-central1"),
 			Network:     network2.ID(),
@@ -350,7 +350,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		network2Subnet2, err := compute.NewSubnetwork(ctx, "network2Subnet2", &compute.SubnetworkArgs{
+		_, err = compute.NewSubnetwork(ctx, "network2Subnet2", &compute.SubnetworkArgs{
 			IpCidrRange: pulumi.String("192.168.2.0/24"),
 			Region:      pulumi.String("us-east1"),
 			Network:     network2.ID(),
@@ -429,7 +429,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		router1Peer1, err := compute.NewRouterPeer(ctx, "router1Peer1", &compute.RouterPeerArgs{
+		_, err = compute.NewRouterPeer(ctx, "router1Peer1", &compute.RouterPeerArgs{
 			Router:                  router1.Name,
 			Region:                  pulumi.String("us-central1"),
 			PeerIpAddress:           pulumi.String("169.254.0.2"),
@@ -449,7 +449,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		router1Peer2, err := compute.NewRouterPeer(ctx, "router1Peer2", &compute.RouterPeerArgs{
+		_, err = compute.NewRouterPeer(ctx, "router1Peer2", &compute.RouterPeerArgs{
 			Router:                  router1.Name,
 			Region:                  pulumi.String("us-central1"),
 			PeerIpAddress:           pulumi.String("169.254.1.2"),
@@ -469,7 +469,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		router2Peer1, err := compute.NewRouterPeer(ctx, "router2Peer1", &compute.RouterPeerArgs{
+		_, err = compute.NewRouterPeer(ctx, "router2Peer1", &compute.RouterPeerArgs{
 			Router:                  router2.Name,
 			Region:                  pulumi.String("us-central1"),
 			PeerIpAddress:           pulumi.String("169.254.0.2"),
@@ -489,7 +489,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		router2Peer2, err := compute.NewRouterPeer(ctx, "router2Peer2", &compute.RouterPeerArgs{
+		_, err = compute.NewRouterPeer(ctx, "router2Peer2", &compute.RouterPeerArgs{
 			Router:                  router2.Name,
 			Region:                  pulumi.String("us-central1"),
 			PeerIpAddress:           pulumi.String("169.254.1.2"),

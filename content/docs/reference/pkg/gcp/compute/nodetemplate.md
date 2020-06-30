@@ -57,7 +57,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		template, err := compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+		_, err = compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
 			NodeType: pulumi.String("n1-node-96-624"),
 			Region:   pulumi.String("us-central1"),
 		})

@@ -46,14 +46,17 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		appserver, err := compute.LookupInstance(ctx, &compute.LookupInstanceArgs{
-			Name: "primary-application-server",
-			Zone: "us-central1-a",
+		opt0 := "primary-application-server"
+		opt1 := "us-central1-a"
+		_, err := compute.LookupInstance(ctx, &compute.LookupInstanceArgs{
+			Name: &opt0,
+			Zone: &opt1,
 		}, nil)
 		if err != nil {
 			return err

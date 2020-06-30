@@ -50,7 +50,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		gcsAccount, err := storage.GetProjectServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopicIAMBinding(ctx, "binding", &pubsub.TopicIAMBindingArgs{
+			Topic: pulumi.String(google_pubsub_topic.Topic.Name),
+			Role:  pulumi.String("roles/pubsub.publisher"),
+			Members: pulumi.StringArray{
+				pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", gcsAccount.EmailAddress)),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

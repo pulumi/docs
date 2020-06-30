@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		simplecluster, err := dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
+		_, err = dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
 			Region: pulumi.String("us-central1"),
 		})
 		if err != nil {
@@ -185,7 +185,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mycluster, err := dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+		_, err = dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
 				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
 					ServiceAccountScopes: pulumi.StringArray{
@@ -199,10 +199,10 @@ func main() {
 						pulumi.String("bar"),
 					},
 				},
-				InitializationAction: []map[string]interface{}{
-					map[string]interface{}{
-						"script":     "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-						"timeoutSec": 500,
+				InitializationAction: pulumi.MapArray{
+					pulumi.Map{
+						"script":     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
+						"timeoutSec": pulumi.Float64(500),
 					},
 				},
 				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
@@ -218,8 +218,8 @@ func main() {
 				},
 				SoftwareConfig: &dataproc.ClusterClusterConfigSoftwareConfigArgs{
 					ImageVersion: pulumi.String("1.3.7-deb9"),
-					OverrideProperties: map[string]interface{}{
-						"dataproc:dataproc.allow.zero.workers": "true",
+					OverrideProperties: pulumi.Map{
+						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
 					},
 				},
 				StagingBucket: pulumi.String("dataproc-staging-bucket"),
@@ -233,8 +233,8 @@ func main() {
 					NumInstances:   pulumi.Int(2),
 				},
 			},
-			Labels: map[string]interface{}{
-				"foo": "bar",
+			Labels: pulumi.Map{
+				"foo": pulumi.String("bar"),
 			},
 			Region: pulumi.String("us-central1"),
 		})
@@ -273,8 +273,8 @@ mycluster = gcp.dataproc.Cluster("mycluster",
         }],
         "masterConfig": {
             "diskConfig": {
-                "bootDiskSizeGb": 15,
-                "bootDiskType": "pd-ssd",
+                "boot_disk_size_gb": 15,
+                "boot_disk_type": "pd-ssd",
             },
             "machine_type": "n1-standard-1",
             "numInstances": 1,
@@ -291,7 +291,7 @@ mycluster = gcp.dataproc.Cluster("mycluster",
         "stagingBucket": "dataproc-staging-bucket",
         "worker_config": {
             "diskConfig": {
-                "bootDiskSizeGb": 15,
+                "boot_disk_size_gb": 15,
                 "numLocalSsds": 1,
             },
             "machine_type": "n1-standard-1",
@@ -420,7 +420,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		acceleratedCluster, err := dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
+		_, err = dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
 				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
 					Zone: pulumi.String("us-central1-a"),
@@ -3910,8 +3910,8 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisksizegb_python">
-<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+        <span id="boot_disk_size_gb_python">
+<a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3924,8 +3924,8 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisktype_python">
-<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+        <span id="boot_disk_type_python">
+<a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4286,8 +4286,8 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisksizegb_python">
-<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+        <span id="boot_disk_size_gb_python">
+<a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4300,8 +4300,8 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisktype_python">
-<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+        <span id="boot_disk_type_python">
+<a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6150,8 +6150,8 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisksizegb_python">
-<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+        <span id="boot_disk_size_gb_python">
+<a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6164,8 +6164,8 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdisktype_python">
-<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+        <span id="boot_disk_type_python">
+<a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

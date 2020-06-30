@@ -43,12 +43,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		department1, err := organizations.LookupActiveFolder(ctx, &organizations.LookupActiveFolderArgs{
+		_, err := organizations.GetActiveFolder(ctx, &organizations.GetActiveFolderArgs{
 			DisplayName: "Department 1",
 			Parent:      "organizations/1234567",
 		}, nil)

@@ -206,7 +206,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -229,7 +230,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +241,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -260,7 +263,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -282,7 +286,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -292,7 +297,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -325,7 +331,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -335,7 +342,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -352,7 +360,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -375,7 +384,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -385,7 +395,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -406,7 +417,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -428,7 +440,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -438,7 +451,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -471,7 +485,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -481,7 +496,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -498,7 +514,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -521,7 +538,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -531,7 +549,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -552,7 +571,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -574,7 +594,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -584,7 +605,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -617,7 +639,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -627,7 +650,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -644,7 +668,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Dict[Job<wbr>Placement]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -667,7 +692,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Dict[Job<wbr>Hadoop<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -677,7 +703,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Dict[Job<wbr>Hive<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -698,7 +725,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Dict[Job<wbr>Pig<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -720,7 +748,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Dict[Job<wbr>Pyspark<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -730,7 +759,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Dict[Job<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -763,7 +793,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Dict[Job<wbr>Spark<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -773,7 +804,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Dict[Job<wbr>Sparksql<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -833,7 +865,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -882,7 +915,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -931,7 +965,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -980,7 +1015,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Dict[Job<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1158,7 +1194,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1168,7 +1205,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1189,7 +1227,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1199,7 +1238,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1221,7 +1261,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1231,7 +1272,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1264,7 +1306,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1274,7 +1317,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1284,7 +1328,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1336,7 +1381,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1346,7 +1392,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1414,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1377,7 +1425,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1399,7 +1448,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1409,7 +1459,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1442,7 +1493,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1452,7 +1504,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1462,7 +1515,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1514,7 +1568,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1524,7 +1579,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1545,7 +1601,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1555,7 +1612,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1577,7 +1635,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1587,7 +1646,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1620,7 +1680,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1630,7 +1691,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1640,7 +1702,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1692,7 +1755,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Dict[Job<wbr>Hadoop<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of Hadoop job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1702,7 +1766,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Dict[Job<wbr>Hive<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of hive job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1723,7 +1788,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Dict[Job<wbr>Pig<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pag job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1733,7 +1799,8 @@ job is first cancelled before issuing the delete.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Dict[Job<wbr>Placement]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of job placement.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1755,7 +1822,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Dict[Job<wbr>Pyspark<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of pySpark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1765,7 +1833,8 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Dict[Job<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The reference of the job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1798,7 +1867,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Dict[Job<wbr>Spark<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of the Spark job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1808,7 +1878,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Dict[Job<wbr>Sparksql<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The config of SparkSql job
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1818,7 +1889,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Dict[Job<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the job.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

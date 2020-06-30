@@ -57,6 +57,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -75,7 +76,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		frontend, err := dns.NewRecordSet(ctx, "frontend", &dns.RecordSetArgs{
+		_, err = dns.NewRecordSet(ctx, "frontend", &dns.RecordSetArgs{
 			Type:        pulumi.String("A"),
 			Ttl:         pulumi.Int(300),
 			ManagedZone: prod.Name,

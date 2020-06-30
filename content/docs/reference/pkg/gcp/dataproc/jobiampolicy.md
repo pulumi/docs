@@ -91,6 +91,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,7 +110,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		editor, err := dataproc.NewJobIAMPolicy(ctx, "editor", &dataproc.JobIAMPolicyArgs{
+		_, err = dataproc.NewJobIAMPolicy(ctx, "editor", &dataproc.JobIAMPolicyArgs{
 			Project:    pulumi.String("your-project"),
 			Region:     pulumi.String("your-region"),
 			JobId:      pulumi.String("your-dataproc-job"),
@@ -175,7 +176,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		editor, err := dataproc.NewJobIAMBinding(ctx, "editor", &dataproc.JobIAMBindingArgs{
+		_, err = dataproc.NewJobIAMBinding(ctx, "editor", &dataproc.JobIAMBindingArgs{
 			JobId: pulumi.String("your-dataproc-job"),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
@@ -239,7 +240,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		editor, err := dataproc.NewJobIAMMember(ctx, "editor", &dataproc.JobIAMMemberArgs{
+		_, err = dataproc.NewJobIAMMember(ctx, "editor", &dataproc.JobIAMMemberArgs{
 			JobId:  pulumi.String("your-dataproc-job"),
 			Member: pulumi.String("user:jane@example.com"),
 			Role:   pulumi.String("roles/editor"),

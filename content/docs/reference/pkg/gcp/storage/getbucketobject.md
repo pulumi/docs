@@ -46,14 +46,17 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		picture, err := storage.LookupBucketObject(ctx, &storage.LookupBucketObjectArgs{
-			Bucket: "image-store",
-			Name:   "folder/butterfly01.jpg",
+		opt0 := "image-store"
+		opt1 := "folder/butterfly01.jpg"
+		_, err := storage.LookupBucketObject(ctx, &storage.LookupBucketObjectArgs{
+			Bucket: &opt0,
+			Name:   &opt1,
 		}, nil)
 		if err != nil {
 			return err

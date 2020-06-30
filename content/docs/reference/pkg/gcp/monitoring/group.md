@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		basic, err := monitoring.NewGroup(ctx, "basic", &monitoring.GroupArgs{
+		_, err = monitoring.NewGroup(ctx, "basic", &monitoring.GroupArgs{
 			DisplayName: pulumi.String("tf-test MonitoringGroup"),
 			Filter:      pulumi.String("resource.metadata.region=\"europe-west2\""),
 		})
@@ -144,7 +144,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		subgroup, err := monitoring.NewGroup(ctx, "subgroup", &monitoring.GroupArgs{
+		_, err = monitoring.NewGroup(ctx, "subgroup", &monitoring.GroupArgs{
 			DisplayName: pulumi.String("tf-test MonitoringSubGroup"),
 			Filter:      pulumi.String("resource.metadata.region=\"europe-west2\""),
 			ParentName:  parent.Name,

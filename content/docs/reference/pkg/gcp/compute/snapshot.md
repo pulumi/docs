@@ -85,9 +85,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
 		debian, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
-			Family:  "debian-9",
-			Project: "debian-cloud",
+			Family:  &opt0,
+			Project: &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -101,11 +103,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		snapshot, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+		_, err = compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
 			SourceDisk: persistent.Name,
 			Zone:       pulumi.String("us-central1-a"),
-			Labels: map[string]interface{}{
-				"my_label": "value",
+			Labels: pulumi.Map{
+				"my_label": pulumi.String("value"),
 			},
 		})
 		if err != nil {
@@ -878,8 +880,8 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
 </dl>
@@ -985,8 +987,8 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
 </dl>
@@ -1092,8 +1094,8 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
 </dl>
@@ -1199,8 +1201,8 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
 </dl>
@@ -1509,8 +1511,8 @@ key.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1704,8 +1706,8 @@ key.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1899,8 +1901,8 @@ key.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2094,8 +2096,8 @@ key.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
-snapshot creation/deletion.
+    <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
+creation/deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

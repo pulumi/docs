@@ -16,68 +16,62 @@ block_external_search_index: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="accesscontextmanager/">accesscontextmanager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appengine/">appengine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artifactregistry/">artifactregistry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bigquery/">bigquery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bigtable/">bigtable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="billing/">billing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binaryauthorization/">binaryauthorization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloudbuild/">cloudbuild</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloudfunctions/">cloudfunctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloudrun/">cloudrun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloudscheduler/">cloudscheduler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloudtasks/">cloudtasks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="composer/">composer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="container/">container</a></li>
-<li class="toctree-l1"><a class="reference internal" href="containeranalysis/">containeranalysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datacatalog/">datacatalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datafusion/">datafusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataproc/">dataproc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastore/">datastore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploymentmanager/">deploymentmanager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagflow/">diagflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="endpoints/">endpoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="firebase/">firebase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="firestore/">firestore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folder/">folder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gameservices/">gameservices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="identityplatform/">identityplatform</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
-<li class="toctree-l1"><a class="reference internal" href="memcache/">memcache</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="networkmanagement/">networkmanagement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oslogin/">oslogin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projects/">projects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pubsub/">pubsub</a></li>
-<li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resourcemanager/">resourcemanager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runtimeconfig/">runtimeconfig</a></li>
-<li class="toctree-l1"><a class="reference internal" href="secretmanager/">secretmanager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="service_account/">service_account</a></li>
-<li class="toctree-l1"><a class="reference internal" href="servicedirectory/">servicedirectory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="servicenetworking/">servicenetworking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="serviceusage/">serviceusage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sourcerepo/">sourcerepo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spanner/">spanner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>
-<li class="toctree-l1"><a class="reference internal" href="storage/">storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tpu/">tpu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vpcaccess/">vpcaccess</a></li>
+<span class="target" id="module-pulumi_gcp"></span><dl class="py class">
+<dt id="pulumi_gcp.Provider">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_context_manager_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_engine_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">artifact_registry_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batching</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">big_query_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bigquery_connection_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bigquery_data_transfer_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bigquery_reservation_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bigtable_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">binary_authorization_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_billing_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_build_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_functions_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_iot_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_run_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_scheduler_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_tasks_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composer_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_beta_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_analysis_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_beta_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_catalog_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_fusion_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataflow_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataproc_beta_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataproc_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_manager_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dialogflow_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_beta_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filestore_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firebase_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firestore_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">game_services_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">healthcare_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_credentials_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iap_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_platform_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memcache_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ml_engine_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_management_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notebooks_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_login_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pubsub_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_manager_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_manager_v2beta1_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_config_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtimeconfig_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_manager_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_center_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_scanner_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_directory_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_management_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_networking_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_usage_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_repo_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spanner_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_transfer_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tpu_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_project_override</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_access_custom_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.Provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider type for the google-beta package. By default, resources use package-wide configuration
+settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
-</div>
+</dd>
+</dl>
+<p>The <strong>batching</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_batching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">send_after</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py method">
+<dt id="pulumi_gcp.Provider.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.Provider.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.Provider.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
