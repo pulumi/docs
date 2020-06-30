@@ -14,9 +14,6 @@ Provides a Rancher v2 Auth Config FreeIpa resource. This can be used to configur
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AuthConfigFreeIpa Resource {#create}

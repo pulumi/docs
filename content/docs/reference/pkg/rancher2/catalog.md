@@ -12,8 +12,6 @@ meta_desc: "Explore the Catalog resource of the Rancher 2 package, including exa
 
 Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ foo_project = rancher2.Catalog("foo-project",
     scope="project",
     url="https://<CATALOG_URL>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -93,6 +94,7 @@ const foo_project = new rancher2.Catalog("foo-project", {
     url: "https://<CATALOG_URL>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

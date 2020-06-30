@@ -12,8 +12,6 @@ meta_desc: "Explore the GetClusterAlterRule function of the Rancher 2 package, i
 
 Use this data source to retrieve information about a Rancher v2 cluster alert rule.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.get_cluster_alter_rule(cluster_id="<cluster_id>",
     name="<cluster_alert_rule_name>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -63,6 +64,7 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
     name: "<cluster_alert_rule_name>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetApp function of the Rancher 2 package, including exam
 
 Use this data source to retrieve information about a Rancher v2 app.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ rancher2 = rancher2.get_app(name="foo",
     project_id="<project_id>",
     target_namespace="<namespace_name>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -66,6 +67,7 @@ const rancher2App = pulumi.output(rancher2.getApp({
     targetNamespace: "<namespace_name>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

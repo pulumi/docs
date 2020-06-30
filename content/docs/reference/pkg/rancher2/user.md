@@ -14,8 +14,6 @@ Provides a Rancher v2 User resource. This can be used to create Users for Ranche
 
 When a Rancher User is created, it doesn't have a global role binding. At least, `user-base` global role binding in needed in order to enable user login.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ foo_global_role_binding = rancher2.GlobalRoleBinding("fooGlobalRoleBinding",
     global_role_id="user-base",
     user_id=foo_user.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -87,6 +88,7 @@ const fooGlobalRoleBinding = new rancher2.GlobalRoleBinding("foo", {
     userId: fooUser.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

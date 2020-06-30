@@ -16,8 +16,6 @@ Depending of the availability, there are 2 types of Rancher v2 certificates:
 - Project certificate: Available to all namespaces in the `project_id`
 - Namespaced certificate: Available to just `namespace_id` in the `project_id`
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.get_certificate(name="<name>",
     project_id="<project_id>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -68,6 +69,7 @@ const foo = pulumi.output(rancher2.getCertificate({
     projectId: "<project_id>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

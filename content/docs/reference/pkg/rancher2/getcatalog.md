@@ -12,8 +12,6 @@ meta_desc: "Explore the GetCatalog function of the Rancher 2 package, including 
 
 Use this data source to retrieve information about a Rancher v2 catalog.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_rancher2 as rancher2
 
 library = rancher2.get_catalog(name="catalog")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -60,6 +61,7 @@ const library = pulumi.output(rancher2.getCatalog({
     name: "catalog",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

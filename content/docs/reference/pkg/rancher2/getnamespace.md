@@ -12,8 +12,6 @@ meta_desc: "Explore the GetNamespace function of the Rancher 2 package, includin
 
 Use this data source to retrieve information about a Rancher v2 namespace.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.get_namespace(name="foo",
     project_id=rancher2_cluster["foo-custom"]["default_project_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -63,6 +64,7 @@ const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId 
     projectId: defaultProjectId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

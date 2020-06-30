@@ -1,8 +1,8 @@
 
 ---
-title: "ClusterAlterRule"
-title_tag: "Resource ClusterAlterRule | Package Rancher 2"
-meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title: "ClusterAlertRule"
+title_tag: "Resource ClusterAlertRule | Package Rancher 2"
+meta_desc: "Explore the ClusterAlertRule resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,27 +11,26 @@ meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-<p class="resource-deprecated">Deprecated: {{% md %}}rancher2.ClusterAlterRule has been deprecated in favor of rancher2.ClusterAlertRule{{% /md %}}</p>
 
 
-## Create a ClusterAlterRule Resource {#create}
+## Create a ClusterAlertRule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterRule">ClusterAlterRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterRuleArgs">ClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertRule">ClusterAlertRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertRuleArgs">ClusterAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#ClusterAlterRule">ClusterAlterRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>event_rule=None<span class="p">, </span>group_id=None<span class="p">, </span>group_interval_seconds=None<span class="p">, </span>group_wait_seconds=None<span class="p">, </span>inherited=None<span class="p">, </span>labels=None<span class="p">, </span>metric_rule=None<span class="p">, </span>name=None<span class="p">, </span>node_rule=None<span class="p">, </span>repeat_interval_seconds=None<span class="p">, </span>severity=None<span class="p">, </span>system_service_rule=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#ClusterAlertRule">ClusterAlertRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>event_rule=None<span class="p">, </span>group_id=None<span class="p">, </span>group_interval_seconds=None<span class="p">, </span>group_wait_seconds=None<span class="p">, </span>inherited=None<span class="p">, </span>labels=None<span class="p">, </span>metric_rule=None<span class="p">, </span>name=None<span class="p">, </span>node_rule=None<span class="p">, </span>repeat_interval_seconds=None<span class="p">, </span>severity=None<span class="p">, </span>system_service_rule=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRule">NewClusterAlterRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleArgs">ClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRule">ClusterAlterRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRule">NewClusterAlertRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleArgs">ClusterAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRule">ClusterAlertRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterRule.html">ClusterAlterRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterRuleArgs.html">ClusterAlterRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertRule.html">ClusterAlertRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertRuleArgs.html">ClusterAlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -52,7 +51,7 @@ meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, incl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterRuleArgs">ClusterAlterRuleArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertRuleArgs">ClusterAlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -121,7 +120,7 @@ meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, incl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleArgs">ClusterAlterRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleArgs">ClusterAlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -160,7 +159,7 @@ meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, incl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterRuleArgs.html">ClusterAlterRuleArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertRuleArgs.html">ClusterAlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -181,13 +180,13 @@ meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, incl
 
 {{% /choosable %}}
 
-## ClusterAlterRule Resource Properties {#properties}
+## ClusterAlertRule Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -234,7 +233,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#eventrule_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -289,7 +288,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricrule_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -311,7 +310,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#noderule_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -344,7 +343,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#systemservicerule_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -395,7 +394,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#eventrule_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -450,7 +449,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricrule_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -472,7 +471,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#noderule_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -505,7 +504,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#systemservicerule_go" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -556,7 +555,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#eventrule_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -611,7 +610,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -633,7 +632,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#noderule_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -666,7 +665,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#systemservicerule_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -717,7 +716,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#event_rule_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -772,7 +771,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -794,7 +793,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#node_rule_python" style="color: inherit; text-decoration: inherit;">node_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -827,7 +826,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#system_service_rule_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -842,7 +841,7 @@ The ClusterAlterRule resource accepts the following [input]({{< relref "/docs/in
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterAlterRule resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterAlertRule resource produces the following output properties:
 
 
 
@@ -920,13 +919,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing ClusterAlterRule Resource {#look-up}
+## Look up an Existing ClusterAlertRule Resource {#look-up}
 
-Get an existing ClusterAlterRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing ClusterAlertRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterRuleState">ClusterAlterRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterRule">ClusterAlterRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertRuleState">ClusterAlertRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertRule">ClusterAlertRule</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -934,11 +933,11 @@ Get an existing ClusterAlterRule resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleState">ClusterAlterRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRule">ClusterAlterRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleState">ClusterAlertRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRule">ClusterAlertRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterRule.html">ClusterAlterRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterRuleState.html">ClusterAlterRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertRule.html">ClusterAlertRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlertRuleState.html">ClusterAlertRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1072,7 +1071,7 @@ The following state arguments are supported:
 <a href="#state_eventrule_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1138,7 +1137,7 @@ The following state arguments are supported:
 <a href="#state_metricrule_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1160,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_noderule_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1193,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_systemservicerule_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1233,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_eventrule_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1299,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_metricrule_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1321,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_noderule_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1354,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_systemservicerule_go" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1394,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_eventrule_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1460,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1482,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_noderule_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1515,7 +1514,7 @@ The following state arguments are supported:
 <a href="#state_systemservicerule_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1555,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_event_rule_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterruleeventrule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1621,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulemetricrule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1643,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_node_rule_python" style="color: inherit; text-decoration: inherit;">node_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulenoderule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1676,7 +1675,7 @@ The following state arguments are supported:
 <a href="#state_system_service_rule_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralterrulesystemservicerule">Dict[Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Dict[Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1696,16 +1695,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="clusteralterruleeventrule">Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</h4>
+<h4 id="clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlterRuleEventRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlterRuleEventRule">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlertRuleEventRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlertRuleEventRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleEventRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleEventRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleEventRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleEventRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleEventRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleEventRule.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlertRuleEventRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlertRuleEventRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1830,16 +1829,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="clusteralterrulemetricrule">Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</h4>
+<h4 id="clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlterRuleMetricRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlterRuleMetricRule">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlertRuleMetricRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlertRuleMetricRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleMetricRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleMetricRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleMetricRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleMetricRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleMetricRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleMetricRule.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlertRuleMetricRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlertRuleMetricRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2096,16 +2095,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="clusteralterrulenoderule">Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</h4>
+<h4 id="clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlterRuleNodeRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlterRuleNodeRule">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlertRuleNodeRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlertRuleNodeRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleNodeRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleNodeRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleNodeRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleNodeRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleNodeRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleNodeRule.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlertRuleNodeRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlertRuleNodeRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2362,16 +2361,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="clusteralterrulesystemservicerule">Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</h4>
+<h4 id="clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlterRuleSystemServiceRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlterRuleSystemServiceRule">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlertRuleSystemServiceRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlertRuleSystemServiceRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleSystemServiceRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleSystemServiceRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleSystemServiceRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertRuleSystemServiceRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleSystemServiceRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleSystemServiceRule.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlertRuleSystemServiceRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlertRuleSystemServiceRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,8 +12,6 @@ meta_desc: "Explore the GlobalRoleBinding resource of the Rancher 2 package, inc
 
 Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ foo2 = rancher2.GlobalRoleBinding("foo2",
     global_role_id="admin",
     group_principal_id="local://g-XXXXX")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -82,6 +83,7 @@ const foo2 = new rancher2.GlobalRoleBinding("foo2", {
     groupPrincipalId: "local://g-XXXXX",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

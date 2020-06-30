@@ -12,9 +12,7 @@ meta_desc: "Explore the AuthConfigGithub resource of the Rancher 2 package, incl
 
 Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information.
 
-In addition to the built-in local auth, only one external auth config provider can be enabled at a time. 
-
-
+In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
 {{% examples %}}
 ## Example Usage
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ github = rancher2.AuthConfigGithub("github",
     client_id="<GITHUB_CLIENT_ID>",
     client_secret="<GITHUB_CLIENT_SECRET>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -69,6 +70,7 @@ const github = new rancher2.AuthConfigGithub("github", {
     clientSecret: "<GITHUB_CLIENT_SECRET>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

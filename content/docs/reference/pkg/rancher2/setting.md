@@ -14,9 +14,7 @@ Provides a Rancher v2 Setting resource. This can be used to create settings for 
 
 On create, if setting already exists, provider will import it and update its value.
 
-On destroy, if setting is a system setting like `server-url`, provider'll not delete it from Rancher, it'll just update setting value to default and remove it from tfstate. 
-
-
+On destroy, if setting is a system setting like `server-url`, provider'll not delete it from Rancher, it'll just update setting value to default and remove it from tfstate.
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_rancher2 as rancher2
 # Create a new rancher2 Setting
 foo = rancher2.Setting("foo", value="<VALUE>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -67,6 +68,7 @@ const foo = new rancher2.Setting("foo", {
     value: "<VALUE>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

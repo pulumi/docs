@@ -203,7 +203,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -355,7 +355,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -507,7 +507,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -1082,7 +1082,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -1245,7 +1245,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 
@@ -1571,7 +1571,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:
-* add cluster ID before name, `c-XXXXX:<name>`
+* add cluster ID before name, `local:<name>` or `c-XXXXX:<name>`
 * add project ID before name, `p-XXXXX:<name>`
 {{% /md %}}</dd>
 

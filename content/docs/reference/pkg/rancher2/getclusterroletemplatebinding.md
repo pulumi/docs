@@ -12,8 +12,6 @@ meta_desc: "Explore the GetClusterRoleTemplateBinding function of the Rancher 2 
 
 Use this data source to retrieve information about a Rancher v2 cluster role template binding.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.get_cluster_role_template_binding(cluster_id="foo_id",
     name="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -63,6 +64,7 @@ const foo = pulumi.output(rancher2.getClusterRoleTemplateBinding({
     name: "foo",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

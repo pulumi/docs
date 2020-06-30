@@ -12,8 +12,6 @@ meta_desc: "Explore the GetProjectLogging function of the Rancher 2 package, inc
 
 Use this data source to retrieve information about a Rancher v2 Project Logging.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_rancher2 as rancher2
 
 foo = rancher2.get_project_logging(project_id="<project_id>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -60,6 +61,7 @@ const foo = pulumi.output(rancher2.getProjectLogging({
     projectId: "<project_id>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
