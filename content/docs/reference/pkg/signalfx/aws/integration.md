@@ -15,9 +15,6 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.
 
 > **WARNING** This resource implements a part of a workflow. You must use it with one of either `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
-
-{{% examples %}}
-{{% /examples %}}
 ## Service Names
 
 > **NOTE** You can use the data source "signalfx.aws.getServices" to specify all services.

@@ -14,8 +14,6 @@ SignalFx Jira integrations. For help with this integration see [Integration with
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ jira_myteam_xx = signalfx.jira.Integration("jiraMyteamXX",
     project_key="TEST",
     username="yoosername")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -87,6 +88,7 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
     username: "yoosername",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

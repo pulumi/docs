@@ -28,7 +28,7 @@ Explore the resources and functions of the azure module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>2.5.1</dd>
+	<dd>2.5.2</dd>
 </dl>
 
 

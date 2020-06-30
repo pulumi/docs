@@ -12,9 +12,6 @@ meta_desc: "Explore the EventFeedChart resource of the SignalFx package, includi
 
 Displays a listing of events as a widget in a dashboard.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a EventFeedChart Resource {#create}

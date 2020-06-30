@@ -14,8 +14,6 @@ SignalFx Slack integration.
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ slack_myteam = signalfx.slack.Integration("slackMyteam",
     enabled=True,
     webhook_url="http://example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -66,6 +67,7 @@ const slackMyteam = new signalfx.slack.Integration("slack_myteam", {
     webhookUrl: "http://example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

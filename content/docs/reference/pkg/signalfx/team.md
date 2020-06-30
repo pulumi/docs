@@ -14,8 +14,6 @@ Handles management of SignalFx teams.
 
 You can configure [team notification policies](https://docs.signalfx.com/en/latest/managing/teams/team-notifications.html) using this resource and the various `notifications_*` properties.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ myteam0 = signalfx.Team("myteam0",
     notifications_criticals=["PagerDuty,credentialId"],
     notifications_infos=["Email,notify@example.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -88,6 +89,7 @@ const myteam0 = new signalfx.Team("myteam0", {
     notificationsInfos: ["Email,notify@example.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

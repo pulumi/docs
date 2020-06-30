@@ -14,9 +14,6 @@ Provides a SignalFx resource for managing alert muting rules. See [Mute Notifica
 
 > **WARNING** SignalFx does not allow the start time of a **currently active** muting rule to be modified. As such, attempting to modify a currently active rule will destroy the existing rule and create a new rule. This may result in the emission of notifications.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AlertMutingRule Resource {#create}

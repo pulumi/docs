@@ -13,9 +13,6 @@ meta_desc: "Explore the Integration resource of the azure module, including exam
 SignalFx Azure integrations. For help with this integration see [Monitoring Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure).
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
-
-{{% examples %}}
-{{% /examples %}}
 ## Service Names
 
 > **NOTE** You can use the data source "signalfx.azure.getServices" to specify all services.

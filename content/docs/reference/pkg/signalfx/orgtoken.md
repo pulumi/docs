@@ -12,8 +12,6 @@ meta_desc: "Explore the OrgToken resource of the SignalFx package, including exa
 
 Manage SignalFx org tokens.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,9 +75,11 @@ myteamkey0 = signalfx.OrgToken("myteamkey0",
     },
     notifications=["Email,foo-alerts@bar.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -98,6 +99,7 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
     notifications: ["Email,foo-alerts@bar.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

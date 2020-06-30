@@ -16,8 +16,6 @@ SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integra
 
 > **WARNING** This resource implements a part of a workflow. You must use it with `signalfx.aws.Integration`. Check with SignalFx support for your realm's AWS account id.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -167,6 +165,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -273,9 +272,11 @@ aws_myteam = signalfx.aws.Integration("awsMyteam",
     import_cloud_watch=True,
     enable_aws_usage=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -381,6 +382,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
     enableAwsUsage: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

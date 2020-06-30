@@ -14,8 +14,6 @@ Provides a SignalFx time chart resource. This can be used to create and manage t
 
 Time charts display data points over a period of time.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +107,11 @@ mychart0 = signalfx.TimeChart("mychart0",
         "label": "CPU Idle",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -141,6 +142,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
