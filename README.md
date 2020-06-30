@@ -205,4 +205,4 @@ sudo launchctl limit maxfiles 50000 50000
 ulimit -n 50000
 ```
 
-Once you do this, `make serve` should work for you.
+Once you do this, `make serve` should work for you. La la la.
