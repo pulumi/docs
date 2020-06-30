@@ -14,8 +14,6 @@ This chart type displays a single number in a large font, representing the curre
 
 If the time period is in the past, the number represents the value of the metric near the end of the time period.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ data(""cpu.total.idle"", filter=myfilters).publish()
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ data("cpu.total.idle", filter=myfilters).publish()
 """,
     refresh_interval=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -89,6 +90,7 @@ data("cpu.total.idle", filter=myfilters).publish()
     refreshInterval: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

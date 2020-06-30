@@ -12,8 +12,6 @@ meta_desc: "Explore the TextChart resource of the SignalFx package, including ex
 
 This special type of chart doesn’t display any metric data. Rather, it lets you place a text note on the dashboard.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,9 +85,11 @@ mynote0 = signalfx.TextChart("mynote0",
 
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -114,6 +115,7 @@ const mynote0 = new signalfx.TextChart("mynote0", {
 `,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

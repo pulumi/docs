@@ -12,8 +12,6 @@ meta_desc: "Explore the HeatmapChart resource of the SignalFx package, including
 
 This chart type displays the specified plot in a heatmap fashion. This format is similar to the [Infrastructure Navigator](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra), with squares representing each source for the selected metric, and the color of each square representing the value range of the metric.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +71,7 @@ data(""cpu.total.idle"", filter=myfilters).publish()
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,9 +117,11 @@ data("cpu.total.idle", filter=myfilters).publish()
 """,
     sort_by="+host")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -160,6 +161,7 @@ data("cpu.total.idle", filter=myfilters).publish()
     sortBy: "+host",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,9 +12,6 @@ meta_desc: "Explore the DataLink resource of the SignalFx package, including exa
 
 Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-links.html).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DataLink Resource {#create}

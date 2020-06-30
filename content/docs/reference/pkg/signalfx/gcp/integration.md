@@ -14,8 +14,6 @@ SignalFx GCP Integration
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +82,11 @@ gcp_myteam = signalfx.gcp.Integration("gcpMyteam",
     ],
     services=["compute"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
@@ -107,6 +108,7 @@ const gcpMyteam = new signalfx.gcp.Integration("gcp_myteam", {
     services: ["compute"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

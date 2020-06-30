@@ -14,9 +14,6 @@ This chart type displays current data values in a list format.
 
 The name of each value in the chart reflects the name of the plot and any associated dimensions. We recommend you click the Pencil icon and give the plot a meaningful name, as in plot B below. Otherwise, just the raw metric name will be displayed on the chart, as in plot A below.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -77,6 +74,7 @@ data(""cpu.total.idle"", filter=myfilters).publish()
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -123,9 +121,11 @@ data("cpu.total.idle", filter=myfilters).publish()
     refresh_interval=1,
     sort_by="-value")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -165,6 +165,7 @@ data("cpu.total.idle", filter=myfilters).publish()
     sortBy: "-value",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,9 +14,6 @@ Use this data source to get a list of dimension values matching the provided que
 
 > **NOTE** This data source only allows 1000 values, as it's kinda nuts to make anything with `for_each` that big in SignalFx. This is negotiable.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetDimensionValues {#using}

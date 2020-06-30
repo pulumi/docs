@@ -12,8 +12,6 @@ meta_desc: "Explore the GetServices function of the aws module, including exampl
 
 Use this data source to get a list of AWS service names.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,6 +53,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -63,6 +63,7 @@ const awsServices = signalfx.aws.getServices({});
 // for signalfx.aws.Integration for more
 const awsMyteam = new signalfx.aws.Integration("awsMyteam", {services: [awsServices.then(awsServices => awsServices.services)].map(__item => __item?.name)});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

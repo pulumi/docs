@@ -16,9 +16,6 @@ SignalFx AWS CloudWatch integrations using security tokens. For help with this i
 
 > **WARNING** This resource implements a part of a workflow. You must use it with `signalfx.aws.Integration`.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TokenIntegration Resource {#create}

@@ -14,8 +14,6 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 
 > **NOTE** Dashboard groups cannot be accessed directly, but just via a dashboard contained in them. This is the reason why make show won't show any of yours dashboard groups.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ mydashboardgroup0 = signalfx.DashboardGroup("mydashboardgroup0",
     authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
     authorized_writer_users=["abc123"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -75,6 +76,7 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
     authorizedWriterUsers: ["abc123"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

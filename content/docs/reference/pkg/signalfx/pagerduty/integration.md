@@ -14,8 +14,6 @@ SignalFx PagerDuty integrations
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ pagerduty_myteam = signalfx.pagerduty.Integration("pagerdutyMyteam",
     api_key="1234567890",
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -66,6 +67,7 @@ const pagerdutyMyteam = new signalfx.pagerduty.Integration("pagerduty_myteam", {
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
