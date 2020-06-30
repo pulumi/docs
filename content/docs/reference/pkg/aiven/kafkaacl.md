@@ -11,7 +11,6 @@ meta_desc: "Explore the KafkaAcl resource of the Aiven package, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +56,11 @@ mytestacl = aiven.KafkaAcl("mytestacl",
     topic="<TOPIC_NAME_PATTERN>",
     username="<USERNAME_PATTERN>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -71,6 +73,7 @@ const mytestacl = new aiven.KafkaAcl("mytestacl", {
     username: "<USERNAME_PATTERN>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

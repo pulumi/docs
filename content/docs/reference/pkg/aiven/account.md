@@ -11,7 +11,6 @@ meta_desc: "Explore the Account resource of the Aiven package, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,6 +32,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +46,18 @@ import pulumi_aiven as aiven
 
 account1 = aiven.Account("account1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const account1 = new aiven.Account("account1", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

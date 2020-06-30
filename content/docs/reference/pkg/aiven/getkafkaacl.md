@@ -11,7 +11,6 @@ meta_desc: "Explore the GetKafkaAcl function of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +53,11 @@ mytestacl = aiven.get_kafka_acl(project=data["aiven..Service"]["myservice"]["pro
     topic="<TOPIC_NAME_PATTERN>",
     username="<USERNAME_PATTERN>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -67,6 +69,7 @@ const mytestacl = aiven.getKafkaAcl({
     username: "<USERNAME_PATTERN>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -112,6 +115,16 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span> 
@@ -150,22 +163,22 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="permission_csharp">
-<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -207,22 +220,22 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="permission_go">
-<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -264,22 +277,22 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="permission_nodejs">
-<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -315,16 +328,6 @@ The following arguments are supported:
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="permission_python">
-<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -364,6 +367,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span> 
@@ -402,16 +415,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="permission_csharp">
-<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -429,6 +432,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -470,16 +483,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="permission_go">
-<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -497,6 +500,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -538,16 +551,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="permission_nodejs">
-<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -565,6 +568,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -600,16 +613,6 @@ The following output properties are available:
             title="">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="permission_python">
-<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

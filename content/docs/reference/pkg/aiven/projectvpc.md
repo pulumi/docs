@@ -11,7 +11,6 @@ meta_desc: "Explore the ProjectVpc resource of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +52,11 @@ myvpc = aiven.ProjectVpc("myvpc",
     network_cidr="192.168.0.1/24",
     project=aiven_project["myproject"]["project"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -65,6 +67,7 @@ const myvpc = new aiven.ProjectVpc("myvpc", {
     project: aiven_project_myproject.project,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -79,7 +82,7 @@ const myvpc = new aiven.ProjectVpc("myvpc", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#ProjectVpc">ProjectVpc</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_name=None<span class="p">, </span>network_cidr=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#ProjectVpc">ProjectVpc</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>network_cidr=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -284,6 +287,17 @@ The ProjectVpc resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The project the VPC belongs to
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_csharp">
+<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -323,6 +337,17 @@ The ProjectVpc resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The project the VPC belongs to
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_go">
+<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -364,6 +389,17 @@ The ProjectVpc resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The project the VPC belongs to
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_nodejs">
+<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -403,6 +439,17 @@ The ProjectVpc resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The project the VPC belongs to
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="client_timeout_python">
+<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Dict[Project<wbr>Vpc<wbr>Client<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -546,7 +593,7 @@ Get an existing ProjectVpc resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloud_name=None<span class="p">, </span>network_cidr=None<span class="p">, </span>project=None<span class="p">, </span>state=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>network_cidr=None<span class="p">, </span>project=None<span class="p">, </span>state=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -660,6 +707,17 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_csharp">
+<a href="#state_clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
@@ -710,6 +768,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_go">
+<a href="#state_clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -762,6 +831,17 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_nodejs">
+<a href="#state_clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
@@ -813,6 +893,17 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_client_timeout_python">
+<a href="#state_client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectvpcclienttimeout">Dict[Project<wbr>Vpc<wbr>Client<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
@@ -861,6 +952,138 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="projectvpcclienttimeout">Project<wbr>Vpc<wbr>Client<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ProjectVpcClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ProjectVpcClientTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ProjectVpcClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ProjectVpcClientTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ProjectVpcClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ProjectVpcClientTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_csharp">
+<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_csharp">
+<a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_go">
+<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_go">
+<a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_nodejs">
+<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_nodejs">
+<a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_python">
+<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_python">
+<a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

@@ -11,7 +11,6 @@ meta_desc: "Explore the ConnectionPool resource of the Aiven package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +60,11 @@ mytestpool = aiven.ConnectionPool("mytestpool",
     service_name=aiven_service["myservice"]["service_name"],
     username=aiven_service_user["myserviceuser"]["username"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -77,6 +79,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     username: aiven_service_user_myserviceuser.username,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

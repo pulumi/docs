@@ -11,7 +11,6 @@ meta_desc: "Explore the KafkaTopic resource of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +64,11 @@ mytesttopic = aiven.KafkaTopic("mytesttopic",
     service_name=aiven_service["myservice"]["service_name"],
     topic_name="<TOPIC_NAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -83,6 +85,7 @@ const mytesttopic = new aiven.KafkaTopic("mytesttopic", {
     topicName: "<TOPIC_NAME>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -97,7 +100,7 @@ const mytesttopic = new aiven.KafkaTopic("mytesttopic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#KafkaTopic">KafkaTopic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_policy=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#KafkaTopic">KafkaTopic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_policy=None<span class="p">, </span>client_timeout=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,6 +338,17 @@ The KafkaTopic resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_csharp">
+<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="minimuminsyncreplicas_csharp">
@@ -452,6 +466,17 @@ enable this for any production Kafka topic containing critical data.
     </dt>
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_go">
+<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -571,6 +596,17 @@ enable this for any production Kafka topic containing critical data.
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="clienttimeout_nodejs">
+<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="minimuminsyncreplicas_nodejs">
@@ -688,6 +724,17 @@ enable this for any production Kafka topic containing critical data.
     </dt>
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="client_timeout_python">
+<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Dict[Kafka<wbr>Topic<wbr>Client<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -832,7 +879,7 @@ Get an existing KafkaTopic resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cleanup_policy=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cleanup_policy=None<span class="p">, </span>client_timeout=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -957,6 +1004,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_csharp">
+<a href="#state_clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimuminsyncreplicas_csharp">
@@ -1074,6 +1132,17 @@ enable this for any production Kafka topic containing critical data.
     </dt>
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_go">
+<a href="#state_clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1193,6 +1262,17 @@ enable this for any production Kafka topic containing critical data.
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_clienttimeout_nodejs">
+<a href="#state_clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimuminsyncreplicas_nodejs">
@@ -1311,6 +1391,17 @@ enable this for any production Kafka topic containing critical data.
     <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_client_timeout_python">
+<a href="#state_client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkatopicclienttimeout">Dict[Kafka<wbr>Topic<wbr>Client<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom Terraform Client timeouts
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimum_in_sync_replicas_python">
@@ -1415,6 +1506,138 @@ enable this for any production Kafka topic containing critical data.
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="kafkatopicclienttimeout">Kafka<wbr>Topic<wbr>Client<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaTopicClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaTopicClientTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#KafkaTopicClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#KafkaTopicClientTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaTopicClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaTopicClientTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_csharp">
+<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="read_csharp">
+<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_go">
+<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="read_go">
+<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_nodejs">
+<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="read_nodejs">
+<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_python">
+<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="read_python">
+<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

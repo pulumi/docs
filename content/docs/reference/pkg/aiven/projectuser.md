@@ -11,7 +11,6 @@ meta_desc: "Explore the ProjectUser resource of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +52,11 @@ mytestuser = aiven.ProjectUser("mytestuser",
     member_type="admin",
     project=aiven_project["myproject"]["project"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -65,6 +67,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     project: aiven_project_myproject.project,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

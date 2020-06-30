@@ -11,7 +11,6 @@ meta_desc: "Explore the GetAccount function of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -47,9 +47,11 @@ import pulumi_aiven as aiven
 
 account1 = aiven.get_account(name="<ACCOUNT_NAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -58,6 +60,7 @@ const account1 = pulumi.output(aiven.getAccount({
     name: "<ACCOUNT_NAME>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

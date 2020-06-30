@@ -11,7 +11,6 @@ meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ foo = aiven.get_account_team_member(account_id=aiven_account["developers"]["acco
     team_id=aiven_account["developers"]["account_id"],
     user_email="user+1@example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -64,6 +66,7 @@ const foo = pulumi.all([aiven_account_developers.accountId, aiven_account_develo
     userEmail: "user+1@example.com",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

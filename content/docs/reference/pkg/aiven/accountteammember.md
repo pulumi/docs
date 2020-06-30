@@ -11,11 +11,9 @@ meta_desc: "Explore the AccountTeamMember resource of the Aiven package, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 During the creation of `aiven..AccountTeamMember` resource, an email invitation will be sent
-to a user using `user_email` address. If the user accepts an invitation, he or she will become a member of the account team. 
-The deletion of `aiven..AccountTeamMember` will not only delete invitation if one was sent but not yet accepted by the 
+to a user using `user_email` address. If the user accepts an invitation, he or she will become a member of the account team.
+The deletion of `aiven..AccountTeamMember` will not only delete invitation if one was sent but not yet accepted by the
 user, and it will also eliminate an account team member if one has accepted an invitation previously.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ foo = aiven.AccountTeamMember("foo",
     team_id=aiven_account["developers"]["account_id"],
     user_email="user+1@example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -70,6 +71,7 @@ const foo = new aiven.AccountTeamMember("foo", {
     userEmail: "user+1@example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
