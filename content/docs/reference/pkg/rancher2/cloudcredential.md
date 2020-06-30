@@ -14,8 +14,6 @@ Provides a Rancher v2 Cloud Credential resource. This can be used to create Clou
 
 amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ foo = rancher2.CloudCredential("foo",
     },
     description="foo test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -79,6 +80,7 @@ const foo = new rancher2.CloudCredential("foo", {
     description: "foo test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

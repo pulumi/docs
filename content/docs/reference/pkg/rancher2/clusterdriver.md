@@ -12,9 +12,6 @@ meta_desc: "Explore the ClusterDriver resource of the Rancher 2 package, includi
 
 Provides a Rancher v2 Cluster Driver resource. This can be used to create Cluster Driver for Rancher v2.2.x Kontainer Engine clusters and retrieve their information.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ClusterDriver Resource {#create}

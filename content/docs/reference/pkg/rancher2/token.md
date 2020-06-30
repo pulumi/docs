@@ -18,8 +18,6 @@ There are 2 kind of tokens:
 
 Tokens can't be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ foo = rancher2.Token("foo",
     description="foo token",
     ttl=1200)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -76,6 +77,7 @@ const foo = new rancher2.Token("foo", {
     ttl: 1200,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

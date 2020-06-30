@@ -12,9 +12,7 @@ meta_desc: "Explore the AuthConfigAdfs resource of the Rancher 2 package, includ
 
 Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.
 
-In addition to the built-in local auth, only one external auth config provider can be enabled at a time. 
-
-
+In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ adfs = rancher2.AuthConfigAdfs("adfs",
     uid_field="<UID_FIELD>",
     user_name_field="<USER_NAME_FIELD>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -87,6 +88,7 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
     userNameField: "<USER_NAME_FIELD>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configu
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ keycloak = rancher2.AuthConfigKeycloak("keycloak",
     uid_field="<UID_FIELD>",
     user_name_field="<USER_NAME_FIELD>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -87,6 +88,7 @@ const keycloak = new rancher2.AuthConfigKeycloak("keycloak", {
     userNameField: "<USER_NAME_FIELD>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

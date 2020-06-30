@@ -1,8 +1,8 @@
 
 ---
-title: "ClusterAlterGroup"
-title_tag: "Resource ClusterAlterGroup | Package Rancher 2"
-meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title: "ClusterAlertGroup"
+title_tag: "Resource ClusterAlertGroup | Package Rancher 2"
+meta_desc: "Explore the ClusterAlertGroup resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,27 +11,26 @@ meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-<p class="resource-deprecated">Deprecated: {{% md %}}rancher2.ClusterAlterGroup has been deprecated in favor of rancher2.ClusterAlertGroup{{% /md %}}</p>
 
 
-## Create a ClusterAlterGroup Resource {#create}
+## Create a ClusterAlertGroup Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroup">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertGroup">ClusterAlertGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertGroupArgs">ClusterAlertGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#ClusterAlterGroup">ClusterAlterGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>group_interval_seconds=None<span class="p">, </span>group_wait_seconds=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>recipients=None<span class="p">, </span>repeat_interval_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#ClusterAlertGroup">ClusterAlertGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>group_interval_seconds=None<span class="p">, </span>group_wait_seconds=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>recipients=None<span class="p">, </span>repeat_interval_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroup">NewClusterAlterGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroup">ClusterAlterGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroup">NewClusterAlertGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroupArgs">ClusterAlertGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroup">ClusterAlertGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroupArgs.html">ClusterAlterGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertGroup.html">ClusterAlertGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertGroupArgs.html">ClusterAlertGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -52,7 +51,7 @@ meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, inc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertGroupArgs">ClusterAlertGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -121,7 +120,7 @@ meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, inc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroupArgs">ClusterAlertGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -160,7 +159,7 @@ meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, inc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroupArgs.html">ClusterAlterGroupArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertGroupArgs.html">ClusterAlertGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -181,13 +180,13 @@ meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, inc
 
 {{% /choosable %}}
 
-## ClusterAlterGroup Resource Properties {#properties}
+## ClusterAlertGroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ClusterAlertGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -278,7 +277,7 @@ The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/i
 <a href="#recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">List&lt;Cluster<wbr>Alert<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -384,7 +383,7 @@ The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/i
 <a href="#recipients_go" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">[]Cluster<wbr>Alter<wbr>Group<wbr>Recipient</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">[]Cluster<wbr>Alert<wbr>Group<wbr>Recipient</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -490,7 +489,7 @@ The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/i
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">Cluster<wbr>Alert<wbr>Group<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -596,7 +595,7 @@ The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/i
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List[Cluster<wbr>Alter<wbr>Group<wbr>Recipient]</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">List[Cluster<wbr>Alert<wbr>Group<wbr>Recipient]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -622,7 +621,7 @@ The ClusterAlterGroup resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterAlterGroup resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterAlertGroup resource produces the following output properties:
 
 
 
@@ -700,13 +699,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing ClusterAlterGroup Resource {#look-up}
+## Look up an Existing ClusterAlertGroup Resource {#look-up}
 
-Get an existing ClusterAlterGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing ClusterAlertGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroupState">ClusterAlterGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroup">ClusterAlterGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertGroupState">ClusterAlertGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlertGroup">ClusterAlertGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -714,11 +713,11 @@ Get an existing ClusterAlterGroup resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlterGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroupState">ClusterAlterGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroup">ClusterAlterGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlertGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroupState">ClusterAlertGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroup">ClusterAlertGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterGroupState.html">ClusterAlterGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlertGroup.html">ClusterAlertGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlertGroupState.html">ClusterAlertGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -907,7 +906,7 @@ The following state arguments are supported:
 <a href="#state_recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">List&lt;Cluster<wbr>Alert<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1013,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_recipients_go" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">[]Cluster<wbr>Alter<wbr>Group<wbr>Recipient</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">[]Cluster<wbr>Alert<wbr>Group<wbr>Recipient</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1119,7 +1118,7 @@ The following state arguments are supported:
 <a href="#state_recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">Cluster<wbr>Alert<wbr>Group<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1225,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List[Cluster<wbr>Alter<wbr>Group<wbr>Recipient]</a></span>
+        <span class="property-type"><a href="#clusteralertgrouprecipient">List[Cluster<wbr>Alert<wbr>Group<wbr>Recipient]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1256,16 +1255,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient</h4>
+<h4 id="clusteralertgrouprecipient">Cluster<wbr>Alert<wbr>Group<wbr>Recipient</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlterGroupRecipient">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlterGroupRecipient">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterAlertGroupRecipient">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterAlertGroupRecipient">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroupRecipientArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterGroupRecipientOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroupRecipientArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlertGroupRecipientOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterGroupRecipientArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterGroupRecipient.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlertGroupRecipientArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlertGroupRecipient.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,8 +12,6 @@ meta_desc: "Explore the ProjectLogging resource of the Rancher 2 package, includ
 
 Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,9 +66,11 @@ foo = rancher2.ProjectLogging("foo",
         "sslVerify": False,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -86,6 +87,7 @@ const foo = new rancher2.ProjectLogging("foo", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

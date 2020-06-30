@@ -29,6 +29,8 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="cloudcredential" title="CloudCredential"><span class="symbol resource"></span>CloudCredential</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clusteralertgroup" title="ClusterAlertGroup"><span class="symbol resource"></span>ClusterAlertGroup</a></li>
+    <li><a href="clusteralertrule" title="ClusterAlertRule"><span class="symbol resource"></span>ClusterAlertRule</a></li>
     <li><a href="clusteraltergroup" title="ClusterAlterGroup"><span class="symbol resource"></span>ClusterAlterGroup</a></li>
     <li><a href="clusteralterrule" title="ClusterAlterRule"><span class="symbol resource"></span>ClusterAlterRule</a></li>
     <li><a href="clusterdriver" title="ClusterDriver"><span class="symbol resource"></span>ClusterDriver</a></li>
@@ -104,7 +106,7 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
 	<dt>Version</dt>
-	<dd>2.1.3</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 

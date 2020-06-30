@@ -12,8 +12,6 @@ meta_desc: "Explore the NodeDriver resource of the Rancher 2 package, including 
 
 Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ foo = rancher2.NodeDriver("foo",
     url="local://",
     whitelist_domains=["*.foo.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -88,6 +89,7 @@ const foo = new rancher2.NodeDriver("foo", {
     whitelistDomains: ["*.foo.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

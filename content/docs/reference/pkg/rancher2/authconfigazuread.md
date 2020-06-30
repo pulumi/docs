@@ -14,8 +14,6 @@ Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configur
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ azuread = rancher2.AuthConfigAzureAd("azuread",
     tenant_id="<AZUREAD_TENANT_ID>",
     token_endpoint="<AZUREAD_TOKEN_ENDPOINT>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -84,6 +85,7 @@ const azuread = new rancher2.AuthConfigAzureAd("azuread", {
     tokenEndpoint: "<AZUREAD_TOKEN_ENDPOINT>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

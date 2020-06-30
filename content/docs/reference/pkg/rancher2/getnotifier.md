@@ -12,8 +12,6 @@ meta_desc: "Explore the GetNotifier function of the Rancher 2 package, including
 
 Use this data source to retrieve information about a Rancher v2 notifier.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.get_notifier(cluster_id="<cluster_id>",
     name="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -63,6 +64,7 @@ const foo = pulumi.output(rancher2.getNotifier({
     name: "foo",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

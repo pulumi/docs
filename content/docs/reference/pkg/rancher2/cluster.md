@@ -12,9 +12,6 @@ meta_desc: "Explore the Cluster resource of the Rancher 2 package, including exa
 
 Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}
@@ -371,7 +368,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,7 +379,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,7 +390,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,7 +401,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -664,7 +661,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,7 +672,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,7 +683,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -697,7 +694,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -957,7 +954,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,7 +965,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -979,7 +976,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,7 +987,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1250,7 +1247,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1261,7 +1258,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1272,7 +1269,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,7 +1280,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1946,7 +1943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1957,7 +1954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1968,7 +1965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1979,7 +1976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2283,7 +2280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2294,7 +2291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2305,7 +2302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2316,7 +2313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2620,7 +2617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2631,7 +2628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2642,7 +2639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2653,7 +2650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2957,7 +2954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2968,7 +2965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
+    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2979,7 +2976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default `false` (bool)
+    <dd>{{% md %}}Enable built-in cluster monitoring (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2990,7 +2987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
+    <dd>{{% md %}}Enable project network isolation (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6170,7 +6167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6375,7 +6372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6580,7 +6577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6785,7 +6782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7238,7 +7235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable stackdriver logging. Default `true` (bool)
+    <dd>{{% md %}}Enable network policy config for the cluster. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7408,6 +7405,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resourcelabels_csharp">
 <a href="#resourcelabels_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Labels</a>
 </span> 
@@ -7447,7 +7455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -7816,7 +7824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable stackdriver logging. Default `true` (bool)
+    <dd>{{% md %}}Enable network policy config for the cluster. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7986,6 +7994,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resourcelabels_go">
 <a href="#resourcelabels_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Labels</a>
 </span> 
@@ -8025,7 +8044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -8394,7 +8413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable stackdriver logging. Default `true` (bool)
+    <dd>{{% md %}}Enable network policy config for the cluster. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8564,6 +8583,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resourcelabels_nodejs">
 <a href="#resourcelabels_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Labels</a>
 </span> 
@@ -8603,7 +8633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -8972,7 +9002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable stackdriver logging. Default `true` (bool)
+    <dd>{{% md %}}Enable network policy config for the cluster. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9142,6 +9172,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resourcelabels_python">
 <a href="#resourcelabels_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Labels</a>
 </span> 
@@ -9181,7 +9222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -10554,7 +10595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE strategy for authentication (string)
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -10583,7 +10624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE strategy for authentication (string)
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -10612,7 +10653,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE strategy for authentication (string)
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -10641,7 +10682,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}RKE strategy for authentication (string)
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -11143,7 +11184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string) (string)
+    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11216,7 +11257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string) (string)
+    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11289,7 +11330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string) (string)
+    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11362,7 +11403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string) (string)
+    <dd>{{% md %}}RKE Custom Cloud Provider config for Cloud Provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11664,7 +11705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -11781,7 +11822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -11898,7 +11939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -12015,7 +12056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Zone GKE cluster (string)
+    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -12062,7 +12103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12135,7 +12176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12208,7 +12249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12281,7 +12322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12516,6 +12557,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancersku_csharp">
+<a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12835,6 +12887,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loadbalancersku_go">
+<a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -13150,6 +13213,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loadbalancersku_nodejs">
+<a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -13461,6 +13535,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}(int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancersku_python">
+<a href="#loadbalancersku_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14149,7 +14234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14266,7 +14351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14383,7 +14468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14500,7 +14585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16655,7 +16740,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodelocal_csharp">
+<a href="#nodelocal_csharp" style="color: inherit; text-decoration: inherit;">Nodelocal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns config  (list Maxitem: 1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16666,7 +16762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16706,7 +16802,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodelocal_go">
+<a href="#nodelocal_go" style="color: inherit; text-decoration: inherit;">Nodelocal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns config  (list Maxitem: 1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16717,7 +16824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16757,7 +16864,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodelocal_nodejs">
+<a href="#nodelocal_nodejs" style="color: inherit; text-decoration: inherit;">nodelocal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns config  (list Maxitem: 1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16768,7 +16886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16808,7 +16926,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodelocal_python">
+<a href="#nodelocal_python" style="color: inherit; text-decoration: inherit;">nodelocal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Dict[Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal]</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns config  (list Maxitem: 1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16819,7 +16948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16842,6 +16971,140 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}DNS add-on upstream nameservers  (list)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterRkeConfigDnsNodelocal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterRkeConfigDnsNodelocal">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigDnsNodelocalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigDnsNodelocalOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterRkeConfigDnsNodelocalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterRkeConfigDnsNodelocal.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns ip address (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_csharp">
+<a href="#nodeselector_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns ip address (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_go">
+<a href="#nodeselector_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns ip address (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_nodejs">
+<a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_python">
+<a href="#ipaddress_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Nodelocal dns ip address (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_python">
+<a href="#nodeselector_python" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -16899,7 +17162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16921,7 +17184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -16961,7 +17224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16983,7 +17246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -17023,7 +17286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17045,7 +17308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -17085,7 +17348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Node selector for RKE Ingress (map)
+    <dd>{{% md %}}RKE monitoring node selector (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17107,7 +17370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -17137,6 +17400,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nodeselector_csharp">
+<a href="#nodeselector_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
@@ -17154,7 +17428,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicas_csharp">
+<a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring replicas (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_csharp">
+<a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd>
 
 </dl>
@@ -17163,6 +17459,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_go">
+<a href="#nodeselector_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -17183,7 +17490,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicas_go">
+<a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring replicas (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_go">
+<a href="#updatestrategy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd>
 
 </dl>
@@ -17192,6 +17521,17 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_nodejs">
+<a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -17212,7 +17552,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicas_nodejs">
+<a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring replicas (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_nodejs">
+<a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd>
 
 </dl>
@@ -17221,6 +17583,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeselector_python">
+<a href="#nodeselector_python" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring node selector (map)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -17241,7 +17614,297 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Provider for RKE monitoring (string)
+    <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicas_python">
+<a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring replicas (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_python">
+<a href="#updatestrategy_python" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Dict[Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy]</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterRkeConfigMonitoringUpdateStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterRkeConfigMonitoringUpdateStrategy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigMonitoringUpdateStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigMonitoringUpdateStrategyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterRkeConfigMonitoringUpdateStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterRkeConfigMonitoringUpdateStrategy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_csharp">
+<a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="strategy_csharp">
+<a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_go">
+<a href="#rollingupdate_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="strategy_go">
+<a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_nodejs">
+<a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="strategy_nodejs">
+<a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_python">
+<a href="#rollingupdate_python" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Dict[Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update]</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="strategy_python">
+<a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterRkeConfigMonitoringUpdateStrategyRollingUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterRkeConfigMonitoringUpdateStrategyRollingUpdate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigMonitoringUpdateStrategyRollingUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterRkeConfigMonitoringUpdateStrategyRollingUpdateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterRkeConfigMonitoringUpdateStrategyRollingUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterRkeConfigMonitoringUpdateStrategyRollingUpdate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsurge_csharp">
+<a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max surge. Default: `1` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_csharp">
+<a href="#maxunavailable_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsurge_go">
+<a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max surge. Default: `1` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_go">
+<a href="#maxunavailable_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsurge_nodejs">
+<a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max surge. Default: `1` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_nodejs">
+<a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsurge_python">
+<a href="#maxsurge_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max surge. Default: `1` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_python">
+<a href="#maxunavailable_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
 {{% /md %}}</dd>
 
 </dl>
@@ -20124,7 +20787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20208,7 +20871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20292,7 +20955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20376,7 +21039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AWS Region to create the EKS cluster in. Default `us-west-2` (string)
+    <dd>{{% md %}}GKE cluster region. Conflicts with `zone` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

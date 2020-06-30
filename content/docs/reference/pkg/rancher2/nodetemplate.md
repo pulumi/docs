@@ -16,8 +16,6 @@ amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drive
 
 **Note** If you are upgrading to Rancher v2.3.3, please take a look to final section
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +79,11 @@ foo = rancher2.NodeTemplate("foo",
     },
     description="foo test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -102,6 +103,7 @@ const foo = new rancher2.NodeTemplate("foo", {
     description: "foo test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -2788,6 +2790,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptebsvolume_csharp">
+<a href="#encryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ebs<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
@@ -3132,6 +3145,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptebsvolume_go">
+<a href="#encryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ebs<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3484,6 +3508,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptebsvolume_nodejs">
+<a href="#encryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ebs<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
@@ -3828,6 +3863,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptebsvolume_python">
+<a href="#encryptebsvolume_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ebs<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

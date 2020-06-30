@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSetting function of the Rancher 2 package, including 
 
 Use this data source to retrieve information about a Rancher v2 setting.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_rancher2 as rancher2
 
 server_image = rancher2.get_setting(name="server-image")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -60,6 +61,7 @@ const server_image = pulumi.output(rancher2.getSetting({
     name: "server-image",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

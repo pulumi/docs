@@ -12,9 +12,6 @@ meta_desc: "Explore the NodePool resource of the Rancher 2 package, including ex
 
 Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NodePool Resource {#create}
