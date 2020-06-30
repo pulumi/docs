@@ -11,7 +11,6 @@ meta_desc: "Explore the GetProjectUser function of the Aiven package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +49,11 @@ import pulumi_aiven as aiven
 mytestuser = aiven.get_project_user(project=data["aiven..Project"]["myproject"]["project"],
     email="john.doe@example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -61,6 +63,7 @@ const mytestuser = aiven.getProjectUser({
     email: "john.doe@example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

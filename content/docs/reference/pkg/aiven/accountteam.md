@@ -11,7 +11,6 @@ meta_desc: "Explore the AccountTeam resource of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -47,9 +47,11 @@ import pulumi_aiven as aiven
 
 account_team1 = aiven.AccountTeam("accountTeam1", account_id=aiven_account["team"]["account_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -58,6 +60,7 @@ const accountTeam1 = new aiven.AccountTeam("account_team1", {
     accountId: aiven_account_team.accountId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

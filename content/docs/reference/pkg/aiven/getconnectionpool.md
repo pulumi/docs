@@ -11,7 +11,6 @@ meta_desc: "Explore the GetConnectionPool function of the Aiven package, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ mytestpool = aiven.get_connection_pool(project=data["aiven..Service"]["myservice
     service_name=data["aiven..Service"]["myservice"]["service_name"],
     pool_name="<POOLNAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -64,6 +66,7 @@ const mytestpool = aiven.getConnectionPool({
     poolName: "<POOLNAME>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -11,7 +11,6 @@ meta_desc: "Explore the GetDatabase function of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ mydatabase = aiven.get_database(project=data["aiven..Service"]["myservice"]["pro
     service_name=data["aiven..Service"]["myservice"]["service_name"],
     database_name="<DATABASE_NAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -64,6 +66,7 @@ const mydatabase = aiven.getDatabase({
     databaseName: "<DATABASE_NAME>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

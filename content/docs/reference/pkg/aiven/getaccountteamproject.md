@@ -11,7 +11,6 @@ meta_desc: "Explore the GetAccountTeamProject function of the Aiven package, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ account_team_project1 = aiven.get_account_team_project(account_id=aiven_account_
     project_name=aiven_project["project1"]["project"],
     team_id=aiven_account_team["developers"]["team_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -64,6 +66,7 @@ const accountTeamProject1 = pulumi.all([aiven_account_team_developers.accountId,
     teamId: teamId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

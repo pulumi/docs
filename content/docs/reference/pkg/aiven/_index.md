@@ -15,6 +15,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="accountauthentication" title="AccountAuthentication"><span class="symbol resource"></span>AccountAuthentication</a></li>
     <li><a href="accountteam" title="AccountTeam"><span class="symbol resource"></span>AccountTeam</a></li>
     <li><a href="accountteammember" title="AccountTeamMember"><span class="symbol resource"></span>AccountTeamMember</a></li>
     <li><a href="accountteamproject" title="AccountTeamProject"><span class="symbol resource"></span>AccountTeamProject</a></li>
@@ -26,6 +27,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="kafkaschema" title="KafkaSchema"><span class="symbol resource"></span>KafkaSchema</a></li>
     <li><a href="kafkaschemaconfiguration" title="KafkaSchemaConfiguration"><span class="symbol resource"></span>KafkaSchemaConfiguration</a></li>
     <li><a href="kafkatopic" title="KafkaTopic"><span class="symbol resource"></span>KafkaTopic</a></li>
+    <li><a href="mirrormakerreplicationflow" title="MirrorMakerReplicationFlow"><span class="symbol resource"></span>MirrorMakerReplicationFlow</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectuser" title="ProjectUser"><span class="symbol resource"></span>ProjectUser</a></li>
     <li><a href="projectvpc" title="ProjectVpc"><span class="symbol resource"></span>ProjectVpc</a></li>
@@ -40,6 +42,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getaccountauthentication" title="GetAccountAuthentication"><span class="symbol function"></span>GetAccountAuthentication</a></li>
     <li><a href="getaccountteam" title="GetAccountTeam"><span class="symbol function"></span>GetAccountTeam</a></li>
     <li><a href="getaccountteammember" title="GetAccountTeamMember"><span class="symbol function"></span>GetAccountTeamMember</a></li>
     <li><a href="getaccountteamproject" title="GetAccountTeamProject"><span class="symbol function"></span>GetAccountTeamProject</a></li>
@@ -51,10 +54,12 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getkafkaschema" title="GetKafkaSchema"><span class="symbol function"></span>GetKafkaSchema</a></li>
     <li><a href="getkafkaschemaconfiguration" title="GetKafkaSchemaConfiguration"><span class="symbol function"></span>GetKafkaSchemaConfiguration</a></li>
     <li><a href="getkafkatopic" title="GetKafkaTopic"><span class="symbol function"></span>GetKafkaTopic</a></li>
+    <li><a href="getmirrormakerreplicationflow" title="GetMirrorMakerReplicationFlow"><span class="symbol function"></span>GetMirrorMakerReplicationFlow</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojectuser" title="GetProjectUser"><span class="symbol function"></span>GetProjectUser</a></li>
     <li><a href="getprojectvpc" title="GetProjectVpc"><span class="symbol function"></span>GetProjectVpc</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="symbol function"></span>GetServiceIntegration</a></li>
     <li><a href="getserviceintegrationendpoint" title="GetServiceIntegrationEndpoint"><span class="symbol function"></span>GetServiceIntegrationEndpoint</a></li>
     <li><a href="getserviceuser" title="GetServiceUser"><span class="symbol function"></span>GetServiceUser</a></li>
     <li><a href="getvpcpeeringconnection" title="GetVpcPeeringConnection"><span class="symbol function"></span>GetVpcPeeringConnection</a></li>
@@ -69,7 +74,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 

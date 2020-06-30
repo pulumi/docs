@@ -11,7 +11,6 @@ meta_desc: "Explore the GetProject function of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -47,9 +47,11 @@ import pulumi_aiven as aiven
 
 myproject = aiven.get_project(project="<PROJECT_NAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -58,6 +60,7 @@ const myproject = pulumi.output(aiven.getProject({
     project: "<PROJECT_NAME>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

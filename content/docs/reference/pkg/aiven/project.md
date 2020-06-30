@@ -11,7 +11,6 @@ meta_desc: "Explore the Project resource of the Aiven package, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ myproject = aiven.Project("myproject",
     card_id="<FULL_CARD_ID/LAST4_DIGITS>",
     project="<PROJECT_NAME>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -62,6 +64,7 @@ const myproject = new aiven.Project("myproject", {
     project: "<PROJECT_NAME>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

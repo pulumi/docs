@@ -11,7 +11,6 @@ meta_desc: "Explore the Database resource of the Aiven package, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +52,11 @@ mydatabase = aiven.Database("mydatabase",
     project=aiven_project["myproject"]["project"],
     service_name=aiven_service["myservice"]["service_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
@@ -65,6 +67,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     serviceName: aiven_service_myservice.serviceName,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
