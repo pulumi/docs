@@ -14,6 +14,7 @@ check_links_www() {
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
 	#     - A number of synthetic illustrative links come from our examples/tutorials.
+    #     - GitLab 503s for requests for protected pages that don't contain certain cookies.
     npx blc https://www.pulumi.com --recursive --follow --get \
         --exclude "/docs/reference/pkg" \
         --exclude "/docs/get-started/install/versions" \
@@ -42,7 +43,9 @@ check_links_www() {
         --exclude "https://hello-a28eea2-q1wszdxb2b-ew.a.run.app" \
         --exclude "https://ruby-420a973-q1wszdxb2b-ew.a.run.app" \
         --exclude "https://280f2167f1.execute-api.us-east-1.amazonaws.com" \
-        --exclude "http://my-bucket-1234567.s3-website.us-west-2.amazonaws.com"
+        --exclude "http://my-bucket-1234567.s3-website.us-west-2.amazonaws.com" \
+        --exclude "https://gitlab.com/users/sign_in" \
+        --exclude "https://gitlab.com/profile/applications"
 }
 
 check_links_local() {
