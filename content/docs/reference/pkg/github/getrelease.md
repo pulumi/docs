@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRelease function of the GitHub package, including exa
 
 Use this data source to retrieve information about a GitHub release in a specific repository.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ example = github.get_release(owner="example-owner",
     repository="example-repository",
     retrieve_by="latest")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -66,6 +67,7 @@ const example = pulumi.output(github.getRelease({
     retrieveBy: "latest",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

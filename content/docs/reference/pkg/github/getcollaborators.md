@@ -12,8 +12,6 @@ meta_desc: "Explore the GetCollaborators function of the GitHub package, includi
 
 Use this data source to retrieve the collaborators for a given repository.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_github as github
 test = github.get_collaborators(owner="example_owner",
     repository="example_repository")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -63,6 +64,7 @@ const test = pulumi.output(github.getCollaborators({
     repository: "example_repository",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

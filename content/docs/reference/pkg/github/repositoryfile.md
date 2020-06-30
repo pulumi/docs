@@ -13,9 +13,6 @@ meta_desc: "Explore the RepositoryFile resource of the GitHub package, including
 This resource allows you to create and manage files within a
 GitHub repository.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +54,11 @@ gitignore = github.RepositoryFile("gitignore",
     file=".gitignore",
     repository="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -69,6 +69,7 @@ const gitignore = new github.RepositoryFile("gitignore", {
     repository: "example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetOrganizationTeamSyncGroups function of the GitHub pac
 
 Use this data source to retrieve the identity provider (IdP) groups for an organization.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +45,18 @@ import pulumi_github as github
 
 test = github.get_organization_team_sync_groups()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
 const test = pulumi.output(github.getOrganizationTeamSyncGroups({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

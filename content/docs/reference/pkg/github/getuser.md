@@ -12,8 +12,6 @@ meta_desc: "Explore the GetUser function of the GitHub package, including exampl
 
 Use this data source to retrieve information about a GitHub user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_github as github
 
 example = github.get_user(username="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -60,6 +61,7 @@ const example = pulumi.output(github.getUser({
     username: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

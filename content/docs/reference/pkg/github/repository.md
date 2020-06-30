@@ -22,7 +22,7 @@ meta_desc: "Explore the Repository resource of the GitHub package, including exa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Repository">Repository</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_merge_commit=None<span class="p">, </span>allow_rebase_merge=None<span class="p">, </span>allow_squash_merge=None<span class="p">, </span>archived=None<span class="p">, </span>auto_init=None<span class="p">, </span>default_branch=None<span class="p">, </span>delete_branch_on_merge=None<span class="p">, </span>description=None<span class="p">, </span>gitignore_template=None<span class="p">, </span>has_downloads=None<span class="p">, </span>has_issues=None<span class="p">, </span>has_projects=None<span class="p">, </span>has_wiki=None<span class="p">, </span>homepage_url=None<span class="p">, </span>is_template=None<span class="p">, </span>license_template=None<span class="p">, </span>name=None<span class="p">, </span>private=None<span class="p">, </span>template=None<span class="p">, </span>topics=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Repository">Repository</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_merge_commit=None<span class="p">, </span>allow_rebase_merge=None<span class="p">, </span>allow_squash_merge=None<span class="p">, </span>archived=None<span class="p">, </span>auto_init=None<span class="p">, </span>default_branch=None<span class="p">, </span>delete_branch_on_merge=None<span class="p">, </span>description=None<span class="p">, </span>gitignore_template=None<span class="p">, </span>has_downloads=None<span class="p">, </span>has_issues=None<span class="p">, </span>has_projects=None<span class="p">, </span>has_wiki=None<span class="p">, </span>homepage_url=None<span class="p">, </span>is_template=None<span class="p">, </span>license_template=None<span class="p">, </span>name=None<span class="p">, </span>private=None<span class="p">, </span>template=None<span class="p">, </span>topics=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -385,8 +385,8 @@ the repository.
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="private_csharp">
 <a href="#private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
 </span> 
@@ -395,7 +395,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -417,6 +417,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -617,8 +628,8 @@ the repository.
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="private_go">
 <a href="#private_go" style="color: inherit; text-decoration: inherit;">Private</a>
 </span> 
@@ -627,7 +638,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -649,6 +660,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -849,8 +871,8 @@ the repository.
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="private_nodejs">
 <a href="#private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
 </span> 
@@ -859,7 +881,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -881,6 +903,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1081,8 +1114,8 @@ the repository.
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="private_python">
 <a href="#private_python" style="color: inherit; text-decoration: inherit;">private</a>
 </span> 
@@ -1091,7 +1124,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,6 +1146,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1557,7 +1601,7 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_merge_commit=None<span class="p">, </span>allow_rebase_merge=None<span class="p">, </span>allow_squash_merge=None<span class="p">, </span>archived=None<span class="p">, </span>auto_init=None<span class="p">, </span>default_branch=None<span class="p">, </span>delete_branch_on_merge=None<span class="p">, </span>description=None<span class="p">, </span>etag=None<span class="p">, </span>full_name=None<span class="p">, </span>git_clone_url=None<span class="p">, </span>gitignore_template=None<span class="p">, </span>has_downloads=None<span class="p">, </span>has_issues=None<span class="p">, </span>has_projects=None<span class="p">, </span>has_wiki=None<span class="p">, </span>homepage_url=None<span class="p">, </span>html_url=None<span class="p">, </span>http_clone_url=None<span class="p">, </span>is_template=None<span class="p">, </span>license_template=None<span class="p">, </span>name=None<span class="p">, </span>node_id=None<span class="p">, </span>private=None<span class="p">, </span>ssh_clone_url=None<span class="p">, </span>svn_url=None<span class="p">, </span>template=None<span class="p">, </span>topics=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_merge_commit=None<span class="p">, </span>allow_rebase_merge=None<span class="p">, </span>allow_squash_merge=None<span class="p">, </span>archived=None<span class="p">, </span>auto_init=None<span class="p">, </span>default_branch=None<span class="p">, </span>delete_branch_on_merge=None<span class="p">, </span>description=None<span class="p">, </span>etag=None<span class="p">, </span>full_name=None<span class="p">, </span>git_clone_url=None<span class="p">, </span>gitignore_template=None<span class="p">, </span>has_downloads=None<span class="p">, </span>has_issues=None<span class="p">, </span>has_projects=None<span class="p">, </span>has_wiki=None<span class="p">, </span>homepage_url=None<span class="p">, </span>html_url=None<span class="p">, </span>http_clone_url=None<span class="p">, </span>is_template=None<span class="p">, </span>license_template=None<span class="p">, </span>name=None<span class="p">, </span>node_id=None<span class="p">, </span>private=None<span class="p">, </span>ssh_clone_url=None<span class="p">, </span>svn_url=None<span class="p">, </span>template=None<span class="p">, </span>topics=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1926,8 +1970,8 @@ the repository.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_private_csharp">
 <a href="#state_private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
 </span> 
@@ -1936,7 +1980,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1980,6 +2024,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_csharp">
+<a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -2244,8 +2299,8 @@ the repository.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_private_go">
 <a href="#state_private_go" style="color: inherit; text-decoration: inherit;">Private</a>
 </span> 
@@ -2254,7 +2309,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2298,6 +2353,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_go">
+<a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -2562,8 +2628,8 @@ the repository.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_private_nodejs">
 <a href="#state_private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
 </span> 
@@ -2572,7 +2638,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2616,6 +2682,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_nodejs">
+<a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -2880,8 +2957,8 @@ the repository.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_private_python">
 <a href="#state_private_python" style="color: inherit; text-decoration: inherit;">private</a>
 </span> 
@@ -2890,7 +2967,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2934,6 +3011,17 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_python">
+<a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd>
 
 </dl>

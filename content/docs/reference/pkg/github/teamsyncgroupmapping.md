@@ -16,9 +16,6 @@ You must have team synchronization enabled for organizations owned by enterprise
 To learn more about team synchronization between IdPs and Github, please refer to:
 https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TeamSyncGroupMapping Resource {#create}

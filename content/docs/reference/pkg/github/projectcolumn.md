@@ -12,8 +12,6 @@ meta_desc: "Explore the ProjectColumn resource of the GitHub package, including 
 
 This resource allows you to create and manage columns for GitHub projects.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_github as github
 project = github.OrganizationProject("project", body="This is an organization project.")
 column = github.ProjectColumn("column", project_id=project.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -68,6 +69,7 @@ const column = new github.ProjectColumn("column", {
     projectId: project.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

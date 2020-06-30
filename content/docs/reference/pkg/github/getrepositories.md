@@ -15,8 +15,6 @@ meta_desc: "Explore the GetRepositories function of the GitHub package, includin
 
 Use this data source to retrieve a list of GitHub repositories using a search query.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_github as github
 
 example = github.get_repositories(query="org:hashicorp language:Go")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -63,6 +64,7 @@ const example = pulumi.output(github.getRepositories({
     query: "org:hashicorp language:Go",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

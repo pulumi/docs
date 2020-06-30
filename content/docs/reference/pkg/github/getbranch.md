@@ -12,8 +12,6 @@ meta_desc: "Explore the GetBranch function of the GitHub package, including exam
 
 Use this data source to retrieve information about a repository branch.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_github as github
 development = github.get_branch(branch="development",
     repository="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -63,6 +64,7 @@ const development = pulumi.output(github.getBranch({
     repository: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

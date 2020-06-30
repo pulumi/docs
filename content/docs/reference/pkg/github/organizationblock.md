@@ -12,8 +12,6 @@ meta_desc: "Explore the OrganizationBlock resource of the GitHub package, includ
 
 This resource allows you to create and manage blocks for GitHub organizations.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_github as github
 
 example = github.OrganizationBlock("example", username="paultyng")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -60,6 +61,7 @@ const example = new github.OrganizationBlock("example", {
     username: "paultyng",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

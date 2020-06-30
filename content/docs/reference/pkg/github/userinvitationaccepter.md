@@ -12,8 +12,6 @@ meta_desc: "Explore the UserInvitationAccepter resource of the GitHub package, i
 
 Provides a resource to manage GitHub repository collaborator invitations.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ example_repository_collaborator = github.RepositoryCollaborator("exampleReposito
 invitee = pulumi.providers.Github("invitee", token=var["invitee_token"])
 example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -89,6 +90,7 @@ const exampleUserInvitationAccepter = new github.UserInvitationAccepter("example
     invitationId: exampleRepositoryCollaborator.invitationId,
 }, { provider: invitee });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

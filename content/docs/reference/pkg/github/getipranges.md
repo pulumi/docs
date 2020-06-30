@@ -12,8 +12,6 @@ meta_desc: "Explore the GetIpRanges function of the GitHub package, including ex
 
 Use this data source to retrieve information about GitHub's IP addresses.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +45,18 @@ import pulumi_github as github
 
 test = github.get_ip_ranges()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
 const test = pulumi.output(github.getIpRanges({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

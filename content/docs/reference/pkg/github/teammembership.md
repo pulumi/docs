@@ -17,8 +17,6 @@ the user will be added to the team. If the user hasn't accepted their invitation
 organization, they won't be part of the team until they do. When
 destroyed, the user will be removed from the team.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ some_team_membership = github.TeamMembership("someTeamMembership",
     team_id=some_team.id,
     username="SomeUser")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -95,6 +96,7 @@ const someTeamMembership = new github.TeamMembership("some_team_membership", {
     username: "SomeUser",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
