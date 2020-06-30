@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAvailabilityZones function of the compute module, inc
 
 Use this data source to get a list of availability zones from OpenStack
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +45,18 @@ import pulumi_openstack as openstack
 
 zones = openstack.compute.get_availability_zones()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const zones = pulumi.output(openstack.compute.getAvailabilityZones({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

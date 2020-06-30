@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDnsZone function of the dns module, including example
 
 Use this data source to get the ID of an available OpenStack DNS zone.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 zone1 = openstack.dns.get_dns_zone(name="example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const zone1 = pulumi.output(openstack.dns.getDnsZone({
     name: "example.com",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

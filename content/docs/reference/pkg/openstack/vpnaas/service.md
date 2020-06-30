@@ -12,8 +12,6 @@ meta_desc: "Explore the Service resource of the vpnaas module, including example
 
 Manages a V2 Neutron VPN service resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,13 +28,14 @@ class MyStack : Stack
     {
         var service1 = new OpenStack.VPNaaS.Service("service1", new OpenStack.VPNaaS.ServiceArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             RouterId = "14a75700-fc03-4602-9294-26ee44f366b3",
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ service1 = openstack.vpnaas.Service("service1",
     admin_state_up="true",
     router_id="14a75700-fc03-4602-9294-26ee44f366b3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -64,6 +65,7 @@ const service1 = new openstack.vpnaas.Service("service_1", {
     routerId: "14a75700-fc03-4602-9294-26ee44f366b3",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

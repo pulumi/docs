@@ -3,7 +3,10 @@ title: Module vpnaas
 title_tag: Module vpnaas | Package pulumi_openstack | Python SDK
 linktitle: vpnaas
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="vpnaas">
 <h1>vpnaas<a class="headerlink" href="#vpnaas" title="Permalink to this headline">¶</a></h1>

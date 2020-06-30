@@ -3,7 +3,10 @@ title: Package pulumi_openstack
 title_tag: Package pulumi_openstack | Python SDK
 linktitle: pulumi_openstack
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="pulumi-openstack">
 <h1>Pulumi OpenStack<a class="headerlink" href="#pulumi-openstack" title="Permalink to this headline">¶</a></h1>

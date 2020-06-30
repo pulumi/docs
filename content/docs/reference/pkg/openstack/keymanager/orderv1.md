@@ -12,8 +12,6 @@ meta_desc: "Explore the OrderV1 resource of the keymanager module, including exa
 
 Manages a V1 Barbican order resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ order1 = openstack.keymanager.OrderV1("order1",
     },
     type="key")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -80,6 +81,7 @@ const order1 = new openstack.keymanager.OrderV1("order_1", {
     type: "key",
 });
 ```
+
 {{% /example %}}
 
 ### Asymmetric key pair order
@@ -106,6 +108,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +128,11 @@ order1 = openstack.keymanager.OrderV1("order1",
     },
     type="asymmetric")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -141,6 +146,7 @@ const order1 = new openstack.keymanager.OrderV1("order_1", {
     type: "asymmetric",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

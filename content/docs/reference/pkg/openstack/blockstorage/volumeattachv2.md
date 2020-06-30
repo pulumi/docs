@@ -24,8 +24,6 @@ different cloud provider.
 This does not actually attach a volume to an instance. Please use
 the `openstack.compute.VolumeAttach` resource for that.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +78,11 @@ va1 = openstack.blockstorage.VolumeAttachV2("va1",
     platform="x86_64",
     volume_id=volume1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -99,6 +100,7 @@ const va1 = new openstack.blockstorage.VolumeAttachV2("va_1", {
     volumeId: volume1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

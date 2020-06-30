@@ -12,8 +12,6 @@ meta_desc: "Explore the ContainerV1 resource of the keymanager module, including
 
 Manages a V1 Barbican container resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -88,6 +86,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,9 +134,11 @@ listener1 = openstack.loadbalancer.Listener("listener1",
     protocol="TERMINATED_HTTPS",
     protocol_port=443)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
@@ -188,6 +189,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
     protocolPort: 443,
 });
 ```
+
 {{% /example %}}
 
 ### Container with the ACL
@@ -238,6 +240,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -275,9 +278,11 @@ tls1 = openstack.keymanager.ContainerV1("tls1",
     ],
     type="certificate")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -309,6 +314,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
     type: "certificate",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

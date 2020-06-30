@@ -14,8 +14,6 @@ Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
 `openstack.networking.FloatingIp` resource to create a floating IP.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ fip1 = openstack.networking.FloatingIpAssociate("fip1",
     floating_ip="1.2.3.4",
     port_id=port1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -74,6 +75,7 @@ const fip1 = new openstack.networking.FloatingIpAssociate("fip_1", {
     portId: port1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

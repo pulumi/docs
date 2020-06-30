@@ -14,8 +14,6 @@ Use this data source to get the ID of an OpenStack group.
 
 Note: This usually requires admin privileges.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 
 admins = openstack.identity.get_group(name="admins")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,6 +63,7 @@ const admins = pulumi.output(openstack.identity.getGroup({
     name: "admins",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the Instance resource of the database module, including exam
 
 Manages a V1 DB instance resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ test = openstack.database.Instance("test",
     region="region-test",
     size=8)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -93,6 +94,7 @@ const test = new openstack.database.Instance("test", {
     size: 8,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

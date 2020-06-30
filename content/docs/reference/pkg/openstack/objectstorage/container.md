@@ -12,8 +12,6 @@ meta_desc: "Explore the Container resource of the objectstorage module, includin
 
 Manages a V1 container resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ container1 = openstack.objectstorage.Container("container1",
         "type": "versions",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -87,6 +88,7 @@ const container1 = new openstack.objectstorage.Container("container_1", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Global Read Access
@@ -108,6 +110,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -123,9 +126,11 @@ container1 = openstack.objectstorage.Container("container1",
     container_read=".r:*",
     region="RegionOne")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -135,6 +140,7 @@ const container1 = new openstack.objectstorage.Container("container_1", {
     region: "RegionOne",
 });
 ```
+
 {{% /example %}}
 
 ### Global Read and List Access
@@ -156,6 +162,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -171,9 +178,11 @@ container1 = openstack.objectstorage.Container("container1",
     container_read=".r:*,.rlistings",
     region="RegionOne")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -183,6 +192,7 @@ const container1 = new openstack.objectstorage.Container("container_1", {
     region: "RegionOne",
 });
 ```
+
 {{% /example %}}
 
 ### Write-Only Access for a User
@@ -209,6 +219,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -226,9 +237,11 @@ container1 = openstack.objectstorage.Container("container1",
     container_write=f"{current.project_id}:{var['username']}",
     region="RegionOne")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -242,6 +255,7 @@ const container1 = new openstack.objectstorage.Container("container_1", {
     region: "RegionOne",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

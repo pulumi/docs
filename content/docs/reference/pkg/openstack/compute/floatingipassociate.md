@@ -13,8 +13,6 @@ meta_desc: "Explore the FloatingIpAssociate resource of the compute module, incl
 Associate a floating IP to an instance. This can be used instead of the
 `floating_ip` options in `openstack.compute.Instance`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -31,7 +29,7 @@ class MyStack : Stack
     {
         var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
         {
-            FlavorId = 3,
+            FlavorId = "3",
             ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
             KeyPair = "my_key_pair_name",
             SecurityGroups = 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ fip1_floating_ip_associate = openstack.compute.FloatingIpAssociate("fip1Floating
     floating_ip=fip1_floating_ip.address,
     instance_id=instance1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -94,6 +95,7 @@ const fip1FloatingIpAssociate = new openstack.compute.FloatingIpAssociate("fip_1
     instanceId: instance1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Explicitly set the network to attach to
@@ -108,7 +110,7 @@ class MyStack : Stack
     {
         var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
         {
-            FlavorId = 3,
+            FlavorId = "3",
             ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
             KeyPair = "my_key_pair_name",
             Networks = 
@@ -141,6 +143,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -171,9 +174,11 @@ fip1_floating_ip_associate = openstack.compute.FloatingIpAssociate("fip1Floating
     floating_ip=fip1_floating_ip.address,
     instance_id=instance1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -201,6 +206,7 @@ const fip1FloatingIpAssociate = new openstack.compute.FloatingIpAssociate("fip_1
     instanceId: instance1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

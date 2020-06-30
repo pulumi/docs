@@ -12,8 +12,6 @@ meta_desc: "Explore the SiteConnection resource of the vpnaas module, including 
 
 Manages a V2 Neutron IPSec site connection resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ conn1 = openstack.vpnaas.SiteConnection("conn1",
     psk="secret",
     vpnservice_id=openstack_vpnaas_service_v2["service_1"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -79,6 +80,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
     vpnserviceId: openstack_vpnaas_service_v2_service_1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

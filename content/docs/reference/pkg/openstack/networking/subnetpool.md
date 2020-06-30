@@ -12,8 +12,6 @@ meta_desc: "Explore the SubnetPool resource of the networking module, including 
 
 Manages a V2 Neutron subnetpool resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ subnetpool1 = openstack.networking.SubnetPool("subnetpool1",
         "fd65:86cc:a334:39b7::/64",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -74,6 +75,7 @@ const subnetpool1 = new openstack.networking.SubnetPool("subnetpool_1", {
     ],
 });
 ```
+
 {{% /example %}}
 
 ### Create a Subnet from a Subnet Pool
@@ -88,7 +90,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnetpool1 = new OpenStack.Networking.SubnetPool("subnetpool1", new OpenStack.Networking.SubnetPoolArgs
         {
@@ -107,6 +109,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +128,11 @@ subnet1 = openstack.networking.Subnet("subnet1",
     network_id=network1.id,
     subnetpool_id=subnetpool1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -144,6 +149,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
     subnetpoolId: subnetpool1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

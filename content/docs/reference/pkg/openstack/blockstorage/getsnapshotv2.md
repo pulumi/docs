@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSnapshotV2 function of the blockstorage module, inclu
 
 Use this data source to get information about an existing snapshot.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 snapshot1 = openstack.blockstorage.get_snapshot_v2(most_recent=True,
     name="snapshot_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -63,6 +64,7 @@ const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV2({
     name: "snapshot_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,8 +18,6 @@ been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the `openstack.networking.FloatingIp`
 resource instead, which uses the OpenStack Networking API.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_openstack as openstack
 
 floatip1 = openstack.compute.FloatingIp("floatip1", pool="public")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -66,6 +67,7 @@ const floatip1 = new openstack.compute.FloatingIp("floatip_1", {
     pool: "public",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the Database resource of the database module, including exam
 
 Manages a V1 DB database resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 mydb = openstack.database.Database("mydb", instance_id=openstack_db_instance_v1["basic"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const mydb = new openstack.database.Database("mydb", {
     instanceId: openstack_db_instance_v1_basic.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

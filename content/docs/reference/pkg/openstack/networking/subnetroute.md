@@ -12,8 +12,6 @@ meta_desc: "Explore the SubnetRoute resource of the networking module, including
 
 Creates a routing entry on a OpenStack V2 subnet.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,11 +28,11 @@ class MyStack : Stack
     {
         var router1 = new OpenStack.Networking.Router("router1", new OpenStack.Networking.RouterArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ subnet_route1 = openstack.networking.SubnetRoute("subnetRoute1",
     next_hop="192.168.199.254",
     subnet_id=subnet1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -98,6 +99,7 @@ const subnetRoute1 = new openstack.networking.SubnetRoute("subnet_route_1", {
     subnetId: subnet1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

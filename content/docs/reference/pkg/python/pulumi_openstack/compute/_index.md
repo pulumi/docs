@@ -3,7 +3,10 @@ title: Module compute
 title_tag: Module compute | Package pulumi_openstack | Python SDK
 linktitle: compute
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="compute">
 <h1>compute<a class="headerlink" href="#compute" title="Permalink to this headline">¶</a></h1>
@@ -630,12 +633,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.GetFlavorResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetFlavorResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_openstack.compute.GetFlavorResult.is_public">
-<code class="sig-name descname">is_public</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetFlavorResult.is_public" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the flavor is public or private.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2426,7 +2423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_openstack.compute.get_flavor">
-<code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_flavor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rx_tx_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vcpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_flavor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_public</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rx_tx_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vcpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack flavor.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
@@ -2441,6 +2438,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>disk</strong> (<em>float</em>) – The exact amount of disk (in gigabytes).</p></li>
 <li><p><strong>flavor_id</strong> (<em>str</em>) – The ID of the flavor. Conflicts with the <code class="docutils literal notranslate"><span class="pre">name</span></code>,
 <code class="docutils literal notranslate"><span class="pre">min_ram</span></code> and <code class="docutils literal notranslate"><span class="pre">min_disk</span></code></p></li>
+<li><p><strong>is_public</strong> (<em>bool</em>) – The flavor visibility.</p></li>
 <li><p><strong>min_disk</strong> (<em>float</em>) – The minimum amount of disk (in gigabytes). Conflicts
 with the <code class="docutils literal notranslate"><span class="pre">flavor_id</span></code>.</p></li>
 <li><p><strong>min_ram</strong> (<em>float</em>) – The minimum amount of RAM (in megabytes). Conflicts

@@ -17,8 +17,6 @@ has been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the `openstack.networking.SecGroup`
 and `openstack.networking.SecGroupRule`
 resources instead, which uses the OpenStack Networking API.
-
-
 ## Notes
 
 ### ICMP Rules
@@ -132,6 +130,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -160,9 +159,11 @@ secgroup1 = openstack.compute.SecGroup("secgroup1",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -185,6 +186,7 @@ const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

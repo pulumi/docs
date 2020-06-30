@@ -11,8 +11,6 @@ meta_desc: "Explore the RouterRoute resource of the networking module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Creates a routing entry on a OpenStack V2 router.
-
-
 ## Notes
 
 The `next_hop` IP address must be directly reachable from the router at the ``openstack.networking.RouterRoute``
@@ -35,11 +33,11 @@ class MyStack : Stack
     {
         var router1 = new OpenStack.Networking.Router("router1", new OpenStack.Networking.RouterArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -62,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,9 +86,11 @@ router_route1 = openstack.networking.RouterRoute("routerRoute1",
     next_hop="192.168.199.254",
     router_id=router1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -115,6 +116,7 @@ const routerRoute1 = new openstack.networking.RouterRoute("router_route_1", {
     routerId: router1.id,
 }, { dependsOn: [int1] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

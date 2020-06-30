@@ -12,8 +12,6 @@ meta_desc: "Explore the Trunk resource of the networking module, including examp
 
 Manages a networking V2 trunk resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -42,17 +40,17 @@ class MyStack : Stack
         });
         var parentPort1 = new OpenStack.Networking.Port("parentPort1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             NetworkId = network1.Id,
         });
         var subport1 = new OpenStack.Networking.Port("subport1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             NetworkId = network1.Id,
         });
         var trunk1 = new OpenStack.Networking.Trunk("trunk1", new OpenStack.Networking.TrunkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             PortId = parentPort1.Id,
             SubPorts = 
             {
@@ -82,6 +80,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,9 +119,11 @@ instance1 = openstack.compute.Instance("instance1",
     }],
     security_groups=["default"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -161,6 +162,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     securityGroups: ["default"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

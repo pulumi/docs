@@ -15,9 +15,7 @@ Manages a project access for flavor V2 resource within OpenStack.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
----
-
-
+***
 
 {{% examples %}}
 ## Example Usage
@@ -38,10 +36,10 @@ class MyStack : Stack
         });
         var flavor1 = new OpenStack.Compute.Flavor("flavor1", new OpenStack.Compute.FlavorArgs
         {
-            Disk = "20",
+            Disk = 20,
             IsPublic = false,
-            Ram = "8096",
-            Vcpus = "2",
+            Ram = 8096,
+            Vcpus = 2,
         });
         var access1 = new OpenStack.Compute.FlavorAccess("access1", new OpenStack.Compute.FlavorAccessArgs
         {
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ access1 = openstack.compute.FlavorAccess("access1",
     flavor_id=flavor1.id,
     tenant_id=project1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -92,6 +93,7 @@ const access1 = new openstack.compute.FlavorAccess("access_1", {
     tenantId: project1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

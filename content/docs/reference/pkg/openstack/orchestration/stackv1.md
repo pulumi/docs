@@ -12,8 +12,6 @@ meta_desc: "Explore the StackV1 resource of the orchestration module, including 
 
 Manages a V1 stack resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +61,7 @@ resources:
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ resources:
     },
     timeout=30)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -131,6 +132,7 @@ resources:
     timeout: 30,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

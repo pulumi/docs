@@ -12,8 +12,6 @@ meta_desc: "Explore the Network resource of the networking module, including exa
 
 Manages a V2 Neutron network resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -54,7 +52,7 @@ class MyStack : Stack
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             FixedIps = 
             {
                 new OpenStack.Networking.Inputs.PortFixedIpArgs
@@ -87,6 +85,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +124,11 @@ instance1 = openstack.compute.Instance("instance1",
     }],
     security_groups=[secgroup1.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -165,6 +166,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     securityGroups: [secgroup1.name],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

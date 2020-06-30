@@ -12,8 +12,6 @@ meta_desc: "Explore the Configuration resource of the database module, including
 
 Manages a V1 DB configuration resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,7 +33,7 @@ class MyStack : Stack
                 new OpenStack.Database.Inputs.ConfigurationConfigurationArgs
                 {
                     Name = "max_connections",
-                    Value = 200,
+                    Value = "200",
                 },
             },
             Datastore = new OpenStack.Database.Inputs.ConfigurationDatastoreArgs
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ test = openstack.database.Configuration("test",
     },
     description="description")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -90,6 +91,7 @@ const test = new openstack.database.Configuration("test", {
     description: "description",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

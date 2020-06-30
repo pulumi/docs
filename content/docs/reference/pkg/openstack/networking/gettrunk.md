@@ -12,8 +12,6 @@ meta_desc: "Explore the GetTrunk function of the networking module, including ex
 
 Use this data source to get the ID of an available OpenStack trunk.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 trunk1 = openstack.networking.get_trunk(name="trunk_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const trunk1 = pulumi.output(openstack.networking.getTrunk({
     name: "trunk_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

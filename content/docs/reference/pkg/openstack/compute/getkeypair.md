@@ -12,8 +12,6 @@ meta_desc: "Explore the GetKeypair function of the compute module, including exa
 
 Use this data source to get the ID and public key of an OpenStack keypair.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 kp = openstack.compute.get_keypair(name="sand")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const kp = pulumi.output(openstack.compute.getKeypair({
     name: "sand",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

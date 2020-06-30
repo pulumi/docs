@@ -12,9 +12,6 @@ meta_desc: "Explore the User resource of the database module, including examples
 
 Manages a V1 DB user resource within OpenStack.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a User Resource {#create}

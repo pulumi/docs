@@ -15,8 +15,6 @@ that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_openstack as openstack
 
 floatip1 = openstack.networking.FloatingIp("floatip1", pool="public")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -63,6 +64,7 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
     pool: "public",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

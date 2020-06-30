@@ -12,8 +12,6 @@ meta_desc: "Explore the RouterInterface resource of the networking module, inclu
 
 Manages a V2 router interface resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +71,11 @@ router_interface1 = openstack.networking.RouterInterface("routerInterface1",
     router_id=router1.id,
     subnet_id=subnet1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -95,6 +96,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     subnetId: subnet1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

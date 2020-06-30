@@ -14,8 +14,6 @@ Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ secgroup_rule1 = openstack.networking.SecGroupRule("secgroupRule1",
     remote_ip_prefix="0.0.0.0/0",
     security_group_id=secgroup1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -89,6 +90,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
     securityGroupId: secgroup1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

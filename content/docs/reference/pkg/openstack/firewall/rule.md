@@ -12,8 +12,6 @@ meta_desc: "Explore the Rule resource of the firewall module, including examples
 
 Manages a v1 firewall rule resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,13 +31,14 @@ class MyStack : Stack
             Action = "deny",
             Description = "drop TELNET traffic",
             DestinationPort = "23",
-            Enabled = "true",
+            Enabled = true,
             Protocol = "tcp",
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ rule1 = openstack.firewall.Rule("rule1",
     enabled="true",
     protocol="tcp")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -73,6 +74,7 @@ const rule1 = new openstack.firewall.Rule("rule_1", {
     protocol: "tcp",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

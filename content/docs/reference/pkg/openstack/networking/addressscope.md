@@ -12,8 +12,6 @@ meta_desc: "Explore the AddressScope resource of the networking module, includin
 
 Manages a V2 Neutron addressscope resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 addressscope1 = openstack.networking.AddressScope("addressscope1", ip_version=6)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const addressscope1 = new openstack.networking.AddressScope("addressscope_1", {
     ipVersion: 6,
 });
 ```
+
 {{% /example %}}
 
 ### Create a Subnet Pool from an Address-scope
@@ -89,6 +91,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +111,11 @@ subnetpool1 = openstack.networking.SubnetPool("subnetpool1",
         "fd65:86cc:a334:39b7::/64",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -126,6 +131,7 @@ const subnetpool1 = new openstack.networking.SubnetPool("subnetpool_1", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

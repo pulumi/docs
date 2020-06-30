@@ -11,8 +11,6 @@ meta_desc: "Explore the Image resource of the images module, including examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V2 Image resource within OpenStack Glance.
-
-
 ## Notes
 
 ### Properties
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,9 +75,11 @@ rancheros = openstack.images.Image("rancheros",
         "key": "value",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -92,6 +93,7 @@ const rancheros = new openstack.images.Image("rancheros", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetShare function of the sharedfilesystem module, includ
 
 Use this data source to get the ID of an available Shared File System share.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 share1 = openstack.sharedfilesystem.get_share(name="share_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
     name: "share_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

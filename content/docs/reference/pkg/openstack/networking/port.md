@@ -11,8 +11,6 @@ meta_desc: "Explore the Port resource of the networking module, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V2 port resource within OpenStack.
-
-
 ## Notes
 
 ### Ports and Instances
@@ -37,17 +35,18 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             NetworkId = network1.Id,
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ port1 = openstack.networking.Port("port1",
     admin_state_up="true",
     network_id=network1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -79,6 +80,7 @@ const port1 = new openstack.networking.Port("port_1", {
     networkId: network1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Port with physical binding information
@@ -93,11 +95,11 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             Binding = new OpenStack.Networking.Inputs.PortBindingArgs
             {
                 HostId = "b080b9cf-46e0-4ce8-ad47-0fd4accc872b",
@@ -128,6 +130,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -167,9 +170,11 @@ port1 = openstack.networking.Port("port1",
     device_owner="baremetal:none",
     network_id=network1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -204,6 +209,7 @@ const port1 = new openstack.networking.Port("port_1", {
     networkId: network1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -411,7 +417,7 @@ this creates a new port.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -448,7 +454,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -472,7 +478,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -558,7 +564,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -573,7 +579,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -598,8 +604,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -637,7 +643,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -680,7 +686,7 @@ this creates a new port.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -717,7 +723,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -741,7 +747,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -827,7 +833,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -842,7 +848,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -867,8 +873,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -906,7 +912,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -949,7 +955,7 @@ this creates a new port.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -986,7 +992,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -1010,7 +1016,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -1096,7 +1102,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -1111,7 +1117,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -1136,8 +1142,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -1175,7 +1181,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -1218,7 +1224,7 @@ this creates a new port.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -1255,7 +1261,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -1279,7 +1285,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -1365,7 +1371,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -1380,7 +1386,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -1405,8 +1411,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -1444,7 +1450,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -1868,7 +1874,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -1941,7 +1947,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -1965,7 +1971,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -2074,7 +2080,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -2089,7 +2095,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -2114,8 +2120,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -2153,7 +2159,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -2184,7 +2190,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -2257,7 +2263,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -2281,7 +2287,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -2390,7 +2396,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -2405,7 +2411,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -2430,8 +2436,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -2469,7 +2475,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -2500,7 +2506,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -2573,7 +2579,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -2597,7 +2603,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -2706,7 +2712,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -2721,7 +2727,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -2746,8 +2752,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -2785,7 +2791,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 
@@ -2816,7 +2822,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
+(must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
 {{% /md %}}</dd>
 
@@ -2889,7 +2895,7 @@ for the port. The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+    <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
 {{% /md %}}</dd>
 
@@ -2913,7 +2919,7 @@ creates a new port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
+    <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
 {{% /md %}}</dd>
 
@@ -3022,7 +3028,7 @@ is the only valid value for this argument.
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
+no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
 {{% /md %}}</dd>
@@ -3037,7 +3043,7 @@ security group.
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
+omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
@@ -3062,8 +3068,8 @@ and `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
 {{% /md %}}</dd>
@@ -3101,7 +3107,7 @@ the Compute Instance).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
+    <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}</dd>
 

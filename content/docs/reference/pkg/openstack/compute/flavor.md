@@ -12,8 +12,6 @@ meta_desc: "Explore the Flavor resource of the compute module, including example
 
 Manages a V2 flavor resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,19 +28,20 @@ class MyStack : Stack
     {
         var test_flavor = new OpenStack.Compute.Flavor("test-flavor", new OpenStack.Compute.FlavorArgs
         {
-            Disk = "20",
+            Disk = 20,
             ExtraSpecs = 
             {
                 { "hw:cpu_policy", "CPU-POLICY" },
                 { "hw:cpu_thread_policy", "CPU-THREAD-POLICY" },
             },
-            Ram = "8096",
-            Vcpus = "2",
+            Ram = 8096,
+            Vcpus = 2,
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ test_flavor = openstack.compute.Flavor("test-flavor",
     ram="8096",
     vcpus="2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -80,6 +81,7 @@ const test_flavor = new openstack.compute.Flavor("test-flavor", {
     vcpus: 2,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
