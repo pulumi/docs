@@ -34,7 +34,7 @@ aliases:
     - /case-studies/merceded-benz
 ---
 
-{{< youtube "MGA_Bba2GqQ" >}}
+{{< youtube "MGA_Bba2GqQ?rel=0" >}}
 
 ## About MBRDNA
 
