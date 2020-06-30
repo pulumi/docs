@@ -76,5 +76,5 @@ fi
 if [ $CHECK_TYPE = "www" ]; then
 
     echo "Checking all links on pulumi.com"
-    retry check_links_www 3 15 || post_to_slack "ops-notifications" "Eek! :scream_cat: There are broken links on pulumi.com. See the GitHub Actions log for details. https://github.com/${GITHUB_REPOSITORY}/runs/${GITHUB_RUN_ID}"
+    retry check_links_www 3 15 || (post_to_slack "ops-notifications" "Eek! :scream_cat: There are broken links on pulumi.com. See the GitHub Actions log for details. https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" && exit 1)
 fi
