@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's enable encryption on our S3 bucket.
+Now that we have an instance of our Pulumi program deployed, let's turn our bucket into a simple static website.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
@@ -24,25 +24,32 @@ Replace the entire contents of {{< langfile >}} with the following:
 "use strict";
 const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
-const awsx = require("@pulumi/awsx");
-
-// Create a KMS Key for S3 server-side encryption
-const key = new aws.kms.Key("my-key");
 
 // Create an AWS resource (S3 Bucket)
 const bucket = new aws.s3.Bucket("my-bucket", {
-    serverSideEncryptionConfiguration: {
-        rule: {
-            applyServerSideEncryptionByDefault: {
-                sseAlgorithm: "aws:kms",
-                kmsMasterKeyId: key.id,
-            }
-        }
+    website: {
+        indexDocument: "index.html"
     }
+});
+
+// Create a home page for the website
+const homepage = new aws.s3.BucketObject("index.html", {
+    bucket: bucket,
+    acl: aws.s3.PublicReadAcl,
+    contentType: "text/html",
+    content: `<html>
+        <body>
+            <h1>Hello, Pulumi!</h1>
+        </body>
+    </html>`,
 });
 
 // Export the name of the bucket
 exports.bucketName = bucket.id;
+
+// Export the URL of the website
+exports.websiteEndpoint = bucket.websiteEndpoint;
+
 ```
 
 {{% /choosable %}}
@@ -51,25 +58,31 @@ exports.bucketName = bucket.id;
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
-
-// Create a KMS Key for S3 server-side encryption
-const key = new aws.kms.Key("my-key");
 
 // Create an AWS resource (S3 Bucket)
 const bucket = new aws.s3.Bucket("my-bucket", {
-    serverSideEncryptionConfiguration: {
-        rule: {
-            applyServerSideEncryptionByDefault: {
-                sseAlgorithm: "aws:kms",
-                kmsMasterKeyId: key.id,
-            }
-        }
+    website: {
+        indexDocument: "index.html"
     }
+});
+
+// Create a home page for the website
+const homepage = new aws.s3.BucketObject("index.html", {
+    bucket: bucket,
+    acl: aws.s3.PublicReadAcl,
+    contentType: "text/html",
+    content: `<html>
+        <body>
+            <h1>Hello, Pulumi!</h1>
+        </body>
+    </html>`,
 });
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
+
+// Export the URL of the website
+export const websiteEndpoint = bucket.websiteEndpoint;
 ```
 
 {{% /choosable %}}
@@ -77,24 +90,27 @@ export const bucketName = bucket.id;
 
 ```python
 import pulumi
-from pulumi_aws import kms, s3
-
-# Create a KMS Key for S3 server-side encryption
-key = kms.Key('my-key')
+from pulumi_aws import s3
 
 # Create an AWS resource (S3 Bucket)
 bucket = s3.Bucket('my-bucket',
-    server_side_encryption_configuration={
-        'rule': {
-            'apply_server_side_encryption_by_default': {
-                'sse_algorithm': 'aws:kms',
-                'kms_master_key_id': key.id
-            }
-        }
+    website={
+        'index_document': 'index.html'
     })
 
+homepage = s3.BucketObject('index.html',
+    bucket=bucket,
+    acl='public-read',
+    content_type='text/html',
+    content="""<html>
+        <body>
+            <h1>Hello, Pulumi!</h1>
+        </body>
+    </html>""")
+
 # Export the name of the bucket
-pulumi.export('bucket_name',  bucket.id)
+pulumi.export('bucket_name', bucket.id)
+pulumi.export('website_endpoint', pulumi.Output.concat("http://", bucket.website_endpoint))
 ```
 
 {{% /choosable %}}
@@ -104,38 +120,47 @@ pulumi.export('bucket_name',  bucket.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
-    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create a KMS Key for S3 server-side encryption
-        key, err := kms.NewKey(ctx, "my-key", nil)
-        if err != nil {
-            return err
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an AWS resource (S3 Bucket)
+		bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+			Website: s3.BucketWebsiteArgs{
+				IndexDocument: pulumi.String("index.html"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 
-        // Create an AWS resource (S3 Bucket)
-        bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
-            ServerSideEncryptionConfiguration: s3.BucketServerSideEncryptionConfigurationArgs{
-                Rule: s3.BucketServerSideEncryptionConfigurationRuleArgs{
-                    ApplyServerSideEncryptionByDefault: s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs{
-                        SseAlgorithm:   pulumi.StringInput(pulumi.String("aws:kms")),
-                        KmsMasterKeyId: key.ID(),
-                    },
-                },
-            },
-        })
-        if err != nil {
-            return err
-        }
+		// Create a homepage for the website
+		_, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
+			Bucket:      bucket.ID(),
+			Acl:         pulumi.String("public-read"),
+			ContentType: pulumi.String("text/html"),
+			Content: pulumi.String(`<html>
+							<body>
+								<h1>Hello, Pulumi!</h1>
+							</body>
+						</html>`),
+		})
+		if err != nil {
+			return err
+		}
 
-        // Export the name of the bucket
-        ctx.Export("bucketName", bucket.ID())
-        return nil
-    })
+		// Export the name of the bucket
+		ctx.Export("bucketName", bucket.ID())
+
+		// Export the URL of the website
+		ctx.Export("websiteEndpoint", bucket.WebsiteEndpoint.ApplyString(func(endpoint string) string {
+			return "http://" + endpoint
+		}))
+
+		return nil
+	})
 }
 ```
 
@@ -150,37 +175,44 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        // Create a KMS Key for S3 server-side encryption
-        var key = new Aws.Kms.Key("my-key");
-
         // Create an AWS resource (S3 Bucket)
         var bucket = new Aws.S3.Bucket("my-bucket", new Aws.S3.BucketArgs
         {
-            ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
+            Website = new Aws.S3.Inputs.BucketWebsiteArgs
             {
-                Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
-                {
-                    ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
-                    {
-                        SseAlgorithm = "aws:kms",
-                        KmsMasterKeyId = key.Id,
-                    },
-                },
-            },
+                IndexDocument = "index.html"
+            }
+        });
+
+        // Create a home page for the website
+        var homepage = new Aws.S3.BucketObject("index.html", new Aws.S3.BucketObjectArgs {
+            Acl = "public-read",
+            Bucket = bucket.BucketName,
+            ContentType = "text/html",
+            Content = @"<html>
+                <body>
+                    <h1>Hello, Pulumi!</h1>
+                </body>
+            </html>",
         });
 
         // Export the name of the bucket
         this.BucketName = bucket.Id;
+
+        this.WebsiteEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
     }
 
     [Output]
     public Output<string> BucketName { get; set; }
+
+    [Output]
+    public Output<string> WebsiteEndpoint { get; set; }
 }
 ```
 
 {{% /choosable %}}
 
-Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
+Our program now creates a home page for our website and updates the S3 bucket to configure it as a website and set a default document.
 
 Next, we'll deploy the changes.
 

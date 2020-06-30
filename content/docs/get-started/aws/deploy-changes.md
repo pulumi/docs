@@ -23,10 +23,13 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 ```
 Previewing update (dev):
 
-     Type                 Name            Plan       Info
-     pulumi:pulumi:Stack  quickstart-dev
- +   ├─ aws:kms:Key       my-key          create
- ~   └─ aws:s3:Bucket     my-bucket       update     [diff: +serverSideEncryptionConfiguration]
+     Type                    Name                Plan       Info
+     pulumi:pulumi:Stack     quickstart-dev
+ ~   ├─ aws:s3:Bucket        my-bucket           update     [diff: +website]
+ +   └─ aws:s3:BucketObject  index.html          create
+
+Outputs:
+  + websiteEndpoint: output<string>
 
 Resources:
     + 1 to create
@@ -39,28 +42,34 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will create the KMS key and update the bucket with the new encryption configuration.
+Pulumi will create the home page and update the bucket with the new website configuration.
 
 Choosing `yes` will proceed with the update.
 
 ```
 Do you want to perform this update? yes
 Updating (dev):
-
-     Type                 Name            Status      Info
-     pulumi:pulumi:Stack  quickstart-dev
- +   ├─ aws:kms:Key       my-key          created
- ~   └─ aws:s3:Bucket     my-bucket       updated     [diff: +serverSideEncryptionConfiguration]
+     Type                    Name                Status      Info
+     pulumi:pulumi:Stack     get-started-ts-dev
+ ~   ├─ aws:s3:Bucket        my-bucket           updated     [diff: +website]
+ +   └─ aws:s3:BucketObject  index.html          created
 
 Outputs:
-    bucket_name: "my-bucket-de014a8"
+    bucketName     : "my-bucket-de014a8"
+  + websiteEndpoint: "http://my-bucket-de014a8.s3-website-us-west-2.amazonaws.com"
 
 Resources:
     + 1 created
     ~ 1 updated
     2 changes. 1 unchanged
 
-Duration: 10s
+Duration: 8s
+```
+
+You can browse to the page either by copying the `websiteEndpoint` value and pasting it into your browser or by using `pulumi stack export`:
+
+```
+open "http://$(pulumi stack output websiteEndpoint)"
 ```
 
 Next, we'll destroy the stack.
