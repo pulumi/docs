@@ -255,7 +255,7 @@ The ServiceDeployment class is defined in the *k8sjs* module using ComponentReso
 
 `name`: The unique name of the resource.
 args: Information passed to [initialize] method.
-opts: A bag of options that control this resource's behavior.
+`opts`: A bag of options that control this resource's behavior.
 
 ServiceDeploymentArgs is the interface for the arguments used to initialize the method. Next, we instantiate the container using the container image property from the ServiceDeploymentArgs and configure resources, environmental variables, and ports. The deployment is instantiated with the properties you typically see in a deployment such labels, selectors, containers, and replicas. The same goes for Services. Finally, based on whether Kubernetes is running on cluster or Minikube, the ServiceDeployment class returns the clusterIP if it runs on Minikube or instantiates a load balancer if it is a cluster.
 
