@@ -119,7 +119,7 @@ const ordersDbService = new k8s.core.v1.Service("orders-db", {
 });
 ```
 
-The orders Deployment is similar to the ordersDb Deployment, but it includes environmental variables, such as JAVA_OPTS to set heap memory size and garbage collection intervals, for the containerized application. The container runs as a non-root user and drops all capabilities that can run as a non-root user, except for NET_BIND_SERVICE, which lets the container bind to any port.
+The orders Deployment is similar to the ordersDb Deployment, but it includes environmental variables, such as `JAVA_OPTS` to set heap memory size and garbage collection intervals, for the containerized application. The container runs as a non-root user and drops all capabilities that can run as a non-root user, except for `NET_BIND_SERVICE`, which lets the container bind to any port.
 
 ```ts
 const orders = new k8s.apps.v1.Deployment("orders", {
