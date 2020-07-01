@@ -253,7 +253,7 @@ export let frontendIp = frontend.ipAddress;
 
 The ServiceDeployment class is defined in the *k8sjs* module using ComponentResource. We define deployment, service, and ipAddress as public read-only properties. The constructor takes three arguments:
 
-name: The unique name of the resource.
+`name`: The unique name of the resource.
 args: Information passed to [initialize] method.
 opts: A bag of options that control this resource's behavior.
 
