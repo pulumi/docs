@@ -22,7 +22,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ide_controller_count=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>sata_controller_count=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -601,6 +601,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idecontrollercount_csharp">
+<a href="#idecontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignoredguestips_csharp">
 <a href="#ignoredguestips_csharp" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -873,6 +886,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollercount_csharp">
+<a href="#satacontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1451,6 +1477,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idecontrollercount_go">
+<a href="#idecontrollercount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignoredguestips_go">
 <a href="#ignoredguestips_go" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -1723,6 +1762,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollercount_go">
+<a href="#satacontrollercount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2301,6 +2353,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idecontrollercount_nodejs">
+<a href="#idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignoredguestips_nodejs">
 <a href="#ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -2573,6 +2638,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollercount_nodejs">
+<a href="#satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3151,6 +3229,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ide_controller_count_python">
+<a href="#ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignored_guest_ips_python">
 <a href="#ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
 </span> 
@@ -3423,6 +3514,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sata_controller_count_python">
+<a href="#sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4213,7 +4317,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ide_controller_count=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>sata_controller_count=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4765,6 +4869,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_idecontrollercount_csharp">
+<a href="#state_idecontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ignoredguestips_csharp">
 <a href="#state_ignoredguestips_csharp" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -5089,6 +5206,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_satacontrollercount_csharp">
+<a href="#state_satacontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5747,6 +5877,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_idecontrollercount_go">
+<a href="#state_idecontrollercount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ignoredguestips_go">
 <a href="#state_ignoredguestips_go" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -6071,6 +6214,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_satacontrollercount_go">
+<a href="#state_satacontrollercount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6729,6 +6885,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_idecontrollercount_nodejs">
+<a href="#state_idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ignoredguestips_nodejs">
 <a href="#state_ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
 </span> 
@@ -7053,6 +7222,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_satacontrollercount_nodejs">
+<a href="#state_satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7711,6 +7893,19 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ide_controller_count_python">
+<a href="#state_ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ignored_guest_ips_python">
 <a href="#state_ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
 </span> 
@@ -8035,6 +8230,19 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sata_controller_count_python">
+<a href="#state_sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10348,6 +10556,19 @@ Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 
     <dt class="property-optional"
             title="Optional">
+        <span id="controllertype_csharp">
+<a href="#controllertype_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage controller to attach the
+disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
+number of controllers enabled for the selected type. Default `scsi`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="datastoreid_csharp">
 <a href="#datastoreid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
 </span> 
@@ -10573,11 +10794,11 @@ type. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The disk number on the SCSI bus. The maximum value
-for this setting is the value of
-`scsi_controller_count` times 15, minus 1 (so `14`,
-`29`, `44`, and `59`, for 1-4 controllers respectively). The default is `0`,
-for which one disk must be set to. Duplicate unit numbers are not allowed.
+    <dd>{{% md %}}The disk number on the storage bus. The maximum
+value for this setting is the value of the controller count times the
+controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
+The default is `0`, for which one disk must be set to. Duplicate unit numbers
+are not allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10623,6 +10844,19 @@ directly to the filesystem immediately instead of being buffered. Default:
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="controllertype_go">
+<a href="#controllertype_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage controller to attach the
+disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
+number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10852,11 +11086,11 @@ type. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The disk number on the SCSI bus. The maximum value
-for this setting is the value of
-`scsi_controller_count` times 15, minus 1 (so `14`,
-`29`, `44`, and `59`, for 1-4 controllers respectively). The default is `0`,
-for which one disk must be set to. Duplicate unit numbers are not allowed.
+    <dd>{{% md %}}The disk number on the storage bus. The maximum
+value for this setting is the value of the controller count times the
+controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
+The default is `0`, for which one disk must be set to. Duplicate unit numbers
+are not allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10902,6 +11136,19 @@ directly to the filesystem immediately instead of being buffered. Default:
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="controllertype_nodejs">
+<a href="#controllertype_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage controller to attach the
+disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
+number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11131,11 +11378,11 @@ type. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The disk number on the SCSI bus. The maximum value
-for this setting is the value of
-`scsi_controller_count` times 15, minus 1 (so `14`,
-`29`, `44`, and `59`, for 1-4 controllers respectively). The default is `0`,
-for which one disk must be set to. Duplicate unit numbers are not allowed.
+    <dd>{{% md %}}The disk number on the storage bus. The maximum
+value for this setting is the value of the controller count times the
+controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
+The default is `0`, for which one disk must be set to. Duplicate unit numbers
+are not allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11181,6 +11428,19 @@ directly to the filesystem immediately instead of being buffered. Default:
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="controllertype_python">
+<a href="#controllertype_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage controller to attach the
+disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
+number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11410,11 +11670,11 @@ type. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The disk number on the SCSI bus. The maximum value
-for this setting is the value of
-`scsi_controller_count` times 15, minus 1 (so `14`,
-`29`, `44`, and `59`, for 1-4 controllers respectively). The default is `0`,
-for which one disk must be set to. Duplicate unit numbers are not allowed.
+    <dd>{{% md %}}The disk number on the storage bus. The maximum
+value for this setting is the value of the controller count times the
+controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
+The default is `0`, for which one disk must be set to. Duplicate unit numbers
+are not allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12466,6 +12726,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
 </dl>
 
