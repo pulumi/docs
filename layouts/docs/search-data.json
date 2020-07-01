@@ -1,3 +1,4 @@
+{{- if eq (getenv "HUGO_ENVIRONMENT") "production" -}}
 {
 {{- $pages := (where .Site.Pages ".Params.exclude_from_pulumi_search_index" "ne" true) -}}
 {{- $lastindex := (sub (len $pages) 1) -}}
@@ -8,3 +9,4 @@
     }{{ if ne $lastindex $index }},{{ end }}
 {{ end }}
 }
+{{- end -}}

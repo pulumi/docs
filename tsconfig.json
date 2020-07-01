@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "removeComments": true,
+    },
+    "files": [
+        "assets/js/main.js",
+        "assets/js/nav.js",
+        "assets/js/carousel.js",
+        "assets/js/chooser.js",
+        "assets/js/price-toggle.js",
+        "assets/js/noselect.js",
+        "assets/js/tracking.js",
+        "assets/js/docs-feedback.js",
+        "assets/js/event-filtering.js",
+        "assets/js/webinar.js",
+        "assets/js/copybutton.js",
+        "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
