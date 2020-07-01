@@ -574,6 +574,7 @@ All resource constructors also accept an `options` argument which can provide th
 * [`protect`](#protect): prevent accidental deletion of a resource by marking it protected
 * [`provider`](#provider): pass an [explicitly configured provider](#explicit-provider-configuration), instead of using the default global provider
 * [`transformations`](#transformations): dynamically transform a resource's properties on the fly
+* [`version`](#version): pass a provider plugin version that should be used when operating on a resource.
 
 ###### `additionalSecretOutputs`
 
@@ -1388,6 +1389,51 @@ public class MyStack : Stack
 ```
 
 {{% /choosable %}}
+
+###### `version`
+
+An optional provider version to use when operating on the the resource. This version overrides the version information inferred from the current package and should rarely be used.
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let vpc = new aws.ec2.Vpc("vpc", {}, { version: "2.10.0" });
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let vpc = new aws.ec2.Vpc("vpc", {}, { version: "2.10.0" });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+vpc = ec2.Vpc("vpc", opts=ResourceOptions(version="2.10.0"))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Version("2.10.0"))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
+    new CustomResourceOptions { Version = "2.10.0" });
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ##### Resource Getter Functions {#resource-get}
 
