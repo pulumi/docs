@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Page Not Found</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-        {{ $options := (dict "targetPath" "css/404.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+        {{ $options := (dict "targetPath" "css/404.css" "outputStyle" "compressed" "enableSourceMap" false) }}
         {{ $style := resources.Get "sass/404.scss" | resources.ToCSS $options }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     </head>
