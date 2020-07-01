@@ -254,7 +254,7 @@ export let frontendIp = frontend.ipAddress;
 The ServiceDeployment class is defined in the *k8sjs* module using ComponentResource. We define deployment, service, and ipAddress as public read-only properties. The constructor takes three arguments:
 
 `name`: The unique name of the resource.
-args: Information passed to [initialize] method.
+`args`: Information passed to [initialize] method.
 `opts`: A bag of options that control this resource's behavior.
 
 ServiceDeploymentArgs is the interface for the arguments used to initialize the method. Next, we instantiate the container using the container image property from the ServiceDeploymentArgs and configure resources, environmental variables, and ports. The deployment is instantiated with the properties you typically see in a deployment such labels, selectors, containers, and replicas. The same goes for Services. Finally, based on whether Kubernetes is running on cluster or Minikube, the ServiceDeployment class returns the clusterIP if it runs on Minikube or instantiates a load balancer if it is a cluster.
