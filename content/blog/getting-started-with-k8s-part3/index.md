@@ -16,11 +16,11 @@ Welcome to the third article in a series using infrastructure as code to deploy 
 
 This series walks you through:
 
-Building a Kubernetes cluster on cloud providers
-Basic application deployment
-Advance Application deployment and Helm charts
-Networking topics
-“Day 2” activities such as migrating node groups.
+- Building a Kubernetes cluster on cloud providers
+- Basic application deployment
+- Advance Application deployment and Helm charts
+- Networking topics
+- “Day 2” activities such as migrating node groups.
 
 This article reviews three types of application deployment scenarios with commonly used examples. The first scenario is a [12-factor](https://12factor.net/) microservices multi-tier application consisting of multiple frontend and backend services backed by databases and a messaging queue to handle requests. The second scenario takes the Kubernetes guestbook and turns the Service and Deployment into a single component, demonstrating another pattern for organizing your stack. The third scenario shows how to deploy a popular web application using a [Helm](https://helm.sh/), the package manager for Kubernetes.
 
