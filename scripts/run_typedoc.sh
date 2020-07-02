@@ -108,6 +108,7 @@ REPOS=(
     "mongodbatlas,pulumi-mongodbatlas,sdk/nodejs"
     "mysql,pulumi-mysql,sdk/nodejs"
     "newrelic,pulumi-newrelic,sdk/nodejs"
+    "ns1,pulumi-ns1,sdk/nodejs"
     "okta,pulumi-okta,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
     "packet,pulumi-packet,sdk/nodejs"
