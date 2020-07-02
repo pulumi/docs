@@ -16,9 +16,9 @@ Welcome to the third article in a series using infrastructure as code to deploy 
 
 This series walks you through:
 
-- Building a Kubernetes cluster on cloud providers
+- [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
 - Basic application deployment
-- Advance Application deployment and Helm charts
+- Advance application deployment and Helm charts
 - Stateful applications
 - Networking
 - “Day 2” activities such as migrating node groups.
@@ -365,9 +365,7 @@ Using a Helm chart to deploy an application is the simplest solution if it’s a
 
 ## Conclusion
 
-This article demonstrated three ways to deploy an application in Kubernetes. In the next installment, we’ll examine how to maintain your application with [configmaps](https://kubernetes.io/docs/concepts/configuration/configmap/), perform rollouts and different deployment strategies, adopting existing resources, and more.
-
-This is the second in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll examine a complex application deployment and a deployment using a Helm chart. Until the next post, learn more about Kubernetes with these resources.
+This article demonstrated three ways to deploy an application in Kubernetes. The applications we examined are primarily stateless with no persistent storage or volumes. In the next installment, we’ll examine [stateful services](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/) which require persistent storage such as database. Until the next post, learn more about Kubernetes with these resources.
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
 - Learn more about Pulumi's [support for Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}})
