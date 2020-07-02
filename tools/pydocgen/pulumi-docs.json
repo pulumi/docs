@@ -270,6 +270,12 @@
       "package_name": "pulumi_vault",
       "pulumi_provider_name": "vault",
       "terraform_provider_name": "vault"
+    },
+    {
+      "name": "Pulumi HCloud",
+      "package_name": "pulumi_hcloud",
+      "pulumi_provider_name": "hcloud",
+      "terraform_provider_name": "hcloud"
     }
   ]
 }
