@@ -13,17 +13,22 @@ export GIT_SHA=${GITHUB_SHA:=$(git rev-list HEAD | head -1)}
 export CSS_BUNDLE="public/css/styles.${GIT_SHA}.css"
 export JS_BUNDLE="public/js/bundle.min.${GIT_SHA}.js"
 
-# Run the Hugo build.
+printf "Copying prebuilt docs...\n\n"
+make copy_static_prebuilt
+
+printf "Building web components...\n\n"
+make build_components
+
 printf "Running Hugo...\n\n"
-hugo --minify --buildDrafts --buildFuture --templateMetrics --templateMetricsHints -e production
+hugo --minify --buildDrafts --buildFuture -e production
 
 printf "\nCompiling the JavaScripts...\n\n"
-npx tsc --outFile ${JS_BUNDLE}
+yarn run tsc --outFile ${JS_BUNDLE}
 
-printf "Compiling the Sass...\n\n"
-npx node-sass assets/sass/styles.scss --output-style compressed > ${CSS_BUNDLE}
+printf "Compiling Sass and running PostCSS...\n\n"
+yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}
 
-printf "Running PostCSS...\n\n"
-npx postcss-cli ${CSS_BUNDLE} --config assets/config --replace
+printf "Building the search index...\n\n"
+make build_search_index
 
 printf "Done!\n\n"

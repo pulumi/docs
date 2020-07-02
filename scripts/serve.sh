@@ -18,20 +18,21 @@ watch_hugo() {
 }
 
 watch_js() {
-    yarn run --silent tsc --watch --preserveWatchOutput --outFile "${JS_BUNDLE}"
+    yarn run tsc --watch --preserveWatchOutput --outFile "${JS_BUNDLE}"
 }
 
 watch_css() {
-    yarn run --silent chokidar 'assets/sass/**/*.scss' \
-        -c "yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss --config assets/config --output ${CSS_BUNDLE}"
+    yarn run chokidar 'assets/sass/**/*.scss' \
+        -c "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}"
 }
 
 # Build once, because node-sass doesn't do that automatically.
 yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss --config assets/config --output ${CSS_BUNDLE}
 
+# Exporting these functions makes them visible to Concurrently.
 export -f watch_hugo
 export -f watch_js
 export -f watch_css
 
 # Run Hugo, TypeScript, and the Sass things, recompiling on changes.
-yarn run --silent concurrently "watch_hugo" "watch_js" "watch_css"
+yarn run concurrently "watch_hugo" "watch_js" "watch_css"

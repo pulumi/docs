@@ -32,14 +32,23 @@ lint_markdown:
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
 	yarn lint-markdown --no-error
-	yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
 	./scripts/serve.sh
 
-.PHONY: serve-components
-serve-components:
+.PHONY: serve_components
+serve_components:
 	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
 	yarn --cwd components run start
+
+.PHONY: build_components
+build_components:
+	@echo -e "\033[0;BUILD COMPONENTS:\033[0m"
+	yarn --cwd components run build
+
+.PHONY: build_search_index
+build_search_index:
+	@echo -e "\033[0;BUILD COMPONENTS:\033[0m"
+	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
+	rm -rf ./public/docs/search-data
 
 .PHONY: generate
 generate:
@@ -57,11 +66,12 @@ copy_static_prebuilt:
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
-	NODE_ENV=production yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
-	./scripts/run-hugo-build.sh
-	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
-	rm -rf ./public/docs/search-data
+	./scripts/run-prod-build.sh
+
+.PHONY: pulumify
+pulumify:
+	@echo -e "\033[0;32mBUILD PULUMIFY ($(HUGO_ENVIRONMENT)):\033[0m"
+	./scripts/run-pulumify-build.sh
 
 .PHONY: test
 test:
