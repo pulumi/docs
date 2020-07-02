@@ -18,7 +18,6 @@ Kubernetes is complex, and there are many ways to manage Kubernetes resources. P
 Over the past year, we've heard from many users that they'd like to manage Kustomize resources directly with Pulumi.
 The [v2.4.0 release] of our Kubernetes provider adds support for Kustomize to all of our SDKs (Go, TypeScript, .NET, Python).
 
-
 ## Working with local files
 
 Let's see how to deploy a Kustomization from a local directory.
@@ -26,6 +25,7 @@ Let's see how to deploy a Kustomization from a local directory.
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -33,18 +33,22 @@ new k8s.kustomize.Directory("helloWorldLocal", {
     directory: "./helloWorld",
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi_kubernetes as k8s
 
 k8s.kustomize.Directory("helloWorldLocal",
                         directory="helloWorld")
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using System;
 using System.Threading.Tasks;
@@ -68,9 +72,11 @@ class Program
     static Task<int> Main(string[] args) => Deployment.RunAsync<KustomizeStack>();
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 import (
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize"
@@ -92,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -106,6 +113,7 @@ by specifying the path to the directory.
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -113,18 +121,22 @@ new k8s.kustomize.Directory("helloWorldRemote", {
     directory: "https://github.com/kubernetes-sigs/kustomize/tree/v3.3.1/examples/helloWorld",
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi_kubernetes as k8s
 
 k8s.kustomize.Directory("helloWorldRemote",
                         directory="https://github.com/kubernetes-sigs/kustomize/tree/v3.3.1/examples/helloWorld")
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using System;
 using System.Threading.Tasks;
@@ -148,9 +160,11 @@ class Program
     static Task<int> Main(string[] args) => Deployment.RunAsync<KustomizeStack>();
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 import (
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize"
@@ -172,6 +186,7 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
