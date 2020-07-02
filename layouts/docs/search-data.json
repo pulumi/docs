@@ -4,8 +4,7 @@
 {{- $lastindex := (sub (len $pages) 1) -}}
 {{ range $index, $page := $pages }}
     "{{ .RelPermalink }}": {
-        "title": {{ .Title | jsonify }},
-        "content": {{ .Plain | jsonify }}
+        "title": {{ .Title | jsonify }}
     }{{ if ne $lastindex $index }},{{ end }}
 {{ end }}
 }

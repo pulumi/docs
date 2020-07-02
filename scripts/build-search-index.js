@@ -17,7 +17,6 @@ stdin.on("end", () => {
     const index = lunr(function () {
         this.ref("ref");
         this.field("title", { boost: 10 });
-        this.field("content");
 
         for (var url in data) {
             const page = data[url];
@@ -32,7 +31,6 @@ stdin.on("end", () => {
                 this.add({
                     ref: url + "|" + page.title,
                     title: page.title,
-                    content: page.content
                 });
             }
         }
