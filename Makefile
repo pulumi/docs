@@ -69,7 +69,7 @@ build:
 	./scripts/run-prod-build.sh
 
 .PHONY: pulumify
-pulumify:
+pulumify: ensure
 	@echo -e "\033[0;32mBUILD PULUMIFY ($(HUGO_ENVIRONMENT)):\033[0m"
 	./scripts/run-pulumify-build.sh
 
