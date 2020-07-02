@@ -21,6 +21,9 @@ printf "\nCompiling the JavaScripts...\n\n"
 npx tsc --outFile ${JS_BUNDLE}
 
 printf "Compiling the Sass...\n\n"
-npx node-sass assets/sass/styles.scss --output-style compressed | npx postcss-cli --config assets/config -o ${CSS_BUNDLE}
+npx node-sass assets/sass/styles.scss --output-style compressed > ${CSS_BUNDLE}
+
+printf "Running PostCSS...\n\n"
+npx postcss-cli ${CSS_BUNDLE} --config assets/config --replace
 
 printf "Done!\n\n"
