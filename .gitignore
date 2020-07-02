@@ -30,3 +30,8 @@ node_modules
 
 # Python's virtual env dir.
 venv/
+
+# Externally build CSS and JS bundles, which we write to the Hugo static
+# folder in development in order to be able to use livereload.
+static/css/styles.*.css
+static/js/bundle.min.*.js
