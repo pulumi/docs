@@ -34,7 +34,7 @@ serve:
 	yarn lint-markdown --no-error
 	yarn --cwd components run build
 	$(MAKE) copy_static_prebuilt
-	hugo server --buildDrafts --buildFuture --renderToDisk
+	./scripts/serve.sh
 
 .PHONY: serve-components
 serve-components:

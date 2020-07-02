@@ -2,8 +2,6 @@
 
 set -o errexit -o pipefail
 
-export NODE_ENV="production"
-
 # In most cases, we'll get the SHA from GitHub Actions, but in case we don't,
 # just fall back to Git.
 export GIT_SHA=${GITHUB_SHA:=$(git rev-list HEAD | head -1)}
@@ -13,14 +11,8 @@ export GIT_SHA=${GITHUB_SHA:=$(git rev-list HEAD | head -1)}
 export CSS_BUNDLE="public/css/styles.${GIT_SHA}.css"
 export JS_BUNDLE="public/js/bundle.min.${GIT_SHA}.js"
 
-# Run the Hugo build.
-printf "Running Hugo...\n\n"
-hugo --minify --buildDrafts --buildFuture --templateMetrics --templateMetricsHints -e production
-
-printf "\nCompiling the JavaScripts...\n\n"
-npx tsc --outFile ${JS_BUNDLE}
-
-printf "Compiling the Sass...\n\n"
-npx node-sass assets/sass/styles.scss --output-style compressed | npx postcss-cli --config assets/config -o ${CSS_BUNDLE}
-
-printf "Done!\n\n"
+# Run Hugo, TypeScript, and the Sass things, recompiling on changes.
+npx concurrently \
+    "hugo server --buildDrafts --buildFuture --renderToDisk" \
+    "npx tsc --watch --outFile ${JS_BUNDLE}" \
+    "npx node-sass assets/sass/styles.scss --watch | npx postcss-cli --config assets/config -o ${CSS_BUNDLE}"
