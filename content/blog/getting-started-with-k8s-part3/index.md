@@ -17,7 +17,7 @@ Welcome to the third article in a series using infrastructure as code to deploy 
 This series walks you through:
 
 - [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- Basic application deployment
+- [Basic application deployment]({{< relref "/blog/getting-started-with-k8s-part2" >}})
 - Advance application deployment and Helm charts
 - Stateful applications
 - Networking
