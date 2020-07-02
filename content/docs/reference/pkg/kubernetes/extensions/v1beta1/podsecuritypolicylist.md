@@ -13,6 +13,7 @@ meta_desc: "Explore the PodSecurityPolicyList resource of the extensions/v1beta1
 PodSecurityPolicyList is a list of PodSecurityPolicy objects. Deprecated: use PodSecurityPolicyList from policy API Group instead.
 
 
+
 ## Create a PodSecurityPolicyList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

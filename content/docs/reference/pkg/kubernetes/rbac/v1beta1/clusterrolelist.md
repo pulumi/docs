@@ -13,6 +13,7 @@ meta_desc: "Explore the ClusterRoleList resource of the rbac.authorization.k8s.i
 ClusterRoleList is a collection of ClusterRoles. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoles, and will no longer be served in v1.20.
 
 
+
 ## Create a ClusterRoleList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

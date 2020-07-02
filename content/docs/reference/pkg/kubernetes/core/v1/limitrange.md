@@ -13,6 +13,7 @@ meta_desc: "Explore the LimitRange resource of the core/v1 module, including exa
 LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
 
+
 ## Create a LimitRange Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

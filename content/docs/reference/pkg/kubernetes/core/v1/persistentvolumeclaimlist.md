@@ -13,6 +13,7 @@ meta_desc: "Explore the PersistentVolumeClaimList resource of the core/v1 module
 PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
 
+
 ## Create a PersistentVolumeClaimList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

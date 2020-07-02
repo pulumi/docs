@@ -13,6 +13,7 @@ meta_desc: "Explore the NetworkPolicyList resource of the networking.k8s.io/v1 m
 NetworkPolicyList is a list of NetworkPolicy objects.
 
 
+
 ## Create a NetworkPolicyList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

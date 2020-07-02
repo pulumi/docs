@@ -13,6 +13,7 @@ meta_desc: "Explore the ResourceQuotaList resource of the core/v1 module, includ
 ResourceQuotaList is a list of ResourceQuota items.
 
 
+
 ## Create a ResourceQuotaList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

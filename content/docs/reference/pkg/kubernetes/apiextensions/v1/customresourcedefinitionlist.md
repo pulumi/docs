@@ -13,6 +13,7 @@ meta_desc: "Explore the CustomResourceDefinitionList resource of the apiextensio
 CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
 
+
 ## Create a CustomResourceDefinitionList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the IngressClassList resource of the networking.k8s.io/v1bet
 IngressClassList is a collection of IngressClasses.
 
 
+
 ## Create a IngressClassList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

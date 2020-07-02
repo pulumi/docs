@@ -13,6 +13,7 @@ meta_desc: "Explore the PodPresetList resource of the settings.k8s.io/v1alpha1 m
 PodPresetList is a list of PodPreset objects.
 
 
+
 ## Create a PodPresetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

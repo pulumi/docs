@@ -13,6 +13,7 @@ meta_desc: "Explore the PodPreset resource of the settings.k8s.io/v1alpha1 modul
 PodPreset is a policy resource that defines additional runtime requirements for a Pod.
 
 
+
 ## Create a PodPreset Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

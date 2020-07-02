@@ -13,6 +13,7 @@ meta_desc: "Explore the VolumeAttachmentList resource of the storage.k8s.io/v1be
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 
+
 ## Create a VolumeAttachmentList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

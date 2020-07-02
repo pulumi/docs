@@ -13,6 +13,7 @@ meta_desc: "Explore the Event resource of the events.k8s.io/v1beta1 module, incl
 Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system.
 
 
+
 ## Create a Event Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the APIService resource of the apiregistration.k8s.io/v1 mod
 APIService represents a server for a particular GroupVersion. Name must be "version.group".
 
 
+
 ## Create a APIService Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

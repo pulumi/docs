@@ -13,6 +13,7 @@ meta_desc: "Explore the ReplicaSetList resource of the apps/v1beta2 module, incl
 ReplicaSetList is a collection of ReplicaSets.
 
 
+
 ## Create a ReplicaSetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the ServiceAccountList resource of the core/v1 module, inclu
 ServiceAccountList is a list of ServiceAccount objects
 
 
+
 ## Create a ServiceAccountList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
