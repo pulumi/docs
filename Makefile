@@ -1,7 +1,3 @@
-# The HUGO_ENVIRONMENT environment variable determines which Hugo environment
-# to build/serve.
-HUGO_ENVIRONMENT ?= development
-
 .PHONY: default
 default: banner generate build
 
@@ -41,12 +37,12 @@ serve_components:
 
 .PHONY: build_components
 build_components:
-	@echo -e "\033[0;BUILD COMPONENTS:\033[0m"
+	@echo -e "\033[0;32mBUILD COMPONENTS:\033[0m"
 	yarn --cwd components run build
 
 .PHONY: build_search_index
 build_search_index:
-	@echo -e "\033[0;BUILD COMPONENTS:\033[0m"
+	@echo -e "\033[0;32mBUILD SEARCH INDEX:\033[0m"
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
@@ -64,14 +60,15 @@ copy_static_prebuilt:
 
 .PHONY: build
 build:
-	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
+	@echo -e "\033[0;32mBUILD:\033[0m"
 	yarn lint-markdown
-	./scripts/run-prod-build.sh
+	./scripts/build-site.sh
 
 .PHONY: pulumify
-pulumify: ensure
-	@echo -e "\033[0;32mBUILD PULUMIFY ($(HUGO_ENVIRONMENT)):\033[0m"
-	./scripts/run-pulumify-build.sh
+pulumify:
+	@echo -e "\033[0;32mBUILD PULUMIFY:\033[0m"
+	$(MAKE) ensure
+	./scripts/build-site.sh --buildDrafts --buildFuture
 
 .PHONY: test
 test:
