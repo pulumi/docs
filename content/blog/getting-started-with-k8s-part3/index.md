@@ -19,7 +19,8 @@ This series walks you through:
 - Building a Kubernetes cluster on cloud providers
 - Basic application deployment
 - Advance Application deployment and Helm charts
-- Networking topics
+- Stateful applications
+- Networking
 - “Day 2” activities such as migrating node groups.
 
 This article reviews three types of application deployment scenarios with commonly used examples. The first scenario is a [12-factor](https://12factor.net/) microservices multi-tier application consisting of multiple frontend and backend services backed by databases and a messaging queue to handle requests. The second scenario takes the Kubernetes guestbook and turns the Service and Deployment into a single component, demonstrating another pattern for organizing your stack. The third scenario shows how to deploy a popular web application using a [Helm](https://helm.sh/), the package manager for Kubernetes.
@@ -365,3 +366,9 @@ Using a Helm chart to deploy an application is the simplest solution if it’s a
 ## Conclusion
 
 This article demonstrated three ways to deploy an application in Kubernetes. In the next installment, we’ll examine how to maintain your application with [configmaps](https://kubernetes.io/docs/concepts/configuration/configmap/), perform rollouts and different deployment strategies, adopting existing resources, and more.
+
+This is the second in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll examine a complex application deployment and a deployment using a Helm chart. Until the next post, learn more about Kubernetes with these resources.
+
+- Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
+- Learn more about Pulumi's [support for Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}})
+- Practice [Kubernetes Tutorials]({{< relref "/docs/tutorials/kubernetes" >}}) using Pulumi
