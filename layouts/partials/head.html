@@ -119,4 +119,20 @@
         </script>
     {{ end }}
 
+    {{/* Tests to enforce required frontmatter for certain content types. */}}
+    {{ if and (eq .Type "blog") .IsPage }}
+        {{ if not .Params.authors }}
+            {{ errorf "Blog posts require authors: %s" .File.Path }}
+        {{ else }}
+            {{ range $authorID := .Params.authors }}
+                {{ if not (index $.Site.Data.team.team $authorID) }}
+                    {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if not .Params.tags }}
+            {{ errorf "Blog posts require tags: %s" .File.Path }}
+        {{ end }}
+    {{ end }}
+
 </head>
