@@ -15,7 +15,7 @@ export JS_BUNDLE="public/js/bundle.min.${GIT_SHA}.js"
 
 # Run the Hugo build.
 printf "Running Hugo...\n\n"
-hugo --minify --buildDrafts --buildFuture --cleanDestinationDir --templateMetrics --templateMetricsHints -e production
+hugo --minify --buildDrafts --buildFuture --templateMetrics --templateMetricsHints -e production
 
 printf "\nCompiling the JavaScripts...\n\n"
 npx tsc --outFile ${JS_BUNDLE}
