@@ -93,7 +93,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_virtual_machine(</span>datacenter_id=None<span class="p">, </span>name=None<span class="p">, </span>scsi_controller_scan_count=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_virtual_machine(</span>datacenter_id=None<span class="p">, </span>ide_controller_scan_count=None<span class="p">, </span>name=None<span class="p">, </span>sata_controller_scan_count=None<span class="p">, </span>scsi_controller_scan_count=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -149,6 +149,26 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idecontrollerscancount_csharp">
+<a href="#idecontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollerscancount_csharp">
+<a href="#satacontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scsicontrollerscancount_csharp">
 <a href="#scsicontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
@@ -192,6 +212,26 @@ This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idecontrollerscancount_go">
+<a href="#idecontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollerscancount_go">
+<a href="#satacontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -241,6 +281,26 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idecontrollerscancount_nodejs">
+<a href="#idecontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="satacontrollerscancount_nodejs">
+<a href="#satacontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scsicontrollerscancount_nodejs">
 <a href="#scsicontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
@@ -284,6 +344,26 @@ This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ide_controller_scan_count_python">
+<a href="#ide_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sata_controller_scan_count_python">
+<a href="#sata_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -454,6 +534,26 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="idecontrollerscancount_csharp">
+<a href="#idecontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="satacontrollerscancount_csharp">
+<a href="#satacontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="scsicontrollerscancount_csharp">
 <a href="#scsicontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
@@ -601,6 +701,26 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="idecontrollerscancount_go">
+<a href="#idecontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="satacontrollerscancount_go">
+<a href="#satacontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -758,6 +878,26 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="idecontrollerscancount_nodejs">
+<a href="#idecontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="satacontrollerscancount_nodejs">
+<a href="#satacontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="scsicontrollerscancount_nodejs">
 <a href="#scsicontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
@@ -905,6 +1045,26 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ide_controller_scan_count_python">
+<a href="#ide_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sata_controller_scan_count_python">
+<a href="#sata_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1120,6 +1280,6 @@ defined by `scsi_controller_scan_count` are scanned.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
 </dl>
 
