@@ -12,6 +12,66 @@ meta_desc: "Explore the EventsToMetricsRule resource of the New Relic package, i
 
 Use this resource to create, update, and delete New Relic Events to Metrics rules.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.EventsToMetricsRule("foo", new NewRelic.EventsToMetricsRuleArgs
+        {
+            AccountId = 12345,
+            Description = "Example description",
+            Nrql = "SELECT uniqueCount(account_id) AS ``Transaction.account_id`` FROM Transaction FACET appName, name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.EventsToMetricsRule("foo",
+    account_id=12345,
+    description="Example description",
+    nrql="SELECT uniqueCount(account_id) AS ``Transaction.account_id`` FROM Transaction FACET appName, name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.EventsToMetricsRule("foo", {
+    accountId: 12345,
+    description: "Example description",
+    nrql: "SELECT uniqueCount(account_id) AS ``Transaction.account_id`` FROM Transaction FACET appName, name",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventsToMetricsRule Resource {#create}

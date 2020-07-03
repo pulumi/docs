@@ -23,7 +23,7 @@ Explore the resources and functions of the insights module in the New Relic pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.0.1</dd>
 </dl>
 
 
