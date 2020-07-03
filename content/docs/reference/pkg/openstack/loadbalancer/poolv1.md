@@ -11,8 +11,6 @@ meta_desc: "Explore the PoolV1 resource of the loadbalancer module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V1 load balancer pool resource within OpenStack.
-
-
 ## Complete Load Balancing Stack Example
 
 ```typescript
@@ -168,7 +166,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -302,6 +300,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -320,9 +319,11 @@ pool1 = openstack.loadbalancer.PoolV1("pool1",
     protocol="HTTP",
     subnet_id="12345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -335,6 +336,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     subnetId: "12345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

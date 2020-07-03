@@ -14,8 +14,6 @@ Manages a V3 Endpoint resource within OpenStack Keystone.
 
 > **Note:** This usually requires admin privileges.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ endpoint1 = openstack.identity.EndpointV3("endpoint1",
     service_id=service1.id,
     url="http://my-endpoint")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -77,6 +78,7 @@ const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
     url: "http://my-endpoint",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

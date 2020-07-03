@@ -14,8 +14,6 @@ Use this data source to get the ID of an OpenStack service.
 
 > **Note:** This usually requires admin privileges.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 
 service1 = openstack.identity.get_service(name="keystone")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,6 +63,7 @@ const service1 = pulumi.output(openstack.identity.getService({
     name: "keystone",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

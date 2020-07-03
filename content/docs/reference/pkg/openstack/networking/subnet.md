@@ -12,8 +12,6 @@ meta_desc: "Explore the Subnet resource of the networking module, including exam
 
 Manages a V2 Neutron subnet resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ subnet1 = openstack.networking.Subnet("subnet1",
     cidr="192.168.199.0/24",
     network_id=network1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -72,6 +73,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
     networkId: network1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

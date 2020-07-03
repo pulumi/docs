@@ -12,8 +12,6 @@ meta_desc: "Explore the GetUser function of the identity module, including examp
 
 Use this data source to get the ID of an OpenStack user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 user1 = openstack.identity.get_user(name="user_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const user1 = pulumi.output(openstack.identity.getUser({
     name: "user_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

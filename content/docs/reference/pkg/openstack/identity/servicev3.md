@@ -14,8 +14,6 @@ Manages a V3 Service resource within OpenStack Keystone.
 
 > **Note:** This usually requires admin privileges.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 
 service1 = openstack.identity.ServiceV3("service1", type="custom")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,6 +63,7 @@ const service1 = new openstack.identity.ServiceV3("service_1", {
     type: "custom",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

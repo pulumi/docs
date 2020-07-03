@@ -3,7 +3,10 @@ title: Module networking
 title_tag: Module networking | Package pulumi_openstack | Python SDK
 linktitle: networking
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="networking">
 <h1>networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h1>
@@ -1330,8 +1333,8 @@ described below.</p>
 <span class="n">port1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Port</span><span class="p">(</span><span class="s2">&quot;port1&quot;</span><span class="p">,</span>
     <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="n">fixed_ips</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;ipAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.10&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">secgroup1</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
@@ -1693,18 +1696,18 @@ documentation.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the port
-(must be “true” or “false” if provided). Changing this updates the
+(must be <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> if provided). Changing this updates the
 <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</p></li>
 <li><p><strong>allowed_address_pairs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.</p></li>
 <li><p><strong>binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The port binding allows to specify binding information
 for the port. The structure is described below.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the floating IP. Changing
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the port. Changing
 this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</p></li>
 <li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device attached to the port. Changing this
 creates a new port.</p></li>
-<li><p><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the Port. Changing this creates
+<li><p><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the port. Changing this creates
 a new port.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port DNS name. Available, when Neutron DNS extension
 is enabled.</p></li>
@@ -1722,18 +1725,18 @@ IP address. This will also remove any fixed IPs previously set on a port. <code 
 is the only valid value for this argument.</p></li>
 <li><p><strong>no_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to
 <code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
-no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the “default”
 security group.</p></li>
 <li><p><strong>port_security_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of “true”. Setting this
+omitting argument will usually result in a value of <code class="docutils literal notranslate"><span class="pre">true</span></code>. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
 and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 port.</p></li>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list
@@ -1741,7 +1744,7 @@ of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the port.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the Port. Required if admin wants
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.</p></li>
 <li><p><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</p></li>
 </ul>
@@ -1780,7 +1783,7 @@ this port.</p></li>
 <dt id="pulumi_openstack.networking.Port.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.admin_state_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Administrative up/down status for the port
-(must be “true” or “false” if provided). Changing this updates the
+(must be <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> if provided). Changing this updates the
 <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</p>
 </dd></dl>
 
@@ -1838,7 +1841,7 @@ Default value is <code class="docutils literal notranslate"><span class="pre">no
 <dl class="py attribute">
 <dt id="pulumi_openstack.networking.Port.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Human-readable description of the floating IP. Changing
+<dd><p>Human-readable description of the port. Changing
 this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</p>
 </dd></dl>
 
@@ -1852,7 +1855,7 @@ creates a new port.</p>
 <dl class="py attribute">
 <dt id="pulumi_openstack.networking.Port.device_owner">
 <code class="sig-name descname">device_owner</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.device_owner" title="Permalink to this definition">¶</a></dt>
-<dd><p>The device owner of the Port. Changing this creates
+<dd><p>The device owner of the port. Changing this creates
 a new port.</p>
 </dd></dl>
 
@@ -1926,7 +1929,7 @@ is the only valid value for this argument.</p>
 <code class="sig-name descname">no_security_groups</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.no_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to
 <code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
-no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the “default”
 security group.</p>
 </dd></dl>
@@ -1936,7 +1939,7 @@ security group.</p>
 <code class="sig-name descname">port_security_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.port_security_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of “true”. Setting this
+omitting argument will usually result in a value of <code class="docutils literal notranslate"><span class="pre">true</span></code>. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
 and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
@@ -1951,8 +1954,8 @@ and <code class="docutils literal notranslate"><span class="pre">false</span></c
 <dl class="py attribute">
 <dt id="pulumi_openstack.networking.Port.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 port.</p>
 </dd></dl>
@@ -1975,7 +1978,7 @@ the Compute Instance).</p>
 <dl class="py attribute">
 <dt id="pulumi_openstack.networking.Port.tenant_id">
 <code class="sig-name descname">tenant_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.tenant_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The owner of the Port. Required if admin wants
+<dd><p>The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.</p>
 </dd></dl>
 
@@ -1997,7 +2000,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the port
-(must be “true” or “false” if provided). Changing this updates the
+(must be <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> if provided). Changing this updates the
 <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</p></li>
 <li><p><strong>all_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.</p></li>
@@ -2010,11 +2013,11 @@ addresses that can be active on this port. The structure is described
 below.</p></li>
 <li><p><strong>binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The port binding allows to specify binding information
 for the port. The structure is described below.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the floating IP. Changing
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the port. Changing
 this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</p></li>
 <li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device attached to the port. Changing this
 creates a new port.</p></li>
-<li><p><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the Port. Changing this creates
+<li><p><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the port. Changing this creates
 a new port.</p></li>
 <li><p><strong>dns_assignments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of maps representing port DNS assignments.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port DNS name. Available, when Neutron DNS extension
@@ -2033,18 +2036,18 @@ IP address. This will also remove any fixed IPs previously set on a port. <code 
 is the only valid value for this argument.</p></li>
 <li><p><strong>no_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to
 <code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
-no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the “default”
 security group.</p></li>
 <li><p><strong>port_security_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of “true”. Setting this
+omitting argument will usually result in a value of <code class="docutils literal notranslate"><span class="pre">true</span></code>. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
 and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a port. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 port.</p></li>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list
@@ -2052,7 +2055,7 @@ of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the port.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the Port. Required if admin wants
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.</p></li>
 <li><p><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</p></li>
 </ul>
@@ -5029,8 +5032,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="n">port_id</span><span class="o">=</span><span class="n">parent_port1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">sub_ports</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;portId&quot;</span><span class="p">:</span> <span class="n">subport1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;segmentationId&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;port_id&quot;</span><span class="p">:</span> <span class="n">subport1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;segmentation_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;segmentationType&quot;</span><span class="p">:</span> <span class="s2">&quot;vlan&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span>

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRouter function of the networking module, including e
 
 Use this data source to get the ID of an available OpenStack router.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 router = openstack.networking.get_router(name="router_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const router = pulumi.output(openstack.networking.getRouter({
     name: "router_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

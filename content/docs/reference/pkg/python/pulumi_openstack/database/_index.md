@@ -3,7 +3,10 @@ title: Module database
 title_tag: Module database | Package pulumi_openstack | Python SDK
 linktitle: database
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="database">
 <h1>database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h1>

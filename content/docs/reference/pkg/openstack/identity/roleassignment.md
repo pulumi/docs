@@ -15,8 +15,6 @@ Manages a V3 Role assignment within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ role_assignment1 = openstack.identity.RoleAssignment("roleAssignment1",
     role_id=role1.id,
     user_id=user1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -88,6 +89,7 @@ const roleAssignment1 = new openstack.identity.RoleAssignment("role_assignment_1
     userId: user1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

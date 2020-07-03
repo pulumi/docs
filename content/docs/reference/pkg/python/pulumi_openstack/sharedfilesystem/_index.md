@@ -3,7 +3,10 @@ title: Module sharedfilesystem
 title_tag: Module sharedfilesystem | Package pulumi_openstack | Python SDK
 linktitle: sharedfilesystem
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="sharedfilesystem">
 <h1>sharedfilesystem<a class="headerlink" href="#sharedfilesystem" title="Permalink to this headline">¶</a></h1>

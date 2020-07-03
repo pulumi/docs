@@ -14,8 +14,6 @@ Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 
 scope = openstack.identity.get_auth_scope(name="my_scope")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,6 +63,7 @@ const scope = pulumi.output(openstack.identity.getAuthScope({
     name: "my_scope",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

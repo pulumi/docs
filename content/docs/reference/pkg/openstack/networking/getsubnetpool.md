@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSubnetPool function of the networking module, includi
 
 Use this data source to get the ID of an available OpenStack subnetpool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 subnetpool1 = openstack.networking.get_subnet_pool(name="subnetpool_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
     name: "subnetpool_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

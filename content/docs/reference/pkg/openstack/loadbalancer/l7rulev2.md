@@ -12,8 +12,6 @@ meta_desc: "Explore the L7RuleV2 resource of the loadbalancer module, including 
 
 Manages a V2 L7 Rule resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -73,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -110,9 +109,11 @@ l7rule1 = openstack.loadbalancer.L7RuleV2("l7rule1",
     type="PATH",
     value="/api")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -152,6 +153,7 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
     value: "/api",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetPort function of the networking module, including exa
 
 Use this data source to get the ID of an available OpenStack port.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 port1 = openstack.networking.get_port(name="port_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
     name: "port_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

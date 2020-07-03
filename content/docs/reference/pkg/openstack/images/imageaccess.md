@@ -13,8 +13,6 @@ meta_desc: "Explore the ImageAccess resource of the images module, including exa
 Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +71,11 @@ rancheros_member = openstack.images.ImageAccess("rancherosMember",
     image_id=rancheros.id,
     member_id="bed6b6cbb86a4e2d8dc2735c2f1000e4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -93,6 +94,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
     memberId: "bed6b6cbb86a4e2d8dc2735c2f1000e4",
 });
 ```
+
 {{% /example %}}
 
 ### Privileged user
@@ -126,6 +128,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -150,9 +153,11 @@ rancheros_member = openstack.images.ImageAccess("rancherosMember",
     member_id="bed6b6cbb86a4e2d8dc2735c2f1000e4",
     status="accepted")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -172,6 +177,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
     status: "accepted",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

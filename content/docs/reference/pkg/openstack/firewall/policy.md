@@ -12,8 +12,6 @@ meta_desc: "Explore the Policy resource of the firewall module, including exampl
 
 Manages a v1 firewall policy resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,7 +31,7 @@ class MyStack : Stack
             Action = "deny",
             Description = "drop TELNET traffic",
             DestinationPort = "23",
-            Enabled = "true",
+            Enabled = true,
             Protocol = "tcp",
         });
         var rule2 = new OpenStack.Firewall.Rule("rule2", new OpenStack.Firewall.RuleArgs
@@ -41,7 +39,7 @@ class MyStack : Stack
             Action = "deny",
             Description = "drop NTP traffic",
             DestinationPort = "123",
-            Enabled = "false",
+            Enabled = false,
             Protocol = "udp",
         });
         var policy1 = new OpenStack.Firewall.Policy("policy1", new OpenStack.Firewall.PolicyArgs
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,9 +83,11 @@ policy1 = openstack.firewall.Policy("policy1", rules=[
     rule2.id,
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -112,6 +113,7 @@ const policy1 = new openstack.firewall.Policy("policy_1", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

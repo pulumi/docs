@@ -12,8 +12,6 @@ meta_desc: "Explore the GetFloatingIp function of the networking module, includi
 
 Use this data source to get the ID of an available OpenStack floating IP.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 floatingip1 = openstack.networking.get_floating_ip(address="192.168.0.4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const floatingip1 = pulumi.output(openstack.networking.getFloatingIp({
     address: "192.168.0.4",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

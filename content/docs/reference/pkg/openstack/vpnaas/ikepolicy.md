@@ -12,8 +12,6 @@ meta_desc: "Explore the IkePolicy resource of the vpnaas module, including examp
 
 Manages a V2 Neutron IKE policy resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,15 +47,18 @@ import pulumi_openstack as openstack
 
 policy1 = openstack.vpnaas.IkePolicy("policy1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const policy1 = new openstack.vpnaas.IkePolicy("policy_1", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

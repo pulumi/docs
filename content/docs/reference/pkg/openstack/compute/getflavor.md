@@ -12,8 +12,6 @@ meta_desc: "Explore the GetFlavor function of the compute module, including exam
 
 Use this data source to get the ID of an available OpenStack flavor.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_openstack as openstack
 small = openstack.compute.get_flavor(ram=512,
     vcpus=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -63,6 +64,7 @@ const small = pulumi.output(openstack.compute.getFlavor({
     vcpus: 1,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -79,7 +81,7 @@ const small = pulumi.output(openstack.compute.getFlavor({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_flavor(</span>disk=None<span class="p">, </span>flavor_id=None<span class="p">, </span>min_disk=None<span class="p">, </span>min_ram=None<span class="p">, </span>name=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>rx_tx_factor=None<span class="p">, </span>swap=None<span class="p">, </span>vcpus=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_flavor(</span>disk=None<span class="p">, </span>flavor_id=None<span class="p">, </span>is_public=None<span class="p">, </span>min_disk=None<span class="p">, </span>min_ram=None<span class="p">, </span>name=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>rx_tx_factor=None<span class="p">, </span>swap=None<span class="p">, </span>vcpus=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -127,6 +129,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the flavor. Conflicts with the `name`,
 `min_ram` and `min_disk`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flavor visibility.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -252,6 +265,17 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flavor visibility.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mindisk_go">
 <a href="#mindisk_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk</a>
 </span> 
@@ -373,6 +397,17 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The flavor visibility.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mindisk_nodejs">
 <a href="#mindisk_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk</a>
 </span> 
@@ -490,6 +525,17 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The ID of the flavor. Conflicts with the `name`,
 `min_ram` and `min_disk`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flavor visibility.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,17 +673,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="ispublic_csharp">
-<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether the flavor is public or private.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span> 
@@ -663,6 +698,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -767,17 +812,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="ispublic_go">
-<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether the flavor is public or private.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span> 
@@ -803,6 +837,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -907,17 +951,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="ispublic_nodejs">
-<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Whether the flavor is public or private.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span> 
@@ -943,6 +976,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1047,17 +1090,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="is_public_python">
-<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether the flavor is public or private.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span> 
@@ -1083,6 +1115,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

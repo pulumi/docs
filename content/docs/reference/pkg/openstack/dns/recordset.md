@@ -12,8 +12,6 @@ meta_desc: "Explore the RecordSet resource of the dns module, including examples
 
 Manages a DNS record set in the OpenStack DNS Service.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ rs_example_com = openstack.dns.RecordSet("rsExampleCom",
     type="A",
     zone_id=example_zone.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -94,6 +95,7 @@ const rsExampleCom = new openstack.dns.RecordSet("rs_example_com", {
     zoneId: exampleZone.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
