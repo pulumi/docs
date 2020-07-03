@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		backendKey, err := compute.NewBackendBucketSignedUrlKey(ctx, "backendKey", &compute.BackendBucketSignedUrlKeyArgs{
+		_, err = compute.NewBackendBucketSignedUrlKey(ctx, "backendKey", &compute.BackendBucketSignedUrlKeyArgs{
 			KeyValue:      pulumi.String("pPsVemX8GM46QVeezid6Rw=="),
 			BackendBucket: testBackend.Name,
 		})

@@ -54,7 +54,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = cloudbuild.NewTrigger(ctx, "filename-trigger", &cloudbuild.TriggerArgs{
+			Filename: pulumi.String("cloudbuild.yaml"),
+			Substitutions: pulumi.Map{
+				"_BAZ": pulumi.String("qux"),
+				"_FOO": pulumi.String("bar"),
+			},
+			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
+				BranchName: pulumi.String("master"),
+				RepoName:   pulumi.String("my-repo"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

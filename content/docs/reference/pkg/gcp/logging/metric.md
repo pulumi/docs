@@ -93,7 +93,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		loggingMetric, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
 			BucketOptions: &logging.MetricBucketOptionsArgs{
 				LinearBuckets: &logging.MetricBucketOptionsLinearBucketsArgs{
 					NumFiniteBuckets: pulumi.Int(3),
@@ -102,9 +102,9 @@ func main() {
 				},
 			},
 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
-			LabelExtractors: map[string]interface{}{
-				"mass": "EXTRACT(jsonPayload.request)",
-				"sku":  "EXTRACT(jsonPayload.id)",
+			LabelExtractors: pulumi.Map{
+				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
+				"sku":  pulumi.String("EXTRACT(jsonPayload.id)"),
 			},
 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
 				DisplayName: pulumi.String("My metric"),
@@ -257,7 +257,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		loggingMetric, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
 				MetricKind: pulumi.String("DELTA"),
@@ -356,10 +356,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		loggingMetric, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
-			LabelExtractors: map[string]interface{}{
-				"mass": "EXTRACT(jsonPayload.request)",
+			LabelExtractors: pulumi.Map{
+				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
 			},
 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
 				Labels: logging.MetricMetricDescriptorLabelArray{

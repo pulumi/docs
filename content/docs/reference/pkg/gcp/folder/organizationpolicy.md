@@ -56,7 +56,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serialPortPolicy, err := folder.NewOrganizationPolicy(ctx, "serialPortPolicy", &folder.OrganizationPolicyArgs{
+		_, err = folder.NewOrganizationPolicy(ctx, "serialPortPolicy", &folder.OrganizationPolicyArgs{
 			BooleanPolicy: &folder.OrganizationPolicyBooleanPolicyArgs{
 				Enforced: pulumi.Bool(true),
 			},

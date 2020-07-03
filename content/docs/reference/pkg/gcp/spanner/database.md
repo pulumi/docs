@@ -71,7 +71,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		database, err := spanner.NewDatabase(ctx, "database", &spanner.DatabaseArgs{
+		_, err = spanner.NewDatabase(ctx, "database", &spanner.DatabaseArgs{
 			Instance: main.Name,
 			Ddls: pulumi.StringArray{
 				pulumi.String("CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)"),

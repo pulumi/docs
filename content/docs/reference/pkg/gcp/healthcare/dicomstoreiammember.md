@@ -85,6 +85,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +104,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		dicomStore, err := healthcare.NewDicomStoreIamPolicy(ctx, "dicomStore", &healthcare.DicomStoreIamPolicyArgs{
+		_, err = healthcare.NewDicomStoreIamPolicy(ctx, "dicomStore", &healthcare.DicomStoreIamPolicyArgs{
 			DicomStoreId: pulumi.String("your-dicom-store-id"),
 			PolicyData:   pulumi.String(admin.PolicyData),
 		})
@@ -167,7 +168,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		dicomStore, err := healthcare.NewDicomStoreIamBinding(ctx, "dicomStore", &healthcare.DicomStoreIamBindingArgs{
+		_, err = healthcare.NewDicomStoreIamBinding(ctx, "dicomStore", &healthcare.DicomStoreIamBindingArgs{
 			DicomStoreId: pulumi.String("your-dicom-store-id"),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
@@ -231,7 +232,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		dicomStore, err := healthcare.NewDicomStoreIamMember(ctx, "dicomStore", &healthcare.DicomStoreIamMemberArgs{
+		_, err = healthcare.NewDicomStoreIamMember(ctx, "dicomStore", &healthcare.DicomStoreIamMemberArgs{
 			DicomStoreId: pulumi.String("your-dicom-store-id"),
 			Member:       pulumi.String("user:jane@example.com"),
 			Role:         pulumi.String("roles/editor"),

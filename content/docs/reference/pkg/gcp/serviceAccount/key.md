@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		mykey, err := serviceAccount.NewKey(ctx, "mykey", &serviceAccount.KeyArgs{
+		_, err = serviceAccount.NewKey(ctx, "mykey", &serviceAccount.KeyArgs{
 			ServiceAccountId: myaccount.Name,
 			PublicKeyType:    pulumi.String("TYPE_X509_PEM_FILE"),
 		})

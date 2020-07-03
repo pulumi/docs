@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		dns, err := dns.NewRecordSet(ctx, "dns", &dns.RecordSetArgs{
+		_, err = dns.NewRecordSet(ctx, "dns", &dns.RecordSetArgs{
 			Type:        pulumi.String("TXT"),
 			Ttl:         pulumi.Int(300),
 			ManagedZone: pulumi.String(envDnsZone.Name),

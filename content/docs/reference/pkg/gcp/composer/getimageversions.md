@@ -46,7 +46,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		all, err := composer.GetImageVersions(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
+			Region: pulumi.String("us-central1"),
+			Config: &composer.EnvironmentConfigArgs{
+				Software_config: pulumi.Map{
+					"imageVersion": pulumi.String(all.ImageVersions[0].ImageVersionId),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceAccount, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+		_, err = serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
 			AccountId:   pulumi.String("service_account_id"),
 			DisplayName: pulumi.String("Service Account"),
 		})

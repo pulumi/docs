@@ -73,7 +73,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		instance, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+		_, err = filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
 			FileShares: &filestore.InstanceFileSharesArgs{
 				CapacityGb: pulumi.Int(2660),
 				Name:       pulumi.String("share1"),

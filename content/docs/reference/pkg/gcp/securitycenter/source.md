@@ -59,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		customSource, err := securitycenter.NewSource(ctx, "customSource", &securitycenter.SourceArgs{
+		_, err = securitycenter.NewSource(ctx, "customSource", &securitycenter.SourceArgs{
 			Description:  pulumi.String("My custom Cloud Security Command Center Finding Source"),
 			DisplayName:  pulumi.String("My Source"),
 			Organization: pulumi.String("123456789"),

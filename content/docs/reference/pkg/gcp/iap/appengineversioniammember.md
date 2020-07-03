@@ -94,6 +94,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,7 +113,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := iap.NewAppEngineVersionIamPolicy(ctx, "policy", &iap.AppEngineVersionIamPolicyArgs{
+		_, err = iap.NewAppEngineVersionIamPolicy(ctx, "policy", &iap.AppEngineVersionIamPolicyArgs{
 			Project:    pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			AppId:      pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Service:    pulumi.String(google_app_engine_standard_app_version.Version.Service),
@@ -217,6 +218,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -240,7 +242,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := iap.NewAppEngineVersionIamPolicy(ctx, "policy", &iap.AppEngineVersionIamPolicyArgs{
+		_, err = iap.NewAppEngineVersionIamPolicy(ctx, "policy", &iap.AppEngineVersionIamPolicyArgs{
 			Project:    pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			AppId:      pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Service:    pulumi.String(google_app_engine_standard_app_version.Version.Service),
@@ -315,7 +317,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := iap.NewAppEngineVersionIamBinding(ctx, "binding", &iap.AppEngineVersionIamBindingArgs{
+		_, err = iap.NewAppEngineVersionIamBinding(ctx, "binding", &iap.AppEngineVersionIamBindingArgs{
 			AppId: pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
@@ -410,7 +412,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := iap.NewAppEngineVersionIamBinding(ctx, "binding", &iap.AppEngineVersionIamBindingArgs{
+		_, err = iap.NewAppEngineVersionIamBinding(ctx, "binding", &iap.AppEngineVersionIamBindingArgs{
 			AppId: pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Condition: &iap.AppEngineVersionIamBindingConditionArgs{
 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
@@ -490,7 +492,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := iap.NewAppEngineVersionIamMember(ctx, "member", &iap.AppEngineVersionIamMemberArgs{
+		_, err = iap.NewAppEngineVersionIamMember(ctx, "member", &iap.AppEngineVersionIamMemberArgs{
 			AppId:     pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Member:    pulumi.String("user:jane@example.com"),
 			Project:   pulumi.String(google_app_engine_standard_app_version.Version.Project),
@@ -580,7 +582,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := iap.NewAppEngineVersionIamMember(ctx, "member", &iap.AppEngineVersionIamMemberArgs{
+		_, err = iap.NewAppEngineVersionIamMember(ctx, "member", &iap.AppEngineVersionIamMemberArgs{
 			AppId: pulumi.String(google_app_engine_standard_app_version.Version.Project),
 			Condition: &iap.AppEngineVersionIamMemberConditionArgs{
 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),

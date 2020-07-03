@@ -101,7 +101,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		peeringPrimaryRoutes, err := compute.NewNetworkPeeringRoutesConfig(ctx, "peeringPrimaryRoutes", &compute.NetworkPeeringRoutesConfigArgs{
+		_, err = compute.NewNetworkPeeringRoutesConfig(ctx, "peeringPrimaryRoutes", &compute.NetworkPeeringRoutesConfigArgs{
 			Peering:            peeringPrimary.Name,
 			Network:            networkPrimary.Name,
 			ImportCustomRoutes: pulumi.Bool(true),
@@ -110,7 +110,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		peeringSecondary, err := compute.NewNetworkPeering(ctx, "peeringSecondary", &compute.NetworkPeeringArgs{
+		_, err = compute.NewNetworkPeering(ctx, "peeringSecondary", &compute.NetworkPeeringArgs{
 			Network:     networkSecondary.ID(),
 			PeerNetwork: networkPrimary.ID(),
 		})
