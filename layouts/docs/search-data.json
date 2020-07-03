@@ -1,10 +1,11 @@
+{{- if eq hugo.Environment "production" -}}
 {
 {{- $pages := (where .Site.Pages ".Params.exclude_from_pulumi_search_index" "ne" true) -}}
 {{- $lastindex := (sub (len $pages) 1) -}}
 {{ range $index, $page := $pages }}
     "{{ .RelPermalink }}": {
-        "title": {{ .Title | jsonify }},
-        "content": {{ .Plain | jsonify }}
+        "title": {{ .Title | jsonify }}
     }{{ if ne $lastindex $index }},{{ end }}
 {{ end }}
 }
+{{- end -}}
