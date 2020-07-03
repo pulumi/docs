@@ -46,7 +46,7 @@ Stencil ships with a development server that runs on port 3333. (It runs indepen
 the Hugo development server.) To use it, from the project root, run:
 
 ```
-make serve-components
+make serve_components
 ```
 
 ... and browse to http://localhost:3333. There, you'll see a single HTML page (whose
@@ -54,7 +54,7 @@ source you'll find at `/components/src/index.html`) that you can use as a sandbo
 developing and testing your components in isolation. Any changes you make to that page
 will be reflected immediately, and changes to the components themselves will trigger a
 recompile and be copied into Hugo site at `/static/js/`. So if you're running `make serve`
-in one shell and `make serve-components` in another, saving a component will trigger a
+in one shell and `make serve_components` in another, saving a component will trigger a
 reload of the Hugo site as well. (I chose to keep these as separate targets simply because
 most users who run `make serve` won't need be able to work on components concurrently.)
 
