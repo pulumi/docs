@@ -10,10 +10,15 @@ banner:
 	@echo -e "\033[1;37mPulumi Website           \033[0m"
 	@echo -e "\033[1;37m=========================\033[0m"
 
+.PHONY: clean
+clean:
+	rm -rf node_modules
+	rm -rf components/node_modules
+	rm -rf public
+
 .PHONY: ensure
 ensure:
-	yarn install
-	yarn --cwd components install
+	./scripts/ensure.sh
 
 .PHONY: ensure_tools
 ensure_tools:

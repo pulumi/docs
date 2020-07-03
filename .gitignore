@@ -24,14 +24,14 @@ node_modules
 # it from being added mistakenly.
 /package-lock.json
 
+# Python's virtual env dir.
+venv/
+
 # Ignore the Stencil component bundle.
 /static/js/components.js
 /static/js/components/
 
-# Python's virtual env dir.
-venv/
-
 # Ignore bundled CSS and JS files, which we write to the Hugo static
-# folder in development in order to be able to use livereload.
+# directory in development in order to be able to use livereload.
 static/css/styles.*.css
 static/js/bundle.min.*.js

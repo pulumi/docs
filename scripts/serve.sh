@@ -26,19 +26,24 @@ watch_css() {
         -c "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}"
 }
 
-# Build once, to make sure we have a working site to begin with.
-rm -rf public && mkdir -p public public/js public/css
-rm -f static/js/bundle.min.*.js && yarn run tsc --outFile "${JS_BUNDLE}"
-cp ${JS_BUNDLE} public/js/
-yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss --config assets/config --output ${CSS_BUNDLE}
-
 # Export these functions to make them visible to Concurrently.
 export -f watch_hugo
 export -f watch_js
 export -f watch_css
 
+# Run the CSS and JS builds once, to make sure we start with a working site.
+rm -f static/css/styles.*.css
+rm -f static/js/bundle.min.*.js
+mkdir -p public public/js public/css
+yarn run tsc --outFile "${JS_BUNDLE}"
+cp ${JS_BUNDLE} public/js/
+yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss --config assets/config --output ${CSS_BUNDLE}
 
+printf "Copying prebuilt docs...\n\n"
+make copy_static_prebuilt
 
+printf "Building web components...\n\n"
+make build_components
 
-# Run Hugo, TypeScript, and the Sass things, recompiling on changes.
+printf "Watching Hugo, assets/js, and assets/sass for changes...\n\n"
 yarn run concurrently "watch_hugo" "watch_js" "watch_css"
