@@ -13755,6 +13755,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxcapacityperscale_csharp">
+<a href="#maxcapacityperscale_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="predictivemode_csharp">
 <a href="#predictivemode_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Mode</a>
 </span> 
@@ -13857,6 +13867,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacityperscale_go">
+<a href="#maxcapacityperscale_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13969,6 +13989,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxcapacityperscale_nodejs">
+<a href="#maxcapacityperscale_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Per<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="predictivemode_nodejs">
 <a href="#predictivemode_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Mode</a>
 </span> 
@@ -14071,6 +14101,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacityperscale_python">
+<a href="#maxcapacityperscale_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Per<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
