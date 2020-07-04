@@ -48,10 +48,11 @@ done
 
 cd ..
 
-# Synchronize the remaining contents of the local folder and site bucket, deleting
-# whatever files exist remotely but not locally.
+# Push remaining content to the site bucket. Note we do not pass the --delete option to
+# s3 sync, which means that files in the s3 bucket that aren't in the local build will be
+# left in the bucket.
 echo "Synchronizing to $site_bucket..."
-aws s3 sync site_contents "$site_bucket" --acl public-read --delete
+aws s3 sync site_contents "$site_bucket" --acl public-read
 
 # Create an S3 object for each of the items in the redirect list so it returns a 301
 # redirect (instead of serving the HTML with a meta-redirect). This ensures the right HTTP
