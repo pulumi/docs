@@ -169,7 +169,7 @@ spec:
         - containerPort: 80
 ```
 
-Although this is a simple example, you can see where using a programming language has advantages over editing YAML files, e.g., you can edit the name, namespace, and labels just once. The full example is available on [Github](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) for you to try.
+Although this is a simple example, you can see where using a programming language has advantages over editing YAML files, e.g., you can edit the name, namespace, and labels just once. The full example is available on [GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) for you to try.
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
@@ -367,7 +367,7 @@ spec:
         - containerPort: 80
 ```
 
-Although this is a simple example, you can see where using a programming language has advantages over editing YAML files, e.g., you can edit the name, namespace, and labels just once. The full example is available on [Github](https://github.com/pulumi/examples/tree/master/aws-ts-gke-hello-world) for you to try.
+Although this is a simple example, you can see where using a programming language has advantages over editing YAML files, e.g., you can edit the name, namespace, and labels just once. The full example is available on [GitHub](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) for you to try.
 {{% /choosable %}}
 {{< /chooser >}}
 
