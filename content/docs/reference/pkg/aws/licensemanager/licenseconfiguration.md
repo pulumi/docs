@@ -72,7 +72,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = licensemanager.NewLicenseConfiguration(ctx, "example", &licensemanager.LicenseConfigurationArgs{
+		_, err := licensemanager.NewLicenseConfiguration(ctx, "example", &licensemanager.LicenseConfigurationArgs{
 			Description:           pulumi.String("Example"),
 			LicenseCount:          pulumi.Int(10),
 			LicenseCountHardLimit: pulumi.Bool(true),
@@ -80,7 +80,7 @@ func main() {
 			LicenseRules: pulumi.StringArray{
 				pulumi.String("#minimumSockets=2"),
 			},
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"foo": pulumi.String("barr"),
 			},
 		})

@@ -141,7 +141,7 @@ func main() {
 		_, err = apigateway.NewIntegrationResponse(ctx, "myDemoIntegrationResponse", &apigateway.IntegrationResponseArgs{
 			HttpMethod: myDemoMethod.HttpMethod,
 			ResourceId: myDemoResource.ID(),
-			ResponseTemplates: pulumi.Map{
+			ResponseTemplates: pulumi.StringMap{
 				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#set(", "$", "inputRoot = ", "$", "input.path('", "$", "'))\n", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n", "<message>\n", "    ", "$", "inputRoot.body\n", "</message>\n", "\n")),
 			},
 			RestApi:    myDemoAPI.ID(),

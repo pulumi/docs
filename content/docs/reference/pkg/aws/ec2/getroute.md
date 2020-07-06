@@ -78,7 +78,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := ec2.LookupNetworkInterface(ctx, &ec2.LookupNetworkInterfaceArgs{
+		_, err = ec2.LookupNetworkInterface(ctx, &ec2.LookupNetworkInterfaceArgs{
 			NetworkInterfaceId: route.NetworkInterfaceId,
 		}, nil)
 		if err != nil {

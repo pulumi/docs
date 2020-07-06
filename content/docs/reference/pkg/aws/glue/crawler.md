@@ -56,7 +56,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
+		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
 			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
 			DynamodbTargets: glue.CrawlerDynamodbTargetArray{
 				&glue.CrawlerDynamodbTargetArgs{
@@ -150,7 +150,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
+		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
 			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
 			JdbcTargets: glue.CrawlerJdbcTargetArray{
 				&glue.CrawlerJdbcTargetArgs{
@@ -246,7 +246,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
+		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
 			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
 			Role:         pulumi.String(aws_iam_role.Example.Arn),
 			S3Targets: glue.CrawlerS3TargetArray{
@@ -292,110 +292,6 @@ const example = new aws.glue.Crawler("example", {
     s3Targets: [{
         path: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}`,
     }],
-});
-```
-
-{{% /example %}}
-
-### Catalog Target
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
-        {
-            CatalogTargets = 
-            {
-                new Aws.Glue.Inputs.CrawlerCatalogTargetArgs
-                {
-                    DatabaseName = aws_glue_catalog_database.Example.Name,
-                    Tables = 
-                    {
-                        aws_glue_catalog_table.Example.Name,
-                    },
-                },
-            },
-            Configuration = @"{
-  ""Version"":1.0,
-  ""Grouping"": {
-    ""TableGroupingPolicy"": ""CombineCompatibleSchemas""
-  }
-}
-
-",
-            DatabaseName = aws_glue_catalog_database.Example.Name,
-            Role = aws_iam_role.Example.Arn,
-            SchemaChangePolicy = new Aws.Glue.Inputs.CrawlerSchemaChangePolicyArgs
-            {
-                DeleteBehavior = "LOG",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Crawler("example",
-    catalog_targets=[{
-        "database_name": aws_glue_catalog_database["example"]["name"],
-        "tables": [aws_glue_catalog_table["example"]["name"]],
-    }],
-    configuration="""{
-  "Version":1.0,
-  "Grouping": {
-    "TableGroupingPolicy": "CombineCompatibleSchemas"
-  }
-}
-
-""",
-    database_name=aws_glue_catalog_database["example"]["name"],
-    role=aws_iam_role["example"]["arn"],
-    schema_change_policy={
-        "deleteBehavior": "LOG",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Crawler("example", {
-    catalogTargets: [{
-        databaseName: aws_glue_catalog_database_example.name,
-        tables: [aws_glue_catalog_table_example.name],
-    }],
-    configuration: `{
-  "Version":1.0,
-  "Grouping": {
-    "TableGroupingPolicy": "CombineCompatibleSchemas"
-  }
-}
-`,
-    databaseName: aws_glue_catalog_database_example.name,
-    role: aws_iam_role_example.arn,
-    schemaChangePolicy: {
-        deleteBehavior: "LOG",
-    },
 });
 ```
 

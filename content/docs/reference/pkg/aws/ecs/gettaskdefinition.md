@@ -13,6 +13,65 @@ meta_desc: "Explore the GetTaskDefinition function of the ecs module, including 
 The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mongoTaskDefinition = new aws.ecs.TaskDefinition("mongo", {
+    containerDefinitions: `[
+  {
+    "cpu": 128,
+    "environment": [{
+      "name": "SECRET",
+      "value": "KEY"
+    }],
+    "essential": true,
+    "image": "mongo:latest",
+    "memory": 128,
+    "memoryReservation": 64,
+    "name": "mongodb"
+  }
+]
+`,
+    family: "mongodb",
+});
+// Simply specify the family to find the latest ACTIVE revision in that family.
+const mongoEcsTaskDefinition = mongoTaskDefinition.family.apply(family => aws.ecs.getTaskDefinition({
+    taskDefinition: family,
+}, { async: true }));
+const foo = new aws.ecs.Cluster("foo", {});
+const mongoService = new aws.ecs.Service("mongo", {
+    cluster: foo.id,
+    desiredCount: 2,
+    taskDefinition: pulumi.all([mongoTaskDefinition.family, mongoTaskDefinition.revision, mongoEcsTaskDefinition]).apply(([family, revision, mongoEcsTaskDefinition]) => `${family}:${(() => {
+        throw "tf2pulumi error: NYI: call to max";
+        return (() => { throw "NYI: call to max"; })();
+    })()}`),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTaskDefinition {#using}

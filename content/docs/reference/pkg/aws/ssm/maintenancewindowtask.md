@@ -85,7 +85,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
@@ -187,6 +187,48 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 
 {{% /example %}}
 
+### Lambda Tasks
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.MaintenanceWindowTask("example", {
+    maxConcurrency: "2",
+    maxErrors: "1",
+    priority: 1,
+    serviceRoleArn: aws_iam_role_example.arn,
+    targets: [{
+        key: "InstanceIds",
+        values: [aws_instance_example.id],
+    }],
+    taskArn: aws_lambda_function_example.arn,
+    taskInvocationParameters: {
+        lambdaParameters: {
+            clientContext: Buffer.from("{\"key1\":\"value1\"}").toString("base64"),
+            payload: "{\"key1\":\"value1\"}",
+        },
+    },
+    taskType: "LAMBDA",
+    windowId: aws_ssm_maintenance_window_example.id,
+});
+```
+
+{{% /example %}}
+
 ### Run Command Tasks
 {{% example csharp %}}
 ```csharp
@@ -266,7 +308,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
@@ -451,7 +493,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),

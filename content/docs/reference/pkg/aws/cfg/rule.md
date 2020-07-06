@@ -35,6 +35,12 @@ class MyStack : Stack
                 Owner = "AWS",
                 SourceIdentifier = "S3_BUCKET_VERSIONING_ENABLED",
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_config_configuration_recorder.foo",
+            },
         });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
@@ -96,12 +102,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
+		_, err := cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
 			Source: &cfg.RuleSourceArgs{
 				Owner:            pulumi.String("AWS"),
 				SourceIdentifier: pulumi.String("S3_BUCKET_VERSIONING_ENABLED"),
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_config_configuration_recorder.foo",
+		}))
 		if err != nil {
 			return err
 		}
@@ -139,7 +147,8 @@ import pulumi_aws as aws
 rule = aws.cfg.Rule("rule", source={
     "owner": "AWS",
     "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
-})
+},
+opts=ResourceOptions(depends_on=["aws_config_configuration_recorder.foo"]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -254,6 +263,13 @@ class MyStack : Stack
                 Owner = "CUSTOM_LAMBDA",
                 SourceIdentifier = exampleFunction.Arn,
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_config_configuration_recorder.example",
+                "aws_lambda_permission.example",
+            },
         });
     }
 
@@ -274,7 +290,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cfg.NewRecorder(ctx, "exampleRecorder", nil)
+		_, err := cfg.NewRecorder(ctx, "exampleRecorder", nil)
 		if err != nil {
 			return err
 		}
@@ -295,7 +311,10 @@ func main() {
 				Owner:            pulumi.String("CUSTOM_LAMBDA"),
 				SourceIdentifier: exampleFunction.Arn,
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_config_configuration_recorder.example",
+			"aws_lambda_permission.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -320,7 +339,11 @@ example_permission = aws.lambda_.Permission("examplePermission",
 example_rule = aws.cfg.Rule("exampleRule", source={
     "owner": "CUSTOM_LAMBDA",
     "sourceIdentifier": example_function.arn,
-})
+},
+opts=ResourceOptions(depends_on=[
+        "aws_config_configuration_recorder.example",
+        "aws_lambda_permission.example",
+    ]))
 ```
 
 {{% /example %}}

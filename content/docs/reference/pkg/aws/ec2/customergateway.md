@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var main = new Aws.Ec2.CustomerGateway("main", new Aws.Ec2.CustomerGatewayArgs
         {
-            BgpAsn = 65000,
+            BgpAsn = "65000",
             IpAddress = "172.83.124.10",
             Tags = 
             {
@@ -54,10 +54,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewCustomerGateway(ctx, "main", &ec2.CustomerGatewayArgs{
-			BgpAsn:    pulumi.Int(65000),
+		_, err := ec2.NewCustomerGateway(ctx, "main", &ec2.CustomerGatewayArgs{
+			BgpAsn:    pulumi.String("65000"),
 			IpAddress: pulumi.String("172.83.124.10"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Name": pulumi.String("main-customer-gateway"),
 			},
 			Type: pulumi.String("ipsec.1"),
@@ -95,7 +95,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const main = new aws.ec2.CustomerGateway("main", {
-    bgpAsn: 65000,
+    bgpAsn: "65000",
     ipAddress: "172.83.124.10",
     tags: {
         Name: "main-customer-gateway",
@@ -296,7 +296,7 @@ The CustomerGateway resource accepts the following [input]({{< relref "/docs/int
 <a href="#bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ supports at this time is "ipsec.1".
 <a href="#bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ supports at this time is "ipsec.1".
 <a href="#bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ supports at this time is "ipsec.1".
 <a href="#bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ The following state arguments are supported:
 <a href="#state_bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ supports at this time is "ipsec.1".
 <a href="#state_bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ supports at this time is "ipsec.1".
 <a href="#state_bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ supports at this time is "ipsec.1".
 <a href="#state_bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
 {{% /md %}}</dd>

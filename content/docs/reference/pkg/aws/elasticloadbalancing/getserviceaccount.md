@@ -11,7 +11,7 @@ meta_desc: "Explore the GetServiceAccount function of the elasticloadbalancing m
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get the Account ID of the [AWS Elastic Load Balancing Service Account](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy)
-in a given region for the purpose of whitelisting in S3 bucket policy.
+in a given region for the purpose of permitting in S3 bucket policy.
 
 {{% examples %}}
 ## Example Usage

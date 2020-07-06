@@ -71,9 +71,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = budgets.NewBudget(ctx, "ec2", &budgets.BudgetArgs{
+		_, err := budgets.NewBudget(ctx, "ec2", &budgets.BudgetArgs{
 			BudgetType: pulumi.String("COST"),
-			CostFilters: pulumi.Map{
+			CostFilters: pulumi.StringMap{
 				"Service": pulumi.String("Amazon Elastic Compute Cloud - Compute"),
 			},
 			LimitAmount: pulumi.String("1200"),

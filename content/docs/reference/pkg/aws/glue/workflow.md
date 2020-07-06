@@ -88,7 +88,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = glue.NewTrigger(ctx, "example-start", &glue.TriggerArgs{
+		_, err = glue.NewTrigger(ctx, "example_start", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
 					JobName: pulumi.String("example-job"),
@@ -100,7 +100,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = glue.NewTrigger(ctx, "example-inner", &glue.TriggerArgs{
+		_, err = glue.NewTrigger(ctx, "example_inner", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
 					JobName: pulumi.String("another-example-job"),

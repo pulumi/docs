@@ -16,70 +16,6 @@ Provides a Route53 record resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Simple routing policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
-        {
-            Name = "www.example.com",
-            Records = 
-            {
-                aws_eip.Lb.Public_ip,
-            },
-            Ttl = 300,
-            Type = "A",
-            ZoneId = aws_route53_zone.Primary.Zone_id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-www = aws.route53.Record("www",
-    name="www.example.com",
-    records=[aws_eip["lb"]["public_ip"]],
-    ttl="300",
-    type="A",
-    zone_id=aws_route53_zone["primary"]["zone_id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const www = new aws.route53.Record("www", {
-    name: "www.example.com",
-    records: [aws_eip_lb.publicIp],
-    ttl: 300,
-    type: "A",
-    zoneId: aws_route53_zone_primary.zoneId,
-});
-```
-
-{{% /example %}}
-
 ### Weighted routing policy
 {{% example csharp %}}
 ```csharp
@@ -146,7 +82,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = route53.NewRecord(ctx, "www-dev", &route53.RecordArgs{
+		_, err := route53.NewRecord(ctx, "www_dev", &route53.RecordArgs{
 			Name: pulumi.String("www"),
 			Records: pulumi.StringArray{
 				pulumi.String("dev.example.com"),
@@ -164,7 +100,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = route53.NewRecord(ctx, "www-live", &route53.RecordArgs{
+		_, err = route53.NewRecord(ctx, "www_live", &route53.RecordArgs{
 			Name: pulumi.String("www"),
 			Records: pulumi.StringArray{
 				pulumi.String("live.example.com"),

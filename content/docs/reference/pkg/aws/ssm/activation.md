@@ -49,6 +49,12 @@ class MyStack : Stack
             Description = "Test",
             IamRole = testRole.Id,
             RegistrationLimit = 5,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_iam_role_policy_attachment.test_attach",
+            },
         });
     }
 
@@ -88,7 +94,9 @@ func main() {
 			Description:       pulumi.String("Test"),
 			IamRole:           testRole.ID(),
 			RegistrationLimit: pulumi.Int(5),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_iam_role_policy_attachment.test_attach",
+		}))
 		if err != nil {
 			return err
 		}
@@ -120,7 +128,8 @@ test_attach = aws.iam.RolePolicyAttachment("testAttach",
 foo = aws.ssm.Activation("foo",
     description="Test",
     iam_role=test_role.id,
-    registration_limit="5")
+    registration_limit="5",
+    opts=ResourceOptions(depends_on=["aws_iam_role_policy_attachment.test_attach"]))
 ```
 
 {{% /example %}}

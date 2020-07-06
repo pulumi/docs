@@ -22,6 +22,71 @@ the region and the subnet letter to network numbers.
 This is different from the `aws.getAvailabilityZones` (plural) data source,
 which provides a list of the available zones.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const regionNumber = config.get("regionNumber") || {
+    "ap-northeast-1": 5,
+    "eu-central-1": 4,
+    "us-east-1": 1,
+    "us-west-1": 2,
+    "us-west-2": 3,
+};
+const azNumber = config.get("azNumber") || {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    f: 6,
+};
+
+// Retrieve the AZ where we want to create network resources
+// This must be in the region selected on the AWS provider.
+const exampleAvailabilityZone = pulumi.output(aws.getAvailabilityZone({
+    name: "eu-central-1a",
+}, { async: true }));
+// Create a VPC for the region associated with the AZ
+const exampleVpc = new aws.ec2.Vpc("example", {
+    cidrBlock: exampleAvailabilityZone.apply(exampleAvailabilityZone => (() => {
+        throw "tf2pulumi error: NYI: call to cidrsubnet";
+        return (() => { throw "NYI: call to cidrsubnet"; })();
+    })()),
+});
+// Create a subnet for the AZ within the regional VPC
+const exampleSubnet = new aws.ec2.Subnet("example", {
+    cidrBlock: pulumi.all([exampleVpc.cidrBlock, exampleAvailabilityZone]).apply(([cidrBlock, exampleAvailabilityZone]) => (() => {
+        throw "tf2pulumi error: NYI: call to cidrsubnet";
+        return (() => { throw "NYI: call to cidrsubnet"; })();
+    })()),
+    vpcId: exampleVpc.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAvailabilityZone {#using}

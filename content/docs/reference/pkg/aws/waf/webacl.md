@@ -49,6 +49,12 @@ class MyStack : Stack
                     Type = "IPMatch",
                 },
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_waf_ipset.ipset",
+            },
         });
         var wafAcl = new Aws.Waf.WebAcl("wafAcl", new Aws.Waf.WebAclArgs
         {
@@ -69,6 +75,13 @@ class MyStack : Stack
                     RuleId = wafrule.Id,
                     Type = "REGULAR",
                 },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_waf_ipset.ipset",
+                "aws_waf_rule.wafrule",
             },
         });
     }
@@ -109,7 +122,9 @@ func main() {
 					Type:    pulumi.String("IPMatch"),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_waf_ipset.ipset",
+		}))
 		if err != nil {
 			return err
 		}
@@ -128,7 +143,10 @@ func main() {
 					Type:     pulumi.String("REGULAR"),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_waf_ipset.ipset",
+			"aws_waf_rule.wafrule",
+		}))
 		if err != nil {
 			return err
 		}
@@ -154,7 +172,8 @@ wafrule = aws.waf.Rule("wafrule",
         "dataId": ipset.id,
         "negated": False,
         "type": "IPMatch",
-    }])
+    }],
+    opts=ResourceOptions(depends_on=["aws_waf_ipset.ipset"]))
 waf_acl = aws.waf.WebAcl("wafAcl",
     default_action={
         "type": "ALLOW",
@@ -167,7 +186,11 @@ waf_acl = aws.waf.WebAcl("wafAcl",
         "priority": 1,
         "rule_id": wafrule.id,
         "type": "REGULAR",
-    }])
+    }],
+    opts=ResourceOptions(depends_on=[
+            "aws_waf_ipset.ipset",
+            "aws_waf_rule.wafrule",
+        ]))
 ```
 
 {{% /example %}}
@@ -260,15 +283,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
+		_, err := waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
 			LoggingConfiguration: &waf.WebAclLoggingConfigurationArgs{
 				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &waf.WebAclLoggingConfigurationRedactedFieldsArgs{
 					FieldToMatch: pulumi.Array{
-						pulumi.Map{
+						pulumi.StringMap{
 							"type": pulumi.String("URI"),
 						},
-						pulumi.Map{
+						pulumi.StringMap{
 							"data": pulumi.String("referer"),
 							"type": pulumi.String("HEADER"),
 						},

@@ -59,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = acmpca.NewCertificateAuthority(ctx, "example", &acmpca.CertificateAuthorityArgs{
+		_, err := acmpca.NewCertificateAuthority(ctx, "example", &acmpca.CertificateAuthorityArgs{
 			CertificateAuthorityConfiguration: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs{
 				KeyAlgorithm:     pulumi.String("RSA_4096"),
 				SigningAlgorithm: pulumi.String("SHA512WITHRSA"),
@@ -193,6 +193,12 @@ class MyStack : Stack
                     S3BucketName = exampleBucket.Id,
                 },
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_s3_bucket_policy.example",
+            },
         });
     }
 
@@ -245,7 +251,9 @@ func main() {
 					S3BucketName:     exampleBucket.ID(),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_s3_bucket_policy.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -296,7 +304,8 @@ example_certificate_authority = aws.acmpca.CertificateAuthority("exampleCertific
             "expirationInDays": 7,
             "s3_bucket_name": example_bucket.id,
         },
-    })
+    },
+    opts=ResourceOptions(depends_on=["aws_s3_bucket_policy.example"]))
 ```
 
 {{% /example %}}

@@ -12,6 +12,202 @@ meta_desc: "Explore the NotificationRule resource of the codestarnotifications m
 
 Provides a CodeStar Notifications Rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var code = new Aws.CodeCommit.Repository("code", new Aws.CodeCommit.RepositoryArgs
+        {
+            RepositoryName = "example-code-repo",
+        });
+        var notif = new Aws.Sns.Topic("notif", new Aws.Sns.TopicArgs
+        {
+        });
+        var notifAccess = notif.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sns:Publish",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "Service",
+                            Identifiers = 
+                            {
+                                "codestar-notifications.amazonaws.com",
+                            },
+                        },
+                    },
+                    Resources = 
+                    {
+                        arn,
+                    },
+                },
+            },
+        }));
+        var @default = new Aws.Sns.TopicPolicy("default", new Aws.Sns.TopicPolicyArgs
+        {
+            Arn = notif.Arn,
+            Policy = notifAccess.Apply(notifAccess => notifAccess.Json),
+        });
+        var commits = new Aws.CodeStarNotifications.NotificationRule("commits", new Aws.CodeStarNotifications.NotificationRuleArgs
+        {
+            DetailType = "BASIC",
+            EventTypeIds = 
+            {
+                "codecommit-repository-comments-on-commits",
+            },
+            Resource = code.Arn,
+            Targets = 
+            {
+                new Aws.CodeStarNotifications.Inputs.NotificationRuleTargetArgs
+                {
+                    Address = notif.Arn,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codecommit"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		code, err := codecommit.NewRepository(ctx, "code", &codecommit.RepositoryArgs{
+			RepositoryName: pulumi.String("example-code-repo"),
+		})
+		if err != nil {
+			return err
+		}
+		notif, err := sns.NewTopic(ctx, "notif", nil)
+		if err != nil {
+			return err
+		}
+		_, err = sns.NewTopicPolicy(ctx, "_default", &sns.TopicPolicyArgs{
+			Arn: notif.Arn,
+			Policy: notifAccess.ApplyT(func(notifAccess iam.GetPolicyDocumentResult) (string, error) {
+				return notifAccess.Json, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = codestarnotifications.NewNotificationRule(ctx, "commits", &codestarnotifications.NotificationRuleArgs{
+			DetailType: pulumi.String("BASIC"),
+			EventTypeIds: pulumi.StringArray{
+				pulumi.String("codecommit-repository-comments-on-commits"),
+			},
+			Resource: code.Arn,
+			Targets: codestarnotifications.NotificationRuleTargetArray{
+				&codestarnotifications.NotificationRuleTargetArgs{
+					Address: notif.Arn,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+code = aws.codecommit.Repository("code", repository_name="example-code-repo")
+notif = aws.sns.Topic("notif")
+notif_access = notif.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
+    "actions": ["sns:Publish"],
+    "principals": [{
+        "type": "Service",
+        "identifiers": ["codestar-notifications.amazonaws.com"],
+    }],
+    "resources": [arn],
+}]))
+default = aws.sns.TopicPolicy("default",
+    arn=notif.arn,
+    policy=notif_access.json)
+commits = aws.codestarnotifications.NotificationRule("commits",
+    detail_type="BASIC",
+    event_type_ids=["codecommit-repository-comments-on-commits"],
+    resource=code.arn,
+    targets=[{
+        "address": notif.arn,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const code = new aws.codecommit.Repository("code", {repositoryName: "example-code-repo"});
+const notif = new aws.sns.Topic("notif", {});
+const notifAccess = notif.arn.apply(arn => aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sns:Publish"],
+        principals: [{
+            type: "Service",
+            identifiers: ["codestar-notifications.amazonaws.com"],
+        }],
+        resources: [arn],
+    }],
+}));
+const _default = new aws.sns.TopicPolicy("default", {
+    arn: notif.arn,
+    policy: notifAccess.json,
+});
+const commits = new aws.codestarnotifications.NotificationRule("commits", {
+    detailType: "BASIC",
+    eventTypeIds: ["codecommit-repository-comments-on-commits"],
+    resource: code.arn,
+    targets: [{
+        address: notif.arn,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotificationRule Resource {#create}

@@ -11,180 +11,68 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an HTTP Method Integration for an API Gateway Integration.
-## VPC Link
+## Lambda integration
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const name = config.require("name");
-const subnetId = config.require("subnetId");
+// Variables
+const myregion = config.require("myregion");
+const accountId = config.require("accountId");
 
-const testLoadBalancer = new aws.lb.LoadBalancer("test", {
-    internal: true,
-    loadBalancerType: "network",
-    subnets: [subnetId],
+// API Gateway
+const api = new aws.apigateway.RestApi("api", {});
+const resource = new aws.apigateway.Resource("resource", {
+    parentId: api.rootResourceId,
+    pathPart: "resource",
+    restApi: api.id,
 });
-const testVpcLink = new aws.apigateway.VpcLink("test", {
-    targetArn: testLoadBalancer.arn,
-});
-const testRestApi = new aws.apigateway.RestApi("test", {});
-const testResource = new aws.apigateway.Resource("test", {
-    parentId: testRestApi.rootResourceId,
-    pathPart: "test",
-    restApi: testRestApi.id,
-});
-const testMethod = new aws.apigateway.Method("test", {
+const method = new aws.apigateway.Method("method", {
     authorization: "NONE",
     httpMethod: "GET",
-    requestModels: {
-        "application/json": "Error",
-    },
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
+    resourceId: resource.id,
+    restApi: api.id,
 });
-const testIntegration = new aws.apigateway.Integration("test", {
-    connectionId: testVpcLink.id,
-    connectionType: "VPC_LINK",
-    contentHandling: "CONVERT_TO_TEXT",
-    httpMethod: testMethod.httpMethod,
-    integrationHttpMethod: "GET",
-    passthroughBehavior: "WHEN_NO_MATCH",
-    requestParameters: {
-        "integration.request.header.X-Authorization": "'static'",
-        "integration.request.header.X-Foo": "'Bar'",
-    },
-    requestTemplates: {
-        "application/json": "",
-        "application/xml": `#set($inputRoot = $input.path('$'))
-{ }`,
-    },
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
-    type: "HTTP",
-    uri: "https://www.google.de",
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-config = pulumi.Config()
-name = config.require_object("name")
-subnet_id = config.require_object("subnetId")
-test_load_balancer = aws.lb.LoadBalancer("testLoadBalancer",
-    internal=True,
-    load_balancer_type="network",
-    subnets=[subnet_id])
-test_vpc_link = aws.apigateway.VpcLink("testVpcLink", target_arn=test_load_balancer.arn)
-test_rest_api = aws.apigateway.RestApi("testRestApi")
-test_resource = aws.apigateway.Resource("testResource",
-    parent_id=test_rest_api.root_resource_id,
-    path_part="test",
-    rest_api=test_rest_api.id)
-test_method = aws.apigateway.Method("testMethod",
-    authorization="NONE",
-    http_method="GET",
-    request_models={
-        "application/json": "Error",
-    },
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id)
-test_integration = aws.apigateway.Integration("testIntegration",
-    connection_id=test_vpc_link.id,
-    connection_type="VPC_LINK",
-    content_handling="CONVERT_TO_TEXT",
-    http_method=test_method.http_method,
-    integration_http_method="GET",
-    passthrough_behavior="WHEN_NO_MATCH",
-    request_parameters={
-        "integration.request.header.X-Authorization": "'static'",
-        "integration.request.header.X-Foo": "'Bar'",
-    },
-    request_templates={
-        "application/json": "",
-        "application/xml": """#set($inputRoot = $input.path('$'))
-{ }
-""",
-    },
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id,
-    type="HTTP",
-    uri="https://www.google.de")
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
+// IAM
+const role = new aws.iam.Role("role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
     {
-        var config = new Config();
-        var name = config.RequireObject<dynamic>("name");
-        var subnetId = config.RequireObject<dynamic>("subnetId");
-        var testLoadBalancer = new Aws.LB.LoadBalancer("testLoadBalancer", new Aws.LB.LoadBalancerArgs
-        {
-            Internal = true,
-            LoadBalancerType = "network",
-            Subnets = 
-            {
-                subnetId,
-            },
-        });
-        var testVpcLink = new Aws.ApiGateway.VpcLink("testVpcLink", new Aws.ApiGateway.VpcLinkArgs
-        {
-            TargetArn = testLoadBalancer.Arn,
-        });
-        var testRestApi = new Aws.ApiGateway.RestApi("testRestApi", new Aws.ApiGateway.RestApiArgs
-        {
-        });
-        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
-        {
-            ParentId = testRestApi.RootResourceId,
-            PathPart = "test",
-            RestApi = testRestApi.Id,
-        });
-        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
-        {
-            Authorization = "NONE",
-            HttpMethod = "GET",
-            RequestModels = 
-            {
-                { "application/json", "Error" },
-            },
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-        });
-        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
-        {
-            ConnectionId = testVpcLink.Id,
-            ConnectionType = "VPC_LINK",
-            ContentHandling = "CONVERT_TO_TEXT",
-            HttpMethod = testMethod.HttpMethod,
-            IntegrationHttpMethod = "GET",
-            PassthroughBehavior = "WHEN_NO_MATCH",
-            RequestParameters = 
-            {
-                { "integration.request.header.X-Authorization", "'static'" },
-                { "integration.request.header.X-Foo", "'Bar'" },
-            },
-            RequestTemplates = 
-            {
-                { "application/json", "" },
-                { "application/xml", @"#set($inputRoot = $input.path('$'))
-{ }
-" },
-            },
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-            Type = "HTTP",
-            Uri = "https://www.google.de",
-        });
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
     }
-
+  ]
 }
+`,
+});
+const lambda = new aws.lambda.Function("lambda", {
+    code: new pulumi.asset.FileArchive("lambda.zip"),
+    handler: "lambda.lambda_handler",
+    role: role.arn,
+    runtime: "python2.7",
+});
+const integration = new aws.apigateway.Integration("integration", {
+    httpMethod: method.httpMethod,
+    integrationHttpMethod: "POST",
+    resourceId: resource.id,
+    restApi: api.id,
+    type: "AWS_PROXY",
+    uri: lambda.invokeArn,
+});
+// Lambda
+const apigwLambda = new aws.lambda.Permission("apigw_lambda", {
+    action: "lambda:InvokeFunction",
+    function: lambda.functionName,
+    principal: "apigateway.amazonaws.com",
+    sourceArn: pulumi.interpolate`arn:aws:execute-api:${myregion}:${accountId}:${api.id}/*/${method.httpMethod}${resource.path}`,
+});
 ```
 
 {{% examples %}}
@@ -292,10 +180,10 @@ func main() {
 			},
 			CacheNamespace: pulumi.String("foobar"),
 			HttpMethod:     myDemoMethod.HttpMethod,
-			RequestParameters: pulumi.Map{
+			RequestParameters: pulumi.StringMap{
 				"integration.request.header.X-Authorization": pulumi.String("'static'"),
 			},
-			RequestTemplates: pulumi.Map{
+			RequestTemplates: pulumi.StringMap{
 				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n", "\n")),
 			},
 			ResourceId:          myDemoResource.ID(),

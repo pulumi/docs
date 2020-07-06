@@ -39,12 +39,18 @@ class MyStack : Stack
             {
                 { "Name", "tf-test-resource-share" },
             },
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.alternate",
         });
         var receiver = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
         var senderInvite = new Aws.Ram.PrincipalAssociation("senderInvite", new Aws.Ram.PrincipalAssociationArgs
         {
             Principal = receiver.Apply(receiver => receiver.AccountId),
             ResourceShareArn = senderShare.Arn,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.alternate",
         });
         var receiverAccept = new Aws.Ram.ResourceShareAccepter("receiverAccept", new Aws.Ram.ResourceShareAccepterArgs
         {
@@ -58,7 +64,55 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "alternate", &providers.awsArgs{
+			Profile: pulumi.String("profile1"),
+		})
+		if err != nil {
+			return err
+		}
+		senderShare, err := ram.NewResourceShare(ctx, "senderShare", &ram.ResourceShareArgs{
+			AllowExternalPrincipals: pulumi.Bool(true),
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("tf-test-resource-share"),
+			},
+		}, pulumi.Provider("aws.alternate"))
+		if err != nil {
+			return err
+		}
+		receiver, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		senderInvite, err := ram.NewPrincipalAssociation(ctx, "senderInvite", &ram.PrincipalAssociationArgs{
+			Principal:        pulumi.String(receiver.AccountId),
+			ResourceShareArn: senderShare.Arn,
+		}, pulumi.Provider("aws.alternate"))
+		if err != nil {
+			return err
+		}
+		_, err = ram.NewResourceShareAccepter(ctx, "receiverAccept", &ram.ResourceShareAccepterArgs{
+			ShareArn: senderInvite.ResourceShareArn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,11 +126,13 @@ sender_share = aws.ram.ResourceShare("senderShare",
     allow_external_principals=True,
     tags={
         "Name": "tf-test-resource-share",
-    })
+    },
+    opts=ResourceOptions(provider="aws.alternate"))
 receiver = aws.get_caller_identity()
 sender_invite = aws.ram.PrincipalAssociation("senderInvite",
     principal=receiver.account_id,
-    resource_share_arn=sender_share.arn)
+    resource_share_arn=sender_share.arn,
+    opts=ResourceOptions(provider="aws.alternate"))
 receiver_accept = aws.ram.ResourceShareAccepter("receiverAccept", share_arn=sender_invite.resource_share_arn)
 ```
 

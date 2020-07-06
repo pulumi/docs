@@ -16,6 +16,84 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Ignoring Changes to Desired Size
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ... other configurations ...
+        var example = new Aws.Eks.NodeGroup("example", new Aws.Eks.NodeGroupArgs
+        {
+            ScalingConfig = new Aws.Eks.Inputs.NodeGroupScalingConfigArgs
+            {
+                DesiredSize = 2,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eks.NewNodeGroup(ctx, "example", &eks.NodeGroupArgs{
+			ScalingConfig: &eks.NodeGroupScalingConfigArgs{
+				DesiredSize: pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ... other configurations ...
+example = aws.eks.NodeGroup("example", scaling_config={
+    "desiredSize": 2,
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ... other configurations ...
+const example = new aws.eks.NodeGroup("example", {scalingConfig: {
+    desiredSize: 2,
+}});
+```
+
+{{% /example %}}
+
 ### Example IAM Role for EKS Node Group
 {{% example csharp %}}
 ```csharp
@@ -105,21 +183,21 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSWorkerNodePolicy", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEKSWorkerNodePolicy", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"),
 			Role:      example.Name,
 		})
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSCNIPolicy", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEKSCNIPolicy", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"),
 			Role:      example.Name,
 		})
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEC2ContainerRegistryReadOnly", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEC2ContainerRegistryReadOnly", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"),
 			Role:      example.Name,
 		})

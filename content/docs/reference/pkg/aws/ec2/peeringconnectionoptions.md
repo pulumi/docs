@@ -216,11 +216,13 @@ accepter = pulumi.providers.Aws("accepter")
 main = aws.ec2.Vpc("main",
     cidr_block="10.0.0.0/16",
     enable_dns_hostnames=True,
-    enable_dns_support=True)
+    enable_dns_support=True,
+    opts=ResourceOptions(provider="aws.requester"))
 peer_vpc = aws.ec2.Vpc("peerVpc",
     cidr_block="10.1.0.0/16",
     enable_dns_hostnames=True,
-    enable_dns_support=True)
+    enable_dns_support=True,
+    opts=ResourceOptions(provider="aws.accepter"))
 peer_caller_identity = aws.get_caller_identity()
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
     auto_accept=False,
@@ -229,23 +231,27 @@ peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnec
     tags={
         "Side": "Requester",
     },
-    vpc_id=main.id)
+    vpc_id=main.id,
+    opts=ResourceOptions(provider="aws.requester"))
 peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter",
     auto_accept=True,
     tags={
         "Side": "Accepter",
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection.id)
+    vpc_peering_connection_id=peer_vpc_peering_connection.id,
+    opts=ResourceOptions(provider="aws.accepter"))
 requester_peering_connection_options = aws.ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions",
     requester={
         "allowRemoteVpcDnsResolution": True,
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id)
+    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
+    opts=ResourceOptions(provider="aws.requester"))
 accepter_peering_connection_options = aws.ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions",
     accepter={
         "allowRemoteVpcDnsResolution": True,
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id)
+    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
+    opts=ResourceOptions(provider="aws.accepter"))
 ```
 ```csharp
 using Pulumi;
@@ -266,12 +272,18 @@ class MyStack : Stack
             CidrBlock = "10.0.0.0/16",
             EnableDnsHostnames = true,
             EnableDnsSupport = true,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.requester",
         });
         var peerVpc = new Aws.Ec2.Vpc("peerVpc", new Aws.Ec2.VpcArgs
         {
             CidrBlock = "10.1.0.0/16",
             EnableDnsHostnames = true,
             EnableDnsSupport = true,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.accepter",
         });
         var peerCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
         var peerVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("peerVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
@@ -284,6 +296,9 @@ class MyStack : Stack
                 { "Side", "Requester" },
             },
             VpcId = main.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.requester",
         });
         var peerVpcPeeringConnectionAccepter = new Aws.Ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", new Aws.Ec2.VpcPeeringConnectionAccepterArgs
         {
@@ -293,6 +308,9 @@ class MyStack : Stack
                 { "Side", "Accepter" },
             },
             VpcPeeringConnectionId = peerVpcPeeringConnection.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.accepter",
         });
         var requesterPeeringConnectionOptions = new Aws.Ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions", new Aws.Ec2.PeeringConnectionOptionsArgs
         {
@@ -301,6 +319,9 @@ class MyStack : Stack
                 AllowRemoteVpcDnsResolution = true,
             },
             VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.requester",
         });
         var accepterPeeringConnectionOptions = new Aws.Ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions", new Aws.Ec2.PeeringConnectionOptionsArgs
         {
@@ -309,9 +330,96 @@ class MyStack : Stack
                 AllowRemoteVpcDnsResolution = true,
             },
             VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.accepter",
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "requester", nil)
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newaws(ctx, "accepter", nil)
+		if err != nil {
+			return err
+		}
+		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+			CidrBlock:          pulumi.String("10.0.0.0/16"),
+			EnableDnsHostnames: pulumi.Bool(true),
+			EnableDnsSupport:   pulumi.Bool(true),
+		}, pulumi.Provider("aws.requester"))
+		if err != nil {
+			return err
+		}
+		peerVpc, err := ec2.NewVpc(ctx, "peerVpc", &ec2.VpcArgs{
+			CidrBlock:          pulumi.String("10.1.0.0/16"),
+			EnableDnsHostnames: pulumi.Bool(true),
+			EnableDnsSupport:   pulumi.Bool(true),
+		}, pulumi.Provider("aws.accepter"))
+		if err != nil {
+			return err
+		}
+		peerCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		peerVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "peerVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+			AutoAccept:  pulumi.Bool(false),
+			PeerOwnerId: pulumi.String(peerCallerIdentity.AccountId),
+			PeerVpcId:   peerVpc.ID(),
+			Tags: pulumi.StringMap{
+				"Side": pulumi.String("Requester"),
+			},
+			VpcId: main.ID(),
+		}, pulumi.Provider("aws.requester"))
+		if err != nil {
+			return err
+		}
+		peerVpcPeeringConnectionAccepter, err := ec2.NewVpcPeeringConnectionAccepter(ctx, "peerVpcPeeringConnectionAccepter", &ec2.VpcPeeringConnectionAccepterArgs{
+			AutoAccept: pulumi.Bool(true),
+			Tags: pulumi.StringMap{
+				"Side": pulumi.String("Accepter"),
+			},
+			VpcPeeringConnectionId: peerVpcPeeringConnection.ID(),
+		}, pulumi.Provider("aws.accepter"))
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewPeeringConnectionOptions(ctx, "requesterPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			Requester: &ec2.PeeringConnectionOptionsRequesterArgs{
+				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
+			},
+			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
+		}, pulumi.Provider("aws.requester"))
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewPeeringConnectionOptions(ctx, "accepterPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			Accepter: &ec2.PeeringConnectionOptionsAccepterArgs{
+				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
+			},
+			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
+		}, pulumi.Provider("aws.accepter"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

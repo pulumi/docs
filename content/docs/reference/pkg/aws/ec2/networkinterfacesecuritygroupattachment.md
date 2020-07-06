@@ -121,7 +121,7 @@ func main() {
 		instance, err := ec2.NewInstance(ctx, "instance", &ec2.InstanceArgs{
 			Ami:          pulumi.String(ami.Id),
 			InstanceType: pulumi.String("t2.micro"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"type": pulumi.String("test-instance"),
 			},
 		})
@@ -129,7 +129,7 @@ func main() {
 			return err
 		}
 		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"type": pulumi.String("test-security-group"),
 			},
 		})

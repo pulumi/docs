@@ -33,6 +33,9 @@ class MyStack : Stack
         var memberDetector = new Aws.GuardDuty.Detector("memberDetector", new Aws.GuardDuty.DetectorArgs
         {
             Enable = true,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.dev",
         });
         var memberMember = new Aws.GuardDuty.Member("memberMember", new Aws.GuardDuty.MemberArgs
         {
@@ -68,7 +71,7 @@ func main() {
 		}
 		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", &guardduty.DetectorArgs{
 			Enable: pulumi.Bool(true),
-		})
+		}, pulumi.Provider("aws.dev"))
 		if err != nil {
 			return err
 		}
@@ -95,7 +98,8 @@ import pulumi
 import pulumi_aws as aws
 
 master = aws.guardduty.Detector("master", enable=True)
-member_detector = aws.guardduty.Detector("memberDetector", enable=True)
+member_detector = aws.guardduty.Detector("memberDetector", enable=True,
+opts=ResourceOptions(provider="aws.dev"))
 member_member = aws.guardduty.Member("memberMember",
     account_id=member_detector.account_id,
     detector_id=master.id,
@@ -113,7 +117,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const master = new aws.guardduty.Detector("master", {enable: true});
-const memberDetector = new aws.guardduty.Detector("memberDetector", {enable: true});
+const memberDetector = new aws.guardduty.Detector("memberDetector", {enable: true}, {
+    provider: "aws.dev",
+});
 const memberMember = new aws.guardduty.Member("memberMember", {
     accountId: memberDetector.accountId,
     detectorId: master.id,

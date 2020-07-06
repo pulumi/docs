@@ -70,7 +70,7 @@ func main() {
 			Ami:          pulumi.String("ami-abb07bcb"),
 			InstanceType: pulumi.String("t1.micro"),
 			SubnetId:     pulumi.String(network.Outputs.SubnetId),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld"),
 			},
 		})

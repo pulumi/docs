@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
 			GatewayIpAddress: pulumi.String("1.2.3.4"),
 			GatewayName:      pulumi.String("example"),
 			GatewayTimezone:  pulumi.String("GMT"),
@@ -99,6 +99,49 @@ const example = new aws.storagegateway.Gateway("example", {
 
 {{% /example %}}
 
+### Tape Gateway
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.storagegateway.Gateway("example",
+    gateway_ip_address="1.2.3.4",
+    gateway_name="example",
+    gateway_timezone="GMT",
+    gateway_type="VTL",
+    media_changer_type="AWS-Gateway-VTL",
+    tape_drive_type="IBM-ULT3580-TD5")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.storagegateway.Gateway("example", {
+    gatewayIpAddress: "1.2.3.4",
+    gatewayName: "example",
+    gatewayTimezone: "GMT",
+    gatewayType: "VTL",
+    mediaChangerType: "AWS-Gateway-VTL",
+    tapeDriveType: "IBM-ULT3580-TD5",
+});
+```
+
+{{% /example %}}
+
 ### Volume Gateway (Cached)
 {{% example csharp %}}
 ```csharp
@@ -134,7 +177,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
 			GatewayIpAddress: pulumi.String("1.2.3.4"),
 			GatewayName:      pulumi.String("example"),
 			GatewayTimezone:  pulumi.String("GMT"),
@@ -215,7 +258,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
 			GatewayIpAddress: pulumi.String("1.2.3.4"),
 			GatewayName:      pulumi.String("example"),
 			GatewayTimezone:  pulumi.String("GMT"),

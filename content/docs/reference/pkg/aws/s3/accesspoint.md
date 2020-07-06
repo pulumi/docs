@@ -91,6 +91,110 @@ const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket:
 
 {{% /example %}}
 
+### Access Point Restricted to a VPC
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        var exampleAccessPoint = new Aws.S3.AccessPoint("exampleAccessPoint", new Aws.S3.AccessPointArgs
+        {
+            Bucket = exampleBucket.Id,
+            VpcConfiguration = new Aws.S3.Inputs.AccessPointVpcConfigurationArgs
+            {
+                VpcId = exampleVpc.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+		if err != nil {
+			return err
+		}
+		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.0.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewAccessPoint(ctx, "exampleAccessPoint", &s3.AccessPointArgs{
+			Bucket: exampleBucket.ID(),
+			VpcConfiguration: &s3.AccessPointVpcConfigurationArgs{
+				VpcId: exampleVpc.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket")
+example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
+example_access_point = aws.s3.AccessPoint("exampleAccessPoint",
+    bucket=example_bucket.id,
+    vpc_configuration={
+        "vpc_id": example_vpc.id,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
+const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {
+    bucket: exampleBucket.id,
+    vpcConfiguration: {
+        vpcId: exampleVpc.id,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 

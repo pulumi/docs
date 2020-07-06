@@ -50,16 +50,16 @@ class MyStack : Stack
                         "SNS:DeleteTopic",
                         "SNS:AddPermission",
                     },
-                    Condition = 
+                    Conditions = 
                     {
-                        
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
-                            { "test", "StringEquals" },
-                            { "values", 
+                            Test = "StringEquals",
+                            Values = 
                             {
                                 @var.Account_id,
-                            } },
-                            { "variable", "AWS:SourceOwner" },
+                            },
+                            Variable = "AWS:SourceOwner",
                         },
                     },
                     Effect = "Allow",
@@ -110,7 +110,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+		_, err = sns.NewTopicPolicy(ctx, "_default", &sns.TopicPolicyArgs{
 			Arn: test.Arn,
 			Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
 				return snsTopicPolicy.Json, nil
@@ -145,7 +145,7 @@ sns_topic_policy = test.arn.apply(lambda arn: aws.iam.get_policy_document(policy
             "SNS:DeleteTopic",
             "SNS:AddPermission",
         ],
-        "condition": [{
+        "conditions": [{
             "test": "StringEquals",
             "values": [var["account-id"]],
             "variable": "AWS:SourceOwner",

@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ses.NewReceiptFilter(ctx, "filter", &ses.ReceiptFilterArgs{
+		_, err := ses.NewReceiptFilter(ctx, "filter", &ses.ReceiptFilterArgs{
 			Cidr:   pulumi.String("10.10.10.10"),
 			Policy: pulumi.String("Block"),
 		})

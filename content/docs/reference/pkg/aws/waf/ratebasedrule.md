@@ -51,6 +51,12 @@ class MyStack : Stack
             },
             RateKey = "IP",
             RateLimit = 100,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_waf_ipset.ipset",
+            },
         });
     }
 
@@ -92,7 +98,9 @@ func main() {
 			},
 			RateKey:   pulumi.String("IP"),
 			RateLimit: pulumi.Int(100),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_waf_ipset.ipset",
+		}))
 		if err != nil {
 			return err
 		}
@@ -120,7 +128,8 @@ wafrule = aws.waf.RateBasedRule("wafrule",
         "type": "IPMatch",
     }],
     rate_key="IP",
-    rate_limit=100)
+    rate_limit=100,
+    opts=ResourceOptions(depends_on=["aws_waf_ipset.ipset"]))
 ```
 
 {{% /example %}}

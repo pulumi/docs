@@ -49,6 +49,12 @@ class MyStack : Stack
                     Type = "IPMatch",
                 },
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_waf_ipset.ipset",
+            },
         });
     }
 
@@ -88,7 +94,9 @@ func main() {
 					Type:    pulumi.String("IPMatch"),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_waf_ipset.ipset",
+		}))
 		if err != nil {
 			return err
 		}
@@ -114,7 +122,8 @@ wafrule = aws.waf.Rule("wafrule",
         "dataId": ipset.id,
         "negated": False,
         "type": "IPMatch",
-    }])
+    }],
+    opts=ResourceOptions(depends_on=["aws_waf_ipset.ipset"]))
 ```
 
 {{% /example %}}

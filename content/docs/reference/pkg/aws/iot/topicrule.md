@@ -63,9 +63,9 @@ class MyStack : Stack
             },
             Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
             {
-                Sns = "RAW",
-                Sns = role.Arn,
-                Sns = mytopic.Arn,
+                MessageFormat = "RAW",
+                RoleArn = role.Arn,
+                TargetArn = mytopic.Arn,
             },
             Sql = "SELECT * FROM 'topic/test'",
             SqlVersion = "2016-03-23",
@@ -135,9 +135,9 @@ func main() {
 				},
 			},
 			Sns: &iot.TopicRuleSnsArgs{
-				Sns: pulumi.String("RAW"),
-				Sns: role.Arn,
-				Sns: mytopic.Arn,
+				MessageFormat: pulumi.String("RAW"),
+				RoleArn:       role.Arn,
+				TargetArn:     mytopic.Arn,
 			},
 			Sql:        pulumi.String("SELECT * FROM 'topic/test'"),
 			SqlVersion: pulumi.String("2016-03-23"),
@@ -193,9 +193,9 @@ rule = aws.iot.TopicRule("rule",
         },
     },
     sns={
-        "sns": "RAW",
-        "sns": role.arn,
-        "sns": mytopic.arn,
+        "messageFormat": "RAW",
+        "role_arn": role.arn,
+        "target_arn": mytopic.arn,
     },
     sql="SELECT * FROM 'topic/test'",
     sql_version="2016-03-23")

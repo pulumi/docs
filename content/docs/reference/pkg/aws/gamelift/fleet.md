@@ -33,12 +33,12 @@ class MyStack : Stack
             FleetType = "ON_DEMAND",
             RuntimeConfiguration = new Aws.GameLift.Inputs.FleetRuntimeConfigurationArgs
             {
-                ServerProcess = 
+                ServerProcesses = 
                 {
-                    
+                    new Aws.GameLift.Inputs.FleetRuntimeConfigurationServerProcessArgs
                     {
-                        { "concurrentExecutions", 1 },
-                        { "launchPath", "C:\\game\\GomokuServer.exe" },
+                        ConcurrentExecutions = 1,
+                        LaunchPath = "C:\\game\\GomokuServer.exe",
                     },
                 },
             },
@@ -61,15 +61,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = gamelift.NewFleet(ctx, "example", &gamelift.FleetArgs{
+		_, err := gamelift.NewFleet(ctx, "example", &gamelift.FleetArgs{
 			BuildId:         pulumi.String(aws_gamelift_build.Example.Id),
 			Ec2InstanceType: pulumi.String("t2.micro"),
 			FleetType:       pulumi.String("ON_DEMAND"),
 			RuntimeConfiguration: &gamelift.FleetRuntimeConfigurationArgs{
-				ServerProcess: pulumi.MapArray{
-					pulumi.Map{
-						"concurrentExecutions": pulumi.Float64(1),
-						"launchPath":           pulumi.String("C:\\game\\GomokuServer.exe"),
+				ServerProcesses: gamelift.FleetRuntimeConfigurationServerProcessArray{
+					&gamelift.FleetRuntimeConfigurationServerProcessArgs{
+						ConcurrentExecutions: pulumi.Int(1),
+						LaunchPath:           pulumi.String("C:\\game\\GomokuServer.exe"),
 					},
 				},
 			},
@@ -94,7 +94,7 @@ example = aws.gamelift.Fleet("example",
     ec2_instance_type="t2.micro",
     fleet_type="ON_DEMAND",
     runtime_configuration={
-        "serverProcess": [{
+        "serverProcesses": [{
             "concurrentExecutions": 1,
             "launchPath": "C:\\game\\GomokuServer.exe",
         }],

@@ -44,6 +44,9 @@ class MyStack : Stack
         var peerVpc = new Aws.Ec2.Vpc("peerVpc", new Aws.Ec2.VpcArgs
         {
             CidrBlock = "10.1.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.peer",
         });
         var peerCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
         // Requester's side of the connection.
@@ -68,6 +71,9 @@ class MyStack : Stack
                 { "Side", "Accepter" },
             },
             VpcPeeringConnectionId = peerVpcPeeringConnection.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.peer",
         });
     }
 
@@ -77,7 +83,68 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "peer", &providers.awsArgs{
+			Region: pulumi.String("us-west-2"),
+		})
+		if err != nil {
+			return err
+		}
+		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.0.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		peerVpc, err := ec2.NewVpc(ctx, "peerVpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.1.0.0/16"),
+		}, pulumi.Provider("aws.peer"))
+		if err != nil {
+			return err
+		}
+		peerCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		peerVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "peerVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+			AutoAccept:  pulumi.Bool(false),
+			PeerOwnerId: pulumi.String(peerCallerIdentity.AccountId),
+			PeerRegion:  pulumi.String("us-west-2"),
+			PeerVpcId:   peerVpc.ID(),
+			Tags: pulumi.StringMap{
+				"Side": pulumi.String("Requester"),
+			},
+			VpcId: main.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewVpcPeeringConnectionAccepter(ctx, "peerVpcPeeringConnectionAccepter", &ec2.VpcPeeringConnectionAccepterArgs{
+			AutoAccept: pulumi.Bool(true),
+			Tags: pulumi.StringMap{
+				"Side": pulumi.String("Accepter"),
+			},
+			VpcPeeringConnectionId: peerVpcPeeringConnection.ID(),
+		}, pulumi.Provider("aws.peer"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,7 +155,8 @@ import pulumi_pulumi as pulumi
 
 peer = pulumi.providers.Aws("peer", region="us-west-2")
 main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
-peer_vpc = aws.ec2.Vpc("peerVpc", cidr_block="10.1.0.0/16")
+peer_vpc = aws.ec2.Vpc("peerVpc", cidr_block="10.1.0.0/16",
+opts=ResourceOptions(provider="aws.peer"))
 peer_caller_identity = aws.get_caller_identity()
 # Requester's side of the connection.
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
@@ -106,7 +174,8 @@ peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("pee
     tags={
         "Side": "Accepter",
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection.id)
+    vpc_peering_connection_id=peer_vpc_peering_connection.id,
+    opts=ResourceOptions(provider="aws.peer"))
 ```
 
 {{% /example %}}
