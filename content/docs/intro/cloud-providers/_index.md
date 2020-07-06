@@ -26,6 +26,7 @@ aliases: ["/docs/reference/clouds/"]
 * [CloudAMQP]({{< relref "./cloudamqp" >}})
 * [Fastly]({{< relref "./fastly" >}})
 * [DigitalOcean]({{< relref "./digitalocean" >}})
+* [Hetzner Cloud]({{< relref "./hcloud" >}})
 * [Linode]({{< relref "./linode" >}})
 * [OpenStack]({{< relref "./openstack" >}})
 * [Packet.net]({{< relref "./packet" >}})
