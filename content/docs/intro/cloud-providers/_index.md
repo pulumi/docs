@@ -26,6 +26,7 @@ aliases: ["/docs/reference/clouds/"]
 * [CloudAMQP]({{< relref "./cloudamqp" >}})
 * [Fastly]({{< relref "./fastly" >}})
 * [DigitalOcean]({{< relref "./digitalocean" >}})
+* [Hetzner Cloud]({{< relref "./hcloud" >}})
 * [Linode]({{< relref "./linode" >}})
 * [OpenStack]({{< relref "./openstack" >}})
 * [Packet.net]({{< relref "./packet" >}})
@@ -64,6 +65,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Cloudflare]({{< relref "./cloudflare" >}})
 * [DNSimple]({{< relref "./dnsimple" >}})
 * [F5 BIG-IP]({{< relref "./f5bigip" >}})
+* [NS1]({{< relref "./ns1" >}})
 
 ## VCS Providers
 
