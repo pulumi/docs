@@ -17,6 +17,98 @@ For information about CEN VBR HealthCheck and how to use it, see [Manage CEN VBR
 
 > **NOTE:** Available in 1.88.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
+        {
+        });
+        var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
+        {
+            ChildInstanceId = "vbr-xxxxx",
+            ChildInstanceRegionId = "cn-hangzhou",
+            InstanceId = defaultInstance.Id,
+        });
+        var defaultVbrHealthCheck = new AliCloud.Cen.VbrHealthCheck("defaultVbrHealthCheck", new AliCloud.Cen.VbrHealthCheckArgs
+        {
+            CenId = defaultInstance.Id,
+            HealthCheckInterval = 2,
+            HealthCheckSourceIp = "192.168.1.2",
+            HealthCheckTargetIp = "10.0.0.2",
+            HealthyThreshold = 8,
+            VbrInstanceId = "vbr-xxxxx",
+            VbrInstanceRegionId = "cn-hangzhou",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_instance = alicloud.cen.Instance("defaultInstance")
+default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
+    child_instance_id="vbr-xxxxx",
+    child_instance_region_id="cn-hangzhou",
+    instance_id=default_instance.id)
+default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
+    cen_id=default_instance.id,
+    health_check_interval=2,
+    health_check_source_ip="192.168.1.2",
+    health_check_target_ip="10.0.0.2",
+    healthy_threshold=8,
+    vbr_instance_id="vbr-xxxxx",
+    vbr_instance_region_id="cn-hangzhou")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultInstance = new alicloud.cen.Instance("default", {});
+const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("default", {
+    childInstanceId: "vbr-xxxxx",
+    childInstanceRegionId: "cn-hangzhou",
+    instanceId: defaultInstance.id,
+});
+const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
+    cenId: defaultInstance.id,
+    healthCheckInterval: 2,
+    healthCheckSourceIp: "192.168.1.2",
+    healthCheckTargetIp: "10.0.0.2",
+    healthyThreshold: 8,
+    vbrInstanceId: "vbr-xxxxx",
+    vbrInstanceRegionId: "cn-hangzhou",
+}, { dependsOn: [defaultInstanceAttachment] });
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VbrHealthCheck Resource {#create}

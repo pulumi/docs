@@ -807,7 +807,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud Resource Name (ARN) for the notification object. The format of <code class="docutils literal notranslate"><span class="pre">notification_arn</span></code> is acs:ess:{region}:{account-id}:{resource-relative-id}. Valid values for <code class="docutils literal notranslate"><span class="pre">resource-relative-id</span></code>: ‘cloudmonitor’, ‘queue/’, ‘topic/’.</p></li>
+<li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud Resource Name (ARN) of the notification object, The value must be in <code class="docutils literal notranslate"><span class="pre">acs:ess:{region}:{account-id}:{resource-relative-id}</span></code> format.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* region: the region ID of the scaling group. For more information, see `Regions and zones`
+* account-id: the ID of your account.
+* resource-relative-id: the notification method. Valid values : `cloudmonitor`, MNS queue: `queue/{queuename}`, Replace the queuename with the specific MNS queue name, MNS topic: `topic/{topicname}`, Replace the topicname with the specific MNS topic name.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>notification_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The notification types of Auto Scaling events and resource changes. Supported notification types: ‘AUTOSCALING:SCALE_OUT_SUCCESS’, ‘AUTOSCALING:SCALE_IN_SUCCESS’, ‘AUTOSCALING:SCALE_OUT_ERROR’, ‘AUTOSCALING:SCALE_IN_ERROR’, ‘AUTOSCALING:SCALE_REJECT’, ‘AUTOSCALING:SCALE_OUT_START’, ‘AUTOSCALING:SCALE_IN_START’, ‘AUTOSCALING:SCHEDULE_TASK_EXPIRING’.</p></li>
 <li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Auto Scaling group.</p></li>
 </ul>
@@ -816,7 +827,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ess.Notification.notification_arn">
 <code class="sig-name descname">notification_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.Notification.notification_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Alibaba Cloud Resource Name (ARN) for the notification object. The format of <code class="docutils literal notranslate"><span class="pre">notification_arn</span></code> is acs:ess:{region}:{account-id}:{resource-relative-id}. Valid values for <code class="docutils literal notranslate"><span class="pre">resource-relative-id</span></code>: ‘cloudmonitor’, ‘queue/’, ‘topic/’.</p>
+<dd><p>The Alibaba Cloud Resource Name (ARN) of the notification object, The value must be in <code class="docutils literal notranslate"><span class="pre">acs:ess:{region}:{account-id}:{resource-relative-id}</span></code> format.</p>
+<ul class="simple">
+<li><p>region: the region ID of the scaling group. For more information, see <code class="docutils literal notranslate"><span class="pre">Regions</span> <span class="pre">and</span> <span class="pre">zones</span></code></p></li>
+<li><p>account-id: the ID of your account.</p></li>
+<li><p>resource-relative-id: the notification method. Valid values : <code class="docutils literal notranslate"><span class="pre">cloudmonitor</span></code>, MNS queue: <code class="docutils literal notranslate"><span class="pre">queue/{queuename}</span></code>, Replace the queuename with the specific MNS queue name, MNS topic: <code class="docutils literal notranslate"><span class="pre">topic/{topicname}</span></code>, Replace the topicname with the specific MNS topic name.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -842,7 +858,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud Resource Name (ARN) for the notification object. The format of <code class="docutils literal notranslate"><span class="pre">notification_arn</span></code> is acs:ess:{region}:{account-id}:{resource-relative-id}. Valid values for <code class="docutils literal notranslate"><span class="pre">resource-relative-id</span></code>: ‘cloudmonitor’, ‘queue/’, ‘topic/’.</p></li>
+<li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud Resource Name (ARN) of the notification object, The value must be in <code class="docutils literal notranslate"><span class="pre">acs:ess:{region}:{account-id}:{resource-relative-id}</span></code> format.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* region: the region ID of the scaling group. For more information, see `Regions and zones`
+* account-id: the ID of your account.
+* resource-relative-id: the notification method. Valid values : `cloudmonitor`, MNS queue: `queue/{queuename}`, Replace the queuename with the specific MNS queue name, MNS topic: `topic/{topicname}`, Replace the topicname with the specific MNS topic name.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>notification_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The notification types of Auto Scaling events and resource changes. Supported notification types: ‘AUTOSCALING:SCALE_OUT_SUCCESS’, ‘AUTOSCALING:SCALE_IN_SUCCESS’, ‘AUTOSCALING:SCALE_OUT_ERROR’, ‘AUTOSCALING:SCALE_IN_ERROR’, ‘AUTOSCALING:SCALE_REJECT’, ‘AUTOSCALING:SCALE_OUT_START’, ‘AUTOSCALING:SCALE_IN_START’, ‘AUTOSCALING:SCHEDULE_TASK_EXPIRING’.</p></li>
 <li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Auto Scaling group.</p></li>
 </ul>

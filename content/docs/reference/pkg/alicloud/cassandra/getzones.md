@@ -14,6 +14,66 @@ This data source provides availability zones for Cassandra that can be accessed 
 
 > **NOTE:** Available in v1.88.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var zonesIds = Output.Create(AliCloud.Cassandra.GetZones.InvokeAsync());
+        // Create an Cassandra cluster with the first matched zone
+        var cassandra = new AliCloud.Cassandra.Cluster("cassandra", new AliCloud.Cassandra.ClusterArgs
+        {
+            ZoneId = zonesIds.Apply(zonesIds => zonesIds.Zones[0].Id),
+        });
+        // Other properties...
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.cassandra.get_zones()
+# Create an Cassandra cluster with the first matched zone
+cassandra = alicloud.cassandra.Cluster("cassandra", zone_id=zones_ids.zones[0]["id"])
+# Other properties...
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.cassandra.getZones({});
+// Create an Cassandra cluster with the first matched zone
+const cassandra = new alicloud.cassandra.Cluster("cassandra", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
+// Other properties...
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}

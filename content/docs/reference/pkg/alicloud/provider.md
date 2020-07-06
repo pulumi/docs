@@ -1490,6 +1490,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="eci_csharp">
+<a href="#eci_csharp" style="color: inherit; text-decoration: inherit;">Eci</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_csharp">
 <a href="#ecs_csharp" style="color: inherit; text-decoration: inherit;">Ecs</a>
 </span> 
@@ -1959,6 +1969,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="drds_go">
 <a href="#drds_go" style="color: inherit; text-decoration: inherit;">Drds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eci_go">
+<a href="#eci_go" style="color: inherit; text-decoration: inherit;">Eci</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2444,6 +2464,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="eci_nodejs">
+<a href="#eci_nodejs" style="color: inherit; text-decoration: inherit;">eci</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_nodejs">
 <a href="#ecs_nodejs" style="color: inherit; text-decoration: inherit;">ecs</a>
 </span> 
@@ -2913,6 +2943,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="drds_python">
 <a href="#drds_python" style="color: inherit; text-decoration: inherit;">drds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eci_python">
+<a href="#eci_python" style="color: inherit; text-decoration: inherit;">eci</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

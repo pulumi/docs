@@ -32,6 +32,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
+    <li><a href="eci/" title="eci"><span class="symbol module"></span>eci</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
@@ -87,7 +88,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.10.0</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 
