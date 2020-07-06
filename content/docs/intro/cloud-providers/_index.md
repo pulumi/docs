@@ -64,6 +64,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Cloudflare]({{< relref "./cloudflare" >}})
 * [DNSimple]({{< relref "./dnsimple" >}})
 * [F5 BIG-IP]({{< relref "./f5bigip" >}})
+* [NS1]({{< relref "./ns1" >}})
 
 ## VCS Providers
 
