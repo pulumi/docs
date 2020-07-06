@@ -25,12 +25,12 @@ be a member of that GitLab group.
 
 There are several kinds of organization roles a user may be assigned.
 
-`**MEMBER**`
+**`MEMBER`**
 
 A member of a Pulumi organization can be added to organization [teams]({{< relref "teams" >}}), and
 depending on organization settings, may be able to create or delete stacks.
 
-`**ADMIN**`
+**`ADMIN`**
 
 Pulumi organization admins have `ADMIN` access to _all_ organization stacks,
 and can manage organization settings and team memberships.
@@ -74,6 +74,15 @@ or not organization members can delete stacks.
 
 If enabled, any organization member with `ADMIN` permission on the stack can delete
 it. Otherwise, only Pulumi  organization admins can.
+
+### Stack Transfer
+
+If enabled, organization members will be able to transfer stacks to another
+Pulumi organization.
+
+Transfering a stack to another organization requires that the user performing the action
+has both `ADMIN` permission to the stack being moved, and has the `MEMBER` or `ADMIN` _role_
+within the organization the stack is being transferred to.
 
 ## Next Steps
 
