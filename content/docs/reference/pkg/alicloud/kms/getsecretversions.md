@@ -14,6 +14,69 @@ This data source provides a list of KMS Secret Versions in an Alibaba Cloud acco
 
 > **NOTE:** Available in v1.88.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kmsSecretVersionsDs = Output.Create(AliCloud.Kms.GetSecretVersions.InvokeAsync(new AliCloud.Kms.GetSecretVersionsArgs
+        {
+            EnableDetails = true,
+            SecretName = "secret_name",
+        }));
+        this.FirstSecretData = kmsSecretVersionsDs.Apply(kmsSecretVersionsDs => kmsSecretVersionsDs.Versions[0].SecretData);
+    }
+
+    [Output("firstSecretData")]
+    public Output<string> FirstSecretData { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+kms_secret_versions_ds = alicloud.kms.get_secret_versions(enable_details=True,
+    secret_name="secret_name")
+pulumi.export("firstSecretData", kms_secret_versions_ds.versions[0]["secret_data"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const kmsSecretVersionsDs = pulumi.output(alicloud.kms.getSecretVersions({
+    enableDetails: true,
+    secretName: "secret_name",
+}, { async: true }));
+
+export const firstSecretData = kmsSecretVersionsDs.versions[0].secretData;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSecretVersions {#using}
@@ -27,7 +90,7 @@ This data source provides a list of KMS Secret Versions in an Alibaba Cloud acco
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret_versions(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>include_deprecated=None<span class="p">, </span>output_file=None<span class="p">, </span>secret_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret_versions(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>include_deprecated=None<span class="p">, </span>output_file=None<span class="p">, </span>secret_name=None<span class="p">, </span>version_stage=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,6 +169,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versionstage_csharp">
+<a href="#versionstage_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The stage of the secret version.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -166,6 +240,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versionstage_go">
+<a href="#versionstage_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The stage of the secret version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -228,6 +313,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versionstage_nodejs">
+<a href="#versionstage_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The stage of the secret version.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -288,6 +384,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_stage_python">
+<a href="#version_stage_python" style="color: inherit; text-decoration: inherit;">version_<wbr>stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The stage of the secret version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -383,6 +490,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="versionstage_csharp">
+<a href="#versionstage_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -458,6 +575,16 @@ The following output properties are available:
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="versionstage_go">
+<a href="#versionstage_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -545,6 +672,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="versionstage_nodejs">
+<a href="#versionstage_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Stage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -620,6 +757,16 @@ The following output properties are available:
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="version_stage_python">
+<a href="#version_stage_python" style="color: inherit; text-decoration: inherit;">version_<wbr>stage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

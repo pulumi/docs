@@ -217,14 +217,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.cms.SiteMonitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">SiteMonitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">isp_cities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_json</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SiteMonitor resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<dd><p>This resource provides a site monitor resource and it can be used to monitor public endpoints and websites.
+Details at <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/67907.htm">https://www.alibabacloud.com/help/doc-detail/67907.htm</a></p>
+<p>Available in 1.72.0+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL or IP address monitored by the site monitoring task.</p></li>
+<li><p><strong>alert_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of existing alert rules to be associated with the site monitoring task.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The monitoring interval of the site monitoring task. Unit: minutes. Valid values: 1, 5, and 15. Default value: 1.</p></li>
+<li><p><strong>isp_cities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The detection points in a JSON array. For example, <code class="docutils literal notranslate"><span class="pre">[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</span></code> indicates the detection points in Beijing, Hangzhou, and Qingdao respectively. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/115045.htm?spm=a2c63.p38356.b99.238.5fec36962UlFG6">DescribeSiteMonitorISPCityList</a> operation to query detection point information. If this parameter is not specified, three detection points will be chosen randomly for monitoring.</p></li>
+<li><p><strong>options_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The extended options of the protocol of the site monitoring task. The options vary according to the protocol.</p></li>
+<li><p><strong>task_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the site monitoring task. The name must be 4 to 100 characters in length. The name can contain the following types of characters: letters, digits, and underscores.</p></li>
+<li><p><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol of the site monitoring task. Currently, site monitoring supports the following protocols: HTTP, Ping, TCP, UDP, DNS, SMTP, POP3, and FTP.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>isp_cities</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">city</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.address">
+<code class="sig-name descname">address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL or IP address monitored by the site monitoring task.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.alert_ids">
+<code class="sig-name descname">alert_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.alert_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IDs of existing alert rules to be associated with the site monitoring task.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.interval">
+<code class="sig-name descname">interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>The monitoring interval of the site monitoring task. Unit: minutes. Valid values: 1, 5, and 15. Default value: 1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.isp_cities">
+<code class="sig-name descname">isp_cities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.isp_cities" title="Permalink to this definition">¶</a></dt>
+<dd><p>The detection points in a JSON array. For example, <code class="docutils literal notranslate"><span class="pre">[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</span></code> indicates the detection points in Beijing, Hangzhou, and Qingdao respectively. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/115045.htm?spm=a2c63.p38356.b99.238.5fec36962UlFG6">DescribeSiteMonitorISPCityList</a> operation to query detection point information. If this parameter is not specified, three detection points will be chosen randomly for monitoring.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">city</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.options_json">
+<code class="sig-name descname">options_json</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.options_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>The extended options of the protocol of the site monitoring task. The options vary according to the protocol.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.task_name">
+<code class="sig-name descname">task_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.task_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the site monitoring task. The name must be 4 to 100 characters in length. The name can contain the following types of characters: letters, digits, and underscores.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.SiteMonitor.task_type">
+<code class="sig-name descname">task_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.task_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protocol of the site monitoring task. Currently, site monitoring supports the following protocols: HTTP, Ping, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_alicloud.cms.SiteMonitor.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">isp_cities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_json</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.get" title="Permalink to this definition">¶</a></dt>
@@ -236,6 +297,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL or IP address monitored by the site monitoring task.</p></li>
+<li><p><strong>alert_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of existing alert rules to be associated with the site monitoring task.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The monitoring interval of the site monitoring task. Unit: minutes. Valid values: 1, 5, and 15. Default value: 1.</p></li>
+<li><p><strong>isp_cities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>The detection points in a JSON array. For example, <code class="docutils literal notranslate"><span class="pre">[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</span></code> indicates the detection points in Beijing, Hangzhou, and Qingdao respectively. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/115045.htm?spm=a2c63.p38356.b99.238.5fec36962UlFG6">DescribeSiteMonitorISPCityList</a> operation to query detection point information. If this parameter is not specified, three detection points will be chosen randomly for monitoring.</p>
+</p></li>
+<li><p><strong>options_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The extended options of the protocol of the site monitoring task. The options vary according to the protocol.</p></li>
+<li><p><strong>task_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the site monitoring task. The name must be 4 to 100 characters in length. The name can contain the following types of characters: letters, digits, and underscores.</p></li>
+<li><p><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol of the site monitoring task. Currently, site monitoring supports the following protocols: HTTP, Ping, TCP, UDP, DNS, SMTP, POP3, and FTP.</p></li>
 </ul>
 </dd>
 </dl>

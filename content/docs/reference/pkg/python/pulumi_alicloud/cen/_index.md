@@ -211,7 +211,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.</p></li>
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can’t be deleted before expired time.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the bandwidth package. Default to null.</p></li>
-<li><p><strong>geographic_region_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.</p></li>
+<li><p><strong>geographic_region_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bandwidth package. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.</p></li>
 </ul>
@@ -244,7 +244,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.cen.BandwidthPackage.geographic_region_ids">
 <code class="sig-name descname">geographic_region_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.BandwidthPackage.geographic_region_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.</p>
+<dd><p>List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -280,7 +280,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can’t be deleted before expired time.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the bandwidth package. Default to null.</p></li>
 <li><p><strong>expired_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time of the bandwidth package to expire.</p></li>
-<li><p><strong>geographic_region_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.</p></li>
+<li><p><strong>geographic_region_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bandwidth package. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the bandwidth, including “InUse” and “Idle”.</p></li>
@@ -1753,6 +1753,24 @@ After you attach a Virtual Border Router (VBR) to the CEN instance and configure
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.88.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">)</span>
+<span class="n">default_instance_attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">InstanceAttachment</span><span class="p">(</span><span class="s2">&quot;defaultInstanceAttachment&quot;</span><span class="p">,</span>
+    <span class="n">child_instance_id</span><span class="o">=</span><span class="s2">&quot;vbr-xxxxx&quot;</span><span class="p">,</span>
+    <span class="n">child_instance_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_vbr_health_check</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">VbrHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultVbrHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">cen_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">health_check_interval</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">health_check_source_ip</span><span class="o">=</span><span class="s2">&quot;192.168.1.2&quot;</span><span class="p">,</span>
+    <span class="n">health_check_target_ip</span><span class="o">=</span><span class="s2">&quot;10.0.0.2&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">vbr_instance_id</span><span class="o">=</span><span class="s2">&quot;vbr-xxxxx&quot;</span><span class="p">,</span>
+    <span class="n">vbr_instance_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

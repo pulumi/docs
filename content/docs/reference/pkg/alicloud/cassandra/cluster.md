@@ -21,6 +21,96 @@ The official website mark more regions. Or you can call [DescribeRegions](https:
 
 > **NOTE:**  Create Cassandra cluster or change cluster type and storage would cost 30 minutes. Please make full preparation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a cassandra cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.Cassandra.Cluster("default", new AliCloud.Cassandra.ClusterArgs
+        {
+            AutoRenew = false,
+            ClusterName = "cassandra-cluster-name-tf",
+            DataCenterName = "dc-1",
+            DiskSize = 160,
+            DiskType = "cloud_ssd",
+            InstanceType = "cassandra.c.large",
+            IpWhite = "127.0.0.1",
+            MaintainEndTime = "20:00Z",
+            MaintainStartTime = "18:00Z",
+            MajorVersion = "3.11",
+            NodeCount = 2,
+            PayType = "PayAsYouGo",
+            VswitchId = "vsw-xxxx",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.cassandra.Cluster("default",
+    auto_renew="false",
+    cluster_name="cassandra-cluster-name-tf",
+    data_center_name="dc-1",
+    disk_size="160",
+    disk_type="cloud_ssd",
+    instance_type="cassandra.c.large",
+    ip_white="127.0.0.1",
+    maintain_end_time="20:00Z",
+    maintain_start_time="18:00Z",
+    major_version="3.11",
+    node_count="2",
+    pay_type="PayAsYouGo",
+    vswitch_id="vsw-xxxx")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultCluster = new alicloud.cassandra.Cluster("default", {
+    autoRenew: false,
+    clusterName: "cassandra-cluster-name-tf",
+    dataCenterName: "dc-1",
+    diskSize: 160,
+    diskType: "cloud_ssd",
+    instanceType: "cassandra.c.large",
+    ipWhite: "127.0.0.1",
+    maintainEndTime: "20:00Z",
+    maintainStartTime: "18:00Z",
+    majorVersion: "3.11",
+    nodeCount: 2,
+    payType: "PayAsYouGo",
+    vswitchId: "vsw-xxxx",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

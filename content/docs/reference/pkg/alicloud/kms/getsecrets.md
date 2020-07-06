@@ -14,6 +14,82 @@ This data source provides a list of KMS Secrets in an Alibaba Cloud account acco
 
 > **NOTE:** Available in v1.86.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kmsSecretsDs = Output.Create(AliCloud.Kms.GetSecrets.InvokeAsync(new AliCloud.Kms.GetSecretsArgs
+        {
+            FetchTags = true,
+            NameRegex = "name_regex",
+            Tags = 
+            {
+                { "k-aa", "v-aa" },
+                { "k-bb", "v-bb" },
+            },
+        }));
+        this.FirstSecretId = kmsSecretsDs.Apply(kmsSecretsDs => kmsSecretsDs.Secrets[0].Id);
+    }
+
+    [Output("firstSecretId")]
+    public Output<string> FirstSecretId { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+kms_secrets_ds = alicloud.kms.get_secrets(fetch_tags=True,
+    name_regex="name_regex",
+    tags={
+        "k-aa": "v-aa",
+        "k-bb": "v-bb",
+    })
+pulumi.export("firstSecretId", kms_secrets_ds.secrets[0]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const kmsSecretsDs = pulumi.output(alicloud.kms.getSecrets({
+    fetchTags: true,
+    nameRegex: "name_regex",
+    tags: {
+        "k-aa": "v-aa",
+        "k-bb": "v-bb",
+    },
+}, { async: true }));
+
+export const firstSecretId = kmsSecretsDs.secrets[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSecrets {#using}
