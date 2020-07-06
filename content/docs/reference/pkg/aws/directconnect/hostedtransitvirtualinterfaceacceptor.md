@@ -41,11 +41,20 @@ class MyStack : Stack
             ConnectionId = "dxcon-zzzzzzzz",
             OwnerAccountId = accepterCallerIdentity.Apply(accepterCallerIdentity => accepterCallerIdentity.AccountId),
             Vlan = 4094,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_dx_gateway.example",
+            },
         });
         // Accepter's side of the VIF.
         var example = new Aws.DirectConnect.Gateway("example", new Aws.DirectConnect.GatewayArgs
         {
             AmazonSideAsn = "64512",
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.accepter",
         });
         var accepterHostedTransitVirtualInterfaceAcceptor = new Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor", new Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptorArgs
         {
@@ -55,6 +64,9 @@ class MyStack : Stack
                 { "Side", "Accepter" },
             },
             VirtualInterfaceId = creator.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.accepter",
         });
     }
 
@@ -64,7 +76,59 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "accepter", nil)
+		if err != nil {
+			return err
+		}
+		accepterCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		creator, err := directconnect.NewHostedTransitVirtualInterface(ctx, "creator", &directconnect.HostedTransitVirtualInterfaceArgs{
+			AddressFamily:  pulumi.String("ipv4"),
+			BgpAsn:         pulumi.Int(65352),
+			ConnectionId:   pulumi.String("dxcon-zzzzzzzz"),
+			OwnerAccountId: pulumi.String(accepterCallerIdentity.AccountId),
+			Vlan:           pulumi.Int(4094),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_dx_gateway.example",
+		}))
+		if err != nil {
+			return err
+		}
+		example, err := directconnect.NewGateway(ctx, "example", &directconnect.GatewayArgs{
+			AmazonSideAsn: pulumi.String("64512"),
+		}, pulumi.Provider("aws.accepter"))
+		if err != nil {
+			return err
+		}
+		_, err = directconnect.NewHostedTransitVirtualInterfaceAcceptor(ctx, "accepterHostedTransitVirtualInterfaceAcceptor", &directconnect.HostedTransitVirtualInterfaceAcceptorArgs{
+			DxGatewayId: example.ID(),
+			Tags: pulumi.StringMap{
+				"Side": pulumi.String("Accepter"),
+			},
+			VirtualInterfaceId: creator.ID(),
+		}, pulumi.Provider("aws.accepter"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,15 +145,18 @@ creator = aws.directconnect.HostedTransitVirtualInterface("creator",
     bgp_asn=65352,
     connection_id="dxcon-zzzzzzzz",
     owner_account_id=accepter_caller_identity.account_id,
-    vlan=4094)
+    vlan=4094,
+    opts=ResourceOptions(depends_on=["aws_dx_gateway.example"]))
 # Accepter's side of the VIF.
-example = aws.directconnect.Gateway("example", amazon_side_asn=64512)
+example = aws.directconnect.Gateway("example", amazon_side_asn=64512,
+opts=ResourceOptions(provider="aws.accepter"))
 accepter_hosted_transit_virtual_interface_acceptor = aws.directconnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor",
     dx_gateway_id=example.id,
     tags={
         "Side": "Accepter",
     },
-    virtual_interface_id=creator.id)
+    virtual_interface_id=creator.id,
+    opts=ResourceOptions(provider="aws.accepter"))
 ```
 
 {{% /example %}}

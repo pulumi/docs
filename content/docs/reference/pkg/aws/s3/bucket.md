@@ -53,9 +53,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("Dev"),
 				"Name":        pulumi.String("My bucket"),
 			},
@@ -96,6 +96,102 @@ const bucket = new aws.s3.Bucket("b", {
     tags: {
         Environment: "Dev",
         Name: "My bucket",
+    },
+});
+```
+
+{{% /example %}}
+
+### Static Website Hosting
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",
+            Policy = File.ReadAllText("policy.json"),
+            Website = new Aws.S3.Inputs.BucketWebsiteArgs
+            {
+                ErrorDocument = "error.html",
+                IndexDocument = "index.html",
+                RoutingRules = @"[{
+    ""Condition"": {
+        ""KeyPrefixEquals"": ""docs/""
+    },
+    ""Redirect"": {
+        ""ReplaceKeyPrefixWith"": ""documents/""
+    }
+}]
+
+",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket",
+    acl="public-read",
+    policy=(lambda path: open(path).read())("policy.json"),
+    website={
+        "errorDocument": "error.html",
+        "indexDocument": "index.html",
+        "routingRules": """[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+
+""",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const bucket = new aws.s3.Bucket("b", {
+    acl: "public-read",
+    policy: fs.readFileSync("policy.json", "utf-8"),
+    website: {
+        errorDocument: "error.html",
+        indexDocument: "index.html",
+        routingRules: `[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+`,
     },
 });
 ```
@@ -158,7 +254,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("public-read"),
 			CorsRules: s3.BucketCorsRuleArray{
 				&s3.BucketCorsRuleArgs{
@@ -269,7 +365,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
 			Versioning: &s3.BucketVersioningArgs{
 				Enabled: pulumi.Bool(true),
@@ -449,17 +545,17 @@ class MyStack : Stack
                         { "autoclean", "true" },
                         { "rule", "log" },
                     },
-                    Transition = 
+                    Transitions = 
                     {
-                        
+                        new Aws.S3.Inputs.BucketLifecycleRuleTransitionArgs
                         {
-                            { "days", 30 },
-                            { "storageClass", "STANDARD_IA" },
+                            Days = 30,
+                            StorageClass = "STANDARD_IA",
                         },
-                        
+                        new Aws.S3.Inputs.BucketLifecycleRuleTransitionArgs
                         {
-                            { "days", 60 },
-                            { "storageClass", "GLACIER" },
+                            Days = 60,
+                            StorageClass = "GLACIER",
                         },
                     },
                 },
@@ -487,17 +583,17 @@ class MyStack : Stack
                     {
                         Days = 90,
                     },
-                    NoncurrentVersionTransition = 
+                    NoncurrentVersionTransitions = 
                     {
-                        
+                        new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs
                         {
-                            { "days", 30 },
-                            { "storageClass", "STANDARD_IA" },
+                            Days = 30,
+                            StorageClass = "STANDARD_IA",
                         },
-                        
+                        new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs
                         {
-                            { "days", 60 },
-                            { "storageClass", "GLACIER" },
+                            Days = 60,
+                            StorageClass = "GLACIER",
                         },
                     },
                     Prefix = "config/",
@@ -526,7 +622,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
 			LifecycleRules: s3.BucketLifecycleRuleArray{
 				&s3.BucketLifecycleRuleArgs{
@@ -536,18 +632,18 @@ func main() {
 					},
 					Id:     pulumi.String("log"),
 					Prefix: pulumi.String("log/"),
-					Tags: pulumi.Map{
+					Tags: pulumi.StringMap{
 						"autoclean": pulumi.String("true"),
 						"rule":      pulumi.String("log"),
 					},
-					Transition: pulumi.MapArray{
-						pulumi.Map{
-							"days":         pulumi.Float64(30),
-							"storageClass": pulumi.String("STANDARD_IA"),
+					Transitions: s3.BucketLifecycleRuleTransitionArray{
+						&s3.BucketLifecycleRuleTransitionArgs{
+							Days:         pulumi.Int(30),
+							StorageClass: pulumi.String("STANDARD_IA"),
 						},
-						pulumi.Map{
-							"days":         pulumi.Float64(60),
-							"storageClass": pulumi.String("GLACIER"),
+						&s3.BucketLifecycleRuleTransitionArgs{
+							Days:         pulumi.Int(60),
+							StorageClass: pulumi.String("GLACIER"),
 						},
 					},
 				},
@@ -572,14 +668,14 @@ func main() {
 					NoncurrentVersionExpiration: &s3.BucketLifecycleRuleNoncurrentVersionExpirationArgs{
 						Days: pulumi.Int(90),
 					},
-					NoncurrentVersionTransition: pulumi.MapArray{
-						pulumi.Map{
-							"days":         pulumi.Float64(30),
-							"storageClass": pulumi.String("STANDARD_IA"),
+					NoncurrentVersionTransitions: s3.BucketLifecycleRuleNoncurrentVersionTransitionArray{
+						&s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs{
+							Days:         pulumi.Int(30),
+							StorageClass: pulumi.String("STANDARD_IA"),
 						},
-						pulumi.Map{
-							"days":         pulumi.Float64(60),
-							"storageClass": pulumi.String("GLACIER"),
+						&s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs{
+							Days:         pulumi.Int(60),
+							StorageClass: pulumi.String("GLACIER"),
 						},
 					},
 					Prefix: pulumi.String("config/"),
@@ -618,7 +714,7 @@ bucket = aws.s3.Bucket("bucket",
                 "autoclean": "true",
                 "rule": "log",
             },
-            "transition": [
+            "transitions": [
                 {
                     "days": 30,
                     "storage_class": "STANDARD_IA",
@@ -645,7 +741,7 @@ versioning_bucket = aws.s3.Bucket("versioningBucket",
         "noncurrentVersionExpiration": {
             "days": 90,
         },
-        "noncurrentVersionTransition": [
+        "noncurrentVersionTransitions": [
             {
                 "days": 30,
                 "storage_class": "STANDARD_IA",
@@ -798,6 +894,9 @@ class MyStack : Stack
             {
                 Enabled = true,
             },
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.central",
         });
         var replicationPolicy = new Aws.Iam.Policy("replicationPolicy", new Aws.Iam.PolicyArgs
         {
@@ -856,7 +955,88 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "central", &providers.awsArgs{
+			Region: pulumi.String("eu-central-1"),
+		})
+		if err != nil {
+			return err
+		}
+		replicationRole, err := iam.NewRole(ctx, "replicationRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"s3.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		destination, err := s3.NewBucket(ctx, "destination", &s3.BucketArgs{
+			Region: pulumi.String("eu-west-1"),
+			Versioning: &s3.BucketVersioningArgs{
+				Enabled: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+			Acl:    pulumi.String("private"),
+			Region: pulumi.String("eu-central-1"),
+			ReplicationConfiguration: &s3.BucketReplicationConfigurationArgs{
+				Role: replicationRole.Arn,
+				Rules: s3.BucketReplicationConfigurationRuleArray{
+					&s3.BucketReplicationConfigurationRuleArgs{
+						Destination: &s3.BucketReplicationConfigurationRuleDestinationArgs{
+							Bucket:       destination.Arn,
+							StorageClass: pulumi.String("STANDARD"),
+						},
+						Id:     pulumi.String("foobar"),
+						Prefix: pulumi.String("foo"),
+						Status: pulumi.String("Enabled"),
+					},
+				},
+			},
+			Versioning: &s3.BucketVersioningArgs{
+				Enabled: pulumi.Bool(true),
+			},
+		}, pulumi.Provider("aws.central"))
+		if err != nil {
+			return err
+		}
+		replicationPolicy, err := iam.NewPolicy(ctx, "replicationPolicy", &iam.PolicyArgs{
+			Policy: pulumi.All(bucket.Arn, bucket.Arn, destination.Arn).ApplyT(func(_args []interface{}) (string, error) {
+				bucketArn := _args[0].(string)
+				bucketArn1 := _args[1].(string)
+				destinationArn := _args[2].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetReplicationConfiguration\",\n", "        \"s3:ListBucket\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn, "\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetObjectVersion\",\n", "        \"s3:GetObjectVersionAcl\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:ReplicateObject\",\n", "        \"s3:ReplicateDelete\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"", destinationArn, "/*\"\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "replicationRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: replicationPolicy.Arn,
+			Role:      replicationRole.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -903,7 +1083,8 @@ bucket = aws.s3.Bucket("bucket",
     },
     versioning={
         "enabled": True,
-    })
+    },
+    opts=ResourceOptions(provider="aws.central"))
 replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(bucket.arn, bucket.arn, destination.arn).apply(lambda bucketArn, bucketArn1, destinationArn: f"""{{
   "Version": "2012-10-17",
   "Statement": [

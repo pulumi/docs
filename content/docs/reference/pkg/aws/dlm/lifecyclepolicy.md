@@ -82,26 +82,26 @@ class MyStack : Stack
                 {
                     "VOLUME",
                 },
-                Schedule = 
+                Schedules = 
                 {
-                    
+                    new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs
                     {
-                        { "copyTags", false },
-                        { "createRule", 
+                        CopyTags = false,
+                        CreateRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs
                         {
-                            { "interval", 24 },
-                            { "intervalUnit", "HOURS" },
-                            { "times", "23:45" },
-                        } },
-                        { "name", "2 weeks of daily snapshots" },
-                        { "retainRule", 
+                            Interval = 24,
+                            IntervalUnit = "HOURS",
+                            Times = "23:45",
+                        },
+                        Name = "2 weeks of daily snapshots",
+                        RetainRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs
                         {
-                            { "count", 14 },
-                        } },
-                        { "tagsToAdd", 
+                            Count = 14,
+                        },
+                        TagsToAdd = 
                         {
                             { "SnapshotCreator", "DLM" },
-                        } },
+                        },
                     },
                 },
                 TargetTags = 
@@ -152,24 +152,24 @@ func main() {
 				ResourceTypes: pulumi.StringArray{
 					pulumi.String("VOLUME"),
 				},
-				Schedule: pulumi.MapArray{
-					pulumi.Map{
-						"copyTags": pulumi.Bool(false),
-						"createRule": pulumi.Map{
-							"interval":     pulumi.Float64(24),
-							"intervalUnit": pulumi.String("HOURS"),
-							"times":        pulumi.String("23:45"),
+				Schedules: dlm.LifecyclePolicyPolicyDetailsScheduleArray{
+					&dlm.LifecyclePolicyPolicyDetailsScheduleArgs{
+						CopyTags: pulumi.Bool(false),
+						CreateRule: &dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs{
+							Interval:     pulumi.Int(24),
+							IntervalUnit: pulumi.String("HOURS"),
+							Times:        pulumi.String("23:45"),
 						},
-						"name": pulumi.String("2 weeks of daily snapshots"),
-						"retainRule": pulumi.Map{
-							"count": pulumi.Float64(14),
+						Name: pulumi.String("2 weeks of daily snapshots"),
+						RetainRule: &dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs{
+							Count: pulumi.Int(14),
 						},
-						"tagsToAdd": pulumi.Map{
+						TagsToAdd: pulumi.StringMap{
 							"SnapshotCreator": pulumi.String("DLM"),
 						},
 					},
 				},
-				TargetTags: pulumi.Map{
+				TargetTags: pulumi.StringMap{
 					"Snapshot": pulumi.String("true"),
 				},
 			},
@@ -236,7 +236,7 @@ example = aws.dlm.LifecyclePolicy("example",
     execution_role_arn=dlm_lifecycle_role.arn,
     policy_details={
         "resourceTypes": ["VOLUME"],
-        "schedule": [{
+        "schedules": [{
             "copyTags": False,
             "createRule": {
                 "interval": 24,

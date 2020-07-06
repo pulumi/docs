@@ -30,12 +30,12 @@ class MyStack : Stack
         {
             ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
             {
-                ClusterConfig = "r4.large.elasticsearch",
+                InstanceType = "r4.large.elasticsearch",
             },
             ElasticsearchVersion = "1.5",
             SnapshotOptions = new Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs
             {
-                SnapshotOptions = 23,
+                AutomatedSnapshotStartHour = 23,
             },
             Tags = 
             {
@@ -60,15 +60,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+		_, err := elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
 			ClusterConfig: &elasticsearch.DomainClusterConfigArgs{
-				ClusterConfig: pulumi.String("r4.large.elasticsearch"),
+				InstanceType: pulumi.String("r4.large.elasticsearch"),
 			},
 			ElasticsearchVersion: pulumi.String("1.5"),
 			SnapshotOptions: &elasticsearch.DomainSnapshotOptionsArgs{
-				SnapshotOptions: pulumi.Float64(23),
+				AutomatedSnapshotStartHour: pulumi.Int(23),
 			},
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Domain": pulumi.String("TestDomain"),
 			},
 		})
@@ -89,11 +89,11 @@ import pulumi_aws as aws
 
 example = aws.elasticsearch.Domain("example",
     cluster_config={
-        "cluster_config": "r4.large.elasticsearch",
+        "instance_type": "r4.large.elasticsearch",
     },
     elasticsearch_version="1.5",
     snapshot_options={
-        "snapshot_options": 23,
+        "automatedSnapshotStartHour": 23,
     },
     tags={
         "Domain": "TestDomain",
@@ -437,260 +437,6 @@ const exampleDomain = new aws.elasticsearch.Domain("example", {
 
 {{% /example %}}
 
-### VPC based ES
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var vpc = config.RequireObject<dynamic>("vpc");
-        var domain = config.Get("domain") ?? "tf-test";
-        var selectedVpc = Output.Create(Aws.Ec2.GetVpc.InvokeAsync(new Aws.Ec2.GetVpcArgs
-        {
-            Tags = 
-            {
-                { "Name", vpc },
-            },
-        }));
-        var selectedSubnetIds = selectedVpc.Apply(selectedVpc => Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
-        {
-            Tags = 
-            {
-                { "Tier", "private" },
-            },
-            VpcId = selectedVpc.Id,
-        })));
-        var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
-        var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        var esSecurityGroup = new Aws.Ec2.SecurityGroup("esSecurityGroup", new Aws.Ec2.SecurityGroupArgs
-        {
-            Description = "Managed by Pulumi",
-            Ingress = 
-            {
-                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
-                {
-                    CidrBlocks = 
-                    {
-                        selectedVpc.Apply(selectedVpc => selectedVpc.CidrBlock),
-                    },
-                    FromPort = 443,
-                    Protocol = "tcp",
-                    ToPort = 443,
-                },
-            },
-            VpcId = selectedVpc.Apply(selectedVpc => selectedVpc.Id),
-        });
-        var esServiceLinkedRole = new Aws.Iam.ServiceLinkedRole("esServiceLinkedRole", new Aws.Iam.ServiceLinkedRoleArgs
-        {
-            AwsServiceName = "es.amazonaws.com",
-        });
-        var esDomain = new Aws.ElasticSearch.Domain("esDomain", new Aws.ElasticSearch.DomainArgs
-        {
-            AccessPolicies = Output.Tuple(currentRegion, currentCallerIdentity).Apply(values =>
-            {
-                var currentRegion = values.Item1;
-                var currentCallerIdentity = values.Item2;
-                return @$"{{
-	""Version"": ""2012-10-17"",
-	""Statement"": [
-		{{
-			""Action"": ""es:*"",
-			""Principal"": ""*"",
-			""Effect"": ""Allow"",
-			""Resource"": ""arn:aws:es:{currentRegion.Name}:{currentCallerIdentity.AccountId}:domain/{domain}/*""
-		}}
-	]
-}}
-
-";
-            }),
-            AdvancedOptions = 
-            {
-                { "rest.action.multi.allow_explicit_index", "true" },
-            },
-            ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
-            {
-                ClusterConfig = "m4.large.elasticsearch",
-            },
-            ElasticsearchVersion = "6.3",
-            SnapshotOptions = new Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs
-            {
-                SnapshotOptions = 23,
-            },
-            Tags = 
-            {
-                { "Domain", "TestDomain" },
-            },
-            VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
-            {
-                SecurityGroupIds = 
-                {
-                    esSecurityGroup.Id,
-                },
-                SubnetIds = 
-                {
-                    selectedSubnetIds.Apply(selectedSubnetIds => selectedSubnetIds.Ids[0]),
-                    selectedSubnetIds.Apply(selectedSubnetIds => selectedSubnetIds.Ids[1]),
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-config = pulumi.Config()
-vpc = config.require_object("vpc")
-domain = config.get("domain")
-if domain is None:
-    domain = "tf-test"
-selected_vpc = aws.ec2.get_vpc(tags={
-    "Name": vpc,
-})
-selected_subnet_ids = aws.ec2.get_subnet_ids(tags={
-        "Tier": "private",
-    },
-    vpc_id=selected_vpc.id)
-current_region = aws.get_region()
-current_caller_identity = aws.get_caller_identity()
-es_security_group = aws.ec2.SecurityGroup("esSecurityGroup",
-    description="Managed by Pulumi",
-    ingress=[{
-        "cidr_blocks": [selected_vpc.cidr_block],
-        "from_port": 443,
-        "protocol": "tcp",
-        "to_port": 443,
-    }],
-    vpc_id=selected_vpc.id)
-es_service_linked_role = aws.iam.ServiceLinkedRole("esServiceLinkedRole", aws_service_name="es.amazonaws.com")
-es_domain = aws.elasticsearch.Domain("esDomain",
-    access_policies=f"""{{
-	"Version": "2012-10-17",
-	"Statement": [
-		{{
-			"Action": "es:*",
-			"Principal": "*",
-			"Effect": "Allow",
-			"Resource": "arn:aws:es:{current_region.name}:{current_caller_identity.account_id}:domain/{domain}/*"
-		}}
-	]
-}}
-
-""",
-    advanced_options={
-        "rest.action.multi.allow_explicit_index": "true",
-    },
-    cluster_config={
-        "cluster_config": "m4.large.elasticsearch",
-    },
-    elasticsearch_version="6.3",
-    snapshot_options={
-        "snapshot_options": 23,
-    },
-    tags={
-        "Domain": "TestDomain",
-    },
-    vpc_options={
-        "security_group_ids": [es_security_group.id],
-        "subnet_ids": [
-            selected_subnet_ids.ids[0],
-            selected_subnet_ids.ids[1],
-        ],
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const vpc = config.require("vpc");
-const domain = config.get("domain") || "tf-test";
-
-const selectedVpc = pulumi.output(aws.ec2.getVpc({
-    tags: {
-        Name: vpc,
-    },
-}, { async: true }));
-const selectedSubnetIds = selectedVpc.apply(selectedVpc => aws.ec2.getSubnetIds({
-    tags: {
-        Tier: "private",
-    },
-    vpcId: selectedVpc.id!,
-}, { async: true }));
-const currentRegion = pulumi.output(aws.getRegion({ async: true }));
-const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
-const esSecurityGroup = new aws.ec2.SecurityGroup("es", {
-    description: "Managed by Pulumi",
-    ingress: [{
-        cidrBlocks: [selectedVpc.cidrBlock!],
-        fromPort: 443,
-        protocol: "tcp",
-        toPort: 443,
-    }],
-    vpcId: selectedVpc.id!,
-});
-const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("es", {
-    awsServiceName: "es.amazonaws.com",
-});
-const esDomain = new aws.elasticsearch.Domain("es", {
-    accessPolicies: pulumi.interpolate`{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Action": "es:*",
-			"Principal": "*",
-			"Effect": "Allow",
-			"Resource": "arn:aws:es:${currentRegion.name!}:${currentCallerIdentity.accountId}:domain/${domain}/*"
-		}
-	]
-}
-`,
-    advancedOptions: {
-        "rest.action.multi.allow_explicit_index": "true",
-    },
-    clusterConfig: {
-        instanceType: "m4.large.elasticsearch",
-    },
-    elasticsearchVersion: "6.3",
-    snapshotOptions: {
-        automatedSnapshotStartHour: 23,
-    },
-    tags: {
-        Domain: "TestDomain",
-    },
-    vpcOptions: {
-        securityGroupIds: [esSecurityGroup.id],
-        subnetIds: [
-            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[0]),
-            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[1]),
-        ],
-    },
-}, { dependsOn: [esServiceLinkedRole] });
-```
-
-{{% /example %}}
-
 {{% /examples %}}
 
 
@@ -703,7 +449,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>advanced_security_options=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -902,6 +648,17 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedsecurityoptions_csharp">
+<a href="#advancedsecurityoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clusterconfig_csharp">
 <a href="#clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span> 
@@ -1061,6 +818,17 @@ domain on every apply.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
 domain on every apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedsecurityoptions_go">
+<a href="#advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1228,6 +996,17 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedsecurityoptions_nodejs">
+<a href="#advancedsecurityoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clusterconfig_nodejs">
 <a href="#clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
 </span> 
@@ -1387,6 +1166,17 @@ domain on every apply.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
 domain on every apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advanced_security_options_python">
+<a href="#advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1802,7 +1592,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>arn=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>endpoint=None<span class="p">, </span>kibana_endpoint=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>advanced_security_options=None<span class="p">, </span>arn=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>endpoint=None<span class="p">, </span>kibana_endpoint=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1939,6 +1729,17 @@ The following state arguments are supported:
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
 domain on every apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedsecurityoptions_csharp">
+<a href="#state_advancedsecurityoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2152,6 +1953,17 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advancedsecurityoptions_go">
+<a href="#state_advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span> 
@@ -2357,6 +2169,17 @@ domain on every apply.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
 domain on every apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedsecurityoptions_nodejs">
+<a href="#state_advancedsecurityoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2570,6 +2393,17 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advanced_security_options_python">
+<a href="#state_advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span> 
@@ -2758,6 +2592,362 @@ domain on every apply.
 
 
 ## Supporting Types
+
+
+<h4 id="domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainAdvancedSecurityOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainAdvancedSecurityOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainAdvancedSecurityOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainAdvancedSecurityOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainAdvancedSecurityOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainAdvancedSecurityOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internaluserdatabaseenabled_csharp">
+<a href="#internaluserdatabaseenabled_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruseroptions_csharp">
+<a href="#masteruseroptions_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internaluserdatabaseenabled_go">
+<a href="#internaluserdatabaseenabled_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruseroptions_go">
+<a href="#masteruseroptions_go" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internaluserdatabaseenabled_nodejs">
+<a href="#internaluserdatabaseenabled_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruseroptions_nodejs">
+<a href="#masteruseroptions_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internaluserdatabaseenabled_python">
+<a href="#internaluserdatabaseenabled_python" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruseroptions_python">
+<a href="#masteruseroptions_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainAdvancedSecurityOptionsMasterUserOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainAdvancedSecurityOptionsMasterUserOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainAdvancedSecurityOptionsMasterUserOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainAdvancedSecurityOptionsMasterUserOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainAdvancedSecurityOptionsMasterUserOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainAdvancedSecurityOptionsMasterUserOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserarn_csharp">
+<a href="#masteruserarn_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masterusername_csharp">
+<a href="#masterusername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserpassword_csharp">
+<a href="#masteruserpassword_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserarn_go">
+<a href="#masteruserarn_go" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masterusername_go">
+<a href="#masterusername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserpassword_go">
+<a href="#masteruserpassword_go" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserarn_nodejs">
+<a href="#masteruserarn_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masterusername_nodejs">
+<a href="#masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserpassword_nodejs">
+<a href="#masteruserpassword_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserarn_python">
+<a href="#masteruserarn_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masterusername_python">
+<a href="#masterusername_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteruserpassword_python">
+<a href="#masteruserpassword_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="domainclusterconfig">Domain<wbr>Cluster<wbr>Config</h4>

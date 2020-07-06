@@ -72,7 +72,7 @@ example_policy_document = aws.iam.get_policy_document(statements=[
     },
     {
         "actions": ["s3:ListBucket"],
-        "condition": [{
+        "conditions": [{
             "test": "StringLike",
             "values": [
                 "",
@@ -126,18 +126,18 @@ class MyStack : Stack
                     {
                         "s3:ListBucket",
                     },
-                    Condition = 
+                    Conditions = 
                     {
-                        
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
-                            { "test", "StringLike" },
-                            { "values", 
+                            Test = "StringLike",
+                            Values = 
                             {
                                 "",
                                 "home/",
                                 "home/&{aws:username}/",
-                            } },
-                            { "variable", "s3:prefix" },
+                            },
+                            Variable = "s3:prefix",
                         },
                     },
                     Resources = 
@@ -168,6 +168,74 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
+					Actions: []string{
+						"s3:ListAllMyBuckets",
+						"s3:GetBucketLocation",
+					},
+					Resources: []string{
+						"arn:aws:s3:::*",
+					},
+					Sid: "1",
+				},
+				iam.GetPolicyDocumentStatement{
+					Actions: []string{
+						"s3:ListBucket",
+					},
+					Conditions: []iam.GetPolicyDocumentStatementCondition{
+						iam.GetPolicyDocumentStatementCondition{
+							Test: "StringLike",
+							Values: []string{
+								"",
+								"home/",
+								"home/&{aws:username}/",
+							},
+							Variable: "s3:prefix",
+						},
+					},
+					Resources: []string{
+						fmt.Sprintf("%v%v", "arn:aws:s3:::", _var.S3_bucket_name),
+					},
+				},
+				iam.GetPolicyDocumentStatement{
+					Actions: []string{
+						"s3:*",
+					},
+					Resources: []string{
+						fmt.Sprintf("%v%v%v", "arn:aws:s3:::", _var.S3_bucket_name, "/home/&{aws:username}"),
+						fmt.Sprintf("%v%v%v", "arn:aws:s3:::", _var.S3_bucket_name, "/home/&{aws:username}/*"),
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewPolicy(ctx, "examplePolicy", &iam.PolicyArgs{
+			Path:   pulumi.String("/"),
+			Policy: pulumi.String(examplePolicyDocument.Json),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 Using this data source to generate policy documents is *optional*. It is also
 valid to use literal JSON strings within your configuration, or to use the
@@ -190,116 +258,6 @@ states that `"Principal": "*"` and `"Principal": {"AWS": "*"}` are equivalent,
 those principals have different behavior for IAM Role Trust Policy. Therefore
 this provider will normalize the principal field only in above-mentioned case and principals
 like `type = "AWS"` and `identifiers = ["*"]` will be rendered as `"Principal": {"AWS": "*"}`.
-
-## Example with Multiple Principals
-
-Showing how you can use this as an assume role policy as well as showing how you can specify multiple principal blocks with different types.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["sts:AssumeRole"],
-        principals: [
-            {
-                identifiers: ["firehose.amazonaws.com"],
-                type: "Service",
-            },
-            {
-                identifiers: [var_trusted_role_arn],
-                type: "AWS",
-            },
-            {
-                identifiers: [
-                    `arn:aws:iam::${var_account_id}:saml-provider/${var_provider_name}`,
-                    "cognito-identity.amazonaws.com",
-                ],
-                type: "Federated",
-            },
-        ],
-    }],
-}, { async: true }));
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-event_stream_bucket_role_assume_role_policy = aws.iam.get_policy_document(statements=[{
-    "actions": ["sts:AssumeRole"],
-    "principals": [
-        {
-            "identifiers": ["firehose.amazonaws.com"],
-            "type": "Service",
-        },
-        {
-            "identifiers": [var["trusted_role_arn"]],
-            "type": "AWS",
-        },
-        {
-            "identifiers": [
-                f"arn:aws:iam::{var['account_id']}:saml-provider/{var['provider_name']}",
-                "cognito-identity.amazonaws.com",
-            ],
-            "type": "Federated",
-        },
-    ],
-}])
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventStreamBucketRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
-        {
-            Statements = 
-            {
-                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
-                {
-                    Actions = 
-                    {
-                        "sts:AssumeRole",
-                    },
-                    Principals = 
-                    {
-                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                        {
-                            Identifiers = 
-                            {
-                                "firehose.amazonaws.com",
-                            },
-                            Type = "Service",
-                        },
-                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                        {
-                            Identifiers = 
-                            {
-                                @var.Trusted_role_arn,
-                            },
-                            Type = "AWS",
-                        },
-                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                        {
-                            Identifiers = 
-                            {
-                                $"arn:aws:iam::{@var.Account_id}:saml-provider/{@var.Provider_name}",
-                                "cognito-identity.amazonaws.com",
-                            },
-                            Type = "Federated",
-                        },
-                    },
-                },
-            },
-        }));
-    }
-
-}
-```
 
 ## Example with Source and Override
 
@@ -548,7 +506,7 @@ func main() {
 			return err
 		}
 		opt0 := source.Json
-		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+		_, err = iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			SourceJson: &opt0,
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
@@ -583,7 +541,7 @@ func main() {
 			return err
 		}
 		opt1 := override.Json
-		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+		_, err = iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			OverrideJson: &opt1,
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
@@ -828,7 +786,7 @@ func main() {
 		}
 		opt0 := override.Json
 		opt1 := source.Json
-		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+		_, err = iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			OverrideJson: &opt0,
 			SourceJson:   &opt1,
 		}, nil)

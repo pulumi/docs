@@ -2,7 +2,7 @@
 ---
 title: "GetNetworkAcls"
 title_tag: "Function GetNetworkAcls | Module ec2 | Package AWS"
-meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,65 +11,6 @@ meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleNetworkAcls = Output.Create(Aws.Ec2.GetNetworkAcls.InvokeAsync(new Aws.Ec2.GetNetworkAclsArgs
-        {
-            VpcId = @var.Vpc_id,
-        }));
-        this.Example = exampleNetworkAcls.Apply(exampleNetworkAcls => exampleNetworkAcls.Ids);
-    }
-
-    [Output("example")]
-    public Output<string> Example { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_network_acls = aws.ec2.get_network_acls(vpc_id=var["vpc_id"])
-pulumi.export("example", example_network_acls.ids)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleNetworkAcls = pulumi.output(aws.ec2.getNetworkAcls({
-    vpcId: var_vpc_id,
-}, { async: true }));
-
-export const example = exampleNetworkAcls.ids;
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNetworkAcls {#using}

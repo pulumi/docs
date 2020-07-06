@@ -91,14 +91,14 @@ class MyStack : Stack
                 {
                     AmbiguousRoleResolution = "AuthenticatedRole",
                     IdentityProvider = "graph.facebook.com",
-                    MappingRule = 
+                    MappingRules = 
                     {
-                        
+                        new Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs
                         {
-                            { "claim", "isAdmin" },
-                            { "matchType", "Equals" },
-                            { "roleArn", authenticatedRole.Arn },
-                            { "value", "paid" },
+                            Claim = "isAdmin",
+                            MatchType = "Equals",
+                            RoleArn = authenticatedRole.Arn,
+                            Value = "paid",
                         },
                     },
                     Type = "Rules",
@@ -133,7 +133,7 @@ func main() {
 		mainIdentityPool, err := cognito.NewIdentityPool(ctx, "mainIdentityPool", &cognito.IdentityPoolArgs{
 			AllowUnauthenticatedIdentities: pulumi.Bool(false),
 			IdentityPoolName:               pulumi.String("identity pool"),
-			SupportedLoginProviders: pulumi.Map{
+			SupportedLoginProviders: pulumi.StringMap{
 				"graph.facebook.com": pulumi.String("7346241598935555"),
 			},
 		})
@@ -161,18 +161,18 @@ func main() {
 				&cognito.IdentityPoolRoleAttachmentRoleMappingArgs{
 					AmbiguousRoleResolution: pulumi.String("AuthenticatedRole"),
 					IdentityProvider:        pulumi.String("graph.facebook.com"),
-					MappingRule: pulumi.MapArray{
-						pulumi.Map{
-							"claim":     pulumi.String("isAdmin"),
-							"matchType": pulumi.String("Equals"),
-							"roleArn":   authenticatedRole.Arn,
-							"value":     pulumi.String("paid"),
+					MappingRules: cognito.IdentityPoolRoleAttachmentRoleMappingMappingRuleArray{
+						&cognito.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs{
+							Claim:     pulumi.String("isAdmin"),
+							MatchType: pulumi.String("Equals"),
+							RoleArn:   authenticatedRole.Arn,
+							Value:     pulumi.String("paid"),
 						},
 					},
 					Type: pulumi.String("Rules"),
 				},
 			},
-			Roles: pulumi.Map{
+			Roles: pulumi.StringMap{
 				"authenticated": authenticatedRole.Arn,
 			},
 		})
@@ -244,7 +244,7 @@ main_identity_pool_role_attachment = aws.cognito.IdentityPoolRoleAttachment("mai
     role_mappings=[{
         "ambiguousRoleResolution": "AuthenticatedRole",
         "identity_provider": "graph.facebook.com",
-        "mappingRule": [{
+        "mappingRules": [{
             "claim": "isAdmin",
             "matchType": "Equals",
             "role_arn": authenticated_role.arn,

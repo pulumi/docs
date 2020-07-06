@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cfg.NewConfigurationAggregator(ctx, "account", &cfg.ConfigurationAggregatorArgs{
+		_, err := cfg.NewConfigurationAggregator(ctx, "account", &cfg.ConfigurationAggregatorArgs{
 			AccountAggregationSource: &cfg.ConfigurationAggregatorAccountAggregationSourceArgs{
 				AccountIds: pulumi.StringArray{
 					pulumi.String("123456789012"),
@@ -142,6 +142,12 @@ class MyStack : Stack
                 AllRegions = true,
                 RoleArn = organizationRole.Arn,
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_iam_role_policy_attachment.organization",
+            },
         });
         var organizationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("organizationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
         {
@@ -180,7 +186,9 @@ func main() {
 				AllRegions: pulumi.Bool(true),
 				RoleArn:    organizationRole.Arn,
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_iam_role_policy_attachment.organization",
+		}))
 		if err != nil {
 			return err
 		}
@@ -221,7 +229,8 @@ organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
 organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
     "allRegions": True,
     "role_arn": organization_role.arn,
-})
+},
+opts=ResourceOptions(depends_on=["aws_iam_role_policy_attachment.organization"]))
 organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
     role=organization_role.name)

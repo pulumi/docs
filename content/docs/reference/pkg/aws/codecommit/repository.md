@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = codecommit.NewRepository(ctx, "test", &codecommit.RepositoryArgs{
+		_, err := codecommit.NewRepository(ctx, "test", &codecommit.RepositoryArgs{
 			Description:    pulumi.String("This is the Sample App Repository"),
 			RepositoryName: pulumi.String("MyTestRepository"),
 		})

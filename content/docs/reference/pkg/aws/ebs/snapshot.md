@@ -64,7 +64,7 @@ func main() {
 		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
 			AvailabilityZone: pulumi.String("us-west-2a"),
 			Size:             pulumi.Int(40),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld"),
 			},
 		})
@@ -72,7 +72,7 @@ func main() {
 			return err
 		}
 		_, err = ebs.NewSnapshot(ctx, "exampleSnapshot", &ebs.SnapshotArgs{
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld_snap"),
 			},
 			VolumeId: example.ID(),

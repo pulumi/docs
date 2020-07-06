@@ -40,6 +40,12 @@ class MyStack : Stack
         var exampleOrganizationAdminAccount = new Aws.GuardDuty.OrganizationAdminAccount("exampleOrganizationAdminAccount", new Aws.GuardDuty.OrganizationAdminAccountArgs
         {
             AdminAccountId = "123456789012",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleOrganization,
+            },
         });
     }
 
@@ -75,7 +81,9 @@ func main() {
 		}
 		_, err = guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
 			AdminAccountId: pulumi.String("123456789012"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleOrganization,
+		}))
 		if err != nil {
 			return err
 		}
@@ -95,7 +103,8 @@ example_organization = aws.organizations.Organization("exampleOrganization",
     aws_service_access_principals=["guardduty.amazonaws.com"],
     feature_set="ALL")
 example_detector = aws.guardduty.Detector("exampleDetector")
-example_organization_admin_account = aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012")
+example_organization_admin_account = aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
+opts=ResourceOptions(depends_on=[example_organization]))
 ```
 
 {{% /example %}}
@@ -111,7 +120,9 @@ const exampleOrganization = new aws.organizations.Organization("exampleOrganizat
     featureSet: "ALL",
 });
 const exampleDetector = new aws.guardduty.Detector("exampleDetector", {});
-const exampleOrganizationAdminAccount = new aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"});
+const exampleOrganizationAdminAccount = new aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"}, {
+    dependsOn: [exampleOrganization],
+});
 ```
 
 {{% /example %}}

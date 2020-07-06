@@ -81,7 +81,7 @@ func main() {
 		}
 		opt2 := selected.Arn
 		opt3 := 443
-		_, err := lb.LookupListener(ctx, &lb.LookupListenerArgs{
+		_, err = lb.LookupListener(ctx, &lb.LookupListenerArgs{
 			LoadBalancerArn: &opt2,
 			Port:            &opt3,
 		}, nil)

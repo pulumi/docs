@@ -49,12 +49,12 @@ class MyStack : Stack
                     IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
                     InstanceType = "m4.4xlarge",
                     KeyName = "my-key",
-                    RootBlockDevice = 
+                    RootBlockDevices = 
                     {
-                        
+                        new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs
                         {
-                            { "volumeSize", "300" },
-                            { "volumeType", "gp2" },
+                            VolumeSize = 300,
+                            VolumeType = "gp2",
                         },
                     },
                     SpotPrice = "1.117",
@@ -88,7 +88,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewSpotFleetRequest(ctx, "cheapCompute", &ec2.SpotFleetRequestArgs{
+		_, err := ec2.NewSpotFleetRequest(ctx, "cheapCompute", &ec2.SpotFleetRequestArgs{
 			AllocationStrategy: pulumi.String("diversified"),
 			IamFleetRole:       pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
 			LaunchSpecifications: ec2.SpotFleetRequestLaunchSpecificationArray{
@@ -105,15 +105,15 @@ func main() {
 					IamInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Example.Arn),
 					InstanceType:          pulumi.String("m4.4xlarge"),
 					KeyName:               pulumi.String("my-key"),
-					RootBlockDevice: pulumi.MapArray{
-						pulumi.Map{
-							"volumeSize": pulumi.String("300"),
-							"volumeType": pulumi.String("gp2"),
+					RootBlockDevices: ec2.SpotFleetRequestLaunchSpecificationRootBlockDeviceArray{
+						&ec2.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs{
+							VolumeSize: pulumi.Int(300),
+							VolumeType: pulumi.String("gp2"),
 						},
 					},
 					SpotPrice: pulumi.String("1.117"),
 					SubnetId:  pulumi.String("subnet-1234"),
-					Tags: pulumi.Map{
+					Tags: pulumi.StringMap{
 						"Name": pulumi.String("spot-fleet-example"),
 					},
 					WeightedCapacity: pulumi.String("35"),
@@ -156,7 +156,7 @@ cheap_compute = aws.ec2.SpotFleetRequest("cheapCompute",
             "iamInstanceProfileArn": aws_iam_instance_profile["example"]["arn"],
             "instance_type": "m4.4xlarge",
             "key_name": "my-key",
-            "root_block_device": [{
+            "root_block_devices": [{
                 "volume_size": "300",
                 "volumeType": "gp2",
             }],
@@ -219,6 +219,71 @@ const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
 
 {{% /example %}}
 
+### Using launch templates
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_launch_template = aws.ec2.LaunchTemplate("fooLaunchTemplate",
+    image_id="ami-516b9131",
+    instance_type="m1.small",
+    key_name="some-key",
+    spot_price="0.05")
+foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
+    iam_fleet_role="arn:aws:iam::12345678:role/spot-fleet",
+    spot_price="0.005",
+    target_capacity=2,
+    valid_until="2019-11-04T20:44:20Z",
+    launch_template_configs=[{
+        "launchTemplateSpecification": {
+            "id": foo_launch_template.id,
+            "version": foo_launch_template.latest_version,
+        },
+    }],
+    opts=ResourceOptions(depends_on=["aws_iam_policy_attachment.test-attach"]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooLaunchTemplate = new aws.ec2.LaunchTemplate("fooLaunchTemplate", {
+    imageId: "ami-516b9131",
+    instanceType: "m1.small",
+    keyName: "some-key",
+    spotPrice: "0.05",
+});
+const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", {
+    iamFleetRole: "arn:aws:iam::12345678:role/spot-fleet",
+    spotPrice: "0.005",
+    targetCapacity: 2,
+    validUntil: "2019-11-04T20:44:20Z",
+    launchTemplateConfigs: [{
+        launchTemplateSpecification: {
+            id: fooLaunchTemplate.id,
+            version: fooLaunchTemplate.latestVersion,
+        },
+    }],
+}, {
+    dependsOn: ["aws_iam_policy_attachment.test-attach"],
+});
+```
+
+{{% /example %}}
+
 ### Using multiple launch specifications
 {{% example csharp %}}
 ```csharp
@@ -271,7 +336,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewSpotFleetRequest(ctx, "foo", &ec2.SpotFleetRequestArgs{
+		_, err := ec2.NewSpotFleetRequest(ctx, "foo", &ec2.SpotFleetRequestArgs{
 			IamFleetRole: pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
 			LaunchSpecifications: ec2.SpotFleetRequestLaunchSpecificationArray{
 				&ec2.SpotFleetRequestLaunchSpecificationArgs{
@@ -354,6 +419,97 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
     spotPrice: "0.005",
     targetCapacity: 2,
     validUntil: "2019-11-04T20:44:20Z",
+});
+```
+
+{{% /example %}}
+
+### Using multiple launch configurations
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"])
+foo_launch_template = aws.ec2.LaunchTemplate("fooLaunchTemplate",
+    image_id="ami-516b9131",
+    instance_type="m1.small",
+    key_name="some-key",
+    spot_price="0.05")
+foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
+    iam_fleet_role="arn:aws:iam::12345678:role/spot-fleet",
+    spot_price="0.005",
+    target_capacity=2,
+    valid_until="2019-11-04T20:44:20Z",
+    launch_template_configs=[{
+        "launchTemplateSpecification": {
+            "id": foo_launch_template.id,
+            "version": foo_launch_template.latest_version,
+        },
+        "overrides": [
+            {
+                "subnet_id": data["aws_subnets"]["example"]["ids"],
+            },
+            {
+                "subnet_id": data["aws_subnets"]["example"]["ids"],
+            },
+            {
+                "subnet_id": data["aws_subnets"]["example"]["ids"],
+            },
+        ],
+    }],
+    opts=ResourceOptions(depends_on=["aws_iam_policy_attachment.test-attach"]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = aws.ec2.getSubnetIds({
+    vpcId: _var.vpc_id,
+});
+const fooLaunchTemplate = new aws.ec2.LaunchTemplate("fooLaunchTemplate", {
+    imageId: "ami-516b9131",
+    instanceType: "m1.small",
+    keyName: "some-key",
+    spotPrice: "0.05",
+});
+const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", {
+    iamFleetRole: "arn:aws:iam::12345678:role/spot-fleet",
+    spotPrice: "0.005",
+    targetCapacity: 2,
+    validUntil: "2019-11-04T20:44:20Z",
+    launchTemplateConfigs: [{
+        launchTemplateSpecification: {
+            id: fooLaunchTemplate.id,
+            version: fooLaunchTemplate.latestVersion,
+        },
+        overrides: [
+            {
+                subnetId: data.aws_subnets.example.ids[0],
+            },
+            {
+                subnetId: data.aws_subnets.example.ids[1],
+            },
+            {
+                subnetId: data.aws_subnets.example.ids[2],
+            },
+        ],
+    }],
+}, {
+    dependsOn: ["aws_iam_policy_attachment.test-attach"],
 });
 ```
 

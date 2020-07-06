@@ -12,6 +12,542 @@ meta_desc: "Explore the Cluster resource of the msk module, including examples, 
 
 Manages AWS Managed Streaming for Kafka cluster
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "192.168.0.0/22",
+        });
+        var azs = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+        {
+            State = "available",
+        }));
+        var subnetAz1 = new Aws.Ec2.Subnet("subnetAz1", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = azs.Apply(azs => azs.Names[0]),
+            CidrBlock = "192.168.0.0/24",
+            VpcId = vpc.Id,
+        });
+        var subnetAz2 = new Aws.Ec2.Subnet("subnetAz2", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = azs.Apply(azs => azs.Names[1]),
+            CidrBlock = "192.168.1.0/24",
+            VpcId = vpc.Id,
+        });
+        var subnetAz3 = new Aws.Ec2.Subnet("subnetAz3", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = azs.Apply(azs => azs.Names[2]),
+            CidrBlock = "192.168.2.0/24",
+            VpcId = vpc.Id,
+        });
+        var sg = new Aws.Ec2.SecurityGroup("sg", new Aws.Ec2.SecurityGroupArgs
+        {
+            VpcId = vpc.Id,
+        });
+        var kms = new Aws.Kms.Key("kms", new Aws.Kms.KeyArgs
+        {
+            Description = "example",
+        });
+        var test = new Aws.CloudWatch.LogGroup("test", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+        });
+        var firehoseRole = new Aws.Iam.Role("firehoseRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+""Version"": ""2012-10-17"",
+""Statement"": [
+  {
+    ""Action"": ""sts:AssumeRole"",
+    ""Principal"": {
+      ""Service"": ""firehose.amazonaws.com""
+    },
+    ""Effect"": ""Allow"",
+    ""Sid"": """"
+  }
+  ]
+}
+",
+        });
+        var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "s3",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = firehoseRole.Arn,
+                BucketArn = bucket.Arn,
+            },
+            Tags = 
+            {
+                { "LogDeliveryEnabled", "placeholder" },
+            },
+        });
+        var example = new Aws.Msk.Cluster("example", new Aws.Msk.ClusterArgs
+        {
+            ClusterName = "example",
+            KafkaVersion = "2.1.0",
+            NumberOfBrokerNodes = 3,
+            BrokerNodeGroupInfo = new Aws.Msk.Inputs.ClusterBrokerNodeGroupInfoArgs
+            {
+                InstanceType = "kafka.m5.large",
+                EbsVolumeSize = 1000,
+                ClientSubnets = 
+                {
+                    subnetAz1.Id,
+                    subnetAz2.Id,
+                    subnetAz3.Id,
+                },
+                SecurityGroups = 
+                {
+                    sg.Id,
+                },
+            },
+            EncryptionInfo = new Aws.Msk.Inputs.ClusterEncryptionInfoArgs
+            {
+                EncryptionAtRestKmsKeyArn = kms.Arn,
+            },
+            OpenMonitoring = new Aws.Msk.Inputs.ClusterOpenMonitoringArgs
+            {
+                Prometheus = new Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusArgs
+                {
+                    JmxExporter = new Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusJmxExporterArgs
+                    {
+                        EnabledInBroker = true,
+                    },
+                    NodeExporter = new Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusNodeExporterArgs
+                    {
+                        EnabledInBroker = true,
+                    },
+                },
+            },
+            LoggingInfo = new Aws.Msk.Inputs.ClusterLoggingInfoArgs
+            {
+                BrokerLogs = new Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsArgs
+                {
+                    CloudwatchLogs = new Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs
+                    {
+                        Enabled = true,
+                        LogGroup = test.Name,
+                    },
+                    Firehose = new Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsFirehoseArgs
+                    {
+                        Enabled = true,
+                        DeliveryStream = testStream.Name,
+                    },
+                    S3 = new Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsS3Args
+                    {
+                        Enabled = true,
+                        Bucket = bucket.Id,
+                        Prefix = "logs/msk-",
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+        this.ZookeeperConnectString = example.ZookeeperConnectString;
+        this.BootstrapBrokers = example.BootstrapBrokers;
+        this.BootstrapBrokersTls = example.BootstrapBrokersTls;
+    }
+
+    [Output("zookeeperConnectString")]
+    public Output<string> ZookeeperConnectString { get; set; }
+    [Output("bootstrapBrokers")]
+    public Output<string> BootstrapBrokers { get; set; }
+    [Output("bootstrapBrokersTls")]
+    public Output<string> BootstrapBrokersTls { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("192.168.0.0/22"),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "available"
+		azs, err := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{
+			State: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		subnetAz1, err := ec2.NewSubnet(ctx, "subnetAz1", &ec2.SubnetArgs{
+			AvailabilityZone: pulumi.String(azs.Names[0]),
+			CidrBlock:        pulumi.String("192.168.0.0/24"),
+			VpcId:            vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		subnetAz2, err := ec2.NewSubnet(ctx, "subnetAz2", &ec2.SubnetArgs{
+			AvailabilityZone: pulumi.String(azs.Names[1]),
+			CidrBlock:        pulumi.String("192.168.1.0/24"),
+			VpcId:            vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		subnetAz3, err := ec2.NewSubnet(ctx, "subnetAz3", &ec2.SubnetArgs{
+			AvailabilityZone: pulumi.String(azs.Names[2]),
+			CidrBlock:        pulumi.String("192.168.2.0/24"),
+			VpcId:            vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
+			VpcId: vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		kms, err := kms.NewKey(ctx, "kms", &kms.KeyArgs{
+			Description: pulumi.String("example"),
+		})
+		if err != nil {
+			return err
+		}
+		test, err := cloudwatch.NewLogGroup(ctx, "test", nil)
+		if err != nil {
+			return err
+		}
+		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+			Acl: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		firehoseRole, err := iam.NewRole(ctx, "firehoseRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "\"Version\": \"2012-10-17\",\n", "\"Statement\": [\n", "  {\n", "    \"Action\": \"sts:AssumeRole\",\n", "    \"Principal\": {\n", "      \"Service\": \"firehose.amazonaws.com\"\n", "    },\n", "    \"Effect\": \"Allow\",\n", "    \"Sid\": \"\"\n", "  }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		testStream, err := kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
+			Destination: pulumi.String("s3"),
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				RoleArn:   firehoseRole.Arn,
+				BucketArn: bucket.Arn,
+			},
+			Tags: pulumi.StringMap{
+				"LogDeliveryEnabled": pulumi.String("placeholder"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		example, err := msk.NewCluster(ctx, "example", &msk.ClusterArgs{
+			ClusterName:         pulumi.String("example"),
+			KafkaVersion:        pulumi.String("2.1.0"),
+			NumberOfBrokerNodes: pulumi.Int(3),
+			BrokerNodeGroupInfo: &msk.ClusterBrokerNodeGroupInfoArgs{
+				InstanceType:  pulumi.String("kafka.m5.large"),
+				EbsVolumeSize: pulumi.Int(1000),
+				ClientSubnets: pulumi.StringArray{
+					subnetAz1.ID(),
+					subnetAz2.ID(),
+					subnetAz3.ID(),
+				},
+				SecurityGroups: pulumi.StringArray{
+					sg.ID(),
+				},
+			},
+			EncryptionInfo: &msk.ClusterEncryptionInfoArgs{
+				EncryptionAtRestKmsKeyArn: kms.Arn,
+			},
+			OpenMonitoring: &msk.ClusterOpenMonitoringArgs{
+				Prometheus: &msk.ClusterOpenMonitoringPrometheusArgs{
+					JmxExporter: &msk.ClusterOpenMonitoringPrometheusJmxExporterArgs{
+						EnabledInBroker: pulumi.Bool(true),
+					},
+					NodeExporter: &msk.ClusterOpenMonitoringPrometheusNodeExporterArgs{
+						EnabledInBroker: pulumi.Bool(true),
+					},
+				},
+			},
+			LoggingInfo: &msk.ClusterLoggingInfoArgs{
+				BrokerLogs: &msk.ClusterLoggingInfoBrokerLogsArgs{
+					CloudwatchLogs: &msk.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs{
+						Enabled:  pulumi.Bool(true),
+						LogGroup: test.Name,
+					},
+					Firehose: &msk.ClusterLoggingInfoBrokerLogsFirehoseArgs{
+						Enabled:        pulumi.Bool(true),
+						DeliveryStream: testStream.Name,
+					},
+					S3: &msk.ClusterLoggingInfoBrokerLogsS3Args{
+						Enabled: pulumi.Bool(true),
+						Bucket:  bucket.ID(),
+						Prefix:  pulumi.String("logs/msk-"),
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("zookeeperConnectString", example.ZookeeperConnectString)
+		ctx.Export("bootstrapBrokers", example.BootstrapBrokers)
+		ctx.Export("bootstrapBrokersTls", example.BootstrapBrokersTls)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+vpc = aws.ec2.Vpc("vpc", cidr_block="192.168.0.0/22")
+azs = aws.get_availability_zones(state="available")
+subnet_az1 = aws.ec2.Subnet("subnetAz1",
+    availability_zone=azs.names[0],
+    cidr_block="192.168.0.0/24",
+    vpc_id=vpc.id)
+subnet_az2 = aws.ec2.Subnet("subnetAz2",
+    availability_zone=azs.names[1],
+    cidr_block="192.168.1.0/24",
+    vpc_id=vpc.id)
+subnet_az3 = aws.ec2.Subnet("subnetAz3",
+    availability_zone=azs.names[2],
+    cidr_block="192.168.2.0/24",
+    vpc_id=vpc.id)
+sg = aws.ec2.SecurityGroup("sg", vpc_id=vpc.id)
+kms = aws.kms.Key("kms", description="example")
+test = aws.cloudwatch.LogGroup("test")
+bucket = aws.s3.Bucket("bucket", acl="private")
+firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
+"Version": "2012-10-17",
+"Statement": [
+  {
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "firehose.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }
+  ]
+}
+""")
+test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
+    destination="s3",
+    s3_configuration={
+        "role_arn": firehose_role.arn,
+        "bucketArn": bucket.arn,
+    },
+    tags={
+        "LogDeliveryEnabled": "placeholder",
+    })
+example = aws.msk.Cluster("example",
+    cluster_name="example",
+    kafka_version="2.1.0",
+    number_of_broker_nodes=3,
+    broker_node_group_info={
+        "instance_type": "kafka.m5.large",
+        "ebsVolumeSize": 1000,
+        "clientSubnets": [
+            subnet_az1.id,
+            subnet_az2.id,
+            subnet_az3.id,
+        ],
+        "security_groups": [sg.id],
+    },
+    encryption_info={
+        "encryptionAtRestKmsKeyArn": kms.arn,
+    },
+    open_monitoring={
+        "prometheus": {
+            "jmxExporter": {
+                "enabledInBroker": True,
+            },
+            "nodeExporter": {
+                "enabledInBroker": True,
+            },
+        },
+    },
+    logging_info={
+        "brokerLogs": {
+            "cloudwatchLogs": {
+                "enabled": True,
+                "log_group": test.name,
+            },
+            "firehose": {
+                "enabled": True,
+                "deliveryStream": test_stream.name,
+            },
+            "s3": {
+                "enabled": True,
+                "bucket": bucket.id,
+                "prefix": "logs/msk-",
+            },
+        },
+    },
+    tags={
+        "foo": "bar",
+    })
+pulumi.export("zookeeperConnectString", example.zookeeper_connect_string)
+pulumi.export("bootstrapBrokers", example.bootstrap_brokers)
+pulumi.export("bootstrapBrokersTls", example.bootstrap_brokers_tls)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const vpc = new aws.ec2.Vpc("vpc", {cidrBlock: "192.168.0.0/22"});
+const azs = aws.getAvailabilityZones({
+    state: "available",
+});
+const subnetAz1 = new aws.ec2.Subnet("subnetAz1", {
+    availabilityZone: azs.then(azs => azs.names[0]),
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const subnetAz2 = new aws.ec2.Subnet("subnetAz2", {
+    availabilityZone: azs.then(azs => azs.names[1]),
+    cidrBlock: "192.168.1.0/24",
+    vpcId: vpc.id,
+});
+const subnetAz3 = new aws.ec2.Subnet("subnetAz3", {
+    availabilityZone: azs.then(azs => azs.names[2]),
+    cidrBlock: "192.168.2.0/24",
+    vpcId: vpc.id,
+});
+const sg = new aws.ec2.SecurityGroup("sg", {vpcId: vpc.id});
+const kms = new aws.kms.Key("kms", {description: "example"});
+const test = new aws.cloudwatch.LogGroup("test", {});
+const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+const firehoseRole = new aws.iam.Role("firehoseRole", {assumeRolePolicy: `{
+"Version": "2012-10-17",
+"Statement": [
+  {
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "firehose.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }
+  ]
+}
+`});
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
+    destination: "s3",
+    s3Configuration: {
+        roleArn: firehoseRole.arn,
+        bucketArn: bucket.arn,
+    },
+    tags: {
+        LogDeliveryEnabled: "placeholder",
+    },
+});
+const example = new aws.msk.Cluster("example", {
+    clusterName: "example",
+    kafkaVersion: "2.1.0",
+    numberOfBrokerNodes: 3,
+    brokerNodeGroupInfo: {
+        instanceType: "kafka.m5.large",
+        ebsVolumeSize: 1000,
+        clientSubnets: [
+            subnetAz1.id,
+            subnetAz2.id,
+            subnetAz3.id,
+        ],
+        securityGroups: [sg.id],
+    },
+    encryptionInfo: {
+        encryptionAtRestKmsKeyArn: kms.arn,
+    },
+    openMonitoring: {
+        prometheus: {
+            jmxExporter: {
+                enabledInBroker: true,
+            },
+            nodeExporter: {
+                enabledInBroker: true,
+            },
+        },
+    },
+    loggingInfo: {
+        brokerLogs: {
+            cloudwatchLogs: {
+                enabled: true,
+                logGroup: test.name,
+            },
+            firehose: {
+                enabled: true,
+                deliveryStream: testStream.name,
+            },
+            s3: {
+                enabled: true,
+                bucket: bucket.id,
+                prefix: "logs/msk-",
+            },
+        },
+    },
+    tags: {
+        foo: "bar",
+    },
+});
+export const zookeeperConnectString = example.zookeeperConnectString;
+export const bootstrapBrokers = example.bootstrapBrokers;
+export const bootstrapBrokersTls = example.bootstrapBrokersTls;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

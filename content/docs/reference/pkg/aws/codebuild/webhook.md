@@ -32,17 +32,17 @@ class MyStack : Stack
             {
                 new Aws.CodeBuild.Inputs.WebhookFilterGroupArgs
                 {
-                    Filter = 
+                    Filters = 
                     {
-                        
+                        new Aws.CodeBuild.Inputs.WebhookFilterGroupFilterArgs
                         {
-                            { "pattern", "PUSH" },
-                            { "type", "EVENT" },
+                            Pattern = "PUSH",
+                            Type = "EVENT",
                         },
-                        
+                        new Aws.CodeBuild.Inputs.WebhookFilterGroupFilterArgs
                         {
-                            { "pattern", "master" },
-                            { "type", "HEAD_REF" },
+                            Pattern = "master",
+                            Type = "HEAD_REF",
                         },
                     },
                 },
@@ -67,17 +67,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = codebuild.NewWebhook(ctx, "example", &codebuild.WebhookArgs{
+		_, err := codebuild.NewWebhook(ctx, "example", &codebuild.WebhookArgs{
 			FilterGroups: codebuild.WebhookFilterGroupArray{
 				&codebuild.WebhookFilterGroupArgs{
-					Filter: pulumi.MapArray{
-						pulumi.Map{
-							"pattern": pulumi.String("PUSH"),
-							"type":    pulumi.String("EVENT"),
+					Filters: codebuild.WebhookFilterGroupFilterArray{
+						&codebuild.WebhookFilterGroupFilterArgs{
+							Pattern: pulumi.String("PUSH"),
+							Type:    pulumi.String("EVENT"),
 						},
-						pulumi.Map{
-							"pattern": pulumi.String("master"),
-							"type":    pulumi.String("HEAD_REF"),
+						&codebuild.WebhookFilterGroupFilterArgs{
+							Pattern: pulumi.String("master"),
+							Type:    pulumi.String("HEAD_REF"),
 						},
 					},
 				},
@@ -101,7 +101,7 @@ import pulumi_aws as aws
 
 example = aws.codebuild.Webhook("example",
     filter_groups=[{
-        "filter": [
+        "filters": [
             {
                 "pattern": "PUSH",
                 "type": "EVENT",
@@ -181,7 +181,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild"
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleWebhook, err := codebuild.NewWebhook(ctx, "exampleWebhook", &codebuild.WebhookArgs{
+			ProjectName: pulumi.String(aws_codebuild_project.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = github.NewRepositoryWebhook(ctx, "exampleRepositoryWebhook", &github.RepositoryWebhookArgs{
+			Active: pulumi.Bool(true),
+			Configuration: &github.RepositoryWebhookConfigurationArgs{
+				ContentType: pulumi.String("json"),
+				InsecureSsl: pulumi.Bool(false),
+				Secret:      exampleWebhook.Secret,
+				Url:         exampleWebhook.PayloadUrl,
+			},
+			Events: pulumi.StringArray{
+				pulumi.String("push"),
+			},
+			Repository: pulumi.String(github_repository.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

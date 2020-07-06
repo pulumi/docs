@@ -36,7 +36,7 @@ class MyStack : Stack
         });
         var exampleCustomerGateway = new Aws.Ec2.CustomerGateway("exampleCustomerGateway", new Aws.Ec2.CustomerGatewayArgs
         {
-            BgpAsn = 65000,
+            BgpAsn = "65000",
             IpAddress = "172.0.0.1",
             Type = "ipsec.1",
         });
@@ -70,7 +70,7 @@ func main() {
 			return err
 		}
 		exampleCustomerGateway, err := ec2.NewCustomerGateway(ctx, "exampleCustomerGateway", &ec2.CustomerGatewayArgs{
-			BgpAsn:    pulumi.Int(65000),
+			BgpAsn:    pulumi.String("65000"),
 			IpAddress: pulumi.String("172.0.0.1"),
 			Type:      pulumi.String("ipsec.1"),
 		})
@@ -118,7 +118,7 @@ import * as aws from "@pulumi/aws";
 
 const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("example", {});
 const exampleCustomerGateway = new aws.ec2.CustomerGateway("example", {
-    bgpAsn: 65000,
+    bgpAsn: "65000",
     ipAddress: "172.0.0.1",
     type: "ipsec.1",
 });
@@ -151,7 +151,7 @@ class MyStack : Stack
         });
         var customerGateway = new Aws.Ec2.CustomerGateway("customerGateway", new Aws.Ec2.CustomerGatewayArgs
         {
-            BgpAsn = 65000,
+            BgpAsn = "65000",
             IpAddress = "172.0.0.1",
             Type = "ipsec.1",
         });
@@ -193,7 +193,7 @@ func main() {
 			return err
 		}
 		customerGateway, err := ec2.NewCustomerGateway(ctx, "customerGateway", &ec2.CustomerGatewayArgs{
-			BgpAsn:    pulumi.Int(65000),
+			BgpAsn:    pulumi.String("65000"),
 			IpAddress: pulumi.String("172.0.0.1"),
 			Type:      pulumi.String("ipsec.1"),
 		})
@@ -249,7 +249,7 @@ const vpnGateway = new aws.ec2.VpnGateway("vpn_gateway", {
     vpcId: vpc.id,
 });
 const customerGateway = new aws.ec2.CustomerGateway("customer_gateway", {
-    bgpAsn: 65000,
+    bgpAsn: "65000",
     ipAddress: "172.0.0.1",
     type: "ipsec.1",
 });

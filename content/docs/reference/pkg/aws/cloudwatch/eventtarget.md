@@ -121,7 +121,7 @@ stop_instance = aws.ssm.Document("stopInstance",
 ssm_lifecycle_policy_document = stop_instance.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[
     {
         "actions": ["ssm:SendCommand"],
-        "condition": [{
+        "conditions": [{
             "test": "StringEquals",
             "values": ["*"],
             "variable": "ec2:ResourceTag/Terminate",
@@ -214,16 +214,16 @@ class MyStack : Stack
                     {
                         "ssm:SendCommand",
                     },
-                    Condition = 
+                    Conditions = 
                     {
-                        
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
-                            { "test", "StringEquals" },
-                            { "values", 
+                            Test = "StringEquals",
+                            Values = 
                             {
                                 "*",
-                            } },
-                            { "variable", "ec2:ResourceTag/Terminate" },
+                            },
+                            Variable = "ec2:ResourceTag/Terminate",
                         },
                     },
                     Effect = "Allow",
@@ -435,6 +435,107 @@ class MyStack : Stack
     }
 
 }
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		stopInstancesEventRule, err := cloudwatch.NewEventRule(ctx, "stopInstancesEventRule", &cloudwatch.EventRuleArgs{
+			Description:        pulumi.String("Stop instances nightly"),
+			ScheduleExpression: pulumi.String("cron(0 0 * * ? *)"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventTarget(ctx, "stopInstancesEventTarget", &cloudwatch.EventTargetArgs{
+			Arn:     pulumi.String(fmt.Sprintf("%v%v%v", "arn:aws:ssm:", _var.Aws_region, "::document/AWS-RunShellScript")),
+			Input:   pulumi.String("{\"commands\":[\"halt\"]}"),
+			RoleArn: pulumi.String(aws_iam_role.Ssm_lifecycle.Arn),
+			Rule:    stopInstancesEventRule.Name,
+			RunCommandTargets: cloudwatch.EventTargetRunCommandTargetArray{
+				&cloudwatch.EventTargetRunCommandTargetArgs{
+					Key: pulumi.String("tag:Terminate"),
+					Values: pulumi.StringArray{
+						pulumi.String("midnight"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## Example ECS Run Task with Role and Task Override Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ecsEvents = new aws.iam.Role("ecs_events", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "events.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`,
+});
+const ecsEventsRunTaskWithAnyRole = new aws.iam.RolePolicy("ecs_events_run_task_with_any_role", {
+    policy: aws_ecs_task_definition_task_name.arn.apply(arn => `{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ecs:RunTask",
+            "Resource": "${arn.replace(/:\d+$/, ":*")}"
+        }
+    ]
+}
+`),
+    role: ecsEvents.id,
+});
+const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
+    arn: aws_ecs_cluster_cluster_name.arn,
+    ecsTarget: {
+        taskCount: 1,
+        taskDefinitionArn: aws_ecs_task_definition_task_name.arn,
+    },
+    input: `{
+  "containerOverrides": [
+    {
+      "name": "name-of-container-to-override",
+      "command": ["bin/console", "scheduled-task"]
+    }
+  ]
+}
+`,
+    roleArn: ecsEvents.arn,
+    rule: aws_cloudwatch_event_rule_every_hour.name,
+});
 ```
 
 {{% examples %}}

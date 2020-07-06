@@ -20,6 +20,205 @@ See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/Am
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mongo = new Aws.Ecs.Service("mongo", new Aws.Ecs.ServiceArgs
+        {
+            Cluster = aws_ecs_cluster.Foo.Id,
+            TaskDefinition = aws_ecs_task_definition.Mongo.Arn,
+            DesiredCount = 3,
+            IamRole = aws_iam_role.Foo.Arn,
+            OrderedPlacementStrategies = 
+            {
+                new Aws.Ecs.Inputs.ServiceOrderedPlacementStrategyArgs
+                {
+                    Type = "binpack",
+                    Field = "cpu",
+                },
+            },
+            LoadBalancers = 
+            {
+                new Aws.Ecs.Inputs.ServiceLoadBalancerArgs
+                {
+                    TargetGroupArn = aws_lb_target_group.Foo.Arn,
+                    ContainerName = "mongo",
+                    ContainerPort = 8080,
+                },
+            },
+            PlacementConstraints = 
+            {
+                new Aws.Ecs.Inputs.ServicePlacementConstraintArgs
+                {
+                    Type = "memberOf",
+                    Expression = "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_iam_role_policy.foo",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.NewService(ctx, "mongo", &ecs.ServiceArgs{
+			Cluster:        pulumi.String(aws_ecs_cluster.Foo.Id),
+			TaskDefinition: pulumi.String(aws_ecs_task_definition.Mongo.Arn),
+			DesiredCount:   pulumi.Int(3),
+			IamRole:        pulumi.String(aws_iam_role.Foo.Arn),
+			OrderedPlacementStrategies: ecs.ServiceOrderedPlacementStrategyArray{
+				&ecs.ServiceOrderedPlacementStrategyArgs{
+					Type:  pulumi.String("binpack"),
+					Field: pulumi.String("cpu"),
+				},
+			},
+			LoadBalancers: ecs.ServiceLoadBalancerArray{
+				&ecs.ServiceLoadBalancerArgs{
+					TargetGroupArn: pulumi.String(aws_lb_target_group.Foo.Arn),
+					ContainerName:  pulumi.String("mongo"),
+					ContainerPort:  pulumi.Int(8080),
+				},
+			},
+			PlacementConstraints: ecs.ServicePlacementConstraintArray{
+				&ecs.ServicePlacementConstraintArgs{
+					Type:       pulumi.String("memberOf"),
+					Expression: pulumi.String("attribute:ecs.availability-zone in [us-west-2a, us-west-2b]"),
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_iam_role_policy.foo",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+mongo = aws.ecs.Service("mongo",
+    cluster=aws_ecs_cluster["foo"]["id"],
+    task_definition=aws_ecs_task_definition["mongo"]["arn"],
+    desired_count=3,
+    iam_role=aws_iam_role["foo"]["arn"],
+    ordered_placement_strategies=[{
+        "type": "binpack",
+        "field": "cpu",
+    }],
+    load_balancers=[{
+        "target_group_arn": aws_lb_target_group["foo"]["arn"],
+        "container_name": "mongo",
+        "containerPort": 8080,
+    }],
+    placement_constraints=[{
+        "type": "memberOf",
+        "expression": "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
+    }],
+    opts=ResourceOptions(depends_on=["aws_iam_role_policy.foo"]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mongo = new aws.ecs.Service("mongo", {
+    cluster: aws_ecs_cluster.foo.id,
+    taskDefinition: aws_ecs_task_definition.mongo.arn,
+    desiredCount: 3,
+    iamRole: aws_iam_role.foo.arn,
+    orderedPlacementStrategies: [{
+        type: "binpack",
+        field: "cpu",
+    }],
+    loadBalancers: [{
+        targetGroupArn: aws_lb_target_group.foo.arn,
+        containerName: "mongo",
+        containerPort: 8080,
+    }],
+    placementConstraints: [{
+        type: "memberOf",
+        expression: "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
+    }],
+}, {
+    dependsOn: ["aws_iam_role_policy.foo"],
+});
+```
+
+{{% /example %}}
+
+### Ignoring Changes to Desired Count
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ecs.Service("example",
+    desired_count=2,
+    lifecycle={
+        "ignoreChanges": ["desiredCount"],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ecs.Service("example", {
+    // Example: Create service with 2 instances to start
+    desiredCount: 2,
+}, { ignoreChanges: ["desiredCount"] });
+```
+
+{{% /example %}}
+
 ### Daemon Scheduling Strategy
 {{% example csharp %}}
 ```csharp
@@ -54,7 +253,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ecs.NewService(ctx, "bar", &ecs.ServiceArgs{
+		_, err := ecs.NewService(ctx, "bar", &ecs.ServiceArgs{
 			Cluster:            pulumi.String(aws_ecs_cluster.Foo.Id),
 			SchedulingStrategy: pulumi.String("DAEMON"),
 			TaskDefinition:     pulumi.String(aws_ecs_task_definition.Bar.Arn),
@@ -133,7 +332,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ecs.NewService(ctx, "example", &ecs.ServiceArgs{
+		_, err := ecs.NewService(ctx, "example", &ecs.ServiceArgs{
 			Cluster: pulumi.String(aws_ecs_cluster.Example.Id),
 			DeploymentController: &ecs.ServiceDeploymentControllerArgs{
 				Type: pulumi.String("EXTERNAL"),

@@ -12,6 +12,112 @@ meta_desc: "Explore the Build resource of the gamelift module, including example
 
 Provides an Gamelift Build resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.GameLift.Build("test", new Aws.GameLift.BuildArgs
+        {
+            OperatingSystem = "WINDOWS_2012",
+            StorageLocation = new Aws.GameLift.Inputs.BuildStorageLocationArgs
+            {
+                Bucket = aws_s3_bucket.Test.Bucket,
+                Key = aws_s3_bucket_object.Test.Key,
+                RoleArn = aws_iam_role.Test.Arn,
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_iam_role_policy.test",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gamelift.NewBuild(ctx, "test", &gamelift.BuildArgs{
+			OperatingSystem: pulumi.String("WINDOWS_2012"),
+			StorageLocation: &gamelift.BuildStorageLocationArgs{
+				Bucket:  pulumi.String(aws_s3_bucket.Test.Bucket),
+				Key:     pulumi.String(aws_s3_bucket_object.Test.Key),
+				RoleArn: pulumi.String(aws_iam_role.Test.Arn),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_iam_role_policy.test",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.gamelift.Build("test",
+    operating_system="WINDOWS_2012",
+    storage_location={
+        "bucket": aws_s3_bucket["test"]["bucket"],
+        "key": aws_s3_bucket_object["test"]["key"],
+        "role_arn": aws_iam_role["test"]["arn"],
+    },
+    opts=ResourceOptions(depends_on=["aws_iam_role_policy.test"]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.gamelift.Build("test", {
+    operatingSystem: "WINDOWS_2012",
+    storageLocation: {
+        bucket: aws_s3_bucket.test.bucket,
+        key: aws_s3_bucket_object.test.key,
+        roleArn: aws_iam_role.test.arn,
+    },
+}, {
+    dependsOn: ["aws_iam_role_policy.test"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Build Resource {#create}

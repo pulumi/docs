@@ -14,6 +14,73 @@ Provides a Pinpoint APNs Channel resource.
 
 > **Note:** All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+        {
+        });
+        var apns = new Aws.Pinpoint.ApnsChannel("apns", new Aws.Pinpoint.ApnsChannelArgs
+        {
+            ApplicationId = app.ApplicationId,
+            Certificate = File.ReadAllText("./certificate.pem"),
+            PrivateKey = File.ReadAllText("./private_key.key"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+app = aws.pinpoint.App("app")
+apns = aws.pinpoint.ApnsChannel("apns",
+    application_id=app.application_id,
+    certificate=(lambda path: open(path).read())("./certificate.pem"),
+    private_key=(lambda path: open(path).read())("./private_key.key"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const app = new aws.pinpoint.App("app", {});
+const apns = new aws.pinpoint.ApnsChannel("apns", {
+    applicationId: app.applicationId,
+    certificate: fs.readFileSync("./certificate.pem", "utf-8"),
+    privateKey: fs.readFileSync("./private_key.key", "utf-8"),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApnsChannel Resource {#create}

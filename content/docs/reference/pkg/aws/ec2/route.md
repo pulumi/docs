@@ -131,6 +131,12 @@ class MyStack : Stack
             RouteTableId = "rtb-4fbb3ac4",
             DestinationCidrBlock = "10.0.1.0/22",
             VpcPeeringConnectionId = "pcx-45ff3dc1",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_route_table.testing",
+            },
         });
     }
 
@@ -150,11 +156,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+		_, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
 			RouteTableId:           pulumi.String("rtb-4fbb3ac4"),
 			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
 			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_route_table.testing",
+		}))
 		if err != nil {
 			return err
 		}
@@ -173,7 +181,8 @@ import pulumi_aws as aws
 route = aws.ec2.Route("route",
     route_table_id="rtb-4fbb3ac4",
     destination_cidr_block="10.0.1.0/22",
-    vpc_peering_connection_id="pcx-45ff3dc1")
+    vpc_peering_connection_id="pcx-45ff3dc1",
+    opts=ResourceOptions(depends_on=["aws_route_table.testing"]))
 ```
 
 {{% /example %}}
@@ -188,6 +197,8 @@ const route = new aws.ec2.Route("route", {
     routeTableId: "rtb-4fbb3ac4",
     destinationCidrBlock: "10.0.1.0/22",
     vpcPeeringConnectionId: "pcx-45ff3dc1",
+}, {
+    dependsOn: ["aws_route_table.testing"],
 });
 ```
 

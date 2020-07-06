@@ -111,7 +111,7 @@ class MyStack : Stack
             ComputeResources = new Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs
             {
                 InstanceRole = ecsInstanceRoleInstanceProfile.Arn,
-                InstanceType = 
+                InstanceTypes = 
                 {
                     "c4.large",
                 },
@@ -129,6 +129,12 @@ class MyStack : Stack
             },
             ServiceRole = awsBatchServiceRoleRole.Arn,
             Type = "MANAGED",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_iam_role_policy_attachment.aws_batch_service_role",
+            },
         });
     }
 
@@ -216,7 +222,7 @@ func main() {
 			ComputeEnvironmentName: pulumi.String("sample"),
 			ComputeResources: &batch.ComputeEnvironmentComputeResourcesArgs{
 				InstanceRole: ecsInstanceRoleInstanceProfile.Arn,
-				InstanceType: pulumi.StringArray{
+				InstanceTypes: pulumi.StringArray{
 					pulumi.String("c4.large"),
 				},
 				MaxVcpus: pulumi.Int(16),
@@ -231,7 +237,9 @@ func main() {
 			},
 			ServiceRole: awsBatchServiceRoleRole.Arn,
 			Type:        pulumi.String("MANAGED"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_iam_role_policy_attachment.aws_batch_service_role",
+		}))
 		if err != nil {
 			return err
 		}
@@ -296,7 +304,7 @@ sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironm
     compute_environment_name="sample",
     compute_resources={
         "instanceRole": ecs_instance_role_instance_profile.arn,
-        "instance_type": ["c4.large"],
+        "instance_types": ["c4.large"],
         "maxVcpus": 16,
         "minVcpus": 0,
         "security_group_ids": [sample_security_group.id],
@@ -304,7 +312,8 @@ sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironm
         "type": "EC2",
     },
     service_role=aws_batch_service_role_role.arn,
-    type="MANAGED")
+    type="MANAGED",
+    opts=ResourceOptions(depends_on=["aws_iam_role_policy_attachment.aws_batch_service_role"]))
 ```
 
 {{% /example %}}

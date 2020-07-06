@@ -12,6 +12,37 @@ meta_desc: "Explore the GetCoipPools function of the ec2 module, including examp
 
 Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooCoipPools = pulumi.output(aws.ec2.getCoipPools({ async: true }));
+
+export const foo = fooCoipPools.ids;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCoipPools {#using}

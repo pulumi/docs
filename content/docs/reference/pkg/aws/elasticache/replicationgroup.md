@@ -26,6 +26,112 @@ servers reboots.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Redis Cluster Mode Disabled
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ElastiCache.ReplicationGroup("example", new Aws.ElastiCache.ReplicationGroupArgs
+        {
+            AutomaticFailoverEnabled = true,
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+                "us-west-2b",
+            },
+            NodeType = "cache.m4.large",
+            NumberCacheClusters = 2,
+            ParameterGroupName = "default.redis3.2",
+            Port = 6379,
+            ReplicationGroupDescription = "test description",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := elasticache.NewReplicationGroup(ctx, "example", &elasticache.ReplicationGroupArgs{
+			AutomaticFailoverEnabled: pulumi.Bool(true),
+			AvailabilityZones: pulumi.StringArray{
+				pulumi.String("us-west-2a"),
+				pulumi.String("us-west-2b"),
+			},
+			NodeType:                    pulumi.String("cache.m4.large"),
+			NumberCacheClusters:         pulumi.Int(2),
+			ParameterGroupName:          pulumi.String("default.redis3.2"),
+			Port:                        pulumi.Int(6379),
+			ReplicationGroupDescription: pulumi.String("test description"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.elasticache.ReplicationGroup("example",
+    automatic_failover_enabled=True,
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    node_type="cache.m4.large",
+    number_cache_clusters=2,
+    parameter_group_name="default.redis3.2",
+    port=6379,
+    replication_group_description="test description")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.elasticache.ReplicationGroup("example", {
+    automaticFailoverEnabled: true,
+    availabilityZones: [
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    nodeType: "cache.m4.large",
+    numberCacheClusters: 2,
+    parameterGroupName: "default.redis3.2",
+    port: 6379,
+    replicationGroupDescription: "test description",
+});
+```
+
+{{% /example %}}
+
 ### Redis Cluster Mode Enabled
 {{% example csharp %}}
 ```csharp
@@ -67,7 +173,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = elasticache.NewReplicationGroup(ctx, "baz", &elasticache.ReplicationGroupArgs{
+		_, err := elasticache.NewReplicationGroup(ctx, "baz", &elasticache.ReplicationGroupArgs{
 			AutomaticFailoverEnabled: pulumi.Bool(true),
 			ClusterMode: &elasticache.ReplicationGroupClusterModeArgs{
 				NumNodeGroups:        pulumi.Int(2),

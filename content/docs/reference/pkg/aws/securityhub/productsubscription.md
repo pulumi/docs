@@ -33,6 +33,12 @@ class MyStack : Stack
         var exampleProductSubscription = new Aws.SecurityHub.ProductSubscription("exampleProductSubscription", new Aws.SecurityHub.ProductSubscriptionArgs
         {
             ProductArn = current.Apply(current => $"arn:aws:securityhub:{current.Name}:733251395267:product/alertlogic/althreatmanagement"),
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_securityhub_account.example",
+            },
         });
     }
 
@@ -55,7 +61,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = securityhub.NewAccount(ctx, "exampleAccount", nil)
+		_, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
 		if err != nil {
 			return err
 		}
@@ -65,7 +71,9 @@ func main() {
 		}
 		_, err = securityhub.NewProductSubscription(ctx, "exampleProductSubscription", &securityhub.ProductSubscriptionArgs{
 			ProductArn: pulumi.String(fmt.Sprintf("%v%v%v", "arn:aws:securityhub:", current.Name, ":733251395267:product/alertlogic/althreatmanagement")),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_securityhub_account.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -83,7 +91,8 @@ import pulumi_aws as aws
 
 example_account = aws.securityhub.Account("exampleAccount")
 current = aws.get_region()
-example_product_subscription = aws.securityhub.ProductSubscription("exampleProductSubscription", product_arn=f"arn:aws:securityhub:{current.name}:733251395267:product/alertlogic/althreatmanagement")
+example_product_subscription = aws.securityhub.ProductSubscription("exampleProductSubscription", product_arn=f"arn:aws:securityhub:{current.name}:733251395267:product/alertlogic/althreatmanagement",
+opts=ResourceOptions(depends_on=["aws_securityhub_account.example"]))
 ```
 
 {{% /example %}}

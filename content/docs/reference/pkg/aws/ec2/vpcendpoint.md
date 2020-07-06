@@ -56,7 +56,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewVpcEndpoint(ctx, "s3", &ec2.VpcEndpointArgs{
+		_, err := ec2.NewVpcEndpoint(ctx, "s3", &ec2.VpcEndpointArgs{
 			ServiceName: pulumi.String("com.amazonaws.us-west-2.s3"),
 			VpcId:       pulumi.String(aws_vpc.Main.Id),
 		})
@@ -133,9 +133,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewVpcEndpoint(ctx, "s3", &ec2.VpcEndpointArgs{
+		_, err := ec2.NewVpcEndpoint(ctx, "s3", &ec2.VpcEndpointArgs{
 			ServiceName: pulumi.String("com.amazonaws.us-west-2.s3"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("test"),
 			},
 			VpcId: pulumi.String(aws_vpc.Main.Id),
@@ -177,178 +177,6 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
         Environment: "test",
     },
     vpcId: aws_vpc_main.id,
-});
-```
-
-{{% /example %}}
-
-### Interface Endpoint Type
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ec2 = new Aws.Ec2.VpcEndpoint("ec2", new Aws.Ec2.VpcEndpointArgs
-        {
-            PrivateDnsEnabled = true,
-            SecurityGroupIds = 
-            {
-                aws_security_group.Sg1.Id,
-            },
-            ServiceName = "com.amazonaws.us-west-2.ec2",
-            VpcEndpointType = "Interface",
-            VpcId = aws_vpc.Main.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-ec2 = aws.ec2.VpcEndpoint("ec2",
-    private_dns_enabled=True,
-    security_group_ids=[aws_security_group["sg1"]["id"]],
-    service_name="com.amazonaws.us-west-2.ec2",
-    vpc_endpoint_type="Interface",
-    vpc_id=aws_vpc["main"]["id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ec2 = new aws.ec2.VpcEndpoint("ec2", {
-    privateDnsEnabled: true,
-    securityGroupIds: [aws_security_group_sg1.id],
-    serviceName: "com.amazonaws.us-west-2.ec2",
-    vpcEndpointType: "Interface",
-    vpcId: aws_vpc_main.id,
-});
-```
-
-{{% /example %}}
-
-### Non-AWS Service
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ptfeServiceVpcEndpoint = new Aws.Ec2.VpcEndpoint("ptfeServiceVpcEndpoint", new Aws.Ec2.VpcEndpointArgs
-        {
-            PrivateDnsEnabled = false,
-            SecurityGroupIds = 
-            {
-                aws_security_group.Ptfe_service.Id,
-            },
-            ServiceName = @var.Ptfe_service,
-            SubnetIds = 
-            {
-                local.Subnet_ids,
-            },
-            VpcEndpointType = "Interface",
-            VpcId = @var.Vpc_id,
-        });
-        var @internal = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
-        {
-            Name = "vpc.internal.",
-            PrivateZone = true,
-            VpcId = @var.Vpc_id,
-        }));
-        var ptfeServiceRecord = new Aws.Route53.Record("ptfeServiceRecord", new Aws.Route53.RecordArgs
-        {
-            Name = @internal.Apply(@internal => $"ptfe.{@internal.Name}"),
-            Records = 
-            {
-                ptfeServiceVpcEndpoint.DnsEntries.Apply(dnsEntries => dnsEntries[0])["dns_name"],
-            },
-            Ttl = 300,
-            Type = "CNAME",
-            ZoneId = @internal.Apply(@internal => @internal.ZoneId),
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-ptfe_service_vpc_endpoint = aws.ec2.VpcEndpoint("ptfeServiceVpcEndpoint",
-    private_dns_enabled=False,
-    security_group_ids=[aws_security_group["ptfe_service"]["id"]],
-    service_name=var["ptfe_service"],
-    subnet_ids=[local["subnet_ids"]],
-    vpc_endpoint_type="Interface",
-    vpc_id=var["vpc_id"])
-internal = aws.route53.get_zone(name="vpc.internal.",
-    private_zone=True,
-    vpc_id=var["vpc_id"])
-ptfe_service_record = aws.route53.Record("ptfeServiceRecord",
-    name=f"ptfe.{internal.name}",
-    records=[ptfe_service_vpc_endpoint.dns_entries[0]["dns_name"]],
-    ttl="300",
-    type="CNAME",
-    zone_id=internal.zone_id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ptfeServiceVpcEndpoint = new aws.ec2.VpcEndpoint("ptfe_service", {
-    privateDnsEnabled: false,
-    securityGroupIds: [aws_security_group_ptfe_service.id],
-    serviceName: var_ptfe_service,
-    subnetIds: [local_subnet_ids],
-    vpcEndpointType: "Interface",
-    vpcId: var_vpc_id,
-});
-const internal = pulumi.output(aws.route53.getZone({
-    name: "vpc.internal.",
-    privateZone: true,
-    vpcId: var_vpc_id,
-}, { async: true }));
-const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
-    name: pulumi.interpolate`ptfe.${internal.name!}`,
-    records: [ptfeServiceVpcEndpoint.dnsEntries.apply(dnsEntries => (<any>dnsEntries[0])["dns_name"])],
-    ttl: 300,
-    type: "CNAME",
-    zoneId: internal.zoneId!,
 });
 ```
 

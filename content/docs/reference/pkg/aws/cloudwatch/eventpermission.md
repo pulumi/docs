@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudwatch.NewEventPermission(ctx, "devAccountAccess", &cloudwatch.EventPermissionArgs{
+		_, err := cloudwatch.NewEventPermission(ctx, "devAccountAccess", &cloudwatch.EventPermissionArgs{
 			Principal:   pulumi.String("123456789012"),
 			StatementId: pulumi.String("DevAccountAccess"),
 		})
@@ -128,7 +128,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudwatch.NewEventPermission(ctx, "organizationAccess", &cloudwatch.EventPermissionArgs{
+		_, err := cloudwatch.NewEventPermission(ctx, "organizationAccess", &cloudwatch.EventPermissionArgs{
 			Condition: &cloudwatch.EventPermissionConditionArgs{
 				Key:   pulumi.String("aws:PrincipalOrgID"),
 				Type:  pulumi.String("StringEquals"),

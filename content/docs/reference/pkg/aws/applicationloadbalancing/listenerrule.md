@@ -192,16 +192,16 @@ class MyStack : Stack
             {
                 new Aws.LB.Inputs.ListenerRuleConditionArgs
                 {
-                    QueryString = 
+                    QueryStrings = 
                     {
-                        
+                        new Aws.LB.Inputs.ListenerRuleConditionQueryStringArgs
                         {
-                            { "key", "health" },
-                            { "value", "check" },
+                            Key = "health",
+                            Value = "check",
                         },
-                        
+                        new Aws.LB.Inputs.ListenerRuleConditionQueryStringArgs
                         {
-                            { "value", "bar" },
+                            Value = "bar",
                         },
                     },
                 },
@@ -261,7 +261,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lb.NewLoadBalancer(ctx, "frontEndLoadBalancer", nil)
+		_, err := lb.NewLoadBalancer(ctx, "frontEndLoadBalancer", nil)
 		if err != nil {
 			return err
 		}
@@ -396,13 +396,13 @@ func main() {
 			},
 			Conditions: lb.ListenerRuleConditionArray{
 				&lb.ListenerRuleConditionArgs{
-					QueryString: pulumi.Array{
-						pulumi.Map{
-							"key":   pulumi.String("health"),
-							"value": pulumi.String("check"),
+					QueryStrings: lb.ListenerRuleConditionQueryStringArray{
+						&lb.ListenerRuleConditionQueryStringArgs{
+							Key:   pulumi.String("health"),
+							Value: pulumi.String("check"),
 						},
-						pulumi.Map{
-							"value": pulumi.String("bar"),
+						&lb.ListenerRuleConditionQueryStringArgs{
+							Value: pulumi.String("bar"),
 						},
 					},
 				},
@@ -545,7 +545,7 @@ health_check = aws.lb.ListenerRule("healthCheck",
         "type": "fixed-response",
     }],
     conditions=[{
-        "queryString": [
+        "queryStrings": [
             {
                 "key": "health",
                 "value": "check",

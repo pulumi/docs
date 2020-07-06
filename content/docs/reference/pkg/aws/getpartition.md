@@ -70,7 +70,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+		_, err = iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
 					Actions: []string{

@@ -31,6 +31,12 @@ class MyStack : Stack
         var fooRecorderStatus = new Aws.Cfg.RecorderStatus("fooRecorderStatus", new Aws.Cfg.RecorderStatusArgs
         {
             IsEnabled = true,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_config_delivery_channel.foo",
+            },
         });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
@@ -114,9 +120,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cfg.NewRecorderStatus(ctx, "fooRecorderStatus", &cfg.RecorderStatusArgs{
+		_, err := cfg.NewRecorderStatus(ctx, "fooRecorderStatus", &cfg.RecorderStatusArgs{
 			IsEnabled: pulumi.Bool(true),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_config_delivery_channel.foo",
+		}))
 		if err != nil {
 			return err
 		}
@@ -172,7 +180,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-foo_recorder_status = aws.cfg.RecorderStatus("fooRecorderStatus", is_enabled=True)
+foo_recorder_status = aws.cfg.RecorderStatus("fooRecorderStatus", is_enabled=True,
+opts=ResourceOptions(depends_on=["aws_config_delivery_channel.foo"]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [

@@ -81,19 +81,19 @@ class MyStack : Stack
             {
                 new Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetArgs
                 {
-                    Ec2TagFilter = 
+                    Ec2TagFilters = 
                     {
-                        
+                        new Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs
                         {
-                            { "key", "filterkey1" },
-                            { "type", "KEY_AND_VALUE" },
-                            { "value", "filtervalue" },
+                            Key = "filterkey1",
+                            Type = "KEY_AND_VALUE",
+                            Value = "filtervalue",
                         },
-                        
+                        new Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs
                         {
-                            { "key", "filterkey2" },
-                            { "type", "KEY_AND_VALUE" },
-                            { "value", "filtervalue" },
+                            Key = "filterkey2",
+                            Type = "KEY_AND_VALUE",
+                            Value = "filtervalue",
                         },
                     },
                 },
@@ -172,16 +172,16 @@ func main() {
 			DeploymentGroupName: pulumi.String("example-group"),
 			Ec2TagSets: codedeploy.DeploymentGroupEc2TagSetArray{
 				&codedeploy.DeploymentGroupEc2TagSetArgs{
-					Ec2TagFilter: pulumi.MapArray{
-						pulumi.Map{
-							"key":   pulumi.String("filterkey1"),
-							"type":  pulumi.String("KEY_AND_VALUE"),
-							"value": pulumi.String("filtervalue"),
+					Ec2TagFilters: codedeploy.DeploymentGroupEc2TagSetEc2TagFilterArray{
+						&codedeploy.DeploymentGroupEc2TagSetEc2TagFilterArgs{
+							Key:   pulumi.String("filterkey1"),
+							Type:  pulumi.String("KEY_AND_VALUE"),
+							Value: pulumi.String("filtervalue"),
 						},
-						pulumi.Map{
-							"key":   pulumi.String("filterkey2"),
-							"type":  pulumi.String("KEY_AND_VALUE"),
-							"value": pulumi.String("filtervalue"),
+						&codedeploy.DeploymentGroupEc2TagSetEc2TagFilterArgs{
+							Key:   pulumi.String("filterkey2"),
+							Type:  pulumi.String("KEY_AND_VALUE"),
+							Value: pulumi.String("filtervalue"),
 						},
 					},
 				},
@@ -244,7 +244,7 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     },
     deployment_group_name="example-group",
     ec2_tag_sets=[{
-        "ec2TagFilter": [
+        "ec2_tag_filters": [
             {
                 "key": "filterkey1",
                 "type": "KEY_AND_VALUE",
@@ -331,198 +331,6 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 
 {{% /example %}}
 
-### Blue Green Deployments with ECS
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleApplication = new Aws.CodeDeploy.Application("exampleApplication", new Aws.CodeDeploy.ApplicationArgs
-        {
-            ComputePlatform = "ECS",
-        });
-        var exampleDeploymentGroup = new Aws.CodeDeploy.DeploymentGroup("exampleDeploymentGroup", new Aws.CodeDeploy.DeploymentGroupArgs
-        {
-            AppName = exampleApplication.Name,
-            AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
-            {
-                Enabled = true,
-                Events = 
-                {
-                    "DEPLOYMENT_FAILURE",
-                },
-            },
-            BlueGreenDeploymentConfig = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigArgs
-            {
-                DeploymentReadyOption = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs
-                {
-                    ActionOnTimeout = "CONTINUE_DEPLOYMENT",
-                },
-                TerminateBlueInstancesOnDeploymentSuccess = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs
-                {
-                    Action = "TERMINATE",
-                    TerminationWaitTimeInMinutes = 5,
-                },
-            },
-            DeploymentConfigName = "CodeDeployDefault.ECSAllAtOnce",
-            DeploymentGroupName = "example",
-            DeploymentStyle = new Aws.CodeDeploy.Inputs.DeploymentGroupDeploymentStyleArgs
-            {
-                DeploymentOption = "WITH_TRAFFIC_CONTROL",
-                DeploymentType = "BLUE_GREEN",
-            },
-            EcsService = new Aws.CodeDeploy.Inputs.DeploymentGroupEcsServiceArgs
-            {
-                ClusterName = aws_ecs_cluster.Example.Name,
-                ServiceName = aws_ecs_service.Example.Name,
-            },
-            LoadBalancerInfo = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoArgs
-            {
-                TargetGroupPairInfo = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs
-                {
-                    ProdTrafficRoute = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs
-                    {
-                        ListenerArns = 
-                        {
-                            aws_lb_listener.Example.Arn,
-                        },
-                    },
-                    TargetGroup = 
-                    {
-                        
-                        {
-                            { "name", aws_lb_target_group.Blue.Name },
-                        },
-                        
-                        {
-                            { "name", aws_lb_target_group.Green.Name },
-                        },
-                    },
-                },
-            },
-            ServiceRoleArn = aws_iam_role.Example.Arn,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_application = aws.codedeploy.Application("exampleApplication", compute_platform="ECS")
-example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
-    app_name=example_application.name,
-    auto_rollback_configuration={
-        "enabled": True,
-        "events": ["DEPLOYMENT_FAILURE"],
-    },
-    blue_green_deployment_config={
-        "deploymentReadyOption": {
-            "actionOnTimeout": "CONTINUE_DEPLOYMENT",
-        },
-        "terminateBlueInstancesOnDeploymentSuccess": {
-            "action": "TERMINATE",
-            "terminationWaitTimeInMinutes": 5,
-        },
-    },
-    deployment_config_name="CodeDeployDefault.ECSAllAtOnce",
-    deployment_group_name="example",
-    deployment_style={
-        "deploymentOption": "WITH_TRAFFIC_CONTROL",
-        "deploymentType": "BLUE_GREEN",
-    },
-    ecs_service={
-        "cluster_name": aws_ecs_cluster["example"]["name"],
-        "service_name": aws_ecs_service["example"]["name"],
-    },
-    load_balancer_info={
-        "targetGroupPairInfo": {
-            "prodTrafficRoute": {
-                "listenerArns": [aws_lb_listener["example"]["arn"]],
-            },
-            "targetGroup": [
-                {
-                    "name": aws_lb_target_group["blue"]["name"],
-                },
-                {
-                    "name": aws_lb_target_group["green"]["name"],
-                },
-            ],
-        },
-    },
-    service_role_arn=aws_iam_role["example"]["arn"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleApplication = new aws.codedeploy.Application("example", {
-    computePlatform: "ECS",
-});
-const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
-    appName: exampleApplication.name,
-    autoRollbackConfiguration: {
-        enabled: true,
-        events: ["DEPLOYMENT_FAILURE"],
-    },
-    blueGreenDeploymentConfig: {
-        deploymentReadyOption: {
-            actionOnTimeout: "CONTINUE_DEPLOYMENT",
-        },
-        terminateBlueInstancesOnDeploymentSuccess: {
-            action: "TERMINATE",
-            terminationWaitTimeInMinutes: 5,
-        },
-    },
-    deploymentConfigName: "CodeDeployDefault.ECSAllAtOnce",
-    deploymentGroupName: "example",
-    deploymentStyle: {
-        deploymentOption: "WITH_TRAFFIC_CONTROL",
-        deploymentType: "BLUE_GREEN",
-    },
-    ecsService: {
-        clusterName: aws_ecs_cluster_example.name,
-        serviceName: aws_ecs_service_example.name,
-    },
-    loadBalancerInfo: {
-        targetGroupPairInfo: {
-            prodTrafficRoute: {
-                listenerArns: [aws_lb_listener_example.arn],
-            },
-            targetGroups: [
-                {
-                    name: aws_lb_target_group_blue.name,
-                },
-                {
-                    name: aws_lb_target_group_green.name,
-                },
-            ],
-        },
-    },
-    serviceRoleArn: aws_iam_role_example.arn,
-});
-```
-
-{{% /example %}}
-
 ### Blue Green Deployments with Servers and Classic ELB
 {{% example csharp %}}
 ```csharp
@@ -563,11 +371,11 @@ class MyStack : Stack
             },
             LoadBalancerInfo = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoArgs
             {
-                ElbInfo = 
+                ElbInfos = 
                 {
-                    
+                    new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoElbInfoArgs
                     {
-                        { "name", aws_elb.Example.Name },
+                        Name = aws_elb.Example.Name,
                     },
                 },
             },
@@ -615,9 +423,9 @@ func main() {
 				DeploymentType:   pulumi.String("BLUE_GREEN"),
 			},
 			LoadBalancerInfo: &codedeploy.DeploymentGroupLoadBalancerInfoArgs{
-				ElbInfo: pulumi.MapArray{
-					pulumi.Map{
-						"name": pulumi.String(aws_elb.Example.Name),
+				ElbInfos: codedeploy.DeploymentGroupLoadBalancerInfoElbInfoArray{
+					&codedeploy.DeploymentGroupLoadBalancerInfoElbInfoArgs{
+						Name: pulumi.String(aws_elb.Example.Name),
 					},
 				},
 			},
@@ -659,7 +467,7 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
         "deploymentType": "BLUE_GREEN",
     },
     load_balancer_info={
-        "elbInfo": [{
+        "elbInfos": [{
             "name": aws_elb["example"]["name"],
         }],
     },

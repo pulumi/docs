@@ -187,7 +187,7 @@ func main() {
 		_, err = transfer.NewServer(ctx, "fooServer", &transfer.ServerArgs{
 			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
 			LoggingRole:          fooRole.Arn,
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"ENV":  pulumi.String("test"),
 				"NAME": pulumi.String("tf-acc-test-transfer-server"),
 			},

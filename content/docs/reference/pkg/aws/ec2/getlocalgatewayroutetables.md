@@ -12,6 +12,37 @@ meta_desc: "Explore the GetLocalGatewayRouteTables function of the ec2 module, i
 
 Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooLocalGatewayRouteTable = pulumi.output(aws.ec2.getLocalGatewayRouteTable({ async: true }));
+
+export const foo = fooLocalGatewayRouteTable.ids;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetLocalGatewayRouteTables {#using}

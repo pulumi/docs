@@ -79,14 +79,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSClusterPolicy", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEKSClusterPolicy", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"),
 			Role:      example.Name,
 		})
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSServicePolicy", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEKSServicePolicy", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSServicePolicy"),
 			Role:      example.Name,
 		})
@@ -181,6 +181,12 @@ class MyStack : Stack
                 "api",
                 "audit",
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_cloudwatch_log_group.example",
+            },
         });
         var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
         {
@@ -205,12 +211,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
+		_, err := eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
 			EnabledClusterLogTypes: pulumi.StringArray{
 				pulumi.String("api"),
 				pulumi.String("audit"),
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_cloudwatch_log_group.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -239,7 +247,8 @@ if cluster_name is None:
 example_cluster = aws.eks.Cluster("exampleCluster", enabled_cluster_log_types=[
     "api",
     "audit",
-])
+],
+opts=ResourceOptions(depends_on=["aws_cloudwatch_log_group.example"]))
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
 ```
 
@@ -263,6 +272,54 @@ const exampleCluster = new aws.eks.Cluster("example", {
         "audit",
     ],
 }, { dependsOn: [exampleLogGroup] });
+```
+
+{{% /example %}}
+
+### Enabling IAM Roles for Service Accounts
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleCluster = new aws.eks.Cluster("example", {});
+const exampleOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("example", {
+    clientIdLists: ["sts.amazonaws.com"],
+    thumbprintLists: [],
+    url: exampleCluster.identities[0].oidcs[0].issuer,
+});
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
+const exampleAssumeRolePolicy = pulumi.all([exampleOpenIdConnectProvider.url, exampleOpenIdConnectProvider.arn]).apply(([url, arn]) => aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRoleWithWebIdentity"],
+        conditions: [{
+            test: "StringEquals",
+            values: ["system:serviceaccount:kube-system:aws-node"],
+            variable: `${url.replace("https://", "")}:sub`,
+        }],
+        effect: "Allow",
+        principals: [{
+            identifiers: [arn],
+            type: "Federated",
+        }],
+    }],
+}, { async: true }));
+const exampleRole = new aws.iam.Role("example", {
+    assumeRolePolicy: exampleAssumeRolePolicy.json,
+});
 ```
 
 {{% /example %}}

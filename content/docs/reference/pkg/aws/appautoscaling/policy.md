@@ -183,12 +183,12 @@ class MyStack : Stack
                 AdjustmentType = "ChangeInCapacity",
                 Cooldown = 60,
                 MetricAggregationType = "Maximum",
-                StepAdjustment = 
+                StepAdjustments = 
                 {
-                    
+                    new Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs
                     {
-                        { "metricIntervalUpperBound", 0 },
-                        { "scalingAdjustment", -1 },
+                        MetricIntervalUpperBound = "0",
+                        ScalingAdjustment = -1,
                     },
                 },
             },
@@ -230,10 +230,10 @@ func main() {
 				AdjustmentType:        pulumi.String("ChangeInCapacity"),
 				Cooldown:              pulumi.Int(60),
 				MetricAggregationType: pulumi.String("Maximum"),
-				StepAdjustment: pulumi.MapArray{
-					pulumi.Map{
-						"metricIntervalUpperBound": pulumi.Float64(0),
-						"scalingAdjustment":        -1,
+				StepAdjustments: appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustmentArray{
+					&appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs{
+						MetricIntervalUpperBound: pulumi.String("0"),
+						ScalingAdjustment:        pulumi.Int(-1),
 					},
 				},
 			},
@@ -268,7 +268,7 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
         "adjustment_type": "ChangeInCapacity",
         "cooldown": 60,
         "metric_aggregation_type": "Maximum",
-        "stepAdjustment": [{
+        "step_adjustments": [{
             "metricIntervalUpperBound": 0,
             "scaling_adjustment": -1,
         }],
@@ -305,6 +305,46 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
         }],
     },
 });
+```
+
+{{% /example %}}
+
+### Preserve desired count when updating an autoscaled ECS Service
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+ecs_service = aws.ecs.Service("ecsService",
+    cluster="clusterName",
+    desired_count=2,
+    lifecycle={
+        "ignoreChanges": ["desiredCount"],
+    },
+    task_definition="taskDefinitionFamily:1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ecsService = new aws.ecs.Service("ecs_service", {
+    cluster: "clusterName",
+    desiredCount: 2,
+    taskDefinition: "taskDefinitionFamily:1",
+}, { ignoreChanges: ["desiredCount"] });
 ```
 
 {{% /example %}}

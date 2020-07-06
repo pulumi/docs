@@ -2,7 +2,7 @@
 ---
 title: "PublicKey"
 title_tag: "Resource PublicKey | Module cloudfront | Package AWS"
-meta_desc: "Explore the PublicKey resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. "
+meta_desc: "Explore the PublicKey resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 
@@ -11,6 +11,65 @@ meta_desc: "Explore the PublicKey resource of the cloudfront module, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CloudFront.PublicKey("example", new Aws.CloudFront.PublicKeyArgs
+        {
+            Comment = "test public key",
+            EncodedKey = File.ReadAllText("public_key.pem"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudfront.PublicKey("example",
+    comment="test public key",
+    encoded_key=(lambda path: open(path).read())("public_key.pem"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const example = new aws.cloudfront.PublicKey("example", {
+    comment: "test public key",
+    encodedKey: fs.readFileSync("public_key.pem", "utf-8"),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublicKey Resource {#create}

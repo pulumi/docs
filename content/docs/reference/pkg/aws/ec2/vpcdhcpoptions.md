@@ -59,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewVpcDhcpOptions(ctx, "dnsResolver", &ec2.VpcDhcpOptionsArgs{
+		_, err := ec2.NewVpcDhcpOptions(ctx, "dnsResolver", &ec2.VpcDhcpOptionsArgs{
 			DomainNameServers: pulumi.StringArray{
 				pulumi.String("8.8.8.8"),
 				pulumi.String("8.8.4.4"),

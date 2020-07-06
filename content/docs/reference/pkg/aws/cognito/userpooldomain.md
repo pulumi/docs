@@ -108,14 +108,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var example = new Aws.Cognito.UserPool("example", new Aws.Cognito.UserPoolArgs
+        var exampleUserPool = new Aws.Cognito.UserPool("exampleUserPool", new Aws.Cognito.UserPoolArgs
         {
         });
         var main = new Aws.Cognito.UserPoolDomain("main", new Aws.Cognito.UserPoolDomainArgs
         {
             CertificateArn = aws_acm_certificate.Cert.Arn,
             Domain = "example-domain.example.com",
-            UserPoolId = example.Id,
+            UserPoolId = exampleUserPool.Id,
+        });
+        var exampleZone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+        {
+            Name = "example.com",
+        }));
+        var auth_cognito_A = new Aws.Route53.Record("auth-cognito-A", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    EvaluateTargetHealth = false,
+                    Name = main.CloudfrontDistributionArn,
+                    ZoneId = "Z2FDTNDATAQYW2",
+                },
+            },
+            Name = main.Domain,
+            Type = "A",
+            ZoneId = exampleZone.Apply(exampleZone => exampleZone.ZoneId),
         });
     }
 
@@ -130,19 +149,42 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := cognito.NewUserPool(ctx, "example", nil)
+		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
 		if err != nil {
 			return err
 		}
-		_, err = cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
+		main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
 			CertificateArn: pulumi.String(aws_acm_certificate.Cert.Arn),
 			Domain:         pulumi.String("example-domain.example.com"),
-			UserPoolId:     example.ID(),
+			UserPoolId:     exampleUserPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "example.com"
+		exampleZone, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = route53.NewRecord(ctx, "auth_cognito_A", &route53.RecordArgs{
+			Aliases: route53.RecordAliasArray{
+				&route53.RecordAliasArgs{
+					EvaluateTargetHealth: pulumi.Bool(false),
+					Name:                 main.CloudfrontDistributionArn,
+					ZoneId:               pulumi.String("Z2FDTNDATAQYW2"),
+				},
+			},
+			Name:   main.Domain,
+			Type:   pulumi.String("A"),
+			ZoneId: pulumi.String(exampleZone.ZoneId),
 		})
 		if err != nil {
 			return err
@@ -159,11 +201,21 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cognito.UserPool("example")
+example_user_pool = aws.cognito.UserPool("exampleUserPool")
 main = aws.cognito.UserPoolDomain("main",
     certificate_arn=aws_acm_certificate["cert"]["arn"],
     domain="example-domain.example.com",
-    user_pool_id=example.id)
+    user_pool_id=example_user_pool.id)
+example_zone = aws.route53.get_zone(name="example.com")
+auth_cognito__a = aws.route53.Record("auth-cognito-A",
+    aliases=[{
+        "evaluateTargetHealth": False,
+        "name": main.cloudfront_distribution_arn,
+        "zone_id": "Z2FDTNDATAQYW2",
+    }],
+    name=main.domain,
+    type="A",
+    zone_id=example_zone.zone_id)
 ```
 
 {{% /example %}}
@@ -174,11 +226,25 @@ main = aws.cognito.UserPoolDomain("main",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.cognito.UserPool("example", {});
+const exampleUserPool = new aws.cognito.UserPool("example", {});
 const main = new aws.cognito.UserPoolDomain("main", {
     certificateArn: aws_acm_certificate_cert.arn,
     domain: "example-domain.example.com",
-    userPoolId: example.id,
+    userPoolId: exampleUserPool.id,
+});
+const exampleZone = pulumi.output(aws.route53.getZone({
+    name: "example.com",
+}, { async: true }));
+const auth_cognito_A = new aws.route53.Record("auth-cognito-A", {
+    aliases: [{
+        evaluateTargetHealth: false,
+        name: main.cloudfrontDistributionArn,
+        // This zone_id is fixed
+        zoneId: "Z2FDTNDATAQYW2",
+    }],
+    name: main.domain,
+    type: "A",
+    zoneId: exampleZone.zoneId!,
 });
 ```
 
@@ -558,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -619,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -680,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -741,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -939,7 +1005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1023,7 +1089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,7 +1173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1191,7 +1257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the CloudFront distribution.
+    <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -63,7 +63,7 @@ func main() {
 			return err
 		}
 		opt1 := brokerName
-		_, err := mq.LookupBroker(ctx, &mq.LookupBrokerArgs{
+		_, err = mq.LookupBroker(ctx, &mq.LookupBrokerArgs{
 			BrokerName: &opt1,
 		}, nil)
 		if err != nil {

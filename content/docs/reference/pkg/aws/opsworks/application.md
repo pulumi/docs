@@ -12,6 +12,150 @@ meta_desc: "Explore the Application resource of the opsworks module, including e
 
 Provides an OpsWorks application resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo_app = new Aws.OpsWorks.Application("foo-app", new Aws.OpsWorks.ApplicationArgs
+        {
+            AppSources = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationAppSourceArgs
+                {
+                    Revision = "master",
+                    Type = "git",
+                    Url = "https://github.com/example.git",
+                },
+            },
+            AutoBundleOnDeploy = "true",
+            Description = "This is a Rails application",
+            DocumentRoot = "public",
+            Domains = 
+            {
+                "example.com",
+                "sub.example.com",
+            },
+            EnableSsl = true,
+            Environments = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationEnvironmentArgs
+                {
+                    Key = "key",
+                    Secure = false,
+                    Value = "value",
+                },
+            },
+            RailsEnv = "staging",
+            ShortName = "foobar",
+            SslConfigurations = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationSslConfigurationArgs
+                {
+                    Certificate = File.ReadAllText("./foobar.crt"),
+                    PrivateKey = File.ReadAllText("./foobar.key"),
+                },
+            },
+            StackId = aws_opsworks_stack.Main.Id,
+            Type = "rails",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_app = aws.opsworks.Application("foo-app",
+    app_sources=[{
+        "revision": "master",
+        "type": "git",
+        "url": "https://github.com/example.git",
+    }],
+    auto_bundle_on_deploy=True,
+    description="This is a Rails application",
+    document_root="public",
+    domains=[
+        "example.com",
+        "sub.example.com",
+    ],
+    enable_ssl=True,
+    environments=[{
+        "key": "key",
+        "secure": False,
+        "value": "value",
+    }],
+    rails_env="staging",
+    short_name="foobar",
+    ssl_configurations=[{
+        "certificate": (lambda path: open(path).read())("./foobar.crt"),
+        "private_key": (lambda path: open(path).read())("./foobar.key"),
+    }],
+    stack_id=aws_opsworks_stack["main"]["id"],
+    type="rails")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const foo_app = new aws.opsworks.Application("foo-app", {
+    appSources: [{
+        revision: "master",
+        type: "git",
+        url: "https://github.com/example.git",
+    }],
+    autoBundleOnDeploy: "true",
+    description: "This is a Rails application",
+    documentRoot: "public",
+    domains: [
+        "example.com",
+        "sub.example.com",
+    ],
+    enableSsl: true,
+    environments: [{
+        key: "key",
+        secure: false,
+        value: "value",
+    }],
+    railsEnv: "staging",
+    shortName: "foobar",
+    sslConfigurations: [{
+        certificate: fs.readFileSync("./foobar.crt", "utf-8"),
+        privateKey: fs.readFileSync("./foobar.key", "utf-8"),
+    }],
+    stackId: aws_opsworks_stack_main.id,
+    type: "rails",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

@@ -32,6 +32,56 @@ large files efficiently.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Example
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iam_for_lambda", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const testLambda = new aws.lambda.Function("test_lambda", {
+    environment: {
+        variables: {
+            foo: "bar",
+        },
+    },
+    code: new pulumi.asset.FileArchive("lambda_function_payload.zip"),
+    handler: "exports.test",
+    role: iamForLambda.arn,
+    runtime: "nodejs12.x",
+});
+```
+
+{{% /example %}}
+
 ### Lambda Layers
 {{% example csharp %}}
 ```csharp
@@ -127,6 +177,13 @@ class MyStack : Stack
     {
         var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
         {
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_cloudwatch_log_group.example",
+                "aws_iam_role_policy_attachment.lambda_logs",
+            },
         });
         // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
         // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
@@ -183,7 +240,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewFunction(ctx, "testLambda", nil)
+		_, err := lambda.NewFunction(ctx, "testLambda", nil, pulumi.DependsOn([]pulumi.Resource{
+			"aws_cloudwatch_log_group.example",
+			"aws_iam_role_policy_attachment.lambda_logs",
+		}))
 		if err != nil {
 			return err
 		}
@@ -220,7 +280,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test_lambda = aws.lambda_.Function("testLambda")
+test_lambda = aws.lambda_.Function("testLambda", opts=ResourceOptions(depends_on=[
+        "aws_cloudwatch_log_group.example",
+        "aws_iam_role_policy_attachment.lambda_logs",
+    ]))
 # This is to optionally manage the CloudWatch Log Group for the Lambda Function.
 # If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
 example = aws.cloudwatch.LogGroup("example", retention_in_days=14)

@@ -23,6 +23,88 @@ probably be SQS queues.
 
 > **NOTE:** If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userUpdatesSqsTarget = new Aws.Sns.TopicSubscription("userUpdatesSqsTarget", new Aws.Sns.TopicSubscriptionArgs
+        {
+            Endpoint = "arn:aws:sqs:us-west-2:432981146916:queue-too",
+            Protocol = "sqs",
+            Topic = "arn:aws:sns:us-west-2:432981146916:user-updates-topic",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sns.NewTopicSubscription(ctx, "userUpdatesSqsTarget", &sns.TopicSubscriptionArgs{
+			Endpoint: pulumi.String("arn:aws:sqs:us-west-2:432981146916:queue-too"),
+			Protocol: pulumi.String("sqs"),
+			Topic:    pulumi.String("arn:aws:sns:us-west-2:432981146916:user-updates-topic"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates_sqs_target = aws.sns.TopicSubscription("userUpdatesSqsTarget",
+    endpoint="arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol="sqs",
+    topic="arn:aws:sns:us-west-2:432981146916:user-updates-topic")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdatesSqsTarget = new aws.sns.TopicSubscription("user_updates_sqs_target", {
+    endpoint: "arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol: "sqs",
+    topic: "arn:aws:sns:us-west-2:432981146916:user-updates-topic",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TopicSubscription Resource {#create}

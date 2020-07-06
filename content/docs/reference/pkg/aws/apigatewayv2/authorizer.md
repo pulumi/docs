@@ -55,7 +55,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = apigatewayv2.NewAuthorizer(ctx, "example", &apigatewayv2.AuthorizerArgs{
+		_, err := apigatewayv2.NewAuthorizer(ctx, "example", &apigatewayv2.AuthorizerArgs{
 			ApiId:          pulumi.String(aws_apigatewayv2_api.Example.Id),
 			AuthorizerType: pulumi.String("REQUEST"),
 			AuthorizerUri:  pulumi.String(aws_lambda_function.Example.Invoke_arn),
@@ -123,7 +123,7 @@ class MyStack : Stack
             },
             JwtConfiguration = new Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs
             {
-                Audience = 
+                Audiences = 
                 {
                     "example",
                 },
@@ -150,14 +150,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = apigatewayv2.NewAuthorizer(ctx, "example", &apigatewayv2.AuthorizerArgs{
+		_, err := apigatewayv2.NewAuthorizer(ctx, "example", &apigatewayv2.AuthorizerArgs{
 			ApiId:          pulumi.String(aws_apigatewayv2_api.Example.Id),
 			AuthorizerType: pulumi.String("JWT"),
 			IdentitySources: pulumi.StringArray{
 				pulumi.String(fmt.Sprintf("%v%v", "$", "request.header.Authorization")),
 			},
 			JwtConfiguration: &apigatewayv2.AuthorizerJwtConfigurationArgs{
-				Audience: pulumi.StringArray{
+				Audiences: pulumi.StringArray{
 					pulumi.String("example"),
 				},
 				Issuer: pulumi.String(fmt.Sprintf("%v%v", "https://", aws_cognito_user_pool.Example.Endpoint)),
@@ -183,7 +183,7 @@ example = aws.apigatewayv2.Authorizer("example",
     authorizer_type="JWT",
     identity_sources=["$request.header.Authorization"],
     jwt_configuration={
-        "audience": ["example"],
+        "audiences": ["example"],
         "issuer": f"https://{aws_cognito_user_pool['example']['endpoint']}",
     })
 ```

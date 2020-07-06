@@ -63,6 +63,12 @@ class MyStack : Stack
             {
                 { "answer", "42" },
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                myDemoIntegration,
+            },
         });
     }
 
@@ -117,10 +123,12 @@ func main() {
 		_, err = apigateway.NewDeployment(ctx, "myDemoDeployment", &apigateway.DeploymentArgs{
 			RestApi:   myDemoAPI.ID(),
 			StageName: pulumi.String("test"),
-			Variables: pulumi.Map{
+			Variables: pulumi.StringMap{
 				"answer": pulumi.String("42"),
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			myDemoIntegration,
+		}))
 		if err != nil {
 			return err
 		}
@@ -156,7 +164,8 @@ my_demo_deployment = aws.apigateway.Deployment("myDemoDeployment",
     stage_name="test",
     variables={
         "answer": "42",
-    })
+    },
+    opts=ResourceOptions(depends_on=[my_demo_integration]))
 ```
 
 {{% /example %}}
@@ -191,6 +200,8 @@ const myDemoDeployment = new aws.apigateway.Deployment("myDemoDeployment", {
     variables: {
         answer: "42",
     },
+}, {
+    dependsOn: [myDemoIntegration],
 });
 ```
 

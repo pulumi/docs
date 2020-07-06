@@ -172,6 +172,111 @@ const exampleRecord = new aws.route53.Record("example", {
 
 {{% /example %}}
 
+### Edge Optimized (IAM Certificate)
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
+        {
+            CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
+            CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
+            CertificateName = "example-api",
+            CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
+            DomainName = "api.example.com",
+        });
+        // Example DNS record using Route53.
+        // Route53 is not specifically required; any DNS host can be used.
+        var exampleRecord = new Aws.Route53.Record("exampleRecord", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    EvaluateTargetHealth = true,
+                    Name = exampleDomainName.CloudfrontDomainName,
+                    ZoneId = exampleDomainName.CloudfrontZoneId,
+                },
+            },
+            Name = exampleDomainName.Domain,
+            Type = "A",
+            ZoneId = aws_route53_zone.Example.Id,
+        });
+        // See aws_route53_zone for how to create this
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_domain_name = aws.apigateway.DomainName("exampleDomainName",
+    certificate_body=(lambda path: open(path).read())(f"{path['module']}/example.com/example.crt"),
+    certificate_chain=(lambda path: open(path).read())(f"{path['module']}/example.com/ca.crt"),
+    certificate_name="example-api",
+    certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"),
+    domain_name="api.example.com")
+# Example DNS record using Route53.
+# Route53 is not specifically required; any DNS host can be used.
+example_record = aws.route53.Record("exampleRecord",
+    aliases=[{
+        "evaluateTargetHealth": True,
+        "name": example_domain_name.cloudfront_domain_name,
+        "zone_id": example_domain_name.cloudfront_zone_id,
+    }],
+    name=example_domain_name.domain_name,
+    type="A",
+    zone_id=aws_route53_zone["example"]["id"])
+# See aws_route53_zone for how to create this
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const exampleDomainName = new aws.apigateway.DomainName("example", {
+    certificateBody: fs.readFileSync(`./example.com/example.crt`, "utf-8"),
+    certificateChain: fs.readFileSync(`./example.com/ca.crt`, "utf-8"),
+    certificateName: "example-api",
+    certificatePrivateKey: fs.readFileSync(`./example.com/example.key`, "utf-8"),
+    domainName: "api.example.com",
+});
+// Example DNS record using Route53.
+// Route53 is not specifically required; any DNS host can be used.
+const exampleRecord = new aws.route53.Record("example", {
+    aliases: [{
+        evaluateTargetHealth: true,
+        name: exampleDomainName.cloudfrontDomainName,
+        zoneId: exampleDomainName.cloudfrontZoneId,
+    }],
+    name: exampleDomainName.domainName,
+    type: "A",
+    zoneId: aws_route53_zone_example.id, // See aws_route53_zone for how to create this
+});
+```
+
+{{% /example %}}
+
 ### Regional (ACM Certificate)
 {{% example csharp %}}
 ```csharp
@@ -297,6 +402,119 @@ const exampleDomainName = new aws.apigateway.DomainName("example", {
         types: "REGIONAL",
     },
     regionalCertificateArn: aws_acm_certificate_validation_example.certificateArn,
+});
+// Example DNS record using Route53.
+// Route53 is not specifically required; any DNS host can be used.
+const exampleRecord = new aws.route53.Record("example", {
+    aliases: [{
+        evaluateTargetHealth: true,
+        name: exampleDomainName.regionalDomainName,
+        zoneId: exampleDomainName.regionalZoneId,
+    }],
+    name: exampleDomainName.domainName,
+    type: "A",
+    zoneId: aws_route53_zone_example.id,
+});
+```
+
+{{% /example %}}
+
+### Regional (IAM Certificate)
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
+        {
+            CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
+            CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
+            CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
+            DomainName = "api.example.com",
+            EndpointConfiguration = new Aws.ApiGateway.Inputs.DomainNameEndpointConfigurationArgs
+            {
+                Types = "REGIONAL",
+            },
+            RegionalCertificateName = "example-api",
+        });
+        // Example DNS record using Route53.
+        // Route53 is not specifically required; any DNS host can be used.
+        var exampleRecord = new Aws.Route53.Record("exampleRecord", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    EvaluateTargetHealth = true,
+                    Name = exampleDomainName.RegionalDomainName,
+                    ZoneId = exampleDomainName.RegionalZoneId,
+                },
+            },
+            Name = exampleDomainName.Domain,
+            Type = "A",
+            ZoneId = aws_route53_zone.Example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_domain_name = aws.apigateway.DomainName("exampleDomainName",
+    certificate_body=(lambda path: open(path).read())(f"{path['module']}/example.com/example.crt"),
+    certificate_chain=(lambda path: open(path).read())(f"{path['module']}/example.com/ca.crt"),
+    certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"),
+    domain_name="api.example.com",
+    endpoint_configuration={
+        "types": "REGIONAL",
+    },
+    regional_certificate_name="example-api")
+# Example DNS record using Route53.
+# Route53 is not specifically required; any DNS host can be used.
+example_record = aws.route53.Record("exampleRecord",
+    aliases=[{
+        "evaluateTargetHealth": True,
+        "name": example_domain_name.regional_domain_name,
+        "zone_id": example_domain_name.regional_zone_id,
+    }],
+    name=example_domain_name.domain_name,
+    type="A",
+    zone_id=aws_route53_zone["example"]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const exampleDomainName = new aws.apigateway.DomainName("example", {
+    certificateBody: fs.readFileSync(`./example.com/example.crt`, "utf-8"),
+    certificateChain: fs.readFileSync(`./example.com/ca.crt`, "utf-8"),
+    certificatePrivateKey: fs.readFileSync(`./example.com/example.key`, "utf-8"),
+    domainName: "api.example.com",
+    endpointConfiguration: {
+        types: "REGIONAL",
+    },
+    regionalCertificateName: "example-api",
 });
 // Example DNS record using Route53.
 // Route53 is not specifically required; any DNS host can be used.

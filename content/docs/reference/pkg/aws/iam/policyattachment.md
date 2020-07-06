@@ -129,7 +129,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewPolicyAttachment(ctx, "test-attach", &iam.PolicyAttachmentArgs{
+		_, err = iam.NewPolicyAttachment(ctx, "test_attach", &iam.PolicyAttachmentArgs{
 			Groups: pulumi.StringArray{
 				group.Name,
 			},

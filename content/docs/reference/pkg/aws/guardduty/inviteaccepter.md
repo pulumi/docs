@@ -31,6 +31,9 @@ class MyStack : Stack
         });
         var memberDetector = new Aws.GuardDuty.Detector("memberDetector", new Aws.GuardDuty.DetectorArgs
         {
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.dev",
         });
         var dev = new Aws.GuardDuty.Member("dev", new Aws.GuardDuty.MemberArgs
         {
@@ -43,6 +46,13 @@ class MyStack : Stack
         {
             DetectorId = memberDetector.Id,
             MasterAccountId = master.AccountId,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.dev",
+            DependsOn = 
+            {
+                "aws_guardduty_member.dev",
+            },
         });
     }
 
@@ -66,7 +76,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil)
+		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil, pulumi.Provider("aws.dev"))
 		if err != nil {
 			return err
 		}
@@ -82,7 +92,9 @@ func main() {
 		_, err = guardduty.NewInviteAccepter(ctx, "memberInviteAccepter", &guardduty.InviteAccepterArgs{
 			DetectorId:      memberDetector.ID(),
 			MasterAccountId: master.AccountId,
-		})
+		}, pulumi.Provider("aws.dev"), pulumi.DependsOn([]pulumi.Resource{
+			"aws_guardduty_member.dev",
+		}))
 		if err != nil {
 			return err
 		}
@@ -99,7 +111,7 @@ import pulumi
 import pulumi_aws as aws
 
 master = aws.guardduty.Detector("master")
-member_detector = aws.guardduty.Detector("memberDetector")
+member_detector = aws.guardduty.Detector("memberDetector", opts=ResourceOptions(provider="aws.dev"))
 dev = aws.guardduty.Member("dev",
     account_id=member_detector.account_id,
     detector_id=master.id,
@@ -107,7 +119,9 @@ dev = aws.guardduty.Member("dev",
     invite=True)
 member_invite_accepter = aws.guardduty.InviteAccepter("memberInviteAccepter",
     detector_id=member_detector.id,
-    master_account_id=master.account_id)
+    master_account_id=master.account_id,
+    opts=ResourceOptions(provider="aws.dev",
+        depends_on=["aws_guardduty_member.dev"]))
 ```
 
 {{% /example %}}
@@ -119,7 +133,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const master = new aws.guardduty.Detector("master", {});
-const memberDetector = new aws.guardduty.Detector("memberDetector", {});
+const memberDetector = new aws.guardduty.Detector("memberDetector", {}, {
+    provider: "aws.dev",
+});
 const dev = new aws.guardduty.Member("dev", {
     accountId: memberDetector.accountId,
     detectorId: master.id,
@@ -129,6 +145,9 @@ const dev = new aws.guardduty.Member("dev", {
 const memberInviteAccepter = new aws.guardduty.InviteAccepter("memberInviteAccepter", {
     detectorId: memberDetector.id,
     masterAccountId: master.accountId,
+}, {
+    provider: "aws.dev",
+    dependsOn: ["aws_guardduty_member.dev"],
 });
 ```
 

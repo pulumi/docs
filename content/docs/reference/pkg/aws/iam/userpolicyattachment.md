@@ -71,7 +71,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewUserPolicyAttachment(ctx, "test-attach", &iam.UserPolicyAttachmentArgs{
+		_, err = iam.NewUserPolicyAttachment(ctx, "test_attach", &iam.UserPolicyAttachmentArgs{
 			PolicyArn: policy.Arn,
 			User:      user.Name,
 		})

@@ -57,7 +57,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lightsail.NewKeyPair(ctx, "lgKeyPair", &lightsail.KeyPairArgs{
+		_, err := lightsail.NewKeyPair(ctx, "lgKeyPair", &lightsail.KeyPairArgs{
 			PgpKey: pulumi.String("keybase:keybaseusername"),
 		})
 		if err != nil {
@@ -65,6 +65,41 @@ func main() {
 		}
 		return nil
 	})
+}
+```
+
+## Import an existing public key
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
+    publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
+```
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
+        {
+            PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
+        });
+    }
+
 }
 ```
 
@@ -104,7 +139,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lightsail.NewKeyPair(ctx, "lgKeyPair", nil)
+		_, err := lightsail.NewKeyPair(ctx, "lgKeyPair", nil)
 		if err != nil {
 			return err
 		}

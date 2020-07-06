@@ -16,6 +16,48 @@ This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const vpcId = config.require("vpcId");
+
+const selected = pulumi.output(aws.ec2.getVpc({
+    id: vpcId,
+}, { async: true }));
+const example = new aws.ec2.Subnet("example", {
+    availabilityZone: "us-west-2a",
+    cidrBlock: selected.apply(selected => (() => {
+        throw "tf2pulumi error: NYI: call to cidrsubnet";
+        return (() => { throw "NYI: call to cidrsubnet"; })();
+    })()),
+    vpcId: selected.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetVpc {#using}
