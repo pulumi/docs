@@ -13,6 +13,7 @@ meta_desc: "Explore the Provider resource of the Kubernetes package, including e
 The provider type for the kubernetes package.
 
 
+
 ## Create a Provider Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

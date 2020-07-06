@@ -13,6 +13,7 @@ meta_desc: "Explore the LocalSubjectAccessReview resource of the authorization.k
 LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.
 
 
+
 ## Create a LocalSubjectAccessReview Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

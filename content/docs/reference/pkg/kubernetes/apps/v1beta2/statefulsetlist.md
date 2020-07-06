@@ -13,6 +13,7 @@ meta_desc: "Explore the StatefulSetList resource of the apps/v1beta2 module, inc
 StatefulSetList is a collection of StatefulSets.
 
 
+
 ## Create a StatefulSetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

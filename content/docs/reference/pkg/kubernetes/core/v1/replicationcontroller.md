@@ -13,6 +13,7 @@ meta_desc: "Explore the ReplicationController resource of the core/v1 module, in
 ReplicationController represents the configuration of a replication controller.
 
 
+
 ## Create a ReplicationController Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

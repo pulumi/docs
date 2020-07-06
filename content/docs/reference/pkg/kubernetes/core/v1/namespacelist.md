@@ -13,6 +13,7 @@ meta_desc: "Explore the NamespaceList resource of the core/v1 module, including 
 NamespaceList is a list of Namespaces.
 
 
+
 ## Create a NamespaceList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

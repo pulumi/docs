@@ -13,6 +13,7 @@ meta_desc: "Explore the PodSecurityPolicyList resource of the policy/v1beta1 mod
 PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
 
+
 ## Create a PodSecurityPolicyList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the HorizontalPodAutoscaler resource of the autoscaling/v2be
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.
 
 
+
 ## Create a HorizontalPodAutoscaler Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

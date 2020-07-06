@@ -13,6 +13,7 @@ meta_desc: "Explore the PersistentVolumeList resource of the core/v1 module, inc
 PersistentVolumeList is a list of PersistentVolume items.
 
 
+
 ## Create a PersistentVolumeList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,18 +13,18 @@ meta_desc: "Explore the ConfigGroup resource of the yaml module, including examp
 ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text
  may be supplied using any of the following `ConfigGroupOpts`:
 
-
 1. Using a filename or a list of filenames:
-	a. `{files: "foo.yaml"}`
-	b. `{files: ["foo.yaml", "bar.yaml"]}`
+    a. `{files: "foo.yaml"}`
+    b. `{files: ["foo.yaml", "bar.yaml"]}`
 2. Using a file pattern or a list of file patterns:
-	a. `{files: "*.yaml"}`
-	b. `{files: ["foo/*.yaml", "bar/*.yaml"]}`
+    a. `{files: "*.yaml"}`
+    b. `{files: ["foo/*.yaml", "bar/*.yaml"]}`
 3. Using a literal string containing YAML, or a list of such strings:
-	a. `{yaml: "(LITERAL YAML HERE)"}`
-	b. `{yaml: ["(LITERAL YAML HERE)", "(MORE YAML)"]}`
+    a. `{yaml: "(LITERAL YAML HERE)"}`
+    b. `{yaml: ["(LITERAL YAML HERE)", "(MORE YAML)"]}`
 4. Any combination of files, patterns, or YAML strings:
-	a. `{files: "foo.yaml", yaml: "(LITERAL YAML HERE)"}`
+    a. `{files: "foo.yaml", yaml: "(LITERAL YAML HERE)"}`
+
 
 
 ## Create a ConfigGroup Resource {#create}

@@ -13,6 +13,7 @@ meta_desc: "Explore the ResourceQuota resource of the core/v1 module, including 
 ResourceQuota sets aggregate quota restrictions enforced per namespace
 
 
+
 ## Create a ResourceQuota Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

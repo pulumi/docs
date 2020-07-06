@@ -13,6 +13,7 @@ meta_desc: "Explore the Node resource of the core/v1 module, including examples,
 Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd).
 
 
+
 ## Create a Node Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

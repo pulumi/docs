@@ -13,6 +13,7 @@ meta_desc: "Explore the ConfigFile resource of the yaml module, including exampl
 ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name` is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
 
+
 ## Create a ConfigFile Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

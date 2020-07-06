@@ -13,6 +13,7 @@ meta_desc: "Explore the CertificateSigningRequest resource of the certificates.k
 Describes a certificate signing request
 
 
+
 ## Create a CertificateSigningRequest Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

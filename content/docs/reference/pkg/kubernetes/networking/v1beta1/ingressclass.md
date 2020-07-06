@@ -13,6 +13,7 @@ meta_desc: "Explore the IngressClass resource of the networking.k8s.io/v1beta1 m
 IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be used to indicate that an IngressClass should be considered default. When a single IngressClass resource has this annotation set to true, new Ingress resources without a class specified will be assigned this default class.
 
 
+
 ## Create a IngressClass Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

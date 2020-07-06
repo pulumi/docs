@@ -13,6 +13,7 @@ meta_desc: "Explore the NetworkPolicy resource of the extensions/v1beta1 module,
 DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking/v1/NetworkPolicy. NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 
+
 ## Create a NetworkPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

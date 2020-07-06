@@ -13,6 +13,7 @@ meta_desc: "Explore the Role resource of the rbac.authorization.k8s.io/v1 module
 Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.
 
 
+
 ## Create a Role Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

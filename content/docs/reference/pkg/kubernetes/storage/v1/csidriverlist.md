@@ -13,6 +13,7 @@ meta_desc: "Explore the CSIDriverList resource of the storage.k8s.io/v1 module, 
 CSIDriverList is a collection of CSIDriver objects.
 
 
+
 ## Create a CSIDriverList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

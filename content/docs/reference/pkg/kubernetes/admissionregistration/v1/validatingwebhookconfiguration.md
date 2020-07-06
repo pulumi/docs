@@ -13,6 +13,7 @@ meta_desc: "Explore the ValidatingWebhookConfiguration resource of the admission
 ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.
 
 
+
 ## Create a ValidatingWebhookConfiguration Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
