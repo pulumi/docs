@@ -384,7 +384,7 @@ the raw state as plain-text.</p>
     <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
     <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;someone&quot;</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="n">random_string</span><span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">][</span><span class="s2">&quot;result&quot;</span><span class="p">])</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

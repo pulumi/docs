@@ -45,7 +45,7 @@ class MyStack : Stack
             AllocatedStorage = 64,
             Engine = "mysql",
             Username = "someone",
-            Password = random_string.Password.Result,
+            Password = password.Result,
         });
     }
 
@@ -68,7 +68,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := random.NewRandomPassword(ctx, "password", &random.RandomPasswordArgs{
+		password, err := random.NewRandomPassword(ctx, "password", &random.RandomPasswordArgs{
 			Length:          pulumi.Int(16),
 			Special:         pulumi.Bool(true),
 			OverrideSpecial: pulumi.String(fmt.Sprintf("%v%v%v", "_", "%", "@")),
@@ -81,7 +81,7 @@ func main() {
 			AllocatedStorage: pulumi.Int(64),
 			Engine:           pulumi.String("mysql"),
 			Username:         pulumi.String("someone"),
-			Password:         pulumi.String(random_string.Password.Result),
+			Password:         password.Result,
 		})
 		if err != nil {
 			return err
@@ -108,7 +108,7 @@ example = aws.rds.Instance("example",
     allocated_storage=64,
     engine="mysql",
     username="someone",
-    password=random_string["password"]["result"])
+    password=password.result)
 ```
 
 {{% /example %}}
@@ -130,7 +130,7 @@ const example = new aws.rds.Instance("example", {
     allocatedStorage: 64,
     engine: "mysql",
     username: "someone",
-    password: random_string.password.result,
+    password: password.result,
 });
 ```
 
