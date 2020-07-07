@@ -13,6 +13,7 @@ meta_desc: "Explore the PodSecurityPolicy resource of the extensions/v1beta1 mod
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container. Deprecated: use PodSecurityPolicy from policy API Group instead.
 
 
+
 ## Create a PodSecurityPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

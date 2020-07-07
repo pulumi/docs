@@ -13,6 +13,7 @@ meta_desc: "Explore the JobList resource of the batch/v1 module, including examp
 JobList is a collection of jobs.
 
 
+
 ## Create a JobList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

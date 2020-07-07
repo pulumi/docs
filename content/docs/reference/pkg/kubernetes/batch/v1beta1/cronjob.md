@@ -13,6 +13,7 @@ meta_desc: "Explore the CronJob resource of the batch/v1beta1 module, including 
 CronJob represents the configuration of a single cron job.
 
 
+
 ## Create a CronJob Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

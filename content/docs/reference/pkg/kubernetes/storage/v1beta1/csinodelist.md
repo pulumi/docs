@@ -13,6 +13,7 @@ meta_desc: "Explore the CSINodeList resource of the storage.k8s.io/v1beta1 modul
 CSINodeList is a collection of CSINode objects.
 
 
+
 ## Create a CSINodeList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

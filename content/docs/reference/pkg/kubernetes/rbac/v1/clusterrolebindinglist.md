@@ -13,6 +13,7 @@ meta_desc: "Explore the ClusterRoleBindingList resource of the rbac.authorizatio
 ClusterRoleBindingList is a collection of ClusterRoleBindings
 
 
+
 ## Create a ClusterRoleBindingList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

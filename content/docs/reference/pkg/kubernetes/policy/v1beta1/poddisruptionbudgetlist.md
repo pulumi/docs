@@ -13,6 +13,7 @@ meta_desc: "Explore the PodDisruptionBudgetList resource of the policy/v1beta1 m
 PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
 
+
 ## Create a PodDisruptionBudgetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

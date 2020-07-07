@@ -13,6 +13,7 @@ meta_desc: "Explore the AuditSink resource of the auditregistration.k8s.io/v1alp
 AuditSink represents a cluster level audit sink
 
 
+
 ## Create a AuditSink Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

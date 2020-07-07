@@ -13,6 +13,7 @@ meta_desc: "Explore the DeploymentList resource of the apps/v1beta1 module, incl
 DeploymentList is a list of Deployments.
 
 
+
 ## Create a DeploymentList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the ReplicationControllerList resource of the core/v1 module
 ReplicationControllerList is a collection of replication controllers.
 
 
+
 ## Create a ReplicationControllerList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

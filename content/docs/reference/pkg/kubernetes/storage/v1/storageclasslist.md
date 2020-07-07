@@ -13,6 +13,7 @@ meta_desc: "Explore the StorageClassList resource of the storage.k8s.io/v1 modul
 StorageClassList is a collection of storage classes.
 
 
+
 ## Create a StorageClassList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

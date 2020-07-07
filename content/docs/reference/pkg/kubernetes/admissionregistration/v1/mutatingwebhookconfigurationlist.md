@@ -13,6 +13,7 @@ meta_desc: "Explore the MutatingWebhookConfigurationList resource of the admissi
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
 
+
 ## Create a MutatingWebhookConfigurationList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

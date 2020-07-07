@@ -13,6 +13,7 @@ meta_desc: "Explore the DaemonSetList resource of the extensions/v1beta1 module,
 DaemonSetList is a collection of daemon sets.
 
 
+
 ## Create a DaemonSetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

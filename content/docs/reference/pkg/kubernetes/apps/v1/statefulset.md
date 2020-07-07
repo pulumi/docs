@@ -13,7 +13,7 @@ meta_desc: "Explore the StatefulSet resource of the apps/v1 module, including ex
 StatefulSet represents a set of pods with consistent identities. Identities are defined as:
  - Network: A single stable DNS and hostname.
  - Storage: As many VolumeClaims as requested.
-The StatefulSet guarantees that a given network identity will always map to the same storage identity.
+   The StatefulSet guarantees that a given network identity will always map to the same storage identity.
 
 This resource waits until its status is ready before registering success
 for create/update, and populating output properties from the current state of the resource.
@@ -27,6 +27,7 @@ succeeded or failed:
 If the StatefulSet has not reached a Ready state after 10 minutes, it will
 time out and mark the resource update as Failed. You can override the default timeout value
 by setting the 'customTimeouts' option on the resource.
+
 
 
 ## Create a StatefulSet Resource {#create}

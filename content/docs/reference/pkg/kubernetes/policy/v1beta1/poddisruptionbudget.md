@@ -13,6 +13,7 @@ meta_desc: "Explore the PodDisruptionBudget resource of the policy/v1beta1 modul
 PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
 
 
+
 ## Create a PodDisruptionBudget Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

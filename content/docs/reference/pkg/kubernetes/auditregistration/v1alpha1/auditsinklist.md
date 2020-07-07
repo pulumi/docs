@@ -13,6 +13,7 @@ meta_desc: "Explore the AuditSinkList resource of the auditregistration.k8s.io/v
 AuditSinkList is a list of AuditSink items.
 
 
+
 ## Create a AuditSinkList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

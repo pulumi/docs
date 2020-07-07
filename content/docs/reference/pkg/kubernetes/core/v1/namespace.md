@@ -13,6 +13,7 @@ meta_desc: "Explore the Namespace resource of the core/v1 module, including exam
 Namespace provides a scope for Names. Use of multiple namespaces is optional.
 
 
+
 ## Create a Namespace Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

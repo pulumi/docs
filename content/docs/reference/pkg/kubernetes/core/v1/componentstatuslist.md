@@ -13,6 +13,7 @@ meta_desc: "Explore the ComponentStatusList resource of the core/v1 module, incl
 Status of all the conditions for the component as a list of ComponentStatus objects.
 
 
+
 ## Create a ComponentStatusList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
