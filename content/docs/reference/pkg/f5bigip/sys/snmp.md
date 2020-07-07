@@ -12,7 +12,6 @@ meta_desc: "Explore the Snmp resource of the sys module, including examples, inp
 
 `f5bigip.sys.Snmp` provides details bout how to enable "ilx", "asm" "apm" resource on BIG-IP
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,10 +39,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sys.NewSnmp(ctx, "snmp", &sys.SnmpArgs{
+			Allowedaddresses: pulumi.StringArray{
+				pulumi.String("202.10.10.2"),
+			},
+			SysContact:  pulumi.String(" NetOPsAdmin s.shitole@f5.com"),
+			SysLocation: pulumi.String("SeattleHQ"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,9 +80,11 @@ snmp = f5bigip.sys.Snmp("snmp",
     sys_contact=" NetOPsAdmin s.shitole@f5.com",
     sys_location="SeattleHQ")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -69,6 +95,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
     sysLocation: "SeattleHQ",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

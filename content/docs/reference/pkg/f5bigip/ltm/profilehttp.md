@@ -14,8 +14,6 @@ meta_desc: "Explore the ProfileHttp resource of the ltm module, including exampl
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,10 +45,39 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileHttp(ctx, "sanjose_http", &ltm.ProfileHttpArgs{
+			DefaultsFrom: pulumi.String("/Common/http"),
+			Description:  pulumi.String("some http"),
+			FallbackHost: pulumi.String("titanic"),
+			FallbackStatusCodes: pulumi.StringArray{
+				pulumi.String("400"),
+				pulumi.String("500"),
+				pulumi.String("300"),
+			},
+			Name: pulumi.String("/Common/sanjose-http"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +96,11 @@ sanjose_http = f5bigip.ltm.ProfileHttp("sanjose-http",
     ],
     name="/Common/sanjose-http")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -88,6 +117,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     name: "/Common/sanjose-http",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ meta_desc: "Explore the ProfileFastHttp resource of the ltm module, including ex
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,10 +46,41 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileFastHttp(ctx, "sjfasthttpprofile", &ltm.ProfileFastHttpArgs{
+			ConnpoolMaxreuse:            pulumi.Int(2),
+			ConnpoolMaxsize:             pulumi.Int(2048),
+			ConnpoolMinsize:             pulumi.Int(0),
+			ConnpoolReplenish:           pulumi.String("enabled"),
+			ConnpoolStep:                pulumi.Int(4),
+			ConnpoolidleTimeoutoverride: pulumi.Int(0),
+			DefaultsFrom:                pulumi.String("/Common/fasthttp"),
+			Forcehttp10response:         pulumi.String("disabled"),
+			IdleTimeout:                 pulumi.Int(300),
+			MaxheaderSize:               pulumi.Int(32768),
+			Name:                        pulumi.String("sjfasthttpprofile"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +101,11 @@ sjfasthttpprofile = f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile",
     maxheader_size=32768,
     name="sjfasthttpprofile")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -93,6 +124,7 @@ const sjfasthttpprofile = new f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile", {
     name: "sjfasthttpprofile",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

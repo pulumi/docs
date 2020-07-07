@@ -14,8 +14,6 @@ meta_desc: "Explore the ProfileFastL4 resource of the ltm module, including exam
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,10 +45,40 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileFastL4(ctx, "profileFastl4", &ltm.ProfileFastL4Args{
+			ClientTimeout:         pulumi.Int(40),
+			DefaultsFrom:          pulumi.String("/Common/fastL4"),
+			ExplicitflowMigration: pulumi.String("enabled"),
+			HardwareSyncookie:     pulumi.String("enabled"),
+			IdleTimeout:           pulumi.String("200"),
+			IptosToclient:         pulumi.String("pass-through"),
+			IptosToserver:         pulumi.String("pass-through"),
+			KeepaliveInterval:     pulumi.String("disabled"),
+			Name:                  pulumi.String("/Common/sjfastl4profile"),
+			Partition:             pulumi.String("Common"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +98,11 @@ profile_fastl4 = f5bigip.ltm.ProfileFastL4("profileFastl4",
     name="/Common/sjfastl4profile",
     partition="Common")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -90,6 +120,7 @@ const profileFastl4 = new f5bigip.ltm.ProfileFastL4("profile_fastl4", {
     partition: "Common",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

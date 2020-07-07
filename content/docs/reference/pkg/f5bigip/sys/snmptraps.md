@@ -12,7 +12,6 @@ meta_desc: "Explore the SnmpTraps resource of the sys module, including examples
 
 `f5bigip.sys.SnmpTraps` provides details bout how to enable snmp_traps resource on BIG-IP
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,10 +38,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sys.NewSnmpTraps(ctx, "snmpTraps", &sys.SnmpTrapsArgs{
+			Community:   pulumi.String("f5community"),
+			Description: pulumi.String("Setup snmp traps"),
+			Host:        pulumi.String("195.10.10.1"),
+			Name:        pulumi.String("snmptraps"),
+			Port:        pulumi.Int(111),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +81,11 @@ snmp_traps = f5bigip.sys.SnmpTraps("snmpTraps",
     name="snmptraps",
     port=111)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -72,6 +98,7 @@ const snmpTraps = new f5bigip.sys.SnmpTraps("snmp_traps", {
     port: 111,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

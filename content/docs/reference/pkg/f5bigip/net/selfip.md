@@ -14,9 +14,6 @@ meta_desc: "Explore the SelfIp resource of the net module, including examples, i
 
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-selfip.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,15 +34,47 @@ class MyStack : Stack
             Ip = "11.1.1.1/24",
             Vlan = "/Common/internal",
             TrafficGroup = "traffic-group-1",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                bigip_net_vlan.Vlan1,
+            },
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/net"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := net.NewSelfIp(ctx, "selfip1", &net.SelfIpArgs{
+			Name:         pulumi.String("/Common/internalselfIP"),
+			Ip:           pulumi.String("11.1.1.1/24"),
+			Vlan:         pulumi.String("/Common/internal"),
+			TrafficGroup: pulumi.String("traffic-group-1"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			bigip_net_vlan.Vlan1,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,11 +86,14 @@ selfip1 = f5bigip.net.SelfIp("selfip1",
     name="/Common/internalselfIP",
     ip="11.1.1.1/24",
     vlan="/Common/internal",
-    traffic_group="traffic-group-1")
+    traffic_group="traffic-group-1",
+    opts=ResourceOptions(depends_on=[bigip_net_vlan["vlan1"]]))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -71,8 +103,11 @@ const selfip1 = new f5bigip.net.SelfIp("selfip1", {
     ip: "11.1.1.1/24",
     vlan: "/Common/internal",
     trafficGroup: "traffic-group-1",
+}, {
+    dependsOn: [bigip_net_vlan.vlan1],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

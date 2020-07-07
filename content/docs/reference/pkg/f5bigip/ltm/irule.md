@@ -15,10 +15,6 @@ meta_desc: "Explore the IRule resource of the ltm module, including examples, in
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
 
-{{% examples %}}
-{{% /examples %}}
-
-
 
 ## Create a IRule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

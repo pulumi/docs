@@ -14,9 +14,6 @@ meta_desc: "Explore the Vlan resource of the net module, including examples, inp
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +35,7 @@ class MyStack : Stack
                 new F5BigIP.Net.Inputs.VlanInterfaceArgs
                 {
                     Tagged = false,
-                    Vlanport = 1.2,
+                    Vlanport = "1.2",
                 },
             },
             Name = "/Common/Internal",
@@ -48,10 +45,38 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/net"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := net.NewVlan(ctx, "vlan1", &net.VlanArgs{
+			Interfaces: net.VlanInterfaceArray{
+				&net.VlanInterfaceArgs{
+					Tagged:   pulumi.Bool(false),
+					Vlanport: pulumi.String("1.2"),
+				},
+			},
+			Name: pulumi.String("/Common/Internal"),
+			Tag:  pulumi.Int(101),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +92,11 @@ vlan1 = f5bigip.net.Vlan("vlan1",
     name="/Common/Internal",
     tag=101)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -83,6 +110,7 @@ const vlan1 = new f5bigip.net.Vlan("vlan1", {
     tag: 101,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

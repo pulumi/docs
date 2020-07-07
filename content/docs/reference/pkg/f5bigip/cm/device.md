@@ -14,7 +14,6 @@ meta_desc: "Explore the Device resource of the cm module, including examples, in
 
 This resource is helpful when configuring the BIG-IP device in cluster or in HA mode.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,10 +39,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/cm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cm.NewDevice(ctx, "myNewDevice", &cm.DeviceArgs{
+			ConfigsyncIp:      pulumi.String("2.2.2.2"),
+			MirrorIp:          pulumi.String("10.10.10.10"),
+			MirrorSecondaryIp: pulumi.String("11.11.11.11"),
+			Name:              pulumi.String("bigip300.f5.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +80,11 @@ my_new_device = f5bigip.cm.Device("myNewDevice",
     mirror_secondary_ip="11.11.11.11",
     name="bigip300.f5.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -71,6 +96,7 @@ const myNewDevice = new f5bigip.cm.Device("my_new_device", {
     name: "bigip300.f5.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

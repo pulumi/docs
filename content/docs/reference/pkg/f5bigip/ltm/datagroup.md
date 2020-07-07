@@ -14,9 +14,6 @@ meta_desc: "Explore the DataGroup resource of the ltm module, including examples
 
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-datagroup.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,10 +50,42 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewDataGroup(ctx, "datagroup", &ltm.DataGroupArgs{
+			Name: pulumi.String("/Common/dgx2"),
+			Records: ltm.DataGroupRecordArray{
+				&ltm.DataGroupRecordArgs{
+					Data: pulumi.String("pool1"),
+					Name: pulumi.String("abc.com"),
+				},
+				&ltm.DataGroupRecordArgs{
+					Data: pulumi.String("123"),
+					Name: pulumi.String("test"),
+				},
+			},
+			Type: pulumi.String("string"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +107,11 @@ datagroup = f5bigip.ltm.DataGroup("datagroup",
     ],
     type="string")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -100,6 +131,7 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     type: "string",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

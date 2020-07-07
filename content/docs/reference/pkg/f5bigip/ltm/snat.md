@@ -14,9 +14,6 @@ meta_desc: "Explore the Snat resource of the ltm module, including examples, inp
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,10 +53,45 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewSnat(ctx, "test_snat", &ltm.SnatArgs{
+			Autolasthop: pulumi.String("default"),
+			FullPath:    pulumi.String("/Common/test-snat"),
+			Mirror:      pulumi.String("disabled"),
+			Name:        pulumi.String("TEST_SNAT_NAME"),
+			Origins: ltm.SnatOriginArray{
+				&ltm.SnatOriginArgs{
+					Name: pulumi.String("2.2.2.2"),
+				},
+				&ltm.SnatOriginArgs{
+					Name: pulumi.String("3.3.3.3"),
+				},
+			},
+			Partition:     pulumi.String("Common"),
+			Translation:   pulumi.String("/Common/136.1.1.1"),
+			Vlansdisabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,9 +116,11 @@ test_snat = f5bigip.ltm.Snat("test-snat",
     translation="/Common/136.1.1.1",
     vlansdisabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -109,6 +143,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
     vlansdisabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

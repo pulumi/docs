@@ -12,11 +12,6 @@ meta_desc: "Explore the Dns resource of the sys module, including examples, inpu
 
 `f5bigip.sys.Dns` Configures DNS server on F5 BIG-IP
 
-
-
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,10 +43,38 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sys.NewDns(ctx, "dns1", &sys.DnsArgs{
+			Description: pulumi.String("/Common/DNS1"),
+			NameServers: pulumi.StringArray{
+				pulumi.String("1.1.1.1"),
+			},
+			NumberOfDots: pulumi.Int(2),
+			Searches: pulumi.StringArray{
+				pulumi.String("f5.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,9 +88,11 @@ dns1 = f5bigip.sys.Dns("dns1",
     number_of_dots=2,
     searches=["f5.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -79,6 +104,7 @@ const dns1 = new f5bigip.sys.Dns("dns1", {
     searches: ["f5.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

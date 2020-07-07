@@ -12,9 +12,6 @@ meta_desc: "Explore the DeviceGroup resource of the cm module, including example
 
 `f5bigip.cm.DeviceGroup` A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,10 +48,42 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/cm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cm.NewDeviceGroup(ctx, "myNewDevicegroup", &cm.DeviceGroupArgs{
+			AutoSync: pulumi.String("enabled"),
+			Devices: cm.DeviceGroupDeviceArray{
+				&cm.DeviceGroupDeviceArgs{
+					Name: pulumi.String("bigip1.cisco.com"),
+				},
+				&cm.DeviceGroupDeviceArgs{
+					Name: pulumi.String("bigip200.f5.com"),
+				},
+			},
+			FullLoadOnSync: pulumi.String("true"),
+			Name:           pulumi.String("sanjose_devicegroup"),
+			Type:           pulumi.String("sync-only"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +105,11 @@ my_new_devicegroup = f5bigip.cm.DeviceGroup("myNewDevicegroup",
     name="sanjose_devicegroup",
     type="sync-only")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -98,6 +129,7 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
     type: "sync-only",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

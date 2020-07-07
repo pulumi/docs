@@ -14,8 +14,6 @@ meta_desc: "Explore the ProfileOneConnect resource of the ltm module, including 
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,10 +44,39 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileOneConnect(ctx, "oneconnect_sanjose", &ltm.ProfileOneConnectArgs{
+			DefaultsFrom:        pulumi.String("/Common/oneconnect"),
+			IdleTimeoutOverride: pulumi.String("disabled"),
+			MaxAge:              pulumi.Int(3600),
+			MaxReuse:            pulumi.Int(1000),
+			MaxSize:             pulumi.Int(1000),
+			Name:                pulumi.String("sanjose"),
+			Partition:           pulumi.String("Common"),
+			SharePools:          pulumi.String("disabled"),
+			SourceMask:          pulumi.String("255.255.255.255"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +95,11 @@ oneconnect_sanjose = f5bigip.ltm.ProfileOneConnect("oneconnect-sanjose",
     share_pools="disabled",
     source_mask="255.255.255.255")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -87,6 +116,7 @@ const oneconnect_sanjose = new f5bigip.ltm.ProfileOneConnect("oneconnect-sanjose
     sourceMask: "255.255.255.255",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
