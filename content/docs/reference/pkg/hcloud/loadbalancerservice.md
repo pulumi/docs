@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerService"
-title_tag: "Resource LoadBalancerService | Package hcloud"
-meta_desc: "Explore the LoadBalancerService resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Define services for Hetzner Cloud Load Balancers."
+title_tag: "Resource LoadBalancerService | Package Hetzner Cloud"
+meta_desc: "Explore the LoadBalancerService resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Define services for Hetzner Cloud Load Balancers."
 ---
 
 

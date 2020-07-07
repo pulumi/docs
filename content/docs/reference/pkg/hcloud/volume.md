@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package hcloud"
-meta_desc: "Explore the Volume resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud volume resource to manage volumes."
+title_tag: "Resource Volume | Package Hetzner Cloud"
+meta_desc: "Explore the Volume resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud volume resource to manage volumes."
 ---
 
 

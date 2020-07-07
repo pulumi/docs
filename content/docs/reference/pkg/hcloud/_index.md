@@ -1,6 +1,6 @@
 ---
-title: "hcloud"
-title_tag: "Module hcloud | Package hcloud"
+title: "Hetzner Cloud"
+title_tag: "Module Hetzner Cloud | Package Hetzner Cloud"
 meta_desc: "A Pulumi package for creating and managing hcloud cloud resources."
 menu:
     reference:
@@ -59,7 +59,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.0.2</dd>
 </dl>
 
 

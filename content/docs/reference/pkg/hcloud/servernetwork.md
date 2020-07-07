@@ -1,8 +1,8 @@
 
 ---
 title: "ServerNetwork"
-title_tag: "Resource ServerNetwork | Package hcloud"
-meta_desc: "Explore the ServerNetwork resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Server Network to represent a private network on a server in the Hetzner Cloud."
+title_tag: "Resource ServerNetwork | Package Hetzner Cloud"
+meta_desc: "Explore the ServerNetwork resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Server Network to represent a private network on a server in the Hetzner Cloud."
 ---
 
 

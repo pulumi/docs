@@ -1,8 +1,8 @@
 
 ---
 title: "GetServer"
-title_tag: "Function GetServer | Package hcloud"
-meta_desc: "Explore the GetServer function of the hcloud package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetServer | Package Hetzner Cloud"
+meta_desc: "Explore the GetServer function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

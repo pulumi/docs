@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package hcloud"
-meta_desc: "Explore the SshKey resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud SSH key resource to manage SSH keys for server access."
+title_tag: "Resource SshKey | Package Hetzner Cloud"
+meta_desc: "Explore the SshKey resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud SSH key resource to manage SSH keys for server access."
 ---
 
 

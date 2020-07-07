@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerTarget"
-title_tag: "Resource LoadBalancerTarget | Package hcloud"
-meta_desc: "Explore the LoadBalancerTarget resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Adds a target to a Hetzner Cloud Load Balancer."
+title_tag: "Resource LoadBalancerTarget | Package Hetzner Cloud"
+meta_desc: "Explore the LoadBalancerTarget resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Adds a target to a Hetzner Cloud Load Balancer."
 ---
 
 

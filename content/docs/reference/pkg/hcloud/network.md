@@ -1,8 +1,8 @@
 
 ---
 title: "Network"
-title_tag: "Resource Network | Package hcloud"
-meta_desc: "Explore the Network resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network to represent a Network in the Hetzner Cloud."
+title_tag: "Resource Network | Package Hetzner Cloud"
+meta_desc: "Explore the Network resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network to represent a Network in the Hetzner Cloud."
 ---
 
 

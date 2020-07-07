@@ -1,8 +1,8 @@
 
 ---
 title: "GetSshKey"
-title_tag: "Function GetSshKey | Package hcloud"
-meta_desc: "Explore the GetSshKey function of the hcloud package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetSshKey | Package Hetzner Cloud"
+meta_desc: "Explore the GetSshKey function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

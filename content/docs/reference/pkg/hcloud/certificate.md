@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package hcloud"
-meta_desc: "Explore the Certificate resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Clould Certificate to represent a TLS certificate in the Hetzner Cloud."
+title_tag: "Resource Certificate | Package Hetzner Cloud"
+meta_desc: "Explore the Certificate resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Clould Certificate to represent a TLS certificate in the Hetzner Cloud."
 ---
 
 
