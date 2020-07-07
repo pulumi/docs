@@ -12,9 +12,6 @@ meta_desc: "Explore the GetOrganization function of the Packet package, includin
 
 Provides a Packet organization datasource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetOrganization {#using}

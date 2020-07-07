@@ -13,8 +13,6 @@ meta_desc: "Explore the ProjectSshKey resource of the Packet package, including 
 Provides a Packet project SSH key resource to manage project-specific SSH keys.
 Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,10 +54,50 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		projectId := "<UUID_of_your_project>"
+		testProjectSshKey, err := packet.NewProjectSshKey(ctx, "testProjectSshKey", &packet.ProjectSshKeyArgs{
+			Name:      pulumi.String("test"),
+			PublicKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDM/unxJeFqxsTJcu6mhqsMHSaVlpu+Jj/P+44zrm6X/MAoHSX3X9oLgujEjjZ74yLfdfe0bJrbL2YgJzNaEkIQQ1VPMHB5EhTKUBGnzlPP0hHTnxsjAm9qDHgUPgvgFDQSAMzdJRJ0Cexo16Ph9VxCoLh3dxiE7s2gaM2FdVg7P8aSxKypsxAhYV3D0AwqzoOyT6WWhBoQ0xZ85XevOTnJCpImSemEGs6nVGEsWcEc1d1YvdxFjAK4SdsKUMkj4Dsy/leKsdi/DEAf356vbMT1UHsXXvy5TlHu/Pa6qF53v32Enz+nhKy7/8W2Yt2yWx8HnQcT2rug9lvCXagJO6oauqRTO77C4QZn13ZLMZgLT66S/tNh2EX0gi6vmIs5dth8uF+K6nxIyKJXbcA4ASg7F1OJrHKFZdTc5v1cPeq6PcbqGgc+8SrPYQmzvQqLoMBuxyos2hUkYOmw3aeWJj9nFa8Wu5WaN89mUeOqSkU4S5cgUzWUOmKey56B/j/s1sVys9rMhZapVs0wL4L9GBBM48N5jAQZnnpo85A8KsZq5ME22bTLqnxsDXqDYZvS7PSI6Dxi7eleOFE/NYYDkrgDLHTQri8ucDMVeVWHgoMY2bPXdn7KKy5jW5jKsf8EPARXg77A4gRYmgKrcwIKqJEUPqyxJBe0CPoGTqgXPRsUiQ== tomk@hp2"),
+			ProjectId: pulumi.String(projectId),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewDevice(ctx, "testDevice", &packet.DeviceArgs{
+			Hostname: pulumi.String("test"),
+			Plan:     pulumi.String("baremetal_0"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String("ubuntu_16_04"),
+			BillingCycle:    pulumi.String("hourly"),
+			ProjectSshKeyIds: pulumi.StringArray{
+				testProjectSshKey.ID(),
+			},
+			ProjectId: pulumi.String(projectId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +119,11 @@ test_device = packet.Device("testDevice",
     project_ssh_key_ids=[test_project_ssh_key.id],
     project_id=project_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -104,6 +144,7 @@ const testDevice = new packet.Device("testDevice", {
     projectId: projectId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

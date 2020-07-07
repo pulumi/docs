@@ -14,8 +14,128 @@ Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. For more detail on Spot Market, see [this article in Packet documentaion](https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/).
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a spot market request
+        var req = new Packet.SpotMarketRequest("req", new Packet.SpotMarketRequestArgs
+        {
+            ProjectId = local.Project_id,
+            MaxBidPrice = 0.03,
+            Facilities = 
+            {
+                "ewr1",
+            },
+            DevicesMin = 1,
+            DevicesMax = 1,
+            InstanceParameters = new Packet.Inputs.SpotMarketRequestInstanceParametersArgs
+            {
+                Hostname = "testspot",
+                BillingCycle = "hourly",
+                OperatingSystem = "coreos_stable",
+                Plan = "t1.small.x86",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := packet.NewSpotMarketRequest(ctx, "req", &packet.SpotMarketRequestArgs{
+			ProjectId:   pulumi.String(local.Project_id),
+			MaxBidPrice: pulumi.Float64(0.03),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			DevicesMin: pulumi.Int(1),
+			DevicesMax: pulumi.Int(1),
+			InstanceParameters: &packet.SpotMarketRequestInstanceParametersArgs{
+				Hostname:        pulumi.String("testspot"),
+				BillingCycle:    pulumi.String("hourly"),
+				OperatingSystem: pulumi.String("coreos_stable"),
+				Plan:            pulumi.String("t1.small.x86"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+# Create a spot market request
+req = packet.SpotMarketRequest("req",
+    project_id=local["project_id"],
+    max_bid_price=0.03,
+    facilities=["ewr1"],
+    devices_min=1,
+    devices_max=1,
+    instance_parameters={
+        "hostname": "testspot",
+        "billing_cycle": "hourly",
+        "operating_system": "coreos_stable",
+        "plan": "t1.small.x86",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+// Create a spot market request
+const req = new packet.SpotMarketRequest("req", {
+    projectId: local.project_id,
+    maxBidPrice: 0.03,
+    facilities: ["ewr1"],
+    devicesMin: 1,
+    devicesMax: 1,
+    instanceParameters: {
+        hostname: "testspot",
+        billingCycle: "hourly",
+        operatingSystem: "coreos_stable",
+        plan: "t1.small.x86",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpotMarketRequest Resource {#create}

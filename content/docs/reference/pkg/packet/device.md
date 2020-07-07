@@ -17,10 +17,105 @@ modify, and delete devices.
  the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var web1 = new Packet.Device("web1", new Packet.DeviceArgs
+        {
+            Hostname = "tf.coreos2",
+            Plan = "t1.small.x86",
+            Facilities = 
+            {
+                "ewr1",
+            },
+            OperatingSystem = "coreos_stable",
+            BillingCycle = "hourly",
+            ProjectId = local.Project_id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := packet.NewDevice(ctx, "web1", &packet.DeviceArgs{
+			Hostname: pulumi.String("tf.coreos2"),
+			Plan:     pulumi.String("t1.small.x86"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String("coreos_stable"),
+			BillingCycle:    pulumi.String("hourly"),
+			ProjectId:       pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+web1 = packet.Device("web1",
+    hostname="tf.coreos2",
+    plan="t1.small.x86",
+    facilities=["ewr1"],
+    operating_system="coreos_stable",
+    billing_cycle="hourly",
+    project_id=local["project_id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+const web1 = new packet.Device("web1", {
+    hostname: "tf.coreos2",
+    plan: "t1.small.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "coreos_stable",
+    billingCycle: "hourly",
+    projectId: local.project_id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Device Resource {#create}
@@ -324,7 +419,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -533,7 +628,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,7 +837,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +1046,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,7 +2030,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2281,7 +2376,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2627,7 +2722,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2973,7 +3068,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

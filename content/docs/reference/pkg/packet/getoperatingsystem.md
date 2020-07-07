@@ -12,8 +12,6 @@ meta_desc: "Explore the GetOperatingSystem function of the Packet package, inclu
 
 Use this data source to get Packet Operating System image.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,10 +49,51 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Container Linux"
+		opt1 := "coreos"
+		opt2 := "alpha"
+		opt3 := "c1.small.x86"
+		example, err := packet.GetOperatingSystem(ctx, &packet.GetOperatingSystemArgs{
+			Name:            &opt0,
+			Distro:          &opt1,
+			Version:         &opt2,
+			ProvisionableOn: &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewDevice(ctx, "server", &packet.DeviceArgs{
+			Hostname: pulumi.String("tf.coreos2"),
+			Plan:     pulumi.String("c1.small.x86"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String(example.Id),
+			BillingCycle:    pulumi.String("hourly"),
+			ProjectId:       pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +113,11 @@ server = packet.Device("server",
     billing_cycle="hourly",
     project_id=local["project_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -96,6 +137,7 @@ const server = new packet.Device("server", {
     projectId: local.project_id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

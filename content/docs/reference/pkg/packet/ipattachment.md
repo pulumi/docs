@@ -21,9 +21,6 @@ with mask prefix length 32. More about the elastic IP subnets is [here](https://
 
 Device and reserved block must be in the same facility.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a IpAttachment Resource {#create}

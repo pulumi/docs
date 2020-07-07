@@ -170,6 +170,7 @@ modify, and delete devices.</p>
 </dl>
 <p><a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<p>Create a device and add it to cool_project</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
 
@@ -180,6 +181,107 @@ modify, and delete devices.</p>
     <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
     <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Same as above, but boot via iPXE initially, using the Ignition Provider for provisioning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">pxe1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;pxe1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;tf.coreos2-pxe&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;custom_ipxe&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">ipxe_script_url</span><span class="o">=</span><span class="s2">&quot;https://rawgit.com/cloudnativelabs/pxe/master/packet/coreos-stable-packet.ipxe&quot;</span><span class="p">,</span>
+    <span class="n">always_pxe</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">user_data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ignition_config&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;rendered&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Create a device without a public IP address, with only a /30 private IPv4 subnet (4 IP addresses)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">web1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;web1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;tf.coreos2&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">ip_addresses</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;private_ipv4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<p>Deploy device on next-available reserved hardware and do custom partitioning.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">web1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;web1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sjc1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">hardware_reservation_id</span><span class="o">=</span><span class="s2">&quot;next-available&quot;</span><span class="p">,</span>
+    <span class="n">storage</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;disks&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;device&quot;: &quot;/dev/sda&quot;,</span>
+<span class="s2">      &quot;wipeTable&quot;: true,</span>
+<span class="s2">      &quot;partitions&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;label&quot;: &quot;BIOS&quot;,</span>
+<span class="s2">          &quot;number&quot;: 1,</span>
+<span class="s2">          &quot;size&quot;: &quot;4096&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;label&quot;: &quot;SWAP&quot;,</span>
+<span class="s2">          &quot;number&quot;: 2,</span>
+<span class="s2">          &quot;size&quot;: &quot;3993600&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;label&quot;: &quot;ROOT&quot;,</span>
+<span class="s2">          &quot;number&quot;: 3,</span>
+<span class="s2">          &quot;size&quot;: &quot;0&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      ]</span>
+<span class="s2">    }</span>
+<span class="s2">  ],</span>
+<span class="s2">  &quot;filesystems&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;mount&quot;: {</span>
+<span class="s2">        &quot;device&quot;: &quot;/dev/sda3&quot;,</span>
+<span class="s2">        &quot;format&quot;: &quot;ext4&quot;,</span>
+<span class="s2">        &quot;point&quot;: &quot;/&quot;,</span>
+<span class="s2">        &quot;create&quot;: {</span>
+<span class="s2">          &quot;options&quot;: [</span>
+<span class="s2">            &quot;-L&quot;,</span>
+<span class="s2">            &quot;ROOT&quot;</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;mount&quot;: {</span>
+<span class="s2">        &quot;device&quot;: &quot;/dev/sda2&quot;,</span>
+<span class="s2">        &quot;format&quot;: &quot;swap&quot;,</span>
+<span class="s2">        &quot;point&quot;: &quot;none&quot;,</span>
+<span class="s2">        &quot;create&quot;: {</span>
+<span class="s2">          &quot;options&quot;: [</span>
+<span class="s2">            &quot;-L&quot;,</span>
+<span class="s2">            &quot;SWAP&quot;</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1295,7 +1397,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test2_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">,</span>
     <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">,</span>
-    <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;packet_port_vlan_attachment.test1&quot;</span><span class="p">]))</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1408,14 +1511,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_packet.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_transfer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] backend_transfer: Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false
-:param pulumi.Input[dict] bgp_config: Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.
-:param pulumi.Input[str] name: The name of the project
-:param pulumi.Input[str] organization_id: The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
-:param pulumi.Input[str] payment_method_id: The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p>
+<dd><p>Provides a Packet project resource to allow you manage devices
+in your projects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a new project</span>
+<span class="n">tf_project1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;tfProject1&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Terraform Fun&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example with BGP config</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a new Project</span>
+<span class="n">tf_project1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;tfProject1&quot;</span><span class="p">,</span>
+    <span class="n">bgp_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">65000</span><span class="p">,</span>
+        <span class="s2">&quot;deploymentType&quot;</span><span class="p">:</span> <span class="s2">&quot;local&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;C179c28c41a85b&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false</p></li>
+<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
+</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
+<li><p><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</p></li>
+<li><p><strong>payment_method_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>bgp_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Autonomous System Number for local BGP deployment</p></li>
@@ -1745,7 +1877,7 @@ Every new device in the project and facility will automatically get IPv6 and pri
 The IPv6 and private IPv4 blocks can’t be created, only imported. With this resource, it’s possible to create either public IPv4 blocks or global IPv4 blocks.</p>
 <p>Public blocks are allocated in a facility. Addresses from public blocks can only be assigned to devices in the facility. Public blocks can have mask from /24 (256 addresses) to /32 (1 address). If you create public block with this resource, you must fill the facility argmument.</p>
 <p>Addresses from global blocks can be assigned in any facility. Global blocks can have mask from /30 (4 addresses), to /32 (1 address). If you create global block with this resource, you must specify type = “global_ipv4” and you must omit the facility argument.</p>
-<p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code class="docutils literal notranslate"><span class="pre">.IpAttachment</span></code> resource.</p>
+<p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code class="docutils literal notranslate"><span class="pre">IpAttachment</span></code> resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2085,14 +2217,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_packet.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SshKey resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the SSH key for identification
-:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
-<blockquote>
-<div><p>can be read using the file interpolation function</p>
-</div></blockquote>
+<dd><p>Provides a resource to manage User SSH keys on your Packet user account. If you create a new device in a project, all the keys of the project’s collaborators will be injected to the device.</p>
+<p>The link between User SSH key and device is implicit. If you want to make sure that a key will be copied to a device, you must ensure that the device resource <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> the key resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a new SSH key</span>
+<span class="n">key1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;key1&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;terraform-1&quot;</span><span class="p">,</span>
+    <span class="n">public_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/home/terraform/.ssh/id_rsa.pub&quot;</span><span class="p">))</span>
+<span class="c1"># Create new device with &quot;key1&quot; included. The device resource &quot;depends_on&quot; the</span>
+<span class="c1"># key, in order to make sure the key is created before the device.</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;test-device&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sjc1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;packet_ssh_key.key1&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
+can be read using the file interpolation function</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_packet.SshKey.created">
 <code class="sig-name descname">created</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SshKey.created" title="Permalink to this definition">¶</a></dt>
@@ -2586,7 +2742,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_device_bgp_neighbors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_device_bgp_neighbors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this datasource to retrieve list of BGP neighbors of a device in the Packet host.</p>
 <p>To have any BGP neighbors listed, the device must be in BGP-enabled project and have a BGP session assigned.</p>
-<p>To learn more about using BGP in Packet, see the .BgpSession resource documentation.</p>
+<p>To learn more about using BGP in Packet, see the BgpSession resource documentation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
 
@@ -2693,7 +2849,14 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dl class="py function">
 <dt id="pulumi_packet.get_project">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this datasource to retrieve attributes of the Project API resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">tf_project1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Terraform Fun&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;usersOfTerraformFun&quot;</span><span class="p">,</span> <span class="n">tf_project1</span><span class="o">.</span><span class="n">user_ids</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2728,7 +2891,7 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dl class="py function">
 <dt id="pulumi_packet.get_spot_market_request">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_spot_market_request</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_request" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Packet spot_market_request datasource. The datasource will contain list of device IDs created by referenced Spot Market Request.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>request_id</strong> (<em>str</em>) – The id of the Spot Market Request</p>
@@ -2739,7 +2902,15 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dl class="py function">
 <dt id="pulumi_packet.get_volume">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Provides a Packet Block Storage Volume datasource to allow you to read existing volumes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;terraform-volume-1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;volumeSize&quot;</span><span class="p">,</span> <span class="n">volume1</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

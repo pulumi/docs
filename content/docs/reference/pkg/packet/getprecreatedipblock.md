@@ -13,9 +13,6 @@ meta_desc: "Explore the GetPrecreatedIpBlock function of the Packet package, inc
 Use this data source to get CIDR expression for precreated IPv6 and IPv4 blocks in Packet.
 You can then use the cidrsubnet TF builtin function to derive subnets.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetPrecreatedIpBlock {#using}
@@ -84,7 +81,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for public or private block. 
+    <dd>{{% md %}}Whether to look for public or private block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -146,7 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for public or private block. 
+    <dd>{{% md %}}Whether to look for public or private block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -208,7 +205,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for public or private block. 
+    <dd>{{% md %}}Whether to look for public or private block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -270,7 +267,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for public or private block. 
+    <dd>{{% md %}}Whether to look for public or private block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -16,8 +16,6 @@ To learn more about Layer 2 networking in Packet, refer to
 * https://www.packet.com/resources/guides/layer-2-configurations/
 * https://www.packet.com/developers/docs/network/advanced/layer-2/
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,10 +41,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := packet.NewVlan(ctx, "vlan1", &packet.VlanArgs{
+			Description: pulumi.String("VLAN in New Jersey"),
+			Facility:    pulumi.String("ewr1"),
+			ProjectId:   pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,9 +81,11 @@ vlan1 = packet.Vlan("vlan1",
     facility="ewr1",
     project_id=local["project_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -74,6 +97,7 @@ const vlan1 = new packet.Vlan("vlan1", {
     projectId: local.project_id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

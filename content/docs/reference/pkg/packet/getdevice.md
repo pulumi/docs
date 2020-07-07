@@ -17,10 +17,6 @@ Provides a Packet device datasource.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
-{{% examples %}}
-{{% /examples %}}
-
-
 
 ## Using GetDevice {#using}
 

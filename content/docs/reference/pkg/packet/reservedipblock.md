@@ -21,10 +21,7 @@ Public blocks are allocated in a facility. Addresses from public blocks can only
 
 Addresses from global blocks can be assigned in any facility. Global blocks can have mask from /30 (4 addresses), to /32 (1 address). If you create global block with this resource, you must specify type = "global_ipv4" and you must omit the facility argument.
 
-Once IP block is allocated or imported, an address from it can be assigned to device with the `packet..IpAttachment` resource.
-
-{{% examples %}}
-{{% /examples %}}
+Once IP block is allocated or imported, an address from it can be assigned to device with the `packet.IpAttachment` resource.
 
 
 

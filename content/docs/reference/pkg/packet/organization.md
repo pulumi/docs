@@ -12,8 +12,6 @@ meta_desc: "Explore the Organization resource of the Packet package, including e
 
 Provides a resource to manage organization resource in Packet.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,10 +36,32 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := packet.NewOrganization(ctx, "tfOrganization1", &packet.OrganizationArgs{
+			Description: pulumi.String("quux"),
+			Name:        pulumi.String("foobar"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,9 +74,11 @@ tf_organization1 = packet.Organization("tfOrganization1",
     description="quux",
     name="foobar")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -67,6 +89,7 @@ const tfOrganization1 = new packet.Organization("tf_organization_1", {
     name: "foobar",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

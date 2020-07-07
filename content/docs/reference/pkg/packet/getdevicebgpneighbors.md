@@ -14,9 +14,7 @@ Use this datasource to retrieve list of BGP neighbors of a device in the Packet 
 
 To have any BGP neighbors listed, the device must be in BGP-enabled project and have a BGP session assigned.
 
-To learn more about using BGP in Packet, see the packet..BgpSession resource documentation.
-
-
+To learn more about using BGP in Packet, see the packet.BgpSession resource documentation.
 
 {{% examples %}}
 ## Example Usage
@@ -43,10 +41,32 @@ class MyStack : Stack
     public Output<string> BgpNeighborsListing { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := packet.GetDeviceBgpNeighbors(ctx, &packet.GetDeviceBgpNeighborsArgs{
+			DeviceId: "4c641195-25e5-4c3c-b2b7-4cd7a42c7b40",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("bgpNeighborsListing", test.BgpNeighbors)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +77,11 @@ import pulumi_packet as packet
 test = packet.get_device_bgp_neighbors(device_id="4c641195-25e5-4c3c-b2b7-4cd7a42c7b40")
 pulumi.export("bgpNeighborsListing", test.bgp_neighbors)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -69,6 +91,7 @@ const test = packet.getDeviceBgpNeighbors({
 });
 export const bgpNeighborsListing = test.then(test => test.bgpNeighbors);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
