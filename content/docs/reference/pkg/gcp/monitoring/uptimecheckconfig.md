@@ -21,295 +21,6 @@ To get more information about UptimeCheckConfig, see:
 > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Uptime Check Config Http
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http = new Gcp.Monitoring.UptimeCheckConfig("http", new Gcp.Monitoring.UptimeCheckConfigArgs
-        {
-            ContentMatchers = 
-            {
-                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
-                {
-                    Content = "example",
-                },
-            },
-            DisplayName = "http-uptime-check",
-            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
-            {
-                Path = "/some-path",
-                Port = 8010,
-            },
-            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
-            {
-                Labels = 
-                {
-                    { "host", "192.168.1.1" },
-                    { "project_id", "my-project-name" },
-                },
-                Type = "uptime_url",
-            },
-            Timeout = "60s",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = monitoring.NewUptimeCheckConfig(ctx, "http", &monitoring.UptimeCheckConfigArgs{
-			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
-				&monitoring.UptimeCheckConfigContentMatcherArgs{
-					Content: pulumi.String("example"),
-				},
-			},
-			DisplayName: pulumi.String("http-uptime-check"),
-			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
-				Path: pulumi.String("/some-path"),
-				Port: pulumi.Int(8010),
-			},
-			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
-				Labels: pulumi.Map{
-					"host":       pulumi.String("192.168.1.1"),
-					"project_id": pulumi.String("my-project-name"),
-				},
-				Type: pulumi.String("uptime_url"),
-			},
-			Timeout: pulumi.String("60s"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http = gcp.monitoring.UptimeCheckConfig("http",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="http-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "8010",
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http = new gcp.monitoring.UptimeCheckConfig("http", {
-    contentMatchers: [{
-        content: "example",
-    }],
-    displayName: "http-uptime-check",
-    httpCheck: {
-        path: "/some-path",
-        port: 8010,
-    },
-    monitoredResource: {
-        labels: {
-            host: "192.168.1.1",
-            project_id: "my-project-name",
-        },
-        type: "uptime_url",
-    },
-    timeout: "60s",
-});
-```
-
-{{% /example %}}
-
-### Uptime Check Config Https
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var https = new Gcp.Monitoring.UptimeCheckConfig("https", new Gcp.Monitoring.UptimeCheckConfigArgs
-        {
-            ContentMatchers = 
-            {
-                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
-                {
-                    Content = "example",
-                },
-            },
-            DisplayName = "https-uptime-check",
-            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
-            {
-                Path = "/some-path",
-                Port = 443,
-                UseSsl = true,
-                ValidateSsl = true,
-            },
-            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
-            {
-                Labels = 
-                {
-                    { "host", "192.168.1.1" },
-                    { "project_id", "my-project-name" },
-                },
-                Type = "uptime_url",
-            },
-            Timeout = "60s",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = monitoring.NewUptimeCheckConfig(ctx, "https", &monitoring.UptimeCheckConfigArgs{
-			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
-				&monitoring.UptimeCheckConfigContentMatcherArgs{
-					Content: pulumi.String("example"),
-				},
-			},
-			DisplayName: pulumi.String("https-uptime-check"),
-			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
-				Path:        pulumi.String("/some-path"),
-				Port:        pulumi.Int(443),
-				UseSsl:      pulumi.Bool(true),
-				ValidateSsl: pulumi.Bool(true),
-			},
-			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
-				Labels: pulumi.Map{
-					"host":       pulumi.String("192.168.1.1"),
-					"project_id": pulumi.String("my-project-name"),
-				},
-				Type: pulumi.String("uptime_url"),
-			},
-			Timeout: pulumi.String("60s"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-https = gcp.monitoring.UptimeCheckConfig("https",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="https-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "443",
-        "useSsl": True,
-        "validateSsl": True,
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https = new gcp.monitoring.UptimeCheckConfig("https", {
-    contentMatchers: [{
-        content: "example",
-    }],
-    displayName: "https-uptime-check",
-    httpCheck: {
-        path: "/some-path",
-        port: 443,
-        useSsl: true,
-        validateSsl: true,
-    },
-    monitoredResource: {
-        labels: {
-            host: "192.168.1.1",
-            project_id: "my-project-name",
-        },
-        type: "uptime_url",
-    },
-    timeout: "60s",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a UptimeCheckConfig Resource {#create}
@@ -1999,6 +1710,28 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="body_csharp">
+<a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span> 
@@ -2043,6 +1776,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_csharp">
+<a href="#requestmethod_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_csharp">
 <a href="#usessl_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
 </span> 
@@ -2079,6 +1823,28 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_go">
+<a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2127,6 +1893,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_go">
+<a href="#requestmethod_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_go">
 <a href="#usessl_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
 </span> 
@@ -2163,6 +1940,28 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_nodejs">
+<a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2211,6 +2010,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_nodejs">
+<a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_nodejs">
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span> 
@@ -2247,6 +2057,28 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Dict[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_python">
+<a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2291,6 +2123,17 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmethod_python">
+<a href="#requestmethod_python" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

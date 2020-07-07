@@ -12,63 +12,6 @@ meta_desc: "Explore the GetRule function of the iam module, including examples, 
 
 Use this data source to get information about a Google IAM Role.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const roleinfo = gcp.iam.getRule({
-    name: "roles/compute.viewer",
-});
-export const theRolePermissions = roleinfo.then(roleinfo => roleinfo.includedPermissions);
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-roleinfo = gcp.iam.get_rule(name="roles/compute.viewer")
-pulumi.export("theRolePermissions", roleinfo.included_permissions)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var roleinfo = Output.Create(Gcp.Iam.GetRule.InvokeAsync(new Gcp.Iam.GetRuleArgs
-        {
-            Name = "roles/compute.viewer",
-        }));
-        this.TheRolePermissions = roleinfo.Apply(roleinfo => roleinfo.IncludedPermissions);
-    }
-
-    [Output("theRolePermissions")]
-    public Output<string> TheRolePermissions { get; set; }
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		roleinfo, err := iam.GetRule(ctx, &iam.GetRuleArgs{
-			Name: "roles/compute.viewer",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("theRolePermissions", roleinfo.IncludedPermissions)
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetRule {#using}

@@ -26,96 +26,6 @@ To get more information about CryptoKey, see:
 * How-to Guides
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Kms Crypto Key Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
-        {
-            Location = "global",
-        });
-        var example_key = new Gcp.Kms.CryptoKey("example-key", new Gcp.Kms.CryptoKeyArgs
-        {
-            KeyRing = keyring.Id,
-            RotationPeriod = "100000s",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
-			Location: pulumi.String("global"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = kms.NewCryptoKey(ctx, "example-key", &kms.CryptoKeyArgs{
-			KeyRing:        keyring.ID(),
-			RotationPeriod: pulumi.String("100000s"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-keyring = gcp.kms.KeyRing("keyring", location="global")
-example_key = gcp.kms.CryptoKey("example-key",
-    key_ring=keyring.id,
-    rotation_period="100000s")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
-const example_key = new gcp.kms.CryptoKey("example-key", {
-    keyRing: keyring.id,
-    rotationPeriod: "100000s",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a CryptoKey Resource {#create}
@@ -1346,8 +1256,8 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectionlevel_python">
-<a href="#protectionlevel_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
+        <span id="protection_level_python">
+<a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

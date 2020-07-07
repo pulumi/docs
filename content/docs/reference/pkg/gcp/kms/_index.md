@@ -19,6 +19,7 @@ Explore the resources and functions of the kms module in the GCP package.
     <li><a href="keyringiambinding" title="KeyRingIAMBinding"><span class="symbol resource"></span>KeyRingIAMBinding</a></li>
     <li><a href="keyringiammember" title="KeyRingIAMMember"><span class="symbol resource"></span>KeyRingIAMMember</a></li>
     <li><a href="keyringiampolicy" title="KeyRingIAMPolicy"><span class="symbol resource"></span>KeyRingIAMPolicy</a></li>
+    <li><a href="keyringimportjob" title="KeyRingImportJob"><span class="symbol resource"></span>KeyRingImportJob</a></li>
     <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
     <li><a href="secretciphertext" title="SecretCiphertext"><span class="symbol resource"></span>SecretCiphertext</a></li>
 </ul>
@@ -41,7 +42,7 @@ Explore the resources and functions of the kms module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.13.0</dd>
 </dl>
 
 

@@ -12,120 +12,6 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 
 Get info about a GKE cluster from its name and location.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myCluster = Output.Create(Gcp.Container.GetCluster.InvokeAsync(new Gcp.Container.GetClusterArgs
-        {
-            Name = "my-cluster",
-            Location = "us-east1-a",
-        }));
-        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Username);
-        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Password);
-        this.Endpoint = myCluster.Apply(myCluster => myCluster.Endpoint);
-        this.InstanceGroupUrls = myCluster.Apply(myCluster => myCluster.InstanceGroupUrls);
-        this.NodeConfig = myCluster.Apply(myCluster => myCluster.NodeConfigs);
-        this.NodePools = myCluster.Apply(myCluster => myCluster.NodePools);
-    }
-
-    [Output("clusterUsername")]
-    public Output<string> ClusterUsername { get; set; }
-    [Output("clusterPassword")]
-    public Output<string> ClusterPassword { get; set; }
-    [Output("endpoint")]
-    public Output<string> Endpoint { get; set; }
-    [Output("instanceGroupUrls")]
-    public Output<string> InstanceGroupUrls { get; set; }
-    [Output("nodeConfig")]
-    public Output<string> NodeConfig { get; set; }
-    [Output("nodePools")]
-    public Output<string> NodePools { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "us-east1-a"
-		myCluster, err := container.LookupCluster(ctx, &container.LookupClusterArgs{
-			Name:     "my-cluster",
-			Location: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("clusterUsername", myCluster.MasterAuths[0].Username)
-		ctx.Export("clusterPassword", myCluster.MasterAuths[0].Password)
-		ctx.Export("endpoint", myCluster.Endpoint)
-		ctx.Export("instanceGroupUrls", myCluster.InstanceGroupUrls)
-		ctx.Export("nodeConfig", myCluster.NodeConfigs)
-		ctx.Export("nodePools", myCluster.NodePools)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_cluster = gcp.container.get_cluster(name="my-cluster",
-    location="us-east1-a")
-pulumi.export("clusterUsername", my_cluster.master_auths[0]["username"])
-pulumi.export("clusterPassword", my_cluster.master_auths[0]["password"])
-pulumi.export("endpoint", my_cluster.endpoint)
-pulumi.export("instanceGroupUrls", my_cluster.instance_group_urls)
-pulumi.export("nodeConfig", my_cluster.node_configs)
-pulumi.export("nodePools", my_cluster.node_pools)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myCluster = gcp.container.getCluster({
-    name: "my-cluster",
-    location: "us-east1-a",
-});
-export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths[0].username);
-export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths[0].password);
-export const endpoint = myCluster.then(myCluster => myCluster.endpoint);
-export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceGroupUrls);
-export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);
-export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetCluster {#using}
@@ -760,6 +646,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="networkingmode_csharp">
+<a href="#networkingmode_csharp" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="nodeconfigs_csharp">
 <a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span> 
@@ -1273,6 +1169,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusternetworkpolicy">[]Get<wbr>Cluster<wbr>Network<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkingmode_go">
+<a href="#networkingmode_go" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1796,6 +1702,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="networkingmode_nodejs">
+<a href="#networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="nodeconfigs_nodejs">
 <a href="#nodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Configs</a>
 </span> 
@@ -2309,6 +2225,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusternetworkpolicy">List[Get<wbr>Cluster<wbr>Network<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networking_mode_python">
+<a href="#networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
