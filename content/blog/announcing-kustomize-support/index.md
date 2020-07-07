@@ -3,7 +3,7 @@ title: "Announcing Kustomize Support"
 date: 2020-07-07
 draft: false
 meta_desc: "Pulumi adds Kustomize support to their Kubernetes provider"
-meta_image: meta.png
+meta_image: kustomize_twcard.png
 authors:
     - levi-blackstone
 
