@@ -99,6 +99,24 @@ let bucket = new aws.s3.Bucket("stuff");
 
 [Additional languages are available](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages) as well.
 
+### Notes
+
+Shortcode for a warning note:
+
+```
+{{% notes type="warning" %}}
+**DANGER** Will Robinson!
+{{% /notes %}}
+```
+
+Shortcode for an info note:
+
+```
+{{% notes type="info" %}}
+Using Bastion hosts is a best practice.
+{{% /notes %}}
+```
+
 ### Media
 
 #### Inline Images
