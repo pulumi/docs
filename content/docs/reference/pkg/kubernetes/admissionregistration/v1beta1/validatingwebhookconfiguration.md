@@ -23,7 +23,7 @@ ValidatingWebhookConfiguration describes the configuration of and admission webh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration/v1beta1/#ValidatingWebhookConfiguration">ValidatingWebhookConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>webhooks=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration/v1beta1/#pulumi_kubernetes.admissionregistration/v1beta1.ValidatingWebhookConfiguration">ValidatingWebhookConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>webhooks=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

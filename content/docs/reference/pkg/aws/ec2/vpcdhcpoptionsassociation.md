@@ -105,7 +105,7 @@ const dnsResolver = new aws.ec2.VpcDhcpOptionsAssociation("dns_resolver", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#VpcDhcpOptionsAssociation">VpcDhcpOptionsAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dhcp_options_id=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcDhcpOptionsAssociation">VpcDhcpOptionsAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dhcp_options_id=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

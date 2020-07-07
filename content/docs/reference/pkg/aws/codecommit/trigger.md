@@ -142,7 +142,7 @@ const testTrigger = new aws.codecommit.Trigger("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codecommit/#Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>repository_name=None<span class="p">, </span>triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codecommit/#pulumi_aws.codecommit.Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>repository_name=None<span class="p">, </span>triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

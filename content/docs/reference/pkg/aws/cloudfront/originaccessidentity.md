@@ -139,7 +139,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#OriginAccessIdentity">OriginAccessIdentity</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.OriginAccessIdentity">OriginAccessIdentity</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

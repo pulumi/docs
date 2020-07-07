@@ -139,7 +139,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lightsail/#StaticIpAttachment">StaticIpAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_name=None<span class="p">, </span>static_ip_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lightsail/#pulumi_aws.lightsail.StaticIpAttachment">StaticIpAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_name=None<span class="p">, </span>static_ip_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

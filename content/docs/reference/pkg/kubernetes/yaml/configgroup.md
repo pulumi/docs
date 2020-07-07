@@ -36,7 +36,7 @@ ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/yaml/#ConfigGroup">ConfigGroup</a></span><span class="p">(resource_name, </span>file<span class="p">, </span>opts=None<span class="p">, </span>transformations=None<span class="p">, </span>resource_prefix=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/yaml/#pulumi_kubernetes.yaml.ConfigGroup">ConfigGroup</a></span><span class="p">(resource_name, </span>file<span class="p">, </span>opts=None<span class="p">, </span>transformations=None<span class="p">, </span>resource_prefix=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

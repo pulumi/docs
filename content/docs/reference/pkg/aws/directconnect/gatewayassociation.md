@@ -395,7 +395,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directconnect/#GatewayAssociation">GatewayAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>proposal_id=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directconnect/#pulumi_aws.directconnect.GatewayAssociation">GatewayAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>proposal_id=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

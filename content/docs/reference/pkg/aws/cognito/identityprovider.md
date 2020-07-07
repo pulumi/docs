@@ -162,7 +162,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#IdentityProvider">IdentityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attribute_mapping=None<span class="p">, </span>idp_identifiers=None<span class="p">, </span>provider_details=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_type=None<span class="p">, </span>user_pool_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.IdentityProvider">IdentityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attribute_mapping=None<span class="p">, </span>idp_identifiers=None<span class="p">, </span>provider_details=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_type=None<span class="p">, </span>user_pool_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
