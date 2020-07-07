@@ -1,8 +1,8 @@
 
 ---
 title: "GetNetwork"
-title_tag: "Function GetNetwork | Package hcloud"
-meta_desc: "Explore the GetNetwork function of the hcloud package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetNetwork | Package Hetzner Cloud"
+meta_desc: "Explore the GetNetwork function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

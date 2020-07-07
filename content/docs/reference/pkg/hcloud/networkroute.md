@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkRoute"
-title_tag: "Resource NetworkRoute | Package hcloud"
-meta_desc: "Explore the NetworkRoute resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network Route to represent a Network route in the Hetzner Cloud."
+title_tag: "Resource NetworkRoute | Package Hetzner Cloud"
+meta_desc: "Explore the NetworkRoute resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network Route to represent a Network route in the Hetzner Cloud."
 ---
 
 

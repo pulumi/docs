@@ -1,8 +1,8 @@
 
 ---
 title: "Rdns"
-title_tag: "Resource Rdns | Package hcloud"
-meta_desc: "Explore the Rdns resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Reverse DNS Entry to create, modify and reset reverse dns entries for Hetzner Cloud Floating IPs or servers."
+title_tag: "Resource Rdns | Package Hetzner Cloud"
+meta_desc: "Explore the Rdns resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Reverse DNS Entry to create, modify and reset reverse dns entries for Hetzner Cloud Floating IPs or servers."
 ---
 
 

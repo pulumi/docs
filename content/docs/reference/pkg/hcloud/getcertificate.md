@@ -1,8 +1,8 @@
 
 ---
 title: "GetCertificate"
-title_tag: "Function GetCertificate | Package hcloud"
-meta_desc: "Explore the GetCertificate function of the hcloud package, including examples, input properties, output properties, and supporting types. Provides details about a specific Hetzner Cloud Certificate."
+title_tag: "Function GetCertificate | Package Hetzner Cloud"
+meta_desc: "Explore the GetCertificate function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. Provides details about a specific Hetzner Cloud Certificate."
 ---
 
 

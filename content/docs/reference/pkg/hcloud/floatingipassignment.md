@@ -1,8 +1,8 @@
 
 ---
 title: "FloatingIpAssignment"
-title_tag: "Resource FloatingIpAssignment | Package hcloud"
-meta_desc: "Explore the FloatingIpAssignment resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Floating IP Assignment to assign a Floating IP to a Hetzner Cloud Server. Deleting a Floating IP Assignment will unassign the Floating IP from the Server."
+title_tag: "Resource FloatingIpAssignment | Package Hetzner Cloud"
+meta_desc: "Explore the FloatingIpAssignment resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Floating IP Assignment to assign a Floating IP to a Hetzner Cloud Server. Deleting a Floating IP Assignment will unassign the Floating IP from the Server."
 ---
 
 

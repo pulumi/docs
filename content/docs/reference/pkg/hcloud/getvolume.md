@@ -1,8 +1,8 @@
 
 ---
 title: "GetVolume"
-title_tag: "Function GetVolume | Package hcloud"
-meta_desc: "Explore the GetVolume function of the hcloud package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetVolume | Package Hetzner Cloud"
+meta_desc: "Explore the GetVolume function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkSubnet"
-title_tag: "Resource NetworkSubnet | Package hcloud"
-meta_desc: "Explore the NetworkSubnet resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network Subnet to represent a Subnet in the Hetzner Cloud."
+title_tag: "Resource NetworkSubnet | Package Hetzner Cloud"
+meta_desc: "Explore the NetworkSubnet resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Network Subnet to represent a Subnet in the Hetzner Cloud."
 ---
 
 

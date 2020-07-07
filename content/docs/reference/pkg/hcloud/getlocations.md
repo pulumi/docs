@@ -1,8 +1,8 @@
 
 ---
 title: "GetLocations"
-title_tag: "Function GetLocations | Package hcloud"
-meta_desc: "Explore the GetLocations function of the hcloud package, including examples, input properties, output properties, and supporting types. Provides a list of available Hetzner Cloud Locations."
+title_tag: "Function GetLocations | Package Hetzner Cloud"
+meta_desc: "Explore the GetLocations function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. Provides a list of available Hetzner Cloud Locations."
 ---
 
 

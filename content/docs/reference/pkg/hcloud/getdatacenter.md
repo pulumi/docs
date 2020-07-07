@@ -1,8 +1,8 @@
 
 ---
 title: "GetDatacenter"
-title_tag: "Function GetDatacenter | Package hcloud"
-meta_desc: "Explore the GetDatacenter function of the hcloud package, including examples, input properties, output properties, and supporting types. Provides details about a specific Hetzner Cloud Datacenter."
+title_tag: "Function GetDatacenter | Package Hetzner Cloud"
+meta_desc: "Explore the GetDatacenter function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. Provides details about a specific Hetzner Cloud Datacenter."
 ---
 
 

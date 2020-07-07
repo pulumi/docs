@@ -1,8 +1,8 @@
 
 ---
 title: "FloatingIp"
-title_tag: "Resource FloatingIp | Package hcloud"
-meta_desc: "Explore the FloatingIp resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Floating IP to represent a publicly-accessible static IP address that can be mapped to one of your servers."
+title_tag: "Resource FloatingIp | Package Hetzner Cloud"
+meta_desc: "Explore the FloatingIp resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Floating IP to represent a publicly-accessible static IP address that can be mapped to one of your servers."
 ---
 
 

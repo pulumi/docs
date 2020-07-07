@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeAttachment"
-title_tag: "Resource VolumeAttachment | Package hcloud"
-meta_desc: "Explore the VolumeAttachment resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Volume attachment to attach a Volume to a Hetzner Cloud Server. Deleting a Volume Attachment will detach the Volume from the Server."
+title_tag: "Resource VolumeAttachment | Package Hetzner Cloud"
+meta_desc: "Explore the VolumeAttachment resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Volume attachment to attach a Volume to a Hetzner Cloud Server. Deleting a Volume Attachment will detach the Volume from the Server."
 ---
 
 

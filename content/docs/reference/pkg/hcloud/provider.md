@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package hcloud"
-meta_desc: "Explore the Provider resource of the hcloud package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the hcloud package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Hetzner Cloud"
+meta_desc: "Explore the Provider resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the hcloud package. By default, resources use package-wide configuration"
 ---
 
 
