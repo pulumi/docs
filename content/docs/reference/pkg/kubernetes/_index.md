@@ -31,6 +31,7 @@ A Pulumi package for creating and managing Kubernetes resources.
     <li><a href="extensions/" title="extensions"><span class="symbol module"></span>extensions</a></li>
     <li><a href="flowcontrol/" title="flowcontrol"><span class="symbol module"></span>flowcontrol</a></li>
     <li><a href="helm/" title="helm"><span class="symbol module"></span>helm</a></li>
+    <li><a href="kustomize/" title="kustomize"><span class="symbol module"></span>kustomize</a></li>
     <li><a href="meta/" title="meta"><span class="symbol module"></span>meta</a></li>
     <li><a href="networking/" title="networking"><span class="symbol module"></span>networking</a></li>
     <li><a href="node/" title="node"><span class="symbol module"></span>node</a></li>
@@ -54,7 +55,7 @@ A Pulumi package for creating and managing Kubernetes resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.3.1</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

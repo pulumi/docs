@@ -13,6 +13,7 @@ meta_desc: "Explore the CronJobList resource of the batch/v2alpha1 module, inclu
 CronJobList is a collection of cron jobs.
 
 
+
 ## Create a CronJobList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

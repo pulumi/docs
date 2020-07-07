@@ -16,6 +16,7 @@ CustomResource represents an instance of a CustomResourceDefinition (CRD). For e
  `ServiceMonitor` resource definition as an argument.
 
 
+
 ## Create a CustomResource Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

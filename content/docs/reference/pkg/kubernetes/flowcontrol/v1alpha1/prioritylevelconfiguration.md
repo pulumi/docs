@@ -13,6 +13,7 @@ meta_desc: "Explore the PriorityLevelConfiguration resource of the flowcontrol.a
 PriorityLevelConfiguration represents the configuration of a priority level.
 
 
+
 ## Create a PriorityLevelConfiguration Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

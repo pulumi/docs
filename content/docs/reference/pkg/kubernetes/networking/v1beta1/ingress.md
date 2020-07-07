@@ -27,6 +27,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 
+
 ## Create a Ingress Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

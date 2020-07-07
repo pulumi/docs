@@ -13,6 +13,7 @@ meta_desc: "Explore the HorizontalPodAutoscalerList resource of the autoscaling/
 HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
 
+
 ## Create a HorizontalPodAutoscalerList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

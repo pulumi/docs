@@ -13,6 +13,7 @@ meta_desc: "Explore the LimitRangeList resource of the core/v1 module, including
 LimitRangeList is a list of LimitRange items.
 
 
+
 ## Create a LimitRangeList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

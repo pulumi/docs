@@ -13,6 +13,7 @@ meta_desc: "Explore the RoleList resource of the rbac.authorization.k8s.io/v1 mo
 RoleList is a collection of Roles
 
 
+
 ## Create a RoleList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
