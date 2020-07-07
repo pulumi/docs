@@ -29,6 +29,7 @@ TOOLS_REPOS=(
     "pulumi-gcp"
     "pulumi-github"
     "pulumi-gitlab"
+    "pulumi-hcloud"
     "pulumi-kafka"
     "pulumi-keycloak"
     "pulumi-kubernetes"

@@ -66,7 +66,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ipAddress, err := compute.NewAddress(ctx, "ipAddress", nil)
+		_, err = compute.NewAddress(ctx, "ipAddress", nil)
 		if err != nil {
 			return err
 		}
@@ -154,7 +154,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		internalWithSubnetAndAddress, err := compute.NewAddress(ctx, "internalWithSubnetAndAddress", &compute.AddressArgs{
+		_, err = compute.NewAddress(ctx, "internalWithSubnetAndAddress", &compute.AddressArgs{
 			Subnetwork:  defaultSubnetwork.ID(),
 			AddressType: pulumi.String("INTERNAL"),
 			Address:     pulumi.String("10.0.42.42"),
@@ -244,7 +244,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		internalWithGceEndpoint, err := compute.NewAddress(ctx, "internalWithGceEndpoint", &compute.AddressArgs{
+		_, err = compute.NewAddress(ctx, "internalWithGceEndpoint", &compute.AddressArgs{
 			AddressType: pulumi.String("INTERNAL"),
 			Purpose:     pulumi.String("GCE_ENDPOINT"),
 		})
@@ -565,6 +565,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -698,6 +699,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -831,6 +833,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -964,6 +967,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -1500,6 +1504,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -1677,6 +1682,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -1854,6 +1860,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 
@@ -2031,6 +2038,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
 {{% /md %}}</dd>
 

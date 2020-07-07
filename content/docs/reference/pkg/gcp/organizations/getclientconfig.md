@@ -38,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := organizations.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("project", current.Project)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

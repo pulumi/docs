@@ -107,7 +107,7 @@ brew install docfx
 
 `make lint_markdown` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
 
-`make build` will generate the website (published to public).
+`make build` will generate the website (published to `./public`).
 
 `make serve` will build the website and serve it to http://localhost:1313.
 

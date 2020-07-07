@@ -3,7 +3,10 @@ title: Module blockstorage
 title_tag: Module blockstorage | Package pulumi_openstack | Python SDK
 linktitle: blockstorage
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="blockstorage">
 <h1>blockstorage<a class="headerlink" href="#blockstorage" title="Permalink to this headline">¶</a></h1>

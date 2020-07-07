@@ -88,13 +88,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Test Notification Channel"
 		basic, err := monitoring.LookupNotificationChannel(ctx, &monitoring.LookupNotificationChannelArgs{
-			DisplayName: "Test Notification Channel",
+			DisplayName: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		alertPolicy, err := monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
+		_, err = monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
 			DisplayName: pulumi.String("My Alert Policy"),
 			NotificationChannels: pulumi.StringArray{
 				pulumi.String(basic.Name),
@@ -103,14 +104,14 @@ func main() {
 			Conditions: monitoring.AlertPolicyConditionArray{
 				&monitoring.AlertPolicyConditionArgs{
 					DisplayName: pulumi.String("test condition"),
-					Condition_threshold: map[string]interface{}{
-						"filter":     "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-						"duration":   "60s",
-						"comparison": "COMPARISON_GT",
-						"aggregations": []map[string]interface{}{
-							map[string]interface{}{
-								"alignmentPeriod":  "60s",
-								"perSeriesAligner": "ALIGN_RATE",
+					Condition_threshold: pulumi.Map{
+						"filter":     pulumi.String("metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""),
+						"duration":   pulumi.String("60s"),
+						"comparison": pulumi.String("COMPARISON_GT"),
+						"aggregations": pulumi.MapArray{
+							pulumi.Map{
+								"alignmentPeriod":  pulumi.String("60s"),
+								"perSeriesAligner": pulumi.String("ALIGN_RATE"),
 							},
 						},
 					},

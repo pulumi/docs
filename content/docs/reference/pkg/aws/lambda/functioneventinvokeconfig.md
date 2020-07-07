@@ -16,6 +16,110 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Destination Configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
+        {
+            FunctionName = aws_lambda_alias.Example.Function_name,
+            DestinationConfig = new Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigArgs
+            {
+                OnFailure = new Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnFailureArgs
+                {
+                    Destination = aws_sqs_queue.Example.Arn,
+                },
+                OnSuccess = new Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs
+                {
+                    Destination = aws_sns_topic.Example.Arn,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+			FunctionName: pulumi.String(aws_lambda_alias.Example.Function_name),
+			DestinationConfig: &lambda.FunctionEventInvokeConfigDestinationConfigArgs{
+				OnFailure: &lambda.FunctionEventInvokeConfigDestinationConfigOnFailureArgs{
+					Destination: pulumi.String(aws_sqs_queue.Example.Arn),
+				},
+				OnSuccess: &lambda.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs{
+					Destination: pulumi.String(aws_sns_topic.Example.Arn),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    destination_config={
+        "on_failure": {
+            "destination": aws_sqs_queue["example"]["arn"],
+        },
+        "onSuccess": {
+            "destination": aws_sns_topic["example"]["arn"],
+        },
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    destinationConfig: {
+        onFailure: {
+            destination: aws_sqs_queue.example.arn,
+        },
+        onSuccess: {
+            destination: aws_sns_topic.example.arn,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
 ### Error Handling Configuration
 {{% example csharp %}}
 ```csharp
@@ -50,7 +154,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+		_, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
 			FunctionName:             pulumi.String(aws_lambda_alias.Example.Function_name),
 			MaximumEventAgeInSeconds: pulumi.Int(60),
 			MaximumRetryAttempts:     pulumi.Int(0),
@@ -127,7 +231,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+		_, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
 			FunctionName: pulumi.String(aws_lambda_alias.Example.Function_name),
 			Qualifier:    pulumi.String(aws_lambda_alias.Example.Name),
 		})
@@ -205,7 +309,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+		_, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
 			FunctionName: pulumi.String(aws_lambda_function.Example.Function_name),
 			Qualifier:    pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
 		})
@@ -281,7 +385,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+		_, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
 			FunctionName: pulumi.String(aws_lambda_function.Example.Function_name),
 			Qualifier:    pulumi.String(aws_lambda_function.Example.Version),
 		})

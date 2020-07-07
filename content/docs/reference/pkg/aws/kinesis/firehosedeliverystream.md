@@ -18,6 +18,231 @@ For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.am
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Extended S3 Destination
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+        });
+        var firehoseRole = new Aws.Iam.Role("firehoseRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""firehose.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var lambdaIam = new Aws.Iam.Role("lambdaIam", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var lambdaProcessor = new Aws.Lambda.Function("lambdaProcessor", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambda.zip"),
+            Handler = "exports.handler",
+            Role = lambdaIam.Arn,
+            Runtime = "nodejs8.10",
+        });
+        var extendedS3Stream = new Aws.Kinesis.FirehoseDeliveryStream("extendedS3Stream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "extended_s3",
+            ExtendedS3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs
+            {
+                BucketArn = bucket.Arn,
+                ProcessingConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs
+                {
+                    Enabled = true,
+                    Processors = 
+                    {
+                        new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs
+                        {
+                            Parameters = 
+                            {
+                                new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs
+                                {
+                                    ParameterName = "LambdaArn",
+                                    ParameterValue = lambdaProcessor.Arn.Apply(arn => $"{arn}:$LATEST"),
+                                },
+                            },
+                            Type = "Lambda",
+                        },
+                    },
+                },
+                RoleArn = firehoseRole.Arn,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket", acl="private")
+firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "firehose.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+lambda_iam = aws.iam.Role("lambdaIam", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+lambda_processor = aws.lambda_.Function("lambdaProcessor",
+    code=pulumi.FileArchive("lambda.zip"),
+    handler="exports.handler",
+    role=lambda_iam.arn,
+    runtime="nodejs8.10")
+extended_s3_stream = aws.kinesis.FirehoseDeliveryStream("extendedS3Stream",
+    destination="extended_s3",
+    extended_s3_configuration={
+        "bucketArn": bucket.arn,
+        "processingConfiguration": {
+            "enabled": "true",
+            "processors": [{
+                "parameters": [{
+                    "parameterName": "LambdaArn",
+                    "parameterValue": lambda_processor.arn.apply(lambda arn: f"{arn}:$LATEST"),
+                }],
+                "type": "Lambda",
+            }],
+        },
+        "role_arn": firehose_role.arn,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("bucket", {
+    acl: "private",
+});
+const firehoseRole = new aws.iam.Role("firehose_role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "firehose.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const lambdaIam = new aws.iam.Role("lambda_iam", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const lambdaProcessor = new aws.lambda.Function("lambda_processor", {
+    code: new pulumi.asset.FileArchive("lambda.zip"),
+    handler: "exports.handler",
+    role: lambdaIam.arn,
+    runtime: "nodejs8.10",
+});
+const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_stream", {
+    destination: "extended_s3",
+    extendedS3Configuration: {
+        bucketArn: bucket.arn,
+        processingConfiguration: {
+            enabled: true,
+            processors: [{
+                parameters: [{
+                    parameterName: "LambdaArn",
+                    parameterValue: pulumi.interpolate`${lambdaProcessor.arn}:$LATEST`,
+                }],
+                type: "Lambda",
+            }],
+        },
+        roleArn: firehoseRole.arn,
+    },
+});
+```
+
+{{% /example %}}
+
 ### S3 Destination
 {{% example csharp %}}
 ```csharp
@@ -628,7 +853,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
+		_, err := kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
 			Destination: pulumi.String("splunk"),
 			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
 				BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),

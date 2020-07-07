@@ -13,8 +13,6 @@ meta_desc: "Explore the ImageAccessAccept resource of the images module, includi
 Manages memberships status for the shared OpenStack Glance V2 Image within the
 destination project, which has a member proposal.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ rancheros_member = openstack.images.ImageAccessAccept("rancherosMember",
     image_id=rancheros.id,
     status="accepted")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -79,6 +80,7 @@ const rancherosMember = new openstack.images.ImageAccessAccept("rancheros_member
     status: "accepted",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

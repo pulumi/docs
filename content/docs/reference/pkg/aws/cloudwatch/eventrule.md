@@ -119,7 +119,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+		_, err = sns.NewTopicPolicy(ctx, "_default", &sns.TopicPolicyArgs{
 			Arn: awsLogins.Arn,
 			Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
 				return snsTopicPolicy.Json, nil

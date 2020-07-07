@@ -80,7 +80,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
 			Path: pulumi.String("/system/"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"tag-key": pulumi.String("tag-value"),
 			},
 		})

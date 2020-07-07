@@ -75,7 +75,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
@@ -239,7 +239,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
@@ -254,7 +254,7 @@ func main() {
 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
 						Header: pulumi.MapArray{
 							pulumi.Map{
-								"match": pulumi.Map{
+								"match": pulumi.StringMap{
 									"prefix": pulumi.String("123"),
 								},
 								"name": pulumi.String("clientRequestId"),
@@ -396,7 +396,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				TcpRoute: &appmesh.RouteSpecTcpRouteArgs{

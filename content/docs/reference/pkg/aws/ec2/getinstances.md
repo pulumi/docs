@@ -18,6 +18,127 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dict = Output.Create(Initialize());
+    }
+
+    private async Task<IDictionary<string, Output<string>>> Initialize()
+    {
+        var testInstances = await Aws.Ec2.GetInstances.InvokeAsync(new Aws.Ec2.GetInstancesArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetInstancesFilterArgs
+                {
+                    Name = "instance.group-id",
+                    Values = 
+                    {
+                        "sg-12345678",
+                    },
+                },
+            },
+            InstanceStateNames = 
+            {
+                "running",
+                "stopped",
+            },
+            InstanceTags = 
+            {
+                { "Role", "HardWorker" },
+            },
+        });
+        var testEip = new List<Aws.Ec2.Eip>();
+        for (var rangeIndex = 0; rangeIndex < testInstances.Ids.Length; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            testEip.Add(new Aws.Ec2.Eip($"testEip-{range.Value}", new Aws.Ec2.EipArgs
+            {
+                Instance = testInstances.Ids[range.Value],
+            }));
+        }
+
+        return new Dictionary<string, Output<string>>
+        {
+        };
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_instances = aws.ec2.get_instances(filters=[{
+        "name": "instance.group-id",
+        "values": ["sg-12345678"],
+    }],
+    instance_state_names=[
+        "running",
+        "stopped",
+    ],
+    instance_tags={
+        "Role": "HardWorker",
+    })
+test_eip = []
+for range in [{"value": i} for i in range(0, len(test_instances.ids))]:
+    test_eip.append(aws.ec2.Eip(f"testEip-{range['value']}", instance=test_instances.ids[range["value"]]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testInstances = pulumi.output(aws.ec2.getInstances({
+    filters: [{
+        name: "instance.group-id",
+        values: ["sg-12345678"],
+    }],
+    instanceStateNames: [
+        "running",
+        "stopped",
+    ],
+    instanceTags: {
+        Role: "HardWorker",
+    },
+}, { async: true }));
+const testEip: aws.ec2.Eip[] = [];
+for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.length); i++) {
+    testEip.push(new aws.ec2.Eip(`test-${i}`, {
+        instance: testInstances.apply(testInstances => testInstances.ids[i]),
+    }));
+}
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInstances {#using}

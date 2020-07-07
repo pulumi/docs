@@ -60,7 +60,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := apigateway.LookupResource(ctx, &apigateway.LookupResourceArgs{
+		_, err = apigateway.LookupResource(ctx, &apigateway.LookupResourceArgs{
 			Path:      "/endpoint/path",
 			RestApiId: myRestApi.Id,
 		}, nil)

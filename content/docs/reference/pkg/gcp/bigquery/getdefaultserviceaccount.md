@@ -49,7 +49,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bqSa, err := bigquery.GetDefaultServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewCryptoKeyIAMMember(ctx, "keySaUser", &kms.CryptoKeyIAMMemberArgs{
+			CryptoKeyId: pulumi.String(google_kms_crypto_key.Key.Id),
+			Role:        pulumi.String("roles/cloudkms.cryptoKeyEncrypterDecrypter"),
+			Member:      pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", bqSa.Email)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

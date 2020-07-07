@@ -15,8 +15,6 @@ Manages a V3 Role resource within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,15 +50,18 @@ import pulumi_openstack as openstack
 
 role1 = openstack.identity.Role("role1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const role1 = new openstack.identity.Role("role_1", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

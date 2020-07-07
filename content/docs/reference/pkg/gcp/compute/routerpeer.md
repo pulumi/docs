@@ -62,7 +62,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		peer, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+		_, err = compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
 			AdvertisedRoutePriority: pulumi.Int(100),
 			Interface:               pulumi.String("interface-1"),
 			PeerAsn:                 pulumi.Int(65513),

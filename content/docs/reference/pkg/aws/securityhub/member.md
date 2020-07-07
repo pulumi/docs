@@ -34,6 +34,12 @@ class MyStack : Stack
             AccountId = "123456789012",
             Email = "example@example.com",
             Invite = true,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_securityhub_account.example",
+            },
         });
     }
 
@@ -53,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = securityhub.NewAccount(ctx, "exampleAccount", nil)
+		_, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
 		if err != nil {
 			return err
 		}
@@ -61,7 +67,9 @@ func main() {
 			AccountId: pulumi.String("123456789012"),
 			Email:     pulumi.String("example@example.com"),
 			Invite:    pulumi.Bool(true),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_securityhub_account.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -81,7 +89,8 @@ example_account = aws.securityhub.Account("exampleAccount")
 example_member = aws.securityhub.Member("exampleMember",
     account_id="123456789012",
     email="example@example.com",
-    invite=True)
+    invite=True,
+    opts=ResourceOptions(depends_on=["aws_securityhub_account.example"]))
 ```
 
 {{% /example %}}
@@ -486,7 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -525,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -564,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -603,7 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -791,7 +800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -853,7 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -915,7 +924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>
@@ -977,7 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The status of the relationship between the member account and its master account.
+    <dd>{{% md %}}The status of the member account relationship.
 {{% /md %}}</dd>
 
 </dl>

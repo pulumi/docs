@@ -12,8 +12,6 @@ meta_desc: "Explore the Pool resource of the loadbalancer module, including exam
 
 Manages a V2 pool resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ pool1 = openstack.loadbalancer.Pool("pool1",
     },
     protocol="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -80,6 +81,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     protocol: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

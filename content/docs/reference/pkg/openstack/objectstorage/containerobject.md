@@ -12,8 +12,6 @@ meta_desc: "Explore the ContainerObject resource of the objectstorage module, in
 
 Manages a V1 container object resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,9 +85,11 @@ doc1 = openstack.objectstorage.ContainerObject("doc1",
     },
     region="RegionOne")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -113,6 +114,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
     region: "RegionOne",
 });
 ```
+
 {{% /example %}}
 
 ### Example with content from file
@@ -149,6 +151,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -175,9 +178,11 @@ doc1 = openstack.objectstorage.ContainerObject("doc1",
     region="RegionOne",
     source="./default.json")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -199,6 +204,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
     source: "./default.json",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

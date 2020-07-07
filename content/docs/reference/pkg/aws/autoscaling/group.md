@@ -13,6 +13,38 @@ meta_desc: "Explore the Group resource of the autoscaling module, including exam
 Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+## Interpolated tags
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const extraTags = config.get("extraTags") || [
+    {
+        key: "Foo",
+        propagateAtLaunch: true,
+        value: "Bar",
+    },
+    {
+        key: "Baz",
+        propagateAtLaunch: true,
+        value: "Bam",
+    },
+];
+
+const bar = new aws.autoscaling.Group("bar", {
+    launchConfiguration: aws_launch_configuration_foobar.name,
+    maxSize: 5,
+    minSize: 2,
+    tagsCollection: [{"key": "interpolation1", "value": "value3", "propagate_at_launch": true}, {"key": "interpolation2", "value": "value4", "propagate_at_launch": true}].concat(extraTags),
+    vpcZoneIdentifiers: [
+        aws_subnet_example1.id,
+        aws_subnet_example2.id,
+    ],
+});
+```
+
 ## Waiting for Capacity
 
 A newly-created ASG is initially empty and begins to scale to `min_size` (or
@@ -79,180 +111,6 @@ for more information.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Aws.Ec2.PlacementGroup("test", new Aws.Ec2.PlacementGroupArgs
-        {
-            Strategy = "cluster",
-        });
-        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
-        {
-            DesiredCapacity = 4,
-            ForceDelete = true,
-            HealthCheckGracePeriod = 300,
-            HealthCheckType = "ELB",
-            InitialLifecycleHooks = 
-            {
-                new Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs
-                {
-                    DefaultResult = "CONTINUE",
-                    HeartbeatTimeout = 2000,
-                    LifecycleTransition = "autoscaling:EC2_INSTANCE_LAUNCHING",
-                    Name = "foobar",
-                    NotificationMetadata = @"{
-  ""foo"": ""bar""
-}
-
-",
-                    NotificationTargetArn = "arn:aws:sqs:us-east-1:444455556666:queue1*",
-                    RoleArn = "arn:aws:iam::123456789012:role/S3Access",
-                },
-            },
-            LaunchConfiguration = aws_launch_configuration.Foobar.Name,
-            MaxSize = 5,
-            MinSize = 2,
-            PlacementGroup = test.Id,
-            Tags = 
-            {
-                new Aws.AutoScaling.Inputs.GroupTagArgs
-                {
-                    Key = "foo",
-                    PropagateAtLaunch = true,
-                    Value = "bar",
-                },
-                new Aws.AutoScaling.Inputs.GroupTagArgs
-                {
-                    Key = "lorem",
-                    PropagateAtLaunch = false,
-                    Value = "ipsum",
-                },
-            },
-            VpcZoneIdentifiers = 
-            {
-                aws_subnet.Example1.Id,
-                aws_subnet.Example2.Id,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-test = aws.ec2.PlacementGroup("test", strategy="cluster")
-bar = aws.autoscaling.Group("bar",
-    desired_capacity=4,
-    force_delete=True,
-    health_check_grace_period=300,
-    health_check_type="ELB",
-    initial_lifecycle_hooks=[{
-        "default_result": "CONTINUE",
-        "heartbeat_timeout": 2000,
-        "lifecycle_transition": "autoscaling:EC2_INSTANCE_LAUNCHING",
-        "name": "foobar",
-        "notification_metadata": """{
-  "foo": "bar"
-}
-
-""",
-        "notification_target_arn": "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        "role_arn": "arn:aws:iam::123456789012:role/S3Access",
-    }],
-    launch_configuration=aws_launch_configuration["foobar"]["name"],
-    max_size=5,
-    min_size=2,
-    placement_group=test.id,
-    tags=[
-        {
-            "key": "foo",
-            "propagateAtLaunch": True,
-            "value": "bar",
-        },
-        {
-            "key": "lorem",
-            "propagateAtLaunch": False,
-            "value": "ipsum",
-        },
-    ],
-    vpc_zone_identifiers=[
-        aws_subnet["example1"]["id"],
-        aws_subnet["example2"]["id"],
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.ec2.PlacementGroup("test", {
-    strategy: "cluster",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    desiredCapacity: 4,
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
-    initialLifecycleHooks: [{
-        defaultResult: "CONTINUE",
-        heartbeatTimeout: 2000,
-        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
-        name: "foobar",
-        notificationMetadata: `{
-  "foo": "bar"
-}
-`,
-        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        roleArn: "arn:aws:iam::123456789012:role/S3Access",
-    }],
-    launchConfiguration: aws_launch_configuration_foobar.name,
-    maxSize: 5,
-    minSize: 2,
-    placementGroup: test.id,
-    tags: [
-        {
-            key: "foo",
-            propagateAtLaunch: true,
-            value: "bar",
-        },
-        {
-            key: "lorem",
-            propagateAtLaunch: false,
-            value: "ipsum",
-        },
-    ],
-    vpcZoneIdentifiers: [
-        aws_subnet_example1.id,
-        aws_subnet_example2.id,
-    ],
-}, { timeouts: {
-    delete: "15m",
-} });
-```
-
-{{% /example %}}
-
 ### With Latest Version Of Launch Template
 {{% example csharp %}}
 ```csharp
@@ -470,12 +328,12 @@ func main() {
 					LaunchTemplateSpecification: &autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs{
 						LaunchTemplateId: exampleLaunchTemplate.ID(),
 					},
-					Override: pulumi.MapArray{
-						pulumi.Map{
+					Override: pulumi.StringMapArray{
+						pulumi.StringMap{
 							"instanceType":     pulumi.String("c4.large"),
 							"weightedCapacity": pulumi.String("3"),
 						},
-						pulumi.Map{
+						pulumi.StringMap{
 							"instanceType":     pulumi.String("c3.large"),
 							"weightedCapacity": pulumi.String("2"),
 						},

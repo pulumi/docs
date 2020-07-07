@@ -82,7 +82,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		alertPolicy, err := monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
+		_, err = monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
 			Combiner: pulumi.String("OR"),
 			Conditions: monitoring.AlertPolicyConditionArray{
 				&monitoring.AlertPolicyConditionArgs{
@@ -101,8 +101,8 @@ func main() {
 				},
 			},
 			DisplayName: pulumi.String("My Alert Policy"),
-			UserLabels: map[string]interface{}{
-				"foo": "bar",
+			UserLabels: pulumi.Map{
+				"foo": pulumi.String("bar"),
 			},
 		})
 		if err != nil {

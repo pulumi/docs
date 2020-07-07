@@ -12,8 +12,6 @@ meta_desc: "Explore the Listener resource of the loadbalancer module, including 
 
 Manages a V2 listener resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ listener1 = openstack.loadbalancer.Listener("listener1",
     protocol="HTTP",
     protocol_port=8080)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -77,6 +78,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
     protocolPort: 8080,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

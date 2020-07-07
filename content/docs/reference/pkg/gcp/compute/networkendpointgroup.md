@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		neg, err := compute.NewNetworkEndpointGroup(ctx, "neg", &compute.NetworkEndpointGroupArgs{
+		_, err = compute.NewNetworkEndpointGroup(ctx, "neg", &compute.NetworkEndpointGroupArgs{
 			Network:     defaultNetwork.ID(),
 			Subnetwork:  defaultSubnetwork.ID(),
 			DefaultPort: pulumi.Int(90),

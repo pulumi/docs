@@ -16,8 +16,6 @@ Manages a V2 members resource within OpenStack (batch members update).
 legacy Neutron LBaaS v2 extension please use
 openstack.loadbalancer.Member resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +76,11 @@ members1 = openstack.loadbalancer.Members("members1",
     ],
     pool_id="935685fb-a896-40f9-9ff4-ae531a3a00fe")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -98,6 +99,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     poolId: "935685fb-a896-40f9-9ff4-ae531a3a00fe",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

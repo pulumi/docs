@@ -43,16 +43,16 @@ class MyStack : Stack
                     {
                         "glacier:DeleteArchive",
                     },
-                    Condition = 
+                    Conditions = 
                     {
-                        
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
-                            { "test", "NumericLessThanEquals" },
-                            { "values", 
+                            Test = "NumericLessThanEquals",
+                            Values = 
                             {
                                 "365",
-                            } },
-                            { "variable", "glacier:ArchiveAgeinDays" },
+                            },
+                            Variable = "glacier:ArchiveAgeinDays",
                         },
                     },
                     Effect = "Deny",
@@ -117,7 +117,7 @@ import pulumi_aws as aws
 example_vault = aws.glacier.Vault("exampleVault")
 example_policy_document = example_vault.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
     "actions": ["glacier:DeleteArchive"],
-    "condition": [{
+    "conditions": [{
         "test": "NumericLessThanEquals",
         "values": ["365"],
         "variable": "glacier:ArchiveAgeinDays",
@@ -195,7 +195,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = glacier.NewVaultLock(ctx, "example", &glacier.VaultLockArgs{
+		_, err := glacier.NewVaultLock(ctx, "example", &glacier.VaultLockArgs{
 			CompleteLock: pulumi.Bool(true),
 			Policy:       pulumi.String(data.Aws_iam_policy_document.Example.Json),
 			VaultName:    pulumi.String(aws_glacier_vault.Example.Name),

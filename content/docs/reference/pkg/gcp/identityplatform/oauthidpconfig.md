@@ -56,7 +56,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		oauthIdpConfig, err := identityplatform.NewOauthIdpConfig(ctx, "oauthIdpConfig", &identityplatform.OauthIdpConfigArgs{
+		_, err = identityplatform.NewOauthIdpConfig(ctx, "oauthIdpConfig", &identityplatform.OauthIdpConfigArgs{
 			ClientId:     pulumi.String("client-id"),
 			ClientSecret: pulumi.String("secret"),
 			DisplayName:  pulumi.String("Display Name"),

@@ -3,7 +3,10 @@ title: Module loadbalancer
 title_tag: Module loadbalancer | Package pulumi_openstack | Python SDK
 linktitle: loadbalancer
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="loadbalancer">
 <h1>loadbalancer<a class="headerlink" href="#loadbalancer" title="Permalink to this headline">¶</a></h1>
@@ -716,7 +719,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_network_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 loadbalancer resource within OpenStack.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
@@ -750,10 +753,16 @@ the Loadbalancer.  Only administrative users can specify a tenant UUID
 other than their own.  Changing this creates a new loadbalancer.</p></li>
 <li><p><strong>vip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ip address of the load balancer.
 Changing this creates a new loadbalancer.</p></li>
-<li><p><strong>vip_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the
+<li><p><strong>vip_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the
 Loadbalancer’s address. A tenant can only create Loadbalancers on networks
 authorized by policy (e.g. networks that belong to them or networks that
-are shared).  Changing this creates a new loadbalancer.</p></li>
+are shared).  Changing this creates a new loadbalancer.
+It is available only for Octavia.</p></li>
+<li><p><strong>vip_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet on which to allocate the
+Loadbalancer’s address. A tenant can only create Loadbalancers on networks
+authorized by policy (e.g. networks that belong to them or networks that
+are shared).  Changing this creates a new loadbalancer.
+It is required to Neutron LBaaS but optional for Octavia.</p></li>
 </ul>
 </dd>
 </dl>
@@ -824,6 +833,16 @@ Changing this creates a new loadbalancer.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_openstack.loadbalancer.LoadBalancer.vip_network_id">
+<code class="sig-name descname">vip_network_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.vip_network_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network on which to allocate the
+Loadbalancer’s address. A tenant can only create Loadbalancers on networks
+authorized by policy (e.g. networks that belong to them or networks that
+are shared).  Changing this creates a new loadbalancer.
+It is available only for Octavia.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.vip_port_id">
 <code class="sig-name descname">vip_port_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.vip_port_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Port ID of the Load Balancer IP.</p>
@@ -832,15 +851,16 @@ Changing this creates a new loadbalancer.</p>
 <dl class="py attribute">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.vip_subnet_id">
 <code class="sig-name descname">vip_subnet_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.vip_subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The network on which to allocate the
+<dd><p>The subnet on which to allocate the
 Loadbalancer’s address. A tenant can only create Loadbalancers on networks
 authorized by policy (e.g. networks that belong to them or networks that
-are shared).  Changing this creates a new loadbalancer.</p>
+are shared).  Changing this creates a new loadbalancer.
+It is required to Neutron LBaaS but optional for Octavia.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_port_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_network_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_port_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -870,11 +890,17 @@ the Loadbalancer.  Only administrative users can specify a tenant UUID
 other than their own.  Changing this creates a new loadbalancer.</p></li>
 <li><p><strong>vip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ip address of the load balancer.
 Changing this creates a new loadbalancer.</p></li>
-<li><p><strong>vip_port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Port ID of the Load Balancer IP.</p></li>
-<li><p><strong>vip_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the
+<li><p><strong>vip_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the
 Loadbalancer’s address. A tenant can only create Loadbalancers on networks
 authorized by policy (e.g. networks that belong to them or networks that
-are shared).  Changing this creates a new loadbalancer.</p></li>
+are shared).  Changing this creates a new loadbalancer.
+It is available only for Octavia.</p></li>
+<li><p><strong>vip_port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Port ID of the Load Balancer IP.</p></li>
+<li><p><strong>vip_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet on which to allocate the
+Loadbalancer’s address. A tenant can only create Loadbalancers on networks
+authorized by policy (e.g. networks that belong to them or networks that
+are shared).  Changing this creates a new loadbalancer.
+It is required to Neutron LBaaS but optional for Octavia.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1267,11 +1293,11 @@ loadbalancer.Member resource.</p>
     <span class="n">members</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.23&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+            <span class="s2">&quot;protocol_port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.24&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+            <span class="s2">&quot;protocol_port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&quot;</span><span class="p">)</span>

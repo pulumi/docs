@@ -102,7 +102,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "test-attach", &iam.RolePolicyAttachmentArgs{
+		_, err = iam.NewRolePolicyAttachment(ctx, "test_attach", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: policy.Arn,
 			Role:      role.Name,
 		})

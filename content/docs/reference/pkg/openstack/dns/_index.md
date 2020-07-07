@@ -29,7 +29,7 @@ Explore the resources and functions of the dns module in the Open Stack package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.2.2</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 

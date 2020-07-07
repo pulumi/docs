@@ -47,7 +47,8 @@ with_lb = aws.lambda_.Permission("withLb",
     source_arn=test_target_group.arn)
 test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
     target_group_arn=test_target_group.arn,
-    target_id=test_function.arn)
+    target_id=test_function.arn,
+    opts=ResourceOptions(depends_on=["aws_lambda_permission.with_lb"]))
 ```
 ```csharp
 using Pulumi;
@@ -75,6 +76,12 @@ class MyStack : Stack
         {
             TargetGroupArn = testTargetGroup.Arn,
             TargetId = testFunction.Arn,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_lambda_permission.with_lb",
+            },
         });
     }
 
@@ -113,7 +120,9 @@ func main() {
 		_, err = lb.NewTargetGroupAttachment(ctx, "testTargetGroupAttachment", &lb.TargetGroupAttachmentArgs{
 			TargetGroupArn: testTargetGroup.Arn,
 			TargetId:       testFunction.Arn,
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_lambda_permission.with_lb",
+		}))
 		if err != nil {
 			return err
 		}

@@ -102,6 +102,94 @@ const tag = new vsphere.Tag("tag", {
 
 {{% /example %}}
 
+### Using Tags in a Supported Resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var category = new VSphere.TagCategory("category", new VSphere.TagCategoryArgs
+        {
+            AssociableTypes = 
+            {
+                "VirtualMachine",
+                "Datastore",
+            },
+            Cardinality = "SINGLE",
+            Description = "Managed by Pulumi",
+        });
+        var tag = new VSphere.Tag("tag", new VSphere.TagArgs
+        {
+            CategoryId = category.Id,
+            Description = "Managed by Pulumi",
+        });
+        var web = new VSphere.VirtualMachine("web", new VSphere.VirtualMachineArgs
+        {
+            Tags = 
+            {
+                tag.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+category = vsphere.TagCategory("category",
+    associable_types=[
+        "VirtualMachine",
+        "Datastore",
+    ],
+    cardinality="SINGLE",
+    description="Managed by Pulumi")
+tag = vsphere.Tag("tag",
+    category_id=category.id,
+    description="Managed by Pulumi")
+web = vsphere.VirtualMachine("web", tags=[tag.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const category = new vsphere.TagCategory("category", {
+    associableTypes: [
+        "VirtualMachine",
+        "Datastore",
+    ],
+    cardinality: "SINGLE",
+    description: "Managed by Pulumi",
+});
+const tag = new vsphere.Tag("tag", {
+    categoryId: category.id,
+    description: "Managed by Pulumi",
+});
+const web = new vsphere.VirtualMachine("web", {
+    tags: [tag.id],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -840,6 +928,6 @@ within its category.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
 </dl>
 

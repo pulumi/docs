@@ -3,7 +3,10 @@ title: Module images
 title_tag: Module images | Package pulumi_openstack | Python SDK
 linktitle: images
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="images">
 <h1>images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h1>

@@ -32,10 +32,22 @@ class MyStack : Stack
         var cis = new Aws.SecurityHub.StandardsSubscription("cis", new Aws.SecurityHub.StandardsSubscriptionArgs
         {
             StandardsArn = "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_securityhub_account.example",
+            },
         });
         var pci321 = new Aws.SecurityHub.StandardsSubscription("pci321", new Aws.SecurityHub.StandardsSubscriptionArgs
         {
             StandardsArn = "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_securityhub_account.example",
+            },
         });
     }
 
@@ -55,19 +67,23 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = securityhub.NewAccount(ctx, "example", nil)
+		_, err := securityhub.NewAccount(ctx, "example", nil)
 		if err != nil {
 			return err
 		}
 		_, err = securityhub.NewStandardsSubscription(ctx, "cis", &securityhub.StandardsSubscriptionArgs{
 			StandardsArn: pulumi.String("arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_securityhub_account.example",
+		}))
 		if err != nil {
 			return err
 		}
 		_, err = securityhub.NewStandardsSubscription(ctx, "pci321", &securityhub.StandardsSubscriptionArgs{
 			StandardsArn: pulumi.String("arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_securityhub_account.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -84,8 +100,10 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.securityhub.Account("example")
-cis = aws.securityhub.StandardsSubscription("cis", standards_arn="arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0")
-pci321 = aws.securityhub.StandardsSubscription("pci321", standards_arn="arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1")
+cis = aws.securityhub.StandardsSubscription("cis", standards_arn="arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
+opts=ResourceOptions(depends_on=["aws_securityhub_account.example"]))
+pci321 = aws.securityhub.StandardsSubscription("pci321", standards_arn="arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
+opts=ResourceOptions(depends_on=["aws_securityhub_account.example"]))
 ```
 
 {{% /example %}}

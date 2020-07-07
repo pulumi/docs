@@ -15,8 +15,6 @@ Manages a V3 Project resource within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_openstack as openstack
 
 project1 = openstack.identity.Project("project1", description="A project")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -63,6 +64,7 @@ const project1 = new openstack.identity.Project("project_1", {
     description: "A project",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

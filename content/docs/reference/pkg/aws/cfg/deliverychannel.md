@@ -35,6 +35,12 @@ class MyStack : Stack
         var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel("fooDeliveryChannel", new Aws.Cfg.DeliveryChannelArgs
         {
             S3BucketName = bucket.BucketName,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_config_configuration_recorder.foo",
+            },
         });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
@@ -114,7 +120,9 @@ func main() {
 		}
 		_, err = cfg.NewDeliveryChannel(ctx, "fooDeliveryChannel", &cfg.DeliveryChannelArgs{
 			S3BucketName: bucket.Bucket,
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_config_configuration_recorder.foo",
+		}))
 		if err != nil {
 			return err
 		}
@@ -154,7 +162,8 @@ import pulumi
 import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket", force_destroy=True)
-foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket)
+foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket,
+opts=ResourceOptions(depends_on=["aws_config_configuration_recorder.foo"]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [

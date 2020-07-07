@@ -51,7 +51,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		registry, err := container.NewRegistry(ctx, "registry", &container.RegistryArgs{
+		_, err = container.NewRegistry(ctx, "registry", &container.RegistryArgs{
 			Location: pulumi.String("EU"),
 			Project:  pulumi.String("my-project"),
 		})

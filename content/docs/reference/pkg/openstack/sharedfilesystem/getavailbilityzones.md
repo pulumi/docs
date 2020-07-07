@@ -13,8 +13,6 @@ meta_desc: "Explore the GetAvailbilityZones function of the sharedfilesystem mod
 Use this data source to get a list of Shared File System availability zones
 from OpenStack
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +32,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -47,15 +46,18 @@ import pulumi_openstack as openstack
 
 zones = openstack.sharedfilesystem.get_availbility_zones()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

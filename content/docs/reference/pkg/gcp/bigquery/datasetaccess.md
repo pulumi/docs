@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		access, err := bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
+		_, err = bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
 			DatasetId:   dataset.DatasetId,
 			Role:        pulumi.String("OWNER"),
 			UserByEmail: bqowner.Email,
@@ -209,7 +209,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		access, err := bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
+		_, err = bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
 			DatasetId: private.DatasetId,
 			View: &bigquery.DatasetAccessViewArgs{
 				ProjectId: publicTable.Project,

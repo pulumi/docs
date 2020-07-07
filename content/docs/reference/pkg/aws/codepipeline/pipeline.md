@@ -107,79 +107,79 @@ class MyStack : Stack
             {
                 new Aws.CodePipeline.Inputs.PipelineStageArgs
                 {
-                    Action = 
+                    Actions = 
                     {
-                        
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
                         {
-                            { "category", "Source" },
-                            { "configuration", 
+                            Category = "Source",
+                            Configuration = 
                             {
                                 { "Branch", "master" },
                                 { "Owner", "my-organization" },
                                 { "Repo", "test" },
-                            } },
-                            { "name", "Source" },
-                            { "outputArtifacts", 
+                            },
+                            Name = "Source",
+                            OutputArtifacts = 
                             {
                                 "source_output",
-                            } },
-                            { "owner", "ThirdParty" },
-                            { "provider", "GitHub" },
-                            { "version", "1" },
+                            },
+                            Owner = "ThirdParty",
+                            Provider = "GitHub",
+                            Version = "1",
                         },
                     },
                     Name = "Source",
                 },
                 new Aws.CodePipeline.Inputs.PipelineStageArgs
                 {
-                    Action = 
+                    Actions = 
                     {
-                        
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
                         {
-                            { "category", "Build" },
-                            { "configuration", 
+                            Category = "Build",
+                            Configuration = 
                             {
                                 { "ProjectName", "test" },
-                            } },
-                            { "inputArtifacts", 
+                            },
+                            InputArtifacts = 
                             {
                                 "source_output",
-                            } },
-                            { "name", "Build" },
-                            { "outputArtifacts", 
+                            },
+                            Name = "Build",
+                            OutputArtifacts = 
                             {
                                 "build_output",
-                            } },
-                            { "owner", "AWS" },
-                            { "provider", "CodeBuild" },
-                            { "version", "1" },
+                            },
+                            Owner = "AWS",
+                            Provider = "CodeBuild",
+                            Version = "1",
                         },
                     },
                     Name = "Build",
                 },
                 new Aws.CodePipeline.Inputs.PipelineStageArgs
                 {
-                    Action = 
+                    Actions = 
                     {
-                        
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
                         {
-                            { "category", "Deploy" },
-                            { "configuration", 
+                            Category = "Deploy",
+                            Configuration = 
                             {
                                 { "ActionMode", "REPLACE_ON_FAILURE" },
                                 { "Capabilities", "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM" },
                                 { "OutputFileName", "CreateStackOutput.json" },
                                 { "StackName", "MyStack" },
                                 { "TemplatePath", "build_output::sam-templated.yaml" },
-                            } },
-                            { "inputArtifacts", 
+                            },
+                            InputArtifacts = 
                             {
                                 "build_output",
-                            } },
-                            { "name", "Deploy" },
-                            { "owner", "AWS" },
-                            { "provider", "CloudFormation" },
-                            { "version", "1" },
+                            },
+                            Name = "Deploy",
+                            Owner = "AWS",
+                            Provider = "CloudFormation",
+                            Version = "1",
                         },
                     },
                     Name = "Deploy",
@@ -250,64 +250,64 @@ func main() {
 			RoleArn: codepipelineRole.Arn,
 			Stages: codepipeline.PipelineStageArray{
 				&codepipeline.PipelineStageArgs{
-					Action: pulumi.MapArray{
-						pulumi.Map{
-							"category": pulumi.String("Source"),
-							"configuration": pulumi.Map{
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Category: pulumi.String("Source"),
+							Configuration: pulumi.StringMap{
 								"Branch": pulumi.String("master"),
 								"Owner":  pulumi.String("my-organization"),
 								"Repo":   pulumi.String("test"),
 							},
-							"name": pulumi.String("Source"),
-							"outputArtifacts": pulumi.StringArray{
+							Name: pulumi.String("Source"),
+							OutputArtifacts: pulumi.StringArray{
 								pulumi.String("source_output"),
 							},
-							"owner":    pulumi.String("ThirdParty"),
-							"provider": pulumi.String("GitHub"),
-							"version":  pulumi.String("1"),
+							Owner:    pulumi.String("ThirdParty"),
+							Provider: pulumi.String("GitHub"),
+							Version:  pulumi.String("1"),
 						},
 					},
 					Name: pulumi.String("Source"),
 				},
 				&codepipeline.PipelineStageArgs{
-					Action: pulumi.MapArray{
-						pulumi.Map{
-							"category": pulumi.String("Build"),
-							"configuration": pulumi.Map{
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Category: pulumi.String("Build"),
+							Configuration: pulumi.StringMap{
 								"ProjectName": pulumi.String("test"),
 							},
-							"inputArtifacts": pulumi.StringArray{
+							InputArtifacts: pulumi.StringArray{
 								pulumi.String("source_output"),
 							},
-							"name": pulumi.String("Build"),
-							"outputArtifacts": pulumi.StringArray{
+							Name: pulumi.String("Build"),
+							OutputArtifacts: pulumi.StringArray{
 								pulumi.String("build_output"),
 							},
-							"owner":    pulumi.String("AWS"),
-							"provider": pulumi.String("CodeBuild"),
-							"version":  pulumi.String("1"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CodeBuild"),
+							Version:  pulumi.String("1"),
 						},
 					},
 					Name: pulumi.String("Build"),
 				},
 				&codepipeline.PipelineStageArgs{
-					Action: pulumi.MapArray{
-						pulumi.Map{
-							"category": pulumi.String("Deploy"),
-							"configuration": pulumi.Map{
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Category: pulumi.String("Deploy"),
+							Configuration: pulumi.StringMap{
 								"ActionMode":     pulumi.String("REPLACE_ON_FAILURE"),
 								"Capabilities":   pulumi.String("CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM"),
 								"OutputFileName": pulumi.String("CreateStackOutput.json"),
 								"StackName":      pulumi.String("MyStack"),
 								"TemplatePath":   pulumi.String("build_output::sam-templated.yaml"),
 							},
-							"inputArtifacts": pulumi.StringArray{
+							InputArtifacts: pulumi.StringArray{
 								pulumi.String("build_output"),
 							},
-							"name":     pulumi.String("Deploy"),
-							"owner":    pulumi.String("AWS"),
-							"provider": pulumi.String("CloudFormation"),
-							"version":  pulumi.String("1"),
+							Name:     pulumi.String("Deploy"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CloudFormation"),
+							Version:  pulumi.String("1"),
 						},
 					},
 					Name: pulumi.String("Deploy"),
@@ -387,7 +387,7 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
     role_arn=codepipeline_role.arn,
     stages=[
         {
-            "action": [{
+            "actions": [{
                 "category": "Source",
                 "configuration": {
                     "Branch": "master",
@@ -403,7 +403,7 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
             "name": "Source",
         },
         {
-            "action": [{
+            "actions": [{
                 "category": "Build",
                 "configuration": {
                     "ProjectName": "test",
@@ -418,7 +418,7 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
             "name": "Build",
         },
         {
-            "action": [{
+            "actions": [{
                 "category": "Deploy",
                 "configuration": {
                     "ActionMode": "REPLACE_ON_FAILURE",

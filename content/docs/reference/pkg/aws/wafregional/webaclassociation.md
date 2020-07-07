@@ -442,7 +442,8 @@ test_integration_response = aws.apigateway.IntegrationResponse("testIntegrationR
     resource_id=test_resource.id,
     rest_api=test_rest_api.id,
     status_code=test_method_response.status_code)
-test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id)
+test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id,
+opts=ResourceOptions(depends_on=["aws_api_gateway_integration_response.test"]))
 test_stage = aws.apigateway.Stage("testStage",
     deployment=test_deployment.id,
     rest_api=test_rest_api.id,
@@ -545,6 +546,12 @@ class MyStack : Stack
         var testDeployment = new Aws.ApiGateway.Deployment("testDeployment", new Aws.ApiGateway.DeploymentArgs
         {
             RestApi = testRestApi.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_api_gateway_integration_response.test",
+            },
         });
         var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
         {
@@ -666,7 +673,9 @@ func main() {
 		}
 		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
 			RestApi: testRestApi.ID(),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_api_gateway_integration_response.test",
+		}))
 		if err != nil {
 			return err
 		}

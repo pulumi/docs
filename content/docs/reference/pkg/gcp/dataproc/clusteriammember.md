@@ -91,6 +91,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,7 +110,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		editor, err := dataproc.NewClusterIAMPolicy(ctx, "editor", &dataproc.ClusterIAMPolicyArgs{
+		_, err = dataproc.NewClusterIAMPolicy(ctx, "editor", &dataproc.ClusterIAMPolicyArgs{
 			Project:    pulumi.String("your-project"),
 			Region:     pulumi.String("your-region"),
 			Cluster:    pulumi.String("your-dataproc-cluster"),
@@ -175,7 +176,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		editor, err := dataproc.NewClusterIAMBinding(ctx, "editor", &dataproc.ClusterIAMBindingArgs{
+		_, err = dataproc.NewClusterIAMBinding(ctx, "editor", &dataproc.ClusterIAMBindingArgs{
 			Cluster: pulumi.String("your-dataproc-cluster"),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
@@ -239,7 +240,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		editor, err := dataproc.NewClusterIAMMember(ctx, "editor", &dataproc.ClusterIAMMemberArgs{
+		_, err = dataproc.NewClusterIAMMember(ctx, "editor", &dataproc.ClusterIAMMemberArgs{
 			Cluster: pulumi.String("your-dataproc-cluster"),
 			Member:  pulumi.String("user:jane@example.com"),
 			Role:    pulumi.String("roles/editor"),

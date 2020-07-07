@@ -12,6 +12,123 @@ meta_desc: "Explore the PolicyAttachment resource of the iot module, including e
 
 Provides an IoT policy attachment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pubsub = new Aws.Iot.Policy("pubsub", new Aws.Iot.PolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""iot:*""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""*""
+    }
+  ]
+}
+
+",
+        });
+        var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+        {
+            Active = true,
+            Csr = File.ReadAllText("csr.pem"),
+        });
+        var att = new Aws.Iot.PolicyAttachment("att", new Aws.Iot.PolicyAttachmentArgs
+        {
+            Policy = pubsub.Name,
+            Target = cert.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+pubsub = aws.iot.Policy("pubsub", policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "iot:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""")
+cert = aws.iot.Certificate("cert",
+    active=True,
+    csr=(lambda path: open(path).read())("csr.pem"))
+att = aws.iot.PolicyAttachment("att",
+    policy=pubsub.name,
+    target=cert.arn)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const pubsub = new aws.iot.Policy("pubsub", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "iot:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+});
+const cert = new aws.iot.Certificate("cert", {
+    active: true,
+    csr: fs.readFileSync("csr.pem", "utf-8"),
+});
+const att = new aws.iot.PolicyAttachment("att", {
+    policy: pubsub.name,
+    target: cert.arn,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PolicyAttachment Resource {#create}

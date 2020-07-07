@@ -88,6 +88,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,7 +107,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := binaryauthorization.NewAttestorIamPolicy(ctx, "policy", &binaryauthorization.AttestorIamPolicyArgs{
+		_, err = binaryauthorization.NewAttestorIamPolicy(ctx, "policy", &binaryauthorization.AttestorIamPolicyArgs{
 			Project:    pulumi.String(google_binary_authorization_attestor.Attestor.Project),
 			Attestor:   pulumi.String(google_binary_authorization_attestor.Attestor.Name),
 			PolicyData: pulumi.String(admin.PolicyData),
@@ -174,7 +175,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := binaryauthorization.NewAttestorIamBinding(ctx, "binding", &binaryauthorization.AttestorIamBindingArgs{
+		_, err = binaryauthorization.NewAttestorIamBinding(ctx, "binding", &binaryauthorization.AttestorIamBindingArgs{
 			Project:  pulumi.String(google_binary_authorization_attestor.Attestor.Project),
 			Attestor: pulumi.String(google_binary_authorization_attestor.Attestor.Name),
 			Role:     pulumi.String("roles/viewer"),
@@ -242,7 +243,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := binaryauthorization.NewAttestorIamMember(ctx, "member", &binaryauthorization.AttestorIamMemberArgs{
+		_, err = binaryauthorization.NewAttestorIamMember(ctx, "member", &binaryauthorization.AttestorIamMemberArgs{
 			Project:  pulumi.String(google_binary_authorization_attestor.Attestor.Project),
 			Attestor: pulumi.String(google_binary_authorization_attestor.Attestor.Name),
 			Role:     pulumi.String("roles/viewer"),

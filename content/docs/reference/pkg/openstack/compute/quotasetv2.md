@@ -14,10 +14,8 @@ Manages a V2 compute quotaset resource within OpenStack.
 
 > **Note:** This usually requires admin privileges.
 
-> **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
+> **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API
     in case of delete call.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ quotaset1 = openstack.compute.QuotaSetV2("quotaset1",
     server_groups=4,
     server_group_members=8)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -89,6 +90,7 @@ const quotaset1 = new openstack.compute.QuotaSetV2("quotaset1", {
     serverGroupMembers: 8,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

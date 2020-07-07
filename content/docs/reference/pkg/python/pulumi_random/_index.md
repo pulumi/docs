@@ -72,7 +72,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomId">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomId</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">byte_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomId" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomId</span></code> generates random numbers that are intended to be
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomId</span></code> generates random numbers that are intended to be
 used as unique identifiers for other resources.</p>
 <p>This resource <em>does</em> use a cryptographic random number generator in order
 to minimize the chance of collisions, making the results of this resource
@@ -82,6 +82,8 @@ type-4 UUID.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<p>The following example shows how to generate a unique name for an AWS EC2
+instance that changes each time a new AMI id is selected.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 <span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
@@ -106,8 +108,7 @@ exist concurrently.</p>
 <li><p><strong>byte_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of random bytes to produce. The
 minimum value is 1, which produces eight bits of randomness.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary string to prefix the output value with. This
 string is supplied as-is, meaning it is not guaranteed to be URL-safe or
 base64 encoded.</p></li>
@@ -149,8 +150,7 @@ minimum value is 1, which produces eight bits of randomness.</p>
 <dt id="pulumi_random.RandomId.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomId.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p>
+trigger a new id to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -180,8 +180,7 @@ minimum value is 1, which produces eight bits of randomness.</p></li>
 <li><p><strong>dec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated id presented in non-padded decimal digits.</p></li>
 <li><p><strong>hex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary string to prefix the output value with. This
 string is supplied as-is, meaning it is not guaranteed to be URL-safe or
 base64 encoded.</p></li>
@@ -231,11 +230,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomInteger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomInteger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomInteger" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomInteger</span></code> generates random values from a given range, described by the <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> attributes of a given resource.</p>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomInteger</span></code> generates random values from a given range, described by the <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> attributes of a given resource.</p>
 <p>This resource can be used in conjunction with resources that have
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<p>The following example shows how to generate a random priority between 1 and 50000 for
+a <code class="docutils literal notranslate"><span class="pre">aws_alb_listener_rule</span></code> resource:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 <span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
@@ -255,14 +256,14 @@ exist concurrently.</p>
     <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>The result of the above will set a random priority.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum inclusive value of the range.</p></li>
 <li><p><strong>min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum inclusive value of the range.</p></li>
 <li><p><strong>seed</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom seed to always produce the same value.</p></li>
@@ -273,8 +274,7 @@ the main provider documentation for more information.</p></li>
 <dt id="pulumi_random.RandomInteger.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomInteger.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p>
+trigger a new id to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -313,8 +313,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum inclusive value of the range.</p></li>
 <li><p><strong>min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum inclusive value of the range.</p></li>
 <li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (int) The random Integer result.</p></li>
@@ -365,15 +364,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomPassword">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomPassword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lower</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_lower</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_numeric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_upper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p><strong>Note:</strong> Requires random provider version &gt;= 2.2.0</p>
-</div></blockquote>
-<p>Identical to .RandomString with the exception that the
+<dd><p>Identical to the <code class="docutils literal notranslate"><span class="pre">RandomString</span></code> resource with the exception that the
 result is treated as sensitive and, thus, <em>not</em> displayed in console output.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All attributes including the generated password will be stored in
-the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in
-state</a>.</p>
+the raw state as plain-text.</p>
 </div></blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -457,12 +452,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomPet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomPet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">separator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPet" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomPet</span></code> generates random pet names that are intended to be
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomPet</span></code> generates random pet names that are intended to be
 used as unique identifiers for other resources.</p>
 <p>This resource can be used in conjunction with resources that have
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<p>The following example shows how to generate a unique pet name for an AWS EC2
+instance that changes each time a new AMI id is selected.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 <span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
@@ -477,14 +474,15 @@ exist concurrently.</p>
     <span class="p">})</span>
 </pre></div>
 </div>
+<p>The result of the above will set the Name of the AWS Instance to
+<code class="docutils literal notranslate"><span class="pre">web-server-simple-snake</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length (in words) of the pet name.</p></li>
 <li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string to prefix the name with.</p></li>
 <li><p><strong>separator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The character to separate words in the pet name.</p></li>
@@ -495,8 +493,7 @@ the main provider documentation for more information.</p></li>
 <dt id="pulumi_random.RandomPet.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomPet.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p>
+trigger a new id to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -529,8 +526,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length (in words) of the pet name.</p></li>
 <li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string to prefix the name with.</p></li>
 <li><p><strong>separator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The character to separate words in the pet name.</p></li>
@@ -580,7 +576,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomShuffle">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomShuffle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">result_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomShuffle</span></code> generates a random permutation of a list
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomShuffle</span></code> generates a random permutation of a list
 of strings given as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -604,13 +600,18 @@ of strings given as an argument.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of strings to shuffle.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of results to return. Defaults to
 the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</p></li>
+<li><p><strong>seed</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary string with which to seed the random number
+generator, in order to produce less-volatile permutations of the list.
+<strong>Important:</strong> Even with an identical seed, it is not guaranteed that the
+same permutation will be produced across different versions of the provider.
+This argument causes the result to be <em>less volatile</em>, but not fixed for
+all time.</p></li>
 </ul>
 </dd>
 </dl>
@@ -624,8 +625,7 @@ of items in the input list.</p></li>
 <dt id="pulumi_random.RandomShuffle.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p>
+trigger a new id to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -644,6 +644,17 @@ of items in the input list.</p>
 <dd><p>Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_random.RandomShuffle.seed">
+<code class="sig-name descname">seed</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arbitrary string with which to seed the random number
+generator, in order to produce less-volatile permutations of the list.
+<strong>Important:</strong> Even with an identical seed, it is not guaranteed that the
+same permutation will be produced across different versions of the provider.
+This argument causes the result to be <em>less volatile</em>, but not fixed for
+all time.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_random.RandomShuffle.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">result_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle.get" title="Permalink to this definition">¶</a></dt>
@@ -657,14 +668,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of strings to shuffle.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of results to return. Defaults to
 the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</p></li>
 <li><p><strong>results</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
+<li><p><strong>seed</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary string with which to seed the random number
+generator, in order to produce less-volatile permutations of the list.
+<strong>Important:</strong> Even with an identical seed, it is not guaranteed that the
+same permutation will be produced across different versions of the provider.
+This argument causes the result to be <em>less volatile</em>, but not fixed for
+all time.</p></li>
 </ul>
 </dd>
 </dl>
@@ -711,19 +727,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomString">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomString</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lower</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_lower</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_numeric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_upper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">special</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomString" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomString</span></code> generates a random permutation of alphanumeric
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomString</span></code> generates a random permutation of alphanumeric
 characters and optionally special characters.</p>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
 <p>Historically this resource’s intended usage has been ambiguous as the original example
 used it in a password. For backwards compatibility it will
-continue to exist. For unique ids please use random_id, for sensitive
-random values please use random_password.</p>
+continue to exist. For unique ids please use the <code class="docutils literal notranslate"><span class="pre">RandomId</span></code> resource, for sensitive
+random values please use the <code class="docutils literal notranslate"><span class="pre">RandomPassword</span></code> resource.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
 
 <span class="n">random</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomString</span><span class="p">(</span><span class="s2">&quot;random&quot;</span><span class="p">,</span>
     <span class="n">length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-    <span class="n">override_special</span><span class="o">=</span><span class="s2">&quot;/@£$$&quot;</span><span class="p">,</span>
+    <span class="n">override_special</span><span class="o">=</span><span class="s2">&quot;/@£$&quot;</span><span class="p">,</span>
     <span class="n">special</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -733,8 +749,7 @@ random values please use random_password.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the string desired</p></li>
 <li><p><strong>lower</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include lowercase alphabet characters
 in random string.</p></li>
@@ -764,8 +779,7 @@ in random string.</p></li>
 <dt id="pulumi_random.RandomString.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomString.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p>
+trigger a new id to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -857,8 +871,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new id to be generated.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the string desired</p></li>
 <li><p><strong>lower</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include lowercase alphabet characters
 in random string.</p></li>
@@ -928,10 +941,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_random.RandomUuid">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomUuid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomUuid" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomUuid</span></code> generates random uuid string that is intended to be
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">RandomUuid</span></code> generates random uuid string that is intended to be
 used as unique identifiers for other resources.</p>
 <p>This resource uses the <code class="docutils literal notranslate"><span class="pre">hashicorp/go-uuid</span></code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
+<p>The following example shows how to generate a unique name for an Azure Resource Group.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
 <span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
@@ -946,8 +960,7 @@ for use with services needed a unique string identifier.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new uuid to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new uuid to be generated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -955,8 +968,7 @@ the main provider documentation for more information.</p></li>
 <dt id="pulumi_random.RandomUuid.keepers">
 <code class="sig-name descname">keepers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomUuid.keepers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Arbitrary map of values that, when changed, will
-trigger a new uuid to be generated. See
-the main provider documentation for more information.</p>
+trigger a new uuid to be generated.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -977,8 +989,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
-trigger a new uuid to be generated. See
-the main provider documentation for more information.</p></li>
+trigger a new uuid to be generated.</p></li>
 <li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated uuid presented in string format.</p></li>
 </ul>
 </dd>

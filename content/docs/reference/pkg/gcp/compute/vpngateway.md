@@ -140,7 +140,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		route1, err := compute.NewRoute(ctx, "route1", &compute.RouteArgs{
+		_, err = compute.NewRoute(ctx, "route1", &compute.RouteArgs{
 			Network:          network1.Name,
 			DestRange:        pulumi.String("15.0.0.0/24"),
 			Priority:         pulumi.Int(1000),

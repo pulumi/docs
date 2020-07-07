@@ -60,7 +60,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewSSLPolicy(ctx, "prod-ssl-policy", &compute.SSLPolicyArgs{
+			Profile: pulumi.String("MODERN"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSSLPolicy(ctx, "nonprod-ssl-policy", &compute.SSLPolicyArgs{
+			MinTlsVersion: pulumi.String("TLS_1_2"),
+			Profile:       pulumi.String("MODERN"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSSLPolicy(ctx, "custom-ssl-policy", &compute.SSLPolicyArgs{
+			CustomFeatures: pulumi.StringArray{
+				pulumi.String("TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"),
+				pulumi.String("TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"),
+			},
+			MinTlsVersion: pulumi.String("TLS_1_2"),
+			Profile:       pulumi.String("CUSTOM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

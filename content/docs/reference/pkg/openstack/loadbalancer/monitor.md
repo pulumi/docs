@@ -12,8 +12,6 @@ meta_desc: "Explore the Monitor resource of the loadbalancer module, including e
 
 Manages a V2 monitor resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ monitor1 = openstack.loadbalancer.Monitor("monitor1",
     timeout=10,
     type="PING")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -73,6 +74,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     type: "PING",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

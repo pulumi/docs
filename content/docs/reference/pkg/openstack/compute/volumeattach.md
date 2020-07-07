@@ -13,8 +13,6 @@ meta_desc: "Explore the VolumeAttach resource of the compute module, including e
 Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ va1 = openstack.compute.VolumeAttach("va1",
     instance_id=instance1.id,
     volume_id=volume1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -84,6 +85,7 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
     volumeId: volume1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Using Multiattach-enabled volumes
@@ -131,6 +133,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -156,9 +159,11 @@ va2 = openstack.compute.VolumeAttach("va2",
     multiattach=True,
     volume_id=openstack_blockstorage_volume_v2["volume_1"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -184,6 +189,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     volumeId: openstack_blockstorage_volume_v2_volume_1.id,
 }, { dependsOn: [va1] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

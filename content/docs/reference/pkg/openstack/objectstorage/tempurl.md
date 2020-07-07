@@ -18,8 +18,6 @@ will remain in place. If you wish to automatically regenerate a URL, set
 the `regenerate` argument to `true`. This will create a new resource with
 a new ID and URL.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +79,11 @@ obj_tempurl = openstack.objectstorage.TempUrl("objTempurl",
     object=object1.name,
     ttl=20)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -103,6 +104,7 @@ const objTempurl = new openstack.objectstorage.TempUrl("obj_tempurl", {
     ttl: 20,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

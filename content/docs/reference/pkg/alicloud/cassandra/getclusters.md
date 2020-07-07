@@ -15,6 +15,59 @@ Filters support regular expression for the cluster name, ids or tags.
 
 > **NOTE:**  Available in 1.88.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandra = Output.Create(AliCloud.Cassandra.GetClusters.InvokeAsync(new AliCloud.Cassandra.GetClustersArgs
+        {
+            NameRegex = "tf_testAccCassandra",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+cassandra = alicloud.cassandra.get_clusters(name_regex="tf_testAccCassandra")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const cassandra = pulumi.output(alicloud.cassandra.getClusters({
+    nameRegex: "tf_testAccCassandra",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClusters {#using}

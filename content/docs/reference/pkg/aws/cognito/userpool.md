@@ -47,7 +47,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cognito.NewUserPool(ctx, "pool", nil)
+		_, err := cognito.NewUserPool(ctx, "pool", nil)
 		if err != nil {
 			return err
 		}
@@ -75,6 +75,112 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const pool = new aws.cognito.UserPool("pool", {});
+```
+
+{{% /example %}}
+
+### Enabling SMS and Software Token Multi-Factor Authentication
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ... other configuration ...
+        var example = new Aws.Cognito.UserPool("example", new Aws.Cognito.UserPoolArgs
+        {
+            MfaConfiguration = "ON",
+            SmsAuthenticationMessage = "Your code is {####}",
+            SmsConfiguration = new Aws.Cognito.Inputs.UserPoolSmsConfigurationArgs
+            {
+                ExternalId = "example",
+                SnsCallerArn = aws_iam_role.Example.Arn,
+            },
+            SoftwareTokenMfaConfiguration = new Aws.Cognito.Inputs.UserPoolSoftwareTokenMfaConfigurationArgs
+            {
+                Enabled = true,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cognito.NewUserPool(ctx, "example", &cognito.UserPoolArgs{
+			MfaConfiguration:         pulumi.String("ON"),
+			SmsAuthenticationMessage: pulumi.String("Your code is {####}"),
+			SmsConfiguration: &cognito.UserPoolSmsConfigurationArgs{
+				ExternalId:   pulumi.String("example"),
+				SnsCallerArn: pulumi.String(aws_iam_role.Example.Arn),
+			},
+			SoftwareTokenMfaConfiguration: &cognito.UserPoolSoftwareTokenMfaConfigurationArgs{
+				Enabled: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ... other configuration ...
+example = aws.cognito.UserPool("example",
+    mfa_configuration="ON",
+    sms_authentication_message="Your code is {####}",
+    sms_configuration={
+        "external_id": "example",
+        "snsCallerArn": aws_iam_role["example"]["arn"],
+    },
+    software_token_mfa_configuration={
+        "enabled": True,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ... other configuration ...
+const example = new aws.cognito.UserPool("example", {
+    mfaConfiguration: "ON",
+    smsAuthenticationMessage: "Your code is {####}",
+    smsConfiguration: {
+        externalId: "example",
+        snsCallerArn: aws_iam_role.example.arn,
+    },
+    softwareTokenMfaConfiguration: {
+        enabled: true,
+    },
+});
 ```
 
 {{% /example %}}

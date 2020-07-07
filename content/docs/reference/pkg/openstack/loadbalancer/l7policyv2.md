@@ -12,8 +12,6 @@ meta_desc: "Explore the L7PolicyV2 resource of the loadbalancer module, includin
 
 Manages a Load Balancer L7 Policy resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,9 +97,11 @@ l7policy1 = openstack.loadbalancer.L7PolicyV2("l7policy1",
     position=1,
     redirect_pool_id=pool1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -134,6 +135,7 @@ const l7policy1 = new openstack.loadbalancer.L7PolicyV2("l7policy_1", {
     redirectPoolId: pool1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

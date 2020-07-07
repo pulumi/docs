@@ -12,8 +12,6 @@ meta_desc: "Explore the VolumeV1 resource of the blockstorage module, including 
 
 Manages a V1 volume resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ volume1 = openstack.blockstorage.VolumeV1("volume1",
     region="RegionOne",
     size=3)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -67,6 +68,7 @@ const volume1 = new openstack.blockstorage.VolumeV1("volume_1", {
     size: 3,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

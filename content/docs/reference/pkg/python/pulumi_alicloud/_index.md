@@ -36,6 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dms/">dms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drds/">drds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eci/">eci</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ecs/">ecs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edas/">edas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elasticsearch/">elasticsearch</a></li>

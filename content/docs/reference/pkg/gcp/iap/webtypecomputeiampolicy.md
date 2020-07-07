@@ -85,6 +85,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +104,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
+		_, err = iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
 			Project:    pulumi.String(google_project_service.Project_service.Project),
 			PolicyData: pulumi.String(admin.PolicyData),
 		})
@@ -196,6 +197,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -219,7 +221,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
+		_, err = iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
 			Project:    pulumi.String(google_project_service.Project_service.Project),
 			PolicyData: pulumi.String(admin.PolicyData),
 		})
@@ -282,7 +284,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
+		_, err = iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
 			Project: pulumi.String(google_project_service.Project_service.Project),
 			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
 			Members: pulumi.StringArray{
@@ -365,7 +367,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
+		_, err = iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
 			Project: pulumi.String(google_project_service.Project_service.Project),
 			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
 			Members: pulumi.StringArray{
@@ -433,7 +435,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
+		_, err = iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
 			Project: pulumi.String(google_project_service.Project_service.Project),
 			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
 			Member:  pulumi.String("user:jane@example.com"),
@@ -511,7 +513,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
+		_, err = iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
 			Project: pulumi.String(google_project_service.Project_service.Project),
 			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
 			Member:  pulumi.String("user:jane@example.com"),

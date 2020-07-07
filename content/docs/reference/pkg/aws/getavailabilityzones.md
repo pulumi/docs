@@ -241,7 +241,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>blacklisted_names=None<span class="p">, </span>blacklisted_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>group_names=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>blacklisted_names=None<span class="p">, </span>blacklisted_zone_ids=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>group_names=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -277,26 +277,48 @@ The following arguments are supported:
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistednames_csharp">
 <a href="#blacklistednames_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistedzoneids_csharp">
 <a href="#blacklistedzoneids_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone IDs.
+    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludenames_csharp">
+<a href="#excludenames_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone names to exclude.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludezoneids_csharp">
+<a href="#excludezoneids_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone IDs to exclude.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,26 +374,48 @@ to which the underlying AWS account has access, regardless of their state.
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistednames_go">
 <a href="#blacklistednames_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistedzoneids_go">
 <a href="#blacklistedzoneids_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone IDs.
+    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludenames_go">
+<a href="#excludenames_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone names to exclude.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludezoneids_go">
+<a href="#excludezoneids_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone IDs to exclude.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,26 +471,48 @@ to which the underlying AWS account has access, regardless of their state.
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistednames_nodejs">
 <a href="#blacklistednames_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklistedzoneids_nodejs">
 <a href="#blacklistedzoneids_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone IDs.
+    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludenames_nodejs">
+<a href="#excludenames_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone names to exclude.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludezoneids_nodejs">
+<a href="#excludezoneids_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone IDs to exclude.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -502,26 +568,48 @@ to which the underlying AWS account has access, regardless of their state.
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklisted_names_python">
 <a href="#blacklisted_names_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="blacklisted_zone_ids_python">
 <a href="#blacklisted_zone_ids_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of blacklisted Availability Zone IDs.
+    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclude_names_python">
+<a href="#exclude_names_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone names to exclude.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclude_zone_ids_python">
+<a href="#exclude_zone_ids_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>zone_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Availability Zone IDs to exclude.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -622,10 +710,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="blacklistednames_csharp">
 <a href="#blacklistednames_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="blacklistedzoneids_csharp">
+<a href="#blacklistedzoneids_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="excludenames_csharp">
+<a href="#excludenames_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -634,8 +742,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="blacklistedzoneids_csharp">
-<a href="#blacklistedzoneids_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
+        <span id="excludezoneids_csharp">
+<a href="#excludezoneids_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -722,10 +830,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="blacklistednames_go">
 <a href="#blacklistednames_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="blacklistedzoneids_go">
+<a href="#blacklistedzoneids_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="excludenames_go">
+<a href="#excludenames_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -734,8 +862,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="blacklistedzoneids_go">
-<a href="#blacklistedzoneids_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
+        <span id="excludezoneids_go">
+<a href="#excludezoneids_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -822,10 +950,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="blacklistednames_nodejs">
 <a href="#blacklistednames_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="blacklistedzoneids_nodejs">
+<a href="#blacklistedzoneids_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="excludenames_nodejs">
+<a href="#excludenames_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
@@ -834,8 +982,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="blacklistedzoneids_nodejs">
-<a href="#blacklistedzoneids_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Zone<wbr>Ids</a>
+        <span id="excludezoneids_nodejs">
+<a href="#excludezoneids_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Zone<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
@@ -922,10 +1070,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="blacklisted_names_python">
 <a href="#blacklisted_names_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="blacklisted_zone_ids_python">
+<a href="#blacklisted_zone_ids_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>zone_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="exclude_names_python">
+<a href="#exclude_names_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -934,8 +1102,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="blacklisted_zone_ids_python">
-<a href="#blacklisted_zone_ids_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>zone_<wbr>ids</a>
+        <span id="exclude_zone_ids_python">
+<a href="#exclude_zone_ids_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

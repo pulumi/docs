@@ -12,8 +12,6 @@ meta_desc: "Explore the QosPolicy resource of the networking module, including e
 
 Manages a V2 Neutron QoS policy resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 qos_policy1 = openstack.networking.QosPolicy("qosPolicy1", description="bw_limit")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const qosPolicy1 = new openstack.networking.QosPolicy("qos_policy_1", {
     description: "bw_limit",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

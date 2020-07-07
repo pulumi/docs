@@ -72,12 +72,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleService, err := servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
+		_, err = servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
 			ServiceId: pulumi.String("example-service"),
 			Namespace: exampleNamespace.ID(),
-			Metadata: map[string]interface{}{
-				"stage":  "prod",
-				"region": "us-central1",
+			Metadata: pulumi.Map{
+				"stage":  pulumi.String("prod"),
+				"region": pulumi.String("us-central1"),
 			},
 		})
 		if err != nil {

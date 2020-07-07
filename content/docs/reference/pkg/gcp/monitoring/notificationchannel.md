@@ -75,10 +75,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		basic, err := monitoring.NewNotificationChannel(ctx, "basic", &monitoring.NotificationChannelArgs{
+		_, err = monitoring.NewNotificationChannel(ctx, "basic", &monitoring.NotificationChannelArgs{
 			DisplayName: pulumi.String("Test Notification Channel"),
-			Labels: map[string]interface{}{
-				"email_address": "fake_email@blahblah.com",
+			Labels: pulumi.Map{
+				"email_address": pulumi.String("fake_email@blahblah.com"),
 			},
 			Type: pulumi.String("email"),
 		})
@@ -155,7 +155,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = monitoring.NewNotificationChannel(ctx, "default", &monitoring.NotificationChannelArgs{
+			DisplayName: pulumi.String("Test Slack Channel"),
+			Labels: pulumi.Map{
+				"channel_name": pulumi.String("#foobar"),
+			},
+			SensitiveLabels: &monitoring.NotificationChannelSensitiveLabelsArgs{
+				AuthToken: pulumi.String("one"),
+			},
+			Type: pulumi.String("slack"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

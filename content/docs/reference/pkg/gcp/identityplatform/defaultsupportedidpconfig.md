@@ -55,7 +55,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		idpConfig, err := identityplatform.NewDefaultSupportedIdpConfig(ctx, "idpConfig", &identityplatform.DefaultSupportedIdpConfigArgs{
+		_, err = identityplatform.NewDefaultSupportedIdpConfig(ctx, "idpConfig", &identityplatform.DefaultSupportedIdpConfigArgs{
 			ClientId:     pulumi.String("client-id"),
 			ClientSecret: pulumi.String("secret"),
 			Enabled:      pulumi.Bool(true),

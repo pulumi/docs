@@ -15,6 +15,80 @@ Use this data source to get information about a DB Snapshot for use when provisi
 > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
 See the `aws.rds.ClusterSnapshot` data source for DB Cluster snapshots.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+prod = aws.rds.Instance("prod",
+    allocated_storage=10,
+    db_subnet_group_name="my_database_subnet_group",
+    engine="mysql",
+    engine_version="5.6.17",
+    instance_class="db.t2.micro",
+    name="mydb",
+    parameter_group_name="default.mysql5.6",
+    password="bar",
+    username="foo")
+latest_prod_snapshot = prod.id.apply(lambda id: aws.rds.get_snapshot(db_instance_identifier=id,
+    most_recent=True))
+# Use the latest production snapshot to create a dev instance.
+dev = aws.rds.Instance("dev",
+    instance_class="db.t2.micro",
+    lifecycle={
+        "ignoreChanges": ["snapshotIdentifier"],
+    },
+    name="mydbdev",
+    snapshot_identifier=latest_prod_snapshot.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const prod = new aws.rds.Instance("prod", {
+    allocatedStorage: 10,
+    dbSubnetGroupName: "my_database_subnet_group",
+    engine: "mysql",
+    engineVersion: "5.6.17",
+    instanceClass: "db.t2.micro",
+    name: "mydb",
+    parameterGroupName: "default.mysql5.6",
+    password: "bar",
+    username: "foo",
+});
+const latestProdSnapshot = prod.id.apply(id => aws.rds.getSnapshot({
+    dbInstanceIdentifier: id,
+    mostRecent: true,
+}, { async: true }));
+// Use the latest production snapshot to create a dev instance.
+const dev = new aws.rds.Instance("dev", {
+    instanceClass: "db.t2.micro",
+    name: "mydbdev",
+    snapshotIdentifier: latestProdSnapshot.id,
+}, { ignoreChanges: ["snapshotIdentifier"] });
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSnapshot {#using}

@@ -15,6 +15,62 @@ Filters support regular expression for the cluster name or ids.
 
 > **NOTE:**  Available in 1.88.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandra = Output.Create(AliCloud.Cassandra.GetDataCenters.InvokeAsync(new AliCloud.Cassandra.GetDataCentersArgs
+        {
+            ClusterId = "cds-xxxxx",
+            NameRegex = "tf_testAccCassandra_dc",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+cassandra = alicloud.cassandra.get_data_centers(cluster_id="cds-xxxxx",
+    name_regex="tf_testAccCassandra_dc")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const cassandra = pulumi.output(alicloud.cassandra.getDataCenters({
+    clusterId: "cds-xxxxx",
+    nameRegex: "tf_testAccCassandra_dc",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDataCenters {#using}

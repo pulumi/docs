@@ -12,8 +12,6 @@ meta_desc: "Explore the QosMinimumBandwidthRule resource of the networking modul
 
 Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ minimum_bandwidth_rule1 = openstack.networking.QosMinimumBandwidthRule("minimumB
     min_kbps=200,
     qos_policy_id=qos_policy1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -72,6 +73,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     qosPolicyId: qosPolicy1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

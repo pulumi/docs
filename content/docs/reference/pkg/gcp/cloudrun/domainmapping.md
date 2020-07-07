@@ -101,7 +101,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultDomainMapping, err := cloudrun.NewDomainMapping(ctx, "defaultDomainMapping", &cloudrun.DomainMappingArgs{
+		_, err = cloudrun.NewDomainMapping(ctx, "defaultDomainMapping", &cloudrun.DomainMappingArgs{
 			Location: pulumi.String("us-central1"),
 			Metadata: &cloudrun.DomainMappingMetadataArgs{
 				Namespace: pulumi.String("my-project-name"),

@@ -200,7 +200,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
 			IamRoleArn: pulumi.String(aws_iam_role.Example.Arn),
 			PlanId:     pulumi.String(aws_backup_plan.Example.Id),
 			SelectionTags: backup.SelectionSelectionTagArray{
@@ -252,74 +252,6 @@ const example = new aws.backup.Selection("example", {
         type: "STRINGEQUALS",
         value: "bar",
     }],
-});
-```
-
-{{% /example %}}
-
-### Selecting Backups By Resource
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
-        {
-            IamRoleArn = aws_iam_role.Example.Arn,
-            PlanId = aws_backup_plan.Example.Id,
-            Resources = 
-            {
-                aws_db_instance.Example.Arn,
-                aws_ebs_volume.Example.Arn,
-                aws_efs_file_system.Example.Arn,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.backup.Selection("example",
-    iam_role_arn=aws_iam_role["example"]["arn"],
-    plan_id=aws_backup_plan["example"]["id"],
-    resources=[
-        aws_db_instance["example"]["arn"],
-        aws_ebs_volume["example"]["arn"],
-        aws_efs_file_system["example"]["arn"],
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.backup.Selection("example", {
-    iamRoleArn: aws_iam_role_example.arn,
-    planId: aws_backup_plan_example.id,
-    resources: [
-        aws_db_instance_example.arn,
-        aws_ebs_volume_example.arn,
-        aws_efs_file_system_example.arn,
-    ],
 });
 ```
 

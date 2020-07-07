@@ -81,7 +81,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+		_, err = sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
 			DatabaseVersion: pulumi.String("POSTGRES_11"),
 			Region:          pulumi.String("us-central1"),
 			Settings: &sql.DatabaseInstanceSettingsArgs{

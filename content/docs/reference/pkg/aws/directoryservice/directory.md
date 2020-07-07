@@ -106,7 +106,7 @@ func main() {
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
 			Password: pulumi.String("SuperSecretPassw0rd"),
 			Size:     pulumi.String("Small"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Project": pulumi.String("foo"),
 			},
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
@@ -284,7 +284,7 @@ func main() {
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
 			Edition:  pulumi.String("Standard"),
 			Password: pulumi.String("SuperSecretPassw0rd"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Project": pulumi.String("foo"),
 			},
 			Type: pulumi.String("MicrosoftAD"),

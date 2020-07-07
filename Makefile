@@ -1,7 +1,3 @@
-# The HUGO_ENVIRONMENT environment variable determines which Hugo environment
-# to build/serve.
-HUGO_ENVIRONMENT ?= development
-
 .PHONY: default
 default: banner generate build
 
@@ -14,10 +10,15 @@ banner:
 	@echo -e "\033[1;37mPulumi Website           \033[0m"
 	@echo -e "\033[1;37m=========================\033[0m"
 
+.PHONY: clean
+clean:
+	rm -rf node_modules
+	rm -rf components/node_modules
+	rm -rf public
+
 .PHONY: ensure
 ensure:
-	yarn install
-	yarn --cwd components install
+	./scripts/ensure.sh
 
 .PHONY: ensure_tools
 ensure_tools:
@@ -32,14 +33,23 @@ lint_markdown:
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
 	yarn lint-markdown --no-error
-	yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
-	hugo server --buildDrafts --buildFuture --renderToDisk
+	./scripts/serve.sh
 
-.PHONY: serve-components
-serve-components:
+.PHONY: serve_components
+serve_components:
 	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
 	yarn --cwd components run start
+
+.PHONY: build_components
+build_components:
+	@echo -e "\033[0;32mBUILD COMPONENTS:\033[0m"
+	yarn --cwd components run build
+
+.PHONY: build_search_index
+build_search_index:
+	@echo -e "\033[0;32mBUILD SEARCH INDEX:\033[0m"
+	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
+	rm -rf ./public/docs/search-data
 
 .PHONY: generate
 generate:
@@ -55,13 +65,15 @@ copy_static_prebuilt:
 
 .PHONY: build
 build:
-	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
+	@echo -e "\033[0;32mBUILD:\033[0m"
 	yarn lint-markdown
-	NODE_ENV=production yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
-	./scripts/run-hugo-build.sh
-	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
-	rm -rf ./public/docs/search-data
+	./scripts/build-site.sh
+
+.PHONY: pulumify
+pulumify:
+	@echo -e "\033[0;32mBUILD PULUMIFY:\033[0m"
+	$(MAKE) ensure
+	./scripts/build-site.sh --buildDrafts --buildFuture
 
 .PHONY: test
 test:

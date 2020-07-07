@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		folderAdminPolicy, err := folder.NewIAMPolicy(ctx, "folderAdminPolicy", &folder.IAMPolicyArgs{
+		_, err = folder.NewIAMPolicy(ctx, "folderAdminPolicy", &folder.IAMPolicyArgs{
 			Folder:     department1.Name,
 			PolicyData: pulumi.String(admin.PolicyData),
 		})

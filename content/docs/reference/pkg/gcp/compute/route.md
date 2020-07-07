@@ -85,7 +85,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultRoute, err := compute.NewRoute(ctx, "defaultRoute", &compute.RouteArgs{
+		_, err = compute.NewRoute(ctx, "defaultRoute", &compute.RouteArgs{
 			DestRange: pulumi.String("15.0.0.0/24"),
 			Network:   defaultNetwork.Name,
 			NextHopIp: pulumi.String("10.132.1.5"),

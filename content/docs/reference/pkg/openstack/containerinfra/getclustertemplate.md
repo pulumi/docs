@@ -13,8 +13,6 @@ meta_desc: "Explore the GetClusterTemplate function of the containerinfra module
 Use this data source to get the ID of an available OpenStack Magnum cluster
 template.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +49,11 @@ import pulumi_openstack as openstack
 
 clustertemplate1 = openstack.containerinfra.get_cluster_template(name="clustertemplate_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -61,6 +62,7 @@ const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTempla
     name: "clustertemplate_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

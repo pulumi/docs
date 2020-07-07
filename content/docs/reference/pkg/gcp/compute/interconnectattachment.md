@@ -60,7 +60,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		onPrem, err := compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
+		_, err = compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
 			Interconnect: pulumi.String("my-interconnect-id"),
 			Router:       foobar.ID(),
 		})

@@ -117,16 +117,16 @@ class MyStack : Stack
                             "SNS:Subscribe",
                             "SNS:Publish",
                         },
-                        Condition = 
+                        Conditions = 
                         {
-                            
+                            new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                             {
-                                { "test", "StringEquals" },
-                                { "values", 
+                                Test = "StringEquals",
+                                Values = 
                                 {
                                     example.Id,
-                                } },
-                                { "variable", "aws:PrincipalOrgID" },
+                                },
+                                Variable = "aws:PrincipalOrgID",
                             },
                         },
                         Effect = "Allow",
@@ -208,7 +208,7 @@ sns_topic_policy_policy_document = sns_topic.arn.apply(lambda arn: aws.iam.get_p
         "SNS:Subscribe",
         "SNS:Publish",
     ],
-    "condition": [{
+    "conditions": [{
         "test": "StringEquals",
         "values": [example.id],
         "variable": "aws:PrincipalOrgID",

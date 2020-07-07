@@ -16,6 +16,8 @@ Three different resources help you manage your IAM policy for BigQuery dataset. 
 * `gcp.bigquery.DatasetIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the dataset are preserved.
 * `gcp.bigquery.DatasetIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the dataset are preserved.
 
+These resources are intended to convert the permissions system for BigQuery datasets to the standard IAM interface. For advanced usages, including [creating authorized views](https://cloud.google.com/bigquery/docs/share-access-views), please use either `gcp.bigquery.DatasetAccess` or the `access` field on `gcp.bigquery.Dataset`.
+
 > **Note:** These resources **cannot** be used with `gcp.bigquery.DatasetAccess` resources or the `access` field on `gcp.bigquery.Dataset` or they will fight over what the policy should be.
 
 > **Note:** Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the `gcp.bigquery.DatasetAccess` instead.
@@ -91,6 +93,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,7 +112,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		dataset, err := bigquery.NewDatasetIamPolicy(ctx, "dataset", &bigquery.DatasetIamPolicyArgs{
+		_, err = bigquery.NewDatasetIamPolicy(ctx, "dataset", &bigquery.DatasetIamPolicyArgs{
 			DatasetId:  pulumi.String("your-dataset-id"),
 			PolicyData: pulumi.String(owner.PolicyData),
 		})
@@ -173,7 +176,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		reader, err := bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
+		_, err = bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
 			DatasetId: pulumi.String("your-dataset-id"),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
@@ -237,7 +240,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		editor, err := bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
+		_, err = bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
 			DatasetId: pulumi.String("your-dataset-id"),
 			Member:    pulumi.String("user:jane@example.com"),
 			Role:      pulumi.String("roles/bigquery.dataEditor"),

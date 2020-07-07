@@ -12,8 +12,6 @@ meta_desc: "Explore the Zone resource of the dns module, including examples, inp
 
 Manages a DNS zone in the OpenStack DNS Service.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ example_com = openstack.dns.Zone("example.com",
     ttl=3000,
     type="PRIMARY")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -70,6 +71,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     type: "PRIMARY",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

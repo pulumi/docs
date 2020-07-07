@@ -44,7 +44,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		netblock, err := compute.GetNetblockIPRanges(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("cidrBlocks", netblock.CidrBlocks)
+		ctx.Export("cidrBlocksIpv4", netblock.CidrBlocksIpv4s)
+		ctx.Export("cidrBlocksIpv6", netblock.CidrBlocksIpv6s)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

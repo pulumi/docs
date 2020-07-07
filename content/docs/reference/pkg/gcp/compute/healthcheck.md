@@ -59,7 +59,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "tcp-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,7 +152,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "tcp-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via tcp"),
+			HealthyThreshold: pulumi.Int(4),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				Request:           pulumi.String("ARE YOU HEALTHY?"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -204,7 +259,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "ssl-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			SslHealthCheck: &compute.HealthCheckSslHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -273,7 +352,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "ssl-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via ssl"),
+			HealthyThreshold: pulumi.Int(4),
+			SslHealthCheck: &compute.HealthCheckSslHealthCheckArgs{
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				Request:           pulumi.String("ARE YOU HEALTHY?"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -349,7 +459,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "http-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -419,7 +553,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "http-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via http"),
+			HealthyThreshold: pulumi.Int(4),
+			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -497,7 +663,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "https-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			HttpsHealthCheck: &compute.HealthCheckHttpsHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -567,7 +757,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "https-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via https"),
+			HealthyThreshold: pulumi.Int(4),
+			HttpsHealthCheck: &compute.HealthCheckHttpsHealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -645,7 +867,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "http2-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Http2HealthCheck: &compute.HealthCheckHttp2HealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -715,7 +961,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewHealthCheck(ctx, "http2-health-check", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via http2"),
+			HealthyThreshold: pulumi.Int(4),
+			Http2HealthCheck: &compute.HealthCheckHttp2HealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

@@ -50,6 +50,12 @@ class MyStack : Stack
         var exampleVerification = new Aws.Ses.DomainIdentityVerification("exampleVerification", new Aws.Ses.DomainIdentityVerificationArgs
         {
             Domain = example.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_route53_record.example_amazonses_verification_record",
+            },
         });
     }
 
@@ -94,7 +100,9 @@ func main() {
 		}
 		_, err = ses.NewDomainIdentityVerification(ctx, "exampleVerification", &ses.DomainIdentityVerificationArgs{
 			Domain: example.ID(),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_route53_record.example_amazonses_verification_record",
+		}))
 		if err != nil {
 			return err
 		}
@@ -117,7 +125,8 @@ example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVeri
     ttl="600",
     type="TXT",
     zone_id=aws_route53_zone["example"]["zone_id"])
-example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id)
+example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id,
+opts=ResourceOptions(depends_on=["aws_route53_record.example_amazonses_verification_record"]))
 ```
 
 {{% /example %}}

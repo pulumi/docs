@@ -12,8 +12,6 @@ meta_desc: "Explore the QosBandwidthLimitRule resource of the networking module,
 
 Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ bw_limit_rule1 = openstack.networking.QosBandwidthLimitRule("bwLimitRule1",
     max_kbps=3000,
     qos_policy_id=qos_policy1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -78,6 +79,7 @@ const bwLimitRule1 = new openstack.networking.QosBandwidthLimitRule("bw_limit_ru
     qosPolicyId: qosPolicy1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

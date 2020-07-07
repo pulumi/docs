@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>admin_api_key=None<span class="p">, </span>api_key=None<span class="p">, </span>api_url=None<span class="p">, </span>cacert_file=None<span class="p">, </span>infrastructure_api_url=None<span class="p">, </span>insecure_skip_verify=None<span class="p">, </span>insights_insert_key=None<span class="p">, </span>insights_insert_url=None<span class="p">, </span>insights_query_key=None<span class="p">, </span>insights_query_url=None<span class="p">, </span>nerdgraph_api_url=None<span class="p">, </span>region=None<span class="p">, </span>synthetics_api_url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>admin_api_key=None<span class="p">, </span>api_key=None<span class="p">, </span>api_url=None<span class="p">, </span>cacert_file=None<span class="p">, </span>infrastructure_api_url=None<span class="p">, </span>insecure_skip_verify=None<span class="p">, </span>insights_insert_key=None<span class="p">, </span>insights_insert_url=None<span class="p">, </span>insights_query_url=None<span class="p">, </span>nerdgraph_api_url=None<span class="p">, </span>region=None<span class="p">, </span>synthetics_api_url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,16 +290,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="insightsquerykey_csharp">
-<a href="#insightsquerykey_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Query<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="insightsqueryurl_csharp">
 <a href="#insightsqueryurl_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Query<wbr>Url</a>
 </span> 
@@ -430,16 +420,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="insightsinserturl_go">
 <a href="#insightsinserturl_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Insert<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="insightsquerykey_go">
-<a href="#insightsquerykey_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Query<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -586,16 +566,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="insightsquerykey_nodejs">
-<a href="#insightsquerykey_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Query<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="insightsqueryurl_nodejs">
 <a href="#insightsqueryurl_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Query<wbr>Url</a>
 </span> 
@@ -726,16 +696,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="insights_insert_url_python">
 <a href="#insights_insert_url_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>insert_<wbr>url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="insights_query_key_python">
-<a href="#insights_query_key_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>query_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

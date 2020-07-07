@@ -13,8 +13,6 @@ meta_desc: "Explore the InterfaceAttach resource of the compute module, includin
 Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -31,7 +29,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
         {
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ ai1 = openstack.compute.InterfaceAttach("ai1",
     instance_id=instance1.id,
     network_id=openstack_networking_port_v2["network_1"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -84,6 +85,7 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     networkId: openstack_networking_port_v2_network_1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Attachment Specifying a Fixed IP
@@ -98,7 +100,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
         {
@@ -117,6 +119,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,9 +138,11 @@ ai1 = openstack.compute.InterfaceAttach("ai1",
     instance_id=instance1.id,
     network_id=openstack_networking_port_v2["network_1"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -154,6 +159,7 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     networkId: openstack_networking_port_v2_network_1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Attachment Using an Existing Port
@@ -168,11 +174,11 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             NetworkId = network1.Id,
         });
         var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
@@ -191,6 +197,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -211,9 +218,11 @@ ai1 = openstack.compute.InterfaceAttach("ai1",
     instance_id=instance1.id,
     port_id=port1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -233,6 +242,7 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     portId: port1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

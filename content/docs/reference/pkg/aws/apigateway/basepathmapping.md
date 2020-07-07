@@ -14,6 +14,102 @@ Connects a custom domain name registered via `aws.apigateway.DomainName`
 with a deployed API so that its methods can be called via the
 custom domain name.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDeployment = new Aws.ApiGateway.Deployment("exampleDeployment", new Aws.ApiGateway.DeploymentArgs
+        {
+            RestApi = aws_api_gateway_rest_api.MyDemoAPI.Id,
+            StageName = "live",
+        });
+        var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
+        {
+            CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
+            CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
+            CertificateName = "example-api",
+            CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
+            DomainName = "example.com",
+        });
+        var test = new Aws.ApiGateway.BasePathMapping("test", new Aws.ApiGateway.BasePathMappingArgs
+        {
+            RestApi = aws_api_gateway_rest_api.MyDemoAPI.Id,
+            DomainName = exampleDomainName.Domain,
+            StageName = exampleDeployment.StageName,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_deployment = aws.apigateway.Deployment("exampleDeployment",
+    rest_api=aws_api_gateway_rest_api["MyDemoAPI"]["id"],
+    stage_name="live")
+example_domain_name = aws.apigateway.DomainName("exampleDomainName",
+    certificate_body=(lambda path: open(path).read())(f"{path['module']}/example.com/example.crt"),
+    certificate_chain=(lambda path: open(path).read())(f"{path['module']}/example.com/ca.crt"),
+    certificate_name="example-api",
+    certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"),
+    domain_name="example.com")
+test = aws.apigateway.BasePathMapping("test",
+    rest_api=aws_api_gateway_rest_api["MyDemoAPI"]["id"],
+    domain_name=example_domain_name.domain_name,
+    stage_name=example_deployment.stage_name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const exampleDeployment = new aws.apigateway.Deployment("example", {
+    // See aws_api_gateway_rest_api docs for how to create this
+    restApi: aws_api_gateway_rest_api_MyDemoAPI.id,
+    stageName: "live",
+});
+const exampleDomainName = new aws.apigateway.DomainName("example", {
+    certificateBody: fs.readFileSync(`./example.com/example.crt`, "utf-8"),
+    certificateChain: fs.readFileSync(`./example.com/ca.crt`, "utf-8"),
+    certificateName: "example-api",
+    certificatePrivateKey: fs.readFileSync(`./example.com/example.key`, "utf-8"),
+    domainName: "example.com",
+});
+const test = new aws.apigateway.BasePathMapping("test", {
+    restApi: aws_api_gateway_rest_api_MyDemoAPI.id,
+    domainName: exampleDomainName.domainName,
+    stageName: exampleDeployment.stageName,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BasePathMapping Resource {#create}

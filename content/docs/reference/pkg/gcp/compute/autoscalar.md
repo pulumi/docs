@@ -1351,6 +1351,27 @@ group.  Structure is documented below.
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_csharp">
+<a href="#scaledowncontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1439,6 +1460,27 @@ group.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_go">
+<a href="#scaledowncontrol_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1529,6 +1571,27 @@ group.  Structure is documented below.
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_nodejs">
+<a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1617,6 +1680,27 @@ group.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_python">
+<a href="#scaledowncontrol_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Dict[Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2254,6 +2338,286 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicyScaleDownControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyScaleDownControl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleDownControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleDownControlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalarAutoscalingPolicyScaleDownControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalarAutoscalingPolicyScaleDownControl.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_csharp">
+<a href="#maxscaleddownreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_csharp">
+<a href="#timewindowsec_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_go">
+<a href="#maxscaleddownreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_go">
+<a href="#timewindowsec_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_nodejs">
+<a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_nodejs">
+<a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_python">
+<a href="#maxscaleddownreplicas_python" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Dict[Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas]</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_python">
+<a href="#timewindowsec_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="autoscalarautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_csharp">
+<a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_csharp">
+<a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_go">
+<a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_go">
+<a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_nodejs">
+<a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_nodejs">
+<a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_python">
+<a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_python">
+<a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
 {{% /md %}}</dd>
 
 </dl>

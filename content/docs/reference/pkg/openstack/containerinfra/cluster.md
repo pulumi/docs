@@ -11,65 +11,63 @@ meta_desc: "Explore the Cluster resource of the containerinfra module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V1 Magnum cluster resource within OpenStack.
-
-
 ## Argument reference
 
 The following arguments are supported:
 
 * `region` - (Optional) The region in which to obtain the V1 Container Infra
-    client. A Container Infra client is needed to create a cluster. If omitted,
-    the `region` argument of the provider is used. Changing this creates a new
-    cluster.
+  client. A Container Infra client is needed to create a cluster. If omitted,
+  the `region` argument of the provider is used. Changing this creates a new
+  cluster.
 
 * `name` - (Required) The name of the cluster. Changing this updates the name
-    of the existing cluster template.
+  of the existing cluster template.
 
 * `project_id` - (Optional) The project of the cluster. Required if admin wants
-    to create a cluster in another project. Changing this creates a new
-    cluster.
+  to create a cluster in another project. Changing this creates a new
+  cluster.
 
 * `user_id` - (Optional) The user of the cluster. Required if admin wants to
-    create a cluster template for another user. Changing this creates a new
-    cluster.
+  create a cluster template for another user. Changing this creates a new
+  cluster.
 
 * `cluster_template_id` - (Required) The UUID of the V1 Container Infra cluster
-    template. Changing this creates a new cluster.
+  template. Changing this creates a new cluster.
 
 * `create_timeout` - (Optional) The timeout (in minutes) for creating the
-    cluster. Changing this creates a new cluster.
+  cluster. Changing this creates a new cluster.
 
 * `discovery_url` - (Optional) The URL used for cluster node discovery.
-    Changing this creates a new cluster.
+  Changing this creates a new cluster.
 
 * `docker_volume_size` - (Optional) The size (in GB) of the Docker volume.
-    Changing this creates a new cluster.
+  Changing this creates a new cluster.
 
 * `flavor` - (Optional) The flavor for the nodes of the cluster. Can be set via
-    the `OS_MAGNUM_FLAVOR` environment variable. Changing this creates a new
-    cluster.
+  the `OS_MAGNUM_FLAVOR` environment variable. Changing this creates a new
+  cluster.
 
 * `master_flavor` - (Optional) The flavor for the master nodes. Can be set via
-    the `OS_MAGNUM_MASTER_FLAVOR` environment variable. Changing this creates a
-    new cluster.
+  the `OS_MAGNUM_MASTER_FLAVOR` environment variable. Changing this creates a
+  new cluster.
 
 * `keypair` - (Optional) The name of the Compute service SSH keypair. Changing
-    this creates a new cluster.
+  this creates a new cluster.
 
 * `labels` - (Optional) The list of key value pairs representing additional
-    properties of the cluster. Changing this creates a new cluster.
+  properties of the cluster. Changing this creates a new cluster.
 
 * `master_count` - (Optional) The number of master nodes for the cluster.
-    Changing this creates a new cluster.
+  Changing this creates a new cluster.
 
 * `node_count` - (Optional) The number of nodes for the cluster. Changing this
-    creates a new cluster.
-    
+  creates a new cluster.
+
 * `fixed_network` - (Optional) The fixed network that will be attached to the
-    cluster. Changing this creates a new cluster.
+  cluster. Changing this creates a new cluster.
 
 * `fixed_subnet` - (Optional) The fixed subnet that will be attached to the
-    cluster. Changing this creates a new cluster.
+  cluster. Changing this creates a new cluster.
 
 ## Attributes reference
 
@@ -130,6 +128,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -147,9 +146,11 @@ cluster1 = openstack.containerinfra.Cluster("cluster1",
     master_count=3,
     node_count=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -161,6 +162,7 @@ const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
     nodeCount: 5,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

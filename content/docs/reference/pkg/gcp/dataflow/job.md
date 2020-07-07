@@ -63,10 +63,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		bigDataJob, err := dataflow.NewJob(ctx, "bigDataJob", &dataflow.JobArgs{
-			Parameters: map[string]interface{}{
-				"baz": "qux",
-				"foo": "bar",
+		_, err = dataflow.NewJob(ctx, "bigDataJob", &dataflow.JobArgs{
+			Parameters: pulumi.Map{
+				"baz": pulumi.String("qux"),
+				"foo": pulumi.String("bar"),
 			},
 			TempGcsLocation: pulumi.String("gs://my-bucket/tmp_dir"),
 			TemplateGcsPath: pulumi.String("gs://my-bucket/templates/template_file"),
@@ -442,7 +442,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -627,7 +628,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -812,7 +814,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -997,7 +1000,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1508,7 +1512,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1726,7 +1731,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,7 +1950,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2162,7 +2169,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which the created job should run.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

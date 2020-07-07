@@ -74,7 +74,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", &compute.TargetPoolArgs{
+		_, err = compute.NewTargetPool(ctx, "defaultTargetPool", &compute.TargetPoolArgs{
 			Instances: pulumi.StringArray{
 				pulumi.String("us-central1-a/myinstance1"),
 				pulumi.String("us-central1-b/myinstance2"),

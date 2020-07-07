@@ -56,7 +56,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
 			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
 			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
 			TargetName:         pulumi.String("example"),
@@ -139,7 +139,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
 			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
 			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
 			SnapshotId:         pulumi.String(aws_ebs_snapshot.Example.Id),
@@ -224,7 +224,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
 			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
 			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
 			SourceVolumeArn:    pulumi.String(aws_storagegateway_cached_iscsi_volume.Existing.Arn),

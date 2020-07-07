@@ -12,8 +12,6 @@ meta_desc: "Explore the Share resource of the sharedfilesystem module, including
 
 Use this resource to configure a share.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +28,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,9 +80,11 @@ share1 = openstack.sharedfilesystem.Share("share1",
     share_proto="NFS",
     size=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -108,6 +109,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     size: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

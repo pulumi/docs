@@ -34,6 +34,12 @@ class MyStack : Stack
             Description = "Example description",
             RestApiId = exampleRestApi.Id,
             Version = "example_version",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_api_gateway_documentation_part.example",
+            },
         });
         var exampleDocumentationPart = new Aws.ApiGateway.DocumentationPart("exampleDocumentationPart", new Aws.ApiGateway.DocumentationPartArgs
         {
@@ -70,7 +76,9 @@ func main() {
 			Description: pulumi.String("Example description"),
 			RestApiId:   exampleRestApi.ID(),
 			Version:     pulumi.String("example_version"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_api_gateway_documentation_part.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -100,7 +108,8 @@ example_rest_api = aws.apigateway.RestApi("exampleRestApi")
 example_documentation_version = aws.apigateway.DocumentationVersion("exampleDocumentationVersion",
     description="Example description",
     rest_api_id=example_rest_api.id,
-    version="example_version")
+    version="example_version",
+    opts=ResourceOptions(depends_on=["aws_api_gateway_documentation_part.example"]))
 example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentationPart",
     location={
         "type": "API",

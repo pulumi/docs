@@ -34,7 +34,7 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.10.0</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 

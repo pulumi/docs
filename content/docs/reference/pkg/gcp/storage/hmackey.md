@@ -74,7 +74,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		key, err := storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
+		_, err = storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
 			ServiceAccountEmail: serviceAccount.Email,
 		})
 		if err != nil {

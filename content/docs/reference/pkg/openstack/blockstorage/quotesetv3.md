@@ -14,10 +14,8 @@ Manages a V3 block storage quotaset resource within OpenStack.
 
 > **Note:** This usually requires admin privileges.
 
-> **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
+> **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API
     in case of delete call.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ quotaset1 = openstack.blockstorage.QuoteSetV3("quotaset1",
     backup_gigabytes=10,
     groups=100)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -92,6 +93,7 @@ const quotaset1 = new openstack.blockstorage.QuoteSetV3("quotaset1", {
     groups: 100,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

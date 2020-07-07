@@ -51,6 +51,13 @@ class MyStack : Stack
             {
                 "ConfigurationItemChangeNotification",
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_lambda_permission.example",
+                "aws_organizations_organization.example",
+            },
         });
     }
 
@@ -72,7 +79,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+		_, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
 			Function:  pulumi.String(aws_lambda_function.Example.Arn),
 			Principal: pulumi.String("config.amazonaws.com"),
@@ -94,7 +101,10 @@ func main() {
 			TriggerTypes: pulumi.StringArray{
 				pulumi.String("ConfigurationItemChangeNotification"),
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_lambda_permission.example",
+			"aws_organizations_organization.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -119,7 +129,11 @@ example_organization = aws.organizations.Organization("exampleOrganization",
     feature_set="ALL")
 example_organization_custom_rule = aws.cfg.OrganizationCustomRule("exampleOrganizationCustomRule",
     lambda_function_arn=aws_lambda_function["example"]["arn"],
-    trigger_types=["ConfigurationItemChangeNotification"])
+    trigger_types=["ConfigurationItemChangeNotification"],
+    opts=ResourceOptions(depends_on=[
+            "aws_lambda_permission.example",
+            "aws_organizations_organization.example",
+        ]))
 ```
 
 {{% /example %}}

@@ -24,8 +24,6 @@ If a network is marked as external during creation, it now implicitly creates
 a wildcard RBAC policy granting everyone access to preserve previous behavior
 before this feature was added.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +40,7 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var rbacPolicy1 = new OpenStack.Networking.RbacPolicyV2("rbacPolicy1", new OpenStack.Networking.RbacPolicyV2Args
         {
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ rbac_policy1 = openstack.networking.RbacPolicyV2("rbacPolicy1",
     object_type="network",
     target_tenant="20415a973c9e45d3917f078950644697")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -90,6 +91,7 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
     targetTenant: "20415a973c9e45d3917f078950644697",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

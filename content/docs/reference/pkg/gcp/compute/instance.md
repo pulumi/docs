@@ -86,7 +86,61 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = compute.NewInstance(ctx, "default", &compute.InstanceArgs{
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			MachineType: pulumi.String("n1-standard-1"),
+			Metadata: pulumi.Map{
+				"foo": pulumi.String("bar"),
+			},
+			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					AccessConfig: pulumi.MapArray{
+						nil,
+					},
+					Network: pulumi.String("default"),
+				},
+			},
+			ScratchDisks: compute.InstanceScratchDiskArray{
+				&compute.InstanceScratchDiskArgs{
+					Interface: pulumi.String("SCSI"),
+				},
+			},
+			ServiceAccount: &compute.InstanceServiceAccountArgs{
+				Scopes: pulumi.StringArray{
+					pulumi.String("userinfo-email"),
+					pulumi.String("compute-ro"),
+					pulumi.String("storage-ro"),
+				},
+			},
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+			Zone: pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -647,7 +701,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +1015,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1275,7 +1329,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1589,7 +1643,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1640,7 +1694,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1733,7 +1788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1826,7 +1882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1919,7 +1976,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2186,7 +2244,8 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2477,7 +2536,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2576,7 +2635,8 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2867,7 +2927,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2966,7 +3026,8 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3257,7 +3318,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3356,7 +3417,8 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3647,7 +3709,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tags to attach to the instance.
+    <dd>{{% md %}}A list of network tags to attach to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

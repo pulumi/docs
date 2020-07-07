@@ -12,8 +12,6 @@ meta_desc: "Explore the Member resource of the loadbalancer module, including ex
 
 Manages a V2 member resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ member1 = openstack.loadbalancer.Member("member1",
     pool_id="935685fb-a896-40f9-9ff4-ae531a3a00fe",
     protocol_port=8080)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -67,6 +68,7 @@ const member1 = new openstack.loadbalancer.Member("member_1", {
     protocolPort: 8080,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

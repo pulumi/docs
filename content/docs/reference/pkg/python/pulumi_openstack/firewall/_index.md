@@ -3,7 +3,10 @@ title: Module firewall
 title_tag: Module firewall | Package pulumi_openstack | Python SDK
 linktitle: firewall
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="firewall">
 <h1>firewall<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h1>

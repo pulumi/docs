@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAvailabilityZonesV3 function of the blockstorage modu
 
 Use this data source to get a list of Block Storage availability zones from OpenStack
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +45,18 @@ import pulumi_openstack as openstack
 
 zones = openstack.blockstorage.get_availability_zones_v3()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const zones = pulumi.output(openstack.blockstorage.getAvailabilityZonesV3({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

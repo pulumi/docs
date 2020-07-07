@@ -68,6 +68,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +87,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := billing.NewAccountIamPolicy(ctx, "policy", &billing.AccountIamPolicyArgs{
+		_, err = billing.NewAccountIamPolicy(ctx, "policy", &billing.AccountIamPolicyArgs{
 			BillingAccountId: pulumi.String("00AA00-000AAA-00AA0A"),
 			PolicyData:       pulumi.String(admin.PolicyData),
 		})

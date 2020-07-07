@@ -41,6 +41,12 @@ class MyStack : Stack
         var exampleOrganizationManagedRule = new Aws.Cfg.OrganizationManagedRule("exampleOrganizationManagedRule", new Aws.Cfg.OrganizationManagedRuleArgs
         {
             RuleIdentifier = "IAM_PASSWORD_POLICY",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_organizations_organization.example",
+            },
         });
     }
 
@@ -61,7 +67,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+		_, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
 			AwsServiceAccessPrincipals: pulumi.StringArray{
 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
 			},
@@ -72,7 +78,9 @@ func main() {
 		}
 		_, err = cfg.NewOrganizationManagedRule(ctx, "exampleOrganizationManagedRule", &cfg.OrganizationManagedRuleArgs{
 			RuleIdentifier: pulumi.String("IAM_PASSWORD_POLICY"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_organizations_organization.example",
+		}))
 		if err != nil {
 			return err
 		}
@@ -91,7 +99,8 @@ import pulumi_aws as aws
 example_organization = aws.organizations.Organization("exampleOrganization",
     aws_service_access_principals=["config-multiaccountsetup.amazonaws.com"],
     feature_set="ALL")
-example_organization_managed_rule = aws.cfg.OrganizationManagedRule("exampleOrganizationManagedRule", rule_identifier="IAM_PASSWORD_POLICY")
+example_organization_managed_rule = aws.cfg.OrganizationManagedRule("exampleOrganizationManagedRule", rule_identifier="IAM_PASSWORD_POLICY",
+opts=ResourceOptions(depends_on=["aws_organizations_organization.example"]))
 ```
 
 {{% /example %}}

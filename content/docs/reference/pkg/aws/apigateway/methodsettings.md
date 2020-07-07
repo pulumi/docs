@@ -34,6 +34,12 @@ class MyStack : Stack
         {
             RestApi = testRestApi.Id,
             StageName = "dev",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_api_gateway_integration.test",
+            },
         });
         var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
         {
@@ -114,7 +120,9 @@ func main() {
 		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
 			RestApi:   testRestApi.ID(),
 			StageName: pulumi.String("dev"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_api_gateway_integration.test",
+		}))
 		if err != nil {
 			return err
 		}
@@ -161,7 +169,7 @@ func main() {
 		}
 		_, err = apigateway.NewIntegration(ctx, "testIntegration", &apigateway.IntegrationArgs{
 			HttpMethod: testMethod.HttpMethod,
-			RequestTemplates: pulumi.Map{
+			RequestTemplates: pulumi.StringMap{
 				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n", "\n")),
 			},
 			ResourceId: testResource.ID(),
@@ -186,7 +194,8 @@ import pulumi_aws as aws
 test_rest_api = aws.apigateway.RestApi("testRestApi", description="This is my API for demonstration purposes")
 test_deployment = aws.apigateway.Deployment("testDeployment",
     rest_api=test_rest_api.id,
-    stage_name="dev")
+    stage_name="dev",
+    opts=ResourceOptions(depends_on=["aws_api_gateway_integration.test"]))
 test_stage = aws.apigateway.Stage("testStage",
     deployment=test_deployment.id,
     rest_api=test_rest_api.id,

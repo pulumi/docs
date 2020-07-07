@@ -70,7 +70,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		app, err := appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+		_, err = appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
 			Project:    myProject.ProjectId,
 			LocationId: pulumi.String("us-central"),
 		})
@@ -129,7 +129,7 @@ const app = new gcp.appengine.Application("app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_domain=None<span class="p">, </span>feature_settings=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_domain=None<span class="p">, </span>database_type=None<span class="p">, </span>feature_settings=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,6 +326,17 @@ to serve the app from.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="databasetype_csharp">
+<a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="featuresettings_csharp">
 <a href="#featuresettings_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
 </span> 
@@ -398,6 +409,17 @@ to serve the app from.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databasetype_go">
+<a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -478,6 +500,17 @@ to serve the app from.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="databasetype_nodejs">
+<a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="featuresettings_nodejs">
 <a href="#featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
 </span> 
@@ -550,6 +583,17 @@ to serve the app from.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_type_python">
+<a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1048,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>auth_domain=None<span class="p">, </span>code_bucket=None<span class="p">, </span>default_bucket=None<span class="p">, </span>default_hostname=None<span class="p">, </span>feature_settings=None<span class="p">, </span>gcr_domain=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>url_dispatch_rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>auth_domain=None<span class="p">, </span>code_bucket=None<span class="p">, </span>database_type=None<span class="p">, </span>default_bucket=None<span class="p">, </span>default_hostname=None<span class="p">, </span>feature_settings=None<span class="p">, </span>gcr_domain=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>url_dispatch_rules=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1149,6 +1193,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_databasetype_csharp">
+<a href="#state_databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,6 +1361,17 @@ you may get a "Permission denied" error.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_databasetype_go">
+<a href="#state_databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultbucket_go">
 <a href="#state_defaultbucket_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bucket</a>
 </span> 
@@ -1459,6 +1525,17 @@ you may get a "Permission denied" error.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_databasetype_nodejs">
+<a href="#state_databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultbucket_nodejs">
 <a href="#state_defaultbucket_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bucket</a>
 </span> 
@@ -1608,6 +1685,17 @@ you may get a "Permission denied" error.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_database_type_python">
+<a href="#state_database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

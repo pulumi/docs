@@ -222,7 +222,9 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -232,7 +234,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">List&lt;Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -242,7 +245,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -252,7 +256,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -262,7 +267,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -272,7 +278,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -282,7 +289,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -292,7 +300,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -302,7 +311,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List&lt;Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +322,10 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -322,7 +335,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -332,7 +346,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -342,7 +357,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +368,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -362,7 +379,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -384,7 +402,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -394,7 +413,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -404,7 +425,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,7 +437,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -424,7 +448,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">List&lt;Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +459,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -444,7 +470,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -454,7 +481,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -495,7 +523,9 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -505,7 +535,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -515,7 +546,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -525,7 +557,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -535,7 +568,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -545,7 +579,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -555,7 +590,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -565,7 +601,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -575,7 +612,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -585,7 +623,10 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -595,7 +636,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -605,7 +647,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -615,7 +658,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -625,7 +669,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -635,7 +680,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -657,7 +703,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -667,7 +714,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -677,7 +726,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -687,7 +738,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -697,7 +749,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -707,7 +760,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -717,7 +771,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -727,7 +782,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -768,7 +824,9 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -778,7 +836,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -788,7 +847,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -798,7 +858,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -808,7 +869,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -818,7 +880,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -828,7 +891,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -838,7 +902,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -848,7 +913,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -858,7 +924,10 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -868,7 +937,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -878,7 +948,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -888,7 +959,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -898,7 +970,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -908,7 +981,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -930,7 +1004,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -940,7 +1015,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -950,7 +1027,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -960,7 +1039,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -970,7 +1050,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -980,7 +1061,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -990,7 +1072,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1000,7 +1083,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1041,7 +1125,9 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1051,7 +1137,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">List[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1061,7 +1148,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Dict[Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1071,7 +1159,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1081,7 +1170,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1091,7 +1181,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1101,7 +1192,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1111,7 +1203,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1121,7 +1214,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1131,7 +1225,10 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1141,7 +1238,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1151,7 +1249,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1161,7 +1260,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1171,7 +1271,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1181,7 +1282,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1203,7 +1305,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1213,7 +1316,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1223,7 +1328,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1233,7 +1340,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Dict[Instance<wbr>From<wbr>Template<wbr>Scheduling]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1243,7 +1351,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">List[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1253,7 +1362,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Dict[Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1263,7 +1373,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Dict[Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1273,7 +1384,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1313,7 +1425,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1323,7 +1436,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1343,7 +1457,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1353,7 +1468,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1363,7 +1479,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1373,7 +1490,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1383,7 +1501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1400,7 +1519,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1410,7 +1530,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1430,7 +1551,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1440,7 +1562,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1450,7 +1573,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1460,7 +1584,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1470,7 +1595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1487,7 +1613,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1497,7 +1624,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1517,7 +1645,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1527,7 +1656,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1537,7 +1667,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1547,7 +1678,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1557,7 +1689,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1574,7 +1707,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1584,7 +1718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1604,7 +1739,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1614,7 +1750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1624,7 +1761,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1634,7 +1772,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1644,7 +1783,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1787,7 +1927,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1797,7 +1939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">List&lt;Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1807,7 +1950,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1817,7 +1961,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1827,7 +1972,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1837,7 +1983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1847,7 +1994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1857,7 +2005,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1867,7 +2016,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1877,7 +2027,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1887,7 +2038,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List&lt;Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1897,7 +2049,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1907,7 +2062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1917,7 +2073,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1927,7 +2084,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1937,7 +2095,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1947,7 +2106,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1957,7 +2117,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1967,7 +2128,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1977,7 +2139,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1999,7 +2162,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2009,7 +2173,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2019,7 +2185,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2029,7 +2197,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2039,7 +2208,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">List&lt;Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2049,7 +2219,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2059,7 +2230,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2069,7 +2241,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2091,7 +2264,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2101,7 +2275,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2130,7 +2305,9 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2140,7 +2317,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2150,7 +2328,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2160,7 +2339,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2170,7 +2350,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2180,7 +2361,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2190,7 +2372,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2200,7 +2383,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2210,7 +2394,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2220,7 +2405,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2230,7 +2416,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2240,7 +2427,10 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2250,7 +2440,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2260,7 +2451,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2270,7 +2462,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2280,7 +2473,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2290,7 +2484,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2300,7 +2495,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2310,7 +2506,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2320,7 +2517,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +2540,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2352,7 +2551,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2362,7 +2563,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2372,7 +2575,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2382,7 +2586,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2392,7 +2597,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2402,7 +2608,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2412,7 +2619,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2434,7 +2642,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2444,7 +2653,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2473,7 +2683,9 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2483,7 +2695,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2493,7 +2706,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2503,7 +2717,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2513,7 +2728,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2523,7 +2739,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2533,7 +2750,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2543,7 +2761,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2553,7 +2772,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2563,7 +2783,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2573,7 +2794,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2583,7 +2805,10 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2593,7 +2818,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2603,7 +2829,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2613,7 +2840,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2623,7 +2851,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2633,7 +2862,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2643,7 +2873,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2653,7 +2884,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2663,7 +2895,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2685,7 +2918,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2695,7 +2929,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2705,7 +2941,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2715,7 +2953,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2725,7 +2964,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2735,7 +2975,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2745,7 +2986,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2755,7 +2997,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2777,7 +3020,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2787,7 +3031,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2816,7 +3061,9 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+stopping the instance without setting this field, the update will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2826,7 +3073,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateattacheddisk">List[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of disks attached to the instance
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2836,7 +3084,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatebootdisk">Dict[Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The boot disk for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2846,7 +3095,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2856,7 +3106,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The CPU platform used by this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2866,7 +3117,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Current status of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2876,7 +3128,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether deletion protection is enabled on this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2886,7 +3139,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A brief description of the resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2896,7 +3150,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2906,7 +3161,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the instance has virtual displays enabled.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2916,7 +3172,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2926,7 +3183,10 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2936,7 +3196,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server-assigned unique identifier of this instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2946,7 +3207,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the labels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2956,7 +3218,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2966,7 +3229,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2976,7 +3240,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata key/value pairs made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2986,7 +3251,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the metadata.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2996,7 +3262,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata startup scripts made available within the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3006,7 +3273,8 @@ set, the provider zone is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3028,7 +3296,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3038,7 +3307,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3048,7 +3319,9 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
+instance to recreate. Currently a max of 1 resource policy is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3058,7 +3331,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Dict[Instance<wbr>From<wbr>Template<wbr>Scheduling]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling strategy being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3068,7 +3342,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescratchdisk">List[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scratch disks attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3078,7 +3353,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3088,7 +3364,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateserviceaccount">Dict[Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The service account to attach to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3098,7 +3375,8 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Dict[Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The shielded vm config being used by the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3120,7 +3398,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of tags attached to the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3130,7 +3409,8 @@ template to create the instance based on.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique fingerprint of the tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

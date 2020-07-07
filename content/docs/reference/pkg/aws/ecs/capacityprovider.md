@@ -12,6 +12,115 @@ meta_desc: "Explore the CapacityProvider resource of the ecs module, including e
 
 Provides an ECS cluster capacity provider. More information can be found on the [ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Ecs.CapacityProvider("test", new Aws.Ecs.CapacityProviderArgs
+        {
+            AutoScalingGroupProvider = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+            {
+                AutoScalingGroupArn = aws_autoscaling_group.Test.Arn,
+                ManagedTerminationProtection = "ENABLED",
+                ManagedScaling = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs
+                {
+                    MaximumScalingStepSize = 1000,
+                    MinimumScalingStepSize = 1,
+                    Status = "ENABLED",
+                    TargetCapacity = 10,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.NewCapacityProvider(ctx, "test", &ecs.CapacityProviderArgs{
+			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+				AutoScalingGroupArn:          pulumi.String(aws_autoscaling_group.Test.Arn),
+				ManagedTerminationProtection: pulumi.String("ENABLED"),
+				ManagedScaling: &ecs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs{
+					MaximumScalingStepSize: pulumi.Int(1000),
+					MinimumScalingStepSize: pulumi.Int(1),
+					Status:                 pulumi.String("ENABLED"),
+					TargetCapacity:         pulumi.Int(10),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ecs.CapacityProvider("test", auto_scaling_group_provider={
+    "autoScalingGroupArn": aws_autoscaling_group["test"]["arn"],
+    "managedTerminationProtection": "ENABLED",
+    "managedScaling": {
+        "maximumScalingStepSize": 1000,
+        "minimumScalingStepSize": 1,
+        "status": "ENABLED",
+        "target_capacity": 10,
+    },
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
+    autoScalingGroupArn: aws_autoscaling_group.test.arn,
+    managedTerminationProtection: "ENABLED",
+    managedScaling: {
+        maximumScalingStepSize: 1000,
+        minimumScalingStepSize: 1,
+        status: "ENABLED",
+        targetCapacity: 10,
+    },
+}});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CapacityProvider Resource {#create}

@@ -34,6 +34,12 @@ class MyStack : Stack
         {
             RestApi = testRestApi.Id,
             StageName = "dev",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "aws_api_gateway_integration.test",
+            },
         });
         var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
         {
@@ -106,7 +112,9 @@ func main() {
 		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
 			RestApi:   testRestApi.ID(),
 			StageName: pulumi.String("dev"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"aws_api_gateway_integration.test",
+		}))
 		if err != nil {
 			return err
 		}
@@ -175,7 +183,8 @@ import pulumi_aws as aws
 test_rest_api = aws.apigateway.RestApi("testRestApi", description="This is my API for demonstration purposes")
 test_deployment = aws.apigateway.Deployment("testDeployment",
     rest_api=test_rest_api.id,
-    stage_name="dev")
+    stage_name="dev",
+    opts=ResourceOptions(depends_on=["aws_api_gateway_integration.test"]))
 test_stage = aws.apigateway.Stage("testStage",
     deployment=test_deployment.id,
     rest_api=test_rest_api.id,
@@ -250,6 +259,52 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
     },
     stageName: testStage.stageName,
 });
+```
+
+{{% /example %}}
+
+### Managing the API Logging CloudWatch Log Group
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+stage_name = config.get("stageName")
+if stage_name is None:
+    stage_name = "example"
+example_rest_api = aws.apigateway.RestApi("exampleRestApi")
+example_stage = aws.apigateway.Stage("exampleStage", name=stage_name,
+opts=ResourceOptions(depends_on=["aws_cloudwatch_log_group.example"]))
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const stageName = config.get("stageName") || "example";
+
+const exampleRestApi = new aws.apigateway.RestApi("example", {});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {
+    retentionInDays: 7,
+});
+const exampleStage = new aws.apigateway.Stage("example", {
+    name: stageName,
+}, { dependsOn: [exampleLogGroup] });
 ```
 
 {{% /example %}}

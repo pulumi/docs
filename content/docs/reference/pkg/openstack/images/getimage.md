@@ -12,8 +12,6 @@ meta_desc: "Explore the GetImage function of the images module, including exampl
 
 Use this data source to get the ID of an available OpenStack image.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ ubuntu = openstack.images.get_image(most_recent=True,
         "key": "value",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -73,6 +74,7 @@ const ubuntu = pulumi.output(openstack.images.getImage({
     },
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetPolicy function of the firewall module, including exa
 
 Use this data source to get firewall policy information of an available OpenStack firewall policy.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 policy = openstack.firewall.get_policy(name="tf_test_policy")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const policy = pulumi.output(openstack.firewall.getPolicy({
     name: "tf_test_policy",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

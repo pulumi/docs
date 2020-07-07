@@ -15,8 +15,6 @@ Manages a V3 User resource within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,9 +100,11 @@ user1 = openstack.identity.User("user1",
     ],
     password="password123")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -131,6 +132,7 @@ const user1 = new openstack.identity.User("user_1", {
     password: "password123",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

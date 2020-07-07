@@ -12,8 +12,6 @@ meta_desc: "Explore the Vip resource of the loadbalancer module, including examp
 
 Manages a V1 load balancer vip resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ vip1 = openstack.loadbalancer.Vip("vip1",
     protocol="HTTP",
     subnet_id="12345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -70,6 +71,7 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
     subnetId: "12345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

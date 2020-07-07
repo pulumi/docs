@@ -48,7 +48,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+		_, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
 			CidrBlock: pulumi.String("10.0.0.0/16"),
 		})
 		if err != nil {
@@ -347,7 +347,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,7 +448,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -547,7 +549,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +650,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1406,7 +1410,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1606,7 +1611,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1806,7 +1812,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2006,7 +2013,8 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A tenancy option for instances launched into the VPC
+    <dd>{{% md %}}A tenancy option for instances launched into the VPC. Default is `default`, which
+makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

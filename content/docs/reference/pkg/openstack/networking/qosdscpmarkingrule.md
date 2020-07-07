@@ -12,8 +12,6 @@ meta_desc: "Explore the QosDscpMarkingRule resource of the networking module, in
 
 Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ dscp_marking_rule1 = openstack.networking.QosDscpMarkingRule("dscpMarkingRule1",
     dscp_mark=26,
     qos_policy_id=qos_policy1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -72,6 +73,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     qosPolicyId: qosPolicy1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

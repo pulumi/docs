@@ -12,8 +12,6 @@ meta_desc: "Explore the Router resource of the networking module, including exam
 
 Manages a V2 router resource within OpenStack.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ router1 = openstack.networking.Router("router1",
     admin_state_up=True,
     external_network_id="f67f0d72-0ddf-11e4-9d95-e1f29f417e2f")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -64,6 +65,7 @@ const router1 = new openstack.networking.Router("router_1", {
     externalNetworkId: "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

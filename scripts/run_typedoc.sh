@@ -98,6 +98,7 @@ REPOS=(
     "gcp,pulumi-gcp,sdk/nodejs"
     "github,pulumi-github,sdk/nodejs"
     "gitlab,pulumi-gitlab,sdk/nodejs"
+    "hcloud,pulumi-hcloud,sdk/nodejs"
     "kafka,pulumi-kafka,sdk/nodejs"
     "keycloak,pulumi-keycloak,sdk/nodejs"
     "kong,pulumi-kong,sdk/nodejs"

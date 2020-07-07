@@ -43,6 +43,25 @@ You can see detail product introduction <a class="reference external" href="http
 The official website mark more regions. Or you can call <a class="reference external" href="https://help.aliyun.com/document_detail/157540.html">DescribeRegions</a>.</p>
 <p><strong>NOTE:</strong>  Create Cassandra cluster or change cluster type and storage would cost 30 minutes. Please make full preparation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cassandra</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">auto_renew</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;cassandra-cluster-name-tf&quot;</span><span class="p">,</span>
+    <span class="n">data_center_name</span><span class="o">=</span><span class="s2">&quot;dc-1&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;160&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;cloud_ssd&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;cassandra.c.large&quot;</span><span class="p">,</span>
+    <span class="n">ip_white</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+    <span class="n">maintain_end_time</span><span class="o">=</span><span class="s2">&quot;20:00Z&quot;</span><span class="p">,</span>
+    <span class="n">maintain_start_time</span><span class="o">=</span><span class="s2">&quot;18:00Z&quot;</span><span class="p">,</span>
+    <span class="n">major_version</span><span class="o">=</span><span class="s2">&quot;3.11&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PayAsYouGo&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;vsw-xxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -563,6 +582,12 @@ Filters support regular expression for the cluster name, ids or tags.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong>  Available in 1.88.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">cassandra</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cassandra</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tf_testAccCassandra&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -582,6 +607,13 @@ Filters support regular expression for the cluster name or ids.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong>  Available in 1.88.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">cassandra</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cassandra</span><span class="o">.</span><span class="n">get_data_centers</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;cds-xxxxx&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tf_testAccCassandra_dc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -600,6 +632,15 @@ Filters support regular expression for the cluster name or ids.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.88.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cassandra</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+<span class="c1"># Create an Cassandra cluster with the first matched zone</span>
+<span class="n">cassandra</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cassandra</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cassandra&quot;</span><span class="p">,</span> <span class="n">zone_id</span><span class="o">=</span><span class="n">zones_ids</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># Other properties...</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch Cassandra clusters.</p>

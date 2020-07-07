@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRole function of the identity module, including examp
 
 Use this data source to get the ID of an OpenStack role.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 admin = openstack.identity.get_role(name="admin")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const admin = pulumi.output(openstack.identity.getRole({
     name: "admin",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

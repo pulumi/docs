@@ -2,7 +2,7 @@
 ---
 title: "WebsiteCertificateAuthorityAssociation"
 title_tag: "Resource WebsiteCertificateAuthorityAssociation | Module worklink | Package AWS"
-meta_desc: "Explore the WebsiteCertificateAuthorityAssociation resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. "
+meta_desc: "Explore the WebsiteCertificateAuthorityAssociation resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 
@@ -11,6 +11,70 @@ meta_desc: "Explore the WebsiteCertificateAuthorityAssociation resource of the w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+        {
+        });
+        var test = new Aws.WorkLink.WebsiteCertificateAuthorityAssociation("test", new Aws.WorkLink.WebsiteCertificateAuthorityAssociationArgs
+        {
+            Certificate = File.ReadAllText("certificate.pem"),
+            FleetArn = aws_worklink_fleet.Test.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.worklink.Fleet("example")
+test = aws.worklink.WebsiteCertificateAuthorityAssociation("test",
+    certificate=(lambda path: open(path).read())("certificate.pem"),
+    fleet_arn=aws_worklink_fleet["test"]["arn"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const example = new aws.worklink.Fleet("example", {});
+const test = new aws.worklink.WebsiteCertificateAuthorityAssociation("test", {
+    certificate: fs.readFileSync("certificate.pem", "utf-8"),
+    fleetArn: aws_worklink_fleet_test.arn,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WebsiteCertificateAuthorityAssociation Resource {#create}

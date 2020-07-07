@@ -85,6 +85,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +104,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		policy, err := endpoints.NewServiceIamPolicy(ctx, "policy", &endpoints.ServiceIamPolicyArgs{
+		_, err = endpoints.NewServiceIamPolicy(ctx, "policy", &endpoints.ServiceIamPolicyArgs{
 			ServiceName: pulumi.String(google_endpoints_service.Endpoints_service.Service_name),
 			PolicyData:  pulumi.String(admin.PolicyData),
 		})
@@ -167,7 +168,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		binding, err := endpoints.NewServiceIamBinding(ctx, "binding", &endpoints.ServiceIamBindingArgs{
+		_, err = endpoints.NewServiceIamBinding(ctx, "binding", &endpoints.ServiceIamBindingArgs{
 			ServiceName: pulumi.String(google_endpoints_service.Endpoints_service.Service_name),
 			Role:        pulumi.String("roles/viewer"),
 			Members: pulumi.StringArray{
@@ -231,7 +232,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		member, err := endpoints.NewServiceIamMember(ctx, "member", &endpoints.ServiceIamMemberArgs{
+		_, err = endpoints.NewServiceIamMember(ctx, "member", &endpoints.ServiceIamMemberArgs{
 			ServiceName: pulumi.String(google_endpoints_service.Endpoints_service.Service_name),
 			Role:        pulumi.String("roles/viewer"),
 			Member:      pulumi.String("user:jane@example.com"),

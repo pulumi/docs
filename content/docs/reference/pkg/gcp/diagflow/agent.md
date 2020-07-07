@@ -72,7 +72,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		fullAgent, err := diagflow.NewAgent(ctx, "fullAgent", &diagflow.AgentArgs{
+		_, err = diagflow.NewAgent(ctx, "fullAgent", &diagflow.AgentArgs{
 			ApiVersion:              pulumi.String("API_VERSION_V2_BETA_1"),
 			AvatarUri:               pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
 			ClassificationThreshold: pulumi.Float64(0.3),

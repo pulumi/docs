@@ -53,6 +53,9 @@ class MyStack : Stack
             StreamEnabled = true,
             StreamViewType = "NEW_AND_OLD_IMAGES",
             WriteCapacity = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.us-east-1",
         });
         var us_west_2Table = new Aws.DynamoDB.Table("us-west-2Table", new Aws.DynamoDB.TableArgs
         {
@@ -69,6 +72,9 @@ class MyStack : Stack
             StreamEnabled = true,
             StreamViewType = "NEW_AND_OLD_IMAGES",
             WriteCapacity = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.us-west-2",
         });
         var myTable = new Aws.DynamoDB.GlobalTable("myTable", new Aws.DynamoDB.GlobalTableArgs
         {
@@ -83,6 +89,14 @@ class MyStack : Stack
                     RegionName = "us-west-2",
                 },
             },
+        }, new CustomResourceOptions
+        {
+            Provider = "aws.us-east-1",
+            DependsOn = 
+            {
+                "aws_dynamodb_table.us-east-1",
+                "aws_dynamodb_table.us-west-2",
+            },
         });
     }
 
@@ -92,7 +106,82 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "us_east_1", &providers.awsArgs{
+			Region: pulumi.String("us-east-1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newaws(ctx, "us_west_2", &providers.awsArgs{
+			Region: pulumi.String("us-west-2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dynamodb.NewTable(ctx, "us_east_1Table", &dynamodb.TableArgs{
+			Attributes: dynamodb.TableAttributeArray{
+				&dynamodb.TableAttributeArgs{
+					Name: pulumi.String("myAttribute"),
+					Type: pulumi.String("S"),
+				},
+			},
+			HashKey:        pulumi.String("myAttribute"),
+			ReadCapacity:   pulumi.Int(1),
+			StreamEnabled:  pulumi.Bool(true),
+			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+			WriteCapacity:  pulumi.Int(1),
+		}, pulumi.Provider("aws.us-east-1"))
+		if err != nil {
+			return err
+		}
+		_, err = dynamodb.NewTable(ctx, "us_west_2Table", &dynamodb.TableArgs{
+			Attributes: dynamodb.TableAttributeArray{
+				&dynamodb.TableAttributeArgs{
+					Name: pulumi.String("myAttribute"),
+					Type: pulumi.String("S"),
+				},
+			},
+			HashKey:        pulumi.String("myAttribute"),
+			ReadCapacity:   pulumi.Int(1),
+			StreamEnabled:  pulumi.Bool(true),
+			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+			WriteCapacity:  pulumi.Int(1),
+		}, pulumi.Provider("aws.us-west-2"))
+		if err != nil {
+			return err
+		}
+		_, err = dynamodb.NewGlobalTable(ctx, "myTable", &dynamodb.GlobalTableArgs{
+			Replicas: dynamodb.GlobalTableReplicaArray{
+				&dynamodb.GlobalTableReplicaArgs{
+					RegionName: pulumi.String("us-east-1"),
+				},
+				&dynamodb.GlobalTableReplicaArgs{
+					RegionName: pulumi.String("us-west-2"),
+				},
+			},
+		}, pulumi.Provider("aws.us-east-1"), pulumi.DependsOn([]pulumi.Resource{
+			"aws_dynamodb_table.us-east-1",
+			"aws_dynamodb_table.us-west-2",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,7 +201,8 @@ us_east_1_table = aws.dynamodb.Table("us-east-1Table",
     read_capacity=1,
     stream_enabled=True,
     stream_view_type="NEW_AND_OLD_IMAGES",
-    write_capacity=1)
+    write_capacity=1,
+    opts=ResourceOptions(provider="aws.us-east-1"))
 us_west_2_table = aws.dynamodb.Table("us-west-2Table",
     attributes=[{
         "name": "myAttribute",
@@ -122,7 +212,8 @@ us_west_2_table = aws.dynamodb.Table("us-west-2Table",
     read_capacity=1,
     stream_enabled=True,
     stream_view_type="NEW_AND_OLD_IMAGES",
-    write_capacity=1)
+    write_capacity=1,
+    opts=ResourceOptions(provider="aws.us-west-2"))
 my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
     {
         "regionName": "us-east-1",
@@ -130,7 +221,12 @@ my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
     {
         "regionName": "us-west-2",
     },
-])
+],
+opts=ResourceOptions(provider="aws.us-east-1",
+    depends_on=[
+        "aws_dynamodb_table.us-east-1",
+        "aws_dynamodb_table.us-west-2",
+    ]))
 ```
 
 {{% /example %}}

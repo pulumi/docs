@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAddressScope function of the networking module, inclu
 
 Use this data source to get the ID of an available OpenStack address-scope.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ public_addressscope = openstack.networking.get_address_scope(ip_version=4,
     name="public_addressscope",
     shared=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -66,6 +67,7 @@ const publicAddressscope = pulumi.output(openstack.networking.getAddressScope({
     shared: true,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

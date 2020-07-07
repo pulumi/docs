@@ -3,7 +3,10 @@ title: Module keymanager
 title_tag: Module keymanager | Package pulumi_openstack | Python SDK
 linktitle: keymanager
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="keymanager">
 <h1>keymanager<a class="headerlink" href="#keymanager" title="Permalink to this headline">¶</a></h1>
@@ -46,15 +49,15 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">secret_refs</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;certificate&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">certificate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">certificate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;private_key&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">private_key1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">private_key1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;intermediates&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">intermediate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">intermediate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
@@ -83,15 +86,15 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">secret_refs</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;certificate&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;certificate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;certificate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;private_key&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;private_key_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;private_key_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;intermediates&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;intermediate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;secret_ref&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;intermediate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
@@ -557,7 +560,7 @@ explicitly and implicitly added.</p>
 <span class="n">order1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">OrderV1</span><span class="p">(</span><span class="s2">&quot;order1&quot;</span><span class="p">,</span>
     <span class="n">meta</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;aes&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;bitLength&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="s2">&quot;bit_length&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
         <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;cbc&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysecret&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -570,7 +573,7 @@ explicitly and implicitly added.</p>
 <span class="n">order1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">OrderV1</span><span class="p">(</span><span class="s2">&quot;order1&quot;</span><span class="p">,</span>
     <span class="n">meta</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;rsa&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;bitLength&quot;</span><span class="p">:</span> <span class="mi">4096</span><span class="p">,</span>
+        <span class="s2">&quot;bit_length&quot;</span><span class="p">:</span> <span class="mi">4096</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysecret&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;asymmetric&quot;</span><span class="p">)</span>

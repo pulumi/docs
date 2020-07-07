@@ -12,8 +12,6 @@ meta_desc: "Explore the GetVolumeV3 function of the blockstorage module, includi
 
 Use this data source to get information about an existing volume.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_openstack as openstack
 
 volume1 = openstack.blockstorage.get_volume_v3(name="volume_1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -60,6 +61,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV3({
     name: "volume_1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

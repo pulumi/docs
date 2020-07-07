@@ -11,25 +11,23 @@ meta_desc: "Explore the ServerGroup resource of the compute module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V2 Server Group resource within OpenStack.
-
-
 ## Policies
 
 * `affinity` - All instances/servers launched in this group will be hosted on
-    the same compute node.
+  the same compute node.
 
 * `anti-affinity` - All instances/servers launched in this group will be
-    hosted on different compute nodes.
+  hosted on different compute nodes.
 
 * `soft-affinity` - All instances/servers launched in this group will be hosted
-    on the same compute node if possible, but if not possible they
-    still will be scheduled instead of failure. To use this policy your
-    OpenStack environment should support Compute service API 2.15 or above.
+  on the same compute node if possible, but if not possible they
+  still will be scheduled instead of failure. To use this policy your
+  OpenStack environment should support Compute service API 2.15 or above.
 
 * `soft-anti-affinity` - All instances/servers launched in this group will be
-    hosted on different compute nodes if possible, but if not possible they
-    still will be scheduled instead of failure. To use this policy your
-    OpenStack environment should support Compute service API 2.15 or above.
+  hosted on different compute nodes if possible, but if not possible they
+  still will be scheduled instead of failure. To use this policy your
+  OpenStack environment should support Compute service API 2.15 or above.
 
 {{% examples %}}
 ## Example Usage
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ import pulumi_openstack as openstack
 
 test_sg = openstack.compute.ServerGroup("test-sg", policies=["anti-affinity"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -80,6 +81,7 @@ const test_sg = new openstack.compute.ServerGroup("test-sg", {
     policies: ["anti-affinity"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
