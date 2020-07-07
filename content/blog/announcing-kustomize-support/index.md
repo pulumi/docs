@@ -200,6 +200,12 @@ This feature allows you to make changes to existing definitions before they are 
 the headache of forking an upstream repo just to make a few tweaks, and then trying to keep those changes in sync!
 Transformations are available for the Helm, Kustomize, and YAML SDKs.
 
+{{% notes type="info" %}}
+Kustomize overlays can be used for a similar purpose, but require changing files in the directory.
+Transformations happen in memory, and are not persisted to disk. Keep both options in mind when you want to modify
+an existing configuration.
+{{% /notes %}}
+
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
