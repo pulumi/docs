@@ -288,6 +288,27 @@
                 }
             }
         },
+        "kubernetes:kustomize:Directory": {
+            "description": "Directory is a component representing a collection of resources described by a kustomize directory (kustomization).",
+            "type": "object",
+            "inputProperties": {
+                "directory": {
+                    "type": "string",
+                    "description": "The directory containing the kustomization to apply. The value can be a local directory or a folder in a\ngit repository.\nExample: ./helloWorld\nExample: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld"
+                },
+                "resourcePrefix": {
+                    "type": "string",
+                    "description": "An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix=\"foo\" would produce a resource named \"foo-resourceName\"."
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "A set of transformations to apply to Kubernetes resource definitions before registering with engine."
+                }
+            }
+        },
         "kubernetes:yaml:ConfigFile": {
             "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name` is not specified, `ConfigFile` assumes the argument `name` is the filename.",
             "type": "object",
