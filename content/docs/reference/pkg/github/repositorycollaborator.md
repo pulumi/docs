@@ -13,11 +13,9 @@ meta_desc: "Explore the RepositoryCollaborator resource of the GitHub package, i
 Provides a GitHub repository collaborator resource.
 
 This resource allows you to add/remove collaborators from repositories in your
-organization or personal account. For organization repositories, collaborators can
-have explicit (and differing levels of) read, write, or administrator access to
-specific repositories, without giving the user full organization membership.
-For personal repositories, collaborators can only be granted write
-(implictly includes read) permission.
+organization. Collaborators can have explicit (and differing levels of) read,
+write, or administrator access to specific repositories in your organization,
+without giving the user full organization membership.
 
 When applied, an invitation will be sent to the user to become a collaborator
 on a repository. When destroyed, either the invitation will be cancelled or the
@@ -25,7 +23,6 @@ collaborator will be removed from the repository.
 
 Further documentation on GitHub collaborators:
 
-- [Adding outside collaborators to your personal repositories](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories)
 - [Adding outside collaborators to repositories in your organization](https://help.github.com/articles/adding-outside-collaborators-to-repositories-in-your-organization/)
 - [Converting an organization member to an outside collaborator](https://help.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/)
 
@@ -58,7 +55,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := github.NewRepositoryCollaborator(ctx, "aRepoCollaborator", &github.RepositoryCollaboratorArgs{
+			Permission: pulumi.String("admin"),
+			Repository: pulumi.String("our-cool-repo"),
+			Username:   pulumi.String("SomeUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -306,8 +325,7 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -348,8 +366,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -390,8 +407,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -432,8 +448,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,7 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
 </dl>
@@ -500,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
 </dl>
@@ -528,7 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
 </dl>
@@ -556,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
 </dl>
@@ -700,7 +715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -753,7 +767,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -765,8 +779,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -806,7 +819,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,8 +831,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,7 +871,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the invitation to be used in `github..UserInvitationAccepter`
+    <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,8 +883,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
-Must be `push` for personal repositories. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
