@@ -35,10 +35,11 @@ A project file contains the following attributes:
   of these runtimes, and will simply use whatever version you have installed on your machine.
     * `name`: `runtime` can either be specified as a string, or a complex object with additional configuration. If you need to include additional configuration, specify language information (`nodejs`, `python`, `go`, or `dotnet`) in this property.
     * `options`: (optional) a property bag that has various configuration options that apply to different language runtimes.
-        * `typescript`: applies to nodejs projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
+        * `typescript`: applies to Node.js projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
         * `binary`: applies to Go and .NET projects only
             * **Go**: A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
             * **.NET**: A string that specifies the path of a pre-built .NET assembly. If not specified, a .NET project in $CWD will be invoked via `dotnet run`.
+        * `virtualenv`: applies to Python projects only. A string that specifies the path to a virtual environment to use when running the program. New Python projects created with `pulumi new` have this option set by default. If not specified, Pulumi will invoke the `python3` command it finds on $PATH (falling back to `python`) to run the Python program. If you'd like to use a virtual environment without the `virtualenv` option, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`).
 
 * `description`: (optional) a friendly description about your project.
 
