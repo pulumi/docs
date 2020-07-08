@@ -61,7 +61,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := fastly.NewServicev1(ctx, "demo", &fastly.Servicev1Args{
+			Backends: fastly.Servicev1BackendArray{
+				&fastly.Servicev1BackendArgs{
+					Address: pulumi.String("127.0.0.1"),
+					Name:    pulumi.String("localhost"),
+					Port:    pulumi.Int(80),
+				},
+			},
+			Domains: fastly.Servicev1DomainArray{
+				&fastly.Servicev1DomainArgs{
+					Comment: pulumi.String("demo"),
+					Name:    pulumi.String("demo.notexample.com"),
+				},
+			},
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,6 +134,67 @@ const demo = new fastly.Servicev1("demo", {
         name: "demo.notexample.com",
     }],
     forceDestroy: true,
+});
+```
+
+{{% /example %}}
+
+### Basic usage with an Amazon S3 Website and that removes the `x-amz-request-id` header
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fastly from "@pulumi/fastly";
+
+const website = new aws.s3.Bucket("website", {
+    acl: "public-read",
+    website: {
+        errorDocument: "error.html",
+        indexDocument: "index.html",
+    },
+});
+const demo = new fastly.Servicev1("demo", {
+    backends: [{
+        address: "demo.notexample.com.s3-website-us-west-2.amazonaws.com",
+        name: "AWS S3 hosting",
+        port: 80,
+    }],
+    defaultHost: pulumi.interpolate`${website.name}.s3-website-us-west-2.amazonaws.com`,
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+    gzips: [{
+        contentTypes: [
+            "text/html",
+            "text/css",
+        ],
+        extensions: [
+            "css",
+            "js",
+        ],
+        name: "file extensions and content types",
+    }],
+    headers: [{
+        action: "delete",
+        destination: "http.x-amz-request-id",
+        name: "remove x-amz-request-id",
+        type: "cache",
+    }],
 });
 ```
 
@@ -287,7 +381,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := fastly.NewServicev1(ctx, "demo", &fastly.Servicev1Args{
+			Backends: fastly.Servicev1BackendArray{
+				&fastly.Servicev1BackendArgs{
+					Address: pulumi.String("127.0.0.1"),
+					Name:    pulumi.String("origin1"),
+					Port:    pulumi.Int(80),
+				},
+				&fastly.Servicev1BackendArgs{
+					Address: pulumi.String("127.0.0.2"),
+					Name:    pulumi.String("origin2"),
+					Port:    pulumi.Int(80),
+				},
+			},
+			Directors: fastly.Servicev1DirectorArray{
+				&fastly.Servicev1DirectorArgs{
+					Backends: pulumi.StringArray{
+						pulumi.String("origin1"),
+						pulumi.String("origin2"),
+					},
+					Name:   pulumi.String("mydirector"),
+					Quorum: pulumi.Int(0),
+					Type:   pulumi.Int(3),
+				},
+			},
+			Domains: fastly.Servicev1DomainArray{
+				&fastly.Servicev1DomainArgs{
+					Comment: pulumi.String("demo"),
+					Name:    pulumi.String("demo.notexample.com"),
+				},
+			},
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -376,7 +519,7 @@ const demo = new fastly.Servicev1("demo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/fastly/#Servicev1">Servicev1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/fastly/#Servicev1">Servicev1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -556,8 +699,7 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">List&lt;Servicev1Domain<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -795,6 +937,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingcloudfiles_csharp">
+<a href="#loggingcloudfiles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List&lt;Servicev1Logging<wbr>Cloudfile<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingdatadogs_csharp">
 <a href="#loggingdatadogs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span> 
@@ -802,6 +956,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">List&lt;Servicev1Logging<wbr>Datadog<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingdigitaloceans_csharp">
+<a href="#loggingdigitaloceans_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List&lt;Servicev1Logging<wbr>Digitalocean<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -843,6 +1009,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingheroku_csharp">
+<a href="#loggingheroku_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List&lt;Servicev1Logging<wbr>Heroku<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logginghoneycombs_csharp">
+<a href="#logginghoneycombs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List&lt;Servicev1Logging<wbr>Honeycomb<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingkafkas_csharp">
 <a href="#loggingkafkas_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span> 
@@ -867,6 +1057,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logginglogshuttles_csharp">
+<a href="#logginglogshuttles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List&lt;Servicev1Logging<wbr>Logshuttle<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingnewrelics_csharp">
 <a href="#loggingnewrelics_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span> 
@@ -874,6 +1076,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">List&lt;Servicev1Logging<wbr>Newrelic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingopenstacks_csharp">
+<a href="#loggingopenstacks_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List&lt;Servicev1Logging<wbr>Openstack<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -1042,8 +1256,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">[]Servicev1Domain</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,6 +1494,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingcloudfiles_go">
+<a href="#loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">[]Servicev1Logging<wbr>Cloudfile</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingdatadogs_go">
 <a href="#loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span> 
@@ -1288,6 +1513,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">[]Servicev1Logging<wbr>Datadog</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingdigitaloceans_go">
+<a href="#loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">[]Servicev1Logging<wbr>Digitalocean</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -1329,6 +1566,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingheroku_go">
+<a href="#loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">[]Servicev1Logging<wbr>Heroku</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logginghoneycombs_go">
+<a href="#logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">[]Servicev1Logging<wbr>Honeycomb</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingkafkas_go">
 <a href="#loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span> 
@@ -1353,6 +1614,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logginglogshuttles_go">
+<a href="#logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">[]Servicev1Logging<wbr>Logshuttle</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingnewrelics_go">
 <a href="#loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span> 
@@ -1360,6 +1633,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">[]Servicev1Logging<wbr>Newrelic</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingopenstacks_go">
+<a href="#loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">[]Servicev1Logging<wbr>Openstack</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -1528,8 +1813,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,6 +2051,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingcloudfiles_nodejs">
+<a href="#loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingdatadogs_nodejs">
 <a href="#loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span> 
@@ -1774,6 +2070,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingdigitaloceans_nodejs">
+<a href="#loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -1815,6 +2123,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingheroku_nodejs">
+<a href="#loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logginghoneycombs_nodejs">
+<a href="#logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingkafkas_nodejs">
 <a href="#loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span> 
@@ -1839,6 +2171,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logginglogshuttles_nodejs">
+<a href="#logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="loggingnewrelics_nodejs">
 <a href="#loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span> 
@@ -1846,6 +2190,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingopenstacks_nodejs">
+<a href="#loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -2014,8 +2370,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain]</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2253,6 +2608,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logging_cloudfiles_python">
+<a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile]</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logging_datadogs_python">
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
@@ -2260,6 +2627,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_digitaloceans_python">
+<a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean]</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -2301,6 +2680,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logging_heroku_python">
+<a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku]</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_honeycombs_python">
+<a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb]</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logging_kafkas_python">
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
@@ -2325,6 +2728,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logging_logshuttles_python">
+<a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle]</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logging_newrelics_python">
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
@@ -2332,6 +2747,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_openstacks_python">
+<a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack]</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -2671,7 +3098,7 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2954,8 +3381,7 @@ when an item is not to be cached based on an above `condition`. Defined below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">List&lt;Servicev1Domain<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3054,6 +3480,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingcloudfiles_csharp">
+<a href="#state_loggingcloudfiles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List&lt;Servicev1Logging<wbr>Cloudfile<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingdatadogs_csharp">
 <a href="#state_loggingdatadogs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span> 
@@ -3061,6 +3499,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">List&lt;Servicev1Logging<wbr>Datadog<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingdigitaloceans_csharp">
+<a href="#state_loggingdigitaloceans_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List&lt;Servicev1Logging<wbr>Digitalocean<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -3102,6 +3552,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingheroku_csharp">
+<a href="#state_loggingheroku_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List&lt;Servicev1Logging<wbr>Heroku<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logginghoneycombs_csharp">
+<a href="#state_logginghoneycombs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List&lt;Servicev1Logging<wbr>Honeycomb<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingkafkas_csharp">
 <a href="#state_loggingkafkas_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span> 
@@ -3126,6 +3600,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logginglogshuttles_csharp">
+<a href="#state_logginglogshuttles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List&lt;Servicev1Logging<wbr>Logshuttle<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingnewrelics_csharp">
 <a href="#state_loggingnewrelics_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span> 
@@ -3133,6 +3619,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">List&lt;Servicev1Logging<wbr>Newrelic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingopenstacks_csharp">
+<a href="#state_loggingopenstacks_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List&lt;Servicev1Logging<wbr>Openstack<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -3462,8 +3960,7 @@ when an item is not to be cached based on an above `condition`. Defined below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">[]Servicev1Domain</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3562,6 +4059,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingcloudfiles_go">
+<a href="#state_loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">[]Servicev1Logging<wbr>Cloudfile</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingdatadogs_go">
 <a href="#state_loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span> 
@@ -3569,6 +4078,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">[]Servicev1Logging<wbr>Datadog</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingdigitaloceans_go">
+<a href="#state_loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">[]Servicev1Logging<wbr>Digitalocean</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -3610,6 +4131,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingheroku_go">
+<a href="#state_loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">[]Servicev1Logging<wbr>Heroku</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logginghoneycombs_go">
+<a href="#state_logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">[]Servicev1Logging<wbr>Honeycomb</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingkafkas_go">
 <a href="#state_loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span> 
@@ -3634,6 +4179,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logginglogshuttles_go">
+<a href="#state_logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">[]Servicev1Logging<wbr>Logshuttle</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingnewrelics_go">
 <a href="#state_loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span> 
@@ -3641,6 +4198,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">[]Servicev1Logging<wbr>Newrelic</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingopenstacks_go">
+<a href="#state_loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">[]Servicev1Logging<wbr>Openstack</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -3970,8 +4539,7 @@ when an item is not to be cached based on an above `condition`. Defined below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4070,6 +4638,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingcloudfiles_nodejs">
+<a href="#state_loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingdatadogs_nodejs">
 <a href="#state_loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span> 
@@ -4077,6 +4657,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingdigitaloceans_nodejs">
+<a href="#state_loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -4118,6 +4710,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingheroku_nodejs">
+<a href="#state_loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logginghoneycombs_nodejs">
+<a href="#state_logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingkafkas_nodejs">
 <a href="#state_loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span> 
@@ -4142,6 +4758,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logginglogshuttles_nodejs">
+<a href="#state_logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loggingnewrelics_nodejs">
 <a href="#state_loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span> 
@@ -4149,6 +4777,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingopenstacks_nodejs">
+<a href="#state_loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -4478,8 +5118,7 @@ when an item is not to be cached based on an above `condition`. Defined below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain]</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4578,6 +5217,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logging_cloudfiles_python">
+<a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile]</a></span>
+    </dt>
+    <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_logging_datadogs_python">
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
@@ -4585,6 +5236,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logging_digitaloceans_python">
+<a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean]</a></span>
+    </dt>
+    <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -4626,6 +5289,30 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logging_heroku_python">
+<a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku]</a></span>
+    </dt>
+    <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logging_honeycombs_python">
+<a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb]</a></span>
+    </dt>
+    <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_logging_kafkas_python">
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
@@ -4650,6 +5337,18 @@ Defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logging_logshuttles_python">
+<a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle]</a></span>
+    </dt>
+    <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_logging_newrelics_python">
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
@@ -4657,6 +5356,18 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logging_openstacks_python">
+<a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack]</a></span>
+    </dt>
+    <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
 
@@ -6147,7 +6858,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of your BigQuery dataset.
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6202,7 +6913,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6213,7 +6924,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6224,7 +6935,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6235,7 +6946,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6264,7 +6975,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of your BigQuery dataset.
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6319,7 +7030,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6330,7 +7041,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6341,7 +7052,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6352,7 +7063,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6381,7 +7092,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of your BigQuery dataset.
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6436,7 +7147,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6447,7 +7158,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6458,7 +7169,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6469,7 +7180,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6498,7 +7209,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of your BigQuery dataset.
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6553,7 +7264,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6564,7 +7275,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6575,7 +7286,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6586,7 +7297,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6677,7 +7388,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6688,7 +7399,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6721,7 +7432,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6732,7 +7443,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6743,7 +7454,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6754,7 +7465,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6765,7 +7476,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6838,7 +7549,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6849,7 +7560,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6882,7 +7593,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6893,7 +7604,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6904,7 +7615,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6915,7 +7626,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6926,7 +7637,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6999,7 +7710,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7010,7 +7721,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7043,7 +7754,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7054,7 +7765,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7065,7 +7776,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7076,7 +7787,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7087,7 +7798,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7160,7 +7871,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7171,7 +7882,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7204,7 +7915,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7215,7 +7926,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7226,7 +7937,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7237,7 +7948,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7248,7 +7959,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8735,7 +9446,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8768,7 +9479,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8801,7 +9512,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8812,7 +9523,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8823,7 +9534,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8834,7 +9545,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8845,7 +9556,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8874,7 +9585,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8907,7 +9618,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8940,7 +9651,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8951,7 +9662,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8962,7 +9673,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8973,7 +9684,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8984,7 +9695,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9013,7 +9724,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -9046,7 +9757,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9079,7 +9790,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9090,7 +9801,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9101,7 +9812,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9112,7 +9823,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9123,7 +9834,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9152,7 +9863,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -9185,7 +9896,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9218,7 +9929,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9229,7 +9940,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9240,7 +9951,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9251,7 +9962,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9262,7 +9973,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9644,7 +10355,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9786,7 +10497,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9928,7 +10639,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10070,7 +10781,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10151,7 +10862,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10279,7 +10990,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10407,7 +11118,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10535,7 +11246,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10670,7 +11381,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10692,7 +11403,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10703,7 +11414,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10769,7 +11480,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10802,7 +11513,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10875,7 +11586,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10897,7 +11608,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10908,7 +11619,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10974,7 +11685,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11007,7 +11718,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11080,7 +11791,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11102,7 +11813,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11113,7 +11824,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11179,7 +11890,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11212,7 +11923,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11285,7 +11996,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11307,7 +12018,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11318,7 +12029,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11384,7 +12095,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11417,7 +12128,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11508,7 +12219,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11519,7 +12230,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11530,7 +12241,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11541,7 +12252,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11563,7 +12274,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11603,7 +12314,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11614,7 +12325,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11625,7 +12336,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11636,7 +12347,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11658,7 +12369,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11698,7 +12409,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11709,7 +12420,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11720,7 +12431,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11731,7 +12442,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11753,7 +12464,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11793,7 +12504,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11804,7 +12515,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11815,7 +12526,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11826,7 +12537,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11848,7 +12559,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11860,6 +12571,712 @@ content. (Does not apply to the `delete` action.)
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingCloudfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingCloudfile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingCloudfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingCloudfileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingCloudfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingCloudfile.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_csharp">
+<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_csharp">
+<a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_csharp">
+<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_csharp">
+<a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_go">
+<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_go">
+<a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_go">
+<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_go">
+<a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_nodejs">
+<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_nodejs">
+<a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_nodejs">
+<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_nodejs">
+<a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_python">
+<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_python">
+<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_python">
+<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_python">
+<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_python">
+<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_python">
+<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_python">
+<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd>
 
 </dl>
@@ -11906,7 +13323,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11917,7 +13334,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11928,7 +13345,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11939,7 +13356,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11950,7 +13367,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11961,7 +13378,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -11990,7 +13407,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12001,7 +13418,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12012,7 +13429,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12023,7 +13440,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12034,7 +13451,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12045,7 +13462,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -12074,7 +13491,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12085,7 +13502,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12096,7 +13513,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12107,7 +13524,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12118,7 +13535,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12129,7 +13546,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -12158,7 +13575,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12169,7 +13586,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12180,7 +13597,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12191,7 +13608,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12202,7 +13619,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12213,7 +13630,713 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDigitalocean">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingDigitalocean">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDigitaloceanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDigitaloceanOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingDigitaloceanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingDigitalocean.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_csharp">
+<a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_csharp">
+<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_csharp">
+<a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_go">
+<a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_go">
+<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_go">
+<a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_nodejs">
+<a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_nodejs">
+<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_nodejs">
+<a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_python">
+<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_python">
+<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_python">
+<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_python">
+<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_python">
+<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_python">
+<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_python">
+<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd>
 
 </dl>
@@ -12271,7 +14394,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12282,7 +14405,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12293,7 +14416,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12326,7 +14449,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12359,7 +14482,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12414,7 +14537,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
 </dl>
@@ -12454,7 +14577,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12465,7 +14588,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12476,7 +14599,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12509,7 +14632,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12542,7 +14665,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12597,7 +14720,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
 </dl>
@@ -12637,7 +14760,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12648,7 +14771,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12659,7 +14782,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12692,7 +14815,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12725,7 +14848,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12780,7 +14903,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
 </dl>
@@ -12820,7 +14943,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12831,7 +14954,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12842,7 +14965,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12875,7 +14998,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12908,7 +15031,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12963,7 +15086,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
 </dl>
@@ -13032,7 +15155,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13043,7 +15166,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13054,7 +15177,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13065,7 +15188,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13087,7 +15210,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13098,7 +15221,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13120,7 +15243,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13131,7 +15254,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13193,7 +15316,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13204,7 +15327,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13215,7 +15338,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13226,7 +15349,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13248,7 +15371,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13259,7 +15382,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13281,7 +15404,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13292,7 +15415,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13354,7 +15477,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13365,7 +15488,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13376,7 +15499,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13387,7 +15510,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13409,7 +15532,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13420,7 +15543,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13442,7 +15565,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13453,7 +15576,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13515,7 +15638,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13526,7 +15649,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13537,7 +15660,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13548,7 +15671,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13570,7 +15693,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13581,7 +15704,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13603,7 +15726,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13614,7 +15737,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13683,7 +15806,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13705,7 +15828,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13716,7 +15839,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13727,7 +15850,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13738,7 +15861,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13749,7 +15872,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -13789,7 +15912,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13811,7 +15934,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13822,7 +15945,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13833,7 +15956,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13844,7 +15967,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13855,7 +15978,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -13895,7 +16018,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13917,7 +16040,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13928,7 +16051,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13939,7 +16062,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13950,7 +16073,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13961,7 +16084,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -14001,7 +16124,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -14023,7 +16146,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14034,7 +16157,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14045,7 +16168,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14056,7 +16179,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14067,7 +16190,715 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1loggingheroku">Servicev1Logging<wbr>Heroku</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHeroku">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHeroku">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHerokuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHerokuOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingHerokuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingHeroku.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHoneycomb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHoneycomb">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHoneycombArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHoneycombOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingHoneycombArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingHoneycomb.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Honeycomb Dataset you want to log to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -14147,7 +16978,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14158,7 +16989,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14169,7 +17000,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14191,7 +17022,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14308,7 +17139,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14319,7 +17150,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14330,7 +17161,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14352,7 +17183,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14469,7 +17300,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14480,7 +17311,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14491,7 +17322,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14513,7 +17344,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14630,7 +17461,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14641,7 +17472,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14652,7 +17483,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14674,7 +17505,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14776,7 +17607,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14787,7 +17618,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14798,7 +17629,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14809,7 +17640,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14820,7 +17651,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -14849,7 +17680,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14860,7 +17691,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14871,7 +17702,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14882,7 +17713,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14893,7 +17724,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -14922,7 +17753,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14933,7 +17764,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14944,7 +17775,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14955,7 +17786,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -14966,7 +17797,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -14995,7 +17826,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15006,7 +17837,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15017,7 +17848,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15028,7 +17859,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15039,7 +17870,361 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLogshuttle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingLogshuttle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogshuttleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogshuttleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingLogshuttleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingLogshuttle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15086,7 +18271,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15097,7 +18282,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15108,7 +18293,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15119,7 +18304,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15130,7 +18315,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15159,7 +18344,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15170,7 +18355,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15181,7 +18366,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15192,7 +18377,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15203,7 +18388,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15232,7 +18417,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15243,7 +18428,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15254,7 +18439,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15265,7 +18450,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15276,7 +18461,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15305,7 +18490,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15316,7 +18501,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15327,7 +18512,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15338,7 +18523,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15349,7 +18534,713 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicev1loggingopenstack">Servicev1Logging<wbr>Openstack</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingOpenstack">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingOpenstack">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingOpenstackArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingOpenstackOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingOpenstackArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingOpenstack.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_csharp">
+<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_csharp">
+<a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_csharp">
+<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_csharp">
+<a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_go">
+<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_go">
+<a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_go">
+<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_go">
+<a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_nodejs">
+<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_nodejs">
+<a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_nodejs">
+<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_nodejs">
+<a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_python">
+<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your Cloud File account access key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_python">
+<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your Cloud Files container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Your OpenStack auth url.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_python">
+<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gziplevel_python">
+<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_python">
+<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path to upload logs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickey_python">
+<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_python">
+<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timestampformat_python">
+<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd>
 
 </dl>
@@ -15396,7 +19287,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15407,7 +19298,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15418,7 +19309,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15429,7 +19320,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15440,7 +19331,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15451,7 +19342,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15480,7 +19371,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15491,7 +19382,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15502,7 +19393,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15513,7 +19404,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15524,7 +19415,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15535,7 +19426,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15564,7 +19455,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15575,7 +19466,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15586,7 +19477,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15597,7 +19488,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15608,7 +19499,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15619,7 +19510,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15648,7 +19539,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15659,7 +19550,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15670,7 +19561,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15681,7 +19572,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15692,7 +19583,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The region that log data will be sent to. One of US or EU. Defaults to US if undefined.
+    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15703,7 +19594,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -15761,7 +19652,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -15783,7 +19674,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15794,7 +19685,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15805,7 +19696,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15849,7 +19740,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15860,7 +19751,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15882,7 +19773,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15893,7 +19784,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15904,7 +19795,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15955,7 +19846,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -15977,7 +19868,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15988,7 +19879,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15999,7 +19890,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16043,7 +19934,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16054,7 +19945,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16076,7 +19967,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16087,7 +19978,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16098,7 +19989,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16149,7 +20040,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -16171,7 +20062,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16182,7 +20073,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16193,7 +20084,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16237,7 +20128,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16248,7 +20139,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16270,7 +20161,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16281,7 +20172,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16292,7 +20183,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16343,7 +20234,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -16365,7 +20256,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform service account email address. The client_email field in your service account authentication JSON.
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16376,7 +20267,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16387,7 +20278,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16431,7 +20322,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16442,7 +20333,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16464,7 +20355,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16475,7 +20366,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16486,7 +20377,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Your Google Cloud Platform account secret key. The private_key field in your service account authentication JSON.
+    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16566,7 +20457,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16577,7 +20468,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16588,7 +20479,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -16639,7 +20530,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16650,7 +20541,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16661,7 +20552,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -16712,7 +20603,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16723,7 +20614,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16734,7 +20625,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -16785,7 +20676,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16796,7 +20687,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -16807,7 +20698,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -17807,7 +21698,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -17829,8 +21720,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17841,7 +21731,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17852,7 +21742,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17885,7 +21775,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17896,7 +21786,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17907,7 +21797,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17918,7 +21808,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -17940,7 +21830,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18017,7 +21907,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -18039,8 +21929,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18051,7 +21940,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18062,7 +21951,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18095,7 +21984,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18106,7 +21995,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18117,7 +22006,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18128,7 +22017,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18150,7 +22039,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18227,7 +22116,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -18249,8 +22138,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18261,7 +22149,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18272,7 +22160,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18305,7 +22193,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18316,7 +22204,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18327,7 +22215,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18338,7 +22226,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18360,7 +22248,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18437,7 +22325,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket in which to store the logs.
+    <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -18459,8 +22347,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}If you created the S3 bucket outside of `us-east-1`,
-then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws.com`.
+    <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18471,7 +22358,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18482,7 +22369,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18515,7 +22402,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to upload log files to. If the path ends in / then it is treated as a directory.
+    <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18526,7 +22413,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default `3600`).
+    <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18537,7 +22424,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18548,7 +22435,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A PGP public key that Fastly will use to encrypt your log files before writing them to disk.
+    <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18570,7 +22457,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18898,7 +22785,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -18909,7 +22796,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18920,7 +22807,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18931,7 +22818,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18942,7 +22829,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18953,7 +22840,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19004,7 +22891,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -19015,7 +22902,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19026,7 +22913,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19037,7 +22924,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19048,7 +22935,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19059,7 +22946,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19110,7 +22997,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -19121,7 +23008,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19132,7 +23019,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19143,7 +23030,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19154,7 +23041,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19165,7 +23052,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19216,7 +23103,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -19227,7 +23114,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19238,7 +23125,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19249,7 +23136,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19260,7 +23147,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19271,7 +23158,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19340,7 +23227,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19351,7 +23238,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19362,7 +23249,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19384,7 +23271,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19395,7 +23282,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -19424,7 +23311,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19435,7 +23322,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19446,7 +23333,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19468,7 +23355,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19479,7 +23366,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -19508,7 +23395,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19519,7 +23406,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19530,7 +23417,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19552,7 +23439,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19563,7 +23450,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -19592,7 +23479,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Elasticsearch URL to stream logs to.
+    <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19603,7 +23490,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19614,7 +23501,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19636,7 +23523,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19647,7 +23534,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
 </dl>
@@ -19705,7 +23592,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19716,7 +23603,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19738,7 +23625,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19760,7 +23647,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19815,7 +23702,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19866,7 +23753,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19877,7 +23764,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19899,7 +23786,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19921,7 +23808,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -19976,7 +23863,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20027,7 +23914,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20038,7 +23925,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20060,7 +23947,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20082,7 +23969,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20137,7 +24024,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20188,7 +24075,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+    <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20199,7 +24086,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20221,7 +24108,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20243,7 +24130,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -20298,7 +24185,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The token to use for authentication (https://www.scalyr.com/keys).
+    <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
