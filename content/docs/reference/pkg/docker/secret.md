@@ -79,7 +79,7 @@ const fooSecret = new docker.Secret("foo_secret", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#Secret">Secret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Secret">Secret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
