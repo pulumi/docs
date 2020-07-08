@@ -12,6 +12,56 @@ meta_desc: "Explore the Image resource of the Docker package, including examples
 
 A docker.Image resource represents a Docker image built locally which is published and made available via a remote Docker registry. This can be used to ensure that a Docker source directory from a local deployment environment is built and pushed to a cloud-hosted Docker registry as part of a Pulumi deployment, so that it can be referenced as an image input from other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and Azure Container Instances.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create And Push Image To Azure Container Registry
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+
+import * as azure from "@pulumi/azure";
+import * as docker from "@pulumi/docker";
+import * as pulumi from "@pulumi/pulumi";
+
+const customImage = "node-app";
+
+const registry = new azure.containerservice.Registry("myregistry", {
+    resourceGroupName: resourceGroup.name,
+    sku: "Basic",
+    adminEnabled: true,
+});
+
+const myImage = new docker.Image(customImage, {
+    imageName: pulumi.interpolate`${registry.loginServer}/${customImage}:v1.0.0`,
+    build: {
+        context: `./${customImage}`,
+    },
+    registry: {
+        server: registry.loginServer,
+        username: registry.adminUsername,
+        password: registry.adminPassword,
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Image Resource {#create}
