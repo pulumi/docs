@@ -14,7 +14,6 @@ meta_desc: "Explore the Ntp resource of the sys module, including examples, inpu
 
 This resource is helpful when configuring NTP server on the BIG-IP.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +41,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sys.NewNtp(ctx, "ntp1", &sys.NtpArgs{
+			Description: pulumi.String("/Common/NTP1"),
+			Servers: pulumi.StringArray{
+				pulumi.String("time.facebook.com"),
+			},
+			Timezone: pulumi.String("America/Los_Angeles"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,9 +82,11 @@ ntp1 = f5bigip.sys.Ntp("ntp1",
     servers=["time.facebook.com"],
     timezone="America/Los_Angeles")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -71,6 +97,7 @@ const ntp1 = new f5bigip.sys.Ntp("ntp1", {
     timezone: "America/Los_Angeles",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

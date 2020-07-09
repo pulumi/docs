@@ -12,10 +12,6 @@ meta_desc: "Explore the ProfileClientSsl resource of the ltm module, including e
 
 `f5bigip.ltm.ProfileClientSsl` Manages client SSL profiles on a BIG-IP
 
-
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +38,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileClientSsl(ctx, "test_ClientSsl", &ltm.ProfileClientSslArgs{
+			Authenticate: pulumi.String("always"),
+			Ciphers:      pulumi.String("DEFAULT"),
+			DefaultsFrom: pulumi.String("/Common/clientssl"),
+			Name:         pulumi.String("/Common/test-ClientSsl"),
+			Partition:    pulumi.String("Common"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,9 +81,11 @@ test__client_ssl = f5bigip.ltm.ProfileClientSsl("test-ClientSsl",
     name="/Common/test-ClientSsl",
     partition="Common")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -75,6 +98,7 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
     partition: "Common",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -801,7 +825,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1372,7 +1396,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1943,7 +1967,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2514,7 +2538,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3290,7 +3314,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3861,7 +3885,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4432,7 +4456,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5003,7 +5027,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
+    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

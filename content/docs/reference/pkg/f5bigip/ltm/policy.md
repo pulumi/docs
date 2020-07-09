@@ -14,10 +14,161 @@ meta_desc: "Explore the Policy resource of the ltm module, including examples, i
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_policy = new F5BigIP.Ltm.Policy("test-policy", new F5BigIP.Ltm.PolicyArgs
+        {
+            Name = "my_policy",
+            Strategy = "first-match",
+            Requires = 
+            {
+                "http",
+            },
+            PublishedCopy = "Drafts/my_policy",
+            Controls = 
+            {
+                "forwarding",
+            },
+            Rules = 
+            {
+                new F5BigIP.Ltm.Inputs.PolicyRuleArgs
+                {
+                    Name = "rule6",
+                    Actions = 
+                    {
+                        new F5BigIP.Ltm.Inputs.PolicyRuleActionArgs
+                        {
+                            TmName = "20",
+                            Forward = true,
+                            Pool = "/Common/mypool",
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                bigip_ltm_pool.Mypool,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewPolicy(ctx, "test_policy", &ltm.PolicyArgs{
+			Name:     pulumi.String("my_policy"),
+			Strategy: pulumi.String("first-match"),
+			Requires: pulumi.StringArray{
+				pulumi.String("http"),
+			},
+			PublishedCopy: pulumi.String("Drafts/my_policy"),
+			Controls: pulumi.StringArray{
+				pulumi.String("forwarding"),
+			},
+			Rules: ltm.PolicyRuleArray{
+				&ltm.PolicyRuleArgs{
+					Name: pulumi.String("rule6"),
+					Actions: ltm.PolicyRuleActionArray{
+						&ltm.PolicyRuleActionArgs{
+							TmName:  pulumi.String("20"),
+							Forward: pulumi.Bool(true),
+							Pool:    pulumi.String("/Common/mypool"),
+						},
+					},
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			bigip_ltm_pool.Mypool,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test_policy = f5bigip.ltm.Policy("test-policy",
+    name="my_policy",
+    strategy="first-match",
+    requires=["http"],
+    published_copy="Drafts/my_policy",
+    controls=["forwarding"],
+    rules=[{
+        "name": "rule6",
+        "actions": [{
+            "tmName": "20",
+            "forward": True,
+            "pool": "/Common/mypool",
+        }],
+    }],
+    opts=ResourceOptions(depends_on=[bigip_ltm_pool["mypool"]]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const test_policy = new f5bigip.ltm.Policy("test-policy", {
+    name: "my_policy",
+    strategy: "first-match",
+    requires: ["http"],
+    publishedCopy: "Drafts/my_policy",
+    controls: ["forwarding"],
+    rules: [{
+        name: "rule6",
+        actions: [{
+            tmName: "20",
+            forward: true,
+            pool: "/Common/mypool",
+        }],
+    }],
+}, {
+    dependsOn: [bigip_ltm_pool.mypool],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

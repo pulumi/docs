@@ -14,8 +14,6 @@ meta_desc: "Explore the ProfileTcp resource of the ltm module, including example
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,10 +43,38 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewProfileTcp(ctx, "sanjose_tcp_lan_profile", &ltm.ProfileTcpArgs{
+			CloseWaitTimeout:  pulumi.Int(5),
+			DeferredAccept:    pulumi.String("enabled"),
+			FastOpen:          pulumi.String("enabled"),
+			Finwait2timeout:   pulumi.Int(5),
+			FinwaitTimeout:    pulumi.Int(300),
+			IdleTimeout:       pulumi.Int(200),
+			KeepaliveInterval: pulumi.Int(1700),
+			Name:              pulumi.String("sanjose-tcp-lan-profile"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +92,11 @@ sanjose_tcp_lan_profile = f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-profile",
     keepalive_interval=1700,
     name="sanjose-tcp-lan-profile")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -84,6 +112,7 @@ const sanjose_tcp_lan_profile = new f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-prof
     name: "sanjose-tcp-lan-profile",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

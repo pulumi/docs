@@ -14,9 +14,6 @@ meta_desc: "Explore the Route resource of the net module, including examples, in
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +38,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/net"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := net.NewRoute(ctx, "route2", &net.RouteArgs{
+			Gw:      pulumi.String("1.1.1.2"),
+			Name:    pulumi.String("external-route"),
+			Network: pulumi.String("10.10.10.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +77,11 @@ route2 = f5bigip.net.Route("route2",
     name="external-route",
     network="10.10.10.0/24")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -70,6 +92,7 @@ const route2 = new f5bigip.net.Route("route2", {
     network: "10.10.10.0/24",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,10 +12,7 @@ meta_desc: "Explore the SnatPool resource of the ltm module, including examples,
 
 `f5bigip.ltm.SnatPool` Collections of SNAT translation addresses
 
-Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool. 
-
-
-
+Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool.
 
 {{% examples %}}
 ## Example Usage
@@ -44,10 +41,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ltm.NewSnatPool(ctx, "snatpoolSanjose", &ltm.SnatPoolArgs{
+			Members: pulumi.StringArray{
+				pulumi.String("191.1.1.1"),
+				pulumi.String("194.2.2.2"),
+			},
+			Name: pulumi.String("/Common/snatpool_sanjose"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,9 +84,11 @@ snatpool_sanjose = f5bigip.ltm.SnatPool("snatpoolSanjose",
     ],
     name="/Common/snatpool_sanjose")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -77,6 +101,7 @@ const snatpoolSanjose = new f5bigip.ltm.SnatPool("snatpool_sanjose", {
     name: "/Common/snatpool_sanjose",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

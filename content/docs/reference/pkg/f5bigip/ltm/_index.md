@@ -46,7 +46,7 @@ Explore the resources and functions of the ltm module in the f5 BIG-IP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
