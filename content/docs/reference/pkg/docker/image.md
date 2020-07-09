@@ -18,15 +18,129 @@ A docker.Image resource represents a Docker image built locally which is publish
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create And Push Image To Azure Container Registry
 {{% example csharp %}}
-Coming soon!
+
+```csharp
+
+using Pulumi;
+using Pulumi.Azure.Core;
+using Pulumi.Azure.ContainerService;
+using Pulumi.Docker;
+
+class MyStack : Stack
+{
+    private readonly string CustomImage = "my-app";
+
+    public MyStack()
+    {
+        // Create an Azure Resource Group
+        var resourceGroup = new ResourceGroup("resourceGroup");
+
+        var registry = new Registry("myregistry", new RegistryArgs
+        {
+            AdminEnabled = true,
+            Sku = "Basic",
+            ResourceGroupName = resourceGroup.Name
+        });
+
+        var image = new Image("myimage", new ImageArgs
+        {
+            ImageName = Output.Format($"{registry.LoginServer}/{CustomImage}:v1.0.0"),
+            Build = new DockerBuild
+            {
+                Context = $"./{CustomImage}"
+            },
+            Registry = new ImageRegistry { Server = registry.LoginServer, Username = registry.AdminUsername, Password = registry.AdminPassword }
+        });
+    }
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an Azure Resource Group
+		resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("WestUS"),
+		})
+		if err != nil {
+			return err
+		}
+
+		// customImage is a folder containing a Dockerfile.
+		customImage := "my-app"
+		registry, err := containerservice.NewRegistry(ctx, "myregistry", &containerservice.RegistryArgs{
+			AdminEnabled:      pulumi.BoolPtr(true),
+			ResourceGroupName: resourceGroup.Name,
+			Sku:               pulumi.StringPtr("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+
+		_, err = docker.NewImage(ctx, "myimage", &docker.ImageArgs{
+			ImageName: pulumi.Sprintf("%s/%s:v1.0.0", registry.LoginServer, customImage),
+			Registry: docker.ImageRegistryArgs{
+				Server:   registry.LoginServer,
+				Username: registry.AdminUsername,
+				Password: registry.AdminPassword,
+			},
+			Build: docker.DockerBuildArgs{
+				Context: pulumi.Sprintf("./%s", customImage),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+
+```python
+
+import pulumi
+from pulumi_azure import core, appservice, containerservice
+from pulumi_docker import Image, ImageRegistry, DockerBuild
+
+# The folder containing a Dockerfile.
+custom_image = "my-app"
+
+resource_group = core.ResourceGroup('myresourcegroup')
+
+registry = containerservice.Registry(
+    "myregistry", admin_enabled="true", resource_group_name=resource_group.name, sku="Basic")
+
+image_registry = pulumi.Output.all(registry.login_server, registry.admin_username, registry.admin_password).apply(
+    lambda args: ImageRegistry(args[0], args[1], args[2]))
+
+my_image = Image("myimage",
+                 image_name=registry.login_server.apply(
+                     lambda server: f'{server}/{custom_image}:v1.0.0'),
+                 build=DockerBuild(context=f'./{custom_image}'),
+                 registry=image_registry
+                 )
+
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -37,8 +151,10 @@ import * as azure from "@pulumi/azure";
 import * as docker from "@pulumi/docker";
 import * as pulumi from "@pulumi/pulumi";
 
+// The folder containing a Dockerfile.
 const customImage = "node-app";
 
+const resourceGroup = new azure.core.ResourceGroup("myresourcegroup");
 const registry = new azure.containerservice.Registry("myregistry", {
     resourceGroupName: resourceGroup.name,
     sku: "Basic",
