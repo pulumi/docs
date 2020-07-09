@@ -75,10 +75,14 @@ generate_docs() {
 
     if [ "$provider" = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
-        OVERLAY_SCHEMA_FILE="./overlays/kubernetes/overlays.json"
     else
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
-        OVERLAY_SCHEMA_FILE=""
+    fi
+
+    OVERLAY_SCHEMA_FILE=""
+    if [ -d "${TOOL_RESDOCGEN}/overlays/${provider}" ] && [ -f "${TOOL_RESDOCGEN}/overlays/${provider}/overlays.json" ]; then
+        echo "Found an overlay file for ${provider}..."
+        OVERLAY_SCHEMA_FILE="./overlays/${provider}/overlays.json"
     fi
 
     echo "Running docs generator from schema for ${provider}..."
