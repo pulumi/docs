@@ -31,7 +31,7 @@ In this article, we’ll assume that we already have a Kubernetes cluster availa
 
 We’ll use the [Sock Shop](https://github.com/pulumi/examples/tree/master/kubernetes-ts-sock-shop) microservices reference application. This is a polyglot application comprised of microservices written in Java, Go, and Node. This demo application adheres to the 12-factor app pattern by creating a microservice for each function. The application services will be deployed to pods, and they communicate with each other via REST calls over HTTP.
 
-![Architecture]()
+![Architecture](Architecture.png)
 
 Let’s look at the Orders microservice, which is made up of a service worker and MongoDB for a backing service. Note that the code is organized by microservice with a separate Deployment and Service for each service and backing resource. The ordersDb configuration is straightforward, of note are the options in the container spec where we set [securityContext](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) and a [emptyDir volume](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) for storage. An emptyDir volume persists even if the container crashes, and the data in the volume is available if the container is restarted. The service definition for ordersDbService is also simple and opens `port:27017` and ties the service back to the Deployment by the *orders-db* label.
 
@@ -219,11 +219,11 @@ Although we encapsulate the deployment in a single large script, we can improve 
 
 ## Deploying Guestbook as a Component
 
-The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) is a canonical example of a stateless application. It consists of multiple PHP frontend services backed by Redis replicas and a lead Redis database to store guestbook entries. In the previous example, we created a Deployment and a Service for each microservice in the application. Although this is a valid pattern for deploying an application in Kubernetes, it doesn’t take full advantage of the capabilities of infrastructure as code.
-
 We can abstract objects, such as Deployments and Services, into components to create our own resources. [ComponentResource]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
 
-When you examine *index.ts*, the main program, you’ll notice that it imports the *k8sjs* module. Note that each service is instantiated by calling the *ServiceDeployment* class and passing arguments such as the image, ports, and replicas. As you can see, this is a more efficient way to deploy services than coding individual Deployments and Services,
+The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) is a canonical example of a stateless application. It consists of multiple PHP frontend services backed by Redis replicas and a lead Redis database to store guestbook entries. In the previous example, we created a Deployment and a Service for each microservice in the application. Although this is a valid pattern for deploying an application in Kubernetes, it doesn’t take full advantage of the capabilities of infrastructure as code.
+
+When you examine *index.ts*, the main program, you’ll notice that it imports the *k8sjs* module. Note that each service is instantiated by calling the *ServiceDeployment* class and passing arguments such as the image, ports, and replicas. As you can see, this is a more efficient way to deploy services than coding individual Deployments and Services.
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
