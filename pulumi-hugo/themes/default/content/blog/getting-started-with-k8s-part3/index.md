@@ -215,11 +215,11 @@ const ordersService = new k8s.core.v1.Service("orders", {
 
 If we look at the [manifest](https://github.com/microservices-demo/microservices-demo/blob/master/deploy/kubernetes/manifests/orders-db-dep.yaml) for the orders-db deployment, we can see that the code follows it closely. You can find the full [Sock Shop code in the Pulumi examples repository](https://github.com/pulumi/examples/tree/master/kubernetes-ts-sock-shop).
 
-Although we encapsulate the deployment in a single large script, we can improve on that by creating components using classes to abstract the implementation details.
+Although we encapsulate the deployment in a single large script, we can improve that by creating components using classes to abstract the implementation details.
 
 ## Deploying Guestbook as a Component
 
-We can abstract objects, such as Deployments and Services, into components to create our own resources. [ComponentResource]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
+We can abstract objects, such as Deployments and Services, into components to create our resources. [ComponentResource]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
 
 The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) is a canonical example of a stateless application. It consists of multiple PHP frontend services backed by Redis replicas and a lead Redis database to store guestbook entries. In the previous example, we created a Deployment and a Service for each microservice in the application. Although this is a valid pattern for deploying an application in Kubernetes, it doesn’t take full advantage of the capabilities of infrastructure as code.
 
@@ -254,9 +254,9 @@ export let frontendIp = frontend.ipAddress;
 
 The ServiceDeployment class is defined in the *k8sjs* module using ComponentResource. We define deployment, service, and ipAddress as public read-only properties. The constructor takes three arguments:
 
-`name`: The unique name of the resource.
-`args`: Information passed to [initialize] method.
-`opts`: A bag of options that control this resource's behavior.
+- `name`: The unique name of the resource.
+- `args`: Information passed to [initialize] method.
+- `opts`: A bag of options that control this resource's behavior.
 
 ServiceDeploymentArgs is the interface for the arguments used to initialize the method. Next, we instantiate the container using the container image property from the ServiceDeploymentArgs and configure resources, environmental variables, and ports. The deployment is instantiated with the properties you typically see in a deployment such labels, selectors, containers, and replicas. The same goes for Services. Finally, based on whether Kubernetes is running on cluster or Minikube, the ServiceDeployment class returns the clusterIP if it runs on Minikube or instantiates a load balancer if it is a cluster.
 
@@ -365,7 +365,7 @@ Using a Helm chart to deploy an application is the simplest solution if it’s a
 
 ## Conclusion
 
-This article demonstrated three ways to deploy an application in Kubernetes. The applications we examined are primarily stateless with no persistent storage or volumes. In the next installment, we’ll examine [stateful services](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/) which require persistent storage such as database. Until the next post, learn more about Kubernetes with these resources.
+This article demonstrated three ways to deploy an application in Kubernetes. The applications we examined are primarily stateless with no persistent storage or volumes. In the next installment, we’ll examine [stateful services](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/) that require persistent storage such as a database. Until the next post, learn more about Kubernetes with these resources.
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
 - Learn more about Pulumi's [support for Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}})
