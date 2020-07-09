@@ -87,7 +87,7 @@ $ venv/bin/pip install -r requirements.txt
 
 {{< /chooser >}}
 
-If you prefer to manage the virtual environment on your own (for example, using tools like [Pipenv](https://github.com/pypa/pipenv)), you can delete the local `venv` directory and unset the `virtualenv` option in `Pulumi.yaml`:
+If you prefer to manage the virtual environment on your own (for example, using a tool like [Pipenv](https://github.com/pypa/pipenv)), you can delete the local `venv` directory and unset the `virtualenv` option in `Pulumi.yaml`:
 
 ```yaml
 runtime: python
@@ -122,7 +122,6 @@ $ venv/bin/pip install -r requirements.txt
 {{% choosable os windows %}}
 
 ```bat
-> python -m venv venv
 > venv\Scripts\pip install -r requirements.txt
 ```
 
