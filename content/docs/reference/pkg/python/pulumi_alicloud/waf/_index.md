@@ -22,6 +22,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.waf.AwaitableGetInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.waf.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http2_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_to_user_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_access_product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Domain resource to create domain in the Web Application Firewall.</p>
@@ -314,6 +319,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.waf.GetInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getInstances.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetInstancesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) A list of WAF instance IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetInstancesResult.instances">
+<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetInstancesResult.instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of WAF instances. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetInstancesResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetInstancesResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the WAF instance has expired.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.waf.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">big_screen</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclusive_ip_package</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_domain_package</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modify_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefessional_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renew_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewal_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">waf_log</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Instance resource to create instance in the Web Application Firewall.</p>
@@ -601,6 +636,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ids</strong> (<em>list</em>) – A list of WAF domain names. Each item is domain name.</p></li>
 <li><p><strong>instance_id</strong> (<em>str</em>) – The Id of waf instance to which waf domain belongs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.waf.get_instances">
+<code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.get_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a WAF datasource to retrieve instances.</p>
+<p>For information about WAF and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28517.htm">What is Alibaba Cloud WAF</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.90.0+ .</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of WAF instance IDs.</p></li>
+<li><p><strong>instance_source</strong> (<em>str</em>) – The source of the WAF instance.</p></li>
+<li><p><strong>resource_group_id</strong> (<em>str</em>) – The ID of resource group to which WAF instance belongs.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of WAF instance to filter results. Optional value: <cite>0</cite>: The instance has expired, <cite>1</cite> : The instance has not expired and is working properly.</p></li>
 </ul>
 </dd>
 </dl>

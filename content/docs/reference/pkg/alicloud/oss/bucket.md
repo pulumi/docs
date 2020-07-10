@@ -82,7 +82,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>policy=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#pulumi_alicloud.oss.Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>policy=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2482,17 +2482,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="prefix_csharp">
-<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirations_csharp">
@@ -2513,6 +2502,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2544,17 +2544,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="prefix_go">
-<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirations_go">
@@ -2575,6 +2564,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2606,17 +2606,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="prefix_nodejs">
-<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirations_nodejs">
@@ -2637,6 +2626,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2668,17 +2668,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="prefix_python">
-<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirations_python">
@@ -2699,6 +2688,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

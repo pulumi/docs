@@ -22,7 +22,7 @@ meta_desc: "Explore the Zone resource of the pvtz module, including examples, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lang=None<span class="p">, </span>name=None<span class="p">, </span>proxy_pattern=None<span class="p">, </span>remark=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#pulumi_alicloud.pvtz.Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lang=None<span class="p">, </span>name=None<span class="p">, </span>proxy_pattern=None<span class="p">, </span>remark=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

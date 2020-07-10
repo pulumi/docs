@@ -797,49 +797,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.PolicyVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">PolicyVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_default_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_document</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.PolicyVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Resource Manager Policy Version resource. 
-For information about Resource Manager Policy Version and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/116817.htm">What is Resource Manager Policy Version</a>.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Available in v1.84.0+.</p>
-</div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
-
-<span class="n">example_policy</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;examplePolicy&quot;</span><span class="p">,</span>
-    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span>
-    <span class="n">policy_document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;         {</span>
-<span class="s2">                        &quot;Statement&quot;: [{</span>
-<span class="s2">                                &quot;Action&quot;: [&quot;oss:*&quot;],</span>
-<span class="s2">                                &quot;Effect&quot;: &quot;Allow&quot;,</span>
-<span class="s2">                                &quot;Resource&quot;: [&quot;acs:oss:*:*:*&quot;]</span>
-<span class="s2">                        }],</span>
-<span class="s2">                        &quot;Version&quot;: &quot;1&quot;</span>
-<span class="s2">                }</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-<span class="n">example_policy_version</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">PolicyVersion</span><span class="p">(</span><span class="s2">&quot;examplePolicyVersion&quot;</span><span class="p">,</span>
-    <span class="n">policy_name</span><span class="o">=</span><span class="n">example_policy</span><span class="o">.</span><span class="n">policy_name</span><span class="p">,</span>
-    <span class="n">policy_document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;         {</span>
-<span class="s2">                        &quot;Statement&quot;: [{</span>
-<span class="s2">                                &quot;Action&quot;: [&quot;oss:*&quot;],</span>
-<span class="s2">                                &quot;Effect&quot;: &quot;Allow&quot;,</span>
-<span class="s2">                                &quot;Resource&quot;: [&quot;acs:oss:*:*:myphotos&quot;]</span>
-<span class="s2">                        }],</span>
-<span class="s2">                        &quot;Version&quot;: &quot;1&quot;</span>
-<span class="s2">                }</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>is_default_version</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to set the policy version as the default version. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content of the policy. The content must be 1 to 2,048 characters in length.</p></li>
-<li><p><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a PolicyVersion resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] is_default_version: Specifies whether to set the policy version as the default version. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. 
+:param pulumi.Input[str] policy_document: The content of the policy. The content must be 1 to 2,048 characters in length.
+:param pulumi.Input[str] policy_name: The name of the policy. Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.resourcemanager.PolicyVersion.create_date">
 <code class="sig-name descname">create_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.PolicyVersion.create_date" title="Permalink to this definition">¶</a></dt>
@@ -1187,7 +1150,10 @@ For information about Resource Manager role and how to use it, see <a class="ref
 <span class="s2">                    &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
 <span class="s2">                    &quot;Effect&quot;: &quot;Allow&quot;,</span>
 <span class="s2">                    &quot;Principal&quot;: {</span>
-<span class="s2">                        &quot;RAM&quot;:&quot;acs:ram::103755469187****:root&quot;</span>
+<span class="s2">                        &quot;RAM&quot;:[</span>
+<span class="s2">                                &quot;acs:ram::103755469187****:root&quot;，</span>
+<span class="s2">                                &quot;acs:ram::104408977069****:root&quot;</span>
+<span class="s2">                        ]</span>
 <span class="s2">                    }</span>
 <span class="s2">                }</span>
 <span class="s2">          ],</span>

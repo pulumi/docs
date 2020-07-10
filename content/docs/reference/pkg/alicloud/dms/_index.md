@@ -12,11 +12,13 @@ Explore the resources and functions of the dms module in the AliCloud package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="enterpriseinstance" title="EnterpriseInstance"><span class="symbol resource"></span>EnterpriseInstance</a></li>
+    <li><a href="enterpriseuser" title="EnterpriseUser"><span class="symbol resource"></span>EnterpriseUser</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getenterpriseinstances" title="GetEnterpriseInstances"><span class="symbol function"></span>GetEnterpriseInstances</a></li>
+    <li><a href="getenterpriseusers" title="GetEnterpriseUsers"><span class="symbol function"></span>GetEnterpriseUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +30,7 @@ Explore the resources and functions of the dms module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 

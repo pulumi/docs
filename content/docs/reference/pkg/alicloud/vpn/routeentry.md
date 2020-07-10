@@ -22,7 +22,7 @@ meta_desc: "Explore the RouteEntry resource of the vpn module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>next_hop=None<span class="p">, </span>publish_vpc=None<span class="p">, </span>route_dest=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>next_hop=None<span class="p">, </span>publish_vpc=None<span class="p">, </span>route_dest=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

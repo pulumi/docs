@@ -145,7 +145,7 @@ const defaultInstance = new alicloud.rds.Instance("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#pulumi_alicloud.rds.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>ssl_action=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -574,6 +574,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sslaction_csharp">
+<a href="#sslaction_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -583,6 +594,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tdestatus_csharp">
+<a href="#tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,6 +895,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sslaction_go">
+<a href="#sslaction_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -882,6 +915,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tdestatus_go">
+<a href="#tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,6 +1216,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sslaction_nodejs">
+<a href="#sslaction_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1181,6 +1236,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tdestatus_nodejs">
+<a href="#tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1471,6 +1537,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ssl_action_python">
+<a href="#ssl_action_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1480,6 +1557,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tde_status_python">
+<a href="#tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1556,6 +1644,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}RDS database connection port.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="sslstatus_csharp">
+<a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1593,6 +1692,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sslstatus_go">
+<a href="#sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd>
 
 </dl>
@@ -1634,6 +1744,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}RDS database connection port.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="sslstatus_nodejs">
+<a href="#sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1673,6 +1794,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}RDS database connection port.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="ssl_status_python">
+<a href="#ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1692,7 +1824,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>connection_string=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>connection_string=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>ssl_action=None<span class="p">, </span>ssl_status=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2085,6 +2217,28 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sslaction_csharp">
+<a href="#state_sslaction_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sslstatus_csharp">
+<a href="#state_sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -2094,6 +2248,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tdestatus_csharp">
+<a href="#state_tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2406,6 +2571,28 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sslaction_go">
+<a href="#state_sslaction_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sslstatus_go">
+<a href="#state_sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -2415,6 +2602,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tdestatus_go">
+<a href="#state_tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2727,6 +2925,28 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sslaction_nodejs">
+<a href="#state_sslaction_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sslstatus_nodejs">
+<a href="#state_sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -2736,6 +2956,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tdestatus_nodejs">
+<a href="#state_tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3048,6 +3279,28 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ssl_action_python">
+<a href="#state_ssl_action_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ssl_status_python">
+<a href="#state_ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -3057,6 +3310,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tde_status_python">
+<a href="#state_tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

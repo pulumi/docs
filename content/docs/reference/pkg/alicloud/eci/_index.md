@@ -11,7 +11,13 @@ Explore the resources and functions of the eci module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="imagecache" title="ImageCache"><span class="symbol resource"></span>ImageCache</a></li>
     <li><a href="openapiimagecache" title="OpenApiImageCache"><span class="symbol resource"></span>OpenApiImageCache</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getimagecaches" title="GetImageCaches"><span class="symbol function"></span>GetImageCaches</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,7 +29,7 @@ Explore the resources and functions of the eci module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 

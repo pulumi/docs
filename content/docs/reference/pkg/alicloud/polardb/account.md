@@ -25,7 +25,7 @@ Provides a PolarDB account resource and used to manage databases.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/polardb/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_description=None<span class="p">, </span>account_name=None<span class="p">, </span>account_password=None<span class="p">, </span>account_type=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/polardb/#pulumi_alicloud.polardb.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_description=None<span class="p">, </span>account_name=None<span class="p">, </span>account_password=None<span class="p">, </span>account_type=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -193,7 +193,7 @@ const defaultNotification = new alicloud.ess.Notification("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#Notification">Notification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>notification_arn=None<span class="p">, </span>notification_types=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.Notification">Notification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>notification_arn=None<span class="p">, </span>notification_types=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

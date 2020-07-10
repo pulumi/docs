@@ -79,7 +79,7 @@ const alias = new alicloud.ram.AccountAlias("alias", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#AccountAlias">AccountAlias</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_alias=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.AccountAlias">AccountAlias</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_alias=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

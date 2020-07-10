@@ -22,7 +22,7 @@ meta_desc: "Explore the ZoneAttachment resource of the pvtz module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#ZoneAttachment">ZoneAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lang=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>vpc_ids=None<span class="p">, </span>vpcs=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#pulumi_alicloud.pvtz.ZoneAttachment">ZoneAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lang=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>vpc_ids=None<span class="p">, </span>vpcs=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

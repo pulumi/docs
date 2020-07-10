@@ -89,7 +89,7 @@ const example = new alicloud.resourcemanager.Handshake("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#Handshake">Handshake</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>note=None<span class="p">, </span>target_entity=None<span class="p">, </span>target_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.Handshake">Handshake</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>note=None<span class="p">, </span>target_entity=None<span class="p">, </span>target_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
