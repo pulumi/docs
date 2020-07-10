@@ -59,7 +59,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
 	<dt>Version</dt>
-	<dd>0.0.2</dd>
+	<dd>0.0.3</dd>
 </dl>
 
 

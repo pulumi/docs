@@ -123,7 +123,7 @@ const foonet = new hcloud.NetworkSubnet("foonet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#NetworkSubnet">NetworkSubnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_range=None<span class="p">, </span>network_id=None<span class="p">, </span>network_zone=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.NetworkSubnet">NetworkSubnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_range=None<span class="p">, </span>network_id=None<span class="p">, </span>network_zone=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

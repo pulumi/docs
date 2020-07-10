@@ -165,7 +165,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#ServerNetwork">ServerNetwork</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alias_ips=None<span class="p">, </span>ip=None<span class="p">, </span>network_id=None<span class="p">, </span>server_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.ServerNetwork">ServerNetwork</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alias_ips=None<span class="p">, </span>ip=None<span class="p">, </span>network_id=None<span class="p">, </span>server_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

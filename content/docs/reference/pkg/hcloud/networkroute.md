@@ -119,7 +119,7 @@ const privNet = new hcloud.NetworkRoute("privNet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#NetworkRoute">NetworkRoute</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination=None<span class="p">, </span>gateway=None<span class="p">, </span>network_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.NetworkRoute">NetworkRoute</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination=None<span class="p">, </span>gateway=None<span class="p">, </span>network_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

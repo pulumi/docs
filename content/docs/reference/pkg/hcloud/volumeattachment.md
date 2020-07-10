@@ -147,7 +147,7 @@ const main = new hcloud.VolumeAttachment("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#VolumeAttachment">VolumeAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automount=None<span class="p">, </span>server_id=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.VolumeAttachment">VolumeAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automount=None<span class="p">, </span>server_id=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -143,7 +143,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("load_balancer_target",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#LoadBalancerTarget">LoadBalancerTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>server_id=None<span class="p">, </span>type=None<span class="p">, </span>use_private_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancerTarget">LoadBalancerTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>server_id=None<span class="p">, </span>type=None<span class="p">, </span>use_private_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
