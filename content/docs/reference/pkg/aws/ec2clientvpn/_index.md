@@ -11,8 +11,10 @@ Explore the resources and functions of the ec2clientvpn module in the AWS packag
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="authorizationrule" title="AuthorizationRule"><span class="symbol resource"></span>AuthorizationRule</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="networkassociation" title="NetworkAssociation"><span class="symbol resource"></span>NetworkAssociation</a></li>
+    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,7 +26,7 @@ Explore the resources and functions of the ec2clientvpn module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 

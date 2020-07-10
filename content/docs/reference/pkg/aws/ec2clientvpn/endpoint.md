@@ -149,7 +149,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_options=None<span class="p">, </span>client_cidr_block=None<span class="p">, </span>connection_log_options=None<span class="p">, </span>description=None<span class="p">, </span>dns_servers=None<span class="p">, </span>server_certificate_arn=None<span class="p">, </span>split_tunnel=None<span class="p">, </span>tags=None<span class="p">, </span>transport_protocol=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#pulumi_aws.ec2clientvpn.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_options=None<span class="p">, </span>client_cidr_block=None<span class="p">, </span>connection_log_options=None<span class="p">, </span>description=None<span class="p">, </span>dns_servers=None<span class="p">, </span>server_certificate_arn=None<span class="p">, </span>split_tunnel=None<span class="p">, </span>tags=None<span class="p">, </span>transport_protocol=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -406,7 +406,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +512,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,7 +618,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,7 +724,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1200,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,7 +1339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1617,7 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

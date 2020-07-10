@@ -210,7 +210,7 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elb/#LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elb/#pulumi_aws.elb.LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

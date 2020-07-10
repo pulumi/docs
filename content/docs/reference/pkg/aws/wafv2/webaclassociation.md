@@ -23,7 +23,7 @@ Creates a WAFv2 Web ACL Association.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#WebAclAssociation">WebAclAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>resource_arn=None<span class="p">, </span>web_acl_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclAssociation">WebAclAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>resource_arn=None<span class="p">, </span>web_acl_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -110,6 +110,47 @@ const example = new aws.apigatewayv2.DomainName("example", {
 
 {{% /example %}}
 
+### Associated Route 53 Resource Record
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleDomainName = new aws.apigatewayv2.DomainName("example", {
+    domainName: "http-api.example.com",
+    domainNameConfiguration: {
+        certificateArn: aws_acm_certificate_example.arn,
+        endpointType: "REGIONAL",
+        securityPolicy: "TLS_1_2",
+    },
+});
+const exampleRecord = new aws.route53.Record("example", {
+    aliases: [{
+        evaluateTargetHealth: false,
+        name: exampleDomainName.domainNameConfiguration.targetDomainName,
+        zoneId: exampleDomainName.domainNameConfiguration.hostedZoneId,
+    }],
+    name: exampleDomainName.domainName,
+    type: "A",
+    zoneId: aws_route53_zone_example.zoneId,
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -122,7 +163,7 @@ const example = new aws.apigatewayv2.DomainName("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#DomainName">DomainName</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_name=None<span class="p">, </span>domain_name_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.DomainName">DomainName</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_name=None<span class="p">, </span>domain_name_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

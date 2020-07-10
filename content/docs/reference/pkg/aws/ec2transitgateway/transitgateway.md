@@ -96,7 +96,7 @@ const example = new aws.ec2transitgateway.TransitGateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2transitgateway/#TransitGateway">TransitGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazon_side_asn=None<span class="p">, </span>auto_accept_shared_attachments=None<span class="p">, </span>default_route_table_association=None<span class="p">, </span>default_route_table_propagation=None<span class="p">, </span>description=None<span class="p">, </span>dns_support=None<span class="p">, </span>tags=None<span class="p">, </span>vpn_ecmp_support=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2transitgateway/#pulumi_aws.ec2transitgateway.TransitGateway">TransitGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazon_side_asn=None<span class="p">, </span>auto_accept_shared_attachments=None<span class="p">, </span>default_route_table_association=None<span class="p">, </span>default_route_table_propagation=None<span class="p">, </span>description=None<span class="p">, </span>dns_support=None<span class="p">, </span>tags=None<span class="p">, </span>vpn_ecmp_support=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

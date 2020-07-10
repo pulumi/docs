@@ -23,7 +23,7 @@ Provides an Gamelift Game Session Queue resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#GameSessionQueue">GameSessionQueue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destinations=None<span class="p">, </span>name=None<span class="p">, </span>player_latency_policies=None<span class="p">, </span>tags=None<span class="p">, </span>timeout_in_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.GameSessionQueue">GameSessionQueue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destinations=None<span class="p">, </span>name=None<span class="p">, </span>player_latency_policies=None<span class="p">, </span>tags=None<span class="p">, </span>timeout_in_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

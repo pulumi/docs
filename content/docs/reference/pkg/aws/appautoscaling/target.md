@@ -378,7 +378,7 @@ const replicas = new aws.appautoscaling.Target("replicas", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>max_capacity=None<span class="p">, </span>min_capacity=None<span class="p">, </span>resource_id=None<span class="p">, </span>role_arn=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>max_capacity=None<span class="p">, </span>min_capacity=None<span class="p">, </span>resource_id=None<span class="p">, </span>role_arn=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
