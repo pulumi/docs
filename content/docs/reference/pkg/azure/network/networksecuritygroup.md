@@ -16,6 +16,160 @@ Manages a network security group that contains a list of network security rules.
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
 At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup("exampleNetworkSecurityGroup", new Azure.Network.NetworkSecurityGroupArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SecurityRules = 
+            {
+                new Azure.Network.Inputs.NetworkSecurityGroupSecurityRuleArgs
+                {
+                    Name = "test123",
+                    Priority = 100,
+                    Direction = "Inbound",
+                    Access = "Allow",
+                    Protocol = "Tcp",
+                    SourcePortRange = "*",
+                    DestinationPortRange = "*",
+                    SourceAddressPrefix = "*",
+                    DestinationAddressPrefix = "*",
+                },
+            },
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewNetworkSecurityGroup(ctx, "exampleNetworkSecurityGroup", &network.NetworkSecurityGroupArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SecurityRules: network.NetworkSecurityGroupSecurityRuleArray{
+				&network.NetworkSecurityGroupSecurityRuleArgs{
+					Name:                     pulumi.String("test123"),
+					Priority:                 pulumi.Int(100),
+					Direction:                pulumi.String("Inbound"),
+					Access:                   pulumi.String("Allow"),
+					Protocol:                 pulumi.String("Tcp"),
+					SourcePortRange:          pulumi.String("*"),
+					DestinationPortRange:     pulumi.String("*"),
+					SourceAddressPrefix:      pulumi.String("*"),
+					DestinationAddressPrefix: pulumi.String("*"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    security_rules=[{
+        "name": "test123",
+        "priority": 100,
+        "direction": "Inbound",
+        "access": "Allow",
+        "protocol": "Tcp",
+        "source_port_range": "*",
+        "destination_port_range": "*",
+        "source_address_prefix": "*",
+        "destination_address_prefix": "*",
+    }],
+    tags={
+        "environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    securityRules: [{
+        name: "test123",
+        priority: 100,
+        direction: "Inbound",
+        access: "Allow",
+        protocol: "Tcp",
+        sourcePortRange: "*",
+        destinationPortRange: "*",
+        sourceAddressPrefix: "*",
+        destinationAddressPrefix: "*",
+    }],
+    tags: {
+        environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkSecurityGroup Resource {#create}
@@ -27,7 +181,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#NetworkSecurityGroup">NetworkSecurityGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>security_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkSecurityGroup">NetworkSecurityGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>security_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

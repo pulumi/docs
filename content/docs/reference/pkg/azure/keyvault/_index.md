@@ -14,6 +14,7 @@ Explore the resources and functions of the keyvault module in the Azure package.
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="certifiate" title="Certifiate"><span class="symbol resource"></span>Certifiate</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="certificateissuer" title="CertificateIssuer"><span class="symbol resource"></span>CertificateIssuer</a></li>
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="keyvault" title="KeyVault"><span class="symbol resource"></span>KeyVault</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
@@ -23,6 +24,7 @@ Explore the resources and functions of the keyvault module in the Azure package.
 <ul class="api">
     <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcertificateissuer" title="GetCertificateIssuer"><span class="symbol function"></span>GetCertificateIssuer</a></li>
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getkeyvault" title="GetKeyVault"><span class="symbol function"></span>GetKeyVault</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
@@ -37,7 +39,7 @@ Explore the resources and functions of the keyvault module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

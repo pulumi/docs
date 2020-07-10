@@ -76,7 +76,7 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			SkuName:           pulumi.String("Standard"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"source": pulumi.String("managed"),
 			},
 		})
@@ -158,7 +158,7 @@ const exampleHybridConnection = new azure.relay.HybridConnection("exampleHybridC
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/relay/#HybridConnection">HybridConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>relay_namespace_name=None<span class="p">, </span>requires_client_authorization=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>user_metadata=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/relay/#pulumi_azure.relay.HybridConnection">HybridConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>relay_namespace_name=None<span class="p">, </span>requires_client_authorization=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>user_metadata=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

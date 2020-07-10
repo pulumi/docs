@@ -77,7 +77,7 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"source": pulumi.String("example"),
 			},
 		})
@@ -162,7 +162,7 @@ const exampleNamespaceAuthorizationRule = new azure.servicebus.NamespaceAuthoriz
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#NamespaceAuthorizationRule">NamespaceAuthorizationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>listen=None<span class="p">, </span>manage=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>send=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#pulumi_azure.servicebus.NamespaceAuthorizationRule">NamespaceAuthorizationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>listen=None<span class="p">, </span>manage=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>send=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

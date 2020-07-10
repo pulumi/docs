@@ -12,6 +12,152 @@ meta_desc: "Explore the ApiOperation resource of the apimanagement module, inclu
 
 Manages an API Operation within an API Management Service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApi = Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+        {
+            Name = "search-api",
+            ApiManagementName = "search-api-management",
+            ResourceGroupName = "search-service",
+            Revision = "2",
+        }));
+        var exampleApiOperation = new Azure.ApiManagement.ApiOperation("exampleApiOperation", new Azure.ApiManagement.ApiOperationArgs
+        {
+            OperationId = "user-delete",
+            ApiName = exampleApi.Apply(exampleApi => exampleApi.Name),
+            ApiManagementName = exampleApi.Apply(exampleApi => exampleApi.ApiManagementName),
+            ResourceGroupName = exampleApi.Apply(exampleApi => exampleApi.ResourceGroupName),
+            DisplayName = "Delete User Operation",
+            Method = "DELETE",
+            UrlTemplate = "/users/{id}/delete",
+            Description = "This can only be done by the logged in user.",
+            Responses = 
+            {
+                new Azure.ApiManagement.Inputs.ApiOperationResponseArgs
+                {
+                    StatusCode = 200,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApi, err := apimanagement.LookupApi(ctx, &apimanagement.LookupApiArgs{
+			Name:              "search-api",
+			ApiManagementName: "search-api-management",
+			ResourceGroupName: "search-service",
+			Revision:          "2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewApiOperation(ctx, "exampleApiOperation", &apimanagement.ApiOperationArgs{
+			OperationId:       pulumi.String("user-delete"),
+			ApiName:           pulumi.String(exampleApi.Name),
+			ApiManagementName: pulumi.String(exampleApi.ApiManagementName),
+			ResourceGroupName: pulumi.String(exampleApi.ResourceGroupName),
+			DisplayName:       pulumi.String("Delete User Operation"),
+			Method:            pulumi.String("DELETE"),
+			UrlTemplate:       pulumi.String("/users/{id}/delete"),
+			Description:       pulumi.String("This can only be done by the logged in user."),
+			Responses: apimanagement.ApiOperationResponseArray{
+				&apimanagement.ApiOperationResponseArgs{
+					StatusCode: pulumi.Int(200),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api = azure.apimanagement.get_api(name="search-api",
+    api_management_name="search-api-management",
+    resource_group_name="search-service",
+    revision="2")
+example_api_operation = azure.apimanagement.ApiOperation("exampleApiOperation",
+    operation_id="user-delete",
+    api_name=example_api.name,
+    api_management_name=example_api.api_management_name,
+    resource_group_name=example_api.resource_group_name,
+    display_name="Delete User Operation",
+    method="DELETE",
+    url_template="/users/{id}/delete",
+    description="This can only be done by the logged in user.",
+    responses=[{
+        "statusCode": 200,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApi = azure.apimanagement.getApi({
+    name: "search-api",
+    apiManagementName: "search-api-management",
+    resourceGroupName: "search-service",
+    revision: "2",
+});
+const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOperation", {
+    operationId: "user-delete",
+    apiName: exampleApi.then(exampleApi => exampleApi.name),
+    apiManagementName: exampleApi.then(exampleApi => exampleApi.apiManagementName),
+    resourceGroupName: exampleApi.then(exampleApi => exampleApi.resourceGroupName),
+    displayName: "Delete User Operation",
+    method: "DELETE",
+    urlTemplate: "/users/{id}/delete",
+    description: "This can only be done by the logged in user.",
+    responses: [{
+        statusCode: 200,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiOperation Resource {#create}
@@ -23,7 +169,7 @@ Manages an API Operation within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#ApiOperation">ApiOperation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>method=None<span class="p">, </span>operation_id=None<span class="p">, </span>request=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>responses=None<span class="p">, </span>template_parameters=None<span class="p">, </span>url_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiOperation">ApiOperation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>method=None<span class="p">, </span>operation_id=None<span class="p">, </span>request=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>responses=None<span class="p">, </span>template_parameters=None<span class="p">, </span>url_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

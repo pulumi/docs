@@ -87,7 +87,7 @@ func main() {
 		}
 		_, err = storage.NewDataLakeGen2Filesystem(ctx, "exampleDataLakeGen2Filesystem", &storage.DataLakeGen2FilesystemArgs{
 			StorageAccountId: exampleAccount.ID(),
-			Properties: pulumi.Map{
+			Properties: pulumi.StringMap{
 				"hello": pulumi.String("aGVsbG8="),
 			},
 		})
@@ -160,7 +160,7 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

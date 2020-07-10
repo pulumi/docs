@@ -11,9 +11,12 @@ Explore the resources and functions of the kusto module in the Azure package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="attacheddatabaseconfiguration" title="AttachedDatabaseConfiguration"><span class="symbol resource"></span>AttachedDatabaseConfiguration</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clusterprincipalassignment" title="ClusterPrincipalAssignment"><span class="symbol resource"></span>ClusterPrincipalAssignment</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="databaseprincipal" title="DatabasePrincipal"><span class="symbol resource"></span>DatabasePrincipal</a></li>
+    <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
     <li><a href="eventhubdataconnection" title="EventhubDataConnection"><span class="symbol resource"></span>EventhubDataConnection</a></li>
 </ul>
 
@@ -31,7 +34,7 @@ Explore the resources and functions of the kusto module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

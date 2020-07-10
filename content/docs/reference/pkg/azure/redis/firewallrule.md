@@ -12,6 +12,197 @@ meta_desc: "Explore the FirewallRule resource of the redis module, including exa
 
 Manages a Firewall Rule associated with a Redis Cache.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new Random.RandomId("server", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "azi_id", 1 },
+            },
+            ByteLength = 8,
+        });
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleCache = new Azure.Redis.Cache("exampleCache", new Azure.Redis.CacheArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Capacity = 1,
+            Family = "P",
+            SkuName = "Premium",
+            EnableNonSslPort = false,
+            RedisConfiguration = new Azure.Redis.Inputs.CacheRedisConfigurationArgs
+            {
+                Maxclients = 256,
+                MaxmemoryReserved = 2,
+                MaxmemoryDelta = 2,
+                MaxmemoryPolicy = "allkeys-lru",
+            },
+        });
+        var exampleFirewallRule = new Azure.Redis.FirewallRule("exampleFirewallRule", new Azure.Redis.FirewallRuleArgs
+        {
+            RedisCacheName = exampleCache.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            StartIp = "1.2.3.4",
+            EndIp = "2.3.4.5",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "server", &random.RandomIdArgs{
+			Keepers: pulumi.Float64Map{
+				"azi_id": pulumi.Float64(1),
+			},
+			ByteLength: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCache, err := redis.NewCache(ctx, "exampleCache", &redis.CacheArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Capacity:          pulumi.Int(1),
+			Family:            pulumi.String("P"),
+			SkuName:           pulumi.String("Premium"),
+			EnableNonSslPort:  pulumi.Bool(false),
+			RedisConfiguration: &redis.CacheRedisConfigurationArgs{
+				Maxclients:        pulumi.Int(256),
+				MaxmemoryReserved: pulumi.Int(2),
+				MaxmemoryDelta:    pulumi.Int(2),
+				MaxmemoryPolicy:   pulumi.String("allkeys-lru"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = redis.NewFirewallRule(ctx, "exampleFirewallRule", &redis.FirewallRuleArgs{
+			RedisCacheName:    exampleCache.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			StartIp:           pulumi.String("1.2.3.4"),
+			EndIp:             pulumi.String("2.3.4.5"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cache = azure.redis.Cache("exampleCache",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    capacity=1,
+    family="P",
+    sku_name="Premium",
+    enable_non_ssl_port=False,
+    redis_configuration={
+        "maxclients": 256,
+        "maxmemoryReserved": 2,
+        "maxmemoryDelta": 2,
+        "maxmemoryPolicy": "allkeys-lru",
+    })
+example_firewall_rule = azure.redis.FirewallRule("exampleFirewallRule",
+    redis_cache_name=example_cache.name,
+    resource_group_name=example_resource_group.name,
+    start_ip="1.2.3.4",
+    end_ip="2.3.4.5")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCache = new azure.redis.Cache("exampleCache", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    capacity: 1,
+    family: "P",
+    skuName: "Premium",
+    enableNonSslPort: false,
+    redisConfiguration: {
+        maxclients: 256,
+        maxmemoryReserved: 2,
+        maxmemoryDelta: 2,
+        maxmemoryPolicy: "allkeys-lru",
+    },
+});
+const exampleFirewallRule = new azure.redis.FirewallRule("exampleFirewallRule", {
+    redisCacheName: exampleCache.name,
+    resourceGroupName: exampleResourceGroup.name,
+    startIp: "1.2.3.4",
+    endIp: "2.3.4.5",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}
@@ -23,7 +214,7 @@ Manages a Firewall Rule associated with a Redis Cache.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/redis/#FirewallRule">FirewallRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_ip=None<span class="p">, </span>name=None<span class="p">, </span>redis_cache_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/redis/#pulumi_azure.redis.FirewallRule">FirewallRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_ip=None<span class="p">, </span>name=None<span class="p">, </span>redis_cache_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

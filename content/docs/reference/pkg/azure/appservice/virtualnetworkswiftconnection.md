@@ -12,6 +12,248 @@ meta_desc: "Explore the VirtualNetworkSwiftConnection resource of the appservice
 
 Manages an App Service Virtual Network Association (this is for the [Regional VNet Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) which is still in preview).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "uksouth",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.1.0/24",
+            Delegations = 
+            {
+                new Azure.Network.Inputs.SubnetDelegationArgs
+                {
+                    Name = "example-delegation",
+                    ServiceDelegation = new Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs
+                    {
+                        Name = "Microsoft.Web/serverFarms",
+                        Actions = 
+                        {
+                            "Microsoft.Network/virtualNetworks/subnets/action",
+                        },
+                    },
+                },
+            },
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+        });
+        var exampleVirtualNetworkSwiftConnection = new Azure.AppService.VirtualNetworkSwiftConnection("exampleVirtualNetworkSwiftConnection", new Azure.AppService.VirtualNetworkSwiftConnectionArgs
+        {
+            AppServiceId = exampleAppService.Id,
+            SubnetId = exampleSubnet.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("uksouth"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			Delegations: network.SubnetDelegationArray{
+				&network.SubnetDelegationArgs{
+					Name: pulumi.String("example-delegation"),
+					ServiceDelegation: &network.SubnetDelegationServiceDelegationArgs{
+						Name: pulumi.String("Microsoft.Web/serverFarms"),
+						Actions: pulumi.StringArray{
+							pulumi.String("Microsoft.Network/virtualNetworks/subnets/action"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAppService, err := appservice.NewAppService(ctx, "exampleAppService", &appservice.AppServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewVirtualNetworkSwiftConnection(ctx, "exampleVirtualNetworkSwiftConnection", &appservice.VirtualNetworkSwiftConnectionArgs{
+			AppServiceId: exampleAppService.ID(),
+			SubnetId:     exampleSubnet.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="uksouth")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24",
+    delegations=[{
+        "name": "example-delegation",
+        "serviceDelegation": {
+            "name": "Microsoft.Web/serverFarms",
+            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }])
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id)
+example_virtual_network_swift_connection = azure.appservice.VirtualNetworkSwiftConnection("exampleVirtualNetworkSwiftConnection",
+    app_service_id=example_app_service.id,
+    subnet_id=example_subnet.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "uksouth"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+    delegations: [{
+        name: "example-delegation",
+        serviceDelegation: {
+            name: "Microsoft.Web/serverFarms",
+            actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }],
+});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+});
+const exampleVirtualNetworkSwiftConnection = new azure.appservice.VirtualNetworkSwiftConnection("exampleVirtualNetworkSwiftConnection", {
+    appServiceId: exampleAppService.id,
+    subnetId: exampleSubnet.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkSwiftConnection Resource {#create}
@@ -23,7 +265,7 @@ Manages an App Service Virtual Network Association (this is for the [Regional VN
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#VirtualNetworkSwiftConnection">VirtualNetworkSwiftConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.VirtualNetworkSwiftConnection">VirtualNetworkSwiftConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

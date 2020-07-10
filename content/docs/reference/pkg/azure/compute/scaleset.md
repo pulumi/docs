@@ -15,7 +15,767 @@ Manages a virtual machine scale set.
 ## Disclaimers
 
 > **Note:** The `azure.compute.ScaleSet` resource has been superseded by the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources. The existing `azure.compute.ScaleSet` resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
+## Example of storage_profile_image_reference with id
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleImage = new azure.compute.Image("exampleImage", {});
+// ...
+const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {storageProfileImageReference: {
+    id: exampleImage.id,
+}});
+// ...
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_image = azure.compute.Image("exampleImage")
+# ...
+example_scale_set = azure.compute.ScaleSet("exampleScaleSet", storage_profile_image_reference={
+    "id": example_image.id,
+})
+# ...
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleImage = new Azure.Compute.Image("exampleImage", new Azure.Compute.ImageArgs
+        {
+        });
+        // ...
+        var exampleScaleSet = new Azure.Compute.ScaleSet("exampleScaleSet", new Azure.Compute.ScaleSetArgs
+        {
+            StorageProfileImageReference = new Azure.Compute.Inputs.ScaleSetStorageProfileImageReferenceArgs
+            {
+                Id = exampleImage.Id,
+            },
+        });
+        // ...
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleImage, err := compute.NewImage(ctx, "exampleImage", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewScaleSet(ctx, "exampleScaleSet", &compute.ScaleSetArgs{
+			StorageProfileImageReference: &compute.ScaleSetStorageProfileImageReferenceArgs{
+				Id: exampleImage.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With Managed Disks (Recommended)
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US 2",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+            DomainNameLabel = exampleResourceGroup.Name,
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleLoadBalancer = new Azure.Lb.LoadBalancer("exampleLoadBalancer", new Azure.Lb.LoadBalancerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            FrontendIpConfigurations = 
+            {
+                new Azure.Lb.Inputs.LoadBalancerFrontendIpConfigurationArgs
+                {
+                    Name = "PublicIPAddress",
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var bpepool = new Azure.Lb.BackendAddressPool("bpepool", new Azure.Lb.BackendAddressPoolArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+        });
+        var lbnatpool = new Azure.Lb.NatPool("lbnatpool", new Azure.Lb.NatPoolArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+            Protocol = "Tcp",
+            FrontendPortStart = 50000,
+            FrontendPortEnd = 50119,
+            BackendPort = 22,
+            FrontendIpConfigurationName = "PublicIPAddress",
+        });
+        var exampleProbe = new Azure.Lb.Probe("exampleProbe", new Azure.Lb.ProbeArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+            Protocol = "Http",
+            RequestPath = "/health",
+            Port = 8080,
+        });
+        var exampleScaleSet = new Azure.Compute.ScaleSet("exampleScaleSet", new Azure.Compute.ScaleSetArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AutomaticOsUpgrade = true,
+            UpgradePolicyMode = "Rolling",
+            RollingUpgradePolicy = new Azure.Compute.Inputs.ScaleSetRollingUpgradePolicyArgs
+            {
+                MaxBatchInstancePercent = 20,
+                MaxUnhealthyInstancePercent = 20,
+                MaxUnhealthyUpgradedInstancePercent = 5,
+                PauseTimeBetweenBatches = "PT0S",
+            },
+            HealthProbeId = exampleProbe.Id,
+            Sku = new Azure.Compute.Inputs.ScaleSetSkuArgs
+            {
+                Name = "Standard_F2",
+                Tier = "Standard",
+                Capacity = 2,
+            },
+            StorageProfileImageReference = new Azure.Compute.Inputs.ScaleSetStorageProfileImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+            StorageProfileOsDisk = new Azure.Compute.Inputs.ScaleSetStorageProfileOsDiskArgs
+            {
+                Name = "",
+                Caching = "ReadWrite",
+                CreateOption = "FromImage",
+                ManagedDiskType = "Standard_LRS",
+            },
+            StorageProfileDataDisks = 
+            {
+                new Azure.Compute.Inputs.ScaleSetStorageProfileDataDiskArgs
+                {
+                    Lun = 0,
+                    Caching = "ReadWrite",
+                    CreateOption = "Empty",
+                    DiskSizeGb = 10,
+                },
+            },
+            OsProfile = new Azure.Compute.Inputs.ScaleSetOsProfileArgs
+            {
+                ComputerNamePrefix = "testvm",
+                AdminUsername = "myadmin",
+            },
+            OsProfileLinuxConfig = new Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigArgs
+            {
+                DisablePasswordAuthentication = true,
+                SshKeys = 
+                {
+                    new Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigSshKeyArgs
+                    {
+                        Path = "/home/myadmin/.ssh/authorized_keys",
+                        KeyData = File.ReadAllText("~/.ssh/demo_key.pub"),
+                    },
+                },
+            },
+            NetworkProfiles = 
+            {
+                new Azure.Compute.Inputs.ScaleSetNetworkProfileArgs
+                {
+                    Name = "mynetworkprofile",
+                    Primary = true,
+                    IpConfigurations = 
+                    {
+                        new Azure.Compute.Inputs.ScaleSetNetworkProfileIpConfigurationArgs
+                        {
+                            Name = "TestIPConfiguration",
+                            Primary = true,
+                            SubnetId = exampleSubnet.Id,
+                            LoadBalancerBackendAddressPoolIds = 
+                            {
+                                bpepool.Id,
+                            },
+                            LoadBalancerInboundNatRulesIds = 
+                            {
+                                lbnatpool.Id,
+                            },
+                        },
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static",
+    domain_name_label=example_resource_group.name,
+    tags={
+        "environment": "staging",
+    })
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configurations=[{
+        "name": "PublicIPAddress",
+        "public_ip_address_id": example_public_ip.id,
+    }])
+bpepool = azure.lb.BackendAddressPool("bpepool",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id)
+lbnatpool = azure.lb.NatPool("lbnatpool",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id,
+    protocol="Tcp",
+    frontend_port_start=50000,
+    frontend_port_end=50119,
+    backend_port=22,
+    frontend_ip_configuration_name="PublicIPAddress")
+example_probe = azure.lb.Probe("exampleProbe",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id,
+    protocol="Http",
+    request_path="/health",
+    port=8080)
+example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    automatic_os_upgrade=True,
+    upgrade_policy_mode="Rolling",
+    rolling_upgrade_policy={
+        "maxBatchInstancePercent": 20,
+        "maxUnhealthyInstancePercent": 20,
+        "maxUnhealthyUpgradedInstancePercent": 5,
+        "pauseTimeBetweenBatches": "PT0S",
+    },
+    health_probe_id=example_probe.id,
+    sku={
+        "name": "Standard_F2",
+        "tier": "Standard",
+        "capacity": 2,
+    },
+    storage_profile_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_profile_os_disk={
+        "name": "",
+        "caching": "ReadWrite",
+        "create_option": "FromImage",
+        "managedDiskType": "Standard_LRS",
+    },
+    storage_profile_data_disks=[{
+        "lun": 0,
+        "caching": "ReadWrite",
+        "create_option": "Empty",
+        "disk_size_gb": 10,
+    }],
+    os_profile={
+        "computer_name_prefix": "testvm",
+        "admin_username": "myadmin",
+    },
+    os_profile_linux_config={
+        "disable_password_authentication": True,
+        "sshKeys": [{
+            "path": "/home/myadmin/.ssh/authorized_keys",
+            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        }],
+    },
+    network_profiles=[{
+        "name": "mynetworkprofile",
+        "primary": True,
+        "ip_configurations": [{
+            "name": "TestIPConfiguration",
+            "primary": True,
+            "subnet_id": example_subnet.id,
+            "loadBalancerBackendAddressPoolIds": [bpepool.id],
+            "loadBalancerInboundNatRulesIds": [lbnatpool.id],
+        }],
+    }],
+    tags={
+        "environment": "staging",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+    domainNameLabel: exampleResourceGroup.name,
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontendIpConfigurations: [{
+        name: "PublicIPAddress",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const bpepool = new azure.lb.BackendAddressPool("bpepool", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+});
+const lbnatpool = new azure.lb.NatPool("lbnatpool", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+    protocol: "Tcp",
+    frontendPortStart: 50000,
+    frontendPortEnd: 50119,
+    backendPort: 22,
+    frontendIpConfigurationName: "PublicIPAddress",
+});
+const exampleProbe = new azure.lb.Probe("exampleProbe", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+    protocol: "Http",
+    requestPath: "/health",
+    port: 8080,
+});
+const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    automaticOsUpgrade: true,
+    upgradePolicyMode: "Rolling",
+    rollingUpgradePolicy: {
+        maxBatchInstancePercent: 20,
+        maxUnhealthyInstancePercent: 20,
+        maxUnhealthyUpgradedInstancePercent: 5,
+        pauseTimeBetweenBatches: "PT0S",
+    },
+    healthProbeId: exampleProbe.id,
+    sku: {
+        name: "Standard_F2",
+        tier: "Standard",
+        capacity: 2,
+    },
+    storageProfileImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storageProfileOsDisk: {
+        name: "",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        managedDiskType: "Standard_LRS",
+    },
+    storageProfileDataDisks: [{
+        lun: 0,
+        caching: "ReadWrite",
+        createOption: "Empty",
+        diskSizeGb: 10,
+    }],
+    osProfile: {
+        computerNamePrefix: "testvm",
+        adminUsername: "myadmin",
+    },
+    osProfileLinuxConfig: {
+        disablePasswordAuthentication: true,
+        sshKeys: [{
+            path: "/home/myadmin/.ssh/authorized_keys",
+            keyData: fs.readFileSync("~/.ssh/demo_key.pub"),
+        }],
+    },
+    networkProfiles: [{
+        name: "mynetworkprofile",
+        primary: true,
+        ipConfigurations: [{
+            name: "TestIPConfiguration",
+            primary: true,
+            subnetId: exampleSubnet.id,
+            loadBalancerBackendAddressPoolIds: [bpepool.id],
+            loadBalancerInboundNatRulesIds: [lbnatpool.id],
+        }],
+    }],
+    tags: {
+        environment: "staging",
+    },
+});
+```
+
+{{% /example %}}
+
+### With Unmanaged Disks
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "westus",
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            ContainerAccessType = "private",
+        });
+        var exampleScaleSet = new Azure.Compute.ScaleSet("exampleScaleSet", new Azure.Compute.ScaleSetArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            UpgradePolicyMode = "Manual",
+            Sku = new Azure.Compute.Inputs.ScaleSetSkuArgs
+            {
+                Name = "Standard_F2",
+                Tier = "Standard",
+                Capacity = 2,
+            },
+            OsProfile = new Azure.Compute.Inputs.ScaleSetOsProfileArgs
+            {
+                ComputerNamePrefix = "testvm",
+                AdminUsername = "myadmin",
+            },
+            OsProfileLinuxConfig = new Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigArgs
+            {
+                DisablePasswordAuthentication = true,
+                SshKeys = 
+                {
+                    new Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigSshKeyArgs
+                    {
+                        Path = "/home/myadmin/.ssh/authorized_keys",
+                        KeyData = File.ReadAllText("~/.ssh/demo_key.pub"),
+                    },
+                },
+            },
+            NetworkProfiles = 
+            {
+                new Azure.Compute.Inputs.ScaleSetNetworkProfileArgs
+                {
+                    Name = "TestNetworkProfile",
+                    Primary = true,
+                    IpConfigurations = 
+                    {
+                        new Azure.Compute.Inputs.ScaleSetNetworkProfileIpConfigurationArgs
+                        {
+                            Name = "TestIPConfiguration",
+                            Primary = true,
+                            SubnetId = exampleSubnet.Id,
+                        },
+                    },
+                },
+            },
+            StorageProfileOsDisk = new Azure.Compute.Inputs.ScaleSetStorageProfileOsDiskArgs
+            {
+                Name = "osDiskProfile",
+                Caching = "ReadWrite",
+                CreateOption = "FromImage",
+                VhdContainers = 
+                {
+                    Output.Tuple(exampleAccount.PrimaryBlobEndpoint, exampleContainer.Name).Apply(values =>
+                    {
+                        var primaryBlobEndpoint = values.Item1;
+                        var name = values.Item2;
+                        return $"{primaryBlobEndpoint}{name}";
+                    }),
+                },
+            },
+            StorageProfileImageReference = new Azure.Compute.Inputs.ScaleSetStorageProfileImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location="West US",
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location="westus",
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    upgrade_policy_mode="Manual",
+    sku={
+        "name": "Standard_F2",
+        "tier": "Standard",
+        "capacity": 2,
+    },
+    os_profile={
+        "computer_name_prefix": "testvm",
+        "admin_username": "myadmin",
+    },
+    os_profile_linux_config={
+        "disable_password_authentication": True,
+        "sshKeys": [{
+            "path": "/home/myadmin/.ssh/authorized_keys",
+            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        }],
+    },
+    network_profiles=[{
+        "name": "TestNetworkProfile",
+        "primary": True,
+        "ip_configurations": [{
+            "name": "TestIPConfiguration",
+            "primary": True,
+            "subnet_id": example_subnet.id,
+        }],
+    }],
+    storage_profile_os_disk={
+        "name": "osDiskProfile",
+        "caching": "ReadWrite",
+        "create_option": "FromImage",
+        "vhdContainers": [pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}")],
+    },
+    storage_profile_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "westus",
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    upgradePolicyMode: "Manual",
+    sku: {
+        name: "Standard_F2",
+        tier: "Standard",
+        capacity: 2,
+    },
+    osProfile: {
+        computerNamePrefix: "testvm",
+        adminUsername: "myadmin",
+    },
+    osProfileLinuxConfig: {
+        disablePasswordAuthentication: true,
+        sshKeys: [{
+            path: "/home/myadmin/.ssh/authorized_keys",
+            keyData: fs.readFileSync("~/.ssh/demo_key.pub"),
+        }],
+    },
+    networkProfiles: [{
+        name: "TestNetworkProfile",
+        primary: true,
+        ipConfigurations: [{
+            name: "TestIPConfiguration",
+            primary: true,
+            subnetId: exampleSubnet.id,
+        }],
+    }],
+    storageProfileOsDisk: {
+        name: "osDiskProfile",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        vhdContainers: [pulumi.interpolate`${exampleAccount.primaryBlobEndpoint}${exampleContainer.name}`],
+    },
+    storageProfileImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ScaleSet Resource {#create}
@@ -27,7 +787,7 @@ Manages a virtual machine scale set.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#ScaleSet">ScaleSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_os_upgrade=None<span class="p">, </span>boot_diagnostics=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>extensions=None<span class="p">, </span>health_probe_id=None<span class="p">, </span>identity=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profiles=None<span class="p">, </span>os_profile=None<span class="p">, </span>os_profile_linux_config=None<span class="p">, </span>os_profile_secrets=None<span class="p">, </span>os_profile_windows_config=None<span class="p">, </span>overprovision=None<span class="p">, </span>plan=None<span class="p">, </span>priority=None<span class="p">, </span>proximity_placement_group_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rolling_upgrade_policy=None<span class="p">, </span>single_placement_group=None<span class="p">, </span>sku=None<span class="p">, </span>storage_profile_data_disks=None<span class="p">, </span>storage_profile_image_reference=None<span class="p">, </span>storage_profile_os_disk=None<span class="p">, </span>tags=None<span class="p">, </span>upgrade_policy_mode=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ScaleSet">ScaleSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_os_upgrade=None<span class="p">, </span>boot_diagnostics=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>extensions=None<span class="p">, </span>health_probe_id=None<span class="p">, </span>identity=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profiles=None<span class="p">, </span>os_profile=None<span class="p">, </span>os_profile_linux_config=None<span class="p">, </span>os_profile_secrets=None<span class="p">, </span>os_profile_windows_config=None<span class="p">, </span>overprovision=None<span class="p">, </span>plan=None<span class="p">, </span>priority=None<span class="p">, </span>proximity_placement_group_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rolling_upgrade_policy=None<span class="p">, </span>single_placement_group=None<span class="p">, </span>sku=None<span class="p">, </span>storage_profile_data_disks=None<span class="p">, </span>storage_profile_image_reference=None<span class="p">, </span>storage_profile_os_disk=None<span class="p">, </span>tags=None<span class="p">, </span>upgrade_policy_mode=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,7 +1164,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,7 +1478,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1032,7 +1792,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,7 +2106,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1821,7 +2581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2135,7 +2895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2449,7 +3209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2763,7 +3523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned.
+    <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

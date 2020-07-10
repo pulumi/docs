@@ -69,7 +69,65 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "server", &random.RandomIdArgs{
+			Keepers: pulumi.Float64Map{
+				"azi_id": pulumi.Float64(1),
+			},
+			ByteLength: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAppService, err := appservice.NewAppService(ctx, "exampleAppService", &appservice.AppServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewCustomHostnameBinding(ctx, "exampleCustomHostnameBinding", &appservice.CustomHostnameBindingArgs{
+			Hostname:          pulumi.String("www.mywebsite.com"),
+			AppServiceName:    exampleAppService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -151,7 +209,7 @@ const exampleCustomHostnameBinding = new azure.appservice.CustomHostnameBinding(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#CustomHostnameBinding">CustomHostnameBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>hostname=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>ssl_state=None<span class="p">, </span>thumbprint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.CustomHostnameBinding">CustomHostnameBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>hostname=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>ssl_state=None<span class="p">, </span>thumbprint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

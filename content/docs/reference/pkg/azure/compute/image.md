@@ -16,6 +16,117 @@ Manages a custom virtual machine image that can be used to create virtual machin
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Creating From VHD
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleImage = new Azure.Compute.Image("exampleImage", new Azure.Compute.ImageArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            OsDisk = new Azure.Compute.Inputs.ImageOsDiskArgs
+            {
+                OsType = "Linux",
+                OsState = "Generalized",
+                BlobUri = "{blob_uri}",
+                SizeGb = 30,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewImage(ctx, "exampleImage", &compute.ImageArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			OsDisk: &compute.ImageOsDiskArgs{
+				OsType:  pulumi.String("Linux"),
+				OsState: pulumi.String("Generalized"),
+				BlobUri: pulumi.String("{blob_uri}"),
+				SizeGb:  pulumi.Int(30),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_image = azure.compute.Image("exampleImage",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    os_disk={
+        "os_type": "Linux",
+        "osState": "Generalized",
+        "blobUri": "{blob_uri}",
+        "sizeGb": 30,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleImage = new azure.compute.Image("exampleImage", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    osDisk: {
+        osType: "Linux",
+        osState: "Generalized",
+        blobUri: "{blob_uri}",
+        sizeGb: 30,
+    },
+});
+```
+
+{{% /example %}}
+
 ### Creating From Virtual Machine (VM Must Be Generalized Beforehand)
 {{% example csharp %}}
 ```csharp
@@ -118,7 +229,7 @@ const exampleImage = new azure.compute.Image("exampleImage", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#Image">Image</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_disks=None<span class="p">, </span>hyper_v_generation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>os_disk=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_virtual_machine_id=None<span class="p">, </span>tags=None<span class="p">, </span>zone_resilient=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.Image">Image</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_disks=None<span class="p">, </span>hyper_v_generation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>os_disk=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_virtual_machine_id=None<span class="p">, </span>tags=None<span class="p">, </span>zone_resilient=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

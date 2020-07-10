@@ -72,7 +72,64 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewVirtualNetwork(ctx, "example_1VirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: example.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewVirtualNetwork(ctx, "example_2VirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: example.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewVirtualNetworkPeering(ctx, "example_1VirtualNetworkPeering", &network.VirtualNetworkPeeringArgs{
+			ResourceGroupName:      example.Name,
+			VirtualNetworkName:     example_1VirtualNetwork.Name,
+			RemoteVirtualNetworkId: example_2VirtualNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewVirtualNetworkPeering(ctx, "example_2VirtualNetworkPeering", &network.VirtualNetworkPeeringArgs{
+			ResourceGroupName:      example.Name,
+			VirtualNetworkName:     example_2VirtualNetwork.Name,
+			RemoteVirtualNetworkId: example_1VirtualNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -144,7 +201,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#VirtualNetworkPeering">VirtualNetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_forwarded_traffic=None<span class="p">, </span>allow_gateway_transit=None<span class="p">, </span>allow_virtual_network_access=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>use_remote_gateways=None<span class="p">, </span>virtual_network_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkPeering">VirtualNetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_forwarded_traffic=None<span class="p">, </span>allow_gateway_transit=None<span class="p">, </span>allow_virtual_network_access=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>use_remote_gateways=None<span class="p">, </span>virtual_network_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

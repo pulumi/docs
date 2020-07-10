@@ -63,7 +63,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "server", nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewPlan(ctx, "examplePlan", nil)
+		if err != nil {
+			return err
+		}
+		exampleAppService, err := appservice.NewAppService(ctx, "exampleAppService", nil)
+		if err != nil {
+			return err
+		}
+		exampleSlot, err := appservice.NewSlot(ctx, "exampleSlot", nil)
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewActiveSlot(ctx, "exampleActiveSlot", &appservice.ActiveSlotArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			AppServiceName:     exampleAppService.Name,
+			AppServiceSlotName: exampleSlot.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,7 +172,7 @@ const exampleActiveSlot = new azure.appservice.ActiveSlot("exampleActiveSlot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#ActiveSlot">ActiveSlot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>app_service_slot_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.ActiveSlot">ActiveSlot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>app_service_slot_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

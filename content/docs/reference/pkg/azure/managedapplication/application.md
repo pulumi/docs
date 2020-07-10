@@ -12,6 +12,150 @@ meta_desc: "Explore the Application resource of the managedapplication module, i
 
 Manages a Managed Application.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var builtin = Output.Create(Azure.Authorization.GetRoleDefinition.InvokeAsync(new Azure.Authorization.GetRoleDefinitionArgs
+        {
+            Name = "Contributor",
+        }));
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleDefinition = new Azure.ManagedApplication.Definition("exampleDefinition", new Azure.ManagedApplication.DefinitionArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            LockLevel = "ReadOnly",
+            PackageFileUri = "https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+            DisplayName = "TestManagedAppDefinition",
+            Description = "Test Managed App Definition",
+            Authorizations = 
+            {
+                new Azure.ManagedApplication.Inputs.DefinitionAuthorizationArgs
+                {
+                    ServicePrincipalId = current.Apply(current => current.ObjectId),
+                    RoleDefinitionId = Output.Tuple(builtin, builtin.Apply(builtin => builtin.Id.Split("/")).Length).Apply(values =>
+                    {
+                        var builtin = values.Item1;
+                        var length = values.Item2;
+                        return builtin.Id.Split("/")[length - 1];
+                    }),
+                },
+            },
+        });
+        var exampleApplication = new Azure.ManagedApplication.Application("exampleApplication", new Azure.ManagedApplication.ApplicationArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Kind = "ServiceCatalog",
+            ManagedResourceGroupName = "infrastructureGroup",
+            ApplicationDefinitionId = exampleDefinition.Id,
+            Parameters = 
+            {
+                { "location", exampleResourceGroup.Location },
+                { "storageAccountNamePrefix", "storeNamePrefix" },
+                { "storageAccountType", "Standard_LRS" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+builtin = azure.authorization.get_role_definition(name="Contributor")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_definition = azure.managedapplication.Definition("exampleDefinition",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    lock_level="ReadOnly",
+    package_file_uri="https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    display_name="TestManagedAppDefinition",
+    description="Test Managed App Definition",
+    authorizations=[{
+        "service_principal_id": current.object_id,
+        "role_definition_id": builtin.id.split("/")[len(builtin.id.split("/")) - 1],
+    }])
+example_application = azure.managedapplication.Application("exampleApplication",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="ServiceCatalog",
+    managed_resource_group_name="infrastructureGroup",
+    application_definition_id=example_definition.id,
+    parameters={
+        "location": example_resource_group.location,
+        "storageAccountNamePrefix": "storeNamePrefix",
+        "storage_account_type": "Standard_LRS",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const builtin = azure.authorization.getRoleDefinition({
+    name: "Contributor",
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDefinition = new azure.managedapplication.Definition("exampleDefinition", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    lockLevel: "ReadOnly",
+    packageFileUri: "https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    displayName: "TestManagedAppDefinition",
+    description: "Test Managed App Definition",
+    authorizations: [{
+        servicePrincipalId: current.then(current => current.objectId),
+        roleDefinitionId: Promise.all([builtin, builtin.then(builtin => builtin.id.split("/")).length]).then(([builtin, length]) => builtin.id.split("/")[length - 1]),
+    }],
+});
+const exampleApplication = new azure.managedapplication.Application("exampleApplication", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "ServiceCatalog",
+    managedResourceGroupName: "infrastructureGroup",
+    applicationDefinitionId: exampleDefinition.id,
+    parameters: {
+        location: exampleResourceGroup.location,
+        storageAccountNamePrefix: "storeNamePrefix",
+        storageAccountType: "Standard_LRS",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}
@@ -23,7 +167,7 @@ Manages a Managed Application.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_definition_id=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>managed_resource_group_name=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>plan=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#pulumi_azure.managedapplication.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_definition_id=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>managed_resource_group_name=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>plan=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

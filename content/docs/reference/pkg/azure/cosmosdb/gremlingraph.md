@@ -12,6 +12,226 @@ meta_desc: "Explore the GremlinGraph resource of the cosmosdb module, including 
 
 Manages a Gremlin Graph within a Cosmos DB Account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAccount = Output.Create(Azure.CosmosDB.GetAccount.InvokeAsync(new Azure.CosmosDB.GetAccountArgs
+        {
+            Name = "tfex-cosmosdb-account",
+            ResourceGroupName = "tfex-cosmosdb-account-rg",
+        }));
+        var exampleGremlinDatabase = new Azure.CosmosDB.GremlinDatabase("exampleGremlinDatabase", new Azure.CosmosDB.GremlinDatabaseArgs
+        {
+            ResourceGroupName = exampleAccount.Apply(exampleAccount => exampleAccount.ResourceGroupName),
+            AccountName = exampleAccount.Apply(exampleAccount => exampleAccount.Name),
+        });
+        var exampleGremlinGraph = new Azure.CosmosDB.GremlinGraph("exampleGremlinGraph", new Azure.CosmosDB.GremlinGraphArgs
+        {
+            ResourceGroupName = azurerm_cosmosdb_account.Example.Resource_group_name,
+            AccountName = azurerm_cosmosdb_account.Example.Name,
+            DatabaseName = exampleGremlinDatabase.Name,
+            PartitionKeyPath = "/Example",
+            Throughput = 400,
+            IndexPolicies = 
+            {
+                new Azure.CosmosDB.Inputs.GremlinGraphIndexPolicyArgs
+                {
+                    Automatic = true,
+                    IndexingMode = "Consistent",
+                    IncludedPaths = 
+                    {
+                        "/*",
+                    },
+                    ExcludedPaths = 
+                    {
+                        "/\"_etag\"/?",
+                    },
+                },
+            },
+            ConflictResolutionPolicies = 
+            {
+                new Azure.CosmosDB.Inputs.GremlinGraphConflictResolutionPolicyArgs
+                {
+                    Mode = "LastWriterWins",
+                    ConflictResolutionPath = "/_ts",
+                },
+            },
+            UniqueKeys = 
+            {
+                new Azure.CosmosDB.Inputs.GremlinGraphUniqueKeyArgs
+                {
+                    Paths = 
+                    {
+                        "/definition/id1",
+                        "/definition/id2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleAccount, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
+			Name:              "tfex-cosmosdb-account",
+			ResourceGroupName: "tfex-cosmosdb-account-rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleGremlinDatabase, err := cosmosdb.NewGremlinDatabase(ctx, "exampleGremlinDatabase", &cosmosdb.GremlinDatabaseArgs{
+			ResourceGroupName: pulumi.String(exampleAccount.ResourceGroupName),
+			AccountName:       pulumi.String(exampleAccount.Name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cosmosdb.NewGremlinGraph(ctx, "exampleGremlinGraph", &cosmosdb.GremlinGraphArgs{
+			ResourceGroupName: pulumi.String(azurerm_cosmosdb_account.Example.Resource_group_name),
+			AccountName:       pulumi.String(azurerm_cosmosdb_account.Example.Name),
+			DatabaseName:      exampleGremlinDatabase.Name,
+			PartitionKeyPath:  pulumi.String("/Example"),
+			Throughput:        pulumi.Int(400),
+			IndexPolicies: cosmosdb.GremlinGraphIndexPolicyArray{
+				&cosmosdb.GremlinGraphIndexPolicyArgs{
+					Automatic:    pulumi.Bool(true),
+					IndexingMode: pulumi.String("Consistent"),
+					IncludedPaths: pulumi.StringArray{
+						pulumi.String("/*"),
+					},
+					ExcludedPaths: pulumi.StringArray{
+						pulumi.String("/\"_etag\"/?"),
+					},
+				},
+			},
+			ConflictResolutionPolicies: cosmosdb.GremlinGraphConflictResolutionPolicyArray{
+				&cosmosdb.GremlinGraphConflictResolutionPolicyArgs{
+					Mode:                   pulumi.String("LastWriterWins"),
+					ConflictResolutionPath: pulumi.String("/_ts"),
+				},
+			},
+			UniqueKeys: cosmosdb.GremlinGraphUniqueKeyArray{
+				&cosmosdb.GremlinGraphUniqueKeyArgs{
+					Paths: pulumi.StringArray{
+						pulumi.String("/definition/id1"),
+						pulumi.String("/definition/id2"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_account = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
+    resource_group_name="tfex-cosmosdb-account-rg")
+example_gremlin_database = azure.cosmosdb.GremlinDatabase("exampleGremlinDatabase",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name)
+example_gremlin_graph = azure.cosmosdb.GremlinGraph("exampleGremlinGraph",
+    resource_group_name=azurerm_cosmosdb_account["example"]["resource_group_name"],
+    account_name=azurerm_cosmosdb_account["example"]["name"],
+    database_name=example_gremlin_database.name,
+    partition_key_path="/Example",
+    throughput=400,
+    index_policies=[{
+        "automatic": True,
+        "indexingMode": "Consistent",
+        "includedPaths": ["/*"],
+        "excludedPaths": ["/\"_etag\"/?"],
+    }],
+    conflict_resolution_policies=[{
+        "mode": "LastWriterWins",
+        "conflictResolutionPath": "/_ts",
+    }],
+    unique_keys=[{
+        "paths": [
+            "/definition/id1",
+            "/definition/id2",
+        ],
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleAccount = azure.cosmosdb.getAccount({
+    name: "tfex-cosmosdb-account",
+    resourceGroupName: "tfex-cosmosdb-account-rg",
+});
+const exampleGremlinDatabase = new azure.cosmosdb.GremlinDatabase("exampleGremlinDatabase", {
+    resourceGroupName: exampleAccount.then(exampleAccount => exampleAccount.resourceGroupName),
+    accountName: exampleAccount.then(exampleAccount => exampleAccount.name),
+});
+const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph", {
+    resourceGroupName: azurerm_cosmosdb_account.example.resource_group_name,
+    accountName: azurerm_cosmosdb_account.example.name,
+    databaseName: exampleGremlinDatabase.name,
+    partitionKeyPath: "/Example",
+    throughput: 400,
+    indexPolicies: [{
+        automatic: true,
+        indexingMode: "Consistent",
+        includedPaths: ["/*"],
+        excludedPaths: ["/\"_etag\"/?"],
+    }],
+    conflictResolutionPolicies: [{
+        mode: "LastWriterWins",
+        conflictResolutionPath: "/_ts",
+    }],
+    uniqueKeys: [{
+        paths: [
+            "/definition/id1",
+            "/definition/id2",
+        ],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GremlinGraph Resource {#create}
@@ -23,7 +243,7 @@ Manages a Gremlin Graph within a Cosmos DB Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#GremlinGraph">GremlinGraph</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>conflict_resolution_policies=None<span class="p">, </span>database_name=None<span class="p">, </span>index_policies=None<span class="p">, </span>name=None<span class="p">, </span>partition_key_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>unique_keys=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.GremlinGraph">GremlinGraph</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>conflict_resolution_policies=None<span class="p">, </span>database_name=None<span class="p">, </span>index_policies=None<span class="p">, </span>name=None<span class="p">, </span>partition_key_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>unique_keys=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -69,7 +69,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := blueprint.GetDefinition(ctx, &blueprint.GetDefinitionArgs{
+		_, err = blueprint.GetDefinition(ctx, &blueprint.GetDefinitionArgs{
 			Name:    "exampleManagementGroupBP",
 			ScopeId: root.Id,
 		}, nil)

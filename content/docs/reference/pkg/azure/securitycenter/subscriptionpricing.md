@@ -52,7 +52,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = securitycenter.NewSubscriptionPricing(ctx, "example", &securitycenter.SubscriptionPricingArgs{
+		_, err := securitycenter.NewSubscriptionPricing(ctx, "example", &securitycenter.SubscriptionPricingArgs{
 			Tier: pulumi.String("Standard"),
 		})
 		if err != nil {
@@ -100,7 +100,7 @@ const example = new azure.securitycenter.SubscriptionPricing("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/securitycenter/#SubscriptionPricing">SubscriptionPricing</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/securitycenter/#pulumi_azure.securitycenter.SubscriptionPricing">SubscriptionPricing</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

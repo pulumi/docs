@@ -100,7 +100,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = siterecovery.NewProtectionContainer(ctx, "protection-container", &siterecovery.ProtectionContainerArgs{
+		_, err = siterecovery.NewProtectionContainer(ctx, "protection_container", &siterecovery.ProtectionContainerArgs{
 			ResourceGroupName:  secondary.Name,
 			RecoveryVaultName:  vault.Name,
 			RecoveryFabricName: fabric.Name,
@@ -177,7 +177,7 @@ const protection_container = new azure.siterecovery.ProtectionContainer("protect
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#ProtectionContainer">ProtectionContainer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_fabric_name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ProtectionContainer">ProtectionContainer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_fabric_name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

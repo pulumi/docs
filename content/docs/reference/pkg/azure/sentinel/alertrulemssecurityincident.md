@@ -151,7 +151,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#AlertRuleMsSecurityIncident">AlertRuleMsSecurityIncident</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>name=None<span class="p">, </span>product_filter=None<span class="p">, </span>severity_filters=None<span class="p">, </span>text_whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#pulumi_azure.sentinel.AlertRuleMsSecurityIncident">AlertRuleMsSecurityIncident</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_filters=None<span class="p">, </span>enabled=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>name=None<span class="p">, </span>product_filter=None<span class="p">, </span>severity_filters=None<span class="p">, </span>text_whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -380,6 +380,17 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynamefilters_csharp">
+<a href="#displaynamefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -400,16 +411,15 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="textwhitelists_csharp">
 <a href="#textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -475,6 +485,17 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynamefilters_go">
+<a href="#displaynamefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -495,16 +516,15 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="textwhitelists_go">
 <a href="#textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -570,6 +590,17 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynamefilters_nodejs">
+<a href="#displaynamefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
@@ -590,16 +621,15 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="textwhitelists_nodejs">
 <a href="#textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -665,6 +695,17 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
+        <span id="display_name_filters_python">
+<a href="#display_name_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
@@ -685,16 +726,15 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="text_whitelists_python">
 <a href="#text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -794,7 +834,7 @@ Get an existing AlertRuleMsSecurityIncident resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>name=None<span class="p">, </span>product_filter=None<span class="p">, </span>severity_filters=None<span class="p">, </span>text_whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_filters=None<span class="p">, </span>enabled=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>name=None<span class="p">, </span>product_filter=None<span class="p">, </span>severity_filters=None<span class="p">, </span>text_whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -932,6 +972,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_displaynamefilters_csharp">
+<a href="#state_displaynamefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -985,16 +1036,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_textwhitelists_csharp">
 <a href="#state_textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1023,6 +1073,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displaynamefilters_go">
+<a href="#state_displaynamefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,16 +1141,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_textwhitelists_go">
 <a href="#state_textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1118,6 +1178,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displaynamefilters_nodejs">
+<a href="#state_displaynamefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,16 +1246,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_textwhitelists_nodejs">
 <a href="#state_textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1213,6 +1283,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_display_name_filters_python">
+<a href="#state_display_name_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1270,16 +1351,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_text_whitelists_python">
 <a href="#state_text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Only create incidents from alerts when alert name contain text in this list. No filter will happen if this field is absent.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

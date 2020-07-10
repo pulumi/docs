@@ -12,6 +12,168 @@ meta_desc: "Explore the Share resource of the storage module, including examples
 
 Manages a File Share within Azure Storage.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleShare = new Azure.Storage.Share("exampleShare", new Azure.Storage.ShareArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            Quota = 50,
+            Acls = 
+            {
+                new Azure.Storage.Inputs.ShareAclArgs
+                {
+                    Id = "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI",
+                    AccessPolicies = 
+                    {
+                        new Azure.Storage.Inputs.ShareAclAccessPolicyArgs
+                        {
+                            Permissions = "rwdl",
+                            Start = "2019-07-02T09:38:21.0000000Z",
+                            Expiry = "2019-07-02T10:38:21.0000000Z",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewShare(ctx, "exampleShare", &storage.ShareArgs{
+			StorageAccountName: exampleAccount.Name,
+			Quota:              pulumi.Int(50),
+			Acls: storage.ShareAclArray{
+				&storage.ShareAclArgs{
+					Id: pulumi.String("MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI"),
+					AccessPolicies: storage.ShareAclAccessPolicyArray{
+						&storage.ShareAclAccessPolicyArgs{
+							Permissions: pulumi.String("rwdl"),
+							Start:       pulumi.String("2019-07-02T09:38:21.0000000Z"),
+							Expiry:      pulumi.String("2019-07-02T10:38:21.0000000Z"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_share = azure.storage.Share("exampleShare",
+    storage_account_name=example_account.name,
+    quota=50,
+    acls=[{
+        "id": "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI",
+        "access_policies": [{
+            "permissions": "rwdl",
+            "start": "2019-07-02T09:38:21.0000000Z",
+            "expiry": "2019-07-02T10:38:21.0000000Z",
+        }],
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleShare = new azure.storage.Share("exampleShare", {
+    storageAccountName: exampleAccount.name,
+    quota: 50,
+    acls: [{
+        id: "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI",
+        accessPolicies: [{
+            permissions: "rwdl",
+            start: "2019-07-02T09:38:21.0000000Z",
+            expiry: "2019-07-02T10:38:21.0000000Z",
+        }],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Share Resource {#create}
@@ -23,7 +185,7 @@ Manages a File Share within Azure Storage.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#Share">Share</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>quota=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Share">Share</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>quota=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

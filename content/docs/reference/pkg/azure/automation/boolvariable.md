@@ -12,6 +12,63 @@ meta_desc: "Explore the BoolVariable resource of the automation module, includin
 
 Manages a boolean variable in Azure Automation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_bool_variable = azure.automation.BoolVariable("exampleBoolVariable",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    value=False)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleBoolVariable = new azure.automation.BoolVariable("exampleBoolVariable", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    value: false,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BoolVariable Resource {#create}
@@ -23,7 +80,7 @@ Manages a boolean variable in Azure Automation
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#BoolVariable">BoolVariable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>encrypted=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.BoolVariable">BoolVariable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>encrypted=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

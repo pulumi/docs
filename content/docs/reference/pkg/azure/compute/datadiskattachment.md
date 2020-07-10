@@ -16,6 +16,363 @@ Manages attaching a Disk to a Virtual Machine.
 
 > **Please Note:** only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the `storage_data_disk` block in the `azure.compute.VirtualMachine` resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var prefix = config.Get("prefix") ?? "example";
+        var vmName = $"{prefix}-vm";
+        var mainResourceGroup = new Azure.Core.ResourceGroup("mainResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var mainVirtualNetwork = new Azure.Network.VirtualNetwork("mainVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = mainResourceGroup.Location,
+            ResourceGroupName = mainResourceGroup.Name,
+        });
+        var @internal = new Azure.Network.Subnet("internal", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            VirtualNetworkName = mainVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var mainNetworkInterface = new Azure.Network.NetworkInterface("mainNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = mainResourceGroup.Location,
+            ResourceGroupName = mainResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "internal",
+                    SubnetId = @internal.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleVirtualMachine = new Azure.Compute.VirtualMachine("exampleVirtualMachine", new Azure.Compute.VirtualMachineArgs
+        {
+            Location = mainResourceGroup.Location,
+            ResourceGroupName = mainResourceGroup.Name,
+            NetworkInterfaceIds = 
+            {
+                mainNetworkInterface.Id,
+            },
+            VmSize = "Standard_F2",
+            StorageImageReference = new Azure.Compute.Inputs.VirtualMachineStorageImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+            StorageOsDisk = new Azure.Compute.Inputs.VirtualMachineStorageOsDiskArgs
+            {
+                Name = "myosdisk1",
+                Caching = "ReadWrite",
+                CreateOption = "FromImage",
+                ManagedDiskType = "Standard_LRS",
+            },
+            OsProfile = new Azure.Compute.Inputs.VirtualMachineOsProfileArgs
+            {
+                ComputerName = vmName,
+                AdminUsername = "testadmin",
+                AdminPassword = "Password1234!",
+            },
+            OsProfileLinuxConfig = new Azure.Compute.Inputs.VirtualMachineOsProfileLinuxConfigArgs
+            {
+                DisablePasswordAuthentication = false,
+            },
+        });
+        var exampleManagedDisk = new Azure.Compute.ManagedDisk("exampleManagedDisk", new Azure.Compute.ManagedDiskArgs
+        {
+            Location = mainResourceGroup.Location,
+            ResourceGroupName = mainResourceGroup.Name,
+            StorageAccountType = "Standard_LRS",
+            CreateOption = "Empty",
+            DiskSizeGb = 10,
+        });
+        var exampleDataDiskAttachment = new Azure.Compute.DataDiskAttachment("exampleDataDiskAttachment", new Azure.Compute.DataDiskAttachmentArgs
+        {
+            ManagedDiskId = exampleManagedDisk.Id,
+            VirtualMachineId = exampleVirtualMachine.Id,
+            Lun = 10,
+            Caching = "ReadWrite",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vmName := fmt.Sprintf("%v%v", prefix, "-vm")
+		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		mainVirtualNetwork, err := network.NewVirtualNetwork(ctx, "mainVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          mainResourceGroup.Location,
+			ResourceGroupName: mainResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		internal, err := network.NewSubnet(ctx, "internal", &network.SubnetArgs{
+			ResourceGroupName:  mainResourceGroup.Name,
+			VirtualNetworkName: mainVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		mainNetworkInterface, err := network.NewNetworkInterface(ctx, "mainNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          mainResourceGroup.Location,
+			ResourceGroupName: mainResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("internal"),
+					SubnetId:                   internal.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualMachine, err := compute.NewVirtualMachine(ctx, "exampleVirtualMachine", &compute.VirtualMachineArgs{
+			Location:          mainResourceGroup.Location,
+			ResourceGroupName: mainResourceGroup.Name,
+			NetworkInterfaceIds: pulumi.StringArray{
+				mainNetworkInterface.ID(),
+			},
+			VmSize: pulumi.String("Standard_F2"),
+			StorageImageReference: &compute.VirtualMachineStorageImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+			StorageOsDisk: &compute.VirtualMachineStorageOsDiskArgs{
+				Name:            pulumi.String("myosdisk1"),
+				Caching:         pulumi.String("ReadWrite"),
+				CreateOption:    pulumi.String("FromImage"),
+				ManagedDiskType: pulumi.String("Standard_LRS"),
+			},
+			OsProfile: &compute.VirtualMachineOsProfileArgs{
+				ComputerName:  pulumi.String(vmName),
+				AdminUsername: pulumi.String("testadmin"),
+				AdminPassword: pulumi.String("Password1234!"),
+			},
+			OsProfileLinuxConfig: &compute.VirtualMachineOsProfileLinuxConfigArgs{
+				DisablePasswordAuthentication: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleManagedDisk, err := compute.NewManagedDisk(ctx, "exampleManagedDisk", &compute.ManagedDiskArgs{
+			Location:           mainResourceGroup.Location,
+			ResourceGroupName:  mainResourceGroup.Name,
+			StorageAccountType: pulumi.String("Standard_LRS"),
+			CreateOption:       pulumi.String("Empty"),
+			DiskSizeGb:         pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewDataDiskAttachment(ctx, "exampleDataDiskAttachment", &compute.DataDiskAttachmentArgs{
+			ManagedDiskId:    exampleManagedDisk.ID(),
+			VirtualMachineId: exampleVirtualMachine.ID(),
+			Lun:              pulumi.Int(10),
+			Caching:          pulumi.String("ReadWrite"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+config = pulumi.Config()
+prefix = config.get("prefix")
+if prefix is None:
+    prefix = "example"
+vm_name = f"{prefix}-vm"
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West Europe")
+main_virtual_network = azure.network.VirtualNetwork("mainVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name)
+internal = azure.network.Subnet("internal",
+    resource_group_name=main_resource_group.name,
+    virtual_network_name=main_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+main_network_interface = azure.network.NetworkInterface("mainNetworkInterface",
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name,
+    ip_configurations=[{
+        "name": "internal",
+        "subnet_id": internal.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name,
+    network_interface_ids=[main_network_interface.id],
+    vm_size="Standard_F2",
+    storage_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_os_disk={
+        "name": "myosdisk1",
+        "caching": "ReadWrite",
+        "create_option": "FromImage",
+        "managedDiskType": "Standard_LRS",
+    },
+    os_profile={
+        "computer_name": vm_name,
+        "admin_username": "testadmin",
+        "admin_password": "Password1234!",
+    },
+    os_profile_linux_config={
+        "disable_password_authentication": False,
+    })
+example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb=10)
+example_data_disk_attachment = azure.compute.DataDiskAttachment("exampleDataDiskAttachment",
+    managed_disk_id=example_managed_disk.id,
+    virtual_machine_id=example_virtual_machine.id,
+    lun="10",
+    caching="ReadWrite")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const config = new pulumi.Config();
+const prefix = config.get("prefix") || "example";
+const vmName = `${prefix}-vm`;
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West Europe"});
+const mainVirtualNetwork = new azure.network.VirtualNetwork("mainVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+});
+const internal = new azure.network.Subnet("internal", {
+    resourceGroupName: mainResourceGroup.name,
+    virtualNetworkName: mainVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const mainNetworkInterface = new azure.network.NetworkInterface("mainNetworkInterface", {
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+    ipConfigurations: [{
+        name: "internal",
+        subnetId: internal.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleVirtualMachine = new azure.compute.VirtualMachine("exampleVirtualMachine", {
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+    networkInterfaceIds: [mainNetworkInterface.id],
+    vmSize: "Standard_F2",
+    storageImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storageOsDisk: {
+        name: "myosdisk1",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        managedDiskType: "Standard_LRS",
+    },
+    osProfile: {
+        computerName: vmName,
+        adminUsername: "testadmin",
+        adminPassword: "Password1234!",
+    },
+    osProfileLinuxConfig: {
+        disablePasswordAuthentication: false,
+    },
+});
+const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: 10,
+});
+const exampleDataDiskAttachment = new azure.compute.DataDiskAttachment("exampleDataDiskAttachment", {
+    managedDiskId: exampleManagedDisk.id,
+    virtualMachineId: exampleVirtualMachine.id,
+    lun: "10",
+    caching: "ReadWrite",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataDiskAttachment Resource {#create}
@@ -27,7 +384,7 @@ Manages attaching a Disk to a Virtual Machine.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#DataDiskAttachment">DataDiskAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>caching=None<span class="p">, </span>create_option=None<span class="p">, </span>lun=None<span class="p">, </span>managed_disk_id=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>write_accelerator_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.DataDiskAttachment">DataDiskAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>caching=None<span class="p">, </span>create_option=None<span class="p">, </span>lun=None<span class="p">, </span>managed_disk_id=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>write_accelerator_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

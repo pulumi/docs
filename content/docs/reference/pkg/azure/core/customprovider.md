@@ -12,6 +12,118 @@ meta_desc: "Explore the CustomProvider resource of the core module, including ex
 
 Manages an Azure Custom Provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleCustomProvider = new Azure.Core.CustomProvider("exampleCustomProvider", new Azure.Core.CustomProviderArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ResourceTypes = 
+            {
+                new Azure.Core.Inputs.CustomProviderResourceTypeArgs
+                {
+                    Name = "dEf1",
+                    Endpoint = "https://testendpoint.com/",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = core.NewCustomProvider(ctx, "exampleCustomProvider", &core.CustomProviderArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ResourceTypes: core.CustomProviderResourceTypeArray{
+				&core.CustomProviderResourceTypeArgs{
+					Name:     pulumi.String("dEf1"),
+					Endpoint: pulumi.String("https://testendpoint.com/"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_custom_provider = azure.core.CustomProvider("exampleCustomProvider",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    resource_types=[{
+        "name": "dEf1",
+        "endpoint": "https://testendpoint.com/",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleCustomProvider = new azure.core.CustomProvider("exampleCustomProvider", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    resourceTypes: [{
+        name: "dEf1",
+        endpoint: "https://testendpoint.com/",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomProvider Resource {#create}
@@ -23,7 +135,7 @@ Manages an Azure Custom Provider.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/core/#CustomProvider">CustomProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_types=None<span class="p">, </span>tags=None<span class="p">, </span>validations=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/core/#pulumi_azure.core.CustomProvider">CustomProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_types=None<span class="p">, </span>tags=None<span class="p">, </span>validations=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

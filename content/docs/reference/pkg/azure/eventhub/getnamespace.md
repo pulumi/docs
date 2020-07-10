@@ -288,6 +288,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="dedicatedclusterid_csharp">
+<a href="#dedicatedclusterid_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EventHub Dedicated Cluster where this Namespace exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultprimaryconnectionstring_csharp">
 <a href="#defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
 </span> 
@@ -441,6 +452,17 @@ authorization rule `RootManageSharedAccessKey`.
     <dd>{{% md %}}A mapping of tags to assign to the EventHub Namespace.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this EventHub Namespace deployed across Availability Zones?
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -468,6 +490,17 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Capacity / Throughput Units for a `Standard` SKU namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dedicatedclusterid_go">
+<a href="#dedicatedclusterid_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EventHub Dedicated Cluster where this Namespace exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -625,6 +658,17 @@ authorization rule `RootManageSharedAccessKey`.
     <dd>{{% md %}}A mapping of tags to assign to the EventHub Namespace.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this EventHub Namespace deployed across Availability Zones?
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -652,6 +696,17 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The Capacity / Throughput Units for a `Standard` SKU namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dedicatedclusterid_nodejs">
+<a href="#dedicatedclusterid_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EventHub Dedicated Cluster where this Namespace exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -809,6 +864,17 @@ authorization rule `RootManageSharedAccessKey`.
     <dd>{{% md %}}A mapping of tags to assign to the EventHub Namespace.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is this EventHub Namespace deployed across Availability Zones?
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -836,6 +902,17 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Capacity / Throughput Units for a `Standard` SKU namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dedicated_cluster_id_python">
+<a href="#dedicated_cluster_id_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>cluster_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EventHub Dedicated Cluster where this Namespace exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -991,6 +1068,17 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the EventHub Namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this EventHub Namespace deployed across Availability Zones?
 {{% /md %}}</dd>
 
 </dl>

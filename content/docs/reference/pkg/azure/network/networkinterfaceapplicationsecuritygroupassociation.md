@@ -12,6 +12,221 @@ meta_desc: "Explore the NetworkInterfaceApplicationSecurityGroupAssociation reso
 
 Manages the association between a Network Interface and a Application Security Group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.1.0/24",
+        });
+        var exampleApplicationSecurityGroup = new Azure.Network.ApplicationSecurityGroup("exampleApplicationSecurityGroup", new Azure.Network.ApplicationSecurityGroupArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "testconfiguration1",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                    ApplicationSecurityGroupIds = 
+                    {
+                        exampleApplicationSecurityGroup.Id,
+                    },
+                },
+            },
+        });
+        var exampleNetworkInterfaceApplicationSecurityGroupAssociation = new Azure.Network.NetworkInterfaceApplicationSecurityGroupAssociation("exampleNetworkInterfaceApplicationSecurityGroupAssociation", new Azure.Network.NetworkInterfaceApplicationSecurityGroupAssociationArgs
+        {
+            NetworkInterfaceId = exampleNetworkInterface.Id,
+            ApplicationSecurityGroupId = exampleApplicationSecurityGroup.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleApplicationSecurityGroup, err := network.NewApplicationSecurityGroup(ctx, "exampleApplicationSecurityGroup", &network.ApplicationSecurityGroupArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("testconfiguration1"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+					ApplicationSecurityGroupIds: pulumi.StringArray{
+						exampleApplicationSecurityGroup.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewNetworkInterfaceApplicationSecurityGroupAssociation(ctx, "exampleNetworkInterfaceApplicationSecurityGroupAssociation", &network.NetworkInterfaceApplicationSecurityGroupAssociationArgs{
+			NetworkInterfaceId:         exampleNetworkInterface.ID(),
+			ApplicationSecurityGroupId: exampleApplicationSecurityGroup.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+example_application_security_group = azure.network.ApplicationSecurityGroup("exampleApplicationSecurityGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "testconfiguration1",
+        "subnet_id": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+        "applicationSecurityGroupIds": [example_application_security_group.id],
+    }])
+example_network_interface_application_security_group_association = azure.network.NetworkInterfaceApplicationSecurityGroupAssociation("exampleNetworkInterfaceApplicationSecurityGroupAssociation",
+    network_interface_id=example_network_interface.id,
+    application_security_group_id=example_application_security_group.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const exampleApplicationSecurityGroup = new azure.network.ApplicationSecurityGroup("exampleApplicationSecurityGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+        applicationSecurityGroupIds: [exampleApplicationSecurityGroup.id],
+    }],
+});
+const exampleNetworkInterfaceApplicationSecurityGroupAssociation = new azure.network.NetworkInterfaceApplicationSecurityGroupAssociation("exampleNetworkInterfaceApplicationSecurityGroupAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    applicationSecurityGroupId: exampleApplicationSecurityGroup.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceApplicationSecurityGroupAssociation Resource {#create}
@@ -23,7 +238,7 @@ Manages the association between a Network Interface and a Application Security G
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#NetworkInterfaceApplicationSecurityGroupAssociation">NetworkInterfaceApplicationSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation">NetworkInterfaceApplicationSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

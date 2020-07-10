@@ -12,6 +12,460 @@ meta_desc: "Explore the Policy resource of the waf module, including examples, i
 
 Manages a Azure Web Application Firewall Policy instance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US 2",
+        });
+        var examplePolicy = new Azure.Waf.Policy("examplePolicy", new Azure.Waf.PolicyArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            CustomRules = 
+            {
+                new Azure.Waf.Inputs.PolicyCustomRuleArgs
+                {
+                    Name = "Rule1",
+                    Priority = 1,
+                    RuleType = "MatchRule",
+                    MatchConditions = 
+                    {
+                        new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionArgs
+                        {
+                            MatchVariables = 
+                            {
+                                new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionMatchVariableArgs
+                                {
+                                    VariableName = "RemoteAddr",
+                                },
+                            },
+                            Operator = "IPMatch",
+                            NegationCondition = false,
+                            MatchValues = 
+                            {
+                                "192.168.1.0/24",
+                                "10.0.0.0/24",
+                            },
+                        },
+                    },
+                    Action = "Block",
+                },
+                new Azure.Waf.Inputs.PolicyCustomRuleArgs
+                {
+                    Name = "Rule2",
+                    Priority = 2,
+                    RuleType = "MatchRule",
+                    MatchConditions = 
+                    {
+                        new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionArgs
+                        {
+                            MatchVariables = 
+                            {
+                                new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionMatchVariableArgs
+                                {
+                                    VariableName = "RemoteAddr",
+                                },
+                            },
+                            Operator = "IPMatch",
+                            NegationCondition = false,
+                            MatchValues = 
+                            {
+                                "192.168.1.0/24",
+                            },
+                        },
+                        new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionArgs
+                        {
+                            MatchVariables = 
+                            {
+                                new Azure.Waf.Inputs.PolicyCustomRuleMatchConditionMatchVariableArgs
+                                {
+                                    VariableName = "RequestHeaders",
+                                    Selector = "UserAgent",
+                                },
+                            },
+                            Operator = "Contains",
+                            NegationCondition = false,
+                            MatchValues = 
+                            {
+                                "Windows",
+                            },
+                        },
+                    },
+                    Action = "Block",
+                },
+            },
+            PolicySettings = new Azure.Waf.Inputs.PolicyPolicySettingsArgs
+            {
+                Enabled = true,
+                Mode = "Prevention",
+                RequestBodyCheck = true,
+                FileUploadLimitInMb = 100,
+                MaxRequestBodySizeInKb = 128,
+            },
+            ManagedRules = new Azure.Waf.Inputs.PolicyManagedRulesArgs
+            {
+                Exclusions = 
+                {
+                    new Azure.Waf.Inputs.PolicyManagedRulesExclusionArgs
+                    {
+                        MatchVariable = "RequestHeaderNames",
+                        Selector = "x-company-secret-header",
+                        SelectorMatchOperator = "Equals",
+                    },
+                    new Azure.Waf.Inputs.PolicyManagedRulesExclusionArgs
+                    {
+                        MatchVariable = "RequestCookieNames",
+                        Selector = "too-tasty",
+                        SelectorMatchOperator = "EndsWith",
+                    },
+                },
+                ManagedRuleSets = 
+                {
+                    new Azure.Waf.Inputs.PolicyManagedRulesManagedRuleSetArgs
+                    {
+                        Type = "OWASP",
+                        Version = "3.1",
+                        RuleGroupOverrides = 
+                        {
+                            new Azure.Waf.Inputs.PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs
+                            {
+                                RuleGroupName = "REQUEST-920-PROTOCOL-ENFORCEMENT",
+                                DisabledRules = 
+                                {
+                                    "920300",
+                                    "920440",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US 2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = waf.NewPolicy(ctx, "examplePolicy", &waf.PolicyArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			CustomRules: waf.PolicyCustomRuleArray{
+				&waf.PolicyCustomRuleArgs{
+					Name:     pulumi.String("Rule1"),
+					Priority: pulumi.Int(1),
+					RuleType: pulumi.String("MatchRule"),
+					MatchConditions: waf.PolicyCustomRuleMatchConditionArray{
+						&waf.PolicyCustomRuleMatchConditionArgs{
+							MatchVariables: waf.PolicyCustomRuleMatchConditionMatchVariableArray{
+								&waf.PolicyCustomRuleMatchConditionMatchVariableArgs{
+									VariableName: pulumi.String("RemoteAddr"),
+								},
+							},
+							Operator:          pulumi.String("IPMatch"),
+							NegationCondition: pulumi.Bool(false),
+							MatchValues: pulumi.StringArray{
+								pulumi.String("192.168.1.0/24"),
+								pulumi.String("10.0.0.0/24"),
+							},
+						},
+					},
+					Action: pulumi.String("Block"),
+				},
+				&waf.PolicyCustomRuleArgs{
+					Name:     pulumi.String("Rule2"),
+					Priority: pulumi.Int(2),
+					RuleType: pulumi.String("MatchRule"),
+					MatchConditions: waf.PolicyCustomRuleMatchConditionArray{
+						&waf.PolicyCustomRuleMatchConditionArgs{
+							MatchVariables: waf.PolicyCustomRuleMatchConditionMatchVariableArray{
+								&waf.PolicyCustomRuleMatchConditionMatchVariableArgs{
+									VariableName: pulumi.String("RemoteAddr"),
+								},
+							},
+							Operator:          pulumi.String("IPMatch"),
+							NegationCondition: pulumi.Bool(false),
+							MatchValues: pulumi.StringArray{
+								pulumi.String("192.168.1.0/24"),
+							},
+						},
+						&waf.PolicyCustomRuleMatchConditionArgs{
+							MatchVariables: waf.PolicyCustomRuleMatchConditionMatchVariableArray{
+								&waf.PolicyCustomRuleMatchConditionMatchVariableArgs{
+									VariableName: pulumi.String("RequestHeaders"),
+									Selector:     pulumi.String("UserAgent"),
+								},
+							},
+							Operator:          pulumi.String("Contains"),
+							NegationCondition: pulumi.Bool(false),
+							MatchValues: pulumi.StringArray{
+								pulumi.String("Windows"),
+							},
+						},
+					},
+					Action: pulumi.String("Block"),
+				},
+			},
+			PolicySettings: &waf.PolicyPolicySettingsArgs{
+				Enabled:                pulumi.Bool(true),
+				Mode:                   pulumi.String("Prevention"),
+				RequestBodyCheck:       pulumi.Bool(true),
+				FileUploadLimitInMb:    pulumi.Int(100),
+				MaxRequestBodySizeInKb: pulumi.Int(128),
+			},
+			ManagedRules: &waf.PolicyManagedRulesArgs{
+				Exclusions: waf.PolicyManagedRulesExclusionArray{
+					&waf.PolicyManagedRulesExclusionArgs{
+						MatchVariable:         pulumi.String("RequestHeaderNames"),
+						Selector:              pulumi.String("x-company-secret-header"),
+						SelectorMatchOperator: pulumi.String("Equals"),
+					},
+					&waf.PolicyManagedRulesExclusionArgs{
+						MatchVariable:         pulumi.String("RequestCookieNames"),
+						Selector:              pulumi.String("too-tasty"),
+						SelectorMatchOperator: pulumi.String("EndsWith"),
+					},
+				},
+				ManagedRuleSets: waf.PolicyManagedRulesManagedRuleSetArray{
+					&waf.PolicyManagedRulesManagedRuleSetArgs{
+						Type:    pulumi.String("OWASP"),
+						Version: pulumi.String("3.1"),
+						RuleGroupOverrides: waf.PolicyManagedRulesManagedRuleSetRuleGroupOverrideArray{
+							&waf.PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs{
+								RuleGroupName: pulumi.String("REQUEST-920-PROTOCOL-ENFORCEMENT"),
+								DisabledRules: pulumi.StringArray{
+									pulumi.String("920300"),
+									pulumi.String("920440"),
+								},
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_policy = azure.waf.Policy("examplePolicy",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    custom_rules=[
+        {
+            "name": "Rule1",
+            "priority": 1,
+            "ruleType": "MatchRule",
+            "matchConditions": [{
+                "matchVariables": [{
+                    "variableName": "RemoteAddr",
+                }],
+                "operator": "IPMatch",
+                "negationCondition": False,
+                "matchValues": [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+            "action": "Block",
+        },
+        {
+            "name": "Rule2",
+            "priority": 2,
+            "ruleType": "MatchRule",
+            "matchConditions": [
+                {
+                    "matchVariables": [{
+                        "variableName": "RemoteAddr",
+                    }],
+                    "operator": "IPMatch",
+                    "negationCondition": False,
+                    "matchValues": ["192.168.1.0/24"],
+                },
+                {
+                    "matchVariables": [{
+                        "variableName": "RequestHeaders",
+                        "selector": "UserAgent",
+                    }],
+                    "operator": "Contains",
+                    "negationCondition": False,
+                    "matchValues": ["Windows"],
+                },
+            ],
+            "action": "Block",
+        },
+    ],
+    policy_settings={
+        "enabled": True,
+        "mode": "Prevention",
+        "requestBodyCheck": True,
+        "fileUploadLimitInMb": 100,
+        "maxRequestBodySizeInKb": 128,
+    },
+    managed_rules={
+        "exclusions": [
+            {
+                "matchVariable": "RequestHeaderNames",
+                "selector": "x-company-secret-header",
+                "selectorMatchOperator": "Equals",
+            },
+            {
+                "matchVariable": "RequestCookieNames",
+                "selector": "too-tasty",
+                "selectorMatchOperator": "EndsWith",
+            },
+        ],
+        "managedRuleSets": [{
+            "type": "OWASP",
+            "version": "3.1",
+            "ruleGroupOverrides": [{
+                "ruleGroupName": "REQUEST-920-PROTOCOL-ENFORCEMENT",
+                "disabledRules": [
+                    "920300",
+                    "920440",
+                ],
+            }],
+        }],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const examplePolicy = new azure.waf.Policy("examplePolicy", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    customRules: [
+        {
+            name: "Rule1",
+            priority: 1,
+            ruleType: "MatchRule",
+            matchConditions: [{
+                matchVariables: [{
+                    variableName: "RemoteAddr",
+                }],
+                operator: "IPMatch",
+                negationCondition: false,
+                matchValues: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+            action: "Block",
+        },
+        {
+            name: "Rule2",
+            priority: 2,
+            ruleType: "MatchRule",
+            matchConditions: [
+                {
+                    matchVariables: [{
+                        variableName: "RemoteAddr",
+                    }],
+                    operator: "IPMatch",
+                    negationCondition: false,
+                    matchValues: ["192.168.1.0/24"],
+                },
+                {
+                    matchVariables: [{
+                        variableName: "RequestHeaders",
+                        selector: "UserAgent",
+                    }],
+                    operator: "Contains",
+                    negationCondition: false,
+                    matchValues: ["Windows"],
+                },
+            ],
+            action: "Block",
+        },
+    ],
+    policySettings: {
+        enabled: true,
+        mode: "Prevention",
+        requestBodyCheck: true,
+        fileUploadLimitInMb: 100,
+        maxRequestBodySizeInKb: 128,
+    },
+    managedRules: {
+        exclusions: [
+            {
+                matchVariable: "RequestHeaderNames",
+                selector: "x-company-secret-header",
+                selectorMatchOperator: "Equals",
+            },
+            {
+                matchVariable: "RequestCookieNames",
+                selector: "too-tasty",
+                selectorMatchOperator: "EndsWith",
+            },
+        ],
+        managedRuleSets: [{
+            type: "OWASP",
+            version: "3.1",
+            ruleGroupOverrides: [{
+                ruleGroupName: "REQUEST-920-PROTOCOL-ENFORCEMENT",
+                disabledRules: [
+                    "920300",
+                    "920440",
+                ],
+            }],
+        }],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}
@@ -23,7 +477,7 @@ Manages a Azure Web Application Firewall Policy instance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/waf/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>managed_rules=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/waf/#pulumi_azure.waf.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>managed_rules=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1408,6 +1862,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Describes if this is negate condition or not
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of transformations to do before the match is attempted.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1457,6 +1922,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of transformations to do before the match is attempted.
 {{% /md %}}</dd>
 
 </dl>
@@ -1510,6 +1986,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Describes if this is negate condition or not
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of transformations to do before the match is attempted.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1559,6 +2046,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of transformations to do before the match is attempted.
 {{% /md %}}</dd>
 
 </dl>
@@ -2036,7 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set version.
+    <dd>{{% md %}}The rule set version. Possible values: `0.1`, `1.0`, `2.2.9`, `3.0` and `3.1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2058,7 +2556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set type.
+    <dd>{{% md %}}The rule set type. Possible values: `Microsoft_BotManagerRuleSet` and `OWASP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2076,7 +2574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set version.
+    <dd>{{% md %}}The rule set version. Possible values: `0.1`, `1.0`, `2.2.9`, `3.0` and `3.1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2098,7 +2596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set type.
+    <dd>{{% md %}}The rule set type. Possible values: `Microsoft_BotManagerRuleSet` and `OWASP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2116,7 +2614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set version.
+    <dd>{{% md %}}The rule set version. Possible values: `0.1`, `1.0`, `2.2.9`, `3.0` and `3.1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2138,7 +2636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The rule set type.
+    <dd>{{% md %}}The rule set type. Possible values: `Microsoft_BotManagerRuleSet` and `OWASP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2156,7 +2654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The rule set version.
+    <dd>{{% md %}}The rule set version. Possible values: `0.1`, `1.0`, `2.2.9`, `3.0` and `3.1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2178,7 +2676,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The rule set type.
+    <dd>{{% md %}}The rule set type. Possible values: `Microsoft_BotManagerRuleSet` and `OWASP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2348,8 +2846,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileuploadlimitinmb_csharp">
+<a href="#fileuploadlimitinmb_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrequestbodysizeinkb_csharp">
+<a href="#maxrequestbodysizeinkb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2359,7 +2877,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes if it is in detection mode  or prevention mode at the policy level Defaults to `Prevention`.
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at the policy level. Defaults to `Prevention`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_csharp">
+<a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is Request Body Inspection enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2377,8 +2906,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileuploadlimitinmb_go">
+<a href="#fileuploadlimitinmb_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrequestbodysizeinkb_go">
+<a href="#maxrequestbodysizeinkb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2388,7 +2937,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes if it is in detection mode  or prevention mode at the policy level Defaults to `Prevention`.
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at the policy level. Defaults to `Prevention`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_go">
+<a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is Request Body Inspection enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2406,8 +2966,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileuploadlimitinmb_nodejs">
+<a href="#fileuploadlimitinmb_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrequestbodysizeinkb_nodejs">
+<a href="#maxrequestbodysizeinkb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2417,7 +2997,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes if it is in detection mode  or prevention mode at the policy level Defaults to `Prevention`.
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at the policy level. Defaults to `Prevention`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_nodejs">
+<a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is Request Body Inspection enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2435,8 +3026,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileuploadlimitinmb_python">
+<a href="#fileuploadlimitinmb_python" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrequestbodysizeinkb_python">
+<a href="#maxrequestbodysizeinkb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2446,7 +3057,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes if it is in detection mode  or prevention mode at the policy level Defaults to `Prevention`.
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at the policy level. Defaults to `Prevention`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_python">
+<a href="#requestbodycheck_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is Request Body Inspection enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>

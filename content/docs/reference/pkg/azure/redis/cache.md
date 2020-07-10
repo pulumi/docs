@@ -11,7 +11,6 @@ meta_desc: "Explore the Cache resource of the redis module, including examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a Redis Cache.
-
 ## Default Redis Configuration Values
 
 | Redis Value                     | Basic        | Standard     | Premium      |
@@ -39,6 +38,124 @@ A `patch_schedule` block supports the following:
  - [Azure Redis Cache: SKU specific configuration limitations](https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings)
  - [Redis: Available Configuration Settings](http://redis.io/topics/config)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        // NOTE: the Name used for Redis needs to be globally unique
+        var exampleCache = new Azure.Redis.Cache("exampleCache", new Azure.Redis.CacheArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Capacity = 2,
+            Family = "C",
+            SkuName = "Standard",
+            EnableNonSslPort = false,
+            MinimumTlsVersion = "1.2",
+            RedisConfiguration = ,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = redis.NewCache(ctx, "exampleCache", &redis.CacheArgs{
+			Location:           exampleResourceGroup.Location,
+			ResourceGroupName:  exampleResourceGroup.Name,
+			Capacity:           pulumi.Int(2),
+			Family:             pulumi.String("C"),
+			SkuName:            pulumi.String("Standard"),
+			EnableNonSslPort:   pulumi.Bool(false),
+			MinimumTlsVersion:  pulumi.String("1.2"),
+			RedisConfiguration: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+# NOTE: the Name used for Redis needs to be globally unique
+example_cache = azure.redis.Cache("exampleCache",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    capacity=2,
+    family="C",
+    sku_name="Standard",
+    enable_non_ssl_port=False,
+    minimum_tls_version="1.2",
+    redis_configuration={})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+// NOTE: the Name used for Redis needs to be globally unique
+const exampleCache = new azure.redis.Cache("exampleCache", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    capacity: 2,
+    family: "C",
+    skuName: "Standard",
+    enableNonSslPort: false,
+    minimumTlsVersion: "1.2",
+    redisConfiguration: {},
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cache Resource {#create}
@@ -50,7 +167,7 @@ A `patch_schedule` block supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/redis/#Cache">Cache</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capacity=None<span class="p">, </span>enable_non_ssl_port=None<span class="p">, </span>family=None<span class="p">, </span>location=None<span class="p">, </span>minimum_tls_version=None<span class="p">, </span>name=None<span class="p">, </span>patch_schedules=None<span class="p">, </span>private_static_ip_address=None<span class="p">, </span>redis_configuration=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_count=None<span class="p">, </span>sku_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/redis/#pulumi_azure.redis.Cache">Cache</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capacity=None<span class="p">, </span>enable_non_ssl_port=None<span class="p">, </span>family=None<span class="p">, </span>location=None<span class="p">, </span>minimum_tls_version=None<span class="p">, </span>name=None<span class="p">, </span>patch_schedules=None<span class="p">, </span>private_static_ip_address=None<span class="p">, </span>redis_configuration=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_count=None<span class="p">, </span>sku_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

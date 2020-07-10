@@ -431,6 +431,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdisksnapshotid_csharp">
+<a href="#osdisksnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which was the source of this Shared Image Version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -541,6 +552,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which this Image Version exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="osdisksnapshotid_go">
+<a href="#osdisksnapshotid_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which was the source of this Shared Image Version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -659,6 +681,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdisksnapshotid_nodejs">
+<a href="#osdisksnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which was the source of this Shared Image Version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -769,6 +802,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which this Image Version exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="os_disk_snapshot_id_python">
+<a href="#os_disk_snapshot_id_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>snapshot_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which was the source of this Shared Image Version.
 {{% /md %}}</dd>
 
     <dt class="property-"

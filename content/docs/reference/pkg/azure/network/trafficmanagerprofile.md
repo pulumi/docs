@@ -12,6 +12,192 @@ meta_desc: "Explore the TrafficManagerProfile resource of the network module, in
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new Random.RandomId("server", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "azi_id", 1 },
+            },
+            ByteLength = 8,
+        });
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleTrafficManagerProfile = new Azure.Network.TrafficManagerProfile("exampleTrafficManagerProfile", new Azure.Network.TrafficManagerProfileArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            TrafficRoutingMethod = "Weighted",
+            DnsConfig = new Azure.Network.Inputs.TrafficManagerProfileDnsConfigArgs
+            {
+                RelativeName = server.Hex,
+                Ttl = 100,
+            },
+            MonitorConfig = new Azure.Network.Inputs.TrafficManagerProfileMonitorConfigArgs
+            {
+                Protocol = "http",
+                Port = 80,
+                Path = "/",
+                IntervalInSeconds = 30,
+                TimeoutInSeconds = 9,
+                ToleratedNumberOfFailures = 3,
+            },
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		server, err := random.NewRandomId(ctx, "server", &random.RandomIdArgs{
+			Keepers: pulumi.Float64Map{
+				"azi_id": pulumi.Float64(1),
+			},
+			ByteLength: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewTrafficManagerProfile(ctx, "exampleTrafficManagerProfile", &network.TrafficManagerProfileArgs{
+			ResourceGroupName:    exampleResourceGroup.Name,
+			TrafficRoutingMethod: pulumi.String("Weighted"),
+			DnsConfig: &network.TrafficManagerProfileDnsConfigArgs{
+				RelativeName: server.Hex,
+				Ttl:          pulumi.Int(100),
+			},
+			MonitorConfig: &network.TrafficManagerProfileMonitorConfigArgs{
+				Protocol:                  pulumi.String("http"),
+				Port:                      pulumi.Int(80),
+				Path:                      pulumi.String("/"),
+				IntervalInSeconds:         pulumi.Int(30),
+				TimeoutInSeconds:          pulumi.Int(9),
+				ToleratedNumberOfFailures: pulumi.Int(3),
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_traffic_manager_profile = azure.network.TrafficManagerProfile("exampleTrafficManagerProfile",
+    resource_group_name=example_resource_group.name,
+    traffic_routing_method="Weighted",
+    dns_config={
+        "relativeName": server.hex,
+        "ttl": 100,
+    },
+    monitor_config={
+        "protocol": "http",
+        "port": 80,
+        "path": "/",
+        "interval_in_seconds": 30,
+        "timeoutInSeconds": 9,
+        "toleratedNumberOfFailures": 3,
+    },
+    tags={
+        "environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("exampleTrafficManagerProfile", {
+    resourceGroupName: exampleResourceGroup.name,
+    trafficRoutingMethod: "Weighted",
+    dnsConfig: {
+        relativeName: server.hex,
+        ttl: 100,
+    },
+    monitorConfig: {
+        protocol: "http",
+        port: 80,
+        path: "/",
+        intervalInSeconds: 30,
+        timeoutInSeconds: 9,
+        toleratedNumberOfFailures: 3,
+    },
+    tags: {
+        environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TrafficManagerProfile Resource {#create}
@@ -23,7 +209,7 @@ Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#TrafficManagerProfile">TrafficManagerProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns_config=None<span class="p">, </span>monitor_config=None<span class="p">, </span>name=None<span class="p">, </span>profile_status=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_routing_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.TrafficManagerProfile">TrafficManagerProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns_config=None<span class="p">, </span>monitor_config=None<span class="p">, </span>name=None<span class="p">, </span>profile_status=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_routing_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

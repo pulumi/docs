@@ -52,7 +52,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = network.NewPointToPointVpnGateway(ctx, "example", &network.PointToPointVpnGatewayArgs{
+		_, err := network.NewPointToPointVpnGateway(ctx, "example", &network.PointToPointVpnGatewayArgs{
 			Location:                 pulumi.String(azurerm_resource_group.Example.Location),
 			ResourceGroupName:        pulumi.String(azurerm_resource_group.Example.Resource_group_name),
 			VirtualHubId:             pulumi.String(azurerm_virtual_hub.Example.Id),
@@ -113,7 +113,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_configuration=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scale_unit=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vpn_server_configuration_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_configuration=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scale_unit=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vpn_server_configuration_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

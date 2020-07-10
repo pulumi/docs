@@ -14,6 +14,322 @@ Manages a Private Link Service.
 
 > **NOTE** Private Link is now in [GA](https://docs.microsoft.com/en-gb/azure/private-link/).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AddressSpaces = 
+            {
+                "10.5.0.0/16",
+            },
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.5.1.0/24",
+            EnforcePrivateLinkServiceNetworkPolicies = true,
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Sku = "Standard",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+        });
+        var exampleLoadBalancer = new Azure.Lb.LoadBalancer("exampleLoadBalancer", new Azure.Lb.LoadBalancerArgs
+        {
+            Sku = "Standard",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            FrontendIpConfigurations = 
+            {
+                new Azure.Lb.Inputs.LoadBalancerFrontendIpConfigurationArgs
+                {
+                    Name = examplePublicIp.Name,
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var exampleLinkService = new Azure.PrivateDns.LinkService("exampleLinkService", new Azure.PrivateDns.LinkServiceArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AutoApprovalSubscriptionIds = 
+            {
+                "00000000-0000-0000-0000-000000000000",
+            },
+            VisibilitySubscriptionIds = 
+            {
+                "00000000-0000-0000-0000-000000000000",
+            },
+            LoadBalancerFrontendIpConfigurationIds = 
+            {
+                exampleLoadBalancer.FrontendIpConfigurations.Apply(frontendIpConfigurations => frontendIpConfigurations[0].Id),
+            },
+            NatIpConfigurations = 
+            {
+                new Azure.PrivateDns.Inputs.LinkServiceNatIpConfigurationArgs
+                {
+                    Name = "primary",
+                    PrivateIpAddress = "10.5.1.17",
+                    PrivateIpAddressVersion = "IPv4",
+                    SubnetId = exampleSubnet.Id,
+                    Primary = true,
+                },
+                new Azure.PrivateDns.Inputs.LinkServiceNatIpConfigurationArgs
+                {
+                    Name = "secondary",
+                    PrivateIpAddress = "10.5.1.18",
+                    PrivateIpAddressVersion = "IPv4",
+                    SubnetId = exampleSubnet.Id,
+                    Primary = false,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.5.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:                        exampleResourceGroup.Name,
+			VirtualNetworkName:                       exampleVirtualNetwork.Name,
+			AddressPrefix:                            pulumi.String("10.5.1.0/24"),
+			EnforcePrivateLinkServiceNetworkPolicies: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Sku:               pulumi.String("Standard"),
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			Sku:               pulumi.String("Standard"),
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			FrontendIpConfigurations: lb.LoadBalancerFrontendIpConfigurationArray{
+				&lb.LoadBalancerFrontendIpConfigurationArgs{
+					Name:              examplePublicIp.Name,
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = privatedns.NewLinkService(ctx, "exampleLinkService", &privatedns.LinkServiceArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			AutoApprovalSubscriptionIds: pulumi.StringArray{
+				pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			VisibilitySubscriptionIds: pulumi.StringArray{
+				pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			LoadBalancerFrontendIpConfigurationIds: pulumi.StringArray{
+				pulumi.String(exampleLoadBalancer.FrontendIpConfigurations.ApplyT(func(frontendIpConfigurations []lb.LoadBalancerFrontendIpConfiguration) (string, error) {
+					return frontendIpConfigurations[0].Id, nil
+				}).(pulumi.StringOutput)),
+			},
+			NatIpConfigurations: privatedns.LinkServiceNatIpConfigurationArray{
+				&privatedns.LinkServiceNatIpConfigurationArgs{
+					Name:                    pulumi.String("primary"),
+					PrivateIpAddress:        pulumi.String("10.5.1.17"),
+					PrivateIpAddressVersion: pulumi.String("IPv4"),
+					SubnetId:                exampleSubnet.ID(),
+					Primary:                 pulumi.Bool(true),
+				},
+				&privatedns.LinkServiceNatIpConfigurationArgs{
+					Name:                    pulumi.String("secondary"),
+					PrivateIpAddress:        pulumi.String("10.5.1.18"),
+					PrivateIpAddressVersion: pulumi.String("IPv4"),
+					SubnetId:                exampleSubnet.ID(),
+					Primary:                 pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    address_spaces=["10.5.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.5.1.0/24",
+    enforce_private_link_service_network_policies=True)
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configurations=[{
+        "name": example_public_ip.name,
+        "public_ip_address_id": example_public_ip.id,
+    }])
+example_link_service = azure.privatedns.LinkService("exampleLinkService",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    auto_approval_subscription_ids=["00000000-0000-0000-0000-000000000000"],
+    visibility_subscription_ids=["00000000-0000-0000-0000-000000000000"],
+    load_balancer_frontend_ip_configuration_ids=[example_load_balancer.frontend_ip_configurations[0]["id"]],
+    nat_ip_configurations=[
+        {
+            "name": "primary",
+            "private_ip_address": "10.5.1.17",
+            "privateIpAddressVersion": "IPv4",
+            "subnet_id": example_subnet.id,
+            "primary": True,
+        },
+        {
+            "name": "secondary",
+            "private_ip_address": "10.5.1.18",
+            "privateIpAddressVersion": "IPv4",
+            "subnet_id": example_subnet.id,
+            "primary": False,
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    addressSpaces: ["10.5.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.5.1.0/24",
+    enforcePrivateLinkServiceNetworkPolicies: true,
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontendIpConfigurations: [{
+        name: examplePublicIp.name,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleLinkService = new azure.privatedns.LinkService("exampleLinkService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    autoApprovalSubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
+    visibilitySubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
+    loadBalancerFrontendIpConfigurationIds: [exampleLoadBalancer.frontendIpConfigurations.apply(frontendIpConfigurations => frontendIpConfigurations[0].id)],
+    natIpConfigurations: [
+        {
+            name: "primary",
+            privateIpAddress: "10.5.1.17",
+            privateIpAddressVersion: "IPv4",
+            subnetId: exampleSubnet.id,
+            primary: true,
+        },
+        {
+            name: "secondary",
+            privateIpAddress: "10.5.1.18",
+            privateIpAddressVersion: "IPv4",
+            subnetId: exampleSubnet.id,
+            primary: false,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkService Resource {#create}
@@ -25,7 +341,7 @@ Manages a Private Link Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#LinkService">LinkService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_approval_subscription_ids=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>load_balancer_frontend_ip_configuration_ids=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_configurations=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_subscription_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.LinkService">LinkService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_approval_subscription_ids=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>load_balancer_frontend_ip_configuration_ids=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_configurations=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_subscription_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

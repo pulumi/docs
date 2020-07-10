@@ -12,6 +12,185 @@ meta_desc: "Explore the SpringCloudService resource of the appplatform module, i
 
 Manages an Azure Spring Cloud Service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "Southeast Asia",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "web",
+        });
+        var exampleSpringCloudService = new Azure.AppPlatform.SpringCloudService("exampleSpringCloudService", new Azure.AppPlatform.SpringCloudServiceArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            SkuName = "S0",
+            ConfigServerGitSetting = new Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingArgs
+            {
+                Uri = "https://github.com/Azure-Samples/piggymetrics",
+                Label = "config",
+                SearchPaths = 
+                {
+                    "dir1",
+                    "dir2",
+                },
+            },
+            Trace = new Azure.AppPlatform.Inputs.SpringCloudServiceTraceArgs
+            {
+                InstrumentationKey = exampleInsights.InstrumentationKey,
+            },
+            Tags = 
+            {
+                { "Env", "staging" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("Southeast Asia"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleInsights, err := appinsights.NewInsights(ctx, "exampleInsights", &appinsights.InsightsArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationType:   pulumi.String("web"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appplatform.NewSpringCloudService(ctx, "exampleSpringCloudService", &appplatform.SpringCloudServiceArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			SkuName:           pulumi.String("S0"),
+			ConfigServerGitSetting: &appplatform.SpringCloudServiceConfigServerGitSettingArgs{
+				Uri:   pulumi.String("https://github.com/Azure-Samples/piggymetrics"),
+				Label: pulumi.String("config"),
+				SearchPaths: pulumi.StringArray{
+					pulumi.String("dir1"),
+					pulumi.String("dir2"),
+				},
+			},
+			Trace: &appplatform.SpringCloudServiceTraceArgs{
+				InstrumentationKey: exampleInsights.InstrumentationKey,
+			},
+			Tags: pulumi.StringMap{
+				"Env": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Southeast Asia")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpringCloudService",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku_name="S0",
+    config_server_git_setting={
+        "uri": "https://github.com/Azure-Samples/piggymetrics",
+        "label": "config",
+        "searchPaths": [
+            "dir1",
+            "dir2",
+        ],
+    },
+    trace={
+        "instrumentation_key": example_insights.instrumentation_key,
+    },
+    tags={
+        "Env": "staging",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Southeast Asia"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exampleSpringCloudService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    skuName: "S0",
+    configServerGitSetting: {
+        uri: "https://github.com/Azure-Samples/piggymetrics",
+        label: "config",
+        searchPaths: [
+            "dir1",
+            "dir2",
+        ],
+    },
+    trace: {
+        instrumentationKey: exampleInsights.instrumentationKey,
+    },
+    tags: {
+        Env: "staging",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpringCloudService Resource {#create}
@@ -23,7 +202,7 @@ Manages an Azure Spring Cloud Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#SpringCloudService">SpringCloudService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_server_git_setting=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_server_git_setting=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>trace=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -241,6 +420,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_csharp">
+<a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -248,6 +438,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trace_csharp">
+<a href="#trace_csharp" style="color: inherit; text-decoration: inherit;">Trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -303,6 +504,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_go">
+<a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -310,6 +522,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trace_go">
+<a href="#trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -365,6 +588,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_nodejs">
+<a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -372,6 +606,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trace_nodejs">
+<a href="#trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -427,6 +672,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sku_name_python">
+<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -434,6 +690,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trace_python">
+<a href="#trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Trace]</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -534,7 +801,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config_server_git_setting=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config_server_git_setting=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>trace=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -694,6 +961,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_csharp">
+<a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -701,6 +979,17 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trace_csharp">
+<a href="#state_trace_csharp" style="color: inherit; text-decoration: inherit;">Trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -756,6 +1045,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_go">
+<a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -763,6 +1063,17 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trace_go">
+<a href="#state_trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -818,6 +1129,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_nodejs">
+<a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -825,6 +1147,17 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trace_nodejs">
+<a href="#state_trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -880,6 +1213,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sku_name_python">
+<a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -887,6 +1231,17 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trace_python">
+<a href="#state_trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Trace]</a></span>
+    </dt>
+    <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2271,6 +2626,96 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceTrace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceTrace">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceTraceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceTraceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceTraceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceTrace.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instrumentationkey_csharp">
+<a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instrumentationkey_go">
+<a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instrumentationkey_nodejs">
+<a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instrumentation_key_python">
+<a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
 {{% /md %}}</dd>
 
 </dl>

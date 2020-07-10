@@ -12,6 +12,228 @@ meta_desc: "Explore the FailoverGroup resource of the sql module, including exam
 
 Create a failover group of databases on a collection of Azure SQL servers.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "uksouth",
+        });
+        var primary = new Azure.Sql.SqlServer("primary", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "sqladmin",
+            AdministratorLoginPassword = "pa$$w0rd",
+        });
+        var secondary = new Azure.Sql.SqlServer("secondary", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "northeurope",
+            Version = "12.0",
+            AdministratorLogin = "sqladmin",
+            AdministratorLoginPassword = "pa$$w0rd",
+        });
+        var db1 = new Azure.Sql.Database("db1", new Azure.Sql.DatabaseArgs
+        {
+            ResourceGroupName = primary.ResourceGroupName,
+            Location = primary.Location,
+            ServerName = primary.Name,
+        });
+        var exampleFailoverGroup = new Azure.Sql.FailoverGroup("exampleFailoverGroup", new Azure.Sql.FailoverGroupArgs
+        {
+            ResourceGroupName = primary.ResourceGroupName,
+            ServerName = primary.Name,
+            Databases = 
+            {
+                db1.Id,
+            },
+            PartnerServers = 
+            {
+                new Azure.Sql.Inputs.FailoverGroupPartnerServerArgs
+                {
+                    Id = secondary.Id,
+                },
+            },
+            ReadWriteEndpointFailoverPolicy = new Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs
+            {
+                Mode = "Automatic",
+                GraceMinutes = 60,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("uksouth"),
+		})
+		if err != nil {
+			return err
+		}
+		primary, err := sql.NewSqlServer(ctx, "primary", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("sqladmin"),
+			AdministratorLoginPassword: pulumi.String(fmt.Sprintf("%v%v%v%v", "pa", "$", "$", "w0rd")),
+		})
+		if err != nil {
+			return err
+		}
+		secondary, err := sql.NewSqlServer(ctx, "secondary", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   pulumi.String("northeurope"),
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("sqladmin"),
+			AdministratorLoginPassword: pulumi.String(fmt.Sprintf("%v%v%v%v", "pa", "$", "$", "w0rd")),
+		})
+		if err != nil {
+			return err
+		}
+		db1, err := sql.NewDatabase(ctx, "db1", &sql.DatabaseArgs{
+			ResourceGroupName: primary.ResourceGroupName,
+			Location:          primary.Location,
+			ServerName:        primary.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sql.NewFailoverGroup(ctx, "exampleFailoverGroup", &sql.FailoverGroupArgs{
+			ResourceGroupName: primary.ResourceGroupName,
+			ServerName:        primary.Name,
+			Databases: pulumi.StringArray{
+				db1.ID(),
+			},
+			PartnerServers: sql.FailoverGroupPartnerServerArray{
+				&sql.FailoverGroupPartnerServerArgs{
+					Id: secondary.ID(),
+				},
+			},
+			ReadWriteEndpointFailoverPolicy: &sql.FailoverGroupReadWriteEndpointFailoverPolicyArgs{
+				Mode:         pulumi.String("Automatic"),
+				GraceMinutes: pulumi.Int(60),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="uksouth")
+primary = azure.sql.SqlServer("primary",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="sqladmin",
+    administrator_login_password="pa$$w0rd")
+secondary = azure.sql.SqlServer("secondary",
+    resource_group_name=example_resource_group.name,
+    location="northeurope",
+    version="12.0",
+    administrator_login="sqladmin",
+    administrator_login_password="pa$$w0rd")
+db1 = azure.sql.Database("db1",
+    resource_group_name=primary.resource_group_name,
+    location=primary.location,
+    server_name=primary.name)
+example_failover_group = azure.sql.FailoverGroup("exampleFailoverGroup",
+    resource_group_name=primary.resource_group_name,
+    server_name=primary.name,
+    databases=[db1.id],
+    partner_servers=[{
+        "id": secondary.id,
+    }],
+    read_write_endpoint_failover_policy={
+        "mode": "Automatic",
+        "graceMinutes": 60,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "uksouth"});
+const primary = new azure.sql.SqlServer("primary", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "sqladmin",
+    administratorLoginPassword: `pa$$w0rd`,
+});
+const secondary = new azure.sql.SqlServer("secondary", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "northeurope",
+    version: "12.0",
+    administratorLogin: "sqladmin",
+    administratorLoginPassword: `pa$$w0rd`,
+});
+const db1 = new azure.sql.Database("db1", {
+    resourceGroupName: primary.resourceGroupName,
+    location: primary.location,
+    serverName: primary.name,
+});
+const exampleFailoverGroup = new azure.sql.FailoverGroup("exampleFailoverGroup", {
+    resourceGroupName: primary.resourceGroupName,
+    serverName: primary.name,
+    databases: [db1.id],
+    partnerServers: [{
+        id: secondary.id,
+    }],
+    readWriteEndpointFailoverPolicy: {
+        mode: "Automatic",
+        graceMinutes: 60,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FailoverGroup Resource {#create}
@@ -23,7 +245,7 @@ Create a failover group of databases on a collection of Azure SQL servers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#FailoverGroup">FailoverGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>databases=None<span class="p">, </span>name=None<span class="p">, </span>partner_servers=None<span class="p">, </span>read_write_endpoint_failover_policy=None<span class="p">, </span>readonly_endpoint_failover_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.FailoverGroup">FailoverGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>databases=None<span class="p">, </span>name=None<span class="p">, </span>partner_servers=None<span class="p">, </span>read_write_endpoint_failover_policy=None<span class="p">, </span>readonly_endpoint_failover_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

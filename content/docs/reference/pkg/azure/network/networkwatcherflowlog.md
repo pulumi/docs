@@ -12,6 +12,253 @@ meta_desc: "Explore the NetworkWatcherFlowLog resource of the network module, in
 
 Manages a Network Watcher Flow Log.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus",
+        });
+        var testNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup("testNetworkSecurityGroup", new Azure.Network.NetworkSecurityGroupArgs
+        {
+            Location = testResourceGroup.Location,
+            ResourceGroupName = testResourceGroup.Name,
+        });
+        var testNetworkWatcher = new Azure.Network.NetworkWatcher("testNetworkWatcher", new Azure.Network.NetworkWatcherArgs
+        {
+            Location = testResourceGroup.Location,
+            ResourceGroupName = testResourceGroup.Name,
+        });
+        var testAccount = new Azure.Storage.Account("testAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = testResourceGroup.Name,
+            Location = testResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountKind = "StorageV2",
+            AccountReplicationType = "LRS",
+            EnableHttpsTrafficOnly = true,
+        });
+        var testAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace("testAnalyticsWorkspace", new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+        {
+            Location = testResourceGroup.Location,
+            ResourceGroupName = testResourceGroup.Name,
+            Sku = "PerGB2018",
+        });
+        var testNetworkWatcherFlowLog = new Azure.Network.NetworkWatcherFlowLog("testNetworkWatcherFlowLog", new Azure.Network.NetworkWatcherFlowLogArgs
+        {
+            NetworkWatcherName = testNetworkWatcher.Name,
+            ResourceGroupName = testResourceGroup.Name,
+            NetworkSecurityGroupId = testNetworkSecurityGroup.Id,
+            StorageAccountId = testAccount.Id,
+            Enabled = true,
+            RetentionPolicy = new Azure.Network.Inputs.NetworkWatcherFlowLogRetentionPolicyArgs
+            {
+                Enabled = true,
+                Days = 7,
+            },
+            TrafficAnalytics = new Azure.Network.Inputs.NetworkWatcherFlowLogTrafficAnalyticsArgs
+            {
+                Enabled = true,
+                WorkspaceId = testAnalyticsWorkspace.WorkspaceId,
+                WorkspaceRegion = testAnalyticsWorkspace.Location,
+                WorkspaceResourceId = testAnalyticsWorkspace.Id,
+                IntervalInMinutes = 10,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testResourceGroup, err := core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("eastus"),
+		})
+		if err != nil {
+			return err
+		}
+		testNetworkSecurityGroup, err := network.NewNetworkSecurityGroup(ctx, "testNetworkSecurityGroup", &network.NetworkSecurityGroupArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		testNetworkWatcher, err := network.NewNetworkWatcher(ctx, "testNetworkWatcher", &network.NetworkWatcherArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		testAccount, err := storage.NewAccount(ctx, "testAccount", &storage.AccountArgs{
+			ResourceGroupName:      testResourceGroup.Name,
+			Location:               testResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountKind:            pulumi.String("StorageV2"),
+			AccountReplicationType: pulumi.String("LRS"),
+			EnableHttpsTrafficOnly: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		testAnalyticsWorkspace, err := operationalinsights.NewAnalyticsWorkspace(ctx, "testAnalyticsWorkspace", &operationalinsights.AnalyticsWorkspaceArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+			Sku:               pulumi.String("PerGB2018"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewNetworkWatcherFlowLog(ctx, "testNetworkWatcherFlowLog", &network.NetworkWatcherFlowLogArgs{
+			NetworkWatcherName:     testNetworkWatcher.Name,
+			ResourceGroupName:      testResourceGroup.Name,
+			NetworkSecurityGroupId: testNetworkSecurityGroup.ID(),
+			StorageAccountId:       testAccount.ID(),
+			Enabled:                pulumi.Bool(true),
+			RetentionPolicy: &network.NetworkWatcherFlowLogRetentionPolicyArgs{
+				Enabled: pulumi.Bool(true),
+				Days:    pulumi.Int(7),
+			},
+			TrafficAnalytics: &network.NetworkWatcherFlowLogTrafficAnalyticsArgs{
+				Enabled:             pulumi.Bool(true),
+				WorkspaceId:         testAnalyticsWorkspace.WorkspaceId,
+				WorkspaceRegion:     testAnalyticsWorkspace.Location,
+				WorkspaceResourceId: testAnalyticsWorkspace.ID(),
+				IntervalInMinutes:   pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="eastus")
+test_network_security_group = azure.network.NetworkSecurityGroup("testNetworkSecurityGroup",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test_network_watcher = azure.network.NetworkWatcher("testNetworkWatcher",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test_account = azure.storage.Account("testAccount",
+    resource_group_name=test_resource_group.name,
+    location=test_resource_group.location,
+    account_tier="Standard",
+    account_kind="StorageV2",
+    account_replication_type="LRS",
+    enable_https_traffic_only=True)
+test_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("testAnalyticsWorkspace",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    sku="PerGB2018")
+test_network_watcher_flow_log = azure.network.NetworkWatcherFlowLog("testNetworkWatcherFlowLog",
+    network_watcher_name=test_network_watcher.name,
+    resource_group_name=test_resource_group.name,
+    network_security_group_id=test_network_security_group.id,
+    storage_account_id=test_account.id,
+    enabled=True,
+    retention_policy={
+        "enabled": True,
+        "days": 7,
+    },
+    traffic_analytics={
+        "enabled": True,
+        "workspace_id": test_analytics_workspace.workspace_id,
+        "workspaceRegion": test_analytics_workspace.location,
+        "workspace_resource_id": test_analytics_workspace.id,
+        "intervalInMinutes": 10,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "eastus"});
+const testNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("testNetworkSecurityGroup", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const testNetworkWatcher = new azure.network.NetworkWatcher("testNetworkWatcher", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const testAccount = new azure.storage.Account("testAccount", {
+    resourceGroupName: testResourceGroup.name,
+    location: testResourceGroup.location,
+    accountTier: "Standard",
+    accountKind: "StorageV2",
+    accountReplicationType: "LRS",
+    enableHttpsTrafficOnly: true,
+});
+const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("testAnalyticsWorkspace", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    sku: "PerGB2018",
+});
+const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testNetworkWatcherFlowLog", {
+    networkWatcherName: testNetworkWatcher.name,
+    resourceGroupName: testResourceGroup.name,
+    networkSecurityGroupId: testNetworkSecurityGroup.id,
+    storageAccountId: testAccount.id,
+    enabled: true,
+    retentionPolicy: {
+        enabled: true,
+        days: 7,
+    },
+    trafficAnalytics: {
+        enabled: true,
+        workspaceId: testAnalyticsWorkspace.workspaceId,
+        workspaceRegion: testAnalyticsWorkspace.location,
+        workspaceResourceId: testAnalyticsWorkspace.id,
+        intervalInMinutes: 10,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkWatcherFlowLog Resource {#create}
@@ -23,7 +270,7 @@ Manages a Network Watcher Flow Log.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -89,7 +89,7 @@ func main() {
 				Family: pulumi.String("MeteredData"),
 			},
 			AllowClassicOperations: pulumi.Bool(false),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"environment": pulumi.String("Production"),
 			},
 		})
@@ -179,7 +179,7 @@ const exampleExpressRouteCircuitAuthorization = new azure.network.ExpressRouteCi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#ExpressRouteCircuitAuthorization">ExpressRouteCircuitAuthorization</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitAuthorization">ExpressRouteCircuitAuthorization</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

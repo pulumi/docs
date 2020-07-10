@@ -12,6 +12,119 @@ meta_desc: "Explore the DscNodeConfiguration resource of the automation module, 
 
 Manages a Automation DSC Node Configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_dsc_configuration = azure.automation.DscConfiguration("exampleDscConfiguration",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    location=example_resource_group.location,
+    content_embedded="configuration test {}")
+example_dsc_node_configuration = azure.automation.DscNodeConfiguration("exampleDscNodeConfiguration",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    content_embedded="""instance of MSFT_FileDirectoryConfiguration as $MSFT_FileDirectoryConfiguration1ref
+{
+  ResourceID = "[File]bla";
+  Ensure = "Present";
+  Contents = "bogus Content";
+  DestinationPath = "c:\\bogus.txt";
+  ModuleName = "PSDesiredStateConfiguration";
+  SourceInfo = "::3::9::file";
+  ModuleVersion = "1.0";
+  ConfigurationName = "bla";
+};
+instance of OMI_ConfigurationDocument
+{
+  Version="2.0.0";
+  MinimumCompatibleVersion = "1.0.0";
+  CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+  Author="bogusAuthor";
+  GenerationDate="06/15/2018 14:06:24";
+  GenerationHost="bogusComputer";
+  Name="test";
+};
+""",
+    opts=ResourceOptions(depends_on=[example_dsc_configuration]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleDscConfiguration = new azure.automation.DscConfiguration("exampleDscConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    location: exampleResourceGroup.location,
+    contentEmbedded: "configuration test {}",
+});
+const exampleDscNodeConfiguration = new azure.automation.DscNodeConfiguration("exampleDscNodeConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    contentEmbedded: `instance of MSFT_FileDirectoryConfiguration as $MSFT_FileDirectoryConfiguration1ref
+{
+  ResourceID = "[File]bla";
+  Ensure = "Present";
+  Contents = "bogus Content";
+  DestinationPath = "c:\\bogus.txt";
+  ModuleName = "PSDesiredStateConfiguration";
+  SourceInfo = "::3::9::file";
+  ModuleVersion = "1.0";
+  ConfigurationName = "bla";
+};
+instance of OMI_ConfigurationDocument
+{
+  Version="2.0.0";
+  MinimumCompatibleVersion = "1.0.0";
+  CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+  Author="bogusAuthor";
+  GenerationDate="06/15/2018 14:06:24";
+  GenerationHost="bogusComputer";
+  Name="test";
+};
+`,
+}, {
+    dependsOn: [exampleDscConfiguration],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DscNodeConfiguration Resource {#create}
@@ -23,7 +136,7 @@ Manages a Automation DSC Node Configuration.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#DscNodeConfiguration">DscNodeConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>content_embedded=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.DscNodeConfiguration">DscNodeConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>content_embedded=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

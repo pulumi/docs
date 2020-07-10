@@ -12,6 +12,518 @@ meta_desc: "Explore the Certificate resource of the keyvault module, including e
 
 Manages a Key Vault Certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Generating A New Certificate)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+            AccessPolicies = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = current.Apply(current => current.TenantId),
+                    ObjectId = current.Apply(current => current.ObjectId),
+                    CertificatePermissions = 
+                    {
+                        "create",
+                        "delete",
+                        "deleteissuers",
+                        "get",
+                        "getissuers",
+                        "import",
+                        "list",
+                        "listissuers",
+                        "managecontacts",
+                        "manageissuers",
+                        "setissuers",
+                        "update",
+                    },
+                    KeyPermissions = 
+                    {
+                        "backup",
+                        "create",
+                        "decrypt",
+                        "delete",
+                        "encrypt",
+                        "get",
+                        "import",
+                        "list",
+                        "purge",
+                        "recover",
+                        "restore",
+                        "sign",
+                        "unwrapKey",
+                        "update",
+                        "verify",
+                        "wrapKey",
+                    },
+                    SecretPermissions = 
+                    {
+                        "backup",
+                        "delete",
+                        "get",
+                        "list",
+                        "purge",
+                        "recover",
+                        "restore",
+                        "set",
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+        var exampleCertificate = new Azure.KeyVault.Certificate("exampleCertificate", new Azure.KeyVault.CertificateArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            CertificatePolicy = new Azure.KeyVault.Inputs.CertificateCertificatePolicyArgs
+            {
+                IssuerParameters = new Azure.KeyVault.Inputs.CertificateCertificatePolicyIssuerParametersArgs
+                {
+                    Name = "Self",
+                },
+                KeyProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyKeyPropertiesArgs
+                {
+                    Exportable = true,
+                    KeySize = 2048,
+                    KeyType = "RSA",
+                    ReuseKey = true,
+                },
+                LifetimeActions = 
+                {
+                    new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionArgs
+                    {
+                        Action = new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionActionArgs
+                        {
+                            ActionType = "AutoRenew",
+                        },
+                        Trigger = new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionTriggerArgs
+                        {
+                            DaysBeforeExpiry = 30,
+                        },
+                    },
+                },
+                SecretProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicySecretPropertiesArgs
+                {
+                    ContentType = "application/x-pkcs12",
+                },
+                X509CertificateProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyX509CertificatePropertiesArgs
+                {
+                    ExtendedKeyUsages = 
+                    {
+                        "1.3.6.1.5.5.7.3.1",
+                    },
+                    KeyUsages = 
+                    {
+                        "cRLSign",
+                        "dataEncipherment",
+                        "digitalSignature",
+                        "keyAgreement",
+                        "keyCertSign",
+                        "keyEncipherment",
+                    },
+                    SubjectAlternativeNames = new Azure.KeyVault.Inputs.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs
+                    {
+                        DnsNames = 
+                        {
+                            "internal.contoso.com",
+                            "domain.hello.world",
+                        },
+                    },
+                    Subject = "CN=hello-world",
+                    ValidityInMonths = 12,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			TenantId:          pulumi.String(current.TenantId),
+			SkuName:           pulumi.String("standard"),
+			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: pulumi.String(current.TenantId),
+					ObjectId: pulumi.String(current.ObjectId),
+					CertificatePermissions: pulumi.StringArray{
+						pulumi.String("create"),
+						pulumi.String("delete"),
+						pulumi.String("deleteissuers"),
+						pulumi.String("get"),
+						pulumi.String("getissuers"),
+						pulumi.String("import"),
+						pulumi.String("list"),
+						pulumi.String("listissuers"),
+						pulumi.String("managecontacts"),
+						pulumi.String("manageissuers"),
+						pulumi.String("setissuers"),
+						pulumi.String("update"),
+					},
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("backup"),
+						pulumi.String("create"),
+						pulumi.String("decrypt"),
+						pulumi.String("delete"),
+						pulumi.String("encrypt"),
+						pulumi.String("get"),
+						pulumi.String("import"),
+						pulumi.String("list"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+						pulumi.String("restore"),
+						pulumi.String("sign"),
+						pulumi.String("unwrapKey"),
+						pulumi.String("update"),
+						pulumi.String("verify"),
+						pulumi.String("wrapKey"),
+					},
+					SecretPermissions: pulumi.StringArray{
+						pulumi.String("backup"),
+						pulumi.String("delete"),
+						pulumi.String("get"),
+						pulumi.String("list"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+						pulumi.String("restore"),
+						pulumi.String("set"),
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewCertificate(ctx, "exampleCertificate", &keyvault.CertificateArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			CertificatePolicy: &keyvault.CertificateCertificatePolicyArgs{
+				IssuerParameters: &keyvault.CertificateCertificatePolicyIssuerParametersArgs{
+					Name: pulumi.String("Self"),
+				},
+				KeyProperties: &keyvault.CertificateCertificatePolicyKeyPropertiesArgs{
+					Exportable: pulumi.Bool(true),
+					KeySize:    pulumi.Int(2048),
+					KeyType:    pulumi.String("RSA"),
+					ReuseKey:   pulumi.Bool(true),
+				},
+				LifetimeActions: keyvault.CertificateCertificatePolicyLifetimeActionArray{
+					&keyvault.CertificateCertificatePolicyLifetimeActionArgs{
+						Action: &keyvault.CertificateCertificatePolicyLifetimeActionActionArgs{
+							ActionType: pulumi.String("AutoRenew"),
+						},
+						Trigger: &keyvault.CertificateCertificatePolicyLifetimeActionTriggerArgs{
+							DaysBeforeExpiry: pulumi.Int(30),
+						},
+					},
+				},
+				SecretProperties: &keyvault.CertificateCertificatePolicySecretPropertiesArgs{
+					ContentType: pulumi.String("application/x-pkcs12"),
+				},
+				X509CertificateProperties: &keyvault.CertificateCertificatePolicyX509CertificatePropertiesArgs{
+					ExtendedKeyUsages: pulumi.StringArray{
+						pulumi.String("1.3.6.1.5.5.7.3.1"),
+					},
+					KeyUsages: pulumi.StringArray{
+						pulumi.String("cRLSign"),
+						pulumi.String("dataEncipherment"),
+						pulumi.String("digitalSignature"),
+						pulumi.String("keyAgreement"),
+						pulumi.String("keyCertSign"),
+						pulumi.String("keyEncipherment"),
+					},
+					SubjectAlternativeNames: &keyvault.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs{
+						DnsNames: pulumi.StringArray{
+							pulumi.String("internal.contoso.com"),
+							pulumi.String("domain.hello.world"),
+						},
+					},
+					Subject:          pulumi.String("CN=hello-world"),
+					ValidityInMonths: pulumi.Int(12),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard",
+    access_policies=[{
+        "tenant_id": current.tenant_id,
+        "object_id": current.object_id,
+        "certificate_permissions": [
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        "key_permissions": [
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        "secret_permissions": [
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    }],
+    tags={
+        "environment": "Production",
+    })
+example_certificate = azure.keyvault.Certificate("exampleCertificate",
+    key_vault_id=example_key_vault.id,
+    certificate_policy={
+        "issuerParameters": {
+            "name": "Self",
+        },
+        "key_properties": {
+            "exportable": True,
+            "key_size": 2048,
+            "key_type": "RSA",
+            "reuseKey": True,
+        },
+        "lifetimeActions": [{
+            "action": {
+                "actionType": "AutoRenew",
+            },
+            "trigger": {
+                "daysBeforeExpiry": 30,
+            },
+        }],
+        "secretProperties": {
+            "content_type": "application/x-pkcs12",
+        },
+        "x509CertificateProperties": {
+            "extendedKeyUsages": ["1.3.6.1.5.5.7.3.1"],
+            "keyUsages": [
+                "cRLSign",
+                "dataEncipherment",
+                "digitalSignature",
+                "keyAgreement",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            "subjectAlternativeNames": {
+                "dnsNames": [
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            },
+            "subject": "CN=hello-world",
+            "validityInMonths": 12,
+        },
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+    accessPolicies: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        certificatePermissions: [
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        keyPermissions: [
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        secretPermissions: [
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    }],
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
+    keyVaultId: exampleKeyVault.id,
+    certificatePolicy: {
+        issuerParameters: {
+            name: "Self",
+        },
+        keyProperties: {
+            exportable: true,
+            keySize: 2048,
+            keyType: "RSA",
+            reuseKey: true,
+        },
+        lifetimeActions: [{
+            action: {
+                actionType: "AutoRenew",
+            },
+            trigger: {
+                daysBeforeExpiry: 30,
+            },
+        }],
+        secretProperties: {
+            contentType: "application/x-pkcs12",
+        },
+        x509CertificateProperties: {
+            extendedKeyUsages: ["1.3.6.1.5.5.7.3.1"],
+            keyUsages: [
+                "cRLSign",
+                "dataEncipherment",
+                "digitalSignature",
+                "keyAgreement",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            subjectAlternativeNames: {
+                dnsNames: [
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            },
+            subject: "CN=hello-world",
+            validityInMonths: 12,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}
@@ -23,7 +535,7 @@ Manages a Key Vault Certificate.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate=None<span class="p">, </span>certificate_policy=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate=None<span class="p">, </span>certificate_policy=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,6 +968,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificateattributes_csharp">
+<a href="#certificateattributes_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">List&lt;Certificate<wbr>Certificate<wbr>Attribute&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="certificatedata_csharp">
 <a href="#certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
 </span> 
@@ -514,6 +1037,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="certificateattributes_go">
+<a href="#certificateattributes_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">[]Certificate<wbr>Certificate<wbr>Attribute</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -578,6 +1112,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificateattributes_nodejs">
+<a href="#certificateattributes_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">Certificate<wbr>Certificate<wbr>Attribute[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="certificatedata_nodejs">
 <a href="#certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
 </span> 
@@ -636,6 +1181,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="certificate_attributes_python">
+<a href="#certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">List[Certificate<wbr>Certificate<wbr>Attribute]</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -710,7 +1266,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate=None<span class="p">, </span>certificate_data=None<span class="p">, </span>certificate_policy=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>name=None<span class="p">, </span>secret_id=None<span class="p">, </span>tags=None<span class="p">, </span>thumbprint=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate=None<span class="p">, </span>certificate_attributes=None<span class="p">, </span>certificate_data=None<span class="p">, </span>certificate_policy=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>name=None<span class="p">, </span>secret_id=None<span class="p">, </span>tags=None<span class="p">, </span>thumbprint=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -823,6 +1379,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_certificateattributes_csharp">
+<a href="#state_certificateattributes_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">List&lt;Certificate<wbr>Certificate<wbr>Attribute<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -943,6 +1510,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificateattributes_go">
+<a href="#state_certificateattributes_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">[]Certificate<wbr>Certificate<wbr>Attribute</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatedata_go">
 <a href="#state_certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
 </span> 
@@ -1049,6 +1627,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificateattributes_nodejs">
+<a href="#state_certificateattributes_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">Certificate<wbr>Certificate<wbr>Attribute[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatedata_nodejs">
 <a href="#state_certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
 </span> 
@@ -1151,6 +1740,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certificatecertificate">Dict[Certificate<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_certificate_attributes_python">
+<a href="#state_certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">List[Certificate<wbr>Certificate<wbr>Attribute]</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate_attribute` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1381,6 +1981,316 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="certificatecertificateattribute">Certificate<wbr>Certificate<wbr>Attribute</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificateAttribute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertificateCertificateAttributeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertificateCertificateAttribute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}whether the Key Vault Certificate is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expires_csharp">
+<a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expires time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notbefore_csharp">
+<a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverylevel_csharp">
+<a href="#recoverylevel_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updated_csharp">
+<a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recent update time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}whether the Key Vault Certificate is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expires_go">
+<a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expires time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notbefore_go">
+<a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverylevel_go">
+<a href="#recoverylevel_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updated_go">
+<a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recent update time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}whether the Key Vault Certificate is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expires_nodejs">
+<a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expires time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notbefore_nodejs">
+<a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverylevel_nodejs">
+<a href="#recoverylevel_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updated_nodejs">
+<a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recent update time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The create time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}whether the Key Vault Certificate is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expires_python">
+<a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The expires time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notbefore_python">
+<a href="#notbefore_python" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverylevel_python">
+<a href="#recoverylevel_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updated_python">
+<a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recent update time of the Key Vault Certificate.
 {{% /md %}}</dd>
 
 </dl>

@@ -12,6 +12,281 @@ meta_desc: "Explore the NetworkInterfaceBackendAddressPoolAssociation resource o
 
 Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+        });
+        var exampleLoadBalancer = new Azure.Lb.LoadBalancer("exampleLoadBalancer", new Azure.Lb.LoadBalancerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            FrontendIpConfigurations = 
+            {
+                new Azure.Lb.Inputs.LoadBalancerFrontendIpConfigurationArgs
+                {
+                    Name = "primary",
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var exampleBackendAddressPool = new Azure.Lb.BackendAddressPool("exampleBackendAddressPool", new Azure.Lb.BackendAddressPoolArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "testconfiguration1",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleNetworkInterfaceBackendAddressPoolAssociation = new Azure.Network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation", new Azure.Network.NetworkInterfaceBackendAddressPoolAssociationArgs
+        {
+            NetworkInterfaceId = exampleNetworkInterface.Id,
+            IpConfigurationName = "testconfiguration1",
+            BackendAddressPoolId = exampleBackendAddressPool.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			FrontendIpConfigurations: lb.LoadBalancerFrontendIpConfigurationArray{
+				&lb.LoadBalancerFrontendIpConfigurationArgs{
+					Name:              pulumi.String("primary"),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackendAddressPool, err := lb.NewBackendAddressPool(ctx, "exampleBackendAddressPool", &lb.BackendAddressPoolArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			LoadbalancerId:    exampleLoadBalancer.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("testconfiguration1"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewNetworkInterfaceBackendAddressPoolAssociation(ctx, "exampleNetworkInterfaceBackendAddressPoolAssociation", &network.NetworkInterfaceBackendAddressPoolAssociationArgs{
+			NetworkInterfaceId:   exampleNetworkInterface.ID(),
+			IpConfigurationName:  pulumi.String("testconfiguration1"),
+			BackendAddressPoolId: exampleBackendAddressPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configurations=[{
+        "name": "primary",
+        "public_ip_address_id": example_public_ip.id,
+    }])
+example_backend_address_pool = azure.lb.BackendAddressPool("exampleBackendAddressPool",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id)
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "testconfiguration1",
+        "subnet_id": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_network_interface_backend_address_pool_association = azure.network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation",
+    network_interface_id=example_network_interface.id,
+    ip_configuration_name="testconfiguration1",
+    backend_address_pool_id=example_backend_address_pool.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontendIpConfigurations: [{
+        name: "primary",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBackendAddressPool", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleNetworkInterfaceBackendAddressPoolAssociation = new azure.network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    ipConfigurationName: "testconfiguration1",
+    backendAddressPoolId: exampleBackendAddressPool.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceBackendAddressPoolAssociation Resource {#create}
@@ -23,7 +298,7 @@ Manages the association between a Network Interface and a Load Balancer's Backen
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#NetworkInterfaceBackendAddressPoolAssociation">NetworkInterfaceBackendAddressPoolAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_address_pool_id=None<span class="p">, </span>ip_configuration_name=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation">NetworkInterfaceBackendAddressPoolAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_address_pool_id=None<span class="p">, </span>ip_configuration_name=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

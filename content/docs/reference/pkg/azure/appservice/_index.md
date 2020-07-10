@@ -22,6 +22,7 @@ Explore the resources and functions of the appservice module in the Azure packag
     <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
     <li><a href="plan" title="Plan"><span class="symbol resource"></span>Plan</a></li>
     <li><a href="slot" title="Slot"><span class="symbol resource"></span>Slot</a></li>
+    <li><a href="slotvirtualnetworkswiftconnection" title="SlotVirtualNetworkSwiftConnection"><span class="symbol resource"></span>SlotVirtualNetworkSwiftConnection</a></li>
     <li><a href="sourcecodetoken" title="SourceCodeToken"><span class="symbol resource"></span>SourceCodeToken</a></li>
     <li><a href="virtualnetworkswiftconnection" title="VirtualNetworkSwiftConnection"><span class="symbol resource"></span>VirtualNetworkSwiftConnection</a></li>
 </ul>
@@ -45,7 +46,7 @@ Explore the resources and functions of the appservice module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

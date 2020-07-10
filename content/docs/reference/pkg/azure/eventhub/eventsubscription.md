@@ -12,6 +12,163 @@ meta_desc: "Explore the EventSubscription resource of the eventhub module, inclu
 
 Manages an EventGrid Event Subscription
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultResourceGroup = new Azure.Core.ResourceGroup("defaultResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US 2",
+        });
+        var defaultAccount = new Azure.Storage.Account("defaultAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = defaultResourceGroup.Name,
+            Location = defaultResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var defaultQueue = new Azure.Storage.Queue("defaultQueue", new Azure.Storage.QueueArgs
+        {
+            StorageAccountName = defaultAccount.Name,
+        });
+        var defaultEventSubscription = new Azure.EventGrid.EventSubscription("defaultEventSubscription", new Azure.EventGrid.EventSubscriptionArgs
+        {
+            Scope = defaultResourceGroup.Id,
+            StorageQueueEndpoint = new Azure.EventGrid.Inputs.EventSubscriptionStorageQueueEndpointArgs
+            {
+                StorageAccountId = defaultAccount.Id,
+                QueueName = defaultQueue.Name,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultResourceGroup, err := core.NewResourceGroup(ctx, "defaultResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US 2"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultAccount, err := storage.NewAccount(ctx, "defaultAccount", &storage.AccountArgs{
+			ResourceGroupName:      defaultResourceGroup.Name,
+			Location:               defaultResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultQueue, err := storage.NewQueue(ctx, "defaultQueue", &storage.QueueArgs{
+			StorageAccountName: defaultAccount.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = eventgrid.NewEventSubscription(ctx, "defaultEventSubscription", &eventgrid.EventSubscriptionArgs{
+			Scope: defaultResourceGroup.ID(),
+			StorageQueueEndpoint: &eventgrid.EventSubscriptionStorageQueueEndpointArgs{
+				StorageAccountId: defaultAccount.ID(),
+				QueueName:        defaultQueue.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+default_resource_group = azure.core.ResourceGroup("defaultResourceGroup", location="West US 2")
+default_account = azure.storage.Account("defaultAccount",
+    resource_group_name=default_resource_group.name,
+    location=default_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+default_queue = azure.storage.Queue("defaultQueue", storage_account_name=default_account.name)
+default_event_subscription = azure.eventgrid.EventSubscription("defaultEventSubscription",
+    scope=default_resource_group.id,
+    storage_queue_endpoint={
+        "storage_account_id": default_account.id,
+        "queue_name": default_queue.name,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const defaultResourceGroup = new azure.core.ResourceGroup("defaultResourceGroup", {location: "West US 2"});
+const defaultAccount = new azure.storage.Account("defaultAccount", {
+    resourceGroupName: defaultResourceGroup.name,
+    location: defaultResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const defaultQueue = new azure.storage.Queue("defaultQueue", {storageAccountName: defaultAccount.name});
+const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultEventSubscription", {
+    scope: defaultResourceGroup.id,
+    storageQueueEndpoint: {
+        storageAccountId: defaultAccount.id,
+        queueName: defaultQueue.name,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventSubscription has been deprecated in favor of azure.eventgrid.EventSubscription{{% /md %}}</p>
 
 
@@ -24,7 +181,7 @@ Manages an EventGrid Event Subscription
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_filter=None<span class="p">, </span>azure_function_endpoint=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_filter=None<span class="p">, </span>azure_function_endpoint=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4433,7 +4590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4473,7 +4630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4513,7 +4670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4553,7 +4710,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

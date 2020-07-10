@@ -122,7 +122,7 @@ const exampleCertificateOrder = new azure.appservice.CertificateOrder("exampleCe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#CertificateOrder">CertificateOrder</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>csr=None<span class="p">, </span>distinguished_name=None<span class="p">, </span>key_size=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>product_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>validity_in_years=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.CertificateOrder">CertificateOrder</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>csr=None<span class="p">, </span>distinguished_name=None<span class="p">, </span>key_size=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>product_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>validity_in_years=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

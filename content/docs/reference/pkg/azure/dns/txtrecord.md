@@ -12,6 +12,161 @@ meta_desc: "Explore the TxtRecord resource of the dns module, including examples
 
 Enables you to manage DNS TXT Records within Azure DNS.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleTxtRecord = new Azure.Dns.TxtRecord("exampleTxtRecord", new Azure.Dns.TxtRecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            Records = 
+            {
+                new Azure.Dns.Inputs.TxtRecordRecordArgs
+                {
+                    Value = "google-site-authenticator",
+                },
+                new Azure.Dns.Inputs.TxtRecordRecordArgs
+                {
+                    Value = "more site information here",
+                },
+            },
+            Tags = 
+            {
+                { "Environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewTxtRecord(ctx, "exampleTxtRecord", &dns.TxtRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Records: dns.TxtRecordRecordArray{
+				&dns.TxtRecordRecordArgs{
+					Value: pulumi.String("google-site-authenticator"),
+				},
+				&dns.TxtRecordRecordArgs{
+					Value: pulumi.String("more site information here"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_txt_record = azure.dns.TxtRecord("exampleTxtRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    records=[
+        {
+            "value": "google-site-authenticator",
+        },
+        {
+            "value": "more site information here",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleTxtRecord = new azure.dns.TxtRecord("exampleTxtRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    records: [
+        {
+            value: "google-site-authenticator",
+        },
+        {
+            value: "more site information here",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TxtRecord Resource {#create}
@@ -23,7 +178,7 @@ Enables you to manage DNS TXT Records within Azure DNS.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#TxtRecord">TxtRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#pulumi_azure.dns.TxtRecord">TxtRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

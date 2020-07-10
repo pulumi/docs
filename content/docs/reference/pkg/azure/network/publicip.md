@@ -69,7 +69,7 @@ func main() {
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
 			AllocationMethod:  pulumi.String("Static"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"environment": pulumi.String("Production"),
 			},
 		})
@@ -131,7 +131,7 @@ const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#PublicIp">PublicIp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_method=None<span class="p">, </span>domain_name_label=None<span class="p">, </span>idle_timeout_in_minutes=None<span class="p">, </span>ip_version=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_ip_prefix_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>reverse_fqdn=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PublicIp">PublicIp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_method=None<span class="p">, </span>domain_name_label=None<span class="p">, </span>idle_timeout_in_minutes=None<span class="p">, </span>ip_version=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_ip_prefix_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>reverse_fqdn=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

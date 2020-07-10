@@ -12,6 +12,211 @@ meta_desc: "Explore the Database resource of the sql module, including examples,
 
 Allows you to manage an Azure SQL Database
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "West US",
+            Version = "12.0",
+            AdministratorLogin = "4dm1n157r470r",
+            AdministratorLoginPassword = "4-v3ry-53cr37-p455w0rd",
+            Tags = 
+            {
+                { "environment", "production" },
+            },
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleDatabase = new Azure.Sql.Database("exampleDatabase", new Azure.Sql.DatabaseArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "West US",
+            ServerName = exampleSqlServer.Name,
+            ExtendedAuditingPolicy = new Azure.Sql.Inputs.DatabaseExtendedAuditingPolicyArgs
+            {
+                StorageEndpoint = exampleAccount.PrimaryBlobEndpoint,
+                StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+                StorageAccountAccessKeyIsSecondary = true,
+                RetentionInDays = 6,
+            },
+            Tags = 
+            {
+                { "environment", "production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   pulumi.String("West US"),
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sql.NewDatabase(ctx, "exampleDatabase", &sql.DatabaseArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          pulumi.String("West US"),
+			ServerName:        exampleSqlServer.Name,
+			ExtendedAuditingPolicy: &sql.DatabaseExtendedAuditingPolicyArgs{
+				StorageEndpoint:                    exampleAccount.PrimaryBlobEndpoint,
+				StorageAccountAccessKey:            exampleAccount.PrimaryAccessKey,
+				StorageAccountAccessKeyIsSecondary: pulumi.Bool(true),
+				RetentionInDays:                    pulumi.Int(6),
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location="West US",
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd",
+    tags={
+        "environment": "production",
+    })
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_database = azure.sql.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    location="West US",
+    server_name=example_sql_server.name,
+    extended_auditing_policy={
+        "storage_endpoint": example_account.primary_blob_endpoint,
+        "storage_account_access_key": example_account.primary_access_key,
+        "storageAccountAccessKeyIsSecondary": True,
+        "retention_in_days": 6,
+    },
+    tags={
+        "environment": "production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "West US",
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+    tags: {
+        environment: "production",
+    },
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleDatabase = new azure.sql.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "West US",
+    serverName: exampleSqlServer.name,
+    extendedAuditingPolicy: {
+        storageEndpoint: exampleAccount.primaryBlobEndpoint,
+        storageAccountAccessKey: exampleAccount.primaryAccessKey,
+        storageAccountAccessKeyIsSecondary: true,
+        retentionInDays: 6,
+    },
+    tags: {
+        environment: "production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}
@@ -23,7 +228,7 @@ Allows you to manage an Azure SQL Database
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>edition=None<span class="p">, </span>elastic_pool_name=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>import_=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>read_scale=None<span class="p">, </span>requested_service_objective_id=None<span class="p">, </span>requested_service_objective_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>server_name=None<span class="p">, </span>source_database_deletion_date=None<span class="p">, </span>source_database_id=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>edition=None<span class="p">, </span>elastic_pool_name=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>import_=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>read_scale=None<span class="p">, </span>requested_service_objective_id=None<span class="p">, </span>requested_service_objective_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>server_name=None<span class="p">, </span>source_database_deletion_date=None<span class="p">, </span>source_database_id=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -357,7 +562,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -595,7 +800,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -833,7 +1038,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1071,7 +1276,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1652,7 +1857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1922,7 +2127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2192,7 +2397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2462,7 +2667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus --edition Standard -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
+    <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3084,8 +3289,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

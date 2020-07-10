@@ -12,28 +12,6 @@ meta_desc: "Explore the GetRoleDefinition function of the authorization module, 
 
 Use this data source to access information about an existing Role Definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-Coming soon!
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetRoleDefinition {#using}

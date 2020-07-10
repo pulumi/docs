@@ -51,7 +51,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = appservice.NewSourceCodeToken(ctx, "example", &appservice.SourceCodeTokenArgs{
+		_, err := appservice.NewSourceCodeToken(ctx, "example", &appservice.SourceCodeTokenArgs{
 			Token: pulumi.String("7e57735e77e577e57"),
 			Type:  pulumi.String("GitHub"),
 		})
@@ -103,7 +103,7 @@ const example = new azure.appservice.SourceCodeToken("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#SourceCodeToken">SourceCodeToken</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>token=None<span class="p">, </span>token_secret=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.SourceCodeToken">SourceCodeToken</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>token=None<span class="p">, </span>token_secret=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,6 +14,166 @@ Manages a LoadBalancer Probe Resource.
 
 > **NOTE** When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+        });
+        var exampleLoadBalancer = new Azure.Lb.LoadBalancer("exampleLoadBalancer", new Azure.Lb.LoadBalancerArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            FrontendIpConfigurations = 
+            {
+                new Azure.Lb.Inputs.LoadBalancerFrontendIpConfigurationArgs
+                {
+                    Name = "PublicIPAddress",
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var exampleProbe = new Azure.Lb.Probe("exampleProbe", new Azure.Lb.ProbeArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+            Port = 22,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			FrontendIpConfigurations: lb.LoadBalancerFrontendIpConfigurationArray{
+				&lb.LoadBalancerFrontendIpConfigurationArgs{
+					Name:              pulumi.String("PublicIPAddress"),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lb.NewProbe(ctx, "exampleProbe", &lb.ProbeArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			LoadbalancerId:    exampleLoadBalancer.ID(),
+			Port:              pulumi.Int(22),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configurations=[{
+        "name": "PublicIPAddress",
+        "public_ip_address_id": example_public_ip.id,
+    }])
+example_probe = azure.lb.Probe("exampleProbe",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id,
+    port=22)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    frontendIpConfigurations: [{
+        name: "PublicIPAddress",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleProbe = new azure.lb.Probe("exampleProbe", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+    port: 22,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Probe Resource {#create}
@@ -25,7 +185,7 @@ Manages a LoadBalancer Probe Resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#Probe">Probe</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>interval_in_seconds=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>number_of_probes=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>request_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.Probe">Probe</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>interval_in_seconds=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>number_of_probes=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>request_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

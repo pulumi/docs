@@ -80,7 +80,7 @@ func main() {
 		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Sydney": pulumi.String("Australia"),
 			},
 		})
@@ -94,7 +94,7 @@ func main() {
 			FactData:          pulumi.String(""),
 			Threshold:         pulumi.String("999"),
 			EvaluatorType:     pulumi.String("MaxValuePolicy"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Acceptance": pulumi.String("Test"),
 			},
 		})
@@ -175,7 +175,7 @@ const examplePolicy = new azure.devtest.Policy("examplePolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>evaluator_type=None<span class="p">, </span>fact_data=None<span class="p">, </span>lab_name=None<span class="p">, </span>name=None<span class="p">, </span>policy_set_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>evaluator_type=None<span class="p">, </span>fact_data=None<span class="p">, </span>lab_name=None<span class="p">, </span>name=None<span class="p">, </span>policy_set_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

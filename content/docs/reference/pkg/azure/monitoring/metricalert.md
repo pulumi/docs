@@ -12,6 +12,258 @@ meta_desc: "Explore the MetricAlert resource of the monitoring module, including
 
 Manages a Metric Alert within Azure Monitor.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainResourceGroup = new Azure.Core.ResourceGroup("mainResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var toMonitor = new Azure.Storage.Account("toMonitor", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            Location = mainResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var mainActionGroup = new Azure.Monitoring.ActionGroup("mainActionGroup", new Azure.Monitoring.ActionGroupArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            ShortName = "exampleact",
+            WebhookReceivers = 
+            {
+                new Azure.Monitoring.Inputs.ActionGroupWebhookReceiverArgs
+                {
+                    Name = "callmyapi",
+                    ServiceUri = "http://example.com/alert",
+                },
+            },
+        });
+        var example = new Azure.Monitoring.MetricAlert("example", new Azure.Monitoring.MetricAlertArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            Scopes = 
+            {
+                toMonitor.Id,
+            },
+            Description = "Action will be triggered when Transactions count is greater than 50.",
+            Criterias = 
+            {
+                new Azure.Monitoring.Inputs.MetricAlertCriteriaArgs
+                {
+                    MetricNamespace = "Microsoft.Storage/storageAccounts",
+                    MetricName = "Transactions",
+                    Aggregation = "Total",
+                    Operator = "GreaterThan",
+                    Threshold = 50,
+                    Dimensions = 
+                    {
+                        new Azure.Monitoring.Inputs.MetricAlertCriteriaDimensionArgs
+                        {
+                            Name = "ApiName",
+                            Operator = "Include",
+                            Values = 
+                            {
+                                "*",
+                            },
+                        },
+                    },
+                },
+            },
+            Actions = 
+            {
+                new Azure.Monitoring.Inputs.MetricAlertActionArgs
+                {
+                    ActionGroupId = mainActionGroup.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		toMonitor, err := storage.NewAccount(ctx, "toMonitor", &storage.AccountArgs{
+			ResourceGroupName:      mainResourceGroup.Name,
+			Location:               mainResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		mainActionGroup, err := monitoring.NewActionGroup(ctx, "mainActionGroup", &monitoring.ActionGroupArgs{
+			ResourceGroupName: mainResourceGroup.Name,
+			ShortName:         pulumi.String("exampleact"),
+			WebhookReceivers: monitoring.ActionGroupWebhookReceiverArray{
+				&monitoring.ActionGroupWebhookReceiverArgs{
+					Name:       pulumi.String("callmyapi"),
+					ServiceUri: pulumi.String("http://example.com/alert"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewMetricAlert(ctx, "example", &monitoring.MetricAlertArgs{
+			ResourceGroupName: mainResourceGroup.Name,
+			Scopes: pulumi.String(pulumi.String{
+				toMonitor.ID(),
+			}),
+			Description: pulumi.String("Action will be triggered when Transactions count is greater than 50."),
+			Criterias: monitoring.MetricAlertCriteriaArray{
+				&monitoring.MetricAlertCriteriaArgs{
+					MetricNamespace: pulumi.String("Microsoft.Storage/storageAccounts"),
+					MetricName:      pulumi.String("Transactions"),
+					Aggregation:     pulumi.String("Total"),
+					Operator:        pulumi.String("GreaterThan"),
+					Threshold:       pulumi.Float64(50),
+					Dimensions: monitoring.MetricAlertCriteriaDimensionArray{
+						&monitoring.MetricAlertCriteriaDimensionArgs{
+							Name:     pulumi.String("ApiName"),
+							Operator: pulumi.String("Include"),
+							Values: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+						},
+					},
+				},
+			},
+			Actions: monitoring.MetricAlertActionArray{
+				&monitoring.MetricAlertActionArgs{
+					ActionGroupId: mainActionGroup.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US")
+to_monitor = azure.storage.Account("toMonitor",
+    resource_group_name=main_resource_group.name,
+    location=main_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
+    resource_group_name=main_resource_group.name,
+    short_name="exampleact",
+    webhook_receivers=[{
+        "name": "callmyapi",
+        "service_uri": "http://example.com/alert",
+    }])
+example = azure.monitoring.MetricAlert("example",
+    resource_group_name=main_resource_group.name,
+    scopes=[to_monitor.id],
+    description="Action will be triggered when Transactions count is greater than 50.",
+    criterias=[{
+        "metricNamespace": "Microsoft.Storage/storageAccounts",
+        "metricName": "Transactions",
+        "aggregation": "Total",
+        "operator": "GreaterThan",
+        "threshold": 50,
+        "dimensions": [{
+            "name": "ApiName",
+            "operator": "Include",
+            "values": ["*"],
+        }],
+    }],
+    actions=[{
+        "action_group_id": main_action_group.id,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US"});
+const toMonitor = new azure.storage.Account("toMonitor", {
+    resourceGroupName: mainResourceGroup.name,
+    location: mainResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const mainActionGroup = new azure.monitoring.ActionGroup("mainActionGroup", {
+    resourceGroupName: mainResourceGroup.name,
+    shortName: "exampleact",
+    webhookReceivers: [{
+        name: "callmyapi",
+        serviceUri: "http://example.com/alert",
+    }],
+});
+const example = new azure.monitoring.MetricAlert("example", {
+    resourceGroupName: mainResourceGroup.name,
+    scopes: [toMonitor.id],
+    description: "Action will be triggered when Transactions count is greater than 50.",
+    criterias: [{
+        metricNamespace: "Microsoft.Storage/storageAccounts",
+        metricName: "Transactions",
+        aggregation: "Total",
+        operator: "GreaterThan",
+        threshold: 50,
+        dimensions: [{
+            name: "ApiName",
+            operator: "Include",
+            values: ["*"],
+        }],
+    }],
+    actions: [{
+        actionGroupId: mainActionGroup.id,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MetricAlert Resource {#create}
@@ -23,7 +275,7 @@ Manages a Metric Alert within Azure Monitor.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#MetricAlert">MetricAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>window_size=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.MetricAlert">MetricAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>window_size=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

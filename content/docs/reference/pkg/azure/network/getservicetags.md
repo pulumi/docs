@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Azure.Network.GetServiceTags.InvokeAsync(new Azure.Network.GetServiceTagsArgs
         {
-            Location = "West Europe",
+            Location = "westcentralus",
             Service = "AzureKeyVault",
             LocationFilter = "northeurope",
         }));
@@ -55,7 +55,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "northeurope"
 		_, err := network.GetServiceTags(ctx, &network.GetServiceTagsArgs{
-			Location:       "West Europe",
+			Location:       "westcentralus",
 			Service:        "AzureKeyVault",
 			LocationFilter: &opt0,
 		}, nil)
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.network.get_service_tags(location="West Europe",
+example = azure.network.get_service_tags(location="westcentralus",
     service="AzureKeyVault",
     location_filter="northeurope")
 pulumi.export("addressPrefixes", data["azurerm_service_tags"]["example"]["address_prefixes"])
@@ -90,7 +90,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = azure.network.getServiceTags({
-    location: "West Europe",
+    location: "westcentralus",
     service: "AzureKeyVault",
     locationFilter: "northeurope",
 });

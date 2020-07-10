@@ -27,7 +27,7 @@ Manages a Key Vault Access Policy.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#AccessPolicy">AccessPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_id=None<span class="p">, </span>certificate_permissions=None<span class="p">, </span>key_permissions=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>object_id=None<span class="p">, </span>secret_permissions=None<span class="p">, </span>storage_permissions=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.AccessPolicy">AccessPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_id=None<span class="p">, </span>certificate_permissions=None<span class="p">, </span>key_permissions=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>object_id=None<span class="p">, </span>secret_permissions=None<span class="p">, </span>storage_permissions=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

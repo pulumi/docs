@@ -12,6 +12,158 @@ meta_desc: "Explore the Share resource of the datashare module, including exampl
 
 Manages a Data Share.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.DataShare.Account("exampleAccount", new Azure.DataShare.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+        var exampleShare = new Azure.DataShare.Share("exampleShare", new Azure.DataShare.ShareArgs
+        {
+            AccountId = exampleAccount.Id,
+            Kind = "CopyBased",
+            Description = "example desc",
+            Terms = "example terms",
+            SnapshotSchedule = new Azure.DataShare.Inputs.ShareSnapshotScheduleArgs
+            {
+                Name = "example-ss",
+                Recurrence = "Day",
+                StartTime = "2020-04-17T04:47:52.9614956Z",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := datashare.NewAccount(ctx, "exampleAccount", &datashare.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Tags: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datashare.NewShare(ctx, "exampleShare", &datashare.ShareArgs{
+			AccountId:   exampleAccount.ID(),
+			Kind:        pulumi.String("CopyBased"),
+			Description: pulumi.String("example desc"),
+			Terms:       pulumi.String("example terms"),
+			SnapshotSchedule: &datashare.ShareSnapshotScheduleArgs{
+				Name:       pulumi.String("example-ss"),
+				Recurrence: pulumi.String("Day"),
+				StartTime:  pulumi.String("2020-04-17T04:47:52.9614956Z"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.datashare.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tags={
+        "foo": "bar",
+    })
+example_share = azure.datashare.Share("exampleShare",
+    account_id=example_account.id,
+    kind="CopyBased",
+    description="example desc",
+    terms="example terms",
+    snapshot_schedule={
+        "name": "example-ss",
+        "recurrence": "Day",
+        "start_time": "2020-04-17T04:47:52.9614956Z",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.datashare.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tags: {
+        foo: "bar",
+    },
+});
+const exampleShare = new azure.datashare.Share("exampleShare", {
+    accountId: exampleAccount.id,
+    kind: "CopyBased",
+    description: "example desc",
+    terms: "example terms",
+    snapshotSchedule: {
+        name: "example-ss",
+        recurrence: "Day",
+        startTime: "2020-04-17T04:47:52.9614956Z",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Share Resource {#create}
@@ -23,7 +175,7 @@ Manages a Data Share.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#Share">Share</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>description=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, </span>snapshot_schedule=None<span class="p">, </span>terms=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.Share">Share</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>description=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, </span>snapshot_schedule=None<span class="p">, </span>terms=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

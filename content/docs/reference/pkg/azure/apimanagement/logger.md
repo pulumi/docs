@@ -12,6 +12,165 @@ meta_desc: "Explore the Logger resource of the apimanagement module, including e
 
 Manages a Logger within an API Management Service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "other",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@exmaple.com",
+            SkuName = "Developer_1",
+        });
+        var exampleLogger = new Azure.ApiManagement.Logger("exampleLogger", new Azure.ApiManagement.LoggerArgs
+        {
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationInsights = new Azure.ApiManagement.Inputs.LoggerApplicationInsightsArgs
+            {
+                InstrumentationKey = exampleInsights.InstrumentationKey,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleInsights, err := appinsights.NewInsights(ctx, "exampleInsights", &appinsights.InsightsArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationType:   pulumi.String("other"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewLogger(ctx, "exampleLogger", &apimanagement.LoggerArgs{
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationInsights: &apimanagement.LoggerApplicationInsightsArgs{
+				InstrumentationKey: exampleInsights.InstrumentationKey,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_type="other")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@exmaple.com",
+    sku_name="Developer_1")
+example_logger = azure.apimanagement.Logger("exampleLogger",
+    api_management_name=example_service.name,
+    resource_group_name=example_resource_group.name,
+    application_insights={
+        "instrumentation_key": example_insights.instrumentation_key,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "other",
+});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@exmaple.com",
+    skuName: "Developer_1",
+});
+const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationInsights: {
+        instrumentationKey: exampleInsights.instrumentationKey,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Logger Resource {#create}
@@ -23,7 +182,7 @@ Manages a Logger within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#Logger">Logger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>application_insights=None<span class="p">, </span>buffered=None<span class="p">, </span>description=None<span class="p">, </span>eventhub=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Logger">Logger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>application_insights=None<span class="p">, </span>buffered=None<span class="p">, </span>description=None<span class="p">, </span>eventhub=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

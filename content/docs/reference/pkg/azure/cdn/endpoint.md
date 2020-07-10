@@ -12,6 +12,146 @@ meta_desc: "Explore the Endpoint resource of the cdn module, including examples,
 
 A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviours and origins. The CDN Endpoint is exposed using the URL format <endpointname>.azureedge.net.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleProfile = new Azure.Cdn.Profile("exampleProfile", new Azure.Cdn.ProfileArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard_Verizon",
+        });
+        var exampleEndpoint = new Azure.Cdn.Endpoint("exampleEndpoint", new Azure.Cdn.EndpointArgs
+        {
+            ProfileName = exampleProfile.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Origins = 
+            {
+                new Azure.Cdn.Inputs.EndpointOriginArgs
+                {
+                    Name = "example",
+                    HostName = "www.example.com",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleProfile, err := cdn.NewProfile(ctx, "exampleProfile", &cdn.ProfileArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard_Verizon"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cdn.NewEndpoint(ctx, "exampleEndpoint", &cdn.EndpointArgs{
+			ProfileName:       exampleProfile.Name,
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Origins: cdn.EndpointOriginArray{
+				&cdn.EndpointOriginArgs{
+					Name:     pulumi.String("example"),
+					HostName: pulumi.String("www.example.com"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_profile = azure.cdn.Profile("exampleProfile",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard_Verizon")
+example_endpoint = azure.cdn.Endpoint("exampleEndpoint",
+    profile_name=example_profile.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    origins=[{
+        "name": "example",
+        "host_name": "www.example.com",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleProfile = new azure.cdn.Profile("exampleProfile", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard_Verizon",
+});
+const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
+    profileName: exampleProfile.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    origins: [{
+        name: "example",
+        hostName: "www.example.com",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}
@@ -23,7 +163,7 @@ A CDN Endpoint is the entity within a CDN Profile containing configuration infor
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

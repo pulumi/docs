@@ -12,6 +12,146 @@ meta_desc: "Explore the TimeSeriesInsightsReferenceDataSet resource of the iot m
 
 Manages an Azure IoT Time Series Insights Reference Data Set.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleTimeSeriesInsightsStandardEnvironment = new Azure.Iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment", new Azure.Iot.TimeSeriesInsightsStandardEnvironmentArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "S1_1",
+            DataRetentionTime = "P30D",
+        });
+        var exampleTimeSeriesInsightsReferenceDataSet = new Azure.Iot.TimeSeriesInsightsReferenceDataSet("exampleTimeSeriesInsightsReferenceDataSet", new Azure.Iot.TimeSeriesInsightsReferenceDataSetArgs
+        {
+            TimeSeriesInsightsEnvironmentId = exampleTimeSeriesInsightsStandardEnvironment.Id,
+            Location = exampleResourceGroup.Location,
+            KeyProperties = 
+            {
+                new Azure.Iot.Inputs.TimeSeriesInsightsReferenceDataSetKeyPropertyArgs
+                {
+                    Name = "keyProperty1",
+                    Type = "String",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleTimeSeriesInsightsStandardEnvironment, err := iot.NewTimeSeriesInsightsStandardEnvironment(ctx, "exampleTimeSeriesInsightsStandardEnvironment", &iot.TimeSeriesInsightsStandardEnvironmentArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("S1_1"),
+			DataRetentionTime: pulumi.String("P30D"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewTimeSeriesInsightsReferenceDataSet(ctx, "exampleTimeSeriesInsightsReferenceDataSet", &iot.TimeSeriesInsightsReferenceDataSetArgs{
+			TimeSeriesInsightsEnvironmentId: exampleTimeSeriesInsightsStandardEnvironment.ID(),
+			Location:                        exampleResourceGroup.Location,
+			KeyProperties: iot.TimeSeriesInsightsReferenceDataSetKeyPropertyArray{
+				&iot.TimeSeriesInsightsReferenceDataSetKeyPropertyArgs{
+					Name: pulumi.String("keyProperty1"),
+					Type: pulumi.String("String"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_time_series_insights_standard_environment = azure.iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="S1_1",
+    data_retention_time="P30D")
+example_time_series_insights_reference_data_set = azure.iot.TimeSeriesInsightsReferenceDataSet("exampleTimeSeriesInsightsReferenceDataSet",
+    time_series_insights_environment_id=example_time_series_insights_standard_environment.id,
+    location=example_resource_group.location,
+    key_properties=[{
+        "name": "keyProperty1",
+        "type": "String",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleTimeSeriesInsightsStandardEnvironment = new azure.iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "S1_1",
+    dataRetentionTime: "P30D",
+});
+const exampleTimeSeriesInsightsReferenceDataSet = new azure.iot.TimeSeriesInsightsReferenceDataSet("exampleTimeSeriesInsightsReferenceDataSet", {
+    timeSeriesInsightsEnvironmentId: exampleTimeSeriesInsightsStandardEnvironment.id,
+    location: exampleResourceGroup.location,
+    keyProperties: [{
+        name: "keyProperty1",
+        type: "String",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TimeSeriesInsightsReferenceDataSet Resource {#create}
@@ -23,7 +163,7 @@ Manages an Azure IoT Time Series Insights Reference Data Set.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#TimeSeriesInsightsReferenceDataSet">TimeSeriesInsightsReferenceDataSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_string_comparison_behavior=None<span class="p">, </span>key_properties=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>time_series_insights_environment_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.TimeSeriesInsightsReferenceDataSet">TimeSeriesInsightsReferenceDataSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_string_comparison_behavior=None<span class="p">, </span>key_properties=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>time_series_insights_environment_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

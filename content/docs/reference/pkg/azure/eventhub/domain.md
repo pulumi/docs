@@ -67,7 +67,7 @@ func main() {
 		_, err = eventgrid.NewDomain(ctx, "exampleDomain", &eventgrid.DomainArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"environment": pulumi.String("Production"),
 			},
 		})
@@ -128,7 +128,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>input_mapping_default_values=None<span class="p">, </span>input_mapping_fields=None<span class="p">, </span>input_schema=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>input_mapping_default_values=None<span class="p">, </span>input_mapping_fields=None<span class="p">, </span>input_schema=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

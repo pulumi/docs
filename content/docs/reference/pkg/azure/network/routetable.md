@@ -15,6 +15,140 @@ Manages a Route Table
 > **NOTE on Route Tables and Routes:** There is both a standalone `route` resource, and allows for Routes to be defined in-line within the `route_table` resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleRouteTable = new Azure.Network.RouteTable("exampleRouteTable", new Azure.Network.RouteTableArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            DisableBgpRoutePropagation = false,
+            Routes = 
+            {
+                new Azure.Network.Inputs.RouteTableRouteArgs
+                {
+                    Name = "route1",
+                    AddressPrefix = "10.1.0.0/16",
+                    NextHopType = "vnetlocal",
+                },
+            },
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewRouteTable(ctx, "exampleRouteTable", &network.RouteTableArgs{
+			Location:                   exampleResourceGroup.Location,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			DisableBgpRoutePropagation: pulumi.Bool(false),
+			Routes: network.RouteTableRouteArray{
+				&network.RouteTableRouteArgs{
+					Name:          pulumi.String("route1"),
+					AddressPrefix: pulumi.String("10.1.0.0/16"),
+					NextHopType:   pulumi.String("vnetlocal"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_route_table = azure.network.RouteTable("exampleRouteTable",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    disable_bgp_route_propagation=False,
+    routes=[{
+        "name": "route1",
+        "address_prefix": "10.1.0.0/16",
+        "next_hop_type": "vnetlocal",
+    }],
+    tags={
+        "environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleRouteTable = new azure.network.RouteTable("exampleRouteTable", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    disableBgpRoutePropagation: false,
+    routes: [{
+        name: "route1",
+        addressPrefix: "10.1.0.0/16",
+        nextHopType: "vnetlocal",
+    }],
+    tags: {
+        environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouteTable Resource {#create}
@@ -26,7 +160,7 @@ At this time you cannot use a Route Table with in-line Routes in conjunction wit
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#RouteTable">RouteTable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>disable_bgp_route_propagation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routes=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.RouteTable">RouteTable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>disable_bgp_route_propagation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routes=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

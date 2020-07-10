@@ -15,6 +15,192 @@ Manages a Microsoft SQL Azure Database Server.
 > **Note:** All arguments including the administrator login and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleServer = new Azure.MSSql.Server("exampleServer", new Azure.MSSql.ServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "missadministrator",
+            AdministratorLoginPassword = "thisIsKat11",
+            AzureadAdministrator = new Azure.MSSql.Inputs.ServerAzureadAdministratorArgs
+            {
+                LoginUsername = "AzureAD Admin",
+                ObjectId = "00000000-0000-0000-0000-000000000000",
+            },
+            ExtendedAuditingPolicy = new Azure.MSSql.Inputs.ServerExtendedAuditingPolicyArgs
+            {
+                StorageEndpoint = exampleAccount.PrimaryBlobEndpoint,
+                StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+                StorageAccountAccessKeyIsSecondary = true,
+                RetentionInDays = 6,
+            },
+            Tags = 
+            {
+                { "environment", "production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mssql.NewServer(ctx, "exampleServer", &mssql.ServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("missadministrator"),
+			AdministratorLoginPassword: pulumi.String("thisIsKat11"),
+			AzureadAdministrator: &mssql.ServerAzureadAdministratorArgs{
+				LoginUsername: pulumi.String("AzureAD Admin"),
+				ObjectId:      pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			ExtendedAuditingPolicy: &mssql.ServerExtendedAuditingPolicyArgs{
+				StorageEndpoint:                    exampleAccount.PrimaryBlobEndpoint,
+				StorageAccountAccessKey:            exampleAccount.PrimaryAccessKey,
+				StorageAccountAccessKeyIsSecondary: pulumi.Bool(true),
+				RetentionInDays:                    pulumi.Int(6),
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_server = azure.mssql.Server("exampleServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="missadministrator",
+    administrator_login_password="thisIsKat11",
+    azuread_administrator={
+        "loginUsername": "AzureAD Admin",
+        "object_id": "00000000-0000-0000-0000-000000000000",
+    },
+    extended_auditing_policy={
+        "storage_endpoint": example_account.primary_blob_endpoint,
+        "storage_account_access_key": example_account.primary_access_key,
+        "storageAccountAccessKeyIsSecondary": True,
+        "retention_in_days": 6,
+    },
+    tags={
+        "environment": "production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleServer = new azure.mssql.Server("exampleServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "missadministrator",
+    administratorLoginPassword: "thisIsKat11",
+    azureadAdministrator: {
+        loginUsername: "AzureAD Admin",
+        objectId: "00000000-0000-0000-0000-000000000000",
+    },
+    extendedAuditingPolicy: {
+        storageEndpoint: exampleAccount.primaryBlobEndpoint,
+        storageAccountAccessKey: exampleAccount.primaryAccessKey,
+        storageAccountAccessKeyIsSecondary: true,
+        retentionInDays: 6,
+    },
+    tags: {
+        environment: "production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}
@@ -26,7 +212,7 @@ Manages a Microsoft SQL Azure Database Server.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>azuread_administrator=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>azuread_administrator=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

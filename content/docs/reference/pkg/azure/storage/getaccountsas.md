@@ -17,6 +17,209 @@ Shared access signatures allow fine-grained, ephemeral access control to various
 Note that this is an [Account SAS](https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-an-account-sas)
 and *not* a [Service SAS](https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westus",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "westus",
+            AccountTier = "Standard",
+            AccountReplicationType = "GRS",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleAccountSAS = exampleAccount.PrimaryConnectionString.Apply(primaryConnectionString => Azure.Storage.GetAccountSAS.InvokeAsync(new Azure.Storage.GetAccountSASArgs
+        {
+            ConnectionString = primaryConnectionString,
+            HttpsOnly = true,
+            ResourceTypes = new Azure.Storage.Inputs.GetAccountSASResourceTypesArgs
+            {
+                Service = true,
+                Container = false,
+                Object = false,
+            },
+            Services = new Azure.Storage.Inputs.GetAccountSASServicesArgs
+            {
+                Blob = true,
+                Queue = false,
+                Table = false,
+                File = false,
+            },
+            Start = "2018-03-21",
+            Expiry = "2020-03-21",
+            Permissions = new Azure.Storage.Inputs.GetAccountSASPermissionsArgs
+            {
+                Read = true,
+                Write = true,
+                Delete = false,
+                List = false,
+                Add = true,
+                Create = true,
+                Update = false,
+                Process = false,
+            },
+        }));
+        this.SasUrlQueryString = exampleAccountSAS.Apply(exampleAccountSAS => exampleAccountSAS.Sas);
+    }
+
+    [Output("sasUrlQueryString")]
+    public Output<string> SasUrlQueryString { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("westus"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               pulumi.String("westus"),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("sasUrlQueryString", exampleAccountSAS.ApplyT(func(exampleAccountSAS storage.GetAccountSASResult) (string, error) {
+			return exampleAccountSAS.Sas, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location="westus",
+    account_tier="Standard",
+    account_replication_type="GRS",
+    tags={
+        "environment": "staging",
+    })
+example_account_sas = example_account.primary_connection_string.apply(lambda primary_connection_string: azure.storage.get_account_sas(connection_string=primary_connection_string,
+    https_only=True,
+    resource_types={
+        "service": True,
+        "container": False,
+        "object": False,
+    },
+    services={
+        "blob": True,
+        "queue": False,
+        "table": False,
+        "file": False,
+    },
+    start="2018-03-21",
+    expiry="2020-03-21",
+    permissions={
+        "read": True,
+        "write": True,
+        "delete": False,
+        "list": False,
+        "add": True,
+        "create": True,
+        "update": False,
+        "process": False,
+    }))
+pulumi.export("sasUrlQueryString", example_account_sas.sas)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "westus",
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleAccountSAS = exampleAccount.primaryConnectionString.apply(primaryConnectionString => azure.storage.getAccountSAS({
+    connectionString: primaryConnectionString,
+    httpsOnly: true,
+    resourceTypes: {
+        service: true,
+        container: false,
+        object: false,
+    },
+    services: {
+        blob: true,
+        queue: false,
+        table: false,
+        file: false,
+    },
+    start: "2018-03-21",
+    expiry: "2020-03-21",
+    permissions: {
+        read: true,
+        write: true,
+        "delete": false,
+        list: false,
+        add: true,
+        create: true,
+        update: false,
+        process: false,
+    },
+}));
+export const sasUrlQueryString = exampleAccountSAS.sas;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccountSAS {#using}

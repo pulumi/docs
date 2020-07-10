@@ -12,6 +12,225 @@ meta_desc: "Explore the AssignmentVirtualMachine resource of the maintenance mod
 
 Manages a maintenance assignment to virtual machine.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "internal",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleLinuxVirtualMachine = new Azure.Compute.LinuxVirtualMachine("exampleLinuxVirtualMachine", new Azure.Compute.LinuxVirtualMachineArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Size = "Standard_F2",
+            AdminUsername = "adminuser",
+            NetworkInterfaceIds = 
+            {
+                exampleNetworkInterface.Id,
+            },
+            AdminSshKeys = 
+            {
+                new Azure.Compute.Inputs.LinuxVirtualMachineAdminSshKeyArgs
+                {
+                    Username = "adminuser",
+                    PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
+                },
+            },
+            OsDisk = new Azure.Compute.Inputs.LinuxVirtualMachineOsDiskArgs
+            {
+                Caching = "ReadWrite",
+                StorageAccountType = "Standard_LRS",
+            },
+            SourceImageReference = new Azure.Compute.Inputs.LinuxVirtualMachineSourceImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+        });
+        var exampleConfiguration = new Azure.Maintenance.Configuration("exampleConfiguration", new Azure.Maintenance.ConfigurationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Scope = "All",
+        });
+        var exampleAssignmentVirtualMachine = new Azure.Maintenance.AssignmentVirtualMachine("exampleAssignmentVirtualMachine", new Azure.Maintenance.AssignmentVirtualMachineArgs
+        {
+            Location = exampleResourceGroup.Location,
+            MaintenanceConfigurationId = exampleConfiguration.Id,
+            VirtualMachineId = exampleLinuxVirtualMachine.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "internal",
+        "subnet_id": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_linux_virtual_machine = azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    size="Standard_F2",
+    admin_username="adminuser",
+    network_interface_ids=[example_network_interface.id],
+    admin_ssh_keys=[{
+        "username": "adminuser",
+        "publicKey": (lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
+    }],
+    os_disk={
+        "caching": "ReadWrite",
+        "storage_account_type": "Standard_LRS",
+    },
+    source_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    })
+example_configuration = azure.maintenance.Configuration("exampleConfiguration",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    scope="All")
+example_assignment_virtual_machine = azure.maintenance.AssignmentVirtualMachine("exampleAssignmentVirtualMachine",
+    location=example_resource_group.location,
+    maintenance_configuration_id=example_configuration.id,
+    virtual_machine_id=example_linux_virtual_machine.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "internal",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    size: "Standard_F2",
+    adminUsername: "adminuser",
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    adminSshKeys: [{
+        username: "adminuser",
+        publicKey: fs.readFileSync("~/.ssh/id_rsa.pub"),
+    }],
+    osDisk: {
+        caching: "ReadWrite",
+        storageAccountType: "Standard_LRS",
+    },
+    sourceImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+});
+const exampleConfiguration = new azure.maintenance.Configuration("exampleConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    scope: "All",
+});
+const exampleAssignmentVirtualMachine = new azure.maintenance.AssignmentVirtualMachine("exampleAssignmentVirtualMachine", {
+    location: exampleResourceGroup.location,
+    maintenanceConfigurationId: exampleConfiguration.id,
+    virtualMachineId: exampleLinuxVirtualMachine.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AssignmentVirtualMachine Resource {#create}
@@ -23,7 +242,7 @@ Manages a maintenance assignment to virtual machine.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/maintenance/#AssignmentVirtualMachine">AssignmentVirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>maintenance_configuration_id=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/maintenance/#pulumi_azure.maintenance.AssignmentVirtualMachine">AssignmentVirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>maintenance_configuration_id=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

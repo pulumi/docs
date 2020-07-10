@@ -128,7 +128,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = appservice.NewHybridConnection(ctx, "exampleAppservice/hybridConnectionHybridConnection", &appservice.HybridConnectionArgs{
+		_, err = appservice.NewHybridConnection(ctx, "exampleAppservice_hybridConnectionHybridConnection", &appservice.HybridConnectionArgs{
 			AppServiceName:    exampleAppService.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			RelayId:           exampleHybridConnection.ID(),
@@ -236,7 +236,7 @@ const exampleAppservice_hybridConnectionHybridConnection = new azure.appservice.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#HybridConnection">HybridConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>hostname=None<span class="p">, </span>port=None<span class="p">, </span>relay_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>send_key_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.HybridConnection">HybridConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>hostname=None<span class="p">, </span>port=None<span class="p">, </span>relay_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>send_key_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

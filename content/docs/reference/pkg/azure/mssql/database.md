@@ -12,6 +12,215 @@ meta_desc: "Explore the Database resource of the mssql module, including example
 
 Manages a MS SQL Database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "4dm1n157r470r",
+            AdministratorLoginPassword = "4-v3ry-53cr37-p455w0rd",
+        });
+        var test = new Azure.MSSql.Database("test", new Azure.MSSql.DatabaseArgs
+        {
+            ServerId = exampleSqlServer.Id,
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            LicenseType = "LicenseIncluded",
+            MaxSizeGb = 4,
+            ReadScale = true,
+            SkuName = "BC_Gen5_2",
+            ZoneRedundant = true,
+            ExtendedAuditingPolicy = new Azure.MSSql.Inputs.DatabaseExtendedAuditingPolicyArgs
+            {
+                StorageEndpoint = exampleAccount.PrimaryBlobEndpoint,
+                StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+                StorageAccountAccessKeyIsSecondary = true,
+                RetentionInDays = 6,
+            },
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mssql.NewDatabase(ctx, "test", &mssql.DatabaseArgs{
+			ServerId:      exampleSqlServer.ID(),
+			Collation:     pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
+			LicenseType:   pulumi.String("LicenseIncluded"),
+			MaxSizeGb:     pulumi.Int(4),
+			ReadScale:     pulumi.Bool(true),
+			SkuName:       pulumi.String("BC_Gen5_2"),
+			ZoneRedundant: pulumi.Bool(true),
+			ExtendedAuditingPolicy: &mssql.DatabaseExtendedAuditingPolicyArgs{
+				StorageEndpoint:                    exampleAccount.PrimaryBlobEndpoint,
+				StorageAccountAccessKey:            exampleAccount.PrimaryAccessKey,
+				StorageAccountAccessKeyIsSecondary: pulumi.Bool(true),
+				RetentionInDays:                    pulumi.Int(6),
+			},
+			Tags: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+test = azure.mssql.Database("test",
+    server_id=example_sql_server.id,
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    license_type="LicenseIncluded",
+    max_size_gb=4,
+    read_scale=True,
+    sku_name="BC_Gen5_2",
+    zone_redundant=True,
+    extended_auditing_policy={
+        "storage_endpoint": example_account.primary_blob_endpoint,
+        "storage_account_access_key": example_account.primary_access_key,
+        "storageAccountAccessKeyIsSecondary": True,
+        "retention_in_days": 6,
+    },
+    tags={
+        "foo": "bar",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const test = new azure.mssql.Database("test", {
+    serverId: exampleSqlServer.id,
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    licenseType: "LicenseIncluded",
+    maxSizeGb: 4,
+    readScale: true,
+    skuName: "BC_Gen5_2",
+    zoneRedundant: true,
+    extendedAuditingPolicy: {
+        storageEndpoint: exampleAccount.primaryBlobEndpoint,
+        storageAccountAccessKey: exampleAccount.primaryAccessKey,
+        storageAccountAccessKeyIsSecondary: true,
+        retentionInDays: 6,
+    },
+    tags: {
+        foo: "bar",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}
@@ -23,7 +232,7 @@ Manages a MS SQL Database.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -368,7 +577,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,7 +793,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,7 +1009,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1016,7 +1225,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1437,7 +1646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1653,7 +1862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1869,7 +2078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2085,7 +2294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+    <dd>{{% md %}}Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
