@@ -48,7 +48,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := github.NewOrganizationWebhook(ctx, "foo", &github.OrganizationWebhookArgs{
+			Active: pulumi.Bool(false),
+			Configuration: &github.OrganizationWebhookConfigurationArgs{
+				ContentType: pulumi.String("form"),
+				InsecureSsl: pulumi.Bool(false),
+				Url:         pulumi.String("https://google.de/"),
+			},
+			Events: pulumi.StringArray{
+				pulumi.String("issues"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

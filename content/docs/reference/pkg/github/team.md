@@ -43,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := github.NewTeam(ctx, "someTeam", &github.TeamArgs{
+			Description: pulumi.String("Some cool team"),
+			Privacy:     pulumi.String("closed"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -561,7 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -611,7 +632,7 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -661,7 +682,7 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -711,7 +732,7 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -933,7 +954,7 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1029,7 +1050,7 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1125,7 +1146,7 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1221,7 +1242,7 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
-Useful when referencing the team in [`github..BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
+Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
 {{% /md %}}</dd>
 
 </dl>

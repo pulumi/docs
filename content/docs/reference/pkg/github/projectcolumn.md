@@ -42,7 +42,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := github.NewOrganizationProject(ctx, "project", &github.OrganizationProjectArgs{
+			Body: pulumi.String("This is an organization project."),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = github.NewProjectColumn(ctx, "column", &github.ProjectColumnArgs{
+			ProjectId: project.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

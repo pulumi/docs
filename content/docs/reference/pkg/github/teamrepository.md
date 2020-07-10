@@ -18,7 +18,7 @@ particular repository.
 
 The repository and the team must both belong to the same organization
 on GitHub. This resource does not actually *create* any repositories;
-to do that, see `github..Repository`.
+to do that, see `github.Repository`.
 
 {{% examples %}}
 ## Example Usage
@@ -56,7 +56,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		someTeam, err := github.NewTeam(ctx, "someTeam", &github.TeamArgs{
+			Description: pulumi.String("Some cool team"),
+		})
+		if err != nil {
+			return err
+		}
+		someRepo, err := github.NewRepository(ctx, "someRepo", nil)
+		if err != nil {
+			return err
+		}
+		_, err = github.NewTeamRepository(ctx, "someTeamRepo", &github.TeamRepositoryArgs{
+			Permission: pulumi.String("pull"),
+			Repository: someRepo.Name,
+			TeamId:     someTeam.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

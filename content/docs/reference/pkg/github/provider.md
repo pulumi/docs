@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>base_url=None<span class="p">, </span>organization=None<span class="p">, </span>owner=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>anonymous=None<span class="p">, </span>base_url=None<span class="p">, </span>individual=None<span class="p">, </span>insecure=None<span class="p">, </span>organization=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,6 +200,18 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="anonymous_csharp">
+<a href="#anonymous_csharp" style="color: inherit; text-decoration: inherit;">Anonymous</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
+authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span> 
@@ -209,26 +221,37 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="individual_csharp">
+<a href="#individual_csharp" style="color: inherit; text-decoration: inherit;">Individual</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insecure_csharp">
+<a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The GitHub organization name to manage.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner field (or GITHUB_OWNER ENV variable){{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="owner_csharp">
-<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The GitHub owner name to manage.
+    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,6 +274,18 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="anonymous_go">
+<a href="#anonymous_go" style="color: inherit; text-decoration: inherit;">Anonymous</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
+authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span> 
@@ -260,26 +295,37 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="individual_go">
+<a href="#individual_go" style="color: inherit; text-decoration: inherit;">Individual</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insecure_go">
+<a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The GitHub organization name to manage.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner field (or GITHUB_OWNER ENV variable){{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="owner_go">
-<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The GitHub owner name to manage.
+    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,6 +348,18 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="anonymous_nodejs">
+<a href="#anonymous_nodejs" style="color: inherit; text-decoration: inherit;">anonymous</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
+authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span> 
@@ -311,26 +369,37 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="individual_nodejs">
+<a href="#individual_nodejs" style="color: inherit; text-decoration: inherit;">individual</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insecure_nodejs">
+<a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The GitHub organization name to manage.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner field (or GITHUB_OWNER ENV variable){{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="owner_nodejs">
-<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The GitHub owner name to manage.
+    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,6 +422,18 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="anonymous_python">
+<a href="#anonymous_python" style="color: inherit; text-decoration: inherit;">anonymous</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
+authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span> 
@@ -362,26 +443,37 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="individual_python">
+<a href="#individual_python" style="color: inherit; text-decoration: inherit;">individual</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insecure_python">
+<a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The GitHub organization name to manage.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner field (or GITHUB_OWNER ENV variable){{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="owner_python">
-<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The GitHub owner name to manage.
+    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

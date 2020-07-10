@@ -42,6 +42,9 @@ class MyStack : Stack
         var exampleUserInvitationAccepter = new Github.UserInvitationAccepter("exampleUserInvitationAccepter", new Github.UserInvitationAccepterArgs
         {
             InvitationId = exampleRepositoryCollaborator.InvitationId,
+        }, new CustomResourceOptions
+        {
+            Provider = "github.invitee",
         });
     }
 
@@ -51,7 +54,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi-github/sdk/go/github/providers"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleRepository, err := github.NewRepository(ctx, "exampleRepository", nil)
+		if err != nil {
+			return err
+		}
+		exampleRepositoryCollaborator, err := github.NewRepositoryCollaborator(ctx, "exampleRepositoryCollaborator", &github.RepositoryCollaboratorArgs{
+			Permission: pulumi.String("push"),
+			Repository: exampleRepository.Name,
+			Username:   pulumi.String("example-username"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newgithub(ctx, "invitee", &providers.githubArgs{
+			Token: pulumi.String(_var.Invitee_token),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = github.NewUserInvitationAccepter(ctx, "exampleUserInvitationAccepter", &github.UserInvitationAccepterArgs{
+			InvitationId: exampleRepositoryCollaborator.InvitationId,
+		}, pulumi.Provider("github.invitee"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,7 +108,8 @@ example_repository_collaborator = github.RepositoryCollaborator("exampleReposito
     repository=example_repository.name,
     username="example-username")
 invitee = pulumi.providers.Github("invitee", token=var["invitee_token"])
-example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id)
+example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id,
+opts=ResourceOptions(provider="github.invitee"))
 ```
 
 {{% /example %}}

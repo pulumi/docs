@@ -51,7 +51,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := github.NewRepositoryDeployKey(ctx, "exampleRepositoryDeployKey", &github.RepositoryDeployKeyArgs{
+			Key:        pulumi.String("ssh-rsa AAA..."),
+			ReadOnly:   pulumi.Bool(false),
+			Repository: pulumi.String("test-repo"),
+			Title:      pulumi.String("Repository test key"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
