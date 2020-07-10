@@ -16,8 +16,6 @@ There are four types of IP blocks in Packet: global IPv4, public IPv4, private I
 
 The datasource has 4 list attributes: `global_ipv4`, `public_ipv4`, `private_ipv4` and `ipv6`, each listing CIDR notation (`<network>/<mask>`) of respective blocks from the project.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,10 +42,33 @@ class MyStack : Stack
     public Output<string> Out { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		projectId := "<UUID_of_your_project>"
+		test, err := packet.GetIpBlockRanges(ctx, &packet.GetIpBlockRangesArgs{
+			ProjectId: projectId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("out", test)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,9 +80,11 @@ project_id = "<UUID_of_your_project>"
 test = packet.get_ip_block_ranges(project_id=project_id)
 pulumi.export("out", test)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -72,6 +95,7 @@ const test = packet.getIpBlockRanges({
 });
 export const out = test;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -121,7 +145,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project from which to list the blocks. 
+    <dd>{{% md %}}ID of the project from which to list the blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -150,7 +174,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project from which to list the blocks. 
+    <dd>{{% md %}}ID of the project from which to list the blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -179,7 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project from which to list the blocks. 
+    <dd>{{% md %}}ID of the project from which to list the blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -208,7 +232,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project from which to list the blocks. 
+    <dd>{{% md %}}ID of the project from which to list the blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

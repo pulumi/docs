@@ -14,32 +14,8 @@ Provides a resource to manage BGP sessions in Packet Host. Refer to [Packet BGP 
 
 You need to have BGP config enabled in your project.
 
-BGP session must be linked to a device running [BIRD](https://bird.network.cz) or other BGP routing daemon which will control route advertisements via the session to Packet's upstream routers. 
+BGP session must be linked to a device running [BIRD](https://bird.network.cz) or other BGP routing daemon which will control route advertisements via the session to Packet's upstream routers.
 
-
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-Coming soon!
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BgpSession Resource {#create}
@@ -242,7 +218,7 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,7 +258,7 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +298,7 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +338,7 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,7 +634,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,7 +684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +734,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,7 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of device 
+    <dd>{{% md %}}ID of device
 {{% /md %}}</dd>
 
     <dt class="property-optional"

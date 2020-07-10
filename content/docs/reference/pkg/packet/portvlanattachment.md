@@ -18,10 +18,8 @@ If you need this resource to add the port back to bond on removal, set `force_bo
 
 To learn more about Layer 2 networking in Packet, refer to
 
-* https://www.packet.com/resources/guides/layer-2-configurations/ 
+* https://www.packet.com/resources/guides/layer-2-configurations/
 * https://www.packet.com/developers/docs/network/advanced/layer-2/
-
-
 ## Attribute Referece
 
 * `id` - UUID of device port used in the assignment
@@ -106,15 +104,115 @@ class MyStack : Stack
             VlanVnid = test2Vlan.Vxlan,
             PortName = "eth1",
             Native = true,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "packet_port_vlan_attachment.test1",
+            },
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testVlan, err := packet.NewVlan(ctx, "testVlan", &packet.VlanArgs{
+			Description: pulumi.String("VLAN in New Jersey"),
+			Facility:    pulumi.String("ewr1"),
+			ProjectId:   pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		testDevice, err := packet.NewDevice(ctx, "testDevice", &packet.DeviceArgs{
+			Hostname: pulumi.String("test"),
+			Plan:     pulumi.String("m1.xlarge.x86"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String("ubuntu_16_04"),
+			BillingCycle:    pulumi.String("hourly"),
+			ProjectId:       pulumi.String(local.Project_id),
+			NetworkType:     pulumi.String("hybrid"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewPortVlanAttachment(ctx, "testPortVlanAttachment", &packet.PortVlanAttachmentArgs{
+			DeviceId: testDevice.ID(),
+			PortName: pulumi.String("eth1"),
+			VlanVnid: testVlan.Vxlan,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewDevice(ctx, "testIndex_deviceDevice", &packet.DeviceArgs{
+			Hostname: pulumi.String("test"),
+			Plan:     pulumi.String("m1.xlarge.x86"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String("ubuntu_16_04"),
+			BillingCycle:    pulumi.String("hourly"),
+			ProjectId:       pulumi.String(local.Project_id),
+			NetworkType:     pulumi.String("layer2-individual"),
+		})
+		if err != nil {
+			return err
+		}
+		test1Vlan, err := packet.NewVlan(ctx, "test1Vlan", &packet.VlanArgs{
+			Description: pulumi.String("VLAN in New Jersey"),
+			Facility:    pulumi.String("ewr1"),
+			ProjectId:   pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		test2Vlan, err := packet.NewVlan(ctx, "test2Vlan", &packet.VlanArgs{
+			Description: pulumi.String("VLAN in New Jersey"),
+			Facility:    pulumi.String("ewr1"),
+			ProjectId:   pulumi.String(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewPortVlanAttachment(ctx, "test1PortVlanAttachment", &packet.PortVlanAttachmentArgs{
+			DeviceId: testDevice.ID(),
+			VlanVnid: test1Vlan.Vxlan,
+			PortName: pulumi.String("eth1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewPortVlanAttachment(ctx, "test2PortVlanAttachment", &packet.PortVlanAttachmentArgs{
+			DeviceId: testDevice.ID(),
+			VlanVnid: test2Vlan.Vxlan,
+			PortName: pulumi.String("eth1"),
+			Native:   pulumi.Bool(true),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"packet_port_vlan_attachment.test1",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,11 +262,14 @@ test2_port_vlan_attachment = packet.PortVlanAttachment("test2PortVlanAttachment"
     device_id=test_device.id,
     vlan_vnid=test2_vlan.vxlan,
     port_name="eth1",
-    native=True)
+    native=True,
+    opts=ResourceOptions(depends_on=["packet_port_vlan_attachment.test1"]))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
@@ -223,8 +324,11 @@ const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAtta
     vlanVnid: test2Vlan.vxlan,
     portName: "eth1",
     native: true,
+}, {
+    dependsOn: ["packet_port_vlan_attachment.test1"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -463,7 +567,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
 </dl>
@@ -525,7 +629,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
 </dl>
@@ -587,7 +691,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
 </dl>
@@ -649,7 +753,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
 </dl>
@@ -974,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1056,7 +1160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,7 +1324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+    <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
