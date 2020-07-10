@@ -155,7 +155,7 @@ const main = new aws.apigateway.UsagePlanKey("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#UsagePlanKey">UsagePlanKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlanKey">UsagePlanKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

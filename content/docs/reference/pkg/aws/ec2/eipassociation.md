@@ -157,7 +157,7 @@ const eipAssoc = new aws.ec2.EipAssociation("eip_assoc", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#EipAssociation">EipAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_id=None<span class="p">, </span>allow_reassociation=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>public_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.EipAssociation">EipAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_id=None<span class="p">, </span>allow_reassociation=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>public_ip=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

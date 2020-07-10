@@ -26,7 +26,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#Workspace">Workspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bundle_id=None<span class="p">, </span>directory_id=None<span class="p">, </span>root_volume_encryption_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>user_name=None<span class="p">, </span>user_volume_encryption_enabled=None<span class="p">, </span>volume_encryption_key=None<span class="p">, </span>workspace_properties=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Workspace">Workspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bundle_id=None<span class="p">, </span>directory_id=None<span class="p">, </span>root_volume_encryption_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>user_name=None<span class="p">, </span>user_volume_encryption_enabled=None<span class="p">, </span>volume_encryption_key=None<span class="p">, </span>workspace_properties=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

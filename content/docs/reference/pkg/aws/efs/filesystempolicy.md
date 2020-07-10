@@ -183,7 +183,7 @@ const policy = new aws.efs.FileSystemPolicy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/efs/#FileSystemPolicy">FileSystemPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>file_system_id=None<span class="p">, </span>policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/efs/#pulumi_aws.efs.FileSystemPolicy">FileSystemPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>file_system_id=None<span class="p">, </span>policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

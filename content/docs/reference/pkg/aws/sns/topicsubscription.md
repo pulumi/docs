@@ -116,7 +116,7 @@ const userUpdatesSqsTarget = new aws.sns.TopicSubscription("user_updates_sqs_tar
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sns/#TopicSubscription">TopicSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>confirmation_timeout_in_minutes=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>endpoint=None<span class="p">, </span>endpoint_auto_confirms=None<span class="p">, </span>filter_policy=None<span class="p">, </span>protocol=None<span class="p">, </span>raw_message_delivery=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sns/#pulumi_aws.sns.TopicSubscription">TopicSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>confirmation_timeout_in_minutes=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>endpoint=None<span class="p">, </span>endpoint_auto_confirms=None<span class="p">, </span>filter_policy=None<span class="p">, </span>protocol=None<span class="p">, </span>raw_message_delivery=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

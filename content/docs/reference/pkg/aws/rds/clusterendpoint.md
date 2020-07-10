@@ -46,6 +46,8 @@ class MyStack : Stack
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
             Identifier = "test1",
             InstanceClass = "db.t2.small",
         });
@@ -53,6 +55,8 @@ class MyStack : Stack
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
             Identifier = "test2",
             InstanceClass = "db.t2.small",
         });
@@ -60,6 +64,8 @@ class MyStack : Stack
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
             Identifier = "test3",
             InstanceClass = "db.t2.small",
         });
@@ -122,6 +128,8 @@ func main() {
 		test1, err := rds.NewClusterInstance(ctx, "test1", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test1"),
 			InstanceClass:     pulumi.String("db.t2.small"),
 		})
@@ -131,6 +139,8 @@ func main() {
 		test2, err := rds.NewClusterInstance(ctx, "test2", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test2"),
 			InstanceClass:     pulumi.String("db.t2.small"),
 		})
@@ -140,6 +150,8 @@ func main() {
 		test3, err := rds.NewClusterInstance(ctx, "test3", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test3"),
 			InstanceClass:     pulumi.String("db.t2.small"),
 		})
@@ -197,16 +209,22 @@ default = aws.rds.Cluster("default",
 test1 = aws.rds.ClusterInstance("test1",
     apply_immediately=True,
     cluster_identifier=default.id,
+    engine=default.engine,
+    engine_version=default.engine_version,
     identifier="test1",
     instance_class="db.t2.small")
 test2 = aws.rds.ClusterInstance("test2",
     apply_immediately=True,
     cluster_identifier=default.id,
+    engine=default.engine,
+    engine_version=default.engine_version,
     identifier="test2",
     instance_class="db.t2.small")
 test3 = aws.rds.ClusterInstance("test3",
     apply_immediately=True,
     cluster_identifier=default.id,
+    engine=default.engine,
+    engine_version=default.engine_version,
     identifier="test3",
     instance_class="db.t2.small")
 eligible = aws.rds.ClusterEndpoint("eligible",
@@ -251,18 +269,24 @@ const defaultCluster = new aws.rds.Cluster("default", {
 const test1 = new aws.rds.ClusterInstance("test1", {
     applyImmediately: true,
     clusterIdentifier: defaultCluster.id,
+    engine: defaultCluster.engine,
+    engineVersion: defaultCluster.engineVersion,
     identifier: "test1",
     instanceClass: "db.t2.small",
 });
 const test2 = new aws.rds.ClusterInstance("test2", {
     applyImmediately: true,
     clusterIdentifier: defaultCluster.id,
+    engine: defaultCluster.engine,
+    engineVersion: defaultCluster.engineVersion,
     identifier: "test2",
     instanceClass: "db.t2.small",
 });
 const test3 = new aws.rds.ClusterInstance("test3", {
     applyImmediately: true,
     clusterIdentifier: defaultCluster.id,
+    engine: defaultCluster.engine,
+    engineVersion: defaultCluster.engineVersion,
     identifier: "test3",
     instanceClass: "db.t2.small",
 });
@@ -300,7 +324,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#ClusterEndpoint">ClusterEndpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.ClusterEndpoint">ClusterEndpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

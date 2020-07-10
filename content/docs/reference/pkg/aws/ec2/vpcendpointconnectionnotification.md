@@ -195,7 +195,7 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_events=None<span class="p">, </span>connection_notification_arn=None<span class="p">, </span>vpc_endpoint_id=None<span class="p">, </span>vpc_endpoint_service_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_events=None<span class="p">, </span>connection_notification_arn=None<span class="p">, </span>vpc_endpoint_id=None<span class="p">, </span>vpc_endpoint_service_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

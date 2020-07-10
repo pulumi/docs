@@ -124,7 +124,7 @@ const exampleProductSubscription = new aws.securityhub.ProductSubscription("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/securityhub/#ProductSubscription">ProductSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>product_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/securityhub/#pulumi_aws.securityhub.ProductSubscription">ProductSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>product_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

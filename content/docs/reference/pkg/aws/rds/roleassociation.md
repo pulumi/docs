@@ -110,7 +110,7 @@ const example = new aws.rds.RoleAssociation("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#RoleAssociation">RoleAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_instance_identifier=None<span class="p">, </span>feature_name=None<span class="p">, </span>role_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.RoleAssociation">RoleAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_instance_identifier=None<span class="p">, </span>feature_name=None<span class="p">, </span>role_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -60,6 +60,8 @@ class MyStack : Stack
             clusterInstances.Add(new Aws.Rds.ClusterInstance($"clusterInstances-{range.Value}", new Aws.Rds.ClusterInstanceArgs
             {
                 ClusterIdentifier = @default.Id,
+                Engine = @default.Engine,
+                EngineVersion = @default.EngineVersion,
                 Identifier = $"aurora-cluster-demo-{range.Value}",
                 InstanceClass = "db.r4.large",
             }));
@@ -102,6 +104,8 @@ func main() {
 		for key0, val0 := range 2 {
 			__res, err := rds.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &rds.ClusterInstanceArgs{
 				ClusterIdentifier: _default.ID(),
+				Engine:            _default.Engine,
+				EngineVersion:     _default.EngineVersion,
 				Identifier:        pulumi.String(fmt.Sprintf("%v%v", "aurora-cluster-demo-", val0)),
 				InstanceClass:     pulumi.String("db.r4.large"),
 			})
@@ -136,6 +140,8 @@ cluster_instances = []
 for range in [{"value": i} for i in range(0, 2)]:
     cluster_instances.append(aws.rds.ClusterInstance(f"clusterInstances-{range['value']}",
         cluster_identifier=default.id,
+        engine=default.engine,
+        engine_version=default.engine_version,
         identifier=f"aurora-cluster-demo-{range['value']}",
         instance_class="db.r4.large"))
 ```
@@ -163,6 +169,8 @@ const clusterInstances: aws.rds.ClusterInstance[] = [];
 for (let i = 0; i < 2; i++) {
     clusterInstances.push(new aws.rds.ClusterInstance(`cluster_instances-${i}`, {
         clusterIdentifier: defaultCluster.id,
+        engine: defaultCluster.engine,
+        engineVersion: defaultCluster.engineVersion,
         identifier: `aurora-cluster-demo-${i}`,
         instanceClass: "db.r4.large",
     }));
@@ -183,7 +191,7 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#ClusterInstance">ClusterInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.ClusterInstance">ClusterInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
