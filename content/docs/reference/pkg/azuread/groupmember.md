@@ -14,8 +14,6 @@ Manages a single Group Membership within Azure Active Directory.
 
 > **NOTE:** Do not use this resource at the same time as `azuread_group.members`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,10 +44,43 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "jdoe@hashicorp.com"
+		exampleUser, err := azuread.LookupUser(ctx, &azuread.LookupUserArgs{
+			UserPrincipalName: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleGroup, err := azuread.NewGroup(ctx, "exampleGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = azuread.NewGroupMember(ctx, "exampleGroupMember", &azuread.GroupMemberArgs{
+			GroupObjectId:  exampleGroup.ID(),
+			MemberObjectId: pulumi.String(exampleUser.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,22 +94,25 @@ example_group_member = azuread.GroupMember("exampleGroupMember",
     group_object_id=example_group.id,
     member_object_id=example_user.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const exampleUser = pulumi.output(azuread.getUser({
+const exampleUser = azuread.getUser({
     userPrincipalName: "jdoe@hashicorp.com",
-}, { async: true }));
-const exampleGroup = new azuread.Group("example", {});
-const exampleGroupMember = new azuread.GroupMember("example", {
+});
+const exampleGroup = new azuread.Group("exampleGroup", {});
+const exampleGroupMember = new azuread.GroupMember("exampleGroupMember", {
     groupObjectId: exampleGroup.id,
-    memberObjectId: exampleUser.id,
+    memberObjectId: exampleUser.then(exampleUser => exampleUser.id),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -93,7 +127,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azuread/#GroupMember">GroupMember</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_object_id=None<span class="p">, </span>member_object_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.GroupMember">GroupMember</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_object_id=None<span class="p">, </span>member_object_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

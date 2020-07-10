@@ -15,8 +15,114 @@ Manages a Password associated with a Service Principal within Azure Active Direc
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApplication = new AzureAD.Application("exampleApplication", new AzureAD.ApplicationArgs
+        {
+        });
+        var exampleServicePrincipal = new AzureAD.ServicePrincipal("exampleServicePrincipal", new AzureAD.ServicePrincipalArgs
+        {
+            ApplicationId = exampleApplication.ApplicationId,
+        });
+        var exampleServicePrincipalPassword = new AzureAD.ServicePrincipalPassword("exampleServicePrincipalPassword", new AzureAD.ServicePrincipalPasswordArgs
+        {
+            ServicePrincipalId = exampleServicePrincipal.Id,
+            Description = "My managed password",
+            Value = "VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#",
+            EndDate = "2099-01-01T01:02:03Z",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApplication, err := azuread.NewApplication(ctx, "exampleApplication", nil)
+		if err != nil {
+			return err
+		}
+		exampleServicePrincipal, err := azuread.NewServicePrincipal(ctx, "exampleServicePrincipal", &azuread.ServicePrincipalArgs{
+			ApplicationId: exampleApplication.ApplicationId,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = azuread.NewServicePrincipalPassword(ctx, "exampleServicePrincipalPassword", &azuread.ServicePrincipalPasswordArgs{
+			ServicePrincipalId: exampleServicePrincipal.ID(),
+			Description:        pulumi.String("My managed password"),
+			Value:              pulumi.String(fmt.Sprintf("%v%v%v", "VT=uSgbTanZhyz@", "%", "nL9Hpd+Tfay_MRV#")),
+			EndDate:            pulumi.String("2099-01-01T01:02:03Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example_application = azuread.Application("exampleApplication")
+example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal", application_id=example_application.application_id)
+example_service_principal_password = azuread.ServicePrincipalPassword("exampleServicePrincipalPassword",
+    service_principal_id=example_service_principal.id,
+    description="My managed password",
+    value="VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#",
+    end_date="2099-01-01T01:02:03Z")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const exampleApplication = new azuread.Application("exampleApplication", {});
+const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrincipal", {applicationId: exampleApplication.applicationId});
+const exampleServicePrincipalPassword = new azuread.ServicePrincipalPassword("exampleServicePrincipalPassword", {
+    servicePrincipalId: exampleServicePrincipal.id,
+    description: "My managed password",
+    value: `VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#`,
+    endDate: "2099-01-01T01:02:03Z",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServicePrincipalPassword Resource {#create}
@@ -28,7 +134,7 @@ Manages a Password associated with a Service Principal within Azure Active Direc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azuread/#ServicePrincipalPassword">ServicePrincipalPassword</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>end_date=None<span class="p">, </span>end_date_relative=None<span class="p">, </span>key_id=None<span class="p">, </span>service_principal_id=None<span class="p">, </span>start_date=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipalPassword">ServicePrincipalPassword</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>end_date=None<span class="p">, </span>end_date_relative=None<span class="p">, </span>key_id=None<span class="p">, </span>service_principal_id=None<span class="p">, </span>start_date=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

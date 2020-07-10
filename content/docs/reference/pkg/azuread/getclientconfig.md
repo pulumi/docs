@@ -12,8 +12,6 @@ meta_desc: "Explore the GetClientConfig function of the Azure AD package, includ
 
 Use this data source to access the configuration of the AzureRM provider.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,30 @@ class MyStack : Stack
     public Output<string> AccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := azuread.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("accountId", current.ClientId)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,9 +68,11 @@ import pulumi_azuread as azuread
 current = azuread.get_client_config()
 pulumi.export("accountId", current.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
@@ -60,6 +80,7 @@ import * as azuread from "@pulumi/azuread";
 const current = azuread.getClientConfig({});
 export const accountId = current.then(current => current.clientId);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -136,15 +157,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -194,15 +215,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -252,15 +273,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -310,15 +331,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

@@ -15,8 +15,81 @@ Manages a Certificate associated with a Service Principal within Azure Active Di
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApplication = new AzureAD.Application("exampleApplication", new AzureAD.ApplicationArgs
+        {
+        });
+        var exampleServicePrincipal = new AzureAD.ServicePrincipal("exampleServicePrincipal", new AzureAD.ServicePrincipalArgs
+        {
+            ApplicationId = exampleApplication.ApplicationId,
+        });
+        var exampleServicePrincipalCertificate = new AzureAD.ServicePrincipalCertificate("exampleServicePrincipalCertificate", new AzureAD.ServicePrincipalCertificateArgs
+        {
+            ServicePrincipalId = exampleServicePrincipal.Id,
+            Type = "AsymmetricX509Cert",
+            Value = File.ReadAllText("cert.pem"),
+            EndDate = "2021-05-01T01:02:03Z",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example_application = azuread.Application("exampleApplication")
+example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal", application_id=example_application.application_id)
+example_service_principal_certificate = azuread.ServicePrincipalCertificate("exampleServicePrincipalCertificate",
+    service_principal_id=example_service_principal.id,
+    type="AsymmetricX509Cert",
+    value=(lambda path: open(path).read())("cert.pem"),
+    end_date="2021-05-01T01:02:03Z")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+import * from "fs";
+
+const exampleApplication = new azuread.Application("exampleApplication", {});
+const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrincipal", {applicationId: exampleApplication.applicationId});
+const exampleServicePrincipalCertificate = new azuread.ServicePrincipalCertificate("exampleServicePrincipalCertificate", {
+    servicePrincipalId: exampleServicePrincipal.id,
+    type: "AsymmetricX509Cert",
+    value: fs.readFileSync("cert.pem"),
+    endDate: "2021-05-01T01:02:03Z",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServicePrincipalCertificate Resource {#create}
@@ -28,7 +101,7 @@ Manages a Certificate associated with a Service Principal within Azure Active Di
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azuread/#ServicePrincipalCertificate">ServicePrincipalCertificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_date=None<span class="p">, </span>end_date_relative=None<span class="p">, </span>key_id=None<span class="p">, </span>service_principal_id=None<span class="p">, </span>start_date=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipalCertificate">ServicePrincipalCertificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_date=None<span class="p">, </span>end_date_relative=None<span class="p">, </span>key_id=None<span class="p">, </span>service_principal_id=None<span class="p">, </span>start_date=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

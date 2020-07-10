@@ -14,8 +14,6 @@ Use this data source to access information about an existing Application within 
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all (or owned by) applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +39,33 @@ class MyStack : Stack
     public Output<string> AzureAdObjectId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "My First AzureAD Application"
+		example, err := azuread.LookupApplication(ctx, &azuread.LookupApplicationArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("azureAdObjectId", example.Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,19 +76,21 @@ import pulumi_azuread as azuread
 example = azuread.get_application(name="My First AzureAD Application")
 pulumi.export("azureAdObjectId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = pulumi.output(azuread.getApplication({
+const example = azuread.getApplication({
     name: "My First AzureAD Application",
-}, { async: true }));
-
-export const azureAdObjectId = example.id;
+});
+export const azureAdObjectId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -84,7 +107,7 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>name=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>application_id=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -110,6 +133,17 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationid_csharp">
+<a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -164,6 +198,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationid_go">
+<a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -215,6 +260,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationid_nodejs">
+<a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -263,6 +319,17 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_id_python">
+<a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
