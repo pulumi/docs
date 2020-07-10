@@ -14,8 +14,6 @@ Use this data source to access information about an existing Domains within Azur
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.Read.All` within the `Windows Azure Active Directory` API.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,10 +36,30 @@ class MyStack : Stack
     public Output<string> Domains { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		aadDomains, err := azuread.GetDomains(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("domains", aadDomains.Domains)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,17 +70,19 @@ import pulumi_azuread as azuread
 aad_domains = azuread.get_domains()
 pulumi.export("domains", aad_domains.domains)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const aadDomains = pulumi.output(azuread.getDomains({ async: true }));
-
-export const domains = aadDomains.domains;
+const aadDomains = azuread.getDomains({});
+export const domains = aadDomains.then(aadDomains => aadDomains.domains);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

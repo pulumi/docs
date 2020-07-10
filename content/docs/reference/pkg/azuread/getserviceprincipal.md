@@ -14,22 +14,12 @@ Gets information about an existing Service Principal associated with an Applicat
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-## Example Usage (by Application Display Name)
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = pulumi.output(azuread.getServicePrincipal({
-    displayName: "my-awesome-application",
-}, { async: true }));
-```
-```python
-import pulumi
-import pulumi_azuread as azuread
-
-example = azuread.get_service_principal(display_name="my-awesome-application")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### By Application Display Name)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using AzureAD = Pulumi.AzureAD;
@@ -47,22 +37,58 @@ class MyStack : Stack
 }
 ```
 
-## Example Usage (by Application ID)
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-awesome-application"
+		_, err := azuread.LookupServicePrincipal(ctx, &azuread.LookupServicePrincipalArgs{
+			DisplayName: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(display_name="my-awesome-application")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getServicePrincipal({
-    applicationId: "00000000-0000-0000-0000-000000000000",
+    displayName: "my-awesome-application",
 }, { async: true }));
 ```
-```python
-import pulumi
-import pulumi_azuread as azuread
 
-example = azuread.get_service_principal(application_id="00000000-0000-0000-0000-000000000000")
-```
+{{% /example %}}
+
+### By Application ID)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using AzureAD = Pulumi.AzureAD;
@@ -80,22 +106,58 @@ class MyStack : Stack
 }
 ```
 
-## Example Usage (by Object ID)
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "00000000-0000-0000-0000-000000000000"
+		_, err := azuread.LookupServicePrincipal(ctx, &azuread.LookupServicePrincipalArgs{
+			ApplicationId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(application_id="00000000-0000-0000-0000-000000000000")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getServicePrincipal({
-    objectId: "00000000-0000-0000-0000-000000000000",
+    applicationId: "00000000-0000-0000-0000-000000000000",
 }, { async: true }));
 ```
-```python
-import pulumi
-import pulumi_azuread as azuread
 
-example = azuread.get_service_principal(object_id="00000000-0000-0000-0000-000000000000")
-```
+{{% /example %}}
+
+### By Object ID)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using AzureAD = Pulumi.AzureAD;
@@ -113,6 +175,57 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "00000000-0000-0000-0000-000000000000"
+		_, err := azuread.LookupServicePrincipal(ctx, &azuread.LookupServicePrincipalArgs{
+			ObjectId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(object_id="00000000-0000-0000-0000-000000000000")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = pulumi.output(azuread.getServicePrincipal({
+    objectId: "00000000-0000-0000-0000-000000000000",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetServicePrincipal {#using}

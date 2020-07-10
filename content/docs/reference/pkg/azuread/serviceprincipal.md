@@ -14,8 +14,6 @@ Manages a Service Principal associated with an Application within Azure Active D
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API. Please see The Granting a Service Principal permission to manage AAD for the required steps.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,22 +30,22 @@ class MyStack : Stack
     {
         var exampleApplication = new AzureAD.Application("exampleApplication", new AzureAD.ApplicationArgs
         {
-            AvailableToOtherTenants = false,
             Homepage = "http://homepage",
             IdentifierUris = 
             {
                 "http://uri",
             },
-            Oauth2AllowImplicitFlow = true,
             ReplyUrls = 
             {
                 "http://replyurl",
             },
+            AvailableToOtherTenants = false,
+            Oauth2AllowImplicitFlow = true,
         });
         var exampleServicePrincipal = new AzureAD.ServicePrincipal("exampleServicePrincipal", new AzureAD.ServicePrincipalArgs
         {
-            AppRoleAssignmentRequired = false,
             ApplicationId = exampleApplication.ApplicationId,
+            AppRoleAssignmentRequired = false,
             Tags = 
             {
                 "example",
@@ -59,10 +57,51 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApplication, err := azuread.NewApplication(ctx, "exampleApplication", &azuread.ApplicationArgs{
+			Homepage: pulumi.String("http://homepage"),
+			IdentifierUris: pulumi.StringArray{
+				pulumi.String("http://uri"),
+			},
+			ReplyUrls: pulumi.StringArray{
+				pulumi.String("http://replyurl"),
+			},
+			AvailableToOtherTenants: pulumi.Bool(false),
+			Oauth2AllowImplicitFlow: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = azuread.NewServicePrincipal(ctx, "exampleServicePrincipal", &azuread.ServicePrincipalArgs{
+			ApplicationId:             exampleApplication.ApplicationId,
+			AppRoleAssignmentRequired: pulumi.Bool(false),
+			Tags: pulumi.StringArray{
+				pulumi.String("example"),
+				pulumi.String("tags"),
+				pulumi.String("here"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,37 +110,39 @@ import pulumi
 import pulumi_azuread as azuread
 
 example_application = azuread.Application("exampleApplication",
-    available_to_other_tenants=False,
     homepage="http://homepage",
     identifier_uris=["http://uri"],
-    oauth2_allow_implicit_flow=True,
-    reply_urls=["http://replyurl"])
+    reply_urls=["http://replyurl"],
+    available_to_other_tenants=False,
+    oauth2_allow_implicit_flow=True)
 example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal",
-    app_role_assignment_required=False,
     application_id=example_application.application_id,
+    app_role_assignment_required=False,
     tags=[
         "example",
         "tags",
         "here",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const exampleApplication = new azuread.Application("example", {
-    availableToOtherTenants: false,
+const exampleApplication = new azuread.Application("exampleApplication", {
     homepage: "http://homepage",
     identifierUris: ["http://uri"],
-    oauth2AllowImplicitFlow: true,
     replyUrls: ["http://replyurl"],
+    availableToOtherTenants: false,
+    oauth2AllowImplicitFlow: true,
 });
-const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
-    appRoleAssignmentRequired: false,
+const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrincipal", {
     applicationId: exampleApplication.applicationId,
+    appRoleAssignmentRequired: false,
     tags: [
         "example",
         "tags",
@@ -109,6 +150,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -123,7 +165,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azuread/#ServicePrincipal">ServicePrincipal</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_role_assignment_required=None<span class="p">, </span>application_id=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipal">ServicePrincipal</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_role_assignment_required=None<span class="p">, </span>application_id=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -15,8 +15,436 @@ Manages an Application within Azure Active Directory.
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AzureAD.Application("example", new AzureAD.ApplicationArgs
+        {
+            AppRoles = 
+            {
+                new AzureAD.Inputs.ApplicationAppRoleArgs
+                {
+                    AllowedMemberTypes = 
+                    {
+                        "User",
+                        "Application",
+                    },
+                    Description = "Admins can manage roles and perform all task actions",
+                    DisplayName = "Admin",
+                    IsEnabled = true,
+                    Value = "Admin",
+                },
+            },
+            AvailableToOtherTenants = false,
+            Homepage = "https://homepage",
+            IdentifierUris = 
+            {
+                "https://uri",
+            },
+            Oauth2AllowImplicitFlow = true,
+            Oauth2Permissions = 
+            {
+                new AzureAD.Inputs.ApplicationOauth2PermissionArgs
+                {
+                    AdminConsentDescription = "Allow the application to access example on behalf of the signed-in user.",
+                    AdminConsentDisplayName = "Access example",
+                    IsEnabled = true,
+                    Type = "User",
+                    UserConsentDescription = "Allow the application to access example on your behalf.",
+                    UserConsentDisplayName = "Access example",
+                    Value = "user_impersonation",
+                },
+                new AzureAD.Inputs.ApplicationOauth2PermissionArgs
+                {
+                    AdminConsentDescription = "Administer the example application",
+                    AdminConsentDisplayName = "Administer",
+                    IsEnabled = true,
+                    Type = "Admin",
+                    Value = "administer",
+                },
+            },
+            OptionalClaims = new AzureAD.Inputs.ApplicationOptionalClaimsArgs
+            {
+                AccessTokens = 
+                {
+                    new AzureAD.Inputs.ApplicationOptionalClaimsAccessTokenArgs
+                    {
+                        Name = "myclaim",
+                    },
+                    new AzureAD.Inputs.ApplicationOptionalClaimsAccessTokenArgs
+                    {
+                        Name = "otherclaim",
+                    },
+                },
+                IdTokens = 
+                {
+                    new AzureAD.Inputs.ApplicationOptionalClaimsIdTokenArgs
+                    {
+                        AdditionalProperties = 
+                        {
+                            "emit_as_roles",
+                        },
+                        Essential = true,
+                        Name = "userclaim",
+                        Source = "user",
+                    },
+                },
+            },
+            Owners = 
+            {
+                "00000004-0000-0000-c000-000000000000",
+            },
+            ReplyUrls = 
+            {
+                "https://replyurl",
+            },
+            RequiredResourceAccesses = 
+            {
+                new AzureAD.Inputs.ApplicationRequiredResourceAccessArgs
+                {
+                    ResourceAccesses = 
+                    {
+                        new AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs
+                        {
+                            Id = "...",
+                            Type = "Role",
+                        },
+                        new AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs
+                        {
+                            Id = "...",
+                            Type = "Scope",
+                        },
+                        new AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs
+                        {
+                            Id = "...",
+                            Type = "Scope",
+                        },
+                    },
+                    ResourceAppId = "00000003-0000-0000-c000-000000000000",
+                },
+                new AzureAD.Inputs.ApplicationRequiredResourceAccessArgs
+                {
+                    ResourceAccesses = 
+                    {
+                        new AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs
+                        {
+                            Id = "...",
+                            Type = "Scope",
+                        },
+                    },
+                    ResourceAppId = "00000002-0000-0000-c000-000000000000",
+                },
+            },
+            Type = "webapp/api",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azuread.NewApplication(ctx, "example", &azuread.ApplicationArgs{
+			AppRoles: azuread.ApplicationAppRoleArray{
+				&azuread.ApplicationAppRoleArgs{
+					AllowedMemberTypes: pulumi.StringArray{
+						pulumi.String("User"),
+						pulumi.String("Application"),
+					},
+					Description: pulumi.String("Admins can manage roles and perform all task actions"),
+					DisplayName: pulumi.String("Admin"),
+					IsEnabled:   pulumi.Bool(true),
+					Value:       pulumi.String("Admin"),
+				},
+			},
+			AvailableToOtherTenants: pulumi.Bool(false),
+			Homepage:                pulumi.String("https://homepage"),
+			IdentifierUris: pulumi.StringArray{
+				pulumi.String("https://uri"),
+			},
+			Oauth2AllowImplicitFlow: pulumi.Bool(true),
+			Oauth2Permissions: azuread.ApplicationOauth2PermissionArray{
+				&azuread.ApplicationOauth2PermissionArgs{
+					AdminConsentDescription: pulumi.String("Allow the application to access example on behalf of the signed-in user."),
+					AdminConsentDisplayName: pulumi.String("Access example"),
+					IsEnabled:               pulumi.Bool(true),
+					Type:                    pulumi.String("User"),
+					UserConsentDescription:  pulumi.String("Allow the application to access example on your behalf."),
+					UserConsentDisplayName:  pulumi.String("Access example"),
+					Value:                   pulumi.String("user_impersonation"),
+				},
+				&azuread.ApplicationOauth2PermissionArgs{
+					AdminConsentDescription: pulumi.String("Administer the example application"),
+					AdminConsentDisplayName: pulumi.String("Administer"),
+					IsEnabled:               pulumi.Bool(true),
+					Type:                    pulumi.String("Admin"),
+					Value:                   pulumi.String("administer"),
+				},
+			},
+			OptionalClaims: &azuread.ApplicationOptionalClaimsArgs{
+				AccessTokens: azuread.ApplicationOptionalClaimsAccessTokenArray{
+					&azuread.ApplicationOptionalClaimsAccessTokenArgs{
+						Name: pulumi.String("myclaim"),
+					},
+					&azuread.ApplicationOptionalClaimsAccessTokenArgs{
+						Name: pulumi.String("otherclaim"),
+					},
+				},
+				IdTokens: azuread.ApplicationOptionalClaimsIdTokenArray{
+					&azuread.ApplicationOptionalClaimsIdTokenArgs{
+						AdditionalProperties: pulumi.StringArray{
+							pulumi.String("emit_as_roles"),
+						},
+						Essential: pulumi.Bool(true),
+						Name:      pulumi.String("userclaim"),
+						Source:    pulumi.String("user"),
+					},
+				},
+			},
+			Owners: pulumi.StringArray{
+				pulumi.String("00000004-0000-0000-c000-000000000000"),
+			},
+			ReplyUrls: pulumi.StringArray{
+				pulumi.String("https://replyurl"),
+			},
+			RequiredResourceAccesses: azuread.ApplicationRequiredResourceAccessArray{
+				&azuread.ApplicationRequiredResourceAccessArgs{
+					ResourceAccesses: azuread.ApplicationRequiredResourceAccessResourceAccessArray{
+						&azuread.ApplicationRequiredResourceAccessResourceAccessArgs{
+							Id:   pulumi.String("..."),
+							Type: pulumi.String("Role"),
+						},
+						&azuread.ApplicationRequiredResourceAccessResourceAccessArgs{
+							Id:   pulumi.String("..."),
+							Type: pulumi.String("Scope"),
+						},
+						&azuread.ApplicationRequiredResourceAccessResourceAccessArgs{
+							Id:   pulumi.String("..."),
+							Type: pulumi.String("Scope"),
+						},
+					},
+					ResourceAppId: pulumi.String("00000003-0000-0000-c000-000000000000"),
+				},
+				&azuread.ApplicationRequiredResourceAccessArgs{
+					ResourceAccesses: azuread.ApplicationRequiredResourceAccessResourceAccessArray{
+						&azuread.ApplicationRequiredResourceAccessResourceAccessArgs{
+							Id:   pulumi.String("..."),
+							Type: pulumi.String("Scope"),
+						},
+					},
+					ResourceAppId: pulumi.String("00000002-0000-0000-c000-000000000000"),
+				},
+			},
+			Type: pulumi.String("webapp/api"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.Application("example",
+    app_roles=[{
+        "allowedMemberTypes": [
+            "User",
+            "Application",
+        ],
+        "description": "Admins can manage roles and perform all task actions",
+        "display_name": "Admin",
+        "isEnabled": True,
+        "value": "Admin",
+    }],
+    available_to_other_tenants=False,
+    homepage="https://homepage",
+    identifier_uris=["https://uri"],
+    oauth2_allow_implicit_flow=True,
+    oauth2_permissions=[
+        {
+            "adminConsentDescription": "Allow the application to access example on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Access example",
+            "isEnabled": True,
+            "type": "User",
+            "userConsentDescription": "Allow the application to access example on your behalf.",
+            "userConsentDisplayName": "Access example",
+            "value": "user_impersonation",
+        },
+        {
+            "adminConsentDescription": "Administer the example application",
+            "adminConsentDisplayName": "Administer",
+            "isEnabled": True,
+            "type": "Admin",
+            "value": "administer",
+        },
+    ],
+    optional_claims={
+        "accessTokens": [
+            {
+                "name": "myclaim",
+            },
+            {
+                "name": "otherclaim",
+            },
+        ],
+        "idTokens": [{
+            "additionalProperties": ["emit_as_roles"],
+            "essential": True,
+            "name": "userclaim",
+            "source": "user",
+        }],
+    },
+    owners=["00000004-0000-0000-c000-000000000000"],
+    reply_urls=["https://replyurl"],
+    required_resource_accesses=[
+        {
+            "resourceAccesses": [
+                {
+                    "id": "...",
+                    "type": "Role",
+                },
+                {
+                    "id": "...",
+                    "type": "Scope",
+                },
+                {
+                    "id": "...",
+                    "type": "Scope",
+                },
+            ],
+            "resourceAppId": "00000003-0000-0000-c000-000000000000",
+        },
+        {
+            "resourceAccesses": [{
+                "id": "...",
+                "type": "Scope",
+            }],
+            "resourceAppId": "00000002-0000-0000-c000-000000000000",
+        },
+    ],
+    type="webapp/api")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = new azuread.Application("example", {
+    appRoles: [{
+        allowedMemberTypes: [
+            "User",
+            "Application",
+        ],
+        description: "Admins can manage roles and perform all task actions",
+        displayName: "Admin",
+        isEnabled: true,
+        value: "Admin",
+    }],
+    availableToOtherTenants: false,
+    homepage: "https://homepage",
+    identifierUris: ["https://uri"],
+    oauth2AllowImplicitFlow: true,
+    oauth2Permissions: [
+        {
+            adminConsentDescription: "Allow the application to access example on behalf of the signed-in user.",
+            adminConsentDisplayName: "Access example",
+            isEnabled: true,
+            type: "User",
+            userConsentDescription: "Allow the application to access example on your behalf.",
+            userConsentDisplayName: "Access example",
+            value: "user_impersonation",
+        },
+        {
+            adminConsentDescription: "Administer the example application",
+            adminConsentDisplayName: "Administer",
+            isEnabled: true,
+            type: "Admin",
+            value: "administer",
+        },
+    ],
+    optionalClaims: {
+        accessTokens: [
+            {
+                name: "myclaim",
+            },
+            {
+                name: "otherclaim",
+            },
+        ],
+        idTokens: [{
+            additionalProperties: ["emit_as_roles"],
+            essential: true,
+            name: "userclaim",
+            source: "user",
+        }],
+    },
+    owners: ["00000004-0000-0000-c000-000000000000"],
+    replyUrls: ["https://replyurl"],
+    requiredResourceAccesses: [
+        {
+            resourceAccesses: [
+                {
+                    id: "...",
+                    type: "Role",
+                },
+                {
+                    id: "...",
+                    type: "Scope",
+                },
+                {
+                    id: "...",
+                    type: "Scope",
+                },
+            ],
+            resourceAppId: "00000003-0000-0000-c000-000000000000",
+        },
+        {
+            resourceAccesses: [{
+                id: "...",
+                type: "Scope",
+            }],
+            resourceAppId: "00000002-0000-0000-c000-000000000000",
+        },
+    ],
+    type: "webapp/api",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}
@@ -28,7 +456,7 @@ Manages an Application within Azure Active Directory.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azuread/#Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_roles=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_roles=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -318,7 +746,18 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventduplicatenames_csharp">
+<a href="#preventduplicatenames_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,7 +929,18 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventduplicatenames_go">
+<a href="#preventduplicatenames_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +1112,18 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventduplicatenames_nodejs">
+<a href="#preventduplicatenames_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +1295,18 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prevent_duplicate_names_python">
+<a href="#prevent_duplicate_names_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>duplicate_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1067,7 +1539,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_roles=None<span class="p">, </span>application_id=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_roles=None<span class="p">, </span>application_id=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1321,7 +1793,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_preventduplicatenames_csharp">
+<a href="#state_preventduplicatenames_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1515,7 +1998,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_preventduplicatenames_go">
+<a href="#state_preventduplicatenames_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1709,7 +2203,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_preventduplicatenames_nodejs">
+<a href="#state_preventduplicatenames_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Duplicate<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1903,7 +2408,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
+    <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_prevent_duplicate_names_python">
+<a href="#state_prevent_duplicate_names_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>duplicate_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

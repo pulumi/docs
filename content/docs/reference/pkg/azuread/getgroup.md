@@ -14,22 +14,12 @@ Gets information about an Azure Active Directory group.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
 
-## Example Usage (by Group Display Name)
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = pulumi.output(azuread.getGroup({
-    name: "A-AD-Group",
-}, { async: true }));
-```
-```python
-import pulumi
-import pulumi_azuread as azuread
-
-example = azuread.get_group(name="A-AD-Group")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### By Group Display Name)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using AzureAD = Pulumi.AzureAD;
@@ -47,6 +37,57 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "A-AD-Group"
+		_, err := azuread.LookupGroup(ctx, &azuread.LookupGroupArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_group(name="A-AD-Group")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = pulumi.output(azuread.getGroup({
+    name: "A-AD-Group",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetGroup {#using}
