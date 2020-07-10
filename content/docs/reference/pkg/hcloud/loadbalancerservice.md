@@ -120,7 +120,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#LoadBalancerService">LoadBalancerService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_port=None<span class="p">, </span>health_check=None<span class="p">, </span>http=None<span class="p">, </span>listen_port=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>protocol=None<span class="p">, </span>proxyprotocol=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancerService">LoadBalancerService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_port=None<span class="p">, </span>health_check=None<span class="p">, </span>http=None<span class="p">, </span>listen_port=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>protocol=None<span class="p">, </span>proxyprotocol=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

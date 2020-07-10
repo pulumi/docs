@@ -22,7 +22,7 @@ meta_desc: "Explore the Server resource of the Hetzner Cloud package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/hcloud/#Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backups=None<span class="p">, </span>datacenter=None<span class="p">, </span>image=None<span class="p">, </span>iso=None<span class="p">, </span>keep_disk=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>rescue=None<span class="p">, </span>server_type=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backups=None<span class="p">, </span>datacenter=None<span class="p">, </span>image=None<span class="p">, </span>iso=None<span class="p">, </span>keep_disk=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>rescue=None<span class="p">, </span>server_type=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
