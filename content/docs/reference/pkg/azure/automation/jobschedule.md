@@ -56,9 +56,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = automation.NewJobSchedule(ctx, "example", &automation.JobScheduleArgs{
+		_, err := automation.NewJobSchedule(ctx, "example", &automation.JobScheduleArgs{
 			AutomationAccountName: pulumi.String("tf-automation-account"),
-			Parameters: pulumi.Map{
+			Parameters: pulumi.StringMap{
 				"resourcegroup": pulumi.String("tf-rgr-vm"),
 				"vmname":        pulumi.String("TF-VM-01"),
 			},
@@ -126,7 +126,7 @@ const example = new azure.automation.JobSchedule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#JobSchedule">JobSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>job_schedule_id=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>run_on=None<span class="p">, </span>runbook_name=None<span class="p">, </span>schedule_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.JobSchedule">JobSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>job_schedule_id=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>run_on=None<span class="p">, </span>runbook_name=None<span class="p">, </span>schedule_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

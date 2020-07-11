@@ -122,7 +122,7 @@ const exampleStore = new azure.datalake.Store("exampleStore", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datalake/#Store">Store</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>encryption_state=None<span class="p">, </span>encryption_type=None<span class="p">, </span>firewall_allow_azure_ips=None<span class="p">, </span>firewall_state=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datalake/#pulumi_azure.datalake.Store">Store</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>encryption_state=None<span class="p">, </span>encryption_type=None<span class="p">, </span>firewall_allow_azure_ips=None<span class="p">, </span>firewall_state=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

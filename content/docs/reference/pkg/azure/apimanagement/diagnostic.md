@@ -12,6 +12,192 @@ meta_desc: "Explore the Diagnostic resource of the apimanagement module, includi
 
 Manages an API Management Service Diagnostic.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "web",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@mycompany.io",
+            SkuName = "Developer_1",
+        });
+        var exampleLogger = new Azure.ApiManagement.Logger("exampleLogger", new Azure.ApiManagement.LoggerArgs
+        {
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationInsights = new Azure.ApiManagement.Inputs.LoggerApplicationInsightsArgs
+            {
+                InstrumentationKey = exampleInsights.InstrumentationKey,
+            },
+        });
+        var exampleDiagnostic = new Azure.ApiManagement.Diagnostic("exampleDiagnostic", new Azure.ApiManagement.DiagnosticArgs
+        {
+            Identifier = "applicationinsights",
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            ApiManagementLoggerId = exampleLogger.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleInsights, err := appinsights.NewInsights(ctx, "exampleInsights", &appinsights.InsightsArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationType:   pulumi.String("web"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@mycompany.io"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLogger, err := apimanagement.NewLogger(ctx, "exampleLogger", &apimanagement.LoggerArgs{
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationInsights: &apimanagement.LoggerApplicationInsightsArgs{
+				InstrumentationKey: exampleInsights.InstrumentationKey,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewDiagnostic(ctx, "exampleDiagnostic", &apimanagement.DiagnosticArgs{
+			Identifier:            pulumi.String("applicationinsights"),
+			ResourceGroupName:     exampleResourceGroup.Name,
+			ApiManagementName:     exampleService.Name,
+			ApiManagementLoggerId: exampleLogger.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@mycompany.io",
+    sku_name="Developer_1")
+example_logger = azure.apimanagement.Logger("exampleLogger",
+    api_management_name=example_service.name,
+    resource_group_name=example_resource_group.name,
+    application_insights={
+        "instrumentation_key": example_insights.instrumentation_key,
+    })
+example_diagnostic = azure.apimanagement.Diagnostic("exampleDiagnostic",
+    identifier="applicationinsights",
+    resource_group_name=example_resource_group.name,
+    api_management_name=example_service.name,
+    api_management_logger_id=example_logger.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@mycompany.io",
+    skuName: "Developer_1",
+});
+const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationInsights: {
+        instrumentationKey: exampleInsights.instrumentationKey,
+    },
+});
+const exampleDiagnostic = new azure.apimanagement.Diagnostic("exampleDiagnostic", {
+    identifier: "applicationinsights",
+    resourceGroupName: exampleResourceGroup.name,
+    apiManagementName: exampleService.name,
+    apiManagementLoggerId: exampleLogger.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Diagnostic Resource {#create}
@@ -23,7 +209,7 @@ Manages an API Management Service Diagnostic.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#Diagnostic">Diagnostic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_logger_id=None<span class="p">, </span>api_management_name=None<span class="p">, </span>enabled=None<span class="p">, </span>identifier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Diagnostic">Diagnostic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_logger_id=None<span class="p">, </span>api_management_name=None<span class="p">, </span>enabled=None<span class="p">, </span>identifier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

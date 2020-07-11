@@ -165,7 +165,7 @@ const exampleUser = new azure.apimanagement.User("exampleUser", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>confirmation=None<span class="p">, </span>email=None<span class="p">, </span>first_name=None<span class="p">, </span>last_name=None<span class="p">, </span>note=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>state=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>confirmation=None<span class="p">, </span>email=None<span class="p">, </span>first_name=None<span class="p">, </span>last_name=None<span class="p">, </span>note=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>state=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

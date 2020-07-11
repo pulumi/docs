@@ -11,17 +11,28 @@ Explore the resources and functions of the datafactory module in the Azure packa
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="datasetazureblob" title="DatasetAzureBlob"><span class="symbol resource"></span>DatasetAzureBlob</a></li>
+    <li><a href="datasetcosmosdbapi" title="DatasetCosmosDBApi"><span class="symbol resource"></span>DatasetCosmosDBApi</a></li>
+    <li><a href="datasetdelimitedtext" title="DatasetDelimitedText"><span class="symbol resource"></span>DatasetDelimitedText</a></li>
+    <li><a href="datasethttp" title="DatasetHttp"><span class="symbol resource"></span>DatasetHttp</a></li>
+    <li><a href="datasetjson" title="DatasetJson"><span class="symbol resource"></span>DatasetJson</a></li>
     <li><a href="datasetmysql" title="DatasetMysql"><span class="symbol resource"></span>DatasetMysql</a></li>
     <li><a href="datasetpostgresql" title="DatasetPostgresql"><span class="symbol resource"></span>DatasetPostgresql</a></li>
     <li><a href="datasetsqlservertable" title="DatasetSqlServerTable"><span class="symbol resource"></span>DatasetSqlServerTable</a></li>
     <li><a href="factory" title="Factory"><span class="symbol resource"></span>Factory</a></li>
     <li><a href="integrationruntimemanaged" title="IntegrationRuntimeManaged"><span class="symbol resource"></span>IntegrationRuntimeManaged</a></li>
     <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="symbol resource"></span>IntegrationRuntimeSelfHosted</a></li>
+    <li><a href="linkedserviceazureblobstorage" title="LinkedServiceAzureBlobStorage"><span class="symbol resource"></span>LinkedServiceAzureBlobStorage</a></li>
+    <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
+    <li><a href="linkedserviceazurefunction" title="LinkedServiceAzureFunction"><span class="symbol resource"></span>LinkedServiceAzureFunction</a></li>
+    <li><a href="linkedservicecosmosdb" title="LinkedServiceCosmosDb"><span class="symbol resource"></span>LinkedServiceCosmosDb</a></li>
     <li><a href="linkedservicedatalakestoragegen2" title="LinkedServiceDataLakeStorageGen2"><span class="symbol resource"></span>LinkedServiceDataLakeStorageGen2</a></li>
     <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
     <li><a href="linkedservicemysql" title="LinkedServiceMysql"><span class="symbol resource"></span>LinkedServiceMysql</a></li>
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
+    <li><a href="linkedservicesftp" title="LinkedServiceSftp"><span class="symbol resource"></span>LinkedServiceSftp</a></li>
     <li><a href="linkedservicesqlserver" title="LinkedServiceSqlServer"><span class="symbol resource"></span>LinkedServiceSqlServer</a></li>
+    <li><a href="linkedserviceweb" title="LinkedServiceWeb"><span class="symbol resource"></span>LinkedServiceWeb</a></li>
     <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
     <li><a href="triggerschedule" title="TriggerSchedule"><span class="symbol resource"></span>TriggerSchedule</a></li>
 </ul>
@@ -40,7 +51,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

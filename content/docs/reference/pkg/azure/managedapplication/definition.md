@@ -12,6 +12,142 @@ meta_desc: "Explore the Definition resource of the managedapplication module, in
 
 Manages a Managed Application Definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleDefinition = new Azure.ManagedApplication.Definition("exampleDefinition", new Azure.ManagedApplication.DefinitionArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            LockLevel = "ReadOnly",
+            PackageFileUri = "https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+            DisplayName = "TestManagedApplicationDefinition",
+            Description = "Test Managed Application Definition",
+            Authorizations = 
+            {
+                new Azure.ManagedApplication.Inputs.DefinitionAuthorizationArgs
+                {
+                    ServicePrincipalId = current.Apply(current => current.ObjectId),
+                    RoleDefinitionId = "a094b430-dad3-424d-ae58-13f72fd72591",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/managedapplication"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = managedapplication.NewDefinition(ctx, "exampleDefinition", &managedapplication.DefinitionArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			LockLevel:         pulumi.String("ReadOnly"),
+			PackageFileUri:    pulumi.String("https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip"),
+			DisplayName:       pulumi.String("TestManagedApplicationDefinition"),
+			Description:       pulumi.String("Test Managed Application Definition"),
+			Authorizations: managedapplication.DefinitionAuthorizationArray{
+				&managedapplication.DefinitionAuthorizationArgs{
+					ServicePrincipalId: pulumi.String(current.ObjectId),
+					RoleDefinitionId:   pulumi.String("a094b430-dad3-424d-ae58-13f72fd72591"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_definition = azure.managedapplication.Definition("exampleDefinition",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    lock_level="ReadOnly",
+    package_file_uri="https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    display_name="TestManagedApplicationDefinition",
+    description="Test Managed Application Definition",
+    authorizations=[{
+        "service_principal_id": current.object_id,
+        "role_definition_id": "a094b430-dad3-424d-ae58-13f72fd72591",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDefinition = new azure.managedapplication.Definition("exampleDefinition", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    lockLevel: "ReadOnly",
+    packageFileUri: "https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    displayName: "TestManagedApplicationDefinition",
+    description: "Test Managed Application Definition",
+    authorizations: [{
+        servicePrincipalId: current.then(current => current.objectId),
+        roleDefinitionId: "a094b430-dad3-424d-ae58-13f72fd72591",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Definition Resource {#create}
@@ -23,7 +159,7 @@ Manages a Managed Application Definition.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#Definition">Definition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorizations=None<span class="p">, </span>create_ui_definition=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>lock_level=None<span class="p">, </span>main_template=None<span class="p">, </span>name=None<span class="p">, </span>package_enabled=None<span class="p">, </span>package_file_uri=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#pulumi_azure.managedapplication.Definition">Definition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorizations=None<span class="p">, </span>create_ui_definition=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>lock_level=None<span class="p">, </span>main_template=None<span class="p">, </span>name=None<span class="p">, </span>package_enabled=None<span class="p">, </span>package_file_uri=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

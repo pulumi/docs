@@ -12,6 +12,282 @@ meta_desc: "Explore the Snapshot resource of the netapp module, including exampl
 
 Manages a NetApp Snapshot.
 
+## NetApp Snapshot Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+    delegations: [{
+        name: "netapp",
+        serviceDelegation: {
+            name: "Microsoft.Netapp/volumes",
+            actions: [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }],
+});
+const exampleAccount = new azure.netapp.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const examplePool = new azure.netapp.Pool("examplePool", {
+    accountName: exampleAccount.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    serviceLevel: "Premium",
+    sizeInTb: "4",
+});
+const exampleVolume = new azure.netapp.Volume("exampleVolume", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleAccount.name,
+    poolName: examplePool.name,
+    volumePath: "my-unique-file-path",
+    serviceLevel: "Premium",
+    subnetId: azurerm_subnet.test.id,
+    storageQuotaInGb: "100",
+});
+const exampleSnapshot = new azure.netapp.Snapshot("exampleSnapshot", {
+    accountName: exampleAccount.name,
+    poolName: examplePool.name,
+    volumeName: exampleVolume.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24",
+    delegations=[{
+        "name": "netapp",
+        "serviceDelegation": {
+            "name": "Microsoft.Netapp/volumes",
+            "actions": [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }])
+example_account = azure.netapp.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_pool = azure.netapp.Pool("examplePool",
+    account_name=example_account.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    service_level="Premium",
+    size_in_tb="4")
+example_volume = azure.netapp.Volume("exampleVolume",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    account_name=example_account.name,
+    pool_name=example_pool.name,
+    volume_path="my-unique-file-path",
+    service_level="Premium",
+    subnet_id=azurerm_subnet["test"]["id"],
+    storage_quota_in_gb="100")
+example_snapshot = azure.netapp.Snapshot("exampleSnapshot",
+    account_name=example_account.name,
+    pool_name=example_pool.name,
+    volume_name=example_volume.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+            Delegations = 
+            {
+                new Azure.Network.Inputs.SubnetDelegationArgs
+                {
+                    Name = "netapp",
+                    ServiceDelegation = new Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs
+                    {
+                        Name = "Microsoft.Netapp/volumes",
+                        Actions = 
+                        {
+                            "Microsoft.Network/networkinterfaces/*",
+                            "Microsoft.Network/virtualNetworks/subnets/join/action",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleAccount = new Azure.NetApp.Account("exampleAccount", new Azure.NetApp.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var examplePool = new Azure.NetApp.Pool("examplePool", new Azure.NetApp.PoolArgs
+        {
+            AccountName = exampleAccount.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServiceLevel = "Premium",
+            SizeInTb = 4,
+        });
+        var exampleVolume = new Azure.NetApp.Volume("exampleVolume", new Azure.NetApp.VolumeArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AccountName = exampleAccount.Name,
+            PoolName = examplePool.Name,
+            VolumePath = "my-unique-file-path",
+            ServiceLevel = "Premium",
+            SubnetId = azurerm_subnet.Test.Id,
+            StorageQuotaInGb = 100,
+        });
+        var exampleSnapshot = new Azure.NetApp.Snapshot("exampleSnapshot", new Azure.NetApp.SnapshotArgs
+        {
+            AccountName = exampleAccount.Name,
+            PoolName = examplePool.Name,
+            VolumeName = exampleVolume.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+			Delegations: network.SubnetDelegationArray{
+				&network.SubnetDelegationArgs{
+					Name: pulumi.String("netapp"),
+					ServiceDelegation: &network.SubnetDelegationServiceDelegationArgs{
+						Name: pulumi.String("Microsoft.Netapp/volumes"),
+						Actions: pulumi.StringArray{
+							pulumi.String("Microsoft.Network/networkinterfaces/*"),
+							pulumi.String("Microsoft.Network/virtualNetworks/subnets/join/action"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := netapp.NewAccount(ctx, "exampleAccount", &netapp.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		examplePool, err := netapp.NewPool(ctx, "examplePool", &netapp.PoolArgs{
+			AccountName:       exampleAccount.Name,
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServiceLevel:      pulumi.String("Premium"),
+			SizeInTb:          pulumi.Int(4),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVolume, err := netapp.NewVolume(ctx, "exampleVolume", &netapp.VolumeArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AccountName:       exampleAccount.Name,
+			PoolName:          examplePool.Name,
+			VolumePath:        pulumi.String("my-unique-file-path"),
+			ServiceLevel:      pulumi.String("Premium"),
+			SubnetId:          pulumi.String(azurerm_subnet.Test.Id),
+			StorageQuotaInGb:  pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = netapp.NewSnapshot(ctx, "exampleSnapshot", &netapp.SnapshotArgs{
+			AccountName:       exampleAccount.Name,
+			PoolName:          examplePool.Name,
+			VolumeName:        exampleVolume.Name,
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a Snapshot Resource {#create}
@@ -23,7 +299,7 @@ Manages a NetApp Snapshot.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#Snapshot">Snapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#pulumi_azure.netapp.Snapshot">Snapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

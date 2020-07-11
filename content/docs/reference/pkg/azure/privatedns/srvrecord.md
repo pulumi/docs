@@ -12,6 +12,185 @@ meta_desc: "Explore the SRVRecord resource of the privatedns module, including e
 
 Enables you to manage DNS SRV Records within Azure Private DNS.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var testZone = new Azure.PrivateDns.Zone("testZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+        });
+        var testSRVRecord = new Azure.PrivateDns.SRVRecord("testSRVRecord", new Azure.PrivateDns.SRVRecordArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+            ZoneName = testZone.Name,
+            Ttl = 300,
+            Records = 
+            {
+                new Azure.PrivateDns.Inputs.SRVRecordRecordArgs
+                {
+                    Priority = 1,
+                    Weight = 5,
+                    Port = 8080,
+                    Target = "target1.contoso.com",
+                },
+                new Azure.PrivateDns.Inputs.SRVRecordRecordArgs
+                {
+                    Priority = 10,
+                    Weight = 10,
+                    Port = 8080,
+                    Target = "target2.contoso.com",
+                },
+            },
+            Tags = 
+            {
+                { "Environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		testZone, err := privatedns.NewZone(ctx, "testZone", &privatedns.ZoneArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = privatedns.NewSRVRecord(ctx, "testSRVRecord", &privatedns.SRVRecordArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			ZoneName:          testZone.Name,
+			Ttl:               pulumi.Int(300),
+			Records: privatedns.SRVRecordRecordArray{
+				&privatedns.SRVRecordRecordArgs{
+					Priority: pulumi.Int(1),
+					Weight:   pulumi.Int(5),
+					Port:     pulumi.Int(8080),
+					Target:   pulumi.String("target1.contoso.com"),
+				},
+				&privatedns.SRVRecordRecordArgs{
+					Priority: pulumi.Int(10),
+					Weight:   pulumi.Int(10),
+					Port:     pulumi.Int(8080),
+					Target:   pulumi.String("target2.contoso.com"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+test_zone = azure.privatedns.Zone("testZone", resource_group_name=azurerm_resource_group["test"]["name"])
+test_srv_record = azure.privatedns.SRVRecord("testSRVRecord",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    zone_name=test_zone.name,
+    ttl=300,
+    records=[
+        {
+            "priority": 1,
+            "weight": 5,
+            "port": 8080,
+            "target": "target1.contoso.com",
+        },
+        {
+            "priority": 10,
+            "weight": 10,
+            "port": 8080,
+            "target": "target2.contoso.com",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: azurerm_resource_group.test.name});
+const testSRVRecord = new azure.privatedns.SRVRecord("testSRVRecord", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    zoneName: testZone.name,
+    ttl: 300,
+    records: [
+        {
+            priority: 1,
+            weight: 5,
+            port: 8080,
+            target: "target1.contoso.com",
+        },
+        {
+            priority: 10,
+            weight: 10,
+            port: 8080,
+            target: "target2.contoso.com",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SRVRecord Resource {#create}
@@ -23,7 +202,7 @@ Enables you to manage DNS SRV Records within Azure Private DNS.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#SRVRecord">SRVRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.SRVRecord">SRVRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

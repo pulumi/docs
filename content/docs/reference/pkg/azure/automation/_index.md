@@ -14,6 +14,10 @@ Explore the resources and functions of the automation module in the Azure packag
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="boolvariable" title="BoolVariable"><span class="symbol resource"></span>BoolVariable</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="connectioncertificate" title="ConnectionCertificate"><span class="symbol resource"></span>ConnectionCertificate</a></li>
+    <li><a href="connectionclassiccertificate" title="ConnectionClassicCertificate"><span class="symbol resource"></span>ConnectionClassicCertificate</a></li>
+    <li><a href="connectionserviceprincipal" title="ConnectionServicePrincipal"><span class="symbol resource"></span>ConnectionServicePrincipal</a></li>
     <li><a href="credential" title="Credential"><span class="symbol resource"></span>Credential</a></li>
     <li><a href="datetimevariable" title="DateTimeVariable"><span class="symbol resource"></span>DateTimeVariable</a></li>
     <li><a href="dscconfiguration" title="DscConfiguration"><span class="symbol resource"></span>DscConfiguration</a></li>
@@ -44,7 +48,7 @@ Explore the resources and functions of the automation module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

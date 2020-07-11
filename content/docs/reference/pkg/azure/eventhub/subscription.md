@@ -82,7 +82,7 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"source": pulumi.String("example"),
 			},
 		})
@@ -182,7 +182,7 @@ const exampleSubscription = new azure.servicebus.Subscription("exampleSubscripti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>enable_batched_operations=None<span class="p">, </span>forward_dead_lettered_messages_to=None<span class="p">, </span>forward_to=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>enable_batched_operations=None<span class="p">, </span>forward_dead_lettered_messages_to=None<span class="p">, </span>forward_to=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

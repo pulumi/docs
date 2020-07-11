@@ -12,6 +12,163 @@ meta_desc: "Explore the FunctionJavaScriptUDF resource of the streamanalytics mo
 
 Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleFunctionJavaScriptUDF = new Azure.StreamAnalytics.FunctionJavaScriptUDF("exampleFunctionJavaScriptUDF", new Azure.StreamAnalytics.FunctionJavaScriptUDFArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            Script = @"function getRandomNumber(in) {
+  return in;
+}
+",
+            Inputs = 
+            {
+                new Azure.StreamAnalytics.Inputs.FunctionJavaScriptUDFInputArgs
+                {
+                    Type = "bigint",
+                },
+            },
+            Output = new Azure.StreamAnalytics.Inputs.FunctionJavaScriptUDFOutputArgs
+            {
+                Type = "bigint",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = streamanalytics.NewFunctionJavaScriptUDF(ctx, "exampleFunctionJavaScriptUDF", &streamanalytics.FunctionJavaScriptUDFArgs{
+			StreamAnalyticsJobName: pulumi.String(exampleJob.Name),
+			ResourceGroupName:      pulumi.String(exampleJob.ResourceGroupName),
+			Script:                 pulumi.String(fmt.Sprintf("%v%v%v", "function getRandomNumber(in) {\n", "  return in;\n", "}\n")),
+			Inputs: streamanalytics.FunctionJavaScriptUDFInputArray{
+				&streamanalytics.FunctionJavaScriptUDFInputArgs{
+					Type: pulumi.String("bigint"),
+				},
+			},
+			Output: &streamanalytics.FunctionJavaScriptUDFOutputArgs{
+				Type: pulumi.String("bigint"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_function_java_script_udf = azure.streamanalytics.FunctionJavaScriptUDF("exampleFunctionJavaScriptUDF",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    script="""function getRandomNumber(in) {
+  return in;
+}
+""",
+    inputs=[{
+        "type": "bigint",
+    }],
+    output={
+        "type": "bigint",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleFunctionJavaScriptUDF = new azure.streamanalytics.FunctionJavaScriptUDF("exampleFunctionJavaScriptUDF", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    script: `function getRandomNumber(in) {
+  return in;
+}
+`,
+    inputs: [{
+        type: "bigint",
+    }],
+    output: {
+        type: "bigint",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FunctionJavaScriptUDF Resource {#create}
@@ -23,7 +180,7 @@ Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#FunctionJavaScriptUDF">FunctionJavaScriptUDF</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>inputs=None<span class="p">, </span>name=None<span class="p">, </span>output=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>script=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.FunctionJavaScriptUDF">FunctionJavaScriptUDF</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>inputs=None<span class="p">, </span>name=None<span class="p">, </span>output=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>script=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -17,6 +17,428 @@ and run automated tasks.
 
 > **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "testconfiguration1",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            ContainerAccessType = "private",
+        });
+        var exampleVirtualMachine = new Azure.Compute.VirtualMachine("exampleVirtualMachine", new Azure.Compute.VirtualMachineArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            NetworkInterfaceIds = 
+            {
+                exampleNetworkInterface.Id,
+            },
+            VmSize = "Standard_F2",
+            StorageImageReference = new Azure.Compute.Inputs.VirtualMachineStorageImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+            StorageOsDisk = new Azure.Compute.Inputs.VirtualMachineStorageOsDiskArgs
+            {
+                Name = "myosdisk1",
+                VhdUri = Output.Tuple(exampleAccount.PrimaryBlobEndpoint, exampleContainer.Name).Apply(values =>
+                {
+                    var primaryBlobEndpoint = values.Item1;
+                    var name = values.Item2;
+                    return $"{primaryBlobEndpoint}{name}/myosdisk1.vhd";
+                }),
+                Caching = "ReadWrite",
+                CreateOption = "FromImage",
+            },
+            OsProfile = new Azure.Compute.Inputs.VirtualMachineOsProfileArgs
+            {
+                ComputerName = "hostname",
+                AdminUsername = "testadmin",
+                AdminPassword = "Password1234!",
+            },
+            OsProfileLinuxConfig = new Azure.Compute.Inputs.VirtualMachineOsProfileLinuxConfigArgs
+            {
+                DisablePasswordAuthentication = false,
+            },
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleExtension = new Azure.Compute.Extension("exampleExtension", new Azure.Compute.ExtensionArgs
+        {
+            VirtualMachineId = exampleVirtualMachine.Id,
+            Publisher = "Microsoft.Azure.Extensions",
+            Type = "CustomScript",
+            TypeHandlerVersion = "2.0",
+            Settings = @"	{
+		""commandToExecute"": ""hostname && uptime""
+	}
+",
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("testconfiguration1"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualMachine, err := compute.NewVirtualMachine(ctx, "exampleVirtualMachine", &compute.VirtualMachineArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			NetworkInterfaceIds: pulumi.StringArray{
+				exampleNetworkInterface.ID(),
+			},
+			VmSize: pulumi.String("Standard_F2"),
+			StorageImageReference: &compute.VirtualMachineStorageImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+			StorageOsDisk: &compute.VirtualMachineStorageOsDiskArgs{
+				Name: pulumi.String("myosdisk1"),
+				VhdUri: pulumi.All(exampleAccount.PrimaryBlobEndpoint, exampleContainer.Name).ApplyT(func(_args []interface{}) (string, error) {
+					primaryBlobEndpoint := _args[0].(string)
+					name := _args[1].(string)
+					return fmt.Sprintf("%v%v%v", primaryBlobEndpoint, name, "/myosdisk1.vhd"), nil
+				}).(pulumi.StringOutput),
+				Caching:      pulumi.String("ReadWrite"),
+				CreateOption: pulumi.String("FromImage"),
+			},
+			OsProfile: &compute.VirtualMachineOsProfileArgs{
+				ComputerName:  pulumi.String("hostname"),
+				AdminUsername: pulumi.String("testadmin"),
+				AdminPassword: pulumi.String("Password1234!"),
+			},
+			OsProfileLinuxConfig: &compute.VirtualMachineOsProfileLinuxConfigArgs{
+				DisablePasswordAuthentication: pulumi.Bool(false),
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewExtension(ctx, "exampleExtension", &compute.ExtensionArgs{
+			VirtualMachineId:   exampleVirtualMachine.ID(),
+			Publisher:          pulumi.String("Microsoft.Azure.Extensions"),
+			Type:               pulumi.String("CustomScript"),
+			TypeHandlerVersion: pulumi.String("2.0"),
+			Settings: pulumi.String(fmt.Sprintf("%v%v%v", "	{\n", "		\"commandToExecute\": \"hostname && uptime\"\n", "	}\n")),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "testconfiguration1",
+        "subnet_id": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    network_interface_ids=[example_network_interface.id],
+    vm_size="Standard_F2",
+    storage_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_os_disk={
+        "name": "myosdisk1",
+        "vhdUri": pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}/myosdisk1.vhd"),
+        "caching": "ReadWrite",
+        "create_option": "FromImage",
+    },
+    os_profile={
+        "computer_name": "hostname",
+        "admin_username": "testadmin",
+        "admin_password": "Password1234!",
+    },
+    os_profile_linux_config={
+        "disable_password_authentication": False,
+    },
+    tags={
+        "environment": "staging",
+    })
+example_extension = azure.compute.Extension("exampleExtension",
+    virtual_machine_id=example_virtual_machine.id,
+    publisher="Microsoft.Azure.Extensions",
+    type="CustomScript",
+    type_handler_version="2.0",
+    settings="""	{
+		"commandToExecute": "hostname && uptime"
+	}
+""",
+    tags={
+        "environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleVirtualMachine = new azure.compute.VirtualMachine("exampleVirtualMachine", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    vmSize: "Standard_F2",
+    storageImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storageOsDisk: {
+        name: "myosdisk1",
+        vhdUri: pulumi.interpolate`${exampleAccount.primaryBlobEndpoint}${exampleContainer.name}/myosdisk1.vhd`,
+        caching: "ReadWrite",
+        createOption: "FromImage",
+    },
+    osProfile: {
+        computerName: "hostname",
+        adminUsername: "testadmin",
+        adminPassword: "Password1234!",
+    },
+    osProfileLinuxConfig: {
+        disablePasswordAuthentication: false,
+    },
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleExtension = new azure.compute.Extension("exampleExtension", {
+    virtualMachineId: exampleVirtualMachine.id,
+    publisher: "Microsoft.Azure.Extensions",
+    type: "CustomScript",
+    typeHandlerVersion: "2.0",
+    settings: `	{
+		"commandToExecute": "hostname && uptime"
+	}
+`,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Extension Resource {#create}
@@ -28,7 +450,7 @@ and run automated tasks.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#Extension">Extension</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>name=None<span class="p">, </span>protected_settings=None<span class="p">, </span>publisher=None<span class="p">, </span>settings=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>type_handler_version=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.Extension">Extension</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>name=None<span class="p">, </span>protected_settings=None<span class="p">, </span>publisher=None<span class="p">, </span>settings=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>type_handler_version=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,6 +14,527 @@ Manages an App Service Slot (within an App Service).
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Net 4.X)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new Random.RandomId("server", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "azi_id", 1 },
+            },
+            ByteLength = 8,
+        });
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            SiteConfig = new Azure.AppService.Inputs.AppServiceSiteConfigArgs
+            {
+                DotnetFrameworkVersion = "v4.0",
+            },
+            AppSettings = 
+            {
+                { "SOME_KEY", "some-value" },
+            },
+            ConnectionStrings = 
+            {
+                new Azure.AppService.Inputs.AppServiceConnectionStringArgs
+                {
+                    Name = "Database",
+                    Type = "SQLServer",
+                    Value = "Server=some-server.mydomain.com;Integrated Security=SSPI",
+                },
+            },
+        });
+        var exampleSlot = new Azure.AppService.Slot("exampleSlot", new Azure.AppService.SlotArgs
+        {
+            AppServiceName = exampleAppService.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            SiteConfig = new Azure.AppService.Inputs.SlotSiteConfigArgs
+            {
+                DotnetFrameworkVersion = "v4.0",
+            },
+            AppSettings = 
+            {
+                { "SOME_KEY", "some-value" },
+            },
+            ConnectionStrings = 
+            {
+                new Azure.AppService.Inputs.SlotConnectionStringArgs
+                {
+                    Name = "Database",
+                    Type = "SQLServer",
+                    Value = "Server=some-server.mydomain.com;Integrated Security=SSPI",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "server", &random.RandomIdArgs{
+			Keepers: pulumi.Float64Map{
+				"azi_id": pulumi.Float64(1),
+			},
+			ByteLength: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAppService, err := appservice.NewAppService(ctx, "exampleAppService", &appservice.AppServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+			SiteConfig: &appservice.AppServiceSiteConfigArgs{
+				DotnetFrameworkVersion: pulumi.String("v4.0"),
+			},
+			AppSettings: pulumi.StringMap{
+				"SOME_KEY": pulumi.String("some-value"),
+			},
+			ConnectionStrings: appservice.AppServiceConnectionStringArray{
+				&appservice.AppServiceConnectionStringArgs{
+					Name:  pulumi.String("Database"),
+					Type:  pulumi.String("SQLServer"),
+					Value: pulumi.String("Server=some-server.mydomain.com;Integrated Security=SSPI"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewSlot(ctx, "exampleSlot", &appservice.SlotArgs{
+			AppServiceName:    exampleAppService.Name,
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+			SiteConfig: &appservice.SlotSiteConfigArgs{
+				DotnetFrameworkVersion: pulumi.String("v4.0"),
+			},
+			AppSettings: pulumi.StringMap{
+				"SOME_KEY": pulumi.String("some-value"),
+			},
+			ConnectionStrings: appservice.SlotConnectionStringArray{
+				&appservice.SlotConnectionStringArgs{
+					Name:  pulumi.String("Database"),
+					Type:  pulumi.String("SQLServer"),
+					Value: pulumi.String("Server=some-server.mydomain.com;Integrated Security=SSPI"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "dotnetFrameworkVersion": "v4.0",
+    },
+    app_settings={
+        "SOME_KEY": "some-value",
+    },
+    connection_strings=[{
+        "name": "Database",
+        "type": "SQLServer",
+        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }])
+example_slot = azure.appservice.Slot("exampleSlot",
+    app_service_name=example_app_service.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "dotnetFrameworkVersion": "v4.0",
+    },
+    app_settings={
+        "SOME_KEY": "some-value",
+    },
+    connection_strings=[{
+        "name": "Database",
+        "type": "SQLServer",
+        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    siteConfig: {
+        dotnetFrameworkVersion: "v4.0",
+    },
+    appSettings: {
+        SOME_KEY: "some-value",
+    },
+    connectionStrings: [{
+        name: "Database",
+        type: "SQLServer",
+        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }],
+});
+const exampleSlot = new azure.appservice.Slot("exampleSlot", {
+    appServiceName: exampleAppService.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    siteConfig: {
+        dotnetFrameworkVersion: "v4.0",
+    },
+    appSettings: {
+        SOME_KEY: "some-value",
+    },
+    connectionStrings: [{
+        name: "Database",
+        type: "SQLServer",
+        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Java 1.8)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new Random.RandomId("server", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "azi_id", 1 },
+            },
+            ByteLength = 8,
+        });
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            SiteConfig = new Azure.AppService.Inputs.AppServiceSiteConfigArgs
+            {
+                JavaVersion = "1.8",
+                JavaContainer = "JETTY",
+                JavaContainerVersion = "9.3",
+            },
+        });
+        var exampleSlot = new Azure.AppService.Slot("exampleSlot", new Azure.AppService.SlotArgs
+        {
+            AppServiceName = exampleAppService.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            SiteConfig = new Azure.AppService.Inputs.SlotSiteConfigArgs
+            {
+                JavaVersion = "1.8",
+                JavaContainer = "JETTY",
+                JavaContainerVersion = "9.3",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "server", &random.RandomIdArgs{
+			Keepers: pulumi.Float64Map{
+				"azi_id": pulumi.Float64(1),
+			},
+			ByteLength: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAppService, err := appservice.NewAppService(ctx, "exampleAppService", &appservice.AppServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+			SiteConfig: &appservice.AppServiceSiteConfigArgs{
+				JavaVersion:          pulumi.String("1.8"),
+				JavaContainer:        pulumi.String("JETTY"),
+				JavaContainerVersion: pulumi.String("9.3"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewSlot(ctx, "exampleSlot", &appservice.SlotArgs{
+			AppServiceName:    exampleAppService.Name,
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+			SiteConfig: &appservice.SlotSiteConfigArgs{
+				JavaVersion:          pulumi.String("1.8"),
+				JavaContainer:        pulumi.String("JETTY"),
+				JavaContainerVersion: pulumi.String("9.3"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "javaVersion": "1.8",
+        "javaContainer": "JETTY",
+        "javaContainerVersion": "9.3",
+    })
+example_slot = azure.appservice.Slot("exampleSlot",
+    app_service_name=example_app_service.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "javaVersion": "1.8",
+        "javaContainer": "JETTY",
+        "javaContainerVersion": "9.3",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    siteConfig: {
+        javaVersion: "1.8",
+        javaContainer: "JETTY",
+        javaContainerVersion: "9.3",
+    },
+});
+const exampleSlot = new azure.appservice.Slot("exampleSlot", {
+    appServiceName: exampleAppService.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    siteConfig: {
+        javaVersion: "1.8",
+        javaContainer: "JETTY",
+        javaContainerVersion: "9.3",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Slot Resource {#create}
@@ -25,7 +546,7 @@ Manages an App Service Slot (within an App Service).
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#Slot">Slot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.Slot">Slot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_name=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

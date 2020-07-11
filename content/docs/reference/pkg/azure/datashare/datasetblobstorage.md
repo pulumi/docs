@@ -12,6 +12,269 @@ meta_desc: "Explore the DatasetBlobStorage resource of the datashare module, inc
 
 Manages a Data Share Blob Storage Dataset.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.DataShare.Account("exampleAccount", new Azure.DataShare.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Identity = new Azure.DataShare.Inputs.AccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleShare = new Azure.DataShare.Share("exampleShare", new Azure.DataShare.ShareArgs
+        {
+            AccountId = exampleAccount.Id,
+            Kind = "CopyBased",
+        });
+        var exampleStorage_accountAccount = new Azure.Storage.Account("exampleStorage/accountAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "RAGRS",
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleStorage / accountAccount.Name,
+            ContainerAccessType = "container",
+        });
+        var exampleServicePrincipal = exampleAccount.Name.Apply(name => AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
+        {
+            DisplayName = name,
+        }));
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleStorage / accountAccount.Id,
+            RoleDefinitionName = "Storage Blob Data Reader",
+            PrincipalId = exampleServicePrincipal.Apply(exampleServicePrincipal => exampleServicePrincipal.ObjectId),
+        });
+        var exampleDatasetBlobStorage = new Azure.DataShare.DatasetBlobStorage("exampleDatasetBlobStorage", new Azure.DataShare.DatasetBlobStorageArgs
+        {
+            DataShareId = exampleShare.Id,
+            ContainerName = exampleContainer.Name,
+            StorageAccount = new Azure.DataShare.Inputs.DatasetBlobStorageStorageAccountArgs
+            {
+                Name = exampleStorage / accountAccount.Name,
+                ResourceGroupName = exampleStorage / accountAccount.ResourceGroupName,
+                SubscriptionId = "00000000-0000-0000-0000-000000000000",
+            },
+            FilePath = "myfile.txt",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleAssignment,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := datashare.NewAccount(ctx, "exampleAccount", &datashare.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Identity: &datashare.AccountIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleShare, err := datashare.NewShare(ctx, "exampleShare", &datashare.ShareArgs{
+			AccountId: exampleAccount.ID(),
+			Kind:      pulumi.String("CopyBased"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewAccount(ctx, "exampleStorage_accountAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("RAGRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  pulumi.String(exampleStorage / accountAccount.Name),
+			ContainerAccessType: pulumi.String("container"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAssignment, err := authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Scope:              pulumi.String(exampleStorage / accountAccount.Id),
+			RoleDefinitionName: pulumi.String("Storage Blob Data Reader"),
+			PrincipalId: exampleServicePrincipal.ApplyT(func(exampleServicePrincipal azuread.LookupServicePrincipalResult) (string, error) {
+				return exampleServicePrincipal.ObjectId, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datashare.NewDatasetBlobStorage(ctx, "exampleDatasetBlobStorage", &datashare.DatasetBlobStorageArgs{
+			DataShareId:   exampleShare.ID(),
+			ContainerName: exampleContainer.Name,
+			StorageAccount: &datashare.DatasetBlobStorageStorageAccountArgs{
+				Name:              pulumi.String(exampleStorage / accountAccount.Name),
+				ResourceGroupName: pulumi.String(exampleStorage / accountAccount.ResourceGroupName),
+				SubscriptionId:    pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			FilePath: pulumi.String("myfile.txt"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleAssignment,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_azuread as azuread
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.datashare.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    identity={
+        "type": "SystemAssigned",
+    })
+example_share = azure.datashare.Share("exampleShare",
+    account_id=example_account.id,
+    kind="CopyBased")
+example_storage_account_account = azure.storage.Account("exampleStorage/accountAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="RAGRS")
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_storage / account_account["name"],
+    container_access_type="container")
+example_service_principal = example_account.name.apply(lambda name: azuread.get_service_principal(display_name=name))
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    scope=example_storage / account_account["id"],
+    role_definition_name="Storage Blob Data Reader",
+    principal_id=example_service_principal.object_id)
+example_dataset_blob_storage = azure.datashare.DatasetBlobStorage("exampleDatasetBlobStorage",
+    data_share_id=example_share.id,
+    container_name=example_container.name,
+    storage_account={
+        "name": example_storage / account_account["name"],
+        "resource_group_name": example_storage / account_account["resourceGroupName"],
+        "subscription_id": "00000000-0000-0000-0000-000000000000",
+    },
+    file_path="myfile.txt",
+    opts=ResourceOptions(depends_on=[example_assignment]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as azuread from "@pulumi/azuread";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.datashare.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleShare = new azure.datashare.Share("exampleShare", {
+    accountId: exampleAccount.id,
+    kind: "CopyBased",
+});
+const exampleStorage_accountAccount = new azure.storage.Account("exampleStorage/accountAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "RAGRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleStorage / accountAccount.name,
+    containerAccessType: "container",
+});
+const exampleServicePrincipal = exampleAccount.name.apply(name => azuread.getServicePrincipal({
+    displayName: name,
+}));
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    scope: exampleStorage / accountAccount.id,
+    roleDefinitionName: "Storage Blob Data Reader",
+    principalId: exampleServicePrincipal.objectId,
+});
+const exampleDatasetBlobStorage = new azure.datashare.DatasetBlobStorage("exampleDatasetBlobStorage", {
+    dataShareId: exampleShare.id,
+    containerName: exampleContainer.name,
+    storageAccount: {
+        name: exampleStorage / accountAccount.name,
+        resourceGroupName: exampleStorage / accountAccount.resourceGroupName,
+        subscriptionId: "00000000-0000-0000-0000-000000000000",
+    },
+    filePath: "myfile.txt",
+}, {
+    dependsOn: [exampleAssignment],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatasetBlobStorage Resource {#create}
@@ -23,7 +286,7 @@ Manages a Data Share Blob Storage Dataset.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#DatasetBlobStorage">DatasetBlobStorage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_name=None<span class="p">, </span>data_share_id=None<span class="p">, </span>file_path=None<span class="p">, </span>folder_path=None<span class="p">, </span>name=None<span class="p">, </span>storage_account=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.DatasetBlobStorage">DatasetBlobStorage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_name=None<span class="p">, </span>data_share_id=None<span class="p">, </span>file_path=None<span class="p">, </span>folder_path=None<span class="p">, </span>name=None<span class="p">, </span>storage_account=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

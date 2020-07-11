@@ -64,13 +64,13 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = dns.NewZone(ctx, "example-public", &dns.ZoneArgs{
+		_, err = dns.NewZone(ctx, "example_public", &dns.ZoneArgs{
 			ResourceGroupName: example.Name,
 		})
 		if err != nil {
 			return err
 		}
-		_, err = privatedns.NewZone(ctx, "example-private", &privatedns.ZoneArgs{
+		_, err = privatedns.NewZone(ctx, "example_private", &privatedns.ZoneArgs{
 			ResourceGroupName: example.Name,
 		})
 		if err != nil {
@@ -120,7 +120,7 @@ const example_private = new azure.privatedns.Zone("example-private", {resourceGr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#pulumi_azure.dns.Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -16,6 +16,178 @@ Manages a Load Balancer NAT Rule.
 
 > **NOTE** When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+        });
+        var exampleLoadBalancer = new Azure.Lb.LoadBalancer("exampleLoadBalancer", new Azure.Lb.LoadBalancerArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            FrontendIpConfigurations = 
+            {
+                new Azure.Lb.Inputs.LoadBalancerFrontendIpConfigurationArgs
+                {
+                    Name = "PublicIPAddress",
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var exampleNatRule = new Azure.Lb.NatRule("exampleNatRule", new Azure.Lb.NatRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            LoadbalancerId = exampleLoadBalancer.Id,
+            Protocol = "Tcp",
+            FrontendPort = 3389,
+            BackendPort = 3389,
+            FrontendIpConfigurationName = "PublicIPAddress",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			FrontendIpConfigurations: lb.LoadBalancerFrontendIpConfigurationArray{
+				&lb.LoadBalancerFrontendIpConfigurationArgs{
+					Name:              pulumi.String("PublicIPAddress"),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lb.NewNatRule(ctx, "exampleNatRule", &lb.NatRuleArgs{
+			ResourceGroupName:           exampleResourceGroup.Name,
+			LoadbalancerId:              exampleLoadBalancer.ID(),
+			Protocol:                    pulumi.String("Tcp"),
+			FrontendPort:                pulumi.Int(3389),
+			BackendPort:                 pulumi.Int(3389),
+			FrontendIpConfigurationName: pulumi.String("PublicIPAddress"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configurations=[{
+        "name": "PublicIPAddress",
+        "public_ip_address_id": example_public_ip.id,
+    }])
+example_nat_rule = azure.lb.NatRule("exampleNatRule",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id,
+    protocol="Tcp",
+    frontend_port=3389,
+    backend_port=3389,
+    frontend_ip_configuration_name="PublicIPAddress")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    frontendIpConfigurations: [{
+        name: "PublicIPAddress",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleNatRule = new azure.lb.NatRule("exampleNatRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+    protocol: "Tcp",
+    frontendPort: 3389,
+    backendPort: 3389,
+    frontendIpConfigurationName: "PublicIPAddress",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NatRule Resource {#create}
@@ -27,7 +199,7 @@ Manages a Load Balancer NAT Rule.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#NatRule">NatRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_port=None<span class="p">, </span>enable_floating_ip=None<span class="p">, </span>enable_tcp_reset=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port=None<span class="p">, </span>idle_timeout_in_minutes=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.NatRule">NatRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_port=None<span class="p">, </span>enable_floating_ip=None<span class="p">, </span>enable_tcp_reset=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port=None<span class="p">, </span>idle_timeout_in_minutes=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

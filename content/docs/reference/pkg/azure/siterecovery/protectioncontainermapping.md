@@ -161,7 +161,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = siterecovery.NewProtectionContainerMapping(ctx, "container-mapping", &siterecovery.ProtectionContainerMappingArgs{
+		_, err = siterecovery.NewProtectionContainerMapping(ctx, "container_mapping", &siterecovery.ProtectionContainerMappingArgs{
 			ResourceGroupName:                     secondaryResourceGroup.Name,
 			RecoveryVaultName:                     vault.Name,
 			RecoveryFabricName:                    primaryFabric.Name,
@@ -285,7 +285,7 @@ const container_mapping = new azure.siterecovery.ProtectionContainerMapping("con
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#ProtectionContainerMapping">ProtectionContainerMapping</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_fabric_name=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_source_protection_container_name=None<span class="p">, </span>recovery_target_protection_container_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ProtectionContainerMapping">ProtectionContainerMapping</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_fabric_name=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_source_protection_container_name=None<span class="p">, </span>recovery_target_protection_container_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,6 +12,132 @@ meta_desc: "Explore the Credential resource of the automation module, including 
 
 Manages a Automation Credential.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Automation.Account("exampleAccount", new Azure.Automation.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Basic",
+        });
+        var exampleCredential = new Azure.Automation.Credential("exampleCredential", new Azure.Automation.CredentialArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            AutomationAccountName = exampleAccount.Name,
+            Username = "example_user",
+            Password = "example_pwd",
+            Description = "This is an example credential",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = automation.NewCredential(ctx, "exampleCredential", &automation.CredentialArgs{
+			ResourceGroupName:     exampleResourceGroup.Name,
+			AutomationAccountName: exampleAccount.Name,
+			Username:              pulumi.String("example_user"),
+			Password:              pulumi.String("example_pwd"),
+			Description:           pulumi.String("This is an example credential"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Basic")
+example_credential = azure.automation.Credential("exampleCredential",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    username="example_user",
+    password="example_pwd",
+    description="This is an example credential")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Basic",
+});
+const exampleCredential = new azure.automation.Credential("exampleCredential", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    username: "example_user",
+    password: "example_pwd",
+    description: "This is an example credential",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Credential Resource {#create}
@@ -23,7 +149,7 @@ Manages a Automation Credential.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#Credential">Credential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.Credential">Credential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,6 +14,193 @@ Manages an App Service (within an App Service Plan).
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            SiteConfig = new Azure.AppService.Inputs.AppServiceSiteConfigArgs
+            {
+                DotnetFrameworkVersion = "v4.0",
+                ScmType = "LocalGit",
+            },
+            AppSettings = 
+            {
+                { "SOME_KEY", "some-value" },
+            },
+            ConnectionStrings = 
+            {
+                new Azure.AppService.Inputs.AppServiceConnectionStringArgs
+                {
+                    Name = "Database",
+                    Type = "SQLServer",
+                    Value = "Server=some-server.mydomain.com;Integrated Security=SSPI",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewAppService(ctx, "exampleAppService", &appservice.AppServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AppServicePlanId:  examplePlan.ID(),
+			SiteConfig: &appservice.AppServiceSiteConfigArgs{
+				DotnetFrameworkVersion: pulumi.String("v4.0"),
+				ScmType:                pulumi.String("LocalGit"),
+			},
+			AppSettings: pulumi.StringMap{
+				"SOME_KEY": pulumi.String("some-value"),
+			},
+			ConnectionStrings: appservice.AppServiceConnectionStringArray{
+				&appservice.AppServiceConnectionStringArgs{
+					Name:  pulumi.String("Database"),
+					Type:  pulumi.String("SQLServer"),
+					Value: pulumi.String("Server=some-server.mydomain.com;Integrated Security=SSPI"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "dotnetFrameworkVersion": "v4.0",
+        "scmType": "LocalGit",
+    },
+    app_settings={
+        "SOME_KEY": "some-value",
+    },
+    connection_strings=[{
+        "name": "Database",
+        "type": "SQLServer",
+        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    siteConfig: {
+        dotnetFrameworkVersion: "v4.0",
+        scmType: "LocalGit",
+    },
+    appSettings: {
+        SOME_KEY: "some-value",
+    },
+    connectionStrings: [{
+        name: "Database",
+        type: "SQLServer",
+        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AppService Resource {#create}
@@ -25,7 +212,7 @@ Manages an App Service (within an App Service Plan).
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#AppService">AppService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.AppService">AppService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

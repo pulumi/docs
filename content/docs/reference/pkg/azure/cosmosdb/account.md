@@ -12,6 +12,204 @@ meta_desc: "Explore the Account resource of the cosmosdb module, including examp
 
 Manages a CosmosDB (formally DocumentDB) Account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = @var.Resource_group_location,
+        });
+        var ri = new Random.RandomInteger("ri", new Random.RandomIntegerArgs
+        {
+            Min = 10000,
+            Max = 99999,
+        });
+        var db = new Azure.CosmosDB.Account("db", new Azure.CosmosDB.AccountArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            OfferType = "Standard",
+            Kind = "GlobalDocumentDB",
+            EnableAutomaticFailover = true,
+            ConsistencyPolicy = new Azure.CosmosDB.Inputs.AccountConsistencyPolicyArgs
+            {
+                ConsistencyLevel = "BoundedStaleness",
+                MaxIntervalInSeconds = 10,
+                MaxStalenessPrefix = 200,
+            },
+            GeoLocations = 
+            {
+                new Azure.CosmosDB.Inputs.AccountGeoLocationArgs
+                {
+                    Location = @var.Failover_location,
+                    FailoverPriority = 1,
+                },
+                new Azure.CosmosDB.Inputs.AccountGeoLocationArgs
+                {
+                    Prefix = ri.Result.Apply(result => $"tfex-cosmos-db-{result}-customid"),
+                    Location = rg.Location,
+                    FailoverPriority = 0,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String(_var.Resource_group_location),
+		})
+		if err != nil {
+			return err
+		}
+		ri, err := random.NewRandomInteger(ctx, "ri", &random.RandomIntegerArgs{
+			Min: pulumi.Int(10000),
+			Max: pulumi.Int(99999),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cosmosdb.NewAccount(ctx, "db", &cosmosdb.AccountArgs{
+			Location:                rg.Location,
+			ResourceGroupName:       rg.Name,
+			OfferType:               pulumi.String("Standard"),
+			Kind:                    pulumi.String("GlobalDocumentDB"),
+			EnableAutomaticFailover: pulumi.Bool(true),
+			ConsistencyPolicy: &cosmosdb.AccountConsistencyPolicyArgs{
+				ConsistencyLevel:     pulumi.String("BoundedStaleness"),
+				MaxIntervalInSeconds: pulumi.Int(10),
+				MaxStalenessPrefix:   pulumi.Int(200),
+			},
+			GeoLocations: cosmosdb.AccountGeoLocationArray{
+				&cosmosdb.AccountGeoLocationArgs{
+					Location:         pulumi.String(_var.Failover_location),
+					FailoverPriority: pulumi.Int(1),
+				},
+				&cosmosdb.AccountGeoLocationArgs{
+					Prefix: ri.Result.ApplyT(func(result int) (string, error) {
+						return fmt.Sprintf("%v%v%v", "tfex-cosmos-db-", result, "-customid"), nil
+					}).(pulumi.StringOutput),
+					Location:         rg.Location,
+					FailoverPriority: pulumi.Int(0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+rg = azure.core.ResourceGroup("rg", location=var["resource_group_location"])
+ri = random.RandomInteger("ri",
+    min=10000,
+    max=99999)
+db = azure.cosmosdb.Account("db",
+    location=rg.location,
+    resource_group_name=rg.name,
+    offer_type="Standard",
+    kind="GlobalDocumentDB",
+    enable_automatic_failover=True,
+    consistency_policy={
+        "consistencyLevel": "BoundedStaleness",
+        "maxIntervalInSeconds": 10,
+        "maxStalenessPrefix": 200,
+    },
+    geo_locations=[
+        {
+            "location": var["failover_location"],
+            "failoverPriority": 1,
+        },
+        {
+            "prefix": ri.result.apply(lambda result: f"tfex-cosmos-db-{result}-customid"),
+            "location": rg.location,
+            "failoverPriority": 0,
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const rg = new azure.core.ResourceGroup("rg", {location: _var.resource_group_location});
+const ri = new random.RandomInteger("ri", {
+    min: 10000,
+    max: 99999,
+});
+const db = new azure.cosmosdb.Account("db", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    offerType: "Standard",
+    kind: "GlobalDocumentDB",
+    enableAutomaticFailover: true,
+    consistencyPolicy: {
+        consistencyLevel: "BoundedStaleness",
+        maxIntervalInSeconds: 10,
+        maxStalenessPrefix: 200,
+    },
+    geoLocations: [
+        {
+            location: _var.failover_location,
+            failoverPriority: 1,
+        },
+        {
+            prefix: pulumi.interpolate`tfex-cosmos-db-${ri.result}-customid`,
+            location: rg.location,
+            failoverPriority: 0,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}
@@ -23,7 +221,7 @@ Manages a CosmosDB (formally DocumentDB) Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2919,6 +3117,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2935,6 +3144,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2955,6 +3175,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2971,6 +3202,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

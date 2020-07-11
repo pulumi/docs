@@ -12,6 +12,144 @@ meta_desc: "Explore the VirtualMachine resource of the mssql module, including e
 
 Manages a Microsoft SQL Virtual Machine
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleVirtualMachine = Output.Create(Azure.Compute.GetVirtualMachine.InvokeAsync(new Azure.Compute.GetVirtualMachineArgs
+        {
+            Name = "example-vm",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleMssql_virtualMachineVirtualMachine = new Azure.MSSql.VirtualMachine("exampleMssql/virtualMachineVirtualMachine", new Azure.MSSql.VirtualMachineArgs
+        {
+            VirtualMachineId = exampleVirtualMachine.Apply(exampleVirtualMachine => exampleVirtualMachine.Id),
+            SqlLicenseType = "PAYG",
+            RServicesEnabled = true,
+            SqlConnectivityPort = 1433,
+            SqlConnectivityType = "PRIVATE",
+            SqlConnectivityUpdatePassword = "Password1234!",
+            SqlConnectivityUpdateUsername = "sqllogin",
+            AutoPatching = new Azure.MSSql.Inputs.VirtualMachineAutoPatchingArgs
+            {
+                DayOfWeek = "Sunday",
+                MaintenanceWindowDurationInMinutes = 60,
+                MaintenanceWindowStartingHour = 2,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleVirtualMachine, err := compute.LookupVirtualMachine(ctx, &compute.LookupVirtualMachineArgs{
+			Name:              "example-vm",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = mssql.NewVirtualMachine(ctx, "exampleMssql_virtualMachineVirtualMachine", &mssql.VirtualMachineArgs{
+			VirtualMachineId:              pulumi.String(exampleVirtualMachine.Id),
+			SqlLicenseType:                pulumi.String("PAYG"),
+			RServicesEnabled:              pulumi.Bool(true),
+			SqlConnectivityPort:           pulumi.Int(1433),
+			SqlConnectivityType:           pulumi.String("PRIVATE"),
+			SqlConnectivityUpdatePassword: pulumi.String("Password1234!"),
+			SqlConnectivityUpdateUsername: pulumi.String("sqllogin"),
+			AutoPatching: &mssql.VirtualMachineAutoPatchingArgs{
+				DayOfWeek:                          pulumi.String("Sunday"),
+				MaintenanceWindowDurationInMinutes: pulumi.Int(60),
+				MaintenanceWindowStartingHour:      pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_virtual_machine = azure.compute.get_virtual_machine(name="example-vm",
+    resource_group_name="example-resources")
+example_mssql_virtual_machine_virtual_machine = azure.mssql.VirtualMachine("exampleMssql/virtualMachineVirtualMachine",
+    virtual_machine_id=example_virtual_machine.id,
+    sql_license_type="PAYG",
+    r_services_enabled=True,
+    sql_connectivity_port=1433,
+    sql_connectivity_type="PRIVATE",
+    sql_connectivity_update_password="Password1234!",
+    sql_connectivity_update_username="sqllogin",
+    auto_patching={
+        "dayOfWeek": "Sunday",
+        "maintenanceWindowDurationInMinutes": 60,
+        "maintenanceWindowStartingHour": 2,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleVirtualMachine = azure.compute.getVirtualMachine({
+    name: "example-vm",
+    resourceGroupName: "example-resources",
+});
+const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine("exampleMssql/virtualMachineVirtualMachine", {
+    virtualMachineId: exampleVirtualMachine.then(exampleVirtualMachine => exampleVirtualMachine.id),
+    sqlLicenseType: "PAYG",
+    rServicesEnabled: true,
+    sqlConnectivityPort: 1433,
+    sqlConnectivityType: "PRIVATE",
+    sqlConnectivityUpdatePassword: "Password1234!",
+    sqlConnectivityUpdateUsername: "sqllogin",
+    autoPatching: {
+        dayOfWeek: "Sunday",
+        maintenanceWindowDurationInMinutes: 60,
+        maintenanceWindowStartingHour: 2,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}
@@ -23,7 +161,7 @@ Manages a Microsoft SQL Virtual Machine
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_patching=None<span class="p">, </span>key_vault_credential=None<span class="p">, </span>r_services_enabled=None<span class="p">, </span>sql_connectivity_port=None<span class="p">, </span>sql_connectivity_type=None<span class="p">, </span>sql_connectivity_update_password=None<span class="p">, </span>sql_connectivity_update_username=None<span class="p">, </span>sql_license_type=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_patching=None<span class="p">, </span>key_vault_credential=None<span class="p">, </span>r_services_enabled=None<span class="p">, </span>sql_connectivity_port=None<span class="p">, </span>sql_connectivity_type=None<span class="p">, </span>sql_connectivity_update_password=None<span class="p">, </span>sql_connectivity_update_username=None<span class="p">, </span>sql_license_type=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,6 +12,131 @@ meta_desc: "Explore the TxtRecord resource of the privatedns module, including e
 
 Enables you to manage DNS TXT Records within Azure Private DNS.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var testZone = new Azure.PrivateDns.Zone("testZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+        });
+        var testTxtRecord = new Azure.PrivateDns.TxtRecord("testTxtRecord", new Azure.PrivateDns.TxtRecordArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+            ZoneName = testZone.Name,
+            Ttl = 300,
+            Records = 
+            {
+                new Azure.PrivateDns.Inputs.TxtRecordRecordArgs
+                {
+                    Value = "v=spf1 mx ~all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		testZone, err := privatedns.NewZone(ctx, "testZone", &privatedns.ZoneArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = privatedns.NewTxtRecord(ctx, "testTxtRecord", &privatedns.TxtRecordArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			ZoneName:          testZone.Name,
+			Ttl:               pulumi.Int(300),
+			Records: privatedns.TxtRecordRecordArray{
+				&privatedns.TxtRecordRecordArgs{
+					Value: pulumi.String("v=spf1 mx ~all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+test_zone = azure.privatedns.Zone("testZone", resource_group_name=azurerm_resource_group["test"]["name"])
+test_txt_record = azure.privatedns.TxtRecord("testTxtRecord",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    zone_name=test_zone.name,
+    ttl=300,
+    records=[{
+        "value": "v=spf1 mx ~all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: azurerm_resource_group.test.name});
+const testTxtRecord = new azure.privatedns.TxtRecord("testTxtRecord", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    zoneName: testZone.name,
+    ttl: 300,
+    records: [{
+        value: "v=spf1 mx ~all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TxtRecord Resource {#create}
@@ -23,7 +148,7 @@ Enables you to manage DNS TXT Records within Azure Private DNS.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#TxtRecord">TxtRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.TxtRecord">TxtRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

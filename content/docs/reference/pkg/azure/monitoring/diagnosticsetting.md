@@ -12,6 +12,191 @@ meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, inc
 
 Manages a Diagnostic Setting for an existing Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = exampleResourceGroup.Name.Apply(name => Azure.Storage.GetAccount.InvokeAsync(new Azure.Storage.GetAccountArgs
+        {
+            Name = "examplestoracc",
+            ResourceGroupName = name,
+        }));
+        var exampleKeyVault = exampleResourceGroup.Name.Apply(name => Azure.KeyVault.GetKeyVault.InvokeAsync(new Azure.KeyVault.GetKeyVaultArgs
+        {
+            Name = "example-vault",
+            ResourceGroupName = name,
+        }));
+        var exampleDiagnosticSetting = new Azure.Monitoring.DiagnosticSetting("exampleDiagnosticSetting", new Azure.Monitoring.DiagnosticSettingArgs
+        {
+            TargetResourceId = exampleKeyVault.Apply(exampleKeyVault => exampleKeyVault.Id),
+            StorageAccountId = exampleAccount.Apply(exampleAccount => exampleAccount.Id),
+            Logs = 
+            {
+                new Azure.Monitoring.Inputs.DiagnosticSettingLogArgs
+                {
+                    Category = "AuditEvent",
+                    Enabled = false,
+                    RetentionPolicy = new Azure.Monitoring.Inputs.DiagnosticSettingLogRetentionPolicyArgs
+                    {
+                        Enabled = false,
+                    },
+                },
+            },
+            Metrics = 
+            {
+                new Azure.Monitoring.Inputs.DiagnosticSettingMetricArgs
+                {
+                    Category = "AllMetrics",
+                    RetentionPolicy = new Azure.Monitoring.Inputs.DiagnosticSettingMetricRetentionPolicyArgs
+                    {
+                        Enabled = false,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewDiagnosticSetting(ctx, "exampleDiagnosticSetting", &monitoring.DiagnosticSettingArgs{
+			TargetResourceId: exampleKeyVault.ApplyT(func(exampleKeyVault keyvault.LookupKeyVaultResult) (string, error) {
+				return exampleKeyVault.Id, nil
+			}).(pulumi.StringOutput),
+			StorageAccountId: exampleAccount.ApplyT(func(exampleAccount storage.LookupAccountResult) (string, error) {
+				return exampleAccount.Id, nil
+			}).(pulumi.StringOutput),
+			Logs: monitoring.DiagnosticSettingLogArray{
+				&monitoring.DiagnosticSettingLogArgs{
+					Category: pulumi.String("AuditEvent"),
+					Enabled:  pulumi.Bool(false),
+					RetentionPolicy: &monitoring.DiagnosticSettingLogRetentionPolicyArgs{
+						Enabled: pulumi.Bool(false),
+					},
+				},
+			},
+			Metrics: monitoring.DiagnosticSettingMetricArray{
+				&monitoring.DiagnosticSettingMetricArgs{
+					Category: pulumi.String("AllMetrics"),
+					RetentionPolicy: &monitoring.DiagnosticSettingMetricRetentionPolicyArgs{
+						Enabled: pulumi.Bool(false),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = example_resource_group.name.apply(lambda name: azure.storage.get_account(name="examplestoracc",
+    resource_group_name=name))
+example_key_vault = example_resource_group.name.apply(lambda name: azure.keyvault.get_key_vault(name="example-vault",
+    resource_group_name=name))
+example_diagnostic_setting = azure.monitoring.DiagnosticSetting("exampleDiagnosticSetting",
+    target_resource_id=example_key_vault.id,
+    storage_account_id=example_account.id,
+    logs=[{
+        "category": "AuditEvent",
+        "enabled": False,
+        "retention_policy": {
+            "enabled": False,
+        },
+    }],
+    metrics=[{
+        "category": "AllMetrics",
+        "retention_policy": {
+            "enabled": False,
+        },
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
+    name: "examplestoracc",
+    resourceGroupName: name,
+}));
+const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
+    name: "example-vault",
+    resourceGroupName: name,
+}));
+const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("exampleDiagnosticSetting", {
+    targetResourceId: exampleKeyVault.id,
+    storageAccountId: exampleAccount.id,
+    logs: [{
+        category: "AuditEvent",
+        enabled: false,
+        retentionPolicy: {
+            enabled: false,
+        },
+    }],
+    metrics: [{
+        category: "AllMetrics",
+        retentionPolicy: {
+            enabled: false,
+        },
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DiagnosticSetting Resource {#create}
@@ -23,7 +208,7 @@ Manages a Diagnostic Setting for an existing Resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eventhub_authorization_rule_id=None<span class="p">, </span>eventhub_name=None<span class="p">, </span>log_analytics_destination_type=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>logs=None<span class="p">, </span>metrics=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eventhub_authorization_rule_id=None<span class="p">, </span>eventhub_name=None<span class="p">, </span>log_analytics_destination_type=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>logs=None<span class="p">, </span>metrics=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

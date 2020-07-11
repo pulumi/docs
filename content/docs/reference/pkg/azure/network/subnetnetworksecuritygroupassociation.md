@@ -12,6 +12,217 @@ meta_desc: "Explore the SubnetNetworkSecurityGroupAssociation resource of the ne
 
 Associates a Network Security Group with a Subnet within a Virtual Network.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var exampleNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup("exampleNetworkSecurityGroup", new Azure.Network.NetworkSecurityGroupArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SecurityRules = 
+            {
+                new Azure.Network.Inputs.NetworkSecurityGroupSecurityRuleArgs
+                {
+                    Name = "test123",
+                    Priority = 100,
+                    Direction = "Inbound",
+                    Access = "Allow",
+                    Protocol = "Tcp",
+                    SourcePortRange = "*",
+                    DestinationPortRange = "*",
+                    SourceAddressPrefix = "*",
+                    DestinationAddressPrefix = "*",
+                },
+            },
+        });
+        var exampleSubnetNetworkSecurityGroupAssociation = new Azure.Network.SubnetNetworkSecurityGroupAssociation("exampleSubnetNetworkSecurityGroupAssociation", new Azure.Network.SubnetNetworkSecurityGroupAssociationArgs
+        {
+            SubnetId = exampleSubnet.Id,
+            NetworkSecurityGroupId = exampleNetworkSecurityGroup.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkSecurityGroup, err := network.NewNetworkSecurityGroup(ctx, "exampleNetworkSecurityGroup", &network.NetworkSecurityGroupArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SecurityRules: network.NetworkSecurityGroupSecurityRuleArray{
+				&network.NetworkSecurityGroupSecurityRuleArgs{
+					Name:                     pulumi.String("test123"),
+					Priority:                 pulumi.Int(100),
+					Direction:                pulumi.String("Inbound"),
+					Access:                   pulumi.String("Allow"),
+					Protocol:                 pulumi.String("Tcp"),
+					SourcePortRange:          pulumi.String("*"),
+					DestinationPortRange:     pulumi.String("*"),
+					SourceAddressPrefix:      pulumi.String("*"),
+					DestinationAddressPrefix: pulumi.String("*"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewSubnetNetworkSecurityGroupAssociation(ctx, "exampleSubnetNetworkSecurityGroupAssociation", &network.SubnetNetworkSecurityGroupAssociationArgs{
+			SubnetId:               exampleSubnet.ID(),
+			NetworkSecurityGroupId: exampleNetworkSecurityGroup.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    security_rules=[{
+        "name": "test123",
+        "priority": 100,
+        "direction": "Inbound",
+        "access": "Allow",
+        "protocol": "Tcp",
+        "source_port_range": "*",
+        "destination_port_range": "*",
+        "source_address_prefix": "*",
+        "destination_address_prefix": "*",
+    }])
+example_subnet_network_security_group_association = azure.network.SubnetNetworkSecurityGroupAssociation("exampleSubnetNetworkSecurityGroupAssociation",
+    subnet_id=example_subnet.id,
+    network_security_group_id=example_network_security_group.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    securityRules: [{
+        name: "test123",
+        priority: 100,
+        direction: "Inbound",
+        access: "Allow",
+        protocol: "Tcp",
+        sourcePortRange: "*",
+        destinationPortRange: "*",
+        sourceAddressPrefix: "*",
+        destinationAddressPrefix: "*",
+    }],
+});
+const exampleSubnetNetworkSecurityGroupAssociation = new azure.network.SubnetNetworkSecurityGroupAssociation("exampleSubnetNetworkSecurityGroupAssociation", {
+    subnetId: exampleSubnet.id,
+    networkSecurityGroupId: exampleNetworkSecurityGroup.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SubnetNetworkSecurityGroupAssociation Resource {#create}
@@ -23,7 +234,7 @@ Associates a Network Security Group with a Subnet within a Virtual Network.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#SubnetNetworkSecurityGroupAssociation">SubnetNetworkSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.SubnetNetworkSecurityGroupAssociation">SubnetNetworkSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -19,6 +19,285 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 * Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.
 * Use Front Door for application layer security and DDoS protection for your application.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "EastUS2",
+        });
+        var exampleFrontdoor = new Azure.FrontDoor.Frontdoor("exampleFrontdoor", new Azure.FrontDoor.FrontdoorArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            EnforceBackendPoolsCertificateNameCheck = false,
+            RoutingRules = 
+            {
+                new Azure.FrontDoor.Inputs.FrontdoorRoutingRuleArgs
+                {
+                    Name = "exampleRoutingRule1",
+                    AcceptedProtocols = 
+                    {
+                        "Http",
+                        "Https",
+                    },
+                    PatternsToMatches = 
+                    {
+                        "/*",
+                    },
+                    FrontendEndpoints = 
+                    {
+                        "exampleFrontendEndpoint1",
+                    },
+                    ForwardingConfiguration = new Azure.FrontDoor.Inputs.FrontdoorRoutingRuleForwardingConfigurationArgs
+                    {
+                        ForwardingProtocol = "MatchRequest",
+                        BackendPoolName = "exampleBackendBing",
+                    },
+                },
+            },
+            BackendPoolLoadBalancings = 
+            {
+                new Azure.FrontDoor.Inputs.FrontdoorBackendPoolLoadBalancingArgs
+                {
+                    Name = "exampleLoadBalancingSettings1",
+                },
+            },
+            BackendPoolHealthProbes = 
+            {
+                new Azure.FrontDoor.Inputs.FrontdoorBackendPoolHealthProbeArgs
+                {
+                    Name = "exampleHealthProbeSetting1",
+                },
+            },
+            BackendPools = 
+            {
+                new Azure.FrontDoor.Inputs.FrontdoorBackendPoolArgs
+                {
+                    Name = "exampleBackendBing",
+                    Backends = 
+                    {
+                        new Azure.FrontDoor.Inputs.FrontdoorBackendPoolBackendArgs
+                        {
+                            HostHeader = "www.bing.com",
+                            Address = "www.bing.com",
+                            HttpPort = 80,
+                            HttpsPort = 443,
+                        },
+                    },
+                    LoadBalancingName = "exampleLoadBalancingSettings1",
+                    HealthProbeName = "exampleHealthProbeSetting1",
+                },
+            },
+            FrontendEndpoints = 
+            {
+                new Azure.FrontDoor.Inputs.FrontdoorFrontendEndpointArgs
+                {
+                    Name = "exampleFrontendEndpoint1",
+                    HostName = "example-FrontDoor.azurefd.net",
+                    CustomHttpsProvisioningEnabled = false,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("EastUS2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = frontdoor.NewFrontdoor(ctx, "exampleFrontdoor", &frontdoor.FrontdoorArgs{
+			ResourceGroupName:                       exampleResourceGroup.Name,
+			EnforceBackendPoolsCertificateNameCheck: pulumi.Bool(false),
+			RoutingRules: frontdoor.FrontdoorRoutingRuleArray{
+				&frontdoor.FrontdoorRoutingRuleArgs{
+					Name: pulumi.String("exampleRoutingRule1"),
+					AcceptedProtocols: pulumi.StringArray{
+						pulumi.String("Http"),
+						pulumi.String("Https"),
+					},
+					PatternsToMatches: pulumi.StringArray{
+						pulumi.String("/*"),
+					},
+					FrontendEndpoints: pulumi.StringArray{
+						pulumi.String("exampleFrontendEndpoint1"),
+					},
+					ForwardingConfiguration: &frontdoor.FrontdoorRoutingRuleForwardingConfigurationArgs{
+						ForwardingProtocol: pulumi.String("MatchRequest"),
+						BackendPoolName:    pulumi.String("exampleBackendBing"),
+					},
+				},
+			},
+			BackendPoolLoadBalancings: frontdoor.FrontdoorBackendPoolLoadBalancingArray{
+				&frontdoor.FrontdoorBackendPoolLoadBalancingArgs{
+					Name: pulumi.String("exampleLoadBalancingSettings1"),
+				},
+			},
+			BackendPoolHealthProbes: frontdoor.FrontdoorBackendPoolHealthProbeArray{
+				&frontdoor.FrontdoorBackendPoolHealthProbeArgs{
+					Name: pulumi.String("exampleHealthProbeSetting1"),
+				},
+			},
+			BackendPools: frontdoor.FrontdoorBackendPoolArray{
+				&frontdoor.FrontdoorBackendPoolArgs{
+					Name: pulumi.String("exampleBackendBing"),
+					Backends: frontdoor.FrontdoorBackendPoolBackendArray{
+						&frontdoor.FrontdoorBackendPoolBackendArgs{
+							HostHeader: pulumi.String("www.bing.com"),
+							Address:    pulumi.String("www.bing.com"),
+							HttpPort:   pulumi.Int(80),
+							HttpsPort:  pulumi.Int(443),
+						},
+					},
+					LoadBalancingName: pulumi.String("exampleLoadBalancingSettings1"),
+					HealthProbeName:   pulumi.String("exampleHealthProbeSetting1"),
+				},
+			},
+			FrontendEndpoints: frontdoor.FrontdoorFrontendEndpointArray{
+				&frontdoor.FrontdoorFrontendEndpointArgs{
+					Name:                           pulumi.String("exampleFrontendEndpoint1"),
+					HostName:                       pulumi.String("example-FrontDoor.azurefd.net"),
+					CustomHttpsProvisioningEnabled: pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="EastUS2")
+example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
+    resource_group_name=example_resource_group.name,
+    enforce_backend_pools_certificate_name_check=False,
+    routing_rules=[{
+        "name": "exampleRoutingRule1",
+        "acceptedProtocols": [
+            "Http",
+            "Https",
+        ],
+        "patternsToMatches": ["/*"],
+        "frontend_endpoints": ["exampleFrontendEndpoint1"],
+        "forwardingConfiguration": {
+            "forwardingProtocol": "MatchRequest",
+            "backendPoolName": "exampleBackendBing",
+        },
+    }],
+    backend_pool_load_balancings=[{
+        "name": "exampleLoadBalancingSettings1",
+    }],
+    backend_pool_health_probes=[{
+        "name": "exampleHealthProbeSetting1",
+    }],
+    backend_pools=[{
+        "name": "exampleBackendBing",
+        "backends": [{
+            "hostHeader": "www.bing.com",
+            "address": "www.bing.com",
+            "httpPort": 80,
+            "httpsPort": 443,
+        }],
+        "loadBalancingName": "exampleLoadBalancingSettings1",
+        "healthProbeName": "exampleHealthProbeSetting1",
+    }],
+    frontend_endpoints=[{
+        "name": "exampleFrontendEndpoint1",
+        "host_name": "example-FrontDoor.azurefd.net",
+        "customHttpsProvisioningEnabled": False,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "EastUS2"});
+const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
+    resourceGroupName: exampleResourceGroup.name,
+    enforceBackendPoolsCertificateNameCheck: false,
+    routingRules: [{
+        name: "exampleRoutingRule1",
+        acceptedProtocols: [
+            "Http",
+            "Https",
+        ],
+        patternsToMatches: ["/*"],
+        frontendEndpoints: ["exampleFrontendEndpoint1"],
+        forwardingConfiguration: {
+            forwardingProtocol: "MatchRequest",
+            backendPoolName: "exampleBackendBing",
+        },
+    }],
+    backendPoolLoadBalancings: [{
+        name: "exampleLoadBalancingSettings1",
+    }],
+    backendPoolHealthProbes: [{
+        name: "exampleHealthProbeSetting1",
+    }],
+    backendPools: [{
+        name: "exampleBackendBing",
+        backends: [{
+            hostHeader: "www.bing.com",
+            address: "www.bing.com",
+            httpPort: 80,
+            httpsPort: 443,
+        }],
+        loadBalancingName: "exampleLoadBalancingSettings1",
+        healthProbeName: "exampleHealthProbeSetting1",
+    }],
+    frontendEndpoints: [{
+        name: "exampleFrontendEndpoint1",
+        hostName: "example-FrontDoor.azurefd.net",
+        customHttpsProvisioningEnabled: false,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Frontdoor Resource {#create}
@@ -30,7 +309,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#Frontdoor">Frontdoor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

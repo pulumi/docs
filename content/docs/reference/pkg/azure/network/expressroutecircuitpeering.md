@@ -12,6 +12,200 @@ meta_desc: "Explore the ExpressRouteCircuitPeering resource of the network modul
 
 Manages an ExpressRoute Circuit Peering.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating A Microsoft Peering)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleExpressRouteCircuit = new Azure.Network.ExpressRouteCircuit("exampleExpressRouteCircuit", new Azure.Network.ExpressRouteCircuitArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ServiceProviderName = "Equinix",
+            PeeringLocation = "Silicon Valley",
+            BandwidthInMbps = 50,
+            Sku = new Azure.Network.Inputs.ExpressRouteCircuitSkuArgs
+            {
+                Tier = "Standard",
+                Family = "MeteredData",
+            },
+            AllowClassicOperations = false,
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+        var exampleExpressRouteCircuitPeering = new Azure.Network.ExpressRouteCircuitPeering("exampleExpressRouteCircuitPeering", new Azure.Network.ExpressRouteCircuitPeeringArgs
+        {
+            PeeringType = "MicrosoftPeering",
+            ExpressRouteCircuitName = exampleExpressRouteCircuit.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PeerAsn = 100,
+            PrimaryPeerAddressPrefix = "123.0.0.0/30",
+            SecondaryPeerAddressPrefix = "123.0.0.4/30",
+            VlanId = 300,
+            MicrosoftPeeringConfig = new Azure.Network.Inputs.ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs
+            {
+                AdvertisedPublicPrefixes = 
+                {
+                    "123.1.0.0/24",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleExpressRouteCircuit, err := network.NewExpressRouteCircuit(ctx, "exampleExpressRouteCircuit", &network.ExpressRouteCircuitArgs{
+			ResourceGroupName:   exampleResourceGroup.Name,
+			Location:            exampleResourceGroup.Location,
+			ServiceProviderName: pulumi.String("Equinix"),
+			PeeringLocation:     pulumi.String("Silicon Valley"),
+			BandwidthInMbps:     pulumi.Int(50),
+			Sku: &network.ExpressRouteCircuitSkuArgs{
+				Tier:   pulumi.String("Standard"),
+				Family: pulumi.String("MeteredData"),
+			},
+			AllowClassicOperations: pulumi.Bool(false),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewExpressRouteCircuitPeering(ctx, "exampleExpressRouteCircuitPeering", &network.ExpressRouteCircuitPeeringArgs{
+			PeeringType:                pulumi.String("MicrosoftPeering"),
+			ExpressRouteCircuitName:    exampleExpressRouteCircuit.Name,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			PeerAsn:                    pulumi.Int(100),
+			PrimaryPeerAddressPrefix:   pulumi.String("123.0.0.0/30"),
+			SecondaryPeerAddressPrefix: pulumi.String("123.0.0.4/30"),
+			VlanId:                     pulumi.Int(300),
+			MicrosoftPeeringConfig: &network.ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs{
+				AdvertisedPublicPrefixes: pulumi.StringArray{
+					pulumi.String("123.1.0.0/24"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    service_provider_name="Equinix",
+    peering_location="Silicon Valley",
+    bandwidth_in_mbps=50,
+    sku={
+        "tier": "Standard",
+        "family": "MeteredData",
+    },
+    allow_classic_operations=False,
+    tags={
+        "environment": "Production",
+    })
+example_express_route_circuit_peering = azure.network.ExpressRouteCircuitPeering("exampleExpressRouteCircuitPeering",
+    peering_type="MicrosoftPeering",
+    express_route_circuit_name=example_express_route_circuit.name,
+    resource_group_name=example_resource_group.name,
+    peer_asn=100,
+    primary_peer_address_prefix="123.0.0.0/30",
+    secondary_peer_address_prefix="123.0.0.4/30",
+    vlan_id=300,
+    microsoft_peering_config={
+        "advertisedPublicPrefixes": ["123.1.0.0/24"],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serviceProviderName: "Equinix",
+    peeringLocation: "Silicon Valley",
+    bandwidthInMbps: 50,
+    sku: {
+        tier: "Standard",
+        family: "MeteredData",
+    },
+    allowClassicOperations: false,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitPeering("exampleExpressRouteCircuitPeering", {
+    peeringType: "MicrosoftPeering",
+    expressRouteCircuitName: exampleExpressRouteCircuit.name,
+    resourceGroupName: exampleResourceGroup.name,
+    peerAsn: 100,
+    primaryPeerAddressPrefix: "123.0.0.0/30",
+    secondaryPeerAddressPrefix: "123.0.0.4/30",
+    vlanId: 300,
+    microsoftPeeringConfig: {
+        advertisedPublicPrefixes: ["123.1.0.0/24"],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuitPeering Resource {#create}
@@ -23,7 +217,7 @@ Manages an ExpressRoute Circuit Peering.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

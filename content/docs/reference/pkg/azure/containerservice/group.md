@@ -12,6 +12,203 @@ meta_desc: "Explore the Group resource of the containerservice module, including
 
 Manages as an Azure Container Group instance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleGroup = new Azure.ContainerService.Group("exampleGroup", new Azure.ContainerService.GroupArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpAddressType = "public",
+            DnsNameLabel = "aci-label",
+            OsType = "Linux",
+            Containers = 
+            {
+                new Azure.ContainerService.Inputs.GroupContainerArgs
+                {
+                    Name = "hello-world",
+                    Image = "microsoft/aci-helloworld:latest",
+                    Cpu = 0.5,
+                    Memory = 1.5,
+                    Ports = 
+                    {
+                        new Azure.ContainerService.Inputs.GroupContainerPortArgs
+                        {
+                            Port = 443,
+                            Protocol = "TCP",
+                        },
+                    },
+                },
+                new Azure.ContainerService.Inputs.GroupContainerArgs
+                {
+                    Name = "sidecar",
+                    Image = "microsoft/aci-tutorial-sidecar",
+                    Cpu = 0.5,
+                    Memory = 1.5,
+                },
+            },
+            Tags = 
+            {
+                { "environment", "testing" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = containerservice.NewGroup(ctx, "exampleGroup", &containerservice.GroupArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpAddressType:     pulumi.String("public"),
+			DnsNameLabel:      pulumi.String("aci-label"),
+			OsType:            pulumi.String("Linux"),
+			Containers: containerservice.GroupContainerArray{
+				&containerservice.GroupContainerArgs{
+					Name:   pulumi.String("hello-world"),
+					Image:  pulumi.String("microsoft/aci-helloworld:latest"),
+					Cpu:    pulumi.Float64(0.5),
+					Memory: pulumi.Float64(1.5),
+					Ports: containerservice.GroupContainerPortArray{
+						&containerservice.GroupContainerPortArgs{
+							Port:     pulumi.Int(443),
+							Protocol: pulumi.String("TCP"),
+						},
+					},
+				},
+				&containerservice.GroupContainerArgs{
+					Name:   pulumi.String("sidecar"),
+					Image:  pulumi.String("microsoft/aci-tutorial-sidecar"),
+					Cpu:    pulumi.Float64(0.5),
+					Memory: pulumi.Float64(1.5),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("testing"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_group = azure.containerservice.Group("exampleGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_address_type="public",
+    dns_name_label="aci-label",
+    os_type="Linux",
+    containers=[
+        {
+            "name": "hello-world",
+            "image": "microsoft/aci-helloworld:latest",
+            "cpu": "0.5",
+            "memory": "1.5",
+            "ports": [{
+                "port": 443,
+                "protocol": "TCP",
+            }],
+        },
+        {
+            "name": "sidecar",
+            "image": "microsoft/aci-tutorial-sidecar",
+            "cpu": "0.5",
+            "memory": "1.5",
+        },
+    ],
+    tags={
+        "environment": "testing",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleGroup = new azure.containerservice.Group("exampleGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipAddressType: "public",
+    dnsNameLabel: "aci-label",
+    osType: "Linux",
+    containers: [
+        {
+            name: "hello-world",
+            image: "microsoft/aci-helloworld:latest",
+            cpu: "0.5",
+            memory: "1.5",
+            ports: [{
+                port: 443,
+                protocol: "TCP",
+            }],
+        },
+        {
+            name: "sidecar",
+            image: "microsoft/aci-tutorial-sidecar",
+            cpu: "0.5",
+            memory: "1.5",
+        },
+    ],
+    tags: {
+        environment: "testing",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}
@@ -23,7 +220,7 @@ Manages as an Azure Container Group instance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#Group">Group</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>containers=None<span class="p">, </span>diagnostics=None<span class="p">, </span>dns_name_label=None<span class="p">, </span>identity=None<span class="p">, </span>image_registry_credentials=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile_id=None<span class="p">, </span>os_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restart_policy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Group">Group</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>containers=None<span class="p">, </span>diagnostics=None<span class="p">, </span>dns_name_label=None<span class="p">, </span>identity=None<span class="p">, </span>image_registry_credentials=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile_id=None<span class="p">, </span>os_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restart_policy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,6 +12,169 @@ meta_desc: "Explore the MxRecord resource of the privatedns module, including ex
 
 Enables you to manage DNS MX Records within Azure Private DNS.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.PrivateDns.Zone("exampleZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleMxRecord = new Azure.PrivateDns.MxRecord("exampleMxRecord", new Azure.PrivateDns.MxRecordArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ZoneName = exampleZone.Name,
+            Ttl = 300,
+            Records = 
+            {
+                new Azure.PrivateDns.Inputs.MxRecordRecordArgs
+                {
+                    Preference = 10,
+                    Exchange = "mx1.contoso.com",
+                },
+                new Azure.PrivateDns.Inputs.MxRecordRecordArgs
+                {
+                    Preference = 20,
+                    Exchange = "backupmx.contoso.com",
+                },
+            },
+            Tags = 
+            {
+                { "Environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := privatedns.NewZone(ctx, "exampleZone", &privatedns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = privatedns.NewMxRecord(ctx, "exampleMxRecord", &privatedns.MxRecordArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ZoneName:          exampleZone.Name,
+			Ttl:               pulumi.Int(300),
+			Records: privatedns.MxRecordRecordArray{
+				&privatedns.MxRecordRecordArgs{
+					Preference: pulumi.Int(10),
+					Exchange:   pulumi.String("mx1.contoso.com"),
+				},
+				&privatedns.MxRecordRecordArgs{
+					Preference: pulumi.Int(20),
+					Exchange:   pulumi.String("backupmx.contoso.com"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.privatedns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_mx_record = azure.privatedns.MxRecord("exampleMxRecord",
+    resource_group_name=example_resource_group.name,
+    zone_name=example_zone.name,
+    ttl=300,
+    records=[
+        {
+            "preference": 10,
+            "exchange": "mx1.contoso.com",
+        },
+        {
+            "preference": 20,
+            "exchange": "backupmx.contoso.com",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.privatedns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleMxRecord = new azure.privatedns.MxRecord("exampleMxRecord", {
+    resourceGroupName: exampleResourceGroup.name,
+    zoneName: exampleZone.name,
+    ttl: 300,
+    records: [
+        {
+            preference: 10,
+            exchange: "mx1.contoso.com",
+        },
+        {
+            preference: 20,
+            exchange: "backupmx.contoso.com",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MxRecord Resource {#create}
@@ -23,7 +186,7 @@ Enables you to manage DNS MX Records within Azure Private DNS.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#MxRecord">MxRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.MxRecord">MxRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

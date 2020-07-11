@@ -76,7 +76,7 @@ func main() {
 				Name:     pulumi.String("Standard_D13_v2"),
 				Capacity: pulumi.Int(2),
 			},
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("Production"),
 			},
 		})
@@ -144,7 +144,7 @@ const example = new azure.kusto.Cluster("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/kusto/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enable_disk_encryption=None<span class="p">, </span>enable_purge=None<span class="p">, </span>enable_streaming_ingest=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/kusto/#pulumi_azure.kusto.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enable_disk_encryption=None<span class="p">, </span>enable_purge=None<span class="p">, </span>enable_streaming_ingest=None<span class="p">, </span>identity=None<span class="p">, </span>language_extensions=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimized_auto_scale=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>trusted_external_tenants=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,6 +384,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="languageextensions_csharp">
+<a href="#languageextensions_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -406,6 +417,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="optimizedautoscale_csharp">
+<a href="#optimizedautoscale_csharp" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -413,6 +435,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedexternaltenants_csharp">
+<a href="#trustedexternaltenants_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,6 +545,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="languageextensions_go">
+<a href="#languageextensions_go" style="color: inherit; text-decoration: inherit;">Language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -534,6 +578,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="optimizedautoscale_go">
+<a href="#optimizedautoscale_go" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -541,6 +596,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedexternaltenants_go">
+<a href="#trustedexternaltenants_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,6 +706,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="languageextensions_nodejs">
+<a href="#languageextensions_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -662,6 +739,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="optimizedautoscale_nodejs">
+<a href="#optimizedautoscale_nodejs" style="color: inherit; text-decoration: inherit;">optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -669,6 +757,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedexternaltenants_nodejs">
+<a href="#trustedexternaltenants_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,6 +867,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="language_extensions_python">
+<a href="#language_extensions_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -790,6 +900,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="optimized_auto_scale_python">
+<a href="#optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Dict[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale]</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -797,6 +918,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusted_external_tenants_python">
+<a href="#trusted_external_tenants_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>external_<wbr>tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,7 +1139,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_ingestion_uri=None<span class="p">, </span>enable_disk_encryption=None<span class="p">, </span>enable_purge=None<span class="p">, </span>enable_streaming_ingest=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>zones=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_ingestion_uri=None<span class="p">, </span>enable_disk_encryption=None<span class="p">, </span>enable_purge=None<span class="p">, </span>enable_streaming_ingest=None<span class="p">, </span>identity=None<span class="p">, </span>language_extensions=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimized_auto_scale=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>trusted_external_tenants=None<span class="p">, </span>uri=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>zones=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1178,6 +1310,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_languageextensions_csharp">
+<a href="#state_languageextensions_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -1196,6 +1339,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_optimizedautoscale_csharp">
+<a href="#state_optimizedautoscale_csharp" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1229,6 +1383,17 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedexternaltenants_csharp">
+<a href="#state_trustedexternaltenants_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1328,6 +1493,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_languageextensions_go">
+<a href="#state_languageextensions_go" style="color: inherit; text-decoration: inherit;">Language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -1346,6 +1522,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_optimizedautoscale_go">
+<a href="#state_optimizedautoscale_go" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1379,6 +1566,17 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedexternaltenants_go">
+<a href="#state_trustedexternaltenants_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,6 +1676,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_languageextensions_nodejs">
+<a href="#state_languageextensions_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1496,6 +1705,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_optimizedautoscale_nodejs">
+<a href="#state_optimizedautoscale_nodejs" style="color: inherit; text-decoration: inherit;">optimized<wbr>Auto<wbr>Scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1529,6 +1749,17 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedexternaltenants_nodejs">
+<a href="#state_trustedexternaltenants_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>External<wbr>Tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1628,6 +1859,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_language_extensions_python">
+<a href="#state_language_extensions_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1646,6 +1888,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_optimized_auto_scale_python">
+<a href="#state_optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Dict[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale]</a></span>
+    </dt>
+    <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1679,6 +1932,17 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trusted_external_tenants_python">
+<a href="#state_trusted_external_tenants_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>external_<wbr>tenants</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1951,6 +2215,140 @@ The following state arguments are supported:
 
 
 
+<h4 id="clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterOptimizedAutoScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterOptimizedAutoScale">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto?tab=doc#ClusterOptimizedAutoScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto?tab=doc#ClusterOptimizedAutoScaleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Kusto.Inputs.ClusterOptimizedAutoScaleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Kusto.Outputs.ClusterOptimizedAutoScale.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maximuminstances_csharp">
+<a href="#maximuminstances_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minimuminstances_csharp">
+<a href="#minimuminstances_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maximuminstances_go">
+<a href="#maximuminstances_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minimuminstances_go">
+<a href="#minimuminstances_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maximuminstances_nodejs">
+<a href="#maximuminstances_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minimuminstances_nodejs">
+<a href="#minimuminstances_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maximuminstances_python">
+<a href="#maximuminstances_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minimuminstances_python">
+<a href="#minimuminstances_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="clustersku">Cluster<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterSku">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterSku">output</a> API doc for this type.
@@ -1971,17 +2369,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1991,23 +2378,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2020,23 +2407,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2049,23 +2436,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2076,6 +2463,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
 {{% /md %}}</dd>
 
 </dl>

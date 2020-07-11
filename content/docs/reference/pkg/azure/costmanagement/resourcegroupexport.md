@@ -12,6 +12,171 @@ meta_desc: "Explore the ResourceGroupExport resource of the costmanagement modul
 
 Manages an Azure Cost Management Export for a Resource Group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleResourceGroupExport = new Azure.CostManagement.ResourceGroupExport("exampleResourceGroupExport", new Azure.CostManagement.ResourceGroupExportArgs
+        {
+            ResourceGroupId = exampleResourceGroup.Id,
+            RecurrenceType = "Monthly",
+            RecurrencePeriodStart = "2020-08-18T00:00:00Z",
+            RecurrencePeriodEnd = "2020-09-18T00:00:00Z",
+            DeliveryInfo = new Azure.CostManagement.Inputs.ResourceGroupExportDeliveryInfoArgs
+            {
+                StorageAccountId = exampleAccount.Id,
+                ContainerName = "examplecontainer",
+                RootFolderPath = "/root/updated",
+            },
+            Query = new Azure.CostManagement.Inputs.ResourceGroupExportQueryArgs
+            {
+                Type = "Usage",
+                TimeFrame = "WeekToDate",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/costmanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = costmanagement.NewResourceGroupExport(ctx, "exampleResourceGroupExport", &costmanagement.ResourceGroupExportArgs{
+			ResourceGroupId:       exampleResourceGroup.ID(),
+			RecurrenceType:        pulumi.String("Monthly"),
+			RecurrencePeriodStart: pulumi.String("2020-08-18T00:00:00Z"),
+			RecurrencePeriodEnd:   pulumi.String("2020-09-18T00:00:00Z"),
+			DeliveryInfo: &costmanagement.ResourceGroupExportDeliveryInfoArgs{
+				StorageAccountId: exampleAccount.ID(),
+				ContainerName:    pulumi.String("examplecontainer"),
+				RootFolderPath:   pulumi.String("/root/updated"),
+			},
+			Query: &costmanagement.ResourceGroupExportQueryArgs{
+				Type:      pulumi.String("Usage"),
+				TimeFrame: pulumi.String("WeekToDate"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_resource_group_export = azure.costmanagement.ResourceGroupExport("exampleResourceGroupExport",
+    resource_group_id=example_resource_group.id,
+    recurrence_type="Monthly",
+    recurrence_period_start="2020-08-18T00:00:00Z",
+    recurrence_period_end="2020-09-18T00:00:00Z",
+    delivery_info={
+        "storage_account_id": example_account.id,
+        "container_name": "examplecontainer",
+        "rootFolderPath": "/root/updated",
+    },
+    query={
+        "type": "Usage",
+        "timeFrame": "WeekToDate",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleResourceGroupExport = new azure.costmanagement.ResourceGroupExport("exampleResourceGroupExport", {
+    resourceGroupId: exampleResourceGroup.id,
+    recurrenceType: "Monthly",
+    recurrencePeriodStart: "2020-08-18T00:00:00Z",
+    recurrencePeriodEnd: "2020-09-18T00:00:00Z",
+    deliveryInfo: {
+        storageAccountId: exampleAccount.id,
+        containerName: "examplecontainer",
+        rootFolderPath: "/root/updated",
+    },
+    query: {
+        type: "Usage",
+        timeFrame: "WeekToDate",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ResourceGroupExport Resource {#create}
@@ -23,7 +188,7 @@ Manages an Azure Cost Management Export for a Resource Group.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/costmanagement/#ResourceGroupExport">ResourceGroupExport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>delivery_info=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>recurrence_period_end=None<span class="p">, </span>recurrence_period_start=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/costmanagement/#pulumi_azure.costmanagement.ResourceGroupExport">ResourceGroupExport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>delivery_info=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>recurrence_period_end=None<span class="p">, </span>recurrence_period_start=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

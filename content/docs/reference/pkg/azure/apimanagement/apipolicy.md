@@ -12,6 +12,50 @@ meta_desc: "Explore the ApiPolicy resource of the apimanagement module, includin
 
 Manages an API Management API Policy
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApi = pulumi.output(azure.apimanagement.getApi({
+    apiManagementName: "example-apim",
+    apiName: "my-api",
+    resourceGroupName: "search-service",
+}, { async: true }));
+const exampleApiPolicy = new azure.apimanagement.ApiPolicy("example", {
+    apiManagementName: exampleApi.apiManagementName,
+    apiName: exampleApi.name,
+    resourceGroupName: exampleApi.resourceGroupName,
+    xmlContent: `<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiPolicy Resource {#create}
@@ -23,7 +67,7 @@ Manages an API Management API Policy
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#ApiPolicy">ApiPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>xml_content=None<span class="p">, </span>xml_link=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiPolicy">ApiPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>xml_content=None<span class="p">, </span>xml_link=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

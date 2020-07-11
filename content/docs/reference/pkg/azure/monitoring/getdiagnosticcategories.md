@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := monitoring.GetDiagnosticCategories(ctx, &monitoring.GetDiagnosticCategoriesArgs{
+		_, err = monitoring.GetDiagnosticCategories(ctx, &monitoring.GetDiagnosticCategoriesArgs{
 			ResourceId: exampleKeyVault.Id,
 		}, nil)
 		if err != nil {

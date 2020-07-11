@@ -11,6 +11,7 @@ Explore the resources and functions of the mysql module in the Azure package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="activedirectoryadministrator" title="ActiveDirectoryAdministrator"><span class="symbol resource"></span>ActiveDirectoryAdministrator</a></li>
     <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
@@ -27,7 +28,7 @@ Explore the resources and functions of the mysql module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

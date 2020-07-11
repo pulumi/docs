@@ -87,7 +87,7 @@ func main() {
 			EventsOutOfOrderPolicy:             pulumi.String("Adjust"),
 			OutputErrorPolicy:                  pulumi.String("Drop"),
 			StreamingUnits:                     pulumi.Int(3),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"environment": pulumi.String("Example"),
 			},
 			TransformationQuery: pulumi.String(fmt.Sprintf("%v%v%v", "    SELECT *\n", "    INTO [YourOutputAlias]\n", "    FROM [YourInputAlias]\n")),
@@ -170,7 +170,7 @@ const exampleJob = new azure.streamanalytics.Job("exampleJob", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compatibility_level=None<span class="p">, </span>data_locale=None<span class="p">, </span>events_late_arrival_max_delay_in_seconds=None<span class="p">, </span>events_out_of_order_max_delay_in_seconds=None<span class="p">, </span>events_out_of_order_policy=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>output_error_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>streaming_units=None<span class="p">, </span>tags=None<span class="p">, </span>transformation_query=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compatibility_level=None<span class="p">, </span>data_locale=None<span class="p">, </span>events_late_arrival_max_delay_in_seconds=None<span class="p">, </span>events_out_of_order_max_delay_in_seconds=None<span class="p">, </span>events_out_of_order_policy=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>output_error_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>streaming_units=None<span class="p">, </span>tags=None<span class="p">, </span>transformation_query=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

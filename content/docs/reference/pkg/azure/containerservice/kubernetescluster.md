@@ -12,6 +12,162 @@ meta_desc: "Explore the KubernetesCluster resource of the containerservice modul
 
 Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKubernetesCluster = new Azure.ContainerService.KubernetesCluster("exampleKubernetesCluster", new Azure.ContainerService.KubernetesClusterArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            DnsPrefix = "exampleaks1",
+            DefaultNodePool = new Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolArgs
+            {
+                Name = "default",
+                NodeCount = 1,
+                VmSize = "Standard_D2_v2",
+            },
+            Identity = new Azure.ContainerService.Inputs.KubernetesClusterIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Tags = 
+            {
+                { "Environment", "Production" },
+            },
+        });
+        this.ClientCertificate = exampleKubernetesCluster.KubeConfigs.Apply(kubeConfigs => kubeConfigs[0].ClientCertificate);
+        this.KubeConfig = exampleKubernetesCluster.KubeConfigRaw;
+    }
+
+    [Output("clientCertificate")]
+    public Output<string> ClientCertificate { get; set; }
+    [Output("kubeConfig")]
+    public Output<string> KubeConfig { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKubernetesCluster, err := containerservice.NewKubernetesCluster(ctx, "exampleKubernetesCluster", &containerservice.KubernetesClusterArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			DnsPrefix:         pulumi.String("exampleaks1"),
+			DefaultNodePool: &containerservice.KubernetesClusterDefaultNodePoolArgs{
+				Name:      pulumi.String("default"),
+				NodeCount: pulumi.Int(1),
+				VmSize:    pulumi.String("Standard_D2_v2"),
+			},
+			Identity: &containerservice.KubernetesClusterIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("clientCertificate", exampleKubernetesCluster.KubeConfigs.ApplyT(func(kubeConfigs []containerservice.KubernetesClusterKubeConfig) (string, error) {
+			return kubeConfigs[0].ClientCertificate, nil
+		}).(pulumi.StringOutput))
+		ctx.Export("kubeConfig", exampleKubernetesCluster.KubeConfigRaw)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_kubernetes_cluster = azure.containerservice.KubernetesCluster("exampleKubernetesCluster",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    dns_prefix="exampleaks1",
+    default_node_pool={
+        "name": "default",
+        "node_count": 1,
+        "vm_size": "Standard_D2_v2",
+    },
+    identity={
+        "type": "SystemAssigned",
+    },
+    tags={
+        "Environment": "Production",
+    })
+pulumi.export("clientCertificate", example_kubernetes_cluster.kube_configs[0]["clientCertificate"])
+pulumi.export("kubeConfig", example_kubernetes_cluster.kube_config_raw)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKubernetesCluster = new azure.containerservice.KubernetesCluster("exampleKubernetesCluster", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    dnsPrefix: "exampleaks1",
+    defaultNodePool: {
+        name: "default",
+        nodeCount: 1,
+        vmSize: "Standard_D2_v2",
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    tags: {
+        Environment: "Production",
+    },
+});
+export const clientCertificate = exampleKubernetesCluster.kubeConfigs.apply(kubeConfigs => kubeConfigs[0].clientCertificate);
+export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KubernetesCluster Resource {#create}
@@ -23,7 +179,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>auto_scaler_profile=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>disk_encryption_set_id=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>sku_tier=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>auto_scaler_profile=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>disk_encryption_set_id=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>sku_tier=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

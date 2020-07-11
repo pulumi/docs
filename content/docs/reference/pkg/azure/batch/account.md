@@ -83,12 +83,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = batch.NewAccount(ctx, "exampleBatch/accountAccount", &batch.AccountArgs{
+		_, err = batch.NewAccount(ctx, "exampleBatch_accountAccount", &batch.AccountArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			Location:           exampleResourceGroup.Location,
 			PoolAllocationMode: pulumi.String("BatchService"),
 			StorageAccountId:   exampleAccount.ID(),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"env": pulumi.String("test"),
 			},
 		})
@@ -163,7 +163,7 @@ const exampleBatch_accountAccount = new azure.batch.Account("exampleBatch/accoun
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/batch/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_vault_reference=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_allocation_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/batch/#pulumi_azure.batch.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_vault_reference=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_allocation_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,6 +14,155 @@ Manages an Azure File Share Backup Policy within a Recovery Services vault.
 
 > **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = "Standard",
+        });
+        var policy = new Azure.Backup.PolicyFileShare("policy", new Azure.Backup.PolicyFileShareArgs
+        {
+            ResourceGroupName = rg.Name,
+            RecoveryVaultName = vault.Name,
+            Timezone = "UTC",
+            Backup = new Azure.Backup.Inputs.PolicyFileShareBackupArgs
+            {
+                Frequency = "Daily",
+                Time = "23:00",
+            },
+            RetentionDaily = new Azure.Backup.Inputs.PolicyFileShareRetentionDailyArgs
+            {
+                Count = 10,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = backup.NewPolicyFileShare(ctx, "policy", &backup.PolicyFileShareArgs{
+			ResourceGroupName: rg.Name,
+			RecoveryVaultName: vault.Name,
+			Timezone:          pulumi.String("UTC"),
+			Backup: &backup.PolicyFileShareBackupArgs{
+				Frequency: pulumi.String("Daily"),
+				Time:      pulumi.String("23:00"),
+			},
+			RetentionDaily: &backup.PolicyFileShareRetentionDailyArgs{
+				Count: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+policy = azure.backup.PolicyFileShare("policy",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    timezone="UTC",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    retention_daily={
+        "count": 10,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: "Standard",
+});
+const policy = new azure.backup.PolicyFileShare("policy", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    timezone: "UTC",
+    backup: {
+        frequency: "Daily",
+        time: "23:00",
+    },
+    retentionDaily: {
+        count: 10,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PolicyFileShare Resource {#create}
@@ -25,7 +174,7 @@ Manages an Azure File Share Backup Policy within a Recovery Services vault.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#PolicyFileShare">PolicyFileShare</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyFileShare">PolicyFileShare</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

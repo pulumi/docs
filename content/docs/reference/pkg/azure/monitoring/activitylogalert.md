@@ -12,6 +12,227 @@ meta_desc: "Explore the ActivityLogAlert resource of the monitoring module, incl
 
 Manages an Activity Log Alert within Azure Monitor.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainResourceGroup = new Azure.Core.ResourceGroup("mainResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var mainActionGroup = new Azure.Monitoring.ActionGroup("mainActionGroup", new Azure.Monitoring.ActionGroupArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            ShortName = "p0action",
+            WebhookReceivers = 
+            {
+                new Azure.Monitoring.Inputs.ActionGroupWebhookReceiverArgs
+                {
+                    Name = "callmyapi",
+                    ServiceUri = "http://example.com/alert",
+                },
+            },
+        });
+        var toMonitor = new Azure.Storage.Account("toMonitor", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            Location = mainResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "GRS",
+        });
+        var mainActivityLogAlert = new Azure.Monitoring.ActivityLogAlert("mainActivityLogAlert", new Azure.Monitoring.ActivityLogAlertArgs
+        {
+            ResourceGroupName = mainResourceGroup.Name,
+            Scopes = 
+            {
+                mainResourceGroup.Id,
+            },
+            Description = "This alert will monitor a specific storage account updates.",
+            Criteria = new Azure.Monitoring.Inputs.ActivityLogAlertCriteriaArgs
+            {
+                ResourceId = toMonitor.Id,
+                OperationName = "Microsoft.Storage/storageAccounts/write",
+                Category = "Recommendation",
+            },
+            Actions = 
+            {
+                new Azure.Monitoring.Inputs.ActivityLogAlertActionArgs
+                {
+                    ActionGroupId = mainActionGroup.Id,
+                    WebhookProperties = 
+                    {
+                        { "from", "source" },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		mainActionGroup, err := monitoring.NewActionGroup(ctx, "mainActionGroup", &monitoring.ActionGroupArgs{
+			ResourceGroupName: mainResourceGroup.Name,
+			ShortName:         pulumi.String("p0action"),
+			WebhookReceivers: monitoring.ActionGroupWebhookReceiverArray{
+				&monitoring.ActionGroupWebhookReceiverArgs{
+					Name:       pulumi.String("callmyapi"),
+					ServiceUri: pulumi.String("http://example.com/alert"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		toMonitor, err := storage.NewAccount(ctx, "toMonitor", &storage.AccountArgs{
+			ResourceGroupName:      mainResourceGroup.Name,
+			Location:               mainResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewActivityLogAlert(ctx, "mainActivityLogAlert", &monitoring.ActivityLogAlertArgs{
+			ResourceGroupName: mainResourceGroup.Name,
+			Scopes: pulumi.StringArray{
+				mainResourceGroup.ID(),
+			},
+			Description: pulumi.String("This alert will monitor a specific storage account updates."),
+			Criteria: &monitoring.ActivityLogAlertCriteriaArgs{
+				ResourceId:    toMonitor.ID(),
+				OperationName: pulumi.String("Microsoft.Storage/storageAccounts/write"),
+				Category:      pulumi.String("Recommendation"),
+			},
+			Actions: monitoring.ActivityLogAlertActionArray{
+				&monitoring.ActivityLogAlertActionArgs{
+					ActionGroupId: mainActionGroup.ID(),
+					WebhookProperties: pulumi.StringMap{
+						"from": pulumi.String("source"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US")
+main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
+    resource_group_name=main_resource_group.name,
+    short_name="p0action",
+    webhook_receivers=[{
+        "name": "callmyapi",
+        "service_uri": "http://example.com/alert",
+    }])
+to_monitor = azure.storage.Account("toMonitor",
+    resource_group_name=main_resource_group.name,
+    location=main_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS")
+main_activity_log_alert = azure.monitoring.ActivityLogAlert("mainActivityLogAlert",
+    resource_group_name=main_resource_group.name,
+    scopes=[main_resource_group.id],
+    description="This alert will monitor a specific storage account updates.",
+    criteria={
+        "resource_id": to_monitor.id,
+        "operationName": "Microsoft.Storage/storageAccounts/write",
+        "category": "Recommendation",
+    },
+    actions=[{
+        "action_group_id": main_action_group.id,
+        "webhookProperties": {
+            "from": "source",
+        },
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US"});
+const mainActionGroup = new azure.monitoring.ActionGroup("mainActionGroup", {
+    resourceGroupName: mainResourceGroup.name,
+    shortName: "p0action",
+    webhookReceivers: [{
+        name: "callmyapi",
+        serviceUri: "http://example.com/alert",
+    }],
+});
+const toMonitor = new azure.storage.Account("toMonitor", {
+    resourceGroupName: mainResourceGroup.name,
+    location: mainResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("mainActivityLogAlert", {
+    resourceGroupName: mainResourceGroup.name,
+    scopes: [mainResourceGroup.id],
+    description: "This alert will monitor a specific storage account updates.",
+    criteria: {
+        resourceId: toMonitor.id,
+        operationName: "Microsoft.Storage/storageAccounts/write",
+        category: "Recommendation",
+    },
+    actions: [{
+        actionGroupId: mainActionGroup.id,
+        webhookProperties: {
+            from: "source",
+        },
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActivityLogAlert Resource {#create}
@@ -23,7 +244,7 @@ Manages an Activity Log Alert within Azure Monitor.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#ActivityLogAlert">ActivityLogAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>criteria=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActivityLogAlert">ActivityLogAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>criteria=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

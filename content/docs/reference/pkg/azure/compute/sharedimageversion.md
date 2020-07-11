@@ -12,6 +12,163 @@ meta_desc: "Explore the SharedImageVersion resource of the compute module, inclu
 
 Manages a Version of a Shared Image within a Shared Image Gallery.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var existingImage = Output.Create(Azure.Compute.GetImage.InvokeAsync(new Azure.Compute.GetImageArgs
+        {
+            Name = "search-api",
+            ResourceGroupName = "packerimages",
+        }));
+        var existingSharedImage = Output.Create(Azure.Compute.GetSharedImage.InvokeAsync(new Azure.Compute.GetSharedImageArgs
+        {
+            Name = "existing-image",
+            GalleryName = "existing_gallery",
+            ResourceGroupName = "existing-resources",
+        }));
+        var example = new Azure.Compute.SharedImageVersion("example", new Azure.Compute.SharedImageVersionArgs
+        {
+            GalleryName = existingSharedImage.Apply(existingSharedImage => existingSharedImage.GalleryName),
+            ImageName = existingSharedImage.Apply(existingSharedImage => existingSharedImage.Name),
+            ResourceGroupName = existingSharedImage.Apply(existingSharedImage => existingSharedImage.ResourceGroupName),
+            Location = existingSharedImage.Apply(existingSharedImage => existingSharedImage.Location),
+            ManagedImageId = existingImage.Apply(existingImage => existingImage.Id),
+            TargetRegions = 
+            {
+                new Azure.Compute.Inputs.SharedImageVersionTargetRegionArgs
+                {
+                    Name = existingSharedImage.Apply(existingSharedImage => existingSharedImage.Location),
+                    RegionalReplicaCount = 5,
+                    StorageAccountType = "Standard_LRS",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "search-api"
+		existingImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Name:              &opt0,
+			ResourceGroupName: "packerimages",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		existingSharedImage, err := compute.LookupSharedImage(ctx, &compute.LookupSharedImageArgs{
+			Name:              "existing-image",
+			GalleryName:       "existing_gallery",
+			ResourceGroupName: "existing-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSharedImageVersion(ctx, "example", &compute.SharedImageVersionArgs{
+			GalleryName:       pulumi.String(existingSharedImage.GalleryName),
+			ImageName:         pulumi.String(existingSharedImage.Name),
+			ResourceGroupName: pulumi.String(existingSharedImage.ResourceGroupName),
+			Location:          pulumi.String(existingSharedImage.Location),
+			ManagedImageId:    pulumi.String(existingImage.Id),
+			TargetRegions: compute.SharedImageVersionTargetRegionArray{
+				&compute.SharedImageVersionTargetRegionArgs{
+					Name:                 pulumi.String(existingSharedImage.Location),
+					RegionalReplicaCount: pulumi.Int(5),
+					StorageAccountType:   pulumi.String("Standard_LRS"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+existing_image = azure.compute.get_image(name="search-api",
+    resource_group_name="packerimages")
+existing_shared_image = azure.compute.get_shared_image(name="existing-image",
+    gallery_name="existing_gallery",
+    resource_group_name="existing-resources")
+example = azure.compute.SharedImageVersion("example",
+    gallery_name=existing_shared_image.gallery_name,
+    image_name=existing_shared_image.name,
+    resource_group_name=existing_shared_image.resource_group_name,
+    location=existing_shared_image.location,
+    managed_image_id=existing_image.id,
+    target_regions=[{
+        "name": existing_shared_image.location,
+        "regionalReplicaCount": 5,
+        "storage_account_type": "Standard_LRS",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const existingImage = azure.compute.getImage({
+    name: "search-api",
+    resourceGroupName: "packerimages",
+});
+const existingSharedImage = azure.compute.getSharedImage({
+    name: "existing-image",
+    galleryName: "existing_gallery",
+    resourceGroupName: "existing-resources",
+});
+const example = new azure.compute.SharedImageVersion("example", {
+    galleryName: existingSharedImage.then(existingSharedImage => existingSharedImage.galleryName),
+    imageName: existingSharedImage.then(existingSharedImage => existingSharedImage.name),
+    resourceGroupName: existingSharedImage.then(existingSharedImage => existingSharedImage.resourceGroupName),
+    location: existingSharedImage.then(existingSharedImage => existingSharedImage.location),
+    managedImageId: existingImage.then(existingImage => existingImage.id),
+    targetRegions: [{
+        name: existingSharedImage.then(existingSharedImage => existingSharedImage.location),
+        regionalReplicaCount: 5,
+        storageAccountType: "Standard_LRS",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedImageVersion Resource {#create}
@@ -23,7 +180,7 @@ Manages a Version of a Shared Image within a Shared Image Gallery.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#SharedImageVersion">SharedImageVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>exclude_from_latest=None<span class="p">, </span>gallery_name=None<span class="p">, </span>image_name=None<span class="p">, </span>location=None<span class="p">, </span>managed_image_id=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_regions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.SharedImageVersion">SharedImageVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>exclude_from_latest=None<span class="p">, </span>gallery_name=None<span class="p">, </span>image_name=None<span class="p">, </span>location=None<span class="p">, </span>managed_image_id=None<span class="p">, </span>name=None<span class="p">, </span>os_disk_snapshot_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_regions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,17 +376,6 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span id="managedimageid_csharp">
-<a href="#managedimageid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -274,6 +420,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managedimageid_csharp">
+<a href="#managedimageid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -281,6 +438,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisksnapshotid_csharp">
+<a href="#osdisksnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,17 +489,6 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="managedimageid_go">
-<a href="#managedimageid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -380,6 +537,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managedimageid_go">
+<a href="#managedimageid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -387,6 +555,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisksnapshotid_go">
+<a href="#osdisksnapshotid_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,17 +606,6 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="managedimageid_nodejs">
-<a href="#managedimageid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -486,6 +654,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managedimageid_nodejs">
+<a href="#managedimageid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -493,6 +672,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisksnapshotid_nodejs">
+<a href="#osdisksnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -533,17 +723,6 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="managed_image_id_python">
-<a href="#managed_image_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>image_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -592,6 +771,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managed_image_id_python">
+<a href="#managed_image_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>image_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -599,6 +789,17 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_disk_snapshot_id_python">
+<a href="#os_disk_snapshot_id_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>snapshot_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -710,7 +911,7 @@ Get an existing SharedImageVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>exclude_from_latest=None<span class="p">, </span>gallery_name=None<span class="p">, </span>image_name=None<span class="p">, </span>location=None<span class="p">, </span>managed_image_id=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_regions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>exclude_from_latest=None<span class="p">, </span>gallery_name=None<span class="p">, </span>image_name=None<span class="p">, </span>location=None<span class="p">, </span>managed_image_id=None<span class="p">, </span>name=None<span class="p">, </span>os_disk_snapshot_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_regions=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -876,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -888,6 +1089,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_osdisksnapshotid_csharp">
+<a href="#state_osdisksnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -982,7 +1194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,6 +1206,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_osdisksnapshotid_go">
+<a href="#state_osdisksnapshotid_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1088,7 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1100,6 +1323,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_osdisksnapshotid_nodejs">
+<a href="#state_osdisksnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1194,7 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Managed Image or Virtual Machine ID which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,6 +1440,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_os_disk_snapshot_id_python">
+<a href="#state_os_disk_snapshot_id_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>snapshot_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the OS disk snapshot which should be used for this Shared Image Version. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

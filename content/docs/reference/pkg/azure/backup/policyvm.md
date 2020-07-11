@@ -12,6 +12,280 @@ meta_desc: "Explore the PolicyVM resource of the backup module, including exampl
 
 Manages an Azure Backup VM Backup Policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleVault = new Azure.RecoveryServices.Vault("exampleVault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var examplePolicyVM = new Azure.Backup.PolicyVM("examplePolicyVM", new Azure.Backup.PolicyVMArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            RecoveryVaultName = exampleVault.Name,
+            Timezone = "UTC",
+            Backup = new Azure.Backup.Inputs.PolicyVMBackupArgs
+            {
+                Frequency = "Daily",
+                Time = "23:00",
+            },
+            RetentionDaily = new Azure.Backup.Inputs.PolicyVMRetentionDailyArgs
+            {
+                Count = 10,
+            },
+            RetentionWeekly = new Azure.Backup.Inputs.PolicyVMRetentionWeeklyArgs
+            {
+                Count = 42,
+                Weekdays = 
+                {
+                    "Sunday",
+                    "Wednesday",
+                    "Friday",
+                    "Saturday",
+                },
+            },
+            RetentionMonthly = new Azure.Backup.Inputs.PolicyVMRetentionMonthlyArgs
+            {
+                Count = 7,
+                Weekdays = 
+                {
+                    "Sunday",
+                    "Wednesday",
+                },
+                Weeks = 
+                {
+                    "First",
+                    "Last",
+                },
+            },
+            RetentionYearly = new Azure.Backup.Inputs.PolicyVMRetentionYearlyArgs
+            {
+                Count = 77,
+                Weekdays = 
+                {
+                    "Sunday",
+                },
+                Weeks = 
+                {
+                    "Last",
+                },
+                Months = 
+                {
+                    "January",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVault, err := recoveryservices.NewVault(ctx, "exampleVault", &recoveryservices.VaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = backup.NewPolicyVM(ctx, "examplePolicyVM", &backup.PolicyVMArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			RecoveryVaultName: exampleVault.Name,
+			Timezone:          pulumi.String("UTC"),
+			Backup: &backup.PolicyVMBackupArgs{
+				Frequency: pulumi.String("Daily"),
+				Time:      pulumi.String("23:00"),
+			},
+			RetentionDaily: &backup.PolicyVMRetentionDailyArgs{
+				Count: pulumi.Int(10),
+			},
+			RetentionWeekly: &backup.PolicyVMRetentionWeeklyArgs{
+				Count: pulumi.Int(42),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+					pulumi.String("Wednesday"),
+					pulumi.String("Friday"),
+					pulumi.String("Saturday"),
+				},
+			},
+			RetentionMonthly: &backup.PolicyVMRetentionMonthlyArgs{
+				Count: pulumi.Int(7),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+					pulumi.String("Wednesday"),
+				},
+				Weeks: pulumi.StringArray{
+					pulumi.String("First"),
+					pulumi.String("Last"),
+				},
+			},
+			RetentionYearly: &backup.PolicyVMRetentionYearlyArgs{
+				Count: pulumi.Int(77),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+				},
+				Weeks: pulumi.StringArray{
+					pulumi.String("Last"),
+				},
+				Months: pulumi.StringArray{
+					pulumi.String("January"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_vault = azure.recoveryservices.Vault("exampleVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_policy_vm = azure.backup.PolicyVM("examplePolicyVM",
+    resource_group_name=example_resource_group.name,
+    recovery_vault_name=example_vault.name,
+    timezone="UTC",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    retention_daily={
+        "count": 10,
+    },
+    retention_weekly={
+        "count": 42,
+        "weekdays": [
+            "Sunday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+        ],
+    },
+    retention_monthly={
+        "count": 7,
+        "weekdays": [
+            "Sunday",
+            "Wednesday",
+        ],
+        "weeks": [
+            "First",
+            "Last",
+        ],
+    },
+    retention_yearly={
+        "count": 77,
+        "weekdays": ["Sunday"],
+        "weeks": ["Last"],
+        "months": ["January"],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVault = new azure.recoveryservices.Vault("exampleVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+});
+const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
+    resourceGroupName: exampleResourceGroup.name,
+    recoveryVaultName: exampleVault.name,
+    timezone: "UTC",
+    backup: {
+        frequency: "Daily",
+        time: "23:00",
+    },
+    retentionDaily: {
+        count: 10,
+    },
+    retentionWeekly: {
+        count: 42,
+        weekdays: [
+            "Sunday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+        ],
+    },
+    retentionMonthly: {
+        count: 7,
+        weekdays: [
+            "Sunday",
+            "Wednesday",
+        ],
+        weeks: [
+            "First",
+            "Last",
+        ],
+    },
+    retentionYearly: {
+        count: 77,
+        weekdays: ["Sunday"],
+        weeks: ["Last"],
+        months: ["January"],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PolicyVM Resource {#create}
@@ -23,7 +297,7 @@ Manages an Azure Backup VM Backup Policy.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#PolicyVM">PolicyVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

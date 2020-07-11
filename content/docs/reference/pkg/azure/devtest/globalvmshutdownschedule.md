@@ -14,6 +14,320 @@ Manages automated shutdown schedules for Azure VMs that are not within an Azure 
 this resource applies only to standard VMs, not DevTest Lab VMs. To manage automated shutdown schedules for DevTest Lab VMs, reference the
 `azure.devtest.Schedule` resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.2.0/24",
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "testconfiguration1",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleLinuxVirtualMachine = new Azure.Compute.LinuxVirtualMachine("exampleLinuxVirtualMachine", new Azure.Compute.LinuxVirtualMachineArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            NetworkInterfaceIds = 
+            {
+                exampleNetworkInterface.Id,
+            },
+            Size = "Standard_B2s",
+            SourceImageReference = new Azure.Compute.Inputs.LinuxVirtualMachineSourceImageReferenceArgs
+            {
+                Publisher = "Canonical",
+                Offer = "UbuntuServer",
+                Sku = "16.04-LTS",
+                Version = "latest",
+            },
+            OsDisk = new Azure.Compute.Inputs.LinuxVirtualMachineOsDiskArgs
+            {
+                Name = "myosdisk-%d",
+                Caching = "ReadWrite",
+                ManagedDiskType = "Standard_LRS",
+            },
+            AdminUsername = "testadmin",
+            AdminPassword = "Password1234!",
+            DisablePasswordAuthentication = false,
+        });
+        var exampleGlobalVMShutdownSchedule = new Azure.DevTest.GlobalVMShutdownSchedule("exampleGlobalVMShutdownSchedule", new Azure.DevTest.GlobalVMShutdownScheduleArgs
+        {
+            VirtualMachineId = azurerm_virtual_machine.Example.Id,
+            Location = exampleResourceGroup.Location,
+            Enabled = true,
+            DailyRecurrenceTime = "1100",
+            Timezone = "Pacific Standard Time",
+            NotificationSettings = new Azure.DevTest.Inputs.GlobalVMShutdownScheduleNotificationSettingsArgs
+            {
+                Enabled = true,
+                TimeInMinutes = 60,
+                WebhookUrl = "https://sample-webhook-url.example.com",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("eastus"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("testconfiguration1"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewLinuxVirtualMachine(ctx, "exampleLinuxVirtualMachine", &compute.LinuxVirtualMachineArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			NetworkInterfaceIds: pulumi.StringArray{
+				exampleNetworkInterface.ID(),
+			},
+			Size: pulumi.String("Standard_B2s"),
+			SourceImageReference: &compute.LinuxVirtualMachineSourceImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+			OsDisk: &compute.LinuxVirtualMachineOsDiskArgs{
+				Name:            pulumi.String(fmt.Sprintf("%v%v%v", "myosdisk-", "%", "d")),
+				Caching:         pulumi.String("ReadWrite"),
+				ManagedDiskType: pulumi.String("Standard_LRS"),
+			},
+			AdminUsername:                 pulumi.String("testadmin"),
+			AdminPassword:                 pulumi.String("Password1234!"),
+			DisablePasswordAuthentication: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = devtest.NewGlobalVMShutdownSchedule(ctx, "exampleGlobalVMShutdownSchedule", &devtest.GlobalVMShutdownScheduleArgs{
+			VirtualMachineId:    pulumi.String(azurerm_virtual_machine.Example.Id),
+			Location:            exampleResourceGroup.Location,
+			Enabled:             pulumi.Bool(true),
+			DailyRecurrenceTime: pulumi.String("1100"),
+			Timezone:            pulumi.String("Pacific Standard Time"),
+			NotificationSettings: &devtest.GlobalVMShutdownScheduleNotificationSettingsArgs{
+				Enabled:       pulumi.Bool(true),
+				TimeInMinutes: pulumi.Int(60),
+				WebhookUrl:    pulumi.String("https://sample-webhook-url.example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "testconfiguration1",
+        "subnet_id": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_linux_virtual_machine = azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    network_interface_ids=[example_network_interface.id],
+    size="Standard_B2s",
+    source_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    os_disk={
+        "name": "myosdisk-%d",
+        "caching": "ReadWrite",
+        "managedDiskType": "Standard_LRS",
+    },
+    admin_username="testadmin",
+    admin_password="Password1234!",
+    disable_password_authentication=False)
+example_global_vm_shutdown_schedule = azure.devtest.GlobalVMShutdownSchedule("exampleGlobalVMShutdownSchedule",
+    virtual_machine_id=azurerm_virtual_machine["example"]["id"],
+    location=example_resource_group.location,
+    enabled=True,
+    daily_recurrence_time="1100",
+    timezone="Pacific Standard Time",
+    notification_settings={
+        "enabled": True,
+        "timeInMinutes": "60",
+        "webhookUrl": "https://sample-webhook-url.example.com",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    size: "Standard_B2s",
+    sourceImageReference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    osDisk: {
+        name: `myosdisk-%d`,
+        caching: "ReadWrite",
+        managedDiskType: "Standard_LRS",
+    },
+    adminUsername: "testadmin",
+    adminPassword: "Password1234!",
+    disablePasswordAuthentication: false,
+});
+const exampleGlobalVMShutdownSchedule = new azure.devtest.GlobalVMShutdownSchedule("exampleGlobalVMShutdownSchedule", {
+    virtualMachineId: azurerm_virtual_machine.example.id,
+    location: exampleResourceGroup.location,
+    enabled: true,
+    dailyRecurrenceTime: "1100",
+    timezone: "Pacific Standard Time",
+    notificationSettings: {
+        enabled: true,
+        timeInMinutes: "60",
+        webhookUrl: "https://sample-webhook-url.example.com",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GlobalVMShutdownSchedule Resource {#create}
@@ -25,7 +339,7 @@ this resource applies only to standard VMs, not DevTest Lab VMs. To manage autom
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#GlobalVMShutdownSchedule">GlobalVMShutdownSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>daily_recurrence_time=None<span class="p">, </span>enabled=None<span class="p">, </span>location=None<span class="p">, </span>notification_settings=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.GlobalVMShutdownSchedule">GlobalVMShutdownSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>daily_recurrence_time=None<span class="p">, </span>enabled=None<span class="p">, </span>location=None<span class="p">, </span>notification_settings=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

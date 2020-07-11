@@ -14,6 +14,115 @@ Manages a NetApp Account.
 
 > **NOTE:** Azure allows only one active directory can be joined to a single subscription at a time for NetApp Account.
 
+## NetApp Account Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.netapp.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    activeDirectory: {
+        username: "aduser",
+        password: "aduserpwd",
+        smbServerName: "SMBSERVER",
+        dnsServers: ["1.2.3.4"],
+        domain: "westcentralus.com",
+        organizationalUnit: "OU=FirstLevel",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.netapp.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    active_directory={
+        "username": "aduser",
+        "password": "aduserpwd",
+        "smbServerName": "SMBSERVER",
+        "dns_servers": ["1.2.3.4"],
+        "domain": "westcentralus.com",
+        "organizationalUnit": "OU=FirstLevel",
+    })
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.NetApp.Account("exampleAccount", new Azure.NetApp.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ActiveDirectory = new Azure.NetApp.Inputs.AccountActiveDirectoryArgs
+            {
+                Username = "aduser",
+                Password = "aduserpwd",
+                SmbServerName = "SMBSERVER",
+                DnsServers = 
+                {
+                    "1.2.3.4",
+                },
+                Domain = "westcentralus.com",
+                OrganizationalUnit = "OU=FirstLevel",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = netapp.NewAccount(ctx, "exampleAccount", &netapp.AccountArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ActiveDirectory: &netapp.AccountActiveDirectoryArgs{
+				Username:      pulumi.String("aduser"),
+				Password:      pulumi.String("aduserpwd"),
+				SmbServerName: pulumi.String("SMBSERVER"),
+				DnsServers: pulumi.StringArray{
+					pulumi.String("1.2.3.4"),
+				},
+				Domain:             pulumi.String("westcentralus.com"),
+				OrganizationalUnit: pulumi.String("OU=FirstLevel"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a Account Resource {#create}
@@ -25,7 +134,7 @@ Manages a NetApp Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_directory=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#pulumi_azure.netapp.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_directory=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

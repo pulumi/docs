@@ -12,6 +12,127 @@ meta_desc: "Explore the SqlContainer resource of the cosmosdb module, including 
 
 Manages a SQL Container within a Cosmos DB Account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.CosmosDB.SqlContainer("example", new Azure.CosmosDB.SqlContainerArgs
+        {
+            ResourceGroupName = azurerm_cosmosdb_account.Example.Resource_group_name,
+            AccountName = azurerm_cosmosdb_account.Example.Name,
+            DatabaseName = azurerm_cosmosdb_sql_database.Example.Name,
+            PartitionKeyPath = "/definition/id",
+            Throughput = 400,
+            UniqueKeys = 
+            {
+                new Azure.CosmosDB.Inputs.SqlContainerUniqueKeyArgs
+                {
+                    Paths = 
+                    {
+                        "/definition/idlong",
+                        "/definition/idshort",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cosmosdb.NewSqlContainer(ctx, "example", &cosmosdb.SqlContainerArgs{
+			ResourceGroupName: pulumi.String(azurerm_cosmosdb_account.Example.Resource_group_name),
+			AccountName:       pulumi.String(azurerm_cosmosdb_account.Example.Name),
+			DatabaseName:      pulumi.String(azurerm_cosmosdb_sql_database.Example.Name),
+			PartitionKeyPath:  pulumi.String("/definition/id"),
+			Throughput:        pulumi.Int(400),
+			UniqueKeys: cosmosdb.SqlContainerUniqueKeyArray{
+				&cosmosdb.SqlContainerUniqueKeyArgs{
+					Paths: pulumi.StringArray{
+						pulumi.String("/definition/idlong"),
+						pulumi.String("/definition/idshort"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.cosmosdb.SqlContainer("example",
+    resource_group_name=azurerm_cosmosdb_account["example"]["resource_group_name"],
+    account_name=azurerm_cosmosdb_account["example"]["name"],
+    database_name=azurerm_cosmosdb_sql_database["example"]["name"],
+    partition_key_path="/definition/id",
+    throughput=400,
+    unique_keys=[{
+        "paths": [
+            "/definition/idlong",
+            "/definition/idshort",
+        ],
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.cosmosdb.SqlContainer("example", {
+    resourceGroupName: azurerm_cosmosdb_account.example.resource_group_name,
+    accountName: azurerm_cosmosdb_account.example.name,
+    databaseName: azurerm_cosmosdb_sql_database.example.name,
+    partitionKeyPath: "/definition/id",
+    throughput: 400,
+    uniqueKeys: [{
+        paths: [
+            "/definition/idlong",
+            "/definition/idshort",
+        ],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlContainer Resource {#create}
@@ -23,7 +144,7 @@ Manages a SQL Container within a Cosmos DB Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#SqlContainer">SqlContainer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl=None<span class="p">, </span>name=None<span class="p">, </span>partition_key_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>unique_keys=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.SqlContainer">SqlContainer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl=None<span class="p">, </span>name=None<span class="p">, </span>partition_key_path=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>unique_keys=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

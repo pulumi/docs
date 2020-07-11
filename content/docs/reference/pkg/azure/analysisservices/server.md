@@ -12,6 +12,153 @@ meta_desc: "Explore the Server resource of the analysisservices module, includin
 
 Manages an Analysis Services Server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var server = new Azure.AnalysisServices.Server("server", new Azure.AnalysisServices.ServerArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = rg.Name,
+            Sku = "S0",
+            AdminUsers = 
+            {
+                "myuser@domain.tld",
+            },
+            EnablePowerBiService = true,
+            Ipv4FirewallRules = 
+            {
+                new Azure.AnalysisServices.Inputs.ServerIpv4FirewallRuleArgs
+                {
+                    Name = "myRule1",
+                    RangeStart = "210.117.252.0",
+                    RangeEnd = "210.117.252.255",
+                },
+            },
+            Tags = 
+            {
+                { "abc", "123" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/analysisservices"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = analysisservices.NewServer(ctx, "server", &analysisservices.ServerArgs{
+			Location:          pulumi.String("northeurope"),
+			ResourceGroupName: rg.Name,
+			Sku:               pulumi.String("S0"),
+			AdminUsers: pulumi.StringArray{
+				pulumi.String("myuser@domain.tld"),
+			},
+			EnablePowerBiService: pulumi.Bool(true),
+			Ipv4FirewallRules: analysisservices.ServerIpv4FirewallRuleArray{
+				&analysisservices.ServerIpv4FirewallRuleArgs{
+					Name:       pulumi.String("myRule1"),
+					RangeStart: pulumi.String("210.117.252.0"),
+					RangeEnd:   pulumi.String("210.117.252.255"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"abc": pulumi.String("123"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="northeurope")
+server = azure.analysisservices.Server("server",
+    location="northeurope",
+    resource_group_name=rg.name,
+    sku="S0",
+    admin_users=["myuser@domain.tld"],
+    enable_power_bi_service=True,
+    ipv4_firewall_rules=[{
+        "name": "myRule1",
+        "rangeStart": "210.117.252.0",
+        "rangeEnd": "210.117.252.255",
+    }],
+    tags={
+        "abc": 123,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
+const server = new azure.analysisservices.Server("server", {
+    location: "northeurope",
+    resourceGroupName: rg.name,
+    sku: "S0",
+    adminUsers: ["myuser@domain.tld"],
+    enablePowerBiService: true,
+    ipv4FirewallRules: [{
+        name: "myRule1",
+        rangeStart: "210.117.252.0",
+        rangeEnd: "210.117.252.255",
+    }],
+    tags: {
+        abc: 123,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}
@@ -23,7 +170,7 @@ Manages an Analysis Services Server.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/analysisservices/#Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_users=None<span class="p">, </span>backup_blob_container_uri=None<span class="p">, </span>enable_power_bi_service=None<span class="p">, </span>ipv4_firewall_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>querypool_connection_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/analysisservices/#pulumi_azure.analysisservices.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_users=None<span class="p">, </span>backup_blob_container_uri=None<span class="p">, </span>enable_power_bi_service=None<span class="p">, </span>ipv4_firewall_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>querypool_connection_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

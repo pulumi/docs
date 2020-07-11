@@ -91,7 +91,7 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"source": pulumi.String("example"),
 			},
 		})
@@ -204,6 +204,207 @@ const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSu
 
 {{% /example %}}
 
+### Correlation Filter)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Tags = 
+            {
+                { "source", "example" },
+            },
+        });
+        var exampleTopic = new Azure.ServiceBus.Topic("exampleTopic", new Azure.ServiceBus.TopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            EnablePartitioning = true,
+        });
+        var exampleSubscription = new Azure.ServiceBus.Subscription("exampleSubscription", new Azure.ServiceBus.SubscriptionArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            MaxDeliveryCount = 1,
+        });
+        var exampleSubscriptionRule = new Azure.ServiceBus.SubscriptionRule("exampleSubscriptionRule", new Azure.ServiceBus.SubscriptionRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            SubscriptionName = exampleSubscription.Name,
+            FilterType = "CorrelationFilter",
+            CorrelationFilter = new Azure.ServiceBus.Inputs.SubscriptionRuleCorrelationFilterArgs
+            {
+                CorrelationId = "high",
+                Label = "red",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := servicebus.NewNamespace(ctx, "exampleNamespace", &servicebus.NamespaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+			Tags: pulumi.StringMap{
+				"source": pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleTopic, err := servicebus.NewTopic(ctx, "exampleTopic", &servicebus.TopicArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			NamespaceName:      exampleNamespace.Name,
+			EnablePartitioning: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubscription, err := servicebus.NewSubscription(ctx, "exampleSubscription", &servicebus.SubscriptionArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			NamespaceName:     exampleNamespace.Name,
+			TopicName:         exampleTopic.Name,
+			MaxDeliveryCount:  pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = servicebus.NewSubscriptionRule(ctx, "exampleSubscriptionRule", &servicebus.SubscriptionRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			NamespaceName:     exampleNamespace.Name,
+			TopicName:         exampleTopic.Name,
+			SubscriptionName:  exampleSubscription.Name,
+			FilterType:        pulumi.String("CorrelationFilter"),
+			CorrelationFilter: &servicebus.SubscriptionRuleCorrelationFilterArgs{
+				CorrelationId: pulumi.String("high"),
+				Label:         pulumi.String("red"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_subscription = azure.servicebus.Subscription("exampleSubscription",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    max_delivery_count=1)
+example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscriptionRule",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    subscription_name=example_subscription.name,
+    filter_type="CorrelationFilter",
+    correlation_filter={
+        "correlationId": "high",
+        "label": "red",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleSubscription = new azure.servicebus.Subscription("exampleSubscription", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    maxDeliveryCount: 1,
+});
+const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSubscriptionRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    subscriptionName: exampleSubscription.name,
+    filterType: "CorrelationFilter",
+    correlationFilter: {
+        correlationId: "high",
+        label: "red",
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.SubscriptionRule has been deprecated in favor of azure.servicebus.SubscriptionRule{{% /md %}}</p>
 
@@ -217,7 +418,7 @@ const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#SubscriptionRule">SubscriptionRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>correlation_filter=None<span class="p">, </span>filter_type=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sql_filter=None<span class="p">, </span>subscription_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.SubscriptionRule">SubscriptionRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>correlation_filter=None<span class="p">, </span>filter_type=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sql_filter=None<span class="p">, </span>subscription_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

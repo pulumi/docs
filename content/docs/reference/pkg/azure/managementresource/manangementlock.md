@@ -56,7 +56,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = management.NewLock(ctx, "subscription-level", &management.LockArgs{
+		_, err = management.NewLock(ctx, "subscription_level", &management.LockArgs{
 			Scope:     pulumi.String(current.Id),
 			LockLevel: pulumi.String("CanNotDelete"),
 			Notes:     pulumi.String("Items can't be deleted in this subscription!"),
@@ -163,7 +163,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = management.NewLock(ctx, "public-ip", &management.LockArgs{
+		_, err = management.NewLock(ctx, "public_ip", &management.LockArgs{
 			Scope:     examplePublicIp.ID(),
 			LockLevel: pulumi.String("CanNotDelete"),
 			Notes:     pulumi.String("Locked because it's needed by a third-party"),
@@ -232,7 +232,7 @@ const public_ip = new azure.management.Lock("public-ip", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managementresource/#ManangementLock">ManangementLock</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lock_level=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managementresource/#pulumi_azure.managementresource.ManangementLock">ManangementLock</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lock_level=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

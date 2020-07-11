@@ -12,6 +12,315 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 
 Manages an Azure Storage Account Management Policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westus",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            AccountKind = "BlobStorage",
+        });
+        var exampleManagementPolicy = new Azure.Storage.ManagementPolicy("exampleManagementPolicy", new Azure.Storage.ManagementPolicyArgs
+        {
+            StorageAccountId = exampleAccount.Id,
+            Rules = 
+            {
+                new Azure.Storage.Inputs.ManagementPolicyRuleArgs
+                {
+                    Name = "rule1",
+                    Enabled = true,
+                    Filters = new Azure.Storage.Inputs.ManagementPolicyRuleFiltersArgs
+                    {
+                        PrefixMatches = 
+                        {
+                            "container1/prefix1",
+                        },
+                        BlobTypes = 
+                        {
+                            "blockBlob",
+                        },
+                    },
+                    Actions = new Azure.Storage.Inputs.ManagementPolicyRuleActionsArgs
+                    {
+                        BaseBlob = new Azure.Storage.Inputs.ManagementPolicyRuleActionsBaseBlobArgs
+                        {
+                            TierToCoolAfterDaysSinceModificationGreaterThan = 10,
+                            TierToArchiveAfterDaysSinceModificationGreaterThan = 50,
+                            DeleteAfterDaysSinceModificationGreaterThan = 100,
+                        },
+                        Snapshot = new Azure.Storage.Inputs.ManagementPolicyRuleActionsSnapshotArgs
+                        {
+                            DeleteAfterDaysSinceCreationGreaterThan = 30,
+                        },
+                    },
+                },
+                new Azure.Storage.Inputs.ManagementPolicyRuleArgs
+                {
+                    Name = "rule2",
+                    Enabled = false,
+                    Filters = new Azure.Storage.Inputs.ManagementPolicyRuleFiltersArgs
+                    {
+                        PrefixMatches = 
+                        {
+                            "container2/prefix1",
+                            "container2/prefix2",
+                        },
+                        BlobTypes = 
+                        {
+                            "blockBlob",
+                        },
+                    },
+                    Actions = new Azure.Storage.Inputs.ManagementPolicyRuleActionsArgs
+                    {
+                        BaseBlob = new Azure.Storage.Inputs.ManagementPolicyRuleActionsBaseBlobArgs
+                        {
+                            TierToCoolAfterDaysSinceModificationGreaterThan = 11,
+                            TierToArchiveAfterDaysSinceModificationGreaterThan = 51,
+                            DeleteAfterDaysSinceModificationGreaterThan = 101,
+                        },
+                        Snapshot = new Azure.Storage.Inputs.ManagementPolicyRuleActionsSnapshotArgs
+                        {
+                            DeleteAfterDaysSinceCreationGreaterThan = 31,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("westus"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			AccountKind:            pulumi.String("BlobStorage"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewManagementPolicy(ctx, "exampleManagementPolicy", &storage.ManagementPolicyArgs{
+			StorageAccountId: exampleAccount.ID(),
+			Rules: storage.ManagementPolicyRuleArray{
+				&storage.ManagementPolicyRuleArgs{
+					Name:    pulumi.String("rule1"),
+					Enabled: pulumi.Bool(true),
+					Filters: &storage.ManagementPolicyRuleFiltersArgs{
+						PrefixMatches: pulumi.StringArray{
+							pulumi.String("container1/prefix1"),
+						},
+						BlobTypes: pulumi.StringArray{
+							pulumi.String("blockBlob"),
+						},
+					},
+					Actions: &storage.ManagementPolicyRuleActionsArgs{
+						BaseBlob: &storage.ManagementPolicyRuleActionsBaseBlobArgs{
+							TierToCoolAfterDaysSinceModificationGreaterThan:    pulumi.Int(10),
+							TierToArchiveAfterDaysSinceModificationGreaterThan: pulumi.Int(50),
+							DeleteAfterDaysSinceModificationGreaterThan:        pulumi.Int(100),
+						},
+						Snapshot: &storage.ManagementPolicyRuleActionsSnapshotArgs{
+							DeleteAfterDaysSinceCreationGreaterThan: pulumi.Int(30),
+						},
+					},
+				},
+				&storage.ManagementPolicyRuleArgs{
+					Name:    pulumi.String("rule2"),
+					Enabled: pulumi.Bool(false),
+					Filters: &storage.ManagementPolicyRuleFiltersArgs{
+						PrefixMatches: pulumi.StringArray{
+							pulumi.String("container2/prefix1"),
+							pulumi.String("container2/prefix2"),
+						},
+						BlobTypes: pulumi.StringArray{
+							pulumi.String("blockBlob"),
+						},
+					},
+					Actions: &storage.ManagementPolicyRuleActionsArgs{
+						BaseBlob: &storage.ManagementPolicyRuleActionsBaseBlobArgs{
+							TierToCoolAfterDaysSinceModificationGreaterThan:    pulumi.Int(11),
+							TierToArchiveAfterDaysSinceModificationGreaterThan: pulumi.Int(51),
+							DeleteAfterDaysSinceModificationGreaterThan:        pulumi.Int(101),
+						},
+						Snapshot: &storage.ManagementPolicyRuleActionsSnapshotArgs{
+							DeleteAfterDaysSinceCreationGreaterThan: pulumi.Int(31),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    account_kind="BlobStorage")
+example_management_policy = azure.storage.ManagementPolicy("exampleManagementPolicy",
+    storage_account_id=example_account.id,
+    rules=[
+        {
+            "name": "rule1",
+            "enabled": True,
+            "filters": {
+                "prefixMatches": ["container1/prefix1"],
+                "blobTypes": ["blockBlob"],
+            },
+            "actions": {
+                "baseBlob": {
+                    "tierToCoolAfterDaysSinceModificationGreaterThan": 10,
+                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 50,
+                    "deleteAfterDaysSinceModificationGreaterThan": 100,
+                },
+                "snapshot": {
+                    "deleteAfterDaysSinceCreationGreaterThan": 30,
+                },
+            },
+        },
+        {
+            "name": "rule2",
+            "enabled": False,
+            "filters": {
+                "prefixMatches": [
+                    "container2/prefix1",
+                    "container2/prefix2",
+                ],
+                "blobTypes": ["blockBlob"],
+            },
+            "actions": {
+                "baseBlob": {
+                    "tierToCoolAfterDaysSinceModificationGreaterThan": 11,
+                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 51,
+                    "deleteAfterDaysSinceModificationGreaterThan": 101,
+                },
+                "snapshot": {
+                    "deleteAfterDaysSinceCreationGreaterThan": 31,
+                },
+            },
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    accountKind: "BlobStorage",
+});
+const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManagementPolicy", {
+    storageAccountId: exampleAccount.id,
+    rules: [
+        {
+            name: "rule1",
+            enabled: true,
+            filters: {
+                prefixMatches: ["container1/prefix1"],
+                blobTypes: ["blockBlob"],
+            },
+            actions: {
+                baseBlob: {
+                    tierToCoolAfterDaysSinceModificationGreaterThan: 10,
+                    tierToArchiveAfterDaysSinceModificationGreaterThan: 50,
+                    deleteAfterDaysSinceModificationGreaterThan: 100,
+                },
+                snapshot: {
+                    deleteAfterDaysSinceCreationGreaterThan: 30,
+                },
+            },
+        },
+        {
+            name: "rule2",
+            enabled: false,
+            filters: {
+                prefixMatches: [
+                    "container2/prefix1",
+                    "container2/prefix2",
+                ],
+                blobTypes: ["blockBlob"],
+            },
+            actions: {
+                baseBlob: {
+                    tierToCoolAfterDaysSinceModificationGreaterThan: 11,
+                    tierToArchiveAfterDaysSinceModificationGreaterThan: 51,
+                    deleteAfterDaysSinceModificationGreaterThan: 101,
+                },
+                snapshot: {
+                    deleteAfterDaysSinceCreationGreaterThan: 31,
+                },
+            },
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementPolicy Resource {#create}
@@ -23,7 +332,7 @@ Manages an Azure Storage Account Management Policy.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#ManagementPolicy">ManagementPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>rules=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.ManagementPolicy">ManagementPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>rules=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

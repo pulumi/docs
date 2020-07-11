@@ -12,6 +12,151 @@ meta_desc: "Explore the Cluster resource of the servicefabric module, including 
 
 Manages a Service Fabric Cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleCluster = new Azure.ServiceFabric.Cluster("exampleCluster", new Azure.ServiceFabric.ClusterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ReliabilityLevel = "Bronze",
+            UpgradeMode = "Manual",
+            ClusterCodeVersion = "6.5.639.9590",
+            VmImage = "Windows",
+            ManagementEndpoint = "https://example:80",
+            NodeTypes = 
+            {
+                new Azure.ServiceFabric.Inputs.ClusterNodeTypeArgs
+                {
+                    Name = "first",
+                    InstanceCount = 3,
+                    IsPrimary = true,
+                    ClientEndpointPort = 2020,
+                    HttpEndpointPort = 80,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = servicefabric.NewCluster(ctx, "exampleCluster", &servicefabric.ClusterArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			Location:           exampleResourceGroup.Location,
+			ReliabilityLevel:   pulumi.String("Bronze"),
+			UpgradeMode:        pulumi.String("Manual"),
+			ClusterCodeVersion: pulumi.String("6.5.639.9590"),
+			VmImage:            pulumi.String("Windows"),
+			ManagementEndpoint: pulumi.String("https://example:80"),
+			NodeTypes: servicefabric.ClusterNodeTypeArray{
+				&servicefabric.ClusterNodeTypeArgs{
+					Name:               pulumi.String("first"),
+					InstanceCount:      pulumi.Int(3),
+					IsPrimary:          pulumi.Bool(true),
+					ClientEndpointPort: pulumi.Int(2020),
+					HttpEndpointPort:   pulumi.Int(80),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cluster = azure.servicefabric.Cluster("exampleCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    reliability_level="Bronze",
+    upgrade_mode="Manual",
+    cluster_code_version="6.5.639.9590",
+    vm_image="Windows",
+    management_endpoint="https://example:80",
+    node_types=[{
+        "name": "first",
+        "instanceCount": 3,
+        "isPrimary": True,
+        "clientEndpointPort": 2020,
+        "httpEndpointPort": 80,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    reliabilityLevel: "Bronze",
+    upgradeMode: "Manual",
+    clusterCodeVersion: "6.5.639.9590",
+    vmImage: "Windows",
+    managementEndpoint: "https://example:80",
+    nodeTypes: [{
+        name: "first",
+        instanceCount: 3,
+        isPrimary: true,
+        clientEndpointPort: 2020,
+        httpEndpointPort: 80,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -23,7 +168,7 @@ Manages a Service Fabric Cluster.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_on_features=None<span class="p">, </span>azure_active_directory=None<span class="p">, </span>certificate=None<span class="p">, </span>certificate_common_names=None<span class="p">, </span>client_certificate_common_names=None<span class="p">, </span>client_certificate_thumbprints=None<span class="p">, </span>cluster_code_version=None<span class="p">, </span>diagnostics_config=None<span class="p">, </span>fabric_settings=None<span class="p">, </span>location=None<span class="p">, </span>management_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>node_types=None<span class="p">, </span>reliability_level=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>reverse_proxy_certificate=None<span class="p">, </span>tags=None<span class="p">, </span>upgrade_mode=None<span class="p">, </span>vm_image=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#pulumi_azure.servicefabric.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_on_features=None<span class="p">, </span>azure_active_directory=None<span class="p">, </span>certificate=None<span class="p">, </span>certificate_common_names=None<span class="p">, </span>client_certificate_common_names=None<span class="p">, </span>client_certificate_thumbprints=None<span class="p">, </span>cluster_code_version=None<span class="p">, </span>diagnostics_config=None<span class="p">, </span>fabric_settings=None<span class="p">, </span>location=None<span class="p">, </span>management_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>node_types=None<span class="p">, </span>reliability_level=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>reverse_proxy_certificate=None<span class="p">, </span>tags=None<span class="p">, </span>upgrade_mode=None<span class="p">, </span>vm_image=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

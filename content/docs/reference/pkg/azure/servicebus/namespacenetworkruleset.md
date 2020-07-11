@@ -12,6 +12,237 @@ meta_desc: "Explore the NamespaceNetworkRuleSet resource of the servicebus modul
 
 Manages a ServiceBus Namespace Network Rule Set Set.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Premium",
+            Capacity = 1,
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "172.17.0.0/16",
+            },
+            DnsServers = 
+            {
+                "10.0.0.4",
+                "10.0.0.5",
+            },
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "172.17.0.0/24",
+            ServiceEndpoints = 
+            {
+                "Microsoft.ServiceBus",
+            },
+        });
+        var exampleNamespaceNetworkRuleSet = new Azure.ServiceBus.NamespaceNetworkRuleSet("exampleNamespaceNetworkRuleSet", new Azure.ServiceBus.NamespaceNetworkRuleSetArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            DefaultAction = "Deny",
+            NetworkRules = 
+            {
+                new Azure.ServiceBus.Inputs.NamespaceNetworkRuleSetNetworkRuleArgs
+                {
+                    SubnetId = exampleSubnet.Id,
+                    IgnoreMissingVnetServiceEndpoint = false,
+                },
+            },
+            IpRules = 
+            {
+                "1.1.1.1",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := servicebus.NewNamespace(ctx, "exampleNamespace", &servicebus.NamespaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Premium"),
+			Capacity:          pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("172.17.0.0/16"),
+			},
+			DnsServers: pulumi.StringArray{
+				pulumi.String("10.0.0.4"),
+				pulumi.String("10.0.0.5"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("172.17.0.0/24"),
+			ServiceEndpoints: pulumi.StringArray{
+				pulumi.String("Microsoft.ServiceBus"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = servicebus.NewNamespaceNetworkRuleSet(ctx, "exampleNamespaceNetworkRuleSet", &servicebus.NamespaceNetworkRuleSetArgs{
+			NamespaceName:     exampleNamespace.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			DefaultAction:     pulumi.String("Deny"),
+			NetworkRules: servicebus.NamespaceNetworkRuleSetNetworkRuleArray{
+				&servicebus.NamespaceNetworkRuleSetNetworkRuleArgs{
+					SubnetId:                         exampleSubnet.ID(),
+					IgnoreMissingVnetServiceEndpoint: pulumi.Bool(false),
+				},
+			},
+			IpRules: pulumi.StringArray{
+				pulumi.String("1.1.1.1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Premium",
+    capacity=1)
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["172.17.0.0/16"],
+    dns_servers=[
+        "10.0.0.4",
+        "10.0.0.5",
+    ])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="172.17.0.0/24",
+    service_endpoints=["Microsoft.ServiceBus"])
+example_namespace_network_rule_set = azure.servicebus.NamespaceNetworkRuleSet("exampleNamespaceNetworkRuleSet",
+    namespace_name=example_namespace.name,
+    resource_group_name=example_resource_group.name,
+    default_action="Deny",
+    network_rules=[{
+        "subnet_id": example_subnet.id,
+        "ignore_missing_vnet_service_endpoint": False,
+    }],
+    ip_rules=["1.1.1.1"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Premium",
+    capacity: 1,
+});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["172.17.0.0/16"],
+    dnsServers: [
+        "10.0.0.4",
+        "10.0.0.5",
+    ],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "172.17.0.0/24",
+    serviceEndpoints: ["Microsoft.ServiceBus"],
+});
+const exampleNamespaceNetworkRuleSet = new azure.servicebus.NamespaceNetworkRuleSet("exampleNamespaceNetworkRuleSet", {
+    namespaceName: exampleNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    defaultAction: "Deny",
+    networkRules: [{
+        subnetId: exampleSubnet.id,
+        ignoreMissingVnetServiceEndpoint: false,
+    }],
+    ipRules: ["1.1.1.1"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceNetworkRuleSet Resource {#create}
@@ -23,7 +254,7 @@ Manages a ServiceBus Namespace Network Rule Set Set.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#NamespaceNetworkRuleSet">NamespaceNetworkRuleSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_action=None<span class="p">, </span>ip_rules=None<span class="p">, </span>namespace_name=None<span class="p">, </span>network_rules=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#pulumi_azure.servicebus.NamespaceNetworkRuleSet">NamespaceNetworkRuleSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_action=None<span class="p">, </span>ip_rules=None<span class="p">, </span>namespace_name=None<span class="p">, </span>network_rules=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

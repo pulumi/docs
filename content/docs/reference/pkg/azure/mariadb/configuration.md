@@ -12,6 +12,161 @@ meta_desc: "Explore the Configuration resource of the mariadb module, including 
 
 Sets a MariaDB Configuration value on a MariaDB Server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.MariaDB.Server("exampleServer", new Azure.MariaDB.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "B_Gen5_2",
+            StorageProfile = new Azure.MariaDB.Inputs.ServerStorageProfileArgs
+            {
+                StorageMb = 5120,
+                BackupRetentionDays = 7,
+                GeoRedundantBackup = "Disabled",
+            },
+            AdministratorLogin = "mariadbadmin",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            Version = "10.2",
+            SslEnforcement = "Enabled",
+        });
+        var exampleConfiguration = new Azure.MariaDB.Configuration("exampleConfiguration", new Azure.MariaDB.ConfigurationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            Value = "600",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mariadb.NewServer(ctx, "exampleServer", &mariadb.ServerArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("B_Gen5_2"),
+			StorageProfile: &mariadb.ServerStorageProfileArgs{
+				StorageMb:           pulumi.Int(5120),
+				BackupRetentionDays: pulumi.Int(7),
+				GeoRedundantBackup:  pulumi.String("Disabled"),
+			},
+			AdministratorLogin:         pulumi.String("mariadbadmin"),
+			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
+			Version:                    pulumi.String("10.2"),
+			SslEnforcement:             pulumi.String("Enabled"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mariadb.NewConfiguration(ctx, "exampleConfiguration", &mariadb.ConfigurationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			Value:             pulumi.String("600"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mariadb.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    storage_profile={
+        "storage_mb": 5120,
+        "backup_retention_days": 7,
+        "geoRedundantBackup": "Disabled",
+    },
+    administrator_login="mariadbadmin",
+    administrator_login_password="H@Sh1CoR3!",
+    version="10.2",
+    ssl_enforcement="Enabled")
+example_configuration = azure.mariadb.Configuration("exampleConfiguration",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    value="600")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mariadb.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "B_Gen5_2",
+    storageProfile: {
+        storageMb: 5120,
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+    },
+    administratorLogin: "mariadbadmin",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "10.2",
+    sslEnforcement: "Enabled",
+});
+const exampleConfiguration = new azure.mariadb.Configuration("exampleConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    value: "600",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Configuration Resource {#create}
@@ -23,7 +178,7 @@ Sets a MariaDB Configuration value on a MariaDB Server.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mariadb/#Configuration">Configuration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mariadb/#pulumi_azure.mariadb.Configuration">Configuration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -93,7 +93,7 @@ func main() {
 					exampleResourceGroup.ID(),
 				},
 			},
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"foo": pulumi.String("bar"),
 			},
 		})
@@ -168,7 +168,7 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#ActionRuleActionGroup">ActionRuleActionGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action_group_id=None<span class="p">, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionRuleActionGroup">ActionRuleActionGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action_group_id=None<span class="p">, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

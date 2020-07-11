@@ -16,6 +16,245 @@ Manages an Azure Backup Protected File Share to enable backups for file shares w
 
 > **NOTE** Azure Backup for Azure File Shares does not support Soft Delete at this time. Deleting this resource will also delete all associated backup data. Please exercise caution. Consider using [`protect`](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to guard against accidental deletion.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = "Standard",
+        });
+        var sa = new Azure.Storage.Account("sa", new Azure.Storage.AccountArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleShare = new Azure.Storage.Share("exampleShare", new Azure.Storage.ShareArgs
+        {
+            StorageAccountName = sa.Name,
+        });
+        var protection_container = new Azure.Backup.ContainerStorageAccount("protection-container", new Azure.Backup.ContainerStorageAccountArgs
+        {
+            ResourceGroupName = rg.Name,
+            RecoveryVaultName = vault.Name,
+            StorageAccountId = sa.Id,
+        });
+        var examplePolicyFileShare = new Azure.Backup.PolicyFileShare("examplePolicyFileShare", new Azure.Backup.PolicyFileShareArgs
+        {
+            ResourceGroupName = rg.Name,
+            RecoveryVaultName = vault.Name,
+            Backup = new Azure.Backup.Inputs.PolicyFileShareBackupArgs
+            {
+                Frequency = "Daily",
+                Time = "23:00",
+            },
+            RetentionDaily = new Azure.Backup.Inputs.PolicyFileShareRetentionDailyArgs
+            {
+                Count = 10,
+            },
+        });
+        var share1 = new Azure.Backup.ProtectedFileShare("share1", new Azure.Backup.ProtectedFileShareArgs
+        {
+            ResourceGroupName = rg.Name,
+            RecoveryVaultName = vault.Name,
+            SourceStorageAccountId = protection_container.StorageAccountId,
+            SourceFileShareName = exampleShare.Name,
+            BackupPolicyId = examplePolicyFileShare.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		sa, err := storage.NewAccount(ctx, "sa", &storage.AccountArgs{
+			Location:               rg.Location,
+			ResourceGroupName:      rg.Name,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleShare, err := storage.NewShare(ctx, "exampleShare", &storage.ShareArgs{
+			StorageAccountName: sa.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = backup.NewContainerStorageAccount(ctx, "protection_container", &backup.ContainerStorageAccountArgs{
+			ResourceGroupName: rg.Name,
+			RecoveryVaultName: vault.Name,
+			StorageAccountId:  sa.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		examplePolicyFileShare, err := backup.NewPolicyFileShare(ctx, "examplePolicyFileShare", &backup.PolicyFileShareArgs{
+			ResourceGroupName: rg.Name,
+			RecoveryVaultName: vault.Name,
+			Backup: &backup.PolicyFileShareBackupArgs{
+				Frequency: pulumi.String("Daily"),
+				Time:      pulumi.String("23:00"),
+			},
+			RetentionDaily: &backup.PolicyFileShareRetentionDailyArgs{
+				Count: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = backup.NewProtectedFileShare(ctx, "share1", &backup.ProtectedFileShareArgs{
+			ResourceGroupName:      rg.Name,
+			RecoveryVaultName:      vault.Name,
+			SourceStorageAccountId: protection_container.StorageAccountId,
+			SourceFileShareName:    exampleShare.Name,
+			BackupPolicyId:         examplePolicyFileShare.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+sa = azure.storage.Account("sa",
+    location=rg.location,
+    resource_group_name=rg.name,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_share = azure.storage.Share("exampleShare", storage_account_name=sa.name)
+protection_container = azure.backup.ContainerStorageAccount("protection-container",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    storage_account_id=sa.id)
+example_policy_file_share = azure.backup.PolicyFileShare("examplePolicyFileShare",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    retention_daily={
+        "count": 10,
+    })
+share1 = azure.backup.ProtectedFileShare("share1",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    source_storage_account_id=protection_container.storage_account_id,
+    source_file_share_name=example_share.name,
+    backup_policy_id=example_policy_file_share.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: "Standard",
+});
+const sa = new azure.storage.Account("sa", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleShare = new azure.storage.Share("exampleShare", {storageAccountName: sa.name});
+const protection_container = new azure.backup.ContainerStorageAccount("protection-container", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    storageAccountId: sa.id,
+});
+const examplePolicyFileShare = new azure.backup.PolicyFileShare("examplePolicyFileShare", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    backup: {
+        frequency: "Daily",
+        time: "23:00",
+    },
+    retentionDaily: {
+        count: 10,
+    },
+});
+const share1 = new azure.backup.ProtectedFileShare("share1", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    sourceStorageAccountId: protection_container.storageAccountId,
+    sourceFileShareName: exampleShare.name,
+    backupPolicyId: examplePolicyFileShare.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProtectedFileShare Resource {#create}
@@ -27,7 +266,7 @@ Manages an Azure Backup Protected File Share to enable backups for file shares w
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#ProtectedFileShare">ProtectedFileShare</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_file_share_name=None<span class="p">, </span>source_storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.ProtectedFileShare">ProtectedFileShare</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_file_share_name=None<span class="p">, </span>source_storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

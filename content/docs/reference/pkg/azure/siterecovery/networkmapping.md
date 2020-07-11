@@ -51,6 +51,12 @@ class MyStack : Stack
             ResourceGroupName = secondaryResourceGroup.Name,
             RecoveryVaultName = vault.Name,
             Location = secondaryResourceGroup.Location,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                primaryFabric,
+            },
         });
         // Avoids issues with crearing fabrics simultainusly
         var primaryVirtualNetwork = new Azure.Network.VirtualNetwork("primaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
@@ -133,7 +139,9 @@ func main() {
 			ResourceGroupName: secondaryResourceGroup.Name,
 			RecoveryVaultName: vault.Name,
 			Location:          secondaryResourceGroup.Location,
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			primaryFabric,
+		}))
 		if err != nil {
 			return err
 		}
@@ -157,7 +165,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = siterecovery.NewNetworkMapping(ctx, "recovery-mapping", &siterecovery.NetworkMappingArgs{
+		_, err = siterecovery.NewNetworkMapping(ctx, "recovery_mapping", &siterecovery.NetworkMappingArgs{
 			ResourceGroupName:        secondaryResourceGroup.Name,
 			RecoveryVaultName:        vault.Name,
 			SourceRecoveryFabricName: pulumi.String("primary-fabric"),
@@ -193,7 +201,8 @@ primary_fabric = azure.siterecovery.Fabric("primaryFabric",
 secondary_fabric = azure.siterecovery.Fabric("secondaryFabric",
     resource_group_name=secondary_resource_group.name,
     recovery_vault_name=vault.name,
-    location=secondary_resource_group.location)
+    location=secondary_resource_group.location,
+    opts=ResourceOptions(depends_on=[primary_fabric]))
 # Avoids issues with crearing fabrics simultainusly
 primary_virtual_network = azure.network.VirtualNetwork("primaryVirtualNetwork",
     resource_group_name=primary_resource_group.name,
@@ -236,6 +245,8 @@ const secondaryFabric = new azure.siterecovery.Fabric("secondaryFabric", {
     resourceGroupName: secondaryResourceGroup.name,
     recoveryVaultName: vault.name,
     location: secondaryResourceGroup.location,
+}, {
+    dependsOn: [primaryFabric],
 });
 // Avoids issues with crearing fabrics simultainusly
 const primaryVirtualNetwork = new azure.network.VirtualNetwork("primaryVirtualNetwork", {
@@ -272,7 +283,7 @@ const recovery_mapping = new azure.siterecovery.NetworkMapping("recovery-mapping
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#NetworkMapping">NetworkMapping</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_network_id=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>target_network_id=None<span class="p">, </span>target_recovery_fabric_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.NetworkMapping">NetworkMapping</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_network_id=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>target_network_id=None<span class="p">, </span>target_recovery_fabric_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

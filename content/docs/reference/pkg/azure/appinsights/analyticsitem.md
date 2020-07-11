@@ -145,7 +145,7 @@ const exampleAnalyticsItem = new azure.appinsights.AnalyticsItem("exampleAnalyti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appinsights/#AnalyticsItem">AnalyticsItem</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_insights_id=None<span class="p">, </span>content=None<span class="p">, </span>function_alias=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appinsights/#pulumi_azure.appinsights.AnalyticsItem">AnalyticsItem</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_insights_id=None<span class="p">, </span>content=None<span class="p">, </span>function_alias=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,6 +14,222 @@ Manages a MariaDB Virtual Network Rule.
 
 > **NOTE:** MariaDB Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/mariadb/concepts-data-access-security-vnet)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.7.29.0/29",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var @internal = new Azure.Network.Subnet("internal", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.7.29.0/29",
+            ServiceEndpoints = 
+            {
+                "Microsoft.Sql",
+            },
+        });
+        var exampleServer = new Azure.MariaDB.Server("exampleServer", new Azure.MariaDB.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AdministratorLogin = "mariadbadminun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            Version = "5.7",
+            SslEnforcement = "Enabled",
+            SkuName = "GP_Gen5_2",
+            StorageProfile = new Azure.MariaDB.Inputs.ServerStorageProfileArgs
+            {
+                StorageMb = 5120,
+                BackupRetentionDays = 7,
+                GeoRedundantBackup = "Disabled",
+            },
+        });
+        var exampleVirtualNetworkRule = new Azure.MariaDB.VirtualNetworkRule("exampleVirtualNetworkRule", new Azure.MariaDB.VirtualNetworkRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            SubnetId = @internal.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.7.29.0/29"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		internal, err := network.NewSubnet(ctx, "internal", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.7.29.0/29"),
+			ServiceEndpoints: pulumi.StringArray{
+				pulumi.String("Microsoft.Sql"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mariadb.NewServer(ctx, "exampleServer", &mariadb.ServerArgs{
+			Location:                   exampleResourceGroup.Location,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			AdministratorLogin:         pulumi.String("mariadbadminun"),
+			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
+			Version:                    pulumi.String("5.7"),
+			SslEnforcement:             pulumi.String("Enabled"),
+			SkuName:                    pulumi.String("GP_Gen5_2"),
+			StorageProfile: &mariadb.ServerStorageProfileArgs{
+				StorageMb:           pulumi.Int(5120),
+				BackupRetentionDays: pulumi.Int(7),
+				GeoRedundantBackup:  pulumi.String("Disabled"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mariadb.NewVirtualNetworkRule(ctx, "exampleVirtualNetworkRule", &mariadb.VirtualNetworkRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			SubnetId:          internal.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.7.29.0/29"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+internal = azure.network.Subnet("internal",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.7.29.0/29",
+    service_endpoints=["Microsoft.Sql"])
+example_server = azure.mariadb.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    administrator_login="mariadbadminun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="5.7",
+    ssl_enforcement="Enabled",
+    sku_name="GP_Gen5_2",
+    storage_profile={
+        "storage_mb": 5120,
+        "backup_retention_days": 7,
+        "geoRedundantBackup": "Disabled",
+    })
+example_virtual_network_rule = azure.mariadb.VirtualNetworkRule("exampleVirtualNetworkRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    subnet_id=internal.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.7.29.0/29"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const internal = new azure.network.Subnet("internal", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.7.29.0/29",
+    serviceEndpoints: ["Microsoft.Sql"],
+});
+const exampleServer = new azure.mariadb.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    administratorLogin: "mariadbadminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "5.7",
+    sslEnforcement: "Enabled",
+    skuName: "GP_Gen5_2",
+    storageProfile: {
+        storageMb: 5120,
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+    },
+});
+const exampleVirtualNetworkRule = new azure.mariadb.VirtualNetworkRule("exampleVirtualNetworkRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    subnetId: internal.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkRule Resource {#create}
@@ -25,7 +241,7 @@ Manages a MariaDB Virtual Network Rule.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mariadb/#VirtualNetworkRule">VirtualNetworkRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mariadb/#pulumi_azure.mariadb.VirtualNetworkRule">VirtualNetworkRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

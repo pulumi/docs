@@ -71,7 +71,7 @@ func main() {
 			ResourceGroupName: exampleResourceGroup.Name,
 			Kind:              pulumi.String("Face"),
 			SkuName:           pulumi.String("S0"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"Acceptance": pulumi.String("Test"),
 			},
 		})
@@ -135,7 +135,7 @@ const exampleAccount = new azure.cognitive.Account("exampleAccount", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cognitive/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>qna_runtime_endpoint=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cognitive/#pulumi_azure.cognitive.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>qna_runtime_endpoint=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

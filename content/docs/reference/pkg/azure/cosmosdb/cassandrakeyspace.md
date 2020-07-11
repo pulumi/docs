@@ -12,6 +12,179 @@ meta_desc: "Explore the CassandraKeyspace resource of the cosmosdb module, inclu
 
 Manages a Cassandra KeySpace within a Cosmos DB Account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "tflex-cosmosdb-account-rg",
+        }));
+        var exampleAccount = new Azure.CosmosDB.Account("exampleAccount", new Azure.CosmosDB.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+            Location = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Location),
+            OfferType = "Standard",
+            Capabilities = 
+            {
+                new Azure.CosmosDB.Inputs.AccountCapabilityArgs
+                {
+                    Name = "EnableCassandra",
+                },
+            },
+            ConsistencyPolicy = new Azure.CosmosDB.Inputs.AccountConsistencyPolicyArgs
+            {
+                ConsistencyLevel = "Strong",
+            },
+            GeoLocations = 
+            {
+                new Azure.CosmosDB.Inputs.AccountGeoLocationArgs
+                {
+                    Location = "West US",
+                    FailoverPriority = 0,
+                },
+            },
+        });
+        var exampleCassandraKeyspace = new Azure.CosmosDB.CassandraKeyspace("exampleCassandraKeyspace", new Azure.CosmosDB.CassandraKeyspaceArgs
+        {
+            ResourceGroupName = exampleAccount.ResourceGroupName,
+            AccountName = exampleAccount.Name,
+            Throughput = 400,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "tflex-cosmosdb-account-rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := cosmosdb.NewAccount(ctx, "exampleAccount", &cosmosdb.AccountArgs{
+			ResourceGroupName: pulumi.String(exampleResourceGroup.Name),
+			Location:          pulumi.String(exampleResourceGroup.Location),
+			OfferType:         pulumi.String("Standard"),
+			Capabilities: cosmosdb.AccountCapabilityArray{
+				&cosmosdb.AccountCapabilityArgs{
+					Name: pulumi.String("EnableCassandra"),
+				},
+			},
+			ConsistencyPolicy: &cosmosdb.AccountConsistencyPolicyArgs{
+				ConsistencyLevel: pulumi.String("Strong"),
+			},
+			GeoLocations: cosmosdb.AccountGeoLocationArray{
+				&cosmosdb.AccountGeoLocationArgs{
+					Location:         pulumi.String("West US"),
+					FailoverPriority: pulumi.Int(0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cosmosdb.NewCassandraKeyspace(ctx, "exampleCassandraKeyspace", &cosmosdb.CassandraKeyspaceArgs{
+			ResourceGroupName: exampleAccount.ResourceGroupName,
+			AccountName:       exampleAccount.Name,
+			Throughput:        pulumi.Int(400),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="tflex-cosmosdb-account-rg")
+example_account = azure.cosmosdb.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    offer_type="Standard",
+    capabilities=[{
+        "name": "EnableCassandra",
+    }],
+    consistency_policy={
+        "consistencyLevel": "Strong",
+    },
+    geo_locations=[{
+        "location": "West US",
+        "failoverPriority": 0,
+    }])
+example_cassandra_keyspace = azure.cosmosdb.CassandraKeyspace("exampleCassandraKeyspace",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name,
+    throughput=400)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "tflex-cosmosdb-account-rg",
+});
+const exampleAccount = new azure.cosmosdb.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    location: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.location),
+    offerType: "Standard",
+    capabilities: [{
+        name: "EnableCassandra",
+    }],
+    consistencyPolicy: {
+        consistencyLevel: "Strong",
+    },
+    geoLocations: [{
+        location: "West US",
+        failoverPriority: 0,
+    }],
+});
+const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("exampleCassandraKeyspace", {
+    resourceGroupName: exampleAccount.resourceGroupName,
+    accountName: exampleAccount.name,
+    throughput: 400,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CassandraKeyspace Resource {#create}
@@ -23,7 +196,7 @@ Manages a Cassandra KeySpace within a Cosmos DB Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#CassandraKeyspace">CassandraKeyspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.CassandraKeyspace">CassandraKeyspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>throughput=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

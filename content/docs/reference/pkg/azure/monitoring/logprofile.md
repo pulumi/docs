@@ -14,6 +14,212 @@ Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-di
 
 > **NOTE:** It's only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with `StatusCode=409` will occur.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "GRS",
+        });
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Capacity = 2,
+        });
+        var exampleLogProfile = new Azure.Monitoring.LogProfile("exampleLogProfile", new Azure.Monitoring.LogProfileArgs
+        {
+            Categories = 
+            {
+                "Action",
+                "Delete",
+                "Write",
+            },
+            Locations = 
+            {
+                "westus",
+                "global",
+            },
+            ServicebusRuleId = exampleEventHubNamespace.Id.Apply(id => $"{id}/authorizationrules/RootManageSharedAccessKey"),
+            StorageAccountId = exampleAccount.Id,
+            RetentionPolicy = new Azure.Monitoring.Inputs.LogProfileRetentionPolicyArgs
+            {
+                Enabled = true,
+                Days = 7,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("eastus"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEventHubNamespace, err := eventhub.NewEventHubNamespace(ctx, "exampleEventHubNamespace", &eventhub.EventHubNamespaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+			Capacity:          pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewLogProfile(ctx, "exampleLogProfile", &monitoring.LogProfileArgs{
+			Categories: pulumi.StringArray{
+				pulumi.String("Action"),
+				pulumi.String("Delete"),
+				pulumi.String("Write"),
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("westus"),
+				pulumi.String("global"),
+			},
+			ServicebusRuleId: exampleEventHubNamespace.ID().ApplyT(func(id string) (string, error) {
+				return fmt.Sprintf("%v%v", id, "/authorizationrules/RootManageSharedAccessKey"), nil
+			}).(pulumi.StringOutput),
+			StorageAccountId: exampleAccount.ID(),
+			RetentionPolicy: &monitoring.LogProfileRetentionPolicyArgs{
+				Enabled: pulumi.Bool(true),
+				Days:    pulumi.Int(7),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    capacity=2)
+example_log_profile = azure.monitoring.LogProfile("exampleLogProfile",
+    categories=[
+        "Action",
+        "Delete",
+        "Write",
+    ],
+    locations=[
+        "westus",
+        "global",
+    ],
+    servicebus_rule_id=example_event_hub_namespace.id.apply(lambda id: f"{id}/authorizationrules/RootManageSharedAccessKey"),
+    storage_account_id=example_account.id,
+    retention_policy={
+        "enabled": True,
+        "days": 7,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    capacity: 2,
+});
+const exampleLogProfile = new azure.monitoring.LogProfile("exampleLogProfile", {
+    categories: [
+        "Action",
+        "Delete",
+        "Write",
+    ],
+    locations: [
+        "westus",
+        "global",
+    ],
+    servicebusRuleId: pulumi.interpolate`${exampleEventHubNamespace.id}/authorizationrules/RootManageSharedAccessKey`,
+    storageAccountId: exampleAccount.id,
+    retentionPolicy: {
+        enabled: true,
+        days: 7,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LogProfile Resource {#create}
@@ -25,7 +231,7 @@ Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-di
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#LogProfile">LogProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>categories=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>servicebus_rule_id=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.LogProfile">LogProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>categories=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>servicebus_rule_id=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

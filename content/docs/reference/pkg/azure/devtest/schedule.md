@@ -12,6 +12,175 @@ meta_desc: "Explore the Schedule resource of the devtest module, including examp
 
 Manages automated startup and shutdown schedules for Azure Dev Test Lab.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleLab = new Azure.DevTest.Lab("exampleLab", new Azure.DevTest.LabArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSchedule = new Azure.DevTest.Schedule("exampleSchedule", new Azure.DevTest.ScheduleArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            LabName = exampleLab.Name,
+            WeeklyRecurrence = new Azure.DevTest.Inputs.ScheduleWeeklyRecurrenceArgs
+            {
+                Time = "1100",
+                WeekDays = 
+                {
+                    "Monday",
+                    "Tuesday",
+                },
+            },
+            TimeZoneId = "Pacific Standard Time",
+            TaskType = "LabVmsStartupTask",
+            NotificationSettings = ,
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = devtest.NewSchedule(ctx, "exampleSchedule", &devtest.ScheduleArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			LabName:           exampleLab.Name,
+			WeeklyRecurrence: &devtest.ScheduleWeeklyRecurrenceArgs{
+				Time: pulumi.String("1100"),
+				WeekDays: pulumi.StringArray{
+					pulumi.String("Monday"),
+					pulumi.String("Tuesday"),
+				},
+			},
+			TimeZoneId:           pulumi.String("Pacific Standard Time"),
+			TaskType:             pulumi.String("LabVmsStartupTask"),
+			NotificationSettings: nil,
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_lab = azure.devtest.Lab("exampleLab",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_schedule = azure.devtest.Schedule("exampleSchedule",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    lab_name=example_lab.name,
+    weekly_recurrence={
+        "time": "1100",
+        "week_days": [
+            "Monday",
+            "Tuesday",
+        ],
+    },
+    time_zone_id="Pacific Standard Time",
+    task_type="LabVmsStartupTask",
+    notification_settings={},
+    tags={
+        "environment": "Production",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleLab = new azure.devtest.Lab("exampleLab", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSchedule = new azure.devtest.Schedule("exampleSchedule", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    labName: exampleLab.name,
+    weeklyRecurrence: {
+        time: "1100",
+        weekDays: [
+            "Monday",
+            "Tuesday",
+        ],
+    },
+    timeZoneId: "Pacific Standard Time",
+    taskType: "LabVmsStartupTask",
+    notificationSettings: {},
+    tags: {
+        environment: "Production",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Schedule Resource {#create}
@@ -23,7 +192,7 @@ Manages automated startup and shutdown schedules for Azure Dev Test Lab.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>daily_recurrence=None<span class="p">, </span>hourly_recurrence=None<span class="p">, </span>lab_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>task_type=None<span class="p">, </span>time_zone_id=None<span class="p">, </span>weekly_recurrence=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>daily_recurrence=None<span class="p">, </span>hourly_recurrence=None<span class="p">, </span>lab_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>task_type=None<span class="p">, </span>time_zone_id=None<span class="p">, </span>weekly_recurrence=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

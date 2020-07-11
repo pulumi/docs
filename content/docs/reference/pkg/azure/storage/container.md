@@ -76,7 +76,7 @@ func main() {
 			Location:               exampleResourceGroup.Location,
 			AccountTier:            pulumi.String("Standard"),
 			AccountReplicationType: pulumi.String("LRS"),
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"environment": pulumi.String("staging"),
 			},
 		})
@@ -154,7 +154,7 @@ const exampleContainer = new azure.storage.Container("exampleContainer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_access_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_access_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

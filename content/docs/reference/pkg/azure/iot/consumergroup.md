@@ -82,7 +82,7 @@ func main() {
 				Name:     pulumi.String("S1"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: pulumi.Map{
+			Tags: pulumi.StringMap{
 				"purpose": pulumi.String("testing"),
 			},
 		})
@@ -167,7 +167,7 @@ const exampleConsumerGroup = new azure.iot.ConsumerGroup("exampleConsumerGroup",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#ConsumerGroup">ConsumerGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eventhub_endpoint_name=None<span class="p">, </span>iothub_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.ConsumerGroup">ConsumerGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eventhub_endpoint_name=None<span class="p">, </span>iothub_name=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

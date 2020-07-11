@@ -478,7 +478,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := management.LookupGroup(ctx, nil, nil)
+		_, err = management.LookupGroup(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -582,7 +582,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/role/#Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>principal_id=None<span class="p">, </span>role_definition_id=None<span class="p">, </span>role_definition_name=None<span class="p">, </span>scope=None<span class="p">, </span>skip_service_principal_aad_check=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/role/#pulumi_azure.role.Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>principal_id=None<span class="p">, </span>role_definition_id=None<span class="p">, </span>role_definition_name=None<span class="p">, </span>scope=None<span class="p">, </span>skip_service_principal_aad_check=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

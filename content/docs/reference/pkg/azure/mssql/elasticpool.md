@@ -12,6 +12,183 @@ meta_desc: "Explore the ElasticPool resource of the mssql module, including exam
 
 Allows you to manage an Azure SQL Elastic Pool via the `v3.0` API which allows for `vCore` and `DTU` based configurations.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westeurope",
+        });
+        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "4dm1n157r470r",
+            AdministratorLoginPassword = "4-v3ry-53cr37-p455w0rd",
+        });
+        var exampleElasticPool = new Azure.MSSql.ElasticPool("exampleElasticPool", new Azure.MSSql.ElasticPoolArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ServerName = exampleSqlServer.Name,
+            LicenseType = "LicenseIncluded",
+            MaxSizeGb = 756,
+            Sku = new Azure.MSSql.Inputs.ElasticPoolSkuArgs
+            {
+                Name = "GP_Gen5",
+                Tier = "GeneralPurpose",
+                Family = "Gen5",
+                Capacity = 4,
+            },
+            PerDatabaseSettings = new Azure.MSSql.Inputs.ElasticPoolPerDatabaseSettingsArgs
+            {
+                MinCapacity = 0.25,
+                MaxCapacity = 4,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("westeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mssql.NewElasticPool(ctx, "exampleElasticPool", &mssql.ElasticPoolArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ServerName:        exampleSqlServer.Name,
+			LicenseType:       pulumi.String("LicenseIncluded"),
+			MaxSizeGb:         pulumi.Float64(756),
+			Sku: &mssql.ElasticPoolSkuArgs{
+				Name:     pulumi.String("GP_Gen5"),
+				Tier:     pulumi.String("GeneralPurpose"),
+				Family:   pulumi.String("Gen5"),
+				Capacity: pulumi.Int(4),
+			},
+			PerDatabaseSettings: &mssql.ElasticPoolPerDatabaseSettingsArgs{
+				MinCapacity: pulumi.Float64(0.25),
+				MaxCapacity: pulumi.Float64(4),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+example_elastic_pool = azure.mssql.ElasticPool("exampleElasticPool",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    server_name=example_sql_server.name,
+    license_type="LicenseIncluded",
+    max_size_gb=756,
+    sku={
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 4,
+    },
+    per_database_settings={
+        "min_capacity": 0.25,
+        "maxCapacity": 4,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const exampleElasticPool = new azure.mssql.ElasticPool("exampleElasticPool", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serverName: exampleSqlServer.name,
+    licenseType: "LicenseIncluded",
+    maxSizeGb: 756,
+    sku: {
+        name: "GP_Gen5",
+        tier: "GeneralPurpose",
+        family: "Gen5",
+        capacity: 4,
+    },
+    perDatabaseSettings: {
+        minCapacity: 0.25,
+        maxCapacity: 4,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}
@@ -23,7 +200,7 @@ Allows you to manage an Azure SQL Elastic Pool via the `v3.0` API which allows f
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#ElasticPool">ElasticPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.ElasticPool">ElasticPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

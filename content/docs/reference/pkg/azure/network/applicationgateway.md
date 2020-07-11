@@ -12,6 +12,434 @@ meta_desc: "Explore the ApplicationGateway resource of the network module, inclu
 
 Manages an Application Gateway.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AddressSpaces = 
+            {
+                "10.254.0.0/16",
+            },
+        });
+        var frontend = new Azure.Network.Subnet("frontend", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "10.254.0.0/24",
+            },
+        });
+        var backend = new Azure.Network.Subnet("backend", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "10.254.2.0/24",
+            },
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AllocationMethod = "Dynamic",
+        });
+        var backendAddressPoolName = exampleVirtualNetwork.Name.Apply(name => $"{name}-beap");
+        var frontendPortName = exampleVirtualNetwork.Name.Apply(name => $"{name}-feport");
+        var frontendIpConfigurationName = exampleVirtualNetwork.Name.Apply(name => $"{name}-feip");
+        var httpSettingName = exampleVirtualNetwork.Name.Apply(name => $"{name}-be-htst");
+        var listenerName = exampleVirtualNetwork.Name.Apply(name => $"{name}-httplstn");
+        var requestRoutingRuleName = exampleVirtualNetwork.Name.Apply(name => $"{name}-rqrt");
+        var redirectConfigurationName = exampleVirtualNetwork.Name.Apply(name => $"{name}-rdrcfg");
+        var network = new Azure.Network.ApplicationGateway("network", new Azure.Network.ApplicationGatewayArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Network.Inputs.ApplicationGatewaySkuArgs
+            {
+                Name = "Standard_Small",
+                Tier = "Standard",
+                Capacity = 2,
+            },
+            GatewayIpConfigurations = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayGatewayIpConfigurationArgs
+                {
+                    Name = "my-gateway-ip-configuration",
+                    SubnetId = frontend.Id,
+                },
+            },
+            FrontendPorts = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayFrontendPortArgs
+                {
+                    Name = frontendPortName,
+                    Port = 80,
+                },
+            },
+            FrontendIpConfigurations = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayFrontendIpConfigurationArgs
+                {
+                    Name = frontendIpConfigurationName,
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+            BackendAddressPools = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayBackendAddressPoolArgs
+                {
+                    Name = backendAddressPoolName,
+                },
+            },
+            BackendHttpSettings = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayBackendHttpSettingArgs
+                {
+                    Name = httpSettingName,
+                    CookieBasedAffinity = "Disabled",
+                    Path = "/path1/",
+                    Port = 80,
+                    Protocol = "Http",
+                    RequestTimeout = 60,
+                },
+            },
+            HttpListeners = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayHttpListenerArgs
+                {
+                    Name = listenerName,
+                    FrontendIpConfigurationName = frontendIpConfigurationName,
+                    FrontendPortName = frontendPortName,
+                    Protocol = "Http",
+                },
+            },
+            RequestRoutingRules = 
+            {
+                new Azure.Network.Inputs.ApplicationGatewayRequestRoutingRuleArgs
+                {
+                    Name = requestRoutingRuleName,
+                    RuleType = "Basic",
+                    HttpListenerName = listenerName,
+                    BackendAddressPoolName = backendAddressPoolName,
+                    BackendHttpSettingsName = httpSettingName,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.254.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		frontend, err := network.NewSubnet(ctx, "frontend", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.254.0.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewSubnet(ctx, "backend", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.254.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			AllocationMethod:  pulumi.String("Dynamic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewApplicationGateway(ctx, "network", &network.ApplicationGatewayArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku: &network.ApplicationGatewaySkuArgs{
+				Name:     pulumi.String("Standard_Small"),
+				Tier:     pulumi.String("Standard"),
+				Capacity: pulumi.Int(2),
+			},
+			GatewayIpConfigurations: network.ApplicationGatewayGatewayIpConfigurationArray{
+				&network.ApplicationGatewayGatewayIpConfigurationArgs{
+					Name:     pulumi.String("my-gateway-ip-configuration"),
+					SubnetId: frontend.ID(),
+				},
+			},
+			FrontendPorts: network.ApplicationGatewayFrontendPortArray{
+				&network.ApplicationGatewayFrontendPortArgs{
+					Name: pulumi.String(frontendPortName),
+					Port: pulumi.Int(80),
+				},
+			},
+			FrontendIpConfigurations: network.ApplicationGatewayFrontendIpConfigurationArray{
+				&network.ApplicationGatewayFrontendIpConfigurationArgs{
+					Name:              pulumi.String(frontendIpConfigurationName),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+			BackendAddressPools: network.ApplicationGatewayBackendAddressPoolArray{
+				&network.ApplicationGatewayBackendAddressPoolArgs{
+					Name: pulumi.String(backendAddressPoolName),
+				},
+			},
+			BackendHttpSettings: network.ApplicationGatewayBackendHttpSettingArray{
+				&network.ApplicationGatewayBackendHttpSettingArgs{
+					Name:                pulumi.String(httpSettingName),
+					CookieBasedAffinity: pulumi.String("Disabled"),
+					Path:                pulumi.String("/path1/"),
+					Port:                pulumi.Int(80),
+					Protocol:            pulumi.String("Http"),
+					RequestTimeout:      pulumi.Int(60),
+				},
+			},
+			HttpListeners: network.ApplicationGatewayHttpListenerArray{
+				&network.ApplicationGatewayHttpListenerArgs{
+					Name:                        pulumi.String(listenerName),
+					FrontendIpConfigurationName: pulumi.String(frontendIpConfigurationName),
+					FrontendPortName:            pulumi.String(frontendPortName),
+					Protocol:                    pulumi.String("Http"),
+				},
+			},
+			RequestRoutingRules: network.ApplicationGatewayRequestRoutingRuleArray{
+				&network.ApplicationGatewayRequestRoutingRuleArgs{
+					Name:                    pulumi.String(requestRoutingRuleName),
+					RuleType:                pulumi.String("Basic"),
+					HttpListenerName:        pulumi.String(listenerName),
+					BackendAddressPoolName:  pulumi.String(backendAddressPoolName),
+					BackendHttpSettingsName: pulumi.String(httpSettingName),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    address_spaces=["10.254.0.0/16"])
+frontend = azure.network.Subnet("frontend",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefixes=["10.254.0.0/24"])
+backend = azure.network.Subnet("backend",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefixes=["10.254.2.0/24"])
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    allocation_method="Dynamic")
+backend_address_pool_name = example_virtual_network.name.apply(lambda name: f"{name}-beap")
+frontend_port_name = example_virtual_network.name.apply(lambda name: f"{name}-feport")
+frontend_ip_configuration_name = example_virtual_network.name.apply(lambda name: f"{name}-feip")
+http_setting_name = example_virtual_network.name.apply(lambda name: f"{name}-be-htst")
+listener_name = example_virtual_network.name.apply(lambda name: f"{name}-httplstn")
+request_routing_rule_name = example_virtual_network.name.apply(lambda name: f"{name}-rqrt")
+redirect_configuration_name = example_virtual_network.name.apply(lambda name: f"{name}-rdrcfg")
+network = azure.network.ApplicationGateway("network",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "Standard_Small",
+        "tier": "Standard",
+        "capacity": 2,
+    },
+    gateway_ip_configurations=[{
+        "name": "my-gateway-ip-configuration",
+        "subnet_id": frontend.id,
+    }],
+    frontend_ports=[{
+        "name": frontend_port_name,
+        "port": 80,
+    }],
+    frontend_ip_configurations=[{
+        "name": frontend_ip_configuration_name,
+        "public_ip_address_id": example_public_ip.id,
+    }],
+    backend_address_pools=[{
+        "name": backend_address_pool_name,
+    }],
+    backend_http_settings=[{
+        "name": http_setting_name,
+        "cookieBasedAffinity": "Disabled",
+        "path": "/path1/",
+        "port": 80,
+        "protocol": "Http",
+        "requestTimeout": 60,
+    }],
+    http_listeners=[{
+        "name": listener_name,
+        "frontend_ip_configuration_name": frontend_ip_configuration_name,
+        "frontendPortName": frontend_port_name,
+        "protocol": "Http",
+    }],
+    request_routing_rules=[{
+        "name": request_routing_rule_name,
+        "ruleType": "Basic",
+        "httpListenerName": listener_name,
+        "backendAddressPoolName": backend_address_pool_name,
+        "backendHttpSettingsName": http_setting_name,
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    addressSpaces: ["10.254.0.0/16"],
+});
+const frontend = new azure.network.Subnet("frontend", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefixes: ["10.254.0.0/24"],
+});
+const backend = new azure.network.Subnet("backend", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefixes: ["10.254.2.0/24"],
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    allocationMethod: "Dynamic",
+});
+const backendAddressPoolName = pulumi.interpolate`${exampleVirtualNetwork.name}-beap`;
+const frontendPortName = pulumi.interpolate`${exampleVirtualNetwork.name}-feport`;
+const frontendIpConfigurationName = pulumi.interpolate`${exampleVirtualNetwork.name}-feip`;
+const httpSettingName = pulumi.interpolate`${exampleVirtualNetwork.name}-be-htst`;
+const listenerName = pulumi.interpolate`${exampleVirtualNetwork.name}-httplstn`;
+const requestRoutingRuleName = pulumi.interpolate`${exampleVirtualNetwork.name}-rqrt`;
+const redirectConfigurationName = pulumi.interpolate`${exampleVirtualNetwork.name}-rdrcfg`;
+const network = new azure.network.ApplicationGateway("network", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "Standard_Small",
+        tier: "Standard",
+        capacity: 2,
+    },
+    gatewayIpConfigurations: [{
+        name: "my-gateway-ip-configuration",
+        subnetId: frontend.id,
+    }],
+    frontendPorts: [{
+        name: frontendPortName,
+        port: 80,
+    }],
+    frontendIpConfigurations: [{
+        name: frontendIpConfigurationName,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+    backendAddressPools: [{
+        name: backendAddressPoolName,
+    }],
+    backendHttpSettings: [{
+        name: httpSettingName,
+        cookieBasedAffinity: "Disabled",
+        path: "/path1/",
+        port: 80,
+        protocol: "Http",
+        requestTimeout: 60,
+    }],
+    httpListeners: [{
+        name: listenerName,
+        frontendIpConfigurationName: frontendIpConfigurationName,
+        frontendPortName: frontendPortName,
+        protocol: "Http",
+    }],
+    requestRoutingRules: [{
+        name: requestRoutingRuleName,
+        ruleType: "Basic",
+        httpListenerName: listenerName,
+        backendAddressPoolName: backendAddressPoolName,
+        backendHttpSettingsName: httpSettingName,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationGateway Resource {#create}
@@ -23,7 +451,7 @@ Manages an Application Gateway.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#ApplicationGateway">ApplicationGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_certificates=None<span class="p">, </span>autoscale_configuration=None<span class="p">, </span>backend_address_pools=None<span class="p">, </span>backend_http_settings=None<span class="p">, </span>custom_error_configurations=None<span class="p">, </span>enable_http2=None<span class="p">, </span>firewall_policy_id=None<span class="p">, </span>frontend_ip_configurations=None<span class="p">, </span>frontend_ports=None<span class="p">, </span>gateway_ip_configurations=None<span class="p">, </span>http_listeners=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>probes=None<span class="p">, </span>redirect_configurations=None<span class="p">, </span>request_routing_rules=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rewrite_rule_sets=None<span class="p">, </span>sku=None<span class="p">, </span>ssl_certificates=None<span class="p">, </span>ssl_policies=None<span class="p">, </span>tags=None<span class="p">, </span>trusted_root_certificates=None<span class="p">, </span>url_path_maps=None<span class="p">, </span>waf_configuration=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ApplicationGateway">ApplicationGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_certificates=None<span class="p">, </span>autoscale_configuration=None<span class="p">, </span>backend_address_pools=None<span class="p">, </span>backend_http_settings=None<span class="p">, </span>custom_error_configurations=None<span class="p">, </span>enable_http2=None<span class="p">, </span>firewall_policy_id=None<span class="p">, </span>frontend_ip_configurations=None<span class="p">, </span>frontend_ports=None<span class="p">, </span>gateway_ip_configurations=None<span class="p">, </span>http_listeners=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>probes=None<span class="p">, </span>redirect_configurations=None<span class="p">, </span>request_routing_rules=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rewrite_rule_sets=None<span class="p">, </span>sku=None<span class="p">, </span>ssl_certificates=None<span class="p">, </span>ssl_policies=None<span class="p">, </span>tags=None<span class="p">, </span>trusted_root_certificates=None<span class="p">, </span>url_path_maps=None<span class="p">, </span>waf_configuration=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -346,7 +774,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +1078,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -954,7 +1382,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1258,7 +1686,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1690,7 +2118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1994,7 +2422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2298,7 +2726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2602,7 +3030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource ID of a firewall policy.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5267,6 +5695,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="firewallpolicyid_csharp">
+<a href="#firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="frontendipconfigurationid_csharp">
 <a href="#frontendipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
 </span> 
@@ -5413,6 +5852,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">[]Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_go">
+<a href="#firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5567,6 +6017,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="firewallpolicyid_nodejs">
+<a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="frontendipconfigurationid_nodejs">
 <a href="#frontendipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
 </span> 
@@ -5713,6 +6174,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewall_policy_id_python">
+<a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

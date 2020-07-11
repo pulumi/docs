@@ -12,6 +12,298 @@ meta_desc: "Explore the FirewallNatRuleCollection resource of the network module
 
 Manages a NAT Rule Collection within an Azure Firewall.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "North Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.1.0/24",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+            Sku = "Standard",
+        });
+        var exampleFirewall = new Azure.Network.Firewall("exampleFirewall", new Azure.Network.FirewallArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.FirewallIpConfigurationArgs
+                {
+                    Name = "configuration",
+                    SubnetId = exampleSubnet.Id,
+                    PublicIpAddressId = examplePublicIp.Id,
+                },
+            },
+        });
+        var exampleFirewallNatRuleCollection = new Azure.Network.FirewallNatRuleCollection("exampleFirewallNatRuleCollection", new Azure.Network.FirewallNatRuleCollectionArgs
+        {
+            AzureFirewallName = exampleFirewall.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Priority = 100,
+            Action = "Dnat",
+            Rules = 
+            {
+                new Azure.Network.Inputs.FirewallNatRuleCollectionRuleArgs
+                {
+                    Name = "testrule",
+                    SourceAddresses = 
+                    {
+                        "10.0.0.0/16",
+                    },
+                    DestinationPorts = 
+                    {
+                        "53",
+                    },
+                    DestinationAddresses = 
+                    {
+                        examplePublicIp.IpAddress,
+                    },
+                    TranslatedPort = "53",
+                    TranslatedAddress = "8.8.8.8",
+                    Protocols = 
+                    {
+                        "TCP",
+                        "UDP",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("North Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFirewall, err := network.NewFirewall(ctx, "exampleFirewall", &network.FirewallArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.FirewallIpConfigurationArray{
+				&network.FirewallIpConfigurationArgs{
+					Name:              pulumi.String("configuration"),
+					SubnetId:          exampleSubnet.ID(),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewFirewallNatRuleCollection(ctx, "exampleFirewallNatRuleCollection", &network.FirewallNatRuleCollectionArgs{
+			AzureFirewallName: exampleFirewall.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Priority:          pulumi.Int(100),
+			Action:            pulumi.String("Dnat"),
+			Rules: network.FirewallNatRuleCollectionRuleArray{
+				&network.FirewallNatRuleCollectionRuleArgs{
+					Name: pulumi.String("testrule"),
+					SourceAddresses: pulumi.StringArray{
+						pulumi.String("10.0.0.0/16"),
+					},
+					DestinationPorts: pulumi.StringArray{
+						pulumi.String("53"),
+					},
+					DestinationAddresses: pulumi.StringArray{
+						examplePublicIp.IpAddress,
+					},
+					TranslatedPort:    pulumi.String("53"),
+					TranslatedAddress: pulumi.String("8.8.8.8"),
+					Protocols: pulumi.StringArray{
+						pulumi.String("TCP"),
+						pulumi.String("UDP"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="North Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static",
+    sku="Standard")
+example_firewall = azure.network.Firewall("exampleFirewall",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configurations=[{
+        "name": "configuration",
+        "subnet_id": example_subnet.id,
+        "public_ip_address_id": example_public_ip.id,
+    }])
+example_firewall_nat_rule_collection = azure.network.FirewallNatRuleCollection("exampleFirewallNatRuleCollection",
+    azure_firewall_name=example_firewall.name,
+    resource_group_name=example_resource_group.name,
+    priority=100,
+    action="Dnat",
+    rules=[{
+        "name": "testrule",
+        "sourceAddresses": ["10.0.0.0/16"],
+        "destinationPorts": ["53"],
+        "destinationAddresses": [example_public_ip.ip_address],
+        "translatedPort": 53,
+        "translatedAddress": "8.8.8.8",
+        "protocols": [
+            "TCP",
+            "UDP",
+        ],
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "North Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+    sku: "Standard",
+});
+const exampleFirewall = new azure.network.Firewall("exampleFirewall", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipConfigurations: [{
+        name: "configuration",
+        subnetId: exampleSubnet.id,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleFirewallNatRuleCollection = new azure.network.FirewallNatRuleCollection("exampleFirewallNatRuleCollection", {
+    azureFirewallName: exampleFirewall.name,
+    resourceGroupName: exampleResourceGroup.name,
+    priority: 100,
+    action: "Dnat",
+    rules: [{
+        name: "testrule",
+        sourceAddresses: ["10.0.0.0/16"],
+        destinationPorts: ["53"],
+        destinationAddresses: [examplePublicIp.ipAddress],
+        translatedPort: 53,
+        translatedAddress: "8.8.8.8",
+        protocols: [
+            "TCP",
+            "UDP",
+        ],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallNatRuleCollection Resource {#create}
@@ -23,7 +315,7 @@ Manages a NAT Rule Collection within an Azure Firewall.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#FirewallNatRuleCollection">FirewallNatRuleCollection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>azure_firewall_name=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.FirewallNatRuleCollection">FirewallNatRuleCollection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>azure_firewall_name=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

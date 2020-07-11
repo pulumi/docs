@@ -12,6 +12,288 @@ meta_desc: "Explore the InteractiveQueryCluster resource of the hdinsight module
 
 Manages a HDInsight Interactive Query Cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            ContainerAccessType = "private",
+        });
+        var exampleInteractiveQueryCluster = new Azure.HDInsight.InteractiveQueryCluster("exampleInteractiveQueryCluster", new Azure.HDInsight.InteractiveQueryClusterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ClusterVersion = "3.6",
+            Tier = "Standard",
+            ComponentVersion = new Azure.HDInsight.Inputs.InteractiveQueryClusterComponentVersionArgs
+            {
+                InteractiveHive = "2.1",
+            },
+            Gateway = new Azure.HDInsight.Inputs.InteractiveQueryClusterGatewayArgs
+            {
+                Enabled = true,
+                Username = "acctestusrgw",
+                Password = "Password!",
+            },
+            StorageAccounts = 
+            {
+                new Azure.HDInsight.Inputs.InteractiveQueryClusterStorageAccountArgs
+                {
+                    StorageContainerId = exampleContainer.Id,
+                    StorageAccountKey = exampleAccount.PrimaryAccessKey,
+                    IsDefault = true,
+                },
+            },
+            Roles = new Azure.HDInsight.Inputs.InteractiveQueryClusterRolesArgs
+            {
+                HeadNode = new Azure.HDInsight.Inputs.InteractiveQueryClusterRolesHeadNodeArgs
+                {
+                    VmSize = "Standard_D13_V2",
+                    Username = "acctestusrvm",
+                    Password = "AccTestvdSC4daf986!",
+                },
+                WorkerNode = new Azure.HDInsight.Inputs.InteractiveQueryClusterRolesWorkerNodeArgs
+                {
+                    VmSize = "Standard_D14_V2",
+                    Username = "acctestusrvm",
+                    Password = "AccTestvdSC4daf986!",
+                    TargetInstanceCount = 3,
+                },
+                ZookeeperNode = new Azure.HDInsight.Inputs.InteractiveQueryClusterRolesZookeeperNodeArgs
+                {
+                    VmSize = "Standard_A4_V2",
+                    Username = "acctestusrvm",
+                    Password = "AccTestvdSC4daf986!",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = hdinsight.NewInteractiveQueryCluster(ctx, "exampleInteractiveQueryCluster", &hdinsight.InteractiveQueryClusterArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ClusterVersion:    pulumi.String("3.6"),
+			Tier:              pulumi.String("Standard"),
+			ComponentVersion: &hdinsight.InteractiveQueryClusterComponentVersionArgs{
+				InteractiveHive: pulumi.String("2.1"),
+			},
+			Gateway: &hdinsight.InteractiveQueryClusterGatewayArgs{
+				Enabled:  pulumi.Bool(true),
+				Username: pulumi.String("acctestusrgw"),
+				Password: pulumi.String("Password!"),
+			},
+			StorageAccounts: hdinsight.InteractiveQueryClusterStorageAccountArray{
+				&hdinsight.InteractiveQueryClusterStorageAccountArgs{
+					StorageContainerId: exampleContainer.ID(),
+					StorageAccountKey:  exampleAccount.PrimaryAccessKey,
+					IsDefault:          pulumi.Bool(true),
+				},
+			},
+			Roles: &hdinsight.InteractiveQueryClusterRolesArgs{
+				HeadNode: &hdinsight.InteractiveQueryClusterRolesHeadNodeArgs{
+					VmSize:   pulumi.String("Standard_D13_V2"),
+					Username: pulumi.String("acctestusrvm"),
+					Password: pulumi.String("AccTestvdSC4daf986!"),
+				},
+				WorkerNode: &hdinsight.InteractiveQueryClusterRolesWorkerNodeArgs{
+					VmSize:              pulumi.String("Standard_D14_V2"),
+					Username:            pulumi.String("acctestusrvm"),
+					Password:            pulumi.String("AccTestvdSC4daf986!"),
+					TargetInstanceCount: pulumi.Int(3),
+				},
+				ZookeeperNode: &hdinsight.InteractiveQueryClusterRolesZookeeperNodeArgs{
+					VmSize:   pulumi.String("Standard_A4_V2"),
+					Username: pulumi.String("acctestusrvm"),
+					Password: pulumi.String("AccTestvdSC4daf986!"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_interactive_query_cluster = azure.hdinsight.InteractiveQueryCluster("exampleInteractiveQueryCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cluster_version="3.6",
+    tier="Standard",
+    component_version={
+        "interactiveHive": "2.1",
+    },
+    gateway={
+        "enabled": True,
+        "username": "acctestusrgw",
+        "password": "Password!",
+    },
+    storage_accounts=[{
+        "storage_container_id": example_container.id,
+        "storage_account_key": example_account.primary_access_key,
+        "isDefault": True,
+    }],
+    roles={
+        "headNode": {
+            "vm_size": "Standard_D13_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+        "workerNode": {
+            "vm_size": "Standard_D14_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+            "targetInstanceCount": 3,
+        },
+        "zookeeperNode": {
+            "vm_size": "Standard_A4_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleInteractiveQueryCluster = new azure.hdinsight.InteractiveQueryCluster("exampleInteractiveQueryCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    clusterVersion: "3.6",
+    tier: "Standard",
+    componentVersion: {
+        interactiveHive: "2.1",
+    },
+    gateway: {
+        enabled: true,
+        username: "acctestusrgw",
+        password: "Password!",
+    },
+    storageAccounts: [{
+        storageContainerId: exampleContainer.id,
+        storageAccountKey: exampleAccount.primaryAccessKey,
+        isDefault: true,
+    }],
+    roles: {
+        headNode: {
+            vmSize: "Standard_D13_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+        workerNode: {
+            vmSize: "Standard_D14_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+            targetInstanceCount: 3,
+        },
+        zookeeperNode: {
+            vmSize: "Standard_A4_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InteractiveQueryCluster Resource {#create}
@@ -23,7 +305,7 @@ Manages a HDInsight Interactive Query Cluster.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#InteractiveQueryCluster">InteractiveQueryCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_version=None<span class="p">, </span>component_version=None<span class="p">, </span>gateway=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>roles=None<span class="p">, </span>storage_account_gen2=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>tls_min_version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.InteractiveQueryCluster">InteractiveQueryCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_version=None<span class="p">, </span>component_version=None<span class="p">, </span>gateway=None<span class="p">, </span>location=None<span class="p">, </span>metastores=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>roles=None<span class="p">, </span>storage_account_gen2=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>tls_min_version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,6 +556,28 @@ The InteractiveQueryCluster resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="metastores_csharp">
+<a href="#metastores_csharp" style="color: inherit; text-decoration: inherit;">Metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitor_csharp">
+<a href="#monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -408,6 +712,28 @@ The InteractiveQueryCluster resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metastores_go">
+<a href="#metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitor_go">
+<a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,6 +876,28 @@ The InteractiveQueryCluster resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="metastores_nodejs">
+<a href="#metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitor_nodejs">
+<a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -684,6 +1032,28 @@ The InteractiveQueryCluster resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metastores_python">
+<a href="#metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Metastores]</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitor_python">
+<a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Monitor]</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,7 +1296,7 @@ Get an existing InteractiveQueryCluster resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_version=None<span class="p">, </span>component_version=None<span class="p">, </span>gateway=None<span class="p">, </span>https_endpoint=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>roles=None<span class="p">, </span>ssh_endpoint=None<span class="p">, </span>storage_account_gen2=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>tls_min_version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_version=None<span class="p">, </span>component_version=None<span class="p">, </span>gateway=None<span class="p">, </span>https_endpoint=None<span class="p">, </span>location=None<span class="p">, </span>metastores=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>roles=None<span class="p">, </span>ssh_endpoint=None<span class="p">, </span>storage_account_gen2=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>tier=None<span class="p">, </span>tls_min_version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1097,6 +1467,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metastores_csharp">
+<a href="#state_metastores_csharp" style="color: inherit; text-decoration: inherit;">Metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_monitor_csharp">
+<a href="#state_monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1253,6 +1645,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metastores_go">
+<a href="#state_metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_monitor_go">
+<a href="#state_monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1417,6 +1831,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metastores_nodejs">
+<a href="#state_metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_monitor_nodejs">
+<a href="#state_monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1573,6 +2009,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metastores_python">
+<a href="#state_metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastores">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Metastores]</a></span>
+    </dt>
+    <dd>{{% md %}}A `metastores` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_monitor_python">
+<a href="#state_monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermonitor">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Monitor]</a></span>
+    </dt>
+    <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1794,24 +2252,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Is the Ambari portal enabled? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The password used for the Ambari Portal. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1825,6 +2272,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1834,24 +2292,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Is the Ambari portal enabled? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password used for the Ambari Portal. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1865,6 +2312,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1874,24 +2332,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Is the Ambari portal enabled? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password used for the Ambari Portal. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1905,6 +2352,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1914,24 +2372,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Is the Ambari portal enabled? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The password used for the Ambari Portal. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1943,6 +2390,995 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="interactivequeryclustermetastores">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterMetastores">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterMetastores">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.InteractiveQueryClusterMetastoresArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.InteractiveQueryClusterMetastores.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ambari_csharp">
+<a href="#ambari_csharp" style="color: inherit; text-decoration: inherit;">Ambari</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresambari">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `ambari` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hive_csharp">
+<a href="#hive_csharp" style="color: inherit; text-decoration: inherit;">Hive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoreshive">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `hive` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oozie_csharp">
+<a href="#oozie_csharp" style="color: inherit; text-decoration: inherit;">Oozie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresoozie">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `oozie` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ambari_go">
+<a href="#ambari_go" style="color: inherit; text-decoration: inherit;">Ambari</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresambari">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
+    </dt>
+    <dd>{{% md %}}An `ambari` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hive_go">
+<a href="#hive_go" style="color: inherit; text-decoration: inherit;">Hive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoreshive">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
+    </dt>
+    <dd>{{% md %}}A `hive` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oozie_go">
+<a href="#oozie_go" style="color: inherit; text-decoration: inherit;">Oozie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresoozie">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
+    </dt>
+    <dd>{{% md %}}An `oozie` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ambari_nodejs">
+<a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresambari">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
+    </dt>
+    <dd>{{% md %}}An `ambari` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hive_nodejs">
+<a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoreshive">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
+    </dt>
+    <dd>{{% md %}}A `hive` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oozie_nodejs">
+<a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresoozie">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
+    </dt>
+    <dd>{{% md %}}An `oozie` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ambari_python">
+<a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresambari">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Ambari]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ambari` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hive_python">
+<a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoreshive">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Hive]</a></span>
+    </dt>
+    <dd>{{% md %}}A `hive` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oozie_python">
+<a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interactivequeryclustermetastoresoozie">Dict[Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Oozie]</a></span>
+    </dt>
+    <dd>{{% md %}}An `oozie` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="interactivequeryclustermetastoresambari">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Ambari</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterMetastoresAmbari">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterMetastoresAmbari">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresAmbariArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresAmbariOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.InteractiveQueryClusterMetastoresAmbariArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.InteractiveQueryClusterMetastoresAmbari.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="interactivequeryclustermetastoreshive">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Hive</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterMetastoresHive">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterMetastoresHive">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresHiveArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresHiveOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.InteractiveQueryClusterMetastoresHiveArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.InteractiveQueryClusterMetastoresHive.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="interactivequeryclustermetastoresoozie">Interactive<wbr>Query<wbr>Cluster<wbr>Metastores<wbr>Oozie</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterMetastoresOozie">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterMetastoresOozie">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresOozieArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMetastoresOozieOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.InteractiveQueryClusterMetastoresOozieArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.InteractiveQueryClusterMetastoresOozie.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="interactivequeryclustermonitor">Interactive<wbr>Query<wbr>Cluster<wbr>Monitor</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterMonitor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterMonitor">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMonitorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#InteractiveQueryClusterMonitorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.InteractiveQueryClusterMonitorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.InteractiveQueryClusterMonitor.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loganalyticsworkspaceid_csharp">
+<a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loganalyticsworkspaceid_go">
+<a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loganalyticsworkspaceid_nodejs">
+<a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="log_analytics_workspace_id_python">
+<a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd>
 
 </dl>

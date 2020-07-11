@@ -12,6 +12,223 @@ meta_desc: "Explore the Profile resource of the network module, including exampl
 
 Manages a Network Profile.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "10.1.0.0/16",
+            },
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.1.0.0/24",
+            Delegations = 
+            {
+                new Azure.Network.Inputs.SubnetDelegationArgs
+                {
+                    Name = "delegation",
+                    ServiceDelegation = new Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs
+                    {
+                        Name = "Microsoft.ContainerInstance/containerGroups",
+                        Actions = 
+                        {
+                            "Microsoft.Network/virtualNetworks/subnets/action",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleProfile = new Azure.Network.Profile("exampleProfile", new Azure.Network.ProfileArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ContainerNetworkInterface = new Azure.Network.Inputs.ProfileContainerNetworkInterfaceArgs
+            {
+                Name = "examplecnic",
+                IpConfigurations = 
+                {
+                    new Azure.Network.Inputs.ProfileContainerNetworkInterfaceIpConfigurationArgs
+                    {
+                        Name = "exampleipconfig",
+                        SubnetId = exampleSubnet.Id,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.1.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.1.0.0/24"),
+			Delegations: network.SubnetDelegationArray{
+				&network.SubnetDelegationArgs{
+					Name: pulumi.String("delegation"),
+					ServiceDelegation: &network.SubnetDelegationServiceDelegationArgs{
+						Name: pulumi.String("Microsoft.ContainerInstance/containerGroups"),
+						Actions: pulumi.StringArray{
+							pulumi.String("Microsoft.Network/virtualNetworks/subnets/action"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewProfile(ctx, "exampleProfile", &network.ProfileArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ContainerNetworkInterface: &network.ProfileContainerNetworkInterfaceArgs{
+				Name: pulumi.String("examplecnic"),
+				IpConfigurations: network.ProfileContainerNetworkInterfaceIpConfigurationArray{
+					&network.ProfileContainerNetworkInterfaceIpConfigurationArgs{
+						Name:     pulumi.String("exampleipconfig"),
+						SubnetId: exampleSubnet.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.1.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.1.0.0/24",
+    delegations=[{
+        "name": "delegation",
+        "serviceDelegation": {
+            "name": "Microsoft.ContainerInstance/containerGroups",
+            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }])
+example_profile = azure.network.Profile("exampleProfile",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    container_network_interface={
+        "name": "examplecnic",
+        "ip_configurations": [{
+            "name": "exampleipconfig",
+            "subnet_id": example_subnet.id,
+        }],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.1.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.1.0.0/24",
+    delegations: [{
+        name: "delegation",
+        serviceDelegation: {
+            name: "Microsoft.ContainerInstance/containerGroups",
+            actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }],
+});
+const exampleProfile = new azure.network.Profile("exampleProfile", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    containerNetworkInterface: {
+        name: "examplecnic",
+        ipConfigurations: [{
+            name: "exampleipconfig",
+            subnetId: exampleSubnet.id,
+        }],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}
@@ -23,7 +240,7 @@ Manages a Network Profile.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#Profile">Profile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_network_interface=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Profile">Profile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_network_interface=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
