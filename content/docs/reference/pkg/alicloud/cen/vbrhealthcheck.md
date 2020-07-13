@@ -120,7 +120,7 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>vbr_instance_id=None<span class="p">, </span>vbr_instance_owner_id=None<span class="p">, </span>vbr_instance_region_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>vbr_instance_id=None<span class="p">, </span>vbr_instance_owner_id=None<span class="p">, </span>vbr_instance_region_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

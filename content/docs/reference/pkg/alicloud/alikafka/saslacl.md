@@ -196,7 +196,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka/#SaslAcl">SaslAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka/#pulumi_alicloud.alikafka.SaslAcl">SaslAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -113,7 +113,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

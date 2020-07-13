@@ -38,7 +38,10 @@ class MyStack : Stack
                     ""Action"": ""sts:AssumeRole"",
                     ""Effect"": ""Allow"",
                     ""Principal"": {
-                        ""RAM"":""acs:ram::103755469187****:root""
+                        ""RAM"":[
+                                ""acs:ram::103755469187****:root""，
+                                ""acs:ram::104408977069****:root""
+                        ]
                     }
                 }
           ],
@@ -72,7 +75,10 @@ example = alicloud.resourcemanager.Role("example",
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
                     "Principal": {
-                        "RAM":"acs:ram::103755469187****:root"
+                        "RAM":[
+                                "acs:ram::103755469187****:root"，
+                                "acs:ram::104408977069****:root"
+                        ]
                     }
                 }
           ],
@@ -99,7 +105,10 @@ const example = new alicloud.resourcemanager.Role("example", {
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
                     "Principal": {
-                        "RAM":"acs:ram::103755469187****:root"
+                        "RAM":[
+                                "acs:ram::103755469187****:root"，
+                                "acs:ram::104408977069****:root"
+                        ]
                     }
                 }
           ],
@@ -124,7 +133,7 @@ const example = new alicloud.resourcemanager.Role("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#Role">Role</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assume_role_policy_document=None<span class="p">, </span>description=None<span class="p">, </span>max_session_duration=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.Role">Role</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assume_role_policy_document=None<span class="p">, </span>description=None<span class="p">, </span>max_session_duration=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

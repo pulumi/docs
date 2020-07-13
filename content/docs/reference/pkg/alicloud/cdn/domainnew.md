@@ -22,7 +22,7 @@ meta_desc: "Explore the DomainNew resource of the cdn module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#DomainNew">DomainNew</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.DomainNew">DomainNew</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -543,6 +543,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="cname_csharp">
+<a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -557,6 +568,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="cname_go">
+<a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,6 +599,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="cname_nodejs">
+<a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -591,6 +624,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="cname_python">
+<a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -621,7 +665,7 @@ Get an existing DomainNew resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>cname=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -759,6 +803,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cname_csharp">
+<a href="#state_cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_domainname_csharp">
 <a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span> 
@@ -839,6 +894,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cname_go">
+<a href="#state_cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -927,6 +993,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cname_nodejs">
+<a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span> 
@@ -1007,6 +1084,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnewcertificateconfig">Dict[Domain<wbr>New<wbr>Certificate<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cname_python">
+<a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.90.0+) The CNAME of the CDN domain.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

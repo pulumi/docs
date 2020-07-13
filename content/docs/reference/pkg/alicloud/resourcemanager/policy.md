@@ -109,7 +109,7 @@ const example = new alicloud.resourcemanager.Policy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>policy_document=None<span class="p">, </span>policy_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>policy_document=None<span class="p">, </span>policy_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -303,8 +303,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="defaultversion_csharp">
 <a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span> 
@@ -312,7 +312,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -354,8 +354,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="defaultversion_go">
 <a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span> 
@@ -363,7 +363,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -405,8 +405,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="defaultversion_nodejs">
 <a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
 </span> 
@@ -414,7 +414,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -456,8 +456,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="default_version_python">
 <a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span> 
@@ -465,7 +465,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -789,8 +789,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_defaultversion_csharp">
 <a href="#state_defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span> 
@@ -798,7 +798,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -862,8 +862,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_defaultversion_go">
 <a href="#state_defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span> 
@@ -871,7 +871,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -935,8 +935,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_defaultversion_nodejs">
 <a href="#state_defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
 </span> 
@@ -944,7 +944,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1008,8 +1008,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_default_version_python">
 <a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span> 
@@ -1017,7 +1017,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

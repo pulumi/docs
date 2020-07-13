@@ -22,7 +22,7 @@ meta_desc: "Explore the Kubernetes resource of the cs module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5621,6 +5621,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -5644,6 +5654,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5677,6 +5697,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -5700,6 +5730,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

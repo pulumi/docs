@@ -22,7 +22,7 @@ meta_desc: "Explore the BackupPolicy resource of the adb module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/adb/#BackupPolicy">BackupPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/adb/#pulumi_alicloud.adb.BackupPolicy">BackupPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

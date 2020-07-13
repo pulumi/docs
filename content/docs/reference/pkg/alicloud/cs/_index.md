@@ -18,6 +18,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
     <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
     <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="symbol resource"></span>RegistryEnterpriseNamespace</a></li>
     <li><a href="registryenterpriserepo" title="RegistryEnterpriseRepo"><span class="symbol resource"></span>RegistryEnterpriseRepo</a></li>
+    <li><a href="registryenterprisesyncrule" title="RegistryEnterpriseSyncRule"><span class="symbol resource"></span>RegistryEnterpriseSyncRule</a></li>
     <li><a href="serverlesskubernetes" title="ServerlessKubernetes"><span class="symbol resource"></span>ServerlessKubernetes</a></li>
     <li><a href="swarm" title="Swarm"><span class="symbol resource"></span>Swarm</a></li>
 </ul>
@@ -29,6 +30,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
     <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
     <li><a href="getregistryenterprisenamespaces" title="GetRegistryEnterpriseNamespaces"><span class="symbol function"></span>GetRegistryEnterpriseNamespaces</a></li>
     <li><a href="getregistryenterpriserepos" title="GetRegistryEnterpriseRepos"><span class="symbol function"></span>GetRegistryEnterpriseRepos</a></li>
+    <li><a href="getregistryenterprisesyncrules" title="GetRegistryEnterpriseSyncRules"><span class="symbol function"></span>GetRegistryEnterpriseSyncRules</a></li>
     <li><a href="getserverlesskubernetesclusters" title="GetServerlessKubernetesClusters"><span class="symbol function"></span>GetServerlessKubernetesClusters</a></li>
 </ul>
 
@@ -41,7 +43,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 

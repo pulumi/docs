@@ -89,7 +89,7 @@ const my_namespace = new alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#RegistryEnterpriseNamespace">RegistryEnterpriseNamespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_create=None<span class="p">, </span>default_visibility=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.RegistryEnterpriseNamespace">RegistryEnterpriseNamespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_create=None<span class="p">, </span>default_visibility=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

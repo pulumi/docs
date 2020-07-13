@@ -229,6 +229,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseSyncRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetRegistryEnterpriseSyncRulesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_instance_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseSyncRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">clusters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -470,6 +475,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetRegistryEnterpriseSyncRulesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_instance_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRegistryEnterpriseSyncRules.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition local instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of sync rule names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.namespace_name">
+<code class="sig-name descname">namespace_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.namespace_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition local namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.repo_name">
+<code class="sig-name descname">repo_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.repo_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition local repo.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.rules">
+<code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.target_instance_id">
+<code class="sig-name descname">target_instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseSyncRulesResult.target_instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition target instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cs.GetServerlessKubernetesClustersResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">clusters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServerlessKubernetesClusters.</p>
@@ -552,6 +611,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <dl class="py attribute">
@@ -945,6 +1005,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <p>The <strong>connections</strong> object supports the following:</p>
@@ -1230,7 +1291,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <dl class="py attribute">
@@ -1556,7 +1617,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <p>The <strong>connections</strong> object supports the following:</p>
@@ -1848,6 +1909,170 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">RegistryEnterpriseSyncRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource will help you to manager Container Registry Enterprise Edition sync rules.</p>
+<p>For information about Container Registry Enterprise Edition sync rules and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/145280.htm">Create a Sync Rule</a></p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.90.0+.</p>
+<p><strong>NOTE:</strong> You need to set your registry password in Container Registry Enterprise Edition console before use this resource.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition source instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition sync rule.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the source repository which should be set together with <code class="docutils literal notranslate"><span class="pre">target_repo_name</span></code>, if empty means that the synchronization scope is the entire namespace level.</p></li>
+<li><p><strong>tag_filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The regular expression used to filter image tags for synchronization in the source repository.</p></li>
+<li><p><strong>target_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition target instance to be synchronized.</p></li>
+<li><p><strong>target_namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>target_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target region to be synchronized.</p></li>
+<li><p><strong>target_repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the target repository.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition source instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition sync rule.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.namespace_name">
+<code class="sig-name descname">namespace_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.namespace_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.repo_name">
+<code class="sig-name descname">repo_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.repo_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the source repository which should be set together with <code class="docutils literal notranslate"><span class="pre">target_repo_name</span></code>, if empty means that the synchronization scope is the entire namespace level.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.rule_id">
+<code class="sig-name descname">rule_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.rule_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uuid of Container Registry Enterprise Edition sync rule.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.sync_direction">
+<code class="sig-name descname">sync_direction</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.sync_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">FROM</span></code> or <code class="docutils literal notranslate"><span class="pre">TO</span></code>, the direction of synchronization. <code class="docutils literal notranslate"><span class="pre">FROM</span></code> means source instance, <code class="docutils literal notranslate"><span class="pre">TO</span></code> means target instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.sync_scope">
+<code class="sig-name descname">sync_scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.sync_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">REPO</span></code> or <code class="docutils literal notranslate"><span class="pre">NAMESPACE</span></code>,the scope that the synchronization rule applies.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.tag_filter">
+<code class="sig-name descname">tag_filter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.tag_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The regular expression used to filter image tags for synchronization in the source repository.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_instance_id">
+<code class="sig-name descname">target_instance_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition target instance to be synchronized.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_namespace_name">
+<code class="sig-name descname">target_namespace_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_namespace_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_region_id">
+<code class="sig-name descname">target_region_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target region to be synchronized.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_repo_name">
+<code class="sig-name descname">target_repo_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.target_repo_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the target repository.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_repo_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegistryEnterpriseSyncRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition source instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition sync rule.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the source repository which should be set together with <code class="docutils literal notranslate"><span class="pre">target_repo_name</span></code>, if empty means that the synchronization scope is the entire namespace level.</p></li>
+<li><p><strong>rule_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uuid of Container Registry Enterprise Edition sync rule.</p></li>
+<li><p><strong>sync_direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">FROM</span></code> or <code class="docutils literal notranslate"><span class="pre">TO</span></code>, the direction of synchronization. <code class="docutils literal notranslate"><span class="pre">FROM</span></code> means source instance, <code class="docutils literal notranslate"><span class="pre">TO</span></code> means target instance.</p></li>
+<li><p><strong>sync_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">REPO</span></code> or <code class="docutils literal notranslate"><span class="pre">NAMESPACE</span></code>,the scope that the synchronization rule applies.</p></li>
+<li><p><strong>tag_filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The regular expression used to filter image tags for synchronization in the source repository.</p></li>
+<li><p><strong>target_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition target instance to be synchronized.</p></li>
+<li><p><strong>target_namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>target_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target region to be synchronized.</p></li>
+<li><p><strong>target_repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the target repository.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseSyncRule.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseSyncRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2456,6 +2681,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>instance_id</strong> (<em>str</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by repository name.</p></li>
 <li><p><strong>namespace</strong> (<em>str</em>) – Name of Container Registry Enterprise Edition namespace where the repositories are located in.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.cs.get_registry_enterprise_sync_rules">
+<code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">get_registry_enterprise_sync_rules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.get_registry_enterprise_sync_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list Container Registry Enterprise Edition sync rules on Alibaba Cloud.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.90.0+</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ids to filter results by sync rule id.</p></li>
+<li><p><strong>instance_id</strong> (<em>str</em>) – ID of Container Registry Enterprise Edition local instance.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by sync rule name.</p></li>
+<li><p><strong>namespace_name</strong> (<em>str</em>) – Name of Container Registry Enterprise Edition local namespace.</p></li>
+<li><p><strong>repo_name</strong> (<em>str</em>) – Name of Container Registry Enterprise Edition local repo.</p></li>
+<li><p><strong>target_instance_id</strong> (<em>str</em>) – ID of Container Registry Enterprise Edition target instance.</p></li>
 </ul>
 </dd>
 </dl>

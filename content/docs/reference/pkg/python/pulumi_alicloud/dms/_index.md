@@ -22,6 +22,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.dms.AwaitableGetEnterpriseUsersResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">AwaitableGetEnterpriseUsersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.AwaitableGetEnterpriseUsersResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dms.EnterpriseInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">EnterpriseInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_link_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dba_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dba_uid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ddl_online</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecs_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecs_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">safe_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">safe_rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_dsql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS Enterprise Instance resource.</p>
@@ -295,6 +300,139 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.dms.EnterpriseUser">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">EnterpriseUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_execute_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_result_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nick_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DMS Enterprise User resource. For information about Alidms Enterprise User and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/98001.htm">What is Resource Alidms Enterprise User</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.90.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>max_execute_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of inquiries on the day.</p></li>
+<li><p><strong>max_result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Query the maximum number of rows on the day.</p></li>
+<li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DingTalk number or mobile number of the user.</p></li>
+<li><p><strong>nick_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The nickname of the user.</p></li>
+<li><p><strong>role_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The roles that the user plays.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of DMS Enterprise User. Valid values: <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>tid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The tenant ID.</p></li>
+<li><p><strong>uid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud unique ID (UID) of the user to add.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.max_execute_count">
+<code class="sig-name descname">max_execute_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.max_execute_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of inquiries on the day.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.max_result_count">
+<code class="sig-name descname">max_result_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.max_result_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the maximum number of rows on the day.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.mobile">
+<code class="sig-name descname">mobile</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.mobile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DingTalk number or mobile number of the user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.nick_name">
+<code class="sig-name descname">nick_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.nick_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The nickname of the user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.role_names">
+<code class="sig-name descname">role_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.role_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The roles that the user plays.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of DMS Enterprise User. Valid values: <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.tid">
+<code class="sig-name descname">tid</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.tid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tenant ID.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.uid">
+<code class="sig-name descname">uid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Alibaba Cloud unique ID (UID) of the user to add.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_execute_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_result_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nick_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EnterpriseUser resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>max_execute_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of inquiries on the day.</p></li>
+<li><p><strong>max_result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Query the maximum number of rows on the day.</p></li>
+<li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DingTalk number or mobile number of the user.</p></li>
+<li><p><strong>nick_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The nickname of the user.</p></li>
+<li><p><strong>role_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The roles that the user plays.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of DMS Enterprise User. Valid values: <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>tid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The tenant ID.</p></li>
+<li><p><strong>uid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud unique ID (UID) of the user to add.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dms.EnterpriseUser.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseUser.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">GetEnterpriseInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">net_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEnterpriseInstances.</p>
@@ -336,6 +474,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="pulumi_alicloud.dms.GetEnterpriseUsersResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">GetEnterpriseUsersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseUsersResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getEnterpriseUsers.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseUsersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseUsersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseUsersResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseUsersResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of DMS Enterprise User IDs (UID).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseUsersResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseUsersResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseUsersResult.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseUsersResult.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of DMS Enterprise Users. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt id="pulumi_alicloud.dms.get_enterprise_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">get_enterprise_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">net_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.get_enterprise_instances" title="Permalink to this definition">¶</a></dt>
@@ -354,6 +522,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>search_key</strong> (<em>str</em>) – The keyword used to query database instances.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – Filter the results by status of the DMS Enterprise Instances. Valid values: <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNAVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">UNKNOWN</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
 <li><p><strong>tid</strong> (<em>float</em>) – The ID of the tenant in Data Management (DMS) Enterprise.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.dms.get_enterprise_users">
+<code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">get_enterprise_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.get_enterprise_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of DMS Enterprise Users in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.90.0+</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of DMS Enterprise User IDs (UID).</p></li>
+<li><p><strong>role</strong> (<em>str</em>) – The role of the user to query.</p></li>
+<li><p><strong>search_key</strong> (<em>str</em>) – The keyword used to query users.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the user.</p></li>
+<li><p><strong>tid</strong> (<em>float</em>) – The ID of the tenant in DMS Enterprise.</p></li>
 </ul>
 </dd>
 </dl>

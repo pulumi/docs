@@ -248,7 +248,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
