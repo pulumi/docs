@@ -11,13 +11,13 @@ tags:
     - Docker
 ---
 
-One of the major advantages of using containers for development is reducing the need to install software and all of the associated dependencies. Developers can start writing code without configuring a development environment that emulated production. The Visual Studio Code Remote - Containers extension lets you develop inside a container. If you want to use Pulumi’s infrastructure as code engine without having to install the Pulumi CLI, this blog post is for you!
+One of the major advantages of using containers for development is reducing the need to install software and associated dependencies. Developers can start writing code without configuring a development environment that emulates production. The Visual Studio Code Remote - Containers extension lets you develop inside a container. If you want to use Pulumi’s infrastructure as code engine without installing the Pulumi CLI, this blog post is for you!
 
 <!--more-->
 
 ## Pre-requisites
 
-To set up your development environment you’ll need Visual Studio Code, [Docker Desktop](https://www.docker.com/products/docker-desktop), and the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+To set up your development environment, you’ll need Visual Studio Code, [Docker Desktop](https://www.docker.com/products/docker-desktop), and the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
 1. Check to see if Docker is running:
 
@@ -57,7 +57,7 @@ Now we can start!
 
     ![Select config file](select_config_file.png)
 
-    VS Code will display a popup asking to build the container. We’ll replace the Dockerfile with the Pulumi Dockerfile, dismiss the popup.
+    VS Code will display a popup asking to build the container. Dismiss the popup, we will replace the Dockerfile with the Pulumi Dockerfile.
 
     ![Popup](build_container_popup.png)
 
@@ -65,7 +65,7 @@ In your project directory, you’ll see a *.devcontainer* directory with a Docke
 
 ## Dockerfile
 
-For this example, we’ll use the standard Pulumi Dockerfile which included the SDK for all the supported languages. Download the [Dockerfile](https://raw.githubusercontent.com/pulumi/pulumi/master/dist/pulumi/Dockerfile) and save it to the .devcontainer directory.
+For this example, we’ll use the standard Pulumi Dockerfile, which includes the SDK for all the supported languages. Download the [Dockerfile](https://raw.githubusercontent.com/pulumi/pulumi/master/dist/pulumi/Dockerfile) and save it to the .devcontainer directory.
 
 ```bash
 $ cd .devcontainer
@@ -74,7 +74,7 @@ $ curl "https://raw.githubusercontent.com/pulumi/pulumi/master/dist/pulumi/Docke
 
 ## Container configuration
 
-Regardless of your cloud provider, you will have to provide your credentials to deploy resources. If you want to save your project to Github or another repository, you don’t want your credentials stored in the repository. There are several ways to do this securely. Using AWS as an example, you can simply export them inside the container, e.g.,
+Regardless of your cloud provider, you will have to provide your credentials to deploy resources. If you want to save your project to Github or another repository, you don’t want your credentials stored in the repository. There are several ways to do this securely. Using AWS as an example, you can export them inside the container, e.g.,
 
 Linux/macOS:
 
@@ -94,7 +94,7 @@ The disadvantage of this method is that you will have to set these environment v
 
 ### Use local environment variables
 
-One alternative is to set the environment variables on your local machine and pass them to the container through the *devcontainer.json* file. This requires that you have VS Code in your path and launch it from the shell.
+One alternative is to set the environment variables on your local machine and pass them to the container through the *devcontainer.json* file. This method requires that you have VS Code in your path and launch it from the shell.
 
 1. Use CTRL+SHIFT+P or CMD+SHIFT+P to bring up the command palette and type *Shell Command: Install ‘code’ command in PATH*. You can set your credentials as environmental variables and launch the VS Code from the shell
 
@@ -117,9 +117,9 @@ One alternative is to set the environment variables on your local machine and pa
 
 ### Use an .env file
 
-Another alternative is to use a devcontainer.env file which contains your credentials.
+Another alternative is to use a devcontainer.env file, which contains your credentials.
 
-1. Create a file with your crendential.
+1. Create a file with your crendentials.
 
     ```
     AWS_ACCESS_KEY_ID=AKIAI44QH8DHBEXAMPLE
@@ -144,7 +144,7 @@ There are many more [configuration options available](https://code.visualstudio.
 
 Again, use the command palette to start the container. Use the Remote Containers: Open Folder in Container... command, and select the project folder. If you’ve already got the folder open locally, you could also use the Remote-Containers: Reopen in Container command.
 
-Check to see if your credentials are set. Open a terminal in VS Code, if it isn’t already open.
+Check to see if your credentials are set. Open a terminal in VS Code if it isn’t already open.
 
 ```bash
 $ root@973a612c1555:/workspaces/my_devcontainer# env | grep AWS
@@ -155,7 +155,7 @@ AWS_ACCESS_KEY_ID=AKIAI44QH8DHBEXAMPLE
 Now we ready to use Pulumi in our VS Code development environment! Let’s try it out by creating an S3 bucket. First, we’ll make a directory for our project and use `pulumi new` to create a default project.
 
 ```bash
-$ mkir my_project
+$ mkdir my_project
 $ cd my_project
 $ pulumi new aws-typescript
 ```
@@ -199,13 +199,13 @@ Pulumi has a repository of examples, and we can create a devcontainer from the r
 
 1. Clone the repository, then follow the steps above to create and configure the Pulumi container image.
 
-    ```
+    ```bash
     $ git clone https://github.com/pulumi/examples.git
     ```
 
-1. Create the configuration files, add the Pulumi Docker file, and add you credentials.
+1. Create the configuration files, add the Pulumi Docker file, and add your credentials.
 
-1. Let’s deploy a Kubernetes cluster! With `pulumi stack init` we can create a stack but we will still need to install the project dependencies and set configuration variables such as the region.
+1. Let’s deploy a Kubernetes cluster! With `pulumi stack init`, we can create a stack, but we will need to install the project dependencies and set configuration variables such as the region.
 
     ```bash
     $ cd aws-ts-eks
@@ -215,7 +215,7 @@ Pulumi has a repository of examples, and we can create a devcontainer from the r
     $ pulumi up
     ```
 
-Here’s the output of the kubeconfig file which you can use with kubectl to manage the cluster.
+Here’s the kubeconfig file's output, which you can use with kubectl to manage the cluster.
 
 ```bash
 Outputs:
@@ -265,4 +265,4 @@ You can now try out any of our infrastructure as code examples with this devcont
 
 ## Conclusion
 
-As you can see, we’ve built our development with VS Code and Docker. Using a Pulumi devcontainer lets you build and deploy infrastructure without having to install Pulumi or any of the associated dependencies on your computer. Moreover, you can share your development environment by creating a repository. Give it a try and let us know what you’re building on [Slack](https://pulumi.slack.com) or on [Twitter](https://twitter.com/pulumicorp).
+As you can see, we’ve built our development with VS Code and Docker. Using a Pulumi devcontainer lets you build and deploy infrastructure without installing Pulumi or any associated dependencies on your computer. Moreover, you can share your development environment by creating a repository. Give it a try and let us know what you’re building on [Slack](https://pulumi.slack.com) or [Twitter](https://twitter.com/pulumicorp).
