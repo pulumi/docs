@@ -3467,7 +3467,7 @@ interface MyResourceProviderInputs {
     ...
 }
 
-class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
+class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
     async create(inputs: MyResourceProviderInputs): Promise<pulumi.dynamic.CreateResult> {
         ...
     }
@@ -3603,7 +3603,7 @@ interface MyResourceProviderOutputs {
     myStringOutput: string;
 }
 
-class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
+class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
     async create(inputs: MyResourceProviderInputs): Promise<pulumi.dynamic.CreateResult> {
         ...
         // Values are for an example only.
