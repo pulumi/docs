@@ -20,7 +20,11 @@ printf "Building web components...\n\n"
 make build_components
 
 printf "Running Hugo...\n\n"
-hugo --minify "$@" --templateMetrics -e production
+if [ $1 == "preview" ]; then
+    hugo --minify --templateMetrics --buildDrafts --buildFuture -e ${GIT_SHA}
+else
+    hugo --minify --templateMetrics -e production
+fi
 
 printf "Compiling the JavaScripts...\n\n"
 yarn run tsc --outFile ${JS_BUNDLE}

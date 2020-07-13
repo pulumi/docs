@@ -73,7 +73,7 @@ build:
 pulumify:
 	@echo -e "\033[0;32mBUILD PULUMIFY:\033[0m"
 	$(MAKE) ensure
-	./scripts/build-site.sh --buildDrafts --buildFuture
+	./scripts/build-site.sh preview
 
 .PHONY: test
 test:
