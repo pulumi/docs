@@ -1,4 +1,5 @@
-{{- if eq hugo.Environment "production" -}}
+{{/* Don't build the search index by default in development. */}}
+{{- if ne hugo.Environment "development" -}}
 {
 {{- $pages := (where .Site.Pages ".Params.exclude_from_pulumi_search_index" "ne" true) -}}
 {{- $lastindex := (sub (len $pages) 1) -}}
