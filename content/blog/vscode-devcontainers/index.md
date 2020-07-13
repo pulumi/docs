@@ -111,7 +111,7 @@ One alternative is to set the environment variables on your local machine and pa
     ```json
     "containerEnv": {
         "AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
-    "AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}"
+        "AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}"
     },
     ```
 
