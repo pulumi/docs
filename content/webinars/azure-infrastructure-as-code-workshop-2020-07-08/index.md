@@ -4,10 +4,10 @@ title: "Azure Infrastructure as Code Workshop"
 meta_desc: "In this workshop, Luke Hoban and the Pulumi team show you how to tackle common challenges using Infrastructure as Code through a series of hands-on labs."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -73,8 +73,8 @@ main:
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "3930102466227813901"
+    gotowebinar_key: "4301429534071051277"
 
     # HubSpot form id.
-    hubspot_form_id: "18b35b8e-efd8-4f4e-88c0-2ff11929d514"
+    hubspot_form_id: "8a1088e2-3f4b-44a5-8129-2315b7874a9e"
 ---

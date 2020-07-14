@@ -29,6 +29,9 @@
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
+                        {{ if eq $preRecorded true }}
+                            <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
+                        {{ end }}
                         <time class="webinar-datetime uppercase text-orange text-sm font-bold">
                             <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
@@ -80,6 +83,10 @@
                             <a href="#gettingStartedList" class="btn">GET STARTED WITH PULUMI</a>
                             <a href="{{ relref $topLevelContext "/webinars" }}" class="ml-3 btn btn-orange">MORE WEBINARS</a>
                         </div>
+                        <span class="uppercase text-orange text-sm font-bold">Recorded on:</span>
+                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
+                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
+                        </time>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
                         </div>
