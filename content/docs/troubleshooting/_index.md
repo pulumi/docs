@@ -72,7 +72,7 @@ $ pulumi up --tracing=file:./up.trace
 To view a trace locally using [AppDash](https://github.com/sourcegraph/appdash):
 
 ```
-$ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ~/Downloads/up.trace
+$ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ./up.trace
 Displaying trace at http://localhost:8008
 ```
 
