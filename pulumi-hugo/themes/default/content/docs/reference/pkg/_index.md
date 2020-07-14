@@ -83,7 +83,7 @@ SDK reference documentation, organized by language.
 {{% choosable language go %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi">pulumi</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi">pulumi</a></dd>
 </dl>
 {{% /choosable %}}
 
