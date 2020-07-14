@@ -50,7 +50,7 @@ main:
     # Duration of the webinar.
     duration: "45 minutes"
     # Datetime of the webinar.
-    datetime: "ON DEMAND"
+    datetime: "MON, MAY 20, 2020 12:00 PM PDT"
     # Description of the webinar.
     description: |
         Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline. Learn how Pulumi’s modern infrastructure as code platform helps your team deliver features faster by helping you to define resources on any cloud using your favorite languages.  Praneet Loke from Pulumi and William Chia from GitLab will show you how to super-charge your team’s velocity with GitOps.
