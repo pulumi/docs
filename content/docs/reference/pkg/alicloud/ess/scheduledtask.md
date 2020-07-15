@@ -271,9 +271,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,8 +283,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -300,7 +298,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -435,9 +433,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,8 +445,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -464,7 +460,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -599,9 +595,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -612,8 +607,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -628,7 +622,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -763,9 +757,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -776,8 +769,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -792,7 +784,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -1132,9 +1124,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1145,8 +1136,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -1161,7 +1151,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -1296,9 +1286,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,8 +1298,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -1325,7 +1313,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -1460,9 +1448,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1473,8 +1460,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -1489,7 +1475,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.
@@ -1624,9 +1610,8 @@ Otherwise, the task is only executed once at the date and time specified by Laun
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.
+    <dd>{{% md %}}Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,8 +1622,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. 
-If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid values:
+    <dd>{{% md %}}Specifies the recurrence type of the scheduled task. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. Valid values:
 - Daily: The scheduled task is executed once every specified number of days.
 - Weekly: The scheduled task is executed on each specified day of a week.
 - Monthly: The scheduled task is executed on each specified day of a month.
@@ -1653,7 +1637,7 @@ If set, both `recurrence_value` and `recurrence_end_time` must be set. Valid val
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how often a scheduled task recurs. The valid value depends on `recurrence_type`
+    <dd>{{% md %}}Specifies how often a scheduled task recurs. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time. The valid value depends on `recurrence_type`
 - Daily: You can enter one value. Valid values: 1 to 31.
 - Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.
 - Monthly: You can enter two values in A-B format. Valid values of A and B: 1 to 31. The value of B must be greater than or equal to the value of A.

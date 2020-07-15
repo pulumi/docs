@@ -2276,7 +2276,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to start the instance in. It is ignored and will be computed when set <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code>.</p></li>
 <li><p><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Performance mode of the t5 burstable instance. Valid values: ‘Standard’, ‘Unlimited’.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of data disks created with instance.</p></li>
-<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the deletion protection or not.</p></li>
+<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the deletion protection or not. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2304,7 +2304,7 @@ However, because of changing instance charge type has CPU core count quota limit
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id37"><span class="problematic" id="id38">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
-<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing ‘image_id’. When it is changed, the instance will reboot to make the change take effect.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing <code class="docutils literal notranslate"><span class="pre">image_id</span></code>. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
 <li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, The default is <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. When it is changed, the instance will reboot to make the change take effect.</p></li>
@@ -2411,9 +2411,10 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key ID corresponding to the Nth data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2478,9 +2479,10 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The KMS key ID corresponding to the Nth data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2498,7 +2500,7 @@ Default to <code class="docutils literal notranslate"><span class="pre">cloud_ef
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.Instance.deletion_protection">
 <code class="sig-name descname">deletion_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Instance.deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether enable the deletion protection or not.</p>
+<dd><p>Whether enable the deletion protection or not. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <ul class="simple">
 <li><p>true: Enable deletion protection.</p></li>
 <li><p>false: Disable deletion protection.</p></li>
@@ -2538,7 +2540,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.Instance.image_id">
 <code class="sig-name descname">image_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Instance.image_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Image to use for the instance. ECS instance’s image can be replaced via changing ‘image_id’. When it is changed, the instance will reboot to make the change take effect.</p>
+<dd><p>The Image to use for the instance. ECS instance’s image can be replaced via changing <code class="docutils literal notranslate"><span class="pre">image_id</span></code>. When it is changed, the instance will reboot to make the change take effect.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2782,7 +2784,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to start the instance in. It is ignored and will be computed when set <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code>.</p></li>
 <li><p><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Performance mode of the t5 burstable instance. Valid values: ‘Standard’, ‘Unlimited’.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of data disks created with instance.</p></li>
-<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the deletion protection or not.</p></li>
+<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the deletion protection or not. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2810,7 +2812,7 @@ However, because of changing instance charge type has CPU core count quota limit
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id43"><span class="problematic" id="id44">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
-<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing ‘image_id’. When it is changed, the instance will reboot to make the change take effect.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing <code class="docutils literal notranslate"><span class="pre">image_id</span></code>. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
 <li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, The default is <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. When it is changed, the instance will reboot to make the change take effect.</p></li>
@@ -2920,9 +2922,10 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key ID corresponding to the Nth data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>

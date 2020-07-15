@@ -16,6 +16,75 @@ An ECI Image Cache can help user to solve the time-consuming problem of image pu
 
 > **NOTE:** Each image cache corresponds to a snapshot, and the user does not delete the snapshot directly, otherwise the cache will fail.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AliCloud.Eci.ImageCache("example", new AliCloud.Eci.ImageCacheArgs
+        {
+            EipInstanceId = "eip-uf60c7cqb2pcrkgxhxxxx",
+            ImageCacheName = "tf-test",
+            Images = 
+            {
+                "registry.cn-beijing.aliyuncs.com/sceneplatform/sae-image-xxxx:latest",
+            },
+            SecurityGroupId = "sg-2zeef68b66fxxxx",
+            VswitchId = "vsw-2zef9k7ng82xxxx",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.eci.ImageCache("example",
+    eip_instance_id="eip-uf60c7cqb2pcrkgxhxxxx",
+    image_cache_name="tf-test",
+    images=["registry.cn-beijing.aliyuncs.com/sceneplatform/sae-image-xxxx:latest"],
+    security_group_id="sg-2zeef68b66fxxxx",
+    vswitch_id="vsw-2zef9k7ng82xxxx")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.eci.ImageCache("example", {
+    eipInstanceId: "eip-uf60c7cqb2pcrkgxhxxxx",
+    imageCacheName: "tf-test",
+    images: ["registry.cn-beijing.aliyuncs.com/sceneplatform/sae-image-xxxx:latest"],
+    securityGroupId: "sg-2zeef68b66fxxxx",
+    vswitchId: "vsw-2zef9k7ng82xxxx",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ImageCache Resource {#create}

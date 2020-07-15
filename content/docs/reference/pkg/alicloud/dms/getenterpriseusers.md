@@ -14,6 +14,75 @@ This data source provides a list of DMS Enterprise Users in an Alibaba Cloud acc
 
 > **NOTE:** Available in 1.90.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dmsEnterpriseUsersDs = Output.Create(AliCloud.Dms.GetEnterpriseUsers.InvokeAsync(new AliCloud.Dms.GetEnterpriseUsersArgs
+        {
+            Ids = 
+            {
+                "uid",
+            },
+            Role = "USER",
+            Status = "NORMAL",
+        }));
+        this.FirstUserId = dmsEnterpriseUsersDs.Apply(dmsEnterpriseUsersDs => dmsEnterpriseUsersDs.Users[0].Id);
+    }
+
+    [Output("firstUserId")]
+    public Output<string> FirstUserId { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+dms_enterprise_users_ds = alicloud.dms.get_enterprise_users(ids=["uid"],
+    role="USER",
+    status="NORMAL")
+pulumi.export("firstUserId", dms_enterprise_users_ds.users[0]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const dmsEnterpriseUsersDs = pulumi.output(alicloud.dms.getEnterpriseUsers({
+    ids: ["uid"],
+    role: "USER",
+    status: "NORMAL",
+}, { async: true }));
+
+export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetEnterpriseUsers {#using}

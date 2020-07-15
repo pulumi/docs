@@ -16,6 +16,76 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 
 > **NOTE:** Available in 1.90.0+ .
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(AliCloud.Waf.GetInstances.InvokeAsync(new AliCloud.Waf.GetInstancesArgs
+        {
+            Ids = 
+            {
+                "waf-cn-09k********",
+            },
+            Status = "1",
+            ResourceGroupId = "rg-acfmwvv********",
+            InstanceSource = "waf-cloud",
+        }));
+        this.TheFirstWafInstanceId = @default.Apply(@default => @default.Instances[0].Id);
+    }
+
+    [Output("theFirstWafInstanceId")]
+    public Output<string> TheFirstWafInstanceId { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.waf.get_instances(ids=["waf-cn-09k********"],
+    status="1",
+    resource_group_id="rg-acfmwvv********",
+    instance_source="waf-cloud")
+pulumi.export("theFirstWafInstanceId", default.instances[0]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const default = alicloud.waf.getInstances({
+    ids: ["waf-cn-09k********"],
+    status: "1",
+    resourceGroupId: "rg-acfmwvv********",
+    instanceSource: "waf-cloud",
+});
+export const theFirstWafInstanceId = _default.then(_default => _default.instances[0].id);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInstances {#using}
