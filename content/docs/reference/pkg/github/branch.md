@@ -104,7 +104,7 @@ const development = new github.Branch("development", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Branch">Branch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>repository=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Branch">Branch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>repository=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

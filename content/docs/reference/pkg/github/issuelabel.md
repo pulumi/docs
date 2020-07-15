@@ -22,7 +22,7 @@ meta_desc: "Explore the IssueLabel resource of the GitHub package, including exa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#IssueLabel">IssueLabel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>repository=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.IssueLabel">IssueLabel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>repository=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

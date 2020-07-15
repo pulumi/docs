@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>anonymous=None<span class="p">, </span>base_url=None<span class="p">, </span>individual=None<span class="p">, </span>insecure=None<span class="p">, </span>organization=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>anonymous=None<span class="p">, </span>base_url=None<span class="p">, </span>individual=None<span class="p">, </span>insecure=None<span class="p">, </span>organization=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -198,8 +198,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="anonymous_csharp">
 <a href="#anonymous_csharp" style="color: inherit; text-decoration: inherit;">Anonymous</a>
 </span> 
@@ -208,7 +208,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
 authentication.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -221,16 +221,15 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="individual_csharp">
 <a href="#individual_csharp" style="color: inherit; text-decoration: inherit;">Individual</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -272,8 +271,8 @@ authentication.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="anonymous_go">
 <a href="#anonymous_go" style="color: inherit; text-decoration: inherit;">Anonymous</a>
 </span> 
@@ -282,7 +281,7 @@ authentication.
     </dt>
     <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
 authentication.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -295,16 +294,15 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="individual_go">
 <a href="#individual_go" style="color: inherit; text-decoration: inherit;">Individual</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -346,8 +344,8 @@ authentication.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="anonymous_nodejs">
 <a href="#anonymous_nodejs" style="color: inherit; text-decoration: inherit;">anonymous</a>
 </span> 
@@ -356,7 +354,7 @@ authentication.
     </dt>
     <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
 authentication.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -369,16 +367,15 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="individual_nodejs">
 <a href="#individual_nodejs" style="color: inherit; text-decoration: inherit;">individual</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -420,8 +417,8 @@ authentication.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="anonymous_python">
 <a href="#anonymous_python" style="color: inherit; text-decoration: inherit;">anonymous</a>
 </span> 
@@ -430,7 +427,7 @@ authentication.
     </dt>
     <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
 authentication.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -443,16 +440,15 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="individual_python">
 <a href="#individual_python" style="color: inherit; text-decoration: inherit;">individual</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Run outside an organization. When `individual`is true, the provider will run outside the scope of anorganization.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

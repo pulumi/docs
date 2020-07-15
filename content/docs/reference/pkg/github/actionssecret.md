@@ -22,7 +22,7 @@ meta_desc: "Explore the ActionsSecret resource of the GitHub package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#ActionsSecret">ActionsSecret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>plaintext_value=None<span class="p">, </span>repository=None<span class="p">, </span>secret_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.ActionsSecret">ActionsSecret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>plaintext_value=None<span class="p">, </span>repository=None<span class="p">, </span>secret_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

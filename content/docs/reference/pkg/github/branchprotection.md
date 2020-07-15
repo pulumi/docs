@@ -25,7 +25,7 @@ This resource allows you to configure branch protection for repositories in your
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
