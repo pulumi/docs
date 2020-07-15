@@ -77,6 +77,17 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Available in v1.89.0+.</p>
 <p><strong>NOTE:</strong> Each image cache corresponds to a snapshot, and the user does not delete the snapshot directly, otherwise the cache will fail.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">eci</span><span class="o">.</span><span class="n">ImageCache</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">eip_instance_id</span><span class="o">=</span><span class="s2">&quot;eip-uf60c7cqb2pcrkgxhxxxx&quot;</span><span class="p">,</span>
+    <span class="n">image_cache_name</span><span class="o">=</span><span class="s2">&quot;tf-test&quot;</span><span class="p">,</span>
+    <span class="n">images</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;registry.cn-beijing.aliyuncs.com/sceneplatform/sae-image-xxxx:latest&quot;</span><span class="p">],</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="s2">&quot;sg-2zeef68b66fxxxx&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;vsw-2zef9k7ng82xxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

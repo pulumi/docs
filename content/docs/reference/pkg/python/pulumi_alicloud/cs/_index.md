@@ -1935,6 +1935,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in v1.90.0+.</p>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry Enterprise Edition console before use this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">RegistryEnterpriseSyncRule</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;my-source-instance-id&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="s2">&quot;my-source-namespace&quot;</span><span class="p">,</span>
+    <span class="n">repo_name</span><span class="o">=</span><span class="s2">&quot;my-source-repo&quot;</span><span class="p">,</span>
+    <span class="n">tag_filter</span><span class="o">=</span><span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="n">target_instance_id</span><span class="o">=</span><span class="s2">&quot;my-target-instance-id&quot;</span><span class="p">,</span>
+    <span class="n">target_namespace_name</span><span class="o">=</span><span class="s2">&quot;my-target-namespace&quot;</span><span class="p">,</span>
+    <span class="n">target_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">target_repo_name</span><span class="o">=</span><span class="s2">&quot;my-target-repo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2693,6 +2707,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.90.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_sync_rules</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_registry_enterprise_sync_rules</span><span class="p">(</span><span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;cri-xxx&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="s2">&quot;test-namespace&quot;</span><span class="p">,</span>
+    <span class="n">repo_name</span><span class="o">=</span><span class="s2">&quot;test-repo&quot;</span><span class="p">,</span>
+    <span class="n">target_instance_id</span><span class="o">=</span><span class="s2">&quot;cri-yyy&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;test-rule&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">my_sync_rules</span><span class="o">.</span><span class="n">rules</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

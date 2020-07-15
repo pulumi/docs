@@ -14,6 +14,72 @@ Provides a DMS Enterprise User resource. For information about Alidms Enterprise
 
 > **NOTE:** Available in 1.90.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AliCloud.Dms.EnterpriseUser("example", new AliCloud.Dms.EnterpriseUserArgs
+        {
+            Mobile = "1591066xxxx",
+            NickName = "tf-test",
+            RoleNames = 
+            {
+                "DBA",
+            },
+            Uid = "uid",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.dms.EnterpriseUser("example",
+    mobile="1591066xxxx",
+    nick_name="tf-test",
+    role_names=["DBA"],
+    uid="uid")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.dms.EnterpriseUser("example", {
+    mobile: "1591066xxxx",
+    nickName: "tf-test",
+    roleNames: ["DBA"],
+    uid: "uid",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EnterpriseUser Resource {#create}

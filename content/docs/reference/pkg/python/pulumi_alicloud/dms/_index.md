@@ -306,6 +306,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.90.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">EnterpriseUser</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;1591066xxxx&quot;</span><span class="p">,</span>
+    <span class="n">nick_name</span><span class="o">=</span><span class="s2">&quot;tf-test&quot;</span><span class="p">,</span>
+    <span class="n">role_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;DBA&quot;</span><span class="p">],</span>
+    <span class="n">uid</span><span class="o">=</span><span class="s2">&quot;uid&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -534,6 +544,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.90.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">dms_enterprise_users_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">get_enterprise_users</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;uid&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;USER&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;NORMAL&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstUserId&quot;</span><span class="p">,</span> <span class="n">dms_enterprise_users_ds</span><span class="o">.</span><span class="n">users</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

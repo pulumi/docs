@@ -18,6 +18,81 @@ For information about Container Registry Enterprise Edition sync rules and how t
 
 > **NOTE:** You need to set your registry password in Container Registry Enterprise Edition console before use this resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.CS.RegistryEnterpriseSyncRule("default", new AliCloud.CS.RegistryEnterpriseSyncRuleArgs
+        {
+            InstanceId = "my-source-instance-id",
+            NamespaceName = "my-source-namespace",
+            RepoName = "my-source-repo",
+            TagFilter = ".*",
+            TargetInstanceId = "my-target-instance-id",
+            TargetNamespaceName = "my-target-namespace",
+            TargetRegionId = "cn-hangzhou",
+            TargetRepoName = "my-target-repo",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.cs.RegistryEnterpriseSyncRule("default",
+    instance_id="my-source-instance-id",
+    namespace_name="my-source-namespace",
+    repo_name="my-source-repo",
+    tag_filter=".*",
+    target_instance_id="my-target-instance-id",
+    target_namespace_name="my-target-namespace",
+    target_region_id="cn-hangzhou",
+    target_repo_name="my-target-repo")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultRegistryEnterpriseSyncRule = new alicloud.cs.RegistryEnterpriseSyncRule("default", {
+    instanceId: "my-source-instance-id",
+    namespaceName: "my-source-namespace",
+    repoName: "my-source-repo",
+    tagFilter: ".*",
+    targetInstanceId: "my-target-instance-id",
+    targetNamespaceName: "my-target-namespace",
+    targetRegionId: "cn-hangzhou",
+    targetRepoName: "my-target-repo",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegistryEnterpriseSyncRule Resource {#create}

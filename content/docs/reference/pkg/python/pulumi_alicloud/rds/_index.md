@@ -1121,7 +1121,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <li><p><strong>security_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
 <li><p><strong>sql_collector_config_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The sql collector keep time of the instance. Valid values are <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">180</span></code>, <code class="docutils literal notranslate"><span class="pre">365</span></code>, <code class="docutils literal notranslate"><span class="pre">1095</span></code>, <code class="docutils literal notranslate"><span class="pre">1825</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
 <li><p><strong>sql_collector_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sql collector status of the instance. Valid values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
-<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
+<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <cite>Update</cite>: update SSL certificate. See more [engine and engineVersion limitation](<a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26254.htm">https://www.alibabacloud.com/help/zh/doc-detail/26254.htm</a>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -1133,7 +1133,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
+<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status. See more <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26256.htm">engine and engineVersion limitation</a>.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in the one of them.
@@ -1316,7 +1316,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="py attribute">
 <dt id="pulumi_alicloud.rds.Instance.ssl_action">
 <code class="sig-name descname">ssl_action</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.ssl_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p>
+<dd><p>Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <cite>Update</cite>: update SSL certificate. See more [engine and engineVersion limitation](<a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26254.htm">https://www.alibabacloud.com/help/zh/doc-detail/26254.htm</a>).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1338,7 +1338,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="py attribute">
 <dt id="pulumi_alicloud.rds.Instance.tde_status">
 <code class="sig-name descname">tde_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.tde_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The TDE(Transparent Data Encryption) status.</p>
+<dd><p>The TDE(Transparent Data Encryption) status. See more <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26256.htm">engine and engineVersion limitation</a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1430,7 +1430,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <li><p><strong>security_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
 <li><p><strong>sql_collector_config_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The sql collector keep time of the instance. Valid values are <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">180</span></code>, <code class="docutils literal notranslate"><span class="pre">365</span></code>, <code class="docutils literal notranslate"><span class="pre">1095</span></code>, <code class="docutils literal notranslate"><span class="pre">1825</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
 <li><p><strong>sql_collector_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sql collector status of the instance. Valid values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
-<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
+<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <cite>Update</cite>: update SSL certificate. See more [engine and engineVersion limitation](<a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26254.htm">https://www.alibabacloud.com/help/zh/doc-detail/26254.htm</a>).</p></li>
 <li><p><strong>ssl_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the SSL feature. <cite>Yes</cite>: SSL is turned on; <cite>No</cite>: SSL is turned off.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -1443,7 +1443,8 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
+<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The TDE(Transparent Data Encryption) status. See more <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/26256.htm">engine and engineVersion limitation</a>.</p>
+</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in the one of them.

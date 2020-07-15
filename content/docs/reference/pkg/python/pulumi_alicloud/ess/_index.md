@@ -2011,11 +2011,9 @@ Otherwise, the task is only executed once at the date and time specified by Laun
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>max_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.</p></li>
 <li><p><strong>min_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.</p></li>
-<li><p><strong>recurrence_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.</p></li>
-<li><p><strong>recurrence_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the recurrence type of the scheduled task. 
-If set, both <code class="docutils literal notranslate"><span class="pre">recurrence_value</span></code> and <code class="docutils literal notranslate"><span class="pre">recurrence_end_time</span></code> must be set. Valid values:</p></li>
+<li><p><strong>recurrence_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time.</p></li>
+<li><p><strong>recurrence_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the recurrence type of the scheduled task. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. Valid values:</p></li>
 </ul>
 </dd>
 </dl>
@@ -2027,7 +2025,7 @@ If set, both <code class="docutils literal notranslate"><span class="pre">recurr
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>recurrence_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how often a scheduled task recurs. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
+<dd class="field-odd"><p><strong>recurrence_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how often a scheduled task recurs. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Daily: You can enter one value. Valid values: 1 to 31.
@@ -2088,16 +2086,14 @@ Otherwise, the task is only executed once at the date and time specified by Laun
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ess.ScheduledTask.recurrence_end_time">
 <code class="sig-name descname">recurrence_end_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScheduledTask.recurrence_end_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.</p>
+<dd><p>Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ess.ScheduledTask.recurrence_type">
 <code class="sig-name descname">recurrence_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScheduledTask.recurrence_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the recurrence type of the scheduled task. 
-If set, both <code class="docutils literal notranslate"><span class="pre">recurrence_value</span></code> and <code class="docutils literal notranslate"><span class="pre">recurrence_end_time</span></code> must be set. Valid values:</p>
+<dd><p>Specifies the recurrence type of the scheduled task. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. Valid values:</p>
 <ul class="simple">
 <li><p>Daily: The scheduled task is executed once every specified number of days.</p></li>
 <li><p>Weekly: The scheduled task is executed on each specified day of a week.</p></li>
@@ -2109,7 +2105,7 @@ If set, both <code class="docutils literal notranslate"><span class="pre">recurr
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ess.ScheduledTask.recurrence_value">
 <code class="sig-name descname">recurrence_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScheduledTask.recurrence_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies how often a scheduled task recurs. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
+<dd><p>Specifies how often a scheduled task recurs. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
 <ul class="simple">
 <li><p>Daily: You can enter one value. Valid values: 1 to 31.</p></li>
 <li><p>Weekly: You can enter multiple values and separate them with commas (,). For example, the values 0 to 6 correspond to the days of the week in sequence from Sunday to Saturday.</p></li>
@@ -2162,11 +2158,9 @@ If the <code class="docutils literal notranslate"><span class="pre">recurrence_t
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.</p></li>
 <li><p><strong>max_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.</p></li>
 <li><p><strong>min_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.</p></li>
-<li><p><strong>recurrence_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the end time after which the scheduled task is no longer repeated. 
-Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
-The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.</p></li>
-<li><p><strong>recurrence_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the recurrence type of the scheduled task. 
-If set, both <code class="docutils literal notranslate"><span class="pre">recurrence_value</span></code> and <code class="docutils literal notranslate"><span class="pre">recurrence_end_time</span></code> must be set. Valid values:</p></li>
+<li><p><strong>recurrence_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the end time after which the scheduled task is no longer repeated. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time.</p></li>
+<li><p><strong>recurrence_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the recurrence type of the scheduled task. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. Valid values:</p></li>
 </ul>
 </dd>
 </dl>
@@ -2178,7 +2172,7 @@ If set, both <code class="docutils literal notranslate"><span class="pre">recurr
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>recurrence_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how often a scheduled task recurs. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
+<dd class="field-odd"><p><strong>recurrence_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how often a scheduled task recurs. <strong>NOTE:</strong> You must specify <code class="docutils literal notranslate"><span class="pre">RecurrenceType</span></code>, <code class="docutils literal notranslate"><span class="pre">RecurrenceValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">RecurrenceEndTime</span></code> at the same time. The valid value depends on <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code></p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Daily: You can enter one value. Valid values: 1 to 31.

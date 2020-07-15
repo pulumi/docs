@@ -22,7 +22,7 @@ meta_desc: "Explore the CommonBandwithPackage resource of the vpc module, includ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.CommonBandwithPackage">CommonBandwithPackage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth=None<span class="p">, </span>description=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>ratio=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.CommonBandwithPackage">CommonBandwithPackage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth=None<span class="p">, </span>description=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>isp=None<span class="p">, </span>name=None<span class="p">, </span>ratio=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -229,6 +229,17 @@ The CommonBandwithPackage resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isp_csharp">
+<a href="#isp_csharp" style="color: inherit; text-decoration: inherit;">Isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -298,6 +309,17 @@ The CommonBandwithPackage resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The billing method of the common bandwidth package. Valid values are "PayByBandwidth" and "PayBy95" and "PayByTraffic". "PayBy95" is pay by classic 95th percentile pricing. International Account doesn't supports "PayByBandwidth" and "PayBy95". Default to "PayByTraffic".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isp_go">
+<a href="#isp_go" style="color: inherit; text-decoration: inherit;">Isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -375,6 +397,17 @@ The CommonBandwithPackage resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isp_nodejs">
+<a href="#isp_nodejs" style="color: inherit; text-decoration: inherit;">isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -444,6 +477,17 @@ The CommonBandwithPackage resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The billing method of the common bandwidth package. Valid values are "PayByBandwidth" and "PayBy95" and "PayByTraffic". "PayBy95" is pay by classic 95th percentile pricing. International Account doesn't supports "PayByBandwidth" and "PayBy95". Default to "PayByTraffic".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isp_python">
+<a href="#isp_python" style="color: inherit; text-decoration: inherit;">isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -577,7 +621,7 @@ Get an existing CommonBandwithPackage resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth=None<span class="p">, </span>description=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>ratio=None<span class="p">, </span>resource_group_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth=None<span class="p">, </span>description=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>isp=None<span class="p">, </span>name=None<span class="p">, </span>ratio=None<span class="p">, </span>resource_group_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -726,6 +770,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_isp_csharp">
+<a href="#state_isp_csharp" style="color: inherit; text-decoration: inherit;">Isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -795,6 +850,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The billing method of the common bandwidth package. Valid values are "PayByBandwidth" and "PayBy95" and "PayByTraffic". "PayBy95" is pay by classic 95th percentile pricing. International Account doesn't supports "PayByBandwidth" and "PayBy95". Default to "PayByTraffic".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_isp_go">
+<a href="#state_isp_go" style="color: inherit; text-decoration: inherit;">Isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,6 +938,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_isp_nodejs">
+<a href="#state_isp_nodejs" style="color: inherit; text-decoration: inherit;">isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -941,6 +1018,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The billing method of the common bandwidth package. Valid values are "PayByBandwidth" and "PayBy95" and "PayByTraffic". "PayBy95" is pay by classic 95th percentile pricing. International Account doesn't supports "PayByBandwidth" and "PayBy95". Default to "PayByTraffic".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_isp_python">
+<a href="#state_isp_python" style="color: inherit; text-decoration: inherit;">isp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Internet Service Provider. Default to `BGP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

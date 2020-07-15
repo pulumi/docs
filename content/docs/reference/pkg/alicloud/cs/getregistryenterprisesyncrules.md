@@ -14,6 +14,77 @@ This data source provides a list Container Registry Enterprise Edition sync rule
 
 > **NOTE:** Available in v1.90.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mySyncRules = Output.Create(AliCloud.CS.GetRegistryEnterpriseSyncRules.InvokeAsync(new AliCloud.CS.GetRegistryEnterpriseSyncRulesArgs
+        {
+            InstanceId = "cri-xxx",
+            NamespaceName = "test-namespace",
+            RepoName = "test-repo",
+            TargetInstanceId = "cri-yyy",
+            NameRegex = "test-rule",
+        }));
+        this.Output = mySyncRules.Apply(mySyncRules => mySyncRules.Rules.Select(__item => __item.Id).ToList());
+    }
+
+    [Output("output")]
+    public Output<string> Output { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_sync_rules = alicloud.cs.get_registry_enterprise_sync_rules(instance_id="cri-xxx",
+    namespace_name="test-namespace",
+    repo_name="test-repo",
+    target_instance_id="cri-yyy",
+    name_regex="test-rule")
+pulumi.export("output", [__item["id"] for __item in my_sync_rules.rules])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const mySyncRules = alicloud.cs.getRegistryEnterpriseSyncRules({
+    instanceId: "cri-xxx",
+    namespaceName: "test-namespace",
+    repoName: "test-repo",
+    targetInstanceId: "cri-yyy",
+    nameRegex: "test-rule",
+});
+export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__item => __item.id));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRegistryEnterpriseSyncRules {#using}

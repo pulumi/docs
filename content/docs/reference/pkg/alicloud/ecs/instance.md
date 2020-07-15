@@ -202,7 +202,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -305,7 +305,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -818,7 +818,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -1228,7 +1228,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1331,7 +1331,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1844,7 +1844,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -2573,7 +2573,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -2634,7 +2634,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3097,7 +3097,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -3158,7 +3158,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3621,7 +3621,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -3682,7 +3682,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4145,7 +4145,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
+    <dd>{{% md %}}Whether enable the deletion protection or not. Default value: `false`.
 - true: Enable deletion protection.
 - false: Disable deletion protection.
 {{% /md %}}</dd>
@@ -4206,7 +4206,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing `image_id`. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4669,7 +4669,7 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param. Default value: `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4691,7 +4691,18 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The KMS key ID corresponding to the Nth data disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4775,7 +4786,7 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param. Default value: `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4797,7 +4808,18 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The KMS key ID corresponding to the Nth data disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4881,7 +4903,7 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param. Default value: `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4903,7 +4925,18 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The KMS key ID corresponding to the Nth data disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4987,7 +5020,7 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param. Default value: `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5009,7 +5042,18 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk. Default value: `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The KMS key ID corresponding to the Nth data disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
