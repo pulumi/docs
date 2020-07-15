@@ -146,7 +146,7 @@ const someTeamMembership = new github.TeamMembership("some_team_membership", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/github/#TeamMembership">TeamMembership</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.TeamMembership">TeamMembership</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
