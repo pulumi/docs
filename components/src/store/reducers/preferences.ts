@@ -7,6 +7,7 @@ const getInitialState = (): PreferencesState => {
     return {
         language: "typescript",
         k8sLanguage: "typescript",
+        inputKind: "url",
         os: guessOS(),
         cloud: "aws",
     };
@@ -36,6 +37,8 @@ export const preferences = (currentState = getInitialState(), action: ActionType
             return { ...currentState, language: action.key };
         case TypeKeys.SET_K8S_LANGUAGE:
             return { ...currentState, k8sLanguage: action.key };
+        case TypeKeys.SET_INPUT_KIND:
+            return { ...currentState, inputKind: action.key };
         case TypeKeys.SET_OS:
             return { ...currentState, os: action.key };
         case TypeKeys.SET_CLOUD:
