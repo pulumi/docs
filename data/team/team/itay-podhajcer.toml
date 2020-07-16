@@ -1,0 +1,11 @@
+id = "itay-podhajcer"
+name = "Itay Podhajcer"
+title = "Chief Architect at Velocity Career Labs"
+weight = 1
+
+status = "active"
+
+[social]
+github = "ItayPodhajcer"
+linkedin = "itaypodhajcer"
+twitter = "ItayPodhajcer"
