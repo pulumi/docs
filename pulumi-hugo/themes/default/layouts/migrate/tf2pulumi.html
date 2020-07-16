@@ -1,0 +1,25 @@
+{{ define "hero" }}
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1 class="text-center">Convert Your Terraform to a Real Language</h1>
+                <p class="text-center">
+                    If you already have some Terraform and want to see what it would look like
+                    in your favorite language, don't worry &mdash; we've got you covered. This
+                    conversion tool will do the magic of translating your HCL into real code.
+                </p>
+                <section class="container mx-auto mt-8">
+                    <div class="rounded bg-gray-200 text-black p-16 w-full mx-auto">
+                        {{ .Content }}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+
+    {{ partial "get-started.html" . }}
+
+{{ end }}

@@ -1,18 +1,19 @@
 import { Component, Element, h, Listen, Prop, State } from "@stencil/core";
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setInputKind, setOS, setCloud } from "../../store/actions/preferences";
 
-export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic"
-export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx"
-export type OSKey = "macos" | "linux" | "windows"
+export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic";
+export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
+export type InputKindKey = "url" | "code" | "upload";
+export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud;
+export type ChooserType = "language" | "k8s-language" | "input-kind" | "os" | "cloud";
+export type ChooserKey = LanguageKey | K8sLanguageKey | InputKindKey | OSKey | CloudKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedInputKind | SupportedOS | SupportedCloud;
 
 interface SupportedLanguage {
     key: LanguageKey;
@@ -23,6 +24,12 @@ interface SupportedLanguage {
 
 interface SupportedK8sLanguage {
     key: K8sLanguageKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedInputKind {
+    key: InputKindKey;
     name: string;
     preview: boolean;
 }
@@ -109,6 +116,7 @@ export class Chooser {
     // Dispatch functions for handling the selection of an option.
     setLanguage: typeof setLanguage;
     setK8sLanguage: typeof setK8sLanguage;
+    setInputKind: typeof setInputKind;
     setOS: typeof setOS;
     setCloud: typeof setCloud;
 
@@ -141,11 +149,11 @@ export class Chooser {
         this.parseOptions();
 
         // Map internal methods to actions defined on the store.
-        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
+        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setInputKind, setOS, setCloud });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
-            const { preferences: { language, k8sLanguage, os, cloud } } = state;
+            const { preferences: { language, k8sLanguage, inputKind, os, cloud } } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
             // may not be available as an option. When that happens, we switch into local
@@ -183,6 +191,8 @@ export class Chooser {
                     return preferredOrDefault(language);
                 case "k8s-language":
                     return preferredOrDefault(k8sLanguage);
+                case "input-kind":
+                    return preferredOrDefault(inputKind);
                 case "os":
                     return preferredOrDefault(os);
                 case "cloud":
@@ -248,6 +258,9 @@ export class Chooser {
             case "k8s-language":
                 options = this.supportedk8sLanguages;
                 break;
+            case "input-kind":
+                options = this.supportedInputKinds;
+                break;
             case "os":
                 options = this.supportedOSs;
                 break;
@@ -286,6 +299,9 @@ export class Chooser {
                     break;
                 case "k8s-language":
                     this.setK8sLanguage(key as K8sLanguageKey);
+                    break;
+                case "input-kind":
+                    this.setInputKind(key as InputKindKey);
                     break;
                 case "os":
                     this.setOS(key as OSKey);
@@ -368,6 +384,25 @@ export class Chooser {
         {
             key: "yaml",
             name: "YAML",
+            preview: false,
+        },
+    ];
+
+    // The list of supported input kinds.
+    private supportedInputKinds: SupportedInputKind[] = [
+        {
+            key: "url",
+            name: "URL",
+            preview: false,
+        },
+        {
+            key: "code",
+            name: "Code",
+            preview: false,
+        },
+        {
+            key: "upload",
+            name: "Upload",
             preview: false,
         },
     ];
