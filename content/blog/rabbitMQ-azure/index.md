@@ -1,5 +1,5 @@
 ---
-title: "Deploying a Geo-Redundant Serverless RabbitMQ Cluster on Azure Using Pulumi for .NET"
+title: "Deploy a Serverless RabbitMQ Cluster on Azure with .NET"
 date: 2020-07-16
 meta_desc: "Deploying a Geo-Redundant Serverless RabbitMQ Cluster on Azure Using Pulumi for .NET"
 meta_image: 1.png
@@ -49,7 +49,7 @@ As we will be using Pulumi for .NET to deploy to Azure, we will need the followi
 
 The complete example of deploying the RabbitMQ cluster can be downloaded or cloned for the following GitHub repository:
 
-[![](repo.png)](https://github.com/cladular/pulumi-rabbitmq-azure)
+[![Github link](repo.png)](https://github.com/cladular/pulumi-rabbitmq-azure)
 <br>
 
 When running `pulumi up` you will be asked to create a stack (you can use whatever you here like `Example`) and set a passphrase (you can leave it empty and press enter as there are no stored secrets in this stack).
