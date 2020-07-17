@@ -107,7 +107,6 @@ TODO:
     </div>
 </div>
 
-
 {{% /choosable %}}
 
 {{% choosable language "typescript" %}}
@@ -220,7 +219,6 @@ function convertCode() {
         language = "typescript";
         languageTextbox = "javascript";
     }
-    console.log(language);
 
     // Clear the current fields.
     $("#pulumi-errors").text("");
@@ -244,7 +242,7 @@ function convertCode() {
     $(document.body).css({"cursor": "wait"});
     $("#convert-button").css({"cursor": "wait"});
     $.post({
-        url: "https://7r4m6oz4s5.execute-api.us-west-2.amazonaws.com/stage/convert",
+        url: "https://ukfk72ln69.execute-api.us-west-2.amazonaws.com/stage/convert",
         data: payload,
         dataType: "json",
     }).done(function(data) {
