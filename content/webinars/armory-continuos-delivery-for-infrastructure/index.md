@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Armory + Pulumi: Continuous Delivery for your IaC"
-meta_desc: "Learn how the Pulumi plugin for Spinnaker to simplify your deployments by having infrastructure and application code in a single workflow."
+meta_desc: "Learn how the Pulumi plugin for Spinnaker simplifies your deployments by having infrastructure and application code in a single workflow."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,7 +34,7 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "armory-continuos-delivery-for-infrastructure"
+url_slug: "armory-continuous-delivery-for-infrastructure"
 
 # The content of the hero section.
 hero:
