@@ -26,7 +26,60 @@ const config = {
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
     redirectDomain: stackConfig.get("redirectDomain") || undefined,
+    // originBucketNameOverride is an optional value that can be used to manually pin the
+    // website to a specific S3 bucket.
+    originBucketNameOverride: stackConfig.get("originBucketNameOverride") || undefined,
+    // pathToOriginBucketMetadata is the path to the file produced at the end of a production build.
+    pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
 };
+
+// originBucketName is the name of the bucket to use for the website. It can be specified
+// in a couple of ways:
+//
+// * As a manually set value on the stack config, which takes highest precedence.
+// * As a computed value produced by a production build that's been run locally.
+//
+// Note that with pull-request builds, since we don't run a production build, there won't
+// be a bucket to use for the preview (that is, to compare with what's currently
+// deployed). So in order to be able to compile the Pulumi program and generate a
+// reasonably meaningful preview, an actual S3 bucket needs to be available. For this
+// case, we use a pre-built, empty bucket named according to the stack, and the program
+// ensures that this bucket is only used during previews.
+//
+// If you find yourself in need of a placeholder bucket, the following commands should
+// come in handy:
+// aws s3 mb s3://pulumi-docs-origin-placeholder-<stack-name> --region us-west-2
+// aws s3 website s3://pulumi-docs-origin-placeholder-<stack-name> --index-document index.html --error-document 404.html
+let originBucketName: string | undefined;
+
+// If a build metadata file is present and contains valid content, use that by default. This
+// will fail if there's a file present that isn't parseable as expected.
+if (fs.existsSync(config.pathToOriginBucketMetadata)) {
+    originBucketName = JSON.parse(fs.readFileSync(config.pathToOriginBucketMetadata).toString()).bucket;
+}
+
+// However, if the bucket's been configured manually, use that instead. A manually
+// configured bucket means that someone's decided to pin it. (Incidentally, this value
+// should be of the form "bucket-name-123", rather than "s3://bucket-name-123".)
+if (config.originBucketNameOverride) {
+    originBucketName = config.originBucketNameOverride;
+}
+
+// If there's still no bucket name set, and it's a dry run (and only if it's a dry run!),
+// use the placeholder bucket.
+if (!originBucketName && pulumi.runtime.isDryRun()) {
+    originBucketName = `pulumi-docs-origin-placeholder-${pulumi.getStack()}`;
+}
+
+// If there's still no bucket selected, it's an error.
+if (!originBucketName) {
+    throw new Error("An origin bucket was not specified.");
+}
+
+// Fetch the bucket we'll use for the deployment.
+const originBucket = aws.s3.getBucket({
+    bucket: originBucketName,
+});
 
 // redirectDomain is the domain to use when redirecting.
 const redirectDomain = config.redirectDomain || config.websiteDomain;
@@ -71,6 +124,29 @@ const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
             },
         ],
     })),
+});
+
+// The origin bucket needs to have the "public-read" ACL so its contents can be read by
+// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
+// users to prevent unintended disclosure of the bucket's contents.
+const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
+    bucket: originBucket.bucket,
+    policy: JSON.stringify({
+        Version: "2008-10-17",
+        Statement: [
+            {
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:ListBucket",
+                Resource: originBucket.arn,
+                Condition: {
+                    StringNotEquals: {
+                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
+                    },
+                },
+            },
+        ],
+    }),
 });
 
 // archiveBucket receives uploaded tarballs of website builds.
@@ -152,7 +228,7 @@ const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
 const baseCacheBehavior = {
-    targetOriginId: websiteBucket.arn,
+    targetOriginId: originBucket.arn,
     compress: true,
 
     viewerProtocolPolicy: "redirect-to-https",
@@ -198,8 +274,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
         {
-            originId: websiteBucket.arn,
-            domainName: websiteBucket.websiteEndpoint,
+            originId: originBucket.arn,
+            domainName: originBucket.websiteEndpoint,
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
@@ -503,8 +579,11 @@ if (!pulumi.runtime.isDryRun()) {
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
 
-export const archiveBucketUri = archiveBucket.bucket.apply(b => `s3://${b}`);
-export const websiteBucketUri = websiteBucket.bucket.apply(b => `s3://${b}`);
+export const archiveBucketUri = pulumi.interpolate`s3://${archiveBucket.bucket}`;
+export const websiteBucketUri = pulumi.interpolate`s3://${websiteBucket.bucket}`;
 export const websiteBucketWebsiteDomain = websiteBucket.websiteDomain;
 export const websiteBucketWebsiteEndpoint = websiteBucket.websiteEndpoint;
+export const originBucketUri = pulumi.interpolate`s3://${originBucket.bucket}`;
+export const originBucketWebsiteDomain = originBucket.websiteDomain;
+export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;

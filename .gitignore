@@ -35,3 +35,10 @@ venv/
 # directory in development in order to be able to use livereload.
 static/css/styles.*.css
 static/js/bundle.min.*.js
+
+# Ignore Cypress-generated content.
+cypress/videos
+cypress/screenshots
+
+# Ignore the file generated during production builds.
+origin-bucket-metadata.json

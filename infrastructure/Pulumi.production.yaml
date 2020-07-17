@@ -1,6 +1,9 @@
 config:
   aws:region: us-west-2
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:058607598222:certificate/a3f72a2b-e715-4639-b126-1e4efc0b634b
+  www.pulumi.com:roleArn: arn:aws:iam::058607598222:role/ContinuousIntegrationRole
+  www.pulumi.com:originBucketNameOverride:
+  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:pathToWebsiteContents: ../public
   www.pulumi.com:targetDomain: www-production.pulumi.com
   www.pulumi.com:websiteDomain: www-prod.pulumi.com

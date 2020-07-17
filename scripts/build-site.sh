@@ -20,7 +20,7 @@ printf "Building web components...\n\n"
 make build_components
 
 printf "Running Hugo...\n\n"
-if [ $1 == "preview" ]; then
+if [ "$1" == "preview" ]; then
     hugo --minify --templateMetrics --buildDrafts --buildFuture -e ${GIT_SHA}
 else
     hugo --minify --templateMetrics -e production

@@ -12,3 +12,4 @@ fi
 
 yarn install
 yarn --cwd components install
+yarn --cwd infrastructure install
