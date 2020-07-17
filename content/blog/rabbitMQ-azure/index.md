@@ -20,7 +20,7 @@ Itay Podhajcer is Chief Architect at Velocity Career Labs and a highly experienc
 ![Graphic](1.png)
 <br>
 
-Pulumi, an open source cloud development platform that supports multiple languages and platforms, allows programming and managing cloud environments using a consistent model and the power of full programing languages.
+Pulumi, an open source cloud development platform that supports multiple languages and platforms, allows programming and managing cloud environments using a consistent model and the power of full programming languages.
 
 One of those supported languages is C#, which we will be using to deploy a geo-redundant serverless cluster of the well-known messaging solution RabbitMQ. To run the cluster, we will be using three regions, in which we will be deploying:
 
@@ -211,9 +211,9 @@ Now that we can create all the necessary resources, it is time to put it all tog
 {{< gist ItayPodhajcer 31067831e46aac84701661c2dadab99a >}}
 <br>
 
-Note that we are using two loops to create the required resources. The first one creates most of the resources (storage, firewall, networks, container, etc.) and the second one creates the DNS A records of the nodes. The second loop combined with the custom container startup command help us ensure that the nodes will start without failing only when the entire infrastructure is ready.
+Note that we are using two loops to create the required resources. The first one creates most of the resources (storage, firewall, networks, container, etc.) and the second one creates the DNS A records of the nodes. The second loop combined with the custom container startup command helps us ensure that the nodes will start without failing only when the entire infrastructure is ready.
 
-This workaround is required because (at the writing of the article) Azure Container Instances do not allow manual allocation of private IP address, and because RabibtMQ’s discovery record requires those IPs which are available only after the containers are created, we end up in a chicken-and-the-egg situation. To overcome that, we need to allow the containers to start, but delay the execution of RabbitMQ’s startup script without blocking the container and use to our advantage the fact that RabbitMQ doesn’t start when it can‘t resolve its own host name (that is why we create those DNS records last).
+This workaround is required because (at the writing of the article) Azure Container Instances do not allow manual allocation of private IP address, and because RabibtMQ’s discovery record requires those IPs which are available only after the containers are created, we end up in a chicken-and-the-egg situation. To overcome that, we need to allow the containers to start, but delay the execution of RabbitMQ’s startup script without blocking the container and use to our advantage the fact that RabbitMQ doesn’t start when it can‘t resolve its own hostname (that is why we create those DNS records last).
 
 ## Deploying the Stack
 
