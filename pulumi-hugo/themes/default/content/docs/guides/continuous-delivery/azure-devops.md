@@ -99,7 +99,10 @@ The following are samples only. You may choose to structure your configuration a
 
 ### Pulumi Task Extension for Azure Pipelines
 
-We built a task extension that will let you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config. The task handles installing the Pulumi CLI, and running any commands without the need for any scripts.
+We built a task extension that lets you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config.
+The task handles installing the Pulumi CLI and running any commands without the need for any scripts.
+
+> Pulumi Task Extension for Azure Pipelines can be used with any cloud provider that Pulumi supports. You are not limited to using it only with Azure. Learn more [here](#other-clouds).
 
 Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
 
@@ -142,6 +145,8 @@ jobs:
   - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
+      # Using a service connection is optional. Specify build variables for your pipeline or link variable groups
+      # that contain the necessary environment variables needed by the Pulumi provider your Pulumi app uses.
       azureSubscription: 'My Service Connection'
       command: 'preview'
       cwd: 'infra/'
@@ -149,6 +154,8 @@ jobs:
   - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'IndividualCI'), eq(variables['Build.Reason'], 'BatchedCI'))
     inputs:
+      # Using a service connection is optional. Specify build variables for your pipeline or link variable groups
+      # that contain the necessary environment variables needed by the Pulumi provider your Pulumi app uses.
       azureSubscription: 'My Service Connection'
       command: 'up'
       cwd: 'infra/'
@@ -389,3 +396,11 @@ echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack
 
 popd
 ```
+
+## Using The Pulumi Task Extension With Other Clouds {#other-clouds}
+
+To use the Pulumi Task Extension for Azure Pipelines with other clouds, you can specify the necessary environment variables
+as build variables or link variable groups to your build and release pipelines.
+
+For example, if you are using the [AWS provider]({{< relref "/docs/intro/cloud-providers/aws" >}}), you can set the [environment variables]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
