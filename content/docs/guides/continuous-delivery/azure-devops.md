@@ -99,10 +99,10 @@ The following are samples only. You may choose to structure your configuration a
 
 ### Pulumi Task Extension for Azure Pipelines
 
-We built a task extension that will let you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config.
-The task handles installing the Pulumi CLI, and running any commands without the need for any scripts.
+We built a task extension that lets you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config.
+The task handles installing the Pulumi CLI and running any commands without the need for any scripts.
 
-> Pulumi Task Extension for Azure Pipelines can be used with any cloud provider that Pulumi supports. You are not limited to using it with just deploying resources to Azure. Learn more [here](#other-clouds).
+> Pulumi Task Extension for Azure Pipelines can be used with any cloud provider that Pulumi supports. You are not limited to using it only with Azure. Learn more [here](#other-clouds).
 
 Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
 
