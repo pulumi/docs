@@ -419,7 +419,7 @@ const sg = new awsx.ec2.SecurityGroup("sg", { vpc });
 sg.createIngressRule("ssh-access", {
     location: { cidrBlocks: [ "203.0.113.25/32" ] },
     ports: new awsx.ec2.TcpPorts(22),
-    description: "allow SSH access to 203.0.113.25",
+    description: "allow SSH access from 203.0.113.25",
 });
 
 // 2) inbound HTTPS traffic on port 443 from anywhere
