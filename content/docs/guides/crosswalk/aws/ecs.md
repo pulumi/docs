@@ -177,6 +177,7 @@ for your ECS workloads. Remember, Fargate handles all of this for you behind the
 If you already have an ECS cluster that you'd like to use, and would like to define Tasks and Services to run there, you can supply the `cluster` argument to the constructor:
 
 ```typescript
+import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
 // Fetch an existing cluster.
