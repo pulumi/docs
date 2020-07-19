@@ -5,7 +5,7 @@ import { setLanguage, setK8sLanguage, setInputKind, setOS, setCloud } from "../.
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
-export type InputKindKey = "url" | "code" | "upload";
+export type InputKindKey = "code" | "url" | "upload";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes";
 
@@ -391,13 +391,13 @@ export class Chooser {
     // The list of supported input kinds.
     private supportedInputKinds: SupportedInputKind[] = [
         {
-            key: "url",
-            name: "URL",
+            key: "code",
+            name: "Code",
             preview: false,
         },
         {
-            key: "code",
-            name: "Code",
+            key: "url",
+            name: "URL",
             preview: false,
         },
         {

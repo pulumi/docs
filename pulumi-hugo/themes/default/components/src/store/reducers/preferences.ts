@@ -7,7 +7,7 @@ const getInitialState = (): PreferencesState => {
     return {
         language: "typescript",
         k8sLanguage: "typescript",
-        inputKind: "url",
+        inputKind: "code",
         os: guessOS(),
         cloud: "aws",
     };
