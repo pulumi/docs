@@ -22,7 +22,7 @@ meta_desc: "Explore the Acl resource of the Kafka package, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kafka/#Acl">Acl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_host=None<span class="p">, </span>acl_operation=None<span class="p">, </span>acl_permission_type=None<span class="p">, </span>acl_principal=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>resource_pattern_type_filter=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kafka/#pulumi_kafka.Acl">Acl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_host=None<span class="p">, </span>acl_operation=None<span class="p">, </span>acl_permission_type=None<span class="p">, </span>acl_principal=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>resource_pattern_type_filter=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +597,7 @@ Get an existing Acl resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl_host=None<span class="p">, </span>acl_operation=None<span class="p">, </span>acl_permission_type=None<span class="p">, </span>acl_principal=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>resource_pattern_type_filter=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl_host=None<span class="p">, </span>acl_operation=None<span class="p">, </span>acl_permission_type=None<span class="p">, </span>acl_principal=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>resource_pattern_type_filter=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
