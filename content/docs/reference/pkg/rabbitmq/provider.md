@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rabbitmq/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cacert_file=None<span class="p">, </span>endpoint=None<span class="p">, </span>insecure=None<span class="p">, </span>password=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cacert_file=None<span class="p">, </span>clientcert_file=None<span class="p">, </span>clientkey_file=None<span class="p">, </span>endpoint=None<span class="p">, </span>insecure=None<span class="p">, </span>password=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,6 +210,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clientcertfile_csharp">
+<a href="#clientcertfile_csharp" style="color: inherit; text-decoration: inherit;">Clientcert<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkeyfile_csharp">
+<a href="#clientkeyfile_csharp" style="color: inherit; text-decoration: inherit;">Clientkey<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
@@ -259,6 +279,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cacertfile_go">
 <a href="#cacertfile_go" style="color: inherit; text-decoration: inherit;">Cacert<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcertfile_go">
+<a href="#clientcertfile_go" style="color: inherit; text-decoration: inherit;">Clientcert<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkeyfile_go">
+<a href="#clientkeyfile_go" style="color: inherit; text-decoration: inherit;">Clientkey<wbr>File</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -324,6 +364,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clientcertfile_nodejs">
+<a href="#clientcertfile_nodejs" style="color: inherit; text-decoration: inherit;">clientcert<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkeyfile_nodejs">
+<a href="#clientkeyfile_nodejs" style="color: inherit; text-decoration: inherit;">clientkey<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
@@ -373,6 +433,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cacert_file_python">
 <a href="#cacert_file_python" style="color: inherit; text-decoration: inherit;">cacert_<wbr>file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_file_python">
+<a href="#clientcert_file_python" style="color: inherit; text-decoration: inherit;">clientcert_<wbr>file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_file_python">
+<a href="#clientkey_file_python" style="color: inherit; text-decoration: inherit;">clientkey_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
