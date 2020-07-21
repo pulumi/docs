@@ -49,14 +49,14 @@
                         </span>
                     </div>
                 </div>
-                <section class="container mx-auto mt-8">
-                    <div class="rounded bg-gray-200 text-black p-16 w-full mx-auto">
-                        {{ .Content }}
-                    </div>
-                </section>
             </div>
         </div>
     </header>
+    <section class="mx-auto">
+        <div class="rounded bg-gray-200 text-black p-16 w-full mx-auto">
+            {{ .Content }}
+        </div>
+    </section>
 {{ end }}
 
 {{ define "main" }}
