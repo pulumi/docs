@@ -62,7 +62,7 @@ Let’s look at the Deployment, step-by-step. The `spec` matches the Deployment 
 
 ### Pod scheduling
 
-The next section declares variables for MariaDB, such as the `serviceAccountName` and the `securityContext`. However, of interest is the [`podAntiAffinity`](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) parameter, which ensures that the pod will not be deployed on a Node with a Pod with the labels ‘mariadb’ and ‘example’. The `weight` is set for the preferred rule, where a node with a higher weight is preferred. We prevent another instance from being deployed on the same host by setting `topologyKey: "kubernetes.io/hostname"`.
+The next section declares variables for MariaDB, such as the `serviceAccountName` and the `securityContext`. However, of interest is the [`podAntiAffinity`](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) parameter, which ensures that the Pod will not be deployed on a Node with a Pod with the labels ‘mariadb’ and ‘example’. The `weight` is set for the preferred rule, where a node with a higher weight is preferred. We prevent another instance from being deployed on the same host by setting `topologyKey: "kubernetes.io/hostname"`.
 
 Putting it all together, we’ve told the Kubernetes Scheduler never to co-locate two Pods that have the app labels “mariadb” and “example” in the same domain (or Node) defined by setting `topologyKey:”kubernetes.io/hostname”`. These parameters control pod scheduling to ensure that if a Pod is replaced, the new Pod is addressable by other resources in the application.
 
