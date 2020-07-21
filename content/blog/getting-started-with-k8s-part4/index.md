@@ -46,7 +46,7 @@ StatefulSets have two update strategies. The [OnDelete](https://kubernetes.io/do
 
 ## Example
 
-Let’s see how this works in practice with a [MariaDB deployment in Kubernetes](https://github.com/pulumi/kubernetes-guides/tree/master/apps/statefulset). The example begins with defining the cluster configuration and the MariaDB configuration using a [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/). We’ll skip over this and go straight to the StatelessSet.
+Let’s see how this works in practice with a [MariaDB deployment in Kubernetes](https://github.com/pulumi/kubernetes-guides/tree/master/apps/statefulset). The example begins with defining the cluster configuration and the MariaDB configuration using a [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/). We’ll skip over this and go straight to the StatefulSet.
 
 ### Headless Service
 
