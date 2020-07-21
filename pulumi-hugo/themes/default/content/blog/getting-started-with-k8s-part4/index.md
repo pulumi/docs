@@ -26,7 +26,7 @@ In the previous post, we examined different methods for deploying applications. 
 ## Stateful vs. Stateless
 
 Stateless applications don’t require information from a previous transaction because they are single request and response. For example, the [“Hello World” example](https://www.pulumi.com/blog/getting-started-with-k8s-part2/#examples) that we deployed in an earlier article is a stateless application. The critical thing to remember is that in Kubernetes, any container with that application in any pod can respond to that request.
-Stateful applications can read or store information about previous transactions, and a transaction is executed within the context of a previous extraction. Email is an example of a stateful application, e.g., an email can be unread or read, or it can be grouped according to keywords or by content. Unlike stateless applications in Kubernetes, the requests are sent to the same Pod.
+Stateful applications can read or store information about previous transactions, and a transaction is executed within the context of a previous extraction. Email is an example of a stateful application; an email can be unread or read, or it can be grouped according to keywords or by content. In stateless applications, access to storage must be coordinated, either by sending all requests to the same Pod, or by synchronizing across multiple Pods.
 
 ## Stateful sets
 
