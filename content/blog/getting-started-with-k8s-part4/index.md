@@ -33,10 +33,10 @@ Stateful applications can read or store information about previous transactions,
 Stateful sets are the Kubernetes workload object for managing stateful applications. They are a specialized type of [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), where the Pods maintain a persistent identity during updates and rescheduling.
 
 You would use a [StatefulSet for](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#using-statefulsets):
-stable and unique network identifiers
-stable and persistent storage
-applications that require ordered deployment and scaling
-applications that require ordered and rolling updates
+- stable and unique network identifiers
+- stable and persistent storage
+- applications that require ordered deployment and scaling
+- applications that require ordered and rolling updates
 
 When a StatefulSet is created, each pod is assigned a unique and persistent identifier. Pods are named numerically starting from 0, e.g., pod-0, pod-1, pod-n. StatefulSets use a [Headless Service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services) resource, which sets the `clusterIP` property ton `none`. Pods in a StatefulSet will have an IP address mapped directly to instead of a virtual IP address. This lets other Pods in the cluster directly communicate to an application, as in database connections.
 
