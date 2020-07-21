@@ -33,6 +33,7 @@ Stateful applications can read or store information about previous transactions,
 Stateful sets are the Kubernetes workload object for managing stateful applications. They are a specialized type of [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), where the Pods maintain a persistent identity during updates and rescheduling.
 
 You would use a [StatefulSet for](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#using-statefulsets):
+
 - stable and unique network identifiers
 - stable and persistent storage
 - applications that require ordered deployment and scaling
