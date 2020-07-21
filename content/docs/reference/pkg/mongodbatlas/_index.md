@@ -1,6 +1,6 @@
 ---
-title: "mongodbatlas"
-title_tag: "Module mongodbatlas | Package mongodbatlas"
+title: "MongoDB Atlas"
+title_tag: "Module MongoDB Atlas | Package MongoDB Atlas"
 meta_desc: "A Pulumi package for creating and managing mongodbatlas cloud resources."
 menu:
     reference:
@@ -63,6 +63,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="symbol function"></span>GetPrivateEndpoint</a></li>
     <li><a href="getprivateendpointinterfacelink" title="GetPrivateEndpointInterfaceLink"><span class="symbol function"></span>GetPrivateEndpointInterfaceLink</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectipwhitelist" title="GetProjectIpWhitelist"><span class="symbol function"></span>GetProjectIpWhitelist</a></li>
     <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getteams" title="GetTeams"><span class="symbol function"></span>GetTeams</a></li>
@@ -77,7 +78,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
 	<dt>Version</dt>
-	<dd>1.0.3</dd>
+	<dd>1.1.2</dd>
 </dl>
 
 

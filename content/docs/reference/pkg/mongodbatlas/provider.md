@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package mongodbatlas"
-meta_desc: "Explore the Provider resource of the mongodbatlas package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the mongodbatlas package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package MongoDB Atlas"
+meta_desc: "Explore the Provider resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the mongodbatlas package. By default, resources use package-wide configuration"
 ---
 
 
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/mongodbatlas/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>private_key=None<span class="p">, </span>public_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>private_key=None<span class="p">, </span>public_key=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
