@@ -1345,25 +1345,22 @@ vpc := MyVpcComponent("vpc", pulumi.Transformations([]pulumi.ResourceTransformat
 ```csharp
 var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 {
-    Transformations =
+    ResourceTransformations =
     {
         args =>
         {
             if (args.Resource.GetResourceType() == "aws:ec2/vpc:Vpc" ||
-                args.Resource.GetResourceType() === "aws:ec2/subnet:Subnet")
+                args.Resource.GetResourceType() == "aws:ec2/subnet:Subnet")
             {
-                return new ResourceTransformationResult
-                {
-                    Args: args.Args,
-                    Options: ResourceOptions.Merge(
-                        args.Options,
-                        new CustomResourceOptions { IgnoreChanges =  { "tags" } }),
-                };
+                var options = CustomResourceOptions.Merge(
+                    (CustomResourceOptions) args.Options,
+                    new CustomResourceOptions { IgnoreChanges = {"tags"} });
+                return new ResourceTransformationResult(args.Args, options);
             }
 
             return null;
         }
-    },
+    }
 });
 ```
 
