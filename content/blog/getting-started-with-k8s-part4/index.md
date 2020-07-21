@@ -56,7 +56,7 @@ In the previous section, we described the Headless Service. The key parts are se
 
 ### Deployment
 
-Let’s look at the Deployment, step-by-step. The `spec` matches the Deployment to the Headless Service using a selector that matches the labels. We assign it a service name, specify a single replica, and a `RollingUpdate` update strategy. Note that this is the default update strategy, but it’s a good practice to declare it.
+Let’s look at the StatefulSet, step-by-step. The `spec` matches the StatefulSet to the Headless Service using a selector that matches the labels. We assign it a service name, specify a single replica, and a `RollingUpdate` update strategy. Note that this is the default update strategy, but it’s a good practice to declare it.
 
 {{< gist pulumipus a8177859dad6efbadc600c49ab678008 >}}
 
