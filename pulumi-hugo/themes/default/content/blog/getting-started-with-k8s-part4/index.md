@@ -19,7 +19,7 @@ This article is the fourth in a series using infrastructure as code to deploy ap
 - Networking
 - “Day 2” activities such as migrating node groups.
 
-In the previous post, we examined different methods for deploying applications. We worked through examples of a boilerplate deployment, to one using `ComponentResources` to automate deployment further, and deploying with Helm charts. In this installment, we’ll look at how to deploy stateful applications, such as databases, in Kubernetes. Unlike stateless applications, stateful apps require persistent and durable resources such as storage, which presents scaling and availability challenges.
+In the previous post, we examined different methods for deploying applications. We worked through examples of a boilerplate deployment, to one using `ComponentResources` to automate deployment further, and deploying with Helm charts. In this installment, we’ll look at how to deploy stateful applications, such as databases, in Kubernetes. Unlike stateless applications, stateful apps require persistent storage, which presents scaling and availability challenges.
 
 <!--more-->
 
