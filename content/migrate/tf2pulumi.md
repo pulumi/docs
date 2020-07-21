@@ -20,7 +20,11 @@ form:
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
 
-<h3 class="text-gray-700 text-center">Step 1. Enter your Terraform</h3>
+<div class="w-full mx-auto md:flex">
+
+<div class="md:w-1/2 md:mr-2">
+
+<h3 class="text-gray-700 text-center">Enter your Terraform</h3>
 <div class="text-gray-500 text-center m-1 -mb-2 text-xs">
     (Don't worry, we send it over SSL and don't store it on our servers.)
 </div>
@@ -29,8 +33,10 @@ form:
 
 {{% choosable input-kind "code" %}}
 
-<textarea id="terraform-code" rows="20" class="w-full px-6 py-4 text-gray-700 text-sm font-mono"
-    title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
+<p class="m-0 -mt-4 p-2 bg-purple-300 text-white font-bold font-mono font-xs"
+    style="font-size: 0.75rem !important; color: #fff !important">main.tf</p>
+<textarea id="terraform-code" rows="27" class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-hidden whitespace-no-wrap"
+    style="resize:vertical-auto" title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
 </textarea>
 
 {{% /choosable %}}
@@ -52,9 +58,16 @@ form:
 
 {{< /chooser >}}
 
-<h3 class="text-gray-700 text-center">Step 2. Pick your Language</h3>
+</div>
 
-<div id="pulumi-code-download-button" class="float-right mt-4 mr-1 hidden">
+<div class="md:w-1/2 md:ml-2">
+
+<h3 class="text-gray-700 text-center">Choose your Pulumi Language</h3>
+<div class="text-gray-500 text-center m-1 -mb-2 text-xs">
+    &nbsp;
+</div>
+
+<div id="pulumi-code-download-icon" class="float-right mt-4 mr-1 hidden">
     <button class="copy-button" onclick="downloadCode()"><i class="fa fa-download text-xl" title="Download"></i></button>
 </div>
 
@@ -92,10 +105,13 @@ form:
 
 {{< /chooser >}}
 
+</div>
+
+</div>
+
 <pre id="pulumi-errors" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#ff0000"></pre>
 <pre id="pulumi-warnings" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#cc6600"></pre>
 
-<h3 class="text-gray-700 text-center">Step 3. Convert!</h3>
 <p id="couldnt-convert-code" class="text-sm mt-8 text-center hidden" style="color:#cc6600; font-size:1rem">
     <b>Sorry, we couldn't convert your code.</b><br><br>
     There may be a problem with the code you submitted, or it might use a feature the
@@ -134,7 +150,8 @@ var currentCodeFiles = {};
 
 function clearLanguageFiles(language) {
     $("#pulumi-code-"+language+"-files").text("");
-    $("#pulumi-code-download-button").hide();
+    $("#pulumi-code-download-icon").hide();
+    $("#pulumi-code-download-button").addClass([ "opacity-50", "cursor-not-allowed" ]);
     currentCodeFiles = {};
 }
 
@@ -160,7 +177,8 @@ function addLanguageFile(language, fn, code) {
         <p class="m-0 ${fileno == 0 ? "" : "-mt-4"} p-2 bg-purple-300 text-white font-bold font-mono font-xs"
             style="font-size: 0.75rem !important; color: #fff !important">${fn}</p>
         <div class="highlight" id="${filediv}">
-            <pre class="chroma"><code class="language-typescript" data-lang="typescript">${code}</code></pre>
+            <pre class="chroma"><code class="language-typescript"
+                style="font-size: 14px !important;font-family:Source Code Pro, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" data-lang="typescript">${code}</code></pre>
             <div class="copy-button-container">
                 <pulumi-tooltip>
                     <button class="copy-button"><i class="far fa-copy copy text-xl"></i></button>
@@ -169,17 +187,14 @@ function addLanguageFile(language, fn, code) {
             </div>
         </div>
     `);
+    $("#code[class*=language-], pre[class*=language-]").css("font-size", "14px");
 
     addCopyButton($(`#${filediv}`));
 }
 
 // Now set up our event handler for conversion.
-function convertCode() {
+function convertCode(language) {
     // Get the currently chosen language by looking up the active language chooser tab.
-    let language = "";
-    $("pulumi-chooser[type='language'] > ul > li.active > a").each(function (i, e) {
-        language = e.innerText.toLowerCase();
-    });
     let languageTextbox = language;
     if (language === "c#") {
         language = "csharp";
@@ -220,9 +235,9 @@ function convertCode() {
     }
 
     // Add some "waiting" touches.
-    $(document.body).css({"cursor": "wait"});
-    $("#convert-button").css({"cursor": "wait"});
-    addLanguageFile(languageTextbox, "...", "...");
+    $(document.body).css({ "cursor": "wait" });
+    $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "wait" });
+    addLanguageFile(languageTextbox, "…", "…");
 
     // Post to the endpoint and then, afterwards, add the result to the textbox.
     let post = {
@@ -260,7 +275,8 @@ function convertCode() {
                     let code = data.files[fn];
                     addLanguageFile(languageTextbox, fn, code);
                 }
-                $("#pulumi-code-download-button").show();
+                $("#pulumi-code-download-icon").show();
+                $("#pulumi-code-download-button").removeClass([ "opacity-50", "cursor-not-allowed" ]);
             } else {
                 $("#couldnt-convert-code").show();
             }
@@ -291,8 +307,8 @@ function convertCode() {
             $("#couldnt-convert-code").show();
         }).
         always(function() {
-            $(document.body).css({"cursor": "default"});
-            $("#convert-button").css({"cursor": "pointer"});
+            $(document.body).css({ "cursor": "default" });
+            $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "pointer" });
         });
 }
 
@@ -322,10 +338,6 @@ window.onload = function() {
                 let comment = "#"; // to suppress Markdown lint errors.
                 tfCode = `${comment} This Terraform sample provisions an AWS EC2 instance running Ubuntu.
 ${comment} Choose a language and click CONVERT below -- or try replacing it with your own!
-
-provider "aws" {
-  region = "us-west-2"
-}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -386,16 +398,23 @@ resource "aws_instance" "web" {
             }
         });
 
-        // Initialize the default code-files.
-        addLanguageFile("typescript", "index.ts", '// Hit "CONVERT" below to get the code!');
-        addLanguageFile("javascript", "index.js", '// Hit "CONVERT" below to get the code!');
-        addLanguageFile("python", "__main__.py", '# Hit "CONVERT" below to get the code!');
-        addLanguageFile("go", "main.go", '// Hit "CONVERT" below to get the code!');
-        addLanguageFile("csharp", "MyStack.cs", '// Hit "CONVERT" below to get the code!');
+        // Hook up event handlers for the language choosers.
+        $("pulumi-chooser[type='language'] > ul > li > a").each(function (i, e) {
+            $(e)[0].addEventListener("click", function() {
+                convertCode($(e).text().trim().toLowerCase());
+            });
+        });
+
+        // Fire off a conversion just to get started using the default code snippet example.
+        let currentLanguage = "";
+        $("pulumi-chooser[type='language'] > ul > li.active > a").each(function (i, e) {
+            currentLanguage = e.innerText.toLowerCase();
+        });
+        convertCode(currentLanguage || "typescript");
     });
 }
 </script>
 
-<div class="text-center pt-8">
-    <a id="convert-button" class="btn btn-lg mr-4" onclick="convertCode()">Convert</a>
+<div class="text-center py-8">
+    <a id="pulumi-code-download-button" class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode()">Download Results</a>
 </div>
