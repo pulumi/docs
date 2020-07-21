@@ -82,7 +82,7 @@ The final section of code creates a Persistent Volume using a `volumeClaimTempla
 
 {{< gist pulumipus 0520c6f917eaf0a532b99a2279d71118 >}}
 
-To summarize, we deployed MariaDB using a `StatefulSet` by creating a `headlessService` which assigns a persistent IP address to the pod instead of using `clusterIP` and `nodePorts` to route traffic to the application. We then defined Node Affinity/AntiAffinity to set rules on which nodes are selected by the scheduler for creating Pods. Next, we configured the container and set `livenessProbes` and `readinessProbes` to tell the Scheduler if a Pod needs to be terminated and restarted  or not to route traffic to the Pod until it is ready. We also configure `volumeMounts` and `Volumes` to store configuration information and data for MariaDB.
+To summarize, we deployed MariaDB using a `StatefulSet` by creating a `headlessService` which assigns a persistent IP address to the Pod instead of using `clusterIP` and `nodePorts` to route traffic to the application. We then defined Node Affinity/AntiAffinity to set rules on which nodes are selected by the scheduler for creating Pods. Next, we configured the container and set `livenessProbes` and `readinessProbes` to tell the Scheduler if a Pod needs to be terminated and restarted  or not to route traffic to the Pod until it is ready. We also configure `volumeMounts` and `volumes` to store configuration information and data for MariaDB.
 
 ## Conclusion
 
