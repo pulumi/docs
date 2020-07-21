@@ -50,7 +50,7 @@ Let’s see how this works in practice with a [MariaDB deployment in Kubernetes]
 
 ### Headless Service
 
-In the previous section, we described the Headless Service. The key parts are setting the `ClusterIP` to `none`, which creates an IP address and setting the port so that applications can establish a database connection.
+In the previous section, we described the Headless Service. The key parts are setting the `ClusterIP` to `"None"`, which allocates an IP address and port so that applications can establish a database connection.
 
 {{< gist pulumipus 057ca0abb4758161a4d3ce2698e9683a >}}
 
