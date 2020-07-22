@@ -211,7 +211,7 @@ const gitlabTest = new aws.lightsail.Instance("gitlab_test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lightsail/#pulumi_aws.lightsail.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>blueprint_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lightsail/#pulumi_aws.lightsail.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>blueprint_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1210,7 +1210,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>availability_zone=None<span class="p">, </span>blueprint_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>cpu_count=None<span class="p">, </span>created_at=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>is_static_ip=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>public_ip_address=None<span class="p">, </span>ram_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>availability_zone=None<span class="p">, </span>blueprint_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>cpu_count=None<span class="p">, </span>created_at=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>is_static_ip=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>public_ip_address=None<span class="p">, </span>ram_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

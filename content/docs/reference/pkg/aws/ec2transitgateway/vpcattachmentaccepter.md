@@ -116,7 +116,7 @@ const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2transitgateway/#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter">VpcAttachmentAccepter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_default_route_table_association=None<span class="p">, </span>transit_gateway_default_route_table_propagation=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2transitgateway/#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter">VpcAttachmentAccepter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_default_route_table_association=None<span class="p">, </span>transit_gateway_default_route_table_propagation=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -847,7 +847,7 @@ Get an existing VpcAttachmentAccepter resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dns_support=None<span class="p">, </span>ipv6_support=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_default_route_table_association=None<span class="p">, </span>transit_gateway_default_route_table_propagation=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vpc_owner_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dns_support=None<span class="p">, </span>ipv6_support=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_default_route_table_association=None<span class="p">, </span>transit_gateway_default_route_table_propagation=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vpc_owner_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

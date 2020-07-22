@@ -155,7 +155,7 @@ const main = new aws.apigateway.UsagePlanKey("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlanKey">UsagePlanKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlanKey">UsagePlanKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -666,7 +666,7 @@ Get an existing UsagePlanKey resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>name=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>key_id=None<span class="p">, </span>key_type=None<span class="p">, </span>name=None<span class="p">, </span>usage_plan_id=None<span class="p">, </span>value=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

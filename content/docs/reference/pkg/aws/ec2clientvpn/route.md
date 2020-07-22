@@ -190,7 +190,7 @@ const exampleRoute = new aws.ec2clientvpn.Route("exampleRoute", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#pulumi_aws.ec2clientvpn.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_vpn_endpoint_id=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>target_vpc_subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#pulumi_aws.ec2clientvpn.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_vpn_endpoint_id=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>target_vpc_subnet_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +737,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_vpn_endpoint_id=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>origin=None<span class="p">, </span>target_vpc_subnet_id=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_vpn_endpoint_id=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>origin=None<span class="p">, </span>target_vpc_subnet_id=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

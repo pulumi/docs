@@ -150,7 +150,7 @@ const example = new aws.xray.SamplingRule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/xray/#pulumi_aws.xray.SamplingRule">SamplingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>fixed_rate=None<span class="p">, </span>host=None<span class="p">, </span>http_method=None<span class="p">, </span>priority=None<span class="p">, </span>reservoir_size=None<span class="p">, </span>resource_arn=None<span class="p">, </span>rule_name=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url_path=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/xray/#pulumi_aws.xray.SamplingRule">SamplingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>fixed_rate=None<span class="p">, </span>host=None<span class="p">, </span>http_method=None<span class="p">, </span>priority=None<span class="p">, </span>reservoir_size=None<span class="p">, </span>resource_arn=None<span class="p">, </span>rule_name=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url_path=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1013,7 +1013,7 @@ Get an existing SamplingRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>attributes=None<span class="p">, </span>fixed_rate=None<span class="p">, </span>host=None<span class="p">, </span>http_method=None<span class="p">, </span>priority=None<span class="p">, </span>reservoir_size=None<span class="p">, </span>resource_arn=None<span class="p">, </span>rule_name=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url_path=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>attributes=None<span class="p">, </span>fixed_rate=None<span class="p">, </span>host=None<span class="p">, </span>http_method=None<span class="p">, </span>priority=None<span class="p">, </span>reservoir_size=None<span class="p">, </span>resource_arn=None<span class="p">, </span>rule_name=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url_path=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

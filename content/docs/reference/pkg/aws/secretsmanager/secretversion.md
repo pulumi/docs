@@ -141,7 +141,7 @@ const exampleSecretVersion = new aws.secretsmanager.SecretVersion("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager/#pulumi_aws.secretsmanager.SecretVersion">SecretVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>secret_binary=None<span class="p">, </span>secret_id=None<span class="p">, </span>secret_string=None<span class="p">, </span>version_stages=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager/#pulumi_aws.secretsmanager.SecretVersion">SecretVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>secret_binary=None<span class="p">, </span>secret_id=None<span class="p">, </span>secret_string=None<span class="p">, </span>version_stages=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -696,7 +696,7 @@ Get an existing SecretVersion resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>secret_binary=None<span class="p">, </span>secret_id=None<span class="p">, </span>secret_string=None<span class="p">, </span>version_id=None<span class="p">, </span>version_stages=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>secret_binary=None<span class="p">, </span>secret_id=None<span class="p">, </span>secret_string=None<span class="p">, </span>version_id=None<span class="p">, </span>version_stages=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

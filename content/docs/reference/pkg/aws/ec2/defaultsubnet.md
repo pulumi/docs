@@ -115,7 +115,7 @@ const defaultAz1 = new aws.ec2.DefaultSubnet("default_az1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSubnet">DefaultSubnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>outpost_arn=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSubnet">DefaultSubnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>outpost_arn=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -918,7 +918,7 @@ Get an existing DefaultSubnet resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>assign_ipv6_address_on_creation=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_id=None<span class="p">, </span>cidr_block=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>ipv6_cidr_block_association_id=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>outpost_arn=None<span class="p">, </span>owner_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>assign_ipv6_address_on_creation=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_id=None<span class="p">, </span>cidr_block=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>ipv6_cidr_block_association_id=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>outpost_arn=None<span class="p">, </span>owner_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

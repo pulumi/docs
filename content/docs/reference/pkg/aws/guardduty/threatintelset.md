@@ -182,7 +182,7 @@ const myThreatIntelSetThreatIntelSet = new aws.guardduty.ThreatIntelSet("MyThrea
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/guardduty/#pulumi_aws.guardduty.ThreatIntelSet">ThreatIntelSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>activate=None<span class="p">, </span>detector_id=None<span class="p">, </span>format=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/guardduty/#pulumi_aws.guardduty.ThreatIntelSet">ThreatIntelSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>activate=None<span class="p">, </span>detector_id=None<span class="p">, </span>format=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -781,7 +781,7 @@ Get an existing ThreatIntelSet resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activate=None<span class="p">, </span>arn=None<span class="p">, </span>detector_id=None<span class="p">, </span>format=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activate=None<span class="p">, </span>arn=None<span class="p">, </span>detector_id=None<span class="p">, </span>format=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

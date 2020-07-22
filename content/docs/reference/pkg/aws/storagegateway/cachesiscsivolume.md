@@ -285,7 +285,7 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.CachesIscsiVolume">CachesIscsiVolume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_volume_arn=None<span class="p">, </span>tags=None<span class="p">, </span>target_name=None<span class="p">, </span>volume_size_in_bytes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.CachesIscsiVolume">CachesIscsiVolume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_volume_arn=None<span class="p">, </span>tags=None<span class="p">, </span>target_name=None<span class="p">, </span>volume_size_in_bytes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1192,7 +1192,7 @@ Get an existing CachesIscsiVolume resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>chap_enabled=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>lun_number=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>network_interface_port=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_volume_arn=None<span class="p">, </span>tags=None<span class="p">, </span>target_arn=None<span class="p">, </span>target_name=None<span class="p">, </span>volume_arn=None<span class="p">, </span>volume_id=None<span class="p">, </span>volume_size_in_bytes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>chap_enabled=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>lun_number=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>network_interface_port=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_volume_arn=None<span class="p">, </span>tags=None<span class="p">, </span>target_arn=None<span class="p">, </span>target_name=None<span class="p">, </span>volume_arn=None<span class="p">, </span>volume_id=None<span class="p">, </span>volume_size_in_bytes=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -22,7 +22,7 @@ meta_desc: "Explore the Fleet resource of the worklink module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/worklink/#pulumi_aws.worklink.Fleet">Fleet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/worklink/#pulumi_aws.worklink.Fleet">Fleet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>company_code=None<span class="p">, </span>created_time=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>last_updated_time=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>company_code=None<span class="p">, </span>created_time=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>last_updated_time=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -105,7 +105,7 @@ const lb = new aws.ec2.Eip("lb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Eip">Eip</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Eip">Eip</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1052,7 +1052,7 @@ Get an existing Eip resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_id=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>association_id=None<span class="p">, </span>customer_owned_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>domain=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>private_dns=None<span class="p">, </span>private_ip=None<span class="p">, </span>public_dns=None<span class="p">, </span>public_ip=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_id=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>association_id=None<span class="p">, </span>customer_owned_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>domain=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>private_dns=None<span class="p">, </span>private_ip=None<span class="p">, </span>public_dns=None<span class="p">, </span>public_ip=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
