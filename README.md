@@ -1,5 +1,7 @@
 # Pulumi Documentation Site
 
+This is a random change, meant to validate our PR behavior.
+
 [![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master)](https://travis-ci.com/pulumi/docs)
 
 ## Contributing
