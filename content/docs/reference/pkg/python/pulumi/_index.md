@@ -347,7 +347,7 @@ be unchanged.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Simple scaler values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values</dt><dd><p>from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p>
+<dt>Simple scalar values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values</dt><dd><p>from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p>
 </dd>
 </dl>
 </li>
