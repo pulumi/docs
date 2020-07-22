@@ -119,7 +119,7 @@ const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Resource">Resource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>parent_id=None<span class="p">, </span>path_part=None<span class="p">, </span>rest_api=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Resource">Resource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>parent_id=None<span class="p">, </span>path_part=None<span class="p">, </span>rest_api=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +586,7 @@ Get an existing Resource resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>parent_id=None<span class="p">, </span>path=None<span class="p">, </span>path_part=None<span class="p">, </span>rest_api=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>parent_id=None<span class="p">, </span>path=None<span class="p">, </span>path_part=None<span class="p">, </span>rest_api=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
