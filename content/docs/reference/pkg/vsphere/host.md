@@ -36,6 +36,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 The above would import the host with ID `host-123`.
 
@@ -73,7 +86,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-datacenter"
+		dc, err := vsphere.LookupDatacenter(ctx, &vsphere.LookupDatacenterArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = vsphere.NewHost(ctx, "h1", &vsphere.HostArgs{
+			Hostname:   pulumi.String("10.10.10.1"),
+			Username:   pulumi.String("root"),
+			Password:   pulumi.String("password"),
+			License:    pulumi.String("00000-00000-00000-00000i-00000"),
+			Datacenter: pulumi.String(dc.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,7 +191,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "TfDatacenter"
+		dc, err := vsphere.LookupDatacenter(ctx, &vsphere.LookupDatacenterArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := dc.Id
+		c1, err := vsphere.LookupComputeCluster(ctx, &vsphere.LookupComputeClusterArgs{
+			Name:         "DC0_C0",
+			DatacenterId: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = vsphere.NewHost(ctx, "h1", &vsphere.HostArgs{
+			Hostname: pulumi.String("10.10.10.1"),
+			Username: pulumi.String("root"),
+			Password: pulumi.String("password"),
+			License:  pulumi.String("00000-00000-00000-00000i-00000"),
+			Cluster:  pulumi.String(c1.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -204,7 +287,7 @@ const h1 = new vsphere.Host("h1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Host">Host</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.Host">Host</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1075,7 +1158,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
