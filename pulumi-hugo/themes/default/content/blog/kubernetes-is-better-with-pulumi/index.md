@@ -78,7 +78,7 @@ Pulumi is not just for developers; operators can leverage it to manage Kubernete
 ```python
 def set_namespace(namespace):
    def f(obj):
-      if "metadata" in obh:
+      if "metadata" in obj:
          obj["metadata"]["namespace"] = namespace
       else:
          obj["metadata"] = {"namespace": namespace}
