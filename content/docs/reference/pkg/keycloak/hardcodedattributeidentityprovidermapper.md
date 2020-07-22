@@ -22,7 +22,7 @@ meta_desc: "Explore the HardcodedAttributeIdentityProviderMapper resource of the
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/keycloak/#HardcodedAttributeIdentityProviderMapper">HardcodedAttributeIdentityProviderMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attribute_name=None<span class="p">, </span>attribute_value=None<span class="p">, </span>identity_provider_alias=None<span class="p">, </span>name=None<span class="p">, </span>realm=None<span class="p">, </span>user_session=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper">HardcodedAttributeIdentityProviderMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attribute_name=None<span class="p">, </span>attribute_value=None<span class="p">, </span>extra_config=None<span class="p">, </span>identity_provider_alias=None<span class="p">, </span>name=None<span class="p">, </span>realm=None<span class="p">, </span>user_session=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -251,6 +251,16 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -321,6 +331,16 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
     </dt>
     <dd>{{% md %}}User Attribute
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -397,6 +417,16 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -467,6 +497,16 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
     </dt>
     <dd>{{% md %}}User Attribute
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -577,7 +617,7 @@ Get an existing HardcodedAttributeIdentityProviderMapper resource's state with t
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attribute_name=None<span class="p">, </span>attribute_value=None<span class="p">, </span>identity_provider_alias=None<span class="p">, </span>name=None<span class="p">, </span>realm=None<span class="p">, </span>user_session=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attribute_name=None<span class="p">, </span>attribute_value=None<span class="p">, </span>extra_config=None<span class="p">, </span>identity_provider_alias=None<span class="p">, </span>name=None<span class="p">, </span>realm=None<span class="p">, </span>user_session=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,6 +755,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_extraconfig_csharp">
+<a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identityprovideralias_csharp">
 <a href="#state_identityprovideralias_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Alias</a>
 </span> 
@@ -785,6 +835,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}User Attribute
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_go">
+<a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -861,6 +921,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_extraconfig_nodejs">
+<a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identityprovideralias_nodejs">
 <a href="#state_identityprovideralias_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Alias</a>
 </span> 
@@ -931,6 +1001,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}User Attribute
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_extra_config_python">
+<a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

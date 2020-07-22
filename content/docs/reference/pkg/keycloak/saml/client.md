@@ -125,7 +125,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#pulumi_keycloak.saml.Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>encrypt_assertions=None<span class="p">, </span>encryption_certificate=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -379,6 +379,26 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptassertions_csharp">
+<a href="#encryptassertions_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptioncertificate_csharp">
+<a href="#encryptioncertificate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="forcenameidformat_csharp">
 <a href="#forcenameidformat_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span> 
@@ -529,6 +549,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signaturealgorithm_csharp">
+<a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="signingcertificate_csharp">
 <a href="#signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span> 
@@ -641,6 +671,26 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptassertions_go">
+<a href="#encryptassertions_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptioncertificate_go">
+<a href="#encryptioncertificate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -796,6 +846,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signaturealgorithm_go">
+<a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="signingcertificate_go">
 <a href="#signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span> 
@@ -908,6 +968,26 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptassertions_nodejs">
+<a href="#encryptassertions_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptioncertificate_nodejs">
+<a href="#encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1063,6 +1143,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signaturealgorithm_nodejs">
+<a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="signingcertificate_nodejs">
 <a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span> 
@@ -1175,6 +1265,26 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypt_assertions_python">
+<a href="#encrypt_assertions_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_certificate_python">
+<a href="#encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1330,6 +1440,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="signing_certificate_python">
 <a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
 </span> 
@@ -1456,7 +1576,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>encrypt_assertions=None<span class="p">, </span>encryption_certificate=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1642,6 +1762,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_encryptassertions_csharp">
+<a href="#state_encryptassertions_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptioncertificate_csharp">
+<a href="#state_encryptioncertificate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_forcenameidformat_csharp">
 <a href="#state_forcenameidformat_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span> 
@@ -1802,6 +1942,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_signaturealgorithm_csharp">
+<a href="#state_signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_csharp">
 <a href="#state_signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span> 
@@ -1904,6 +2054,26 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptassertions_go">
+<a href="#state_encryptassertions_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptioncertificate_go">
+<a href="#state_encryptioncertificate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2069,6 +2239,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_signaturealgorithm_go">
+<a href="#state_signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_go">
 <a href="#state_signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span> 
@@ -2171,6 +2351,26 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptassertions_nodejs">
+<a href="#state_encryptassertions_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptioncertificate_nodejs">
+<a href="#state_encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2336,6 +2536,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_signaturealgorithm_nodejs">
+<a href="#state_signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_nodejs">
 <a href="#state_signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span> 
@@ -2438,6 +2648,26 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encrypt_assertions_python">
+<a href="#state_encrypt_assertions_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>assertions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryption_certificate_python">
+<a href="#state_encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2598,6 +2828,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signature_algorithm_python">
+<a href="#state_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

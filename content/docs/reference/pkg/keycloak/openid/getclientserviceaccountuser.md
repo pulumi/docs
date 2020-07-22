@@ -749,8 +749,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userid_python">
-<a href="#userid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -759,8 +759,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

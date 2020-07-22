@@ -67,6 +67,35 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewClientScope(ctx, "openidClientScope", &openid.ClientScopeArgs{
+			Description: pulumi.String("When requested, this scope will map a user's group memberships to a claim"),
+			RealmId:     realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -76,8 +105,8 @@ The following arguments are supported:
 - `name` - (Required) The display name of this client scope in the GUI.
 - `description` - (Optional) The description of this client scope in the GUI.
 - `consent_screen_text` - (Optional) When set, a consent screen will be displayed to users
-authenticating to clients with this scope attached. The consent screen will display the string
-value of this attribute.
+  authenticating to clients with this scope attached. The consent screen will display the string
+  value of this attribute.
 
 
 
@@ -90,7 +119,7 @@ value of this attribute.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#ClientScope">ClientScope</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>consent_screen_text=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.ClientScope">ClientScope</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>consent_screen_text=None<span class="p">, </span>description=None<span class="p">, </span>gui_order=None<span class="p">, </span>include_in_token_scope=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,6 +323,26 @@ The ClientScope resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="guiorder_csharp">
+<a href="#guiorder_csharp" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeintokenscope_csharp">
+<a href="#includeintokenscope_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -336,6 +385,26 @@ The ClientScope resource accepts the following [input]({{< relref "/docs/intro/c
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="guiorder_go">
+<a href="#guiorder_go" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeintokenscope_go">
+<a href="#includeintokenscope_go" style="color: inherit; text-decoration: inherit;">Include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -388,6 +457,26 @@ The ClientScope resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="guiorder_nodejs">
+<a href="#guiorder_nodejs" style="color: inherit; text-decoration: inherit;">gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeintokenscope_nodejs">
+<a href="#includeintokenscope_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -430,6 +519,26 @@ The ClientScope resource accepts the following [input]({{< relref "/docs/intro/c
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gui_order_python">
+<a href="#gui_order_python" style="color: inherit; text-decoration: inherit;">gui_<wbr>order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_in_token_scope_python">
+<a href="#include_in_token_scope_python" style="color: inherit; text-decoration: inherit;">include_<wbr>in_<wbr>token_<wbr>scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -541,7 +650,7 @@ Get an existing ClientScope resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>consent_screen_text=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>consent_screen_text=None<span class="p">, </span>description=None<span class="p">, </span>gui_order=None<span class="p">, </span>include_in_token_scope=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -677,6 +786,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_guiorder_csharp">
+<a href="#state_guiorder_csharp" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includeintokenscope_csharp">
+<a href="#state_includeintokenscope_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -719,6 +848,26 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_guiorder_go">
+<a href="#state_guiorder_go" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includeintokenscope_go">
+<a href="#state_includeintokenscope_go" style="color: inherit; text-decoration: inherit;">Include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -771,6 +920,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_guiorder_nodejs">
+<a href="#state_guiorder_nodejs" style="color: inherit; text-decoration: inherit;">gui<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includeintokenscope_nodejs">
+<a href="#state_includeintokenscope_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>In<wbr>Token<wbr>Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -813,6 +982,26 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gui_order_python">
+<a href="#state_gui_order_python" style="color: inherit; text-decoration: inherit;">gui_<wbr>order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_include_in_token_scope_python">
+<a href="#state_include_in_token_scope_python" style="color: inherit; text-decoration: inherit;">include_<wbr>in_<wbr>token_<wbr>scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

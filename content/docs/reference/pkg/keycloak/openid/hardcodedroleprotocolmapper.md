@@ -103,6 +103,54 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		role, err := keycloak.NewRole(ctx, "role", &keycloak.RoleArgs{
+			RealmId: realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		openidClient, err := openid.NewClient(ctx, "openidClient", &openid.ClientArgs{
+			AccessType: pulumi.String("CONFIDENTIAL"),
+			ClientId:   pulumi.String("test-client"),
+			Enabled:    pulumi.Bool(true),
+			RealmId:    realm.ID(),
+			ValidRedirectUris: pulumi.StringArray{
+				pulumi.String("http://localhost:8080/openid-callback"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewHardcodedRoleProtocolMapper(ctx, "hardcodedRoleMapper", &openid.HardcodedRoleProtocolMapperArgs{
+			ClientId: openidClient.ID(),
+			RealmId:  realm.ID(),
+			RoleId:   role.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Example Usage (Client Scope)
 
@@ -171,6 +219,48 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		role, err := keycloak.NewRole(ctx, "role", &keycloak.RoleArgs{
+			RealmId: realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		clientScope, err := openid.NewClientScope(ctx, "clientScope", &openid.ClientScopeArgs{
+			RealmId: realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewHardcodedRoleProtocolMapper(ctx, "hardcodedRoleMapper", &openid.HardcodedRoleProtocolMapperArgs{
+			ClientScopeId: clientScope.ID(),
+			RealmId:       realm.ID(),
+			RoleId:        role.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -194,7 +284,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#HardcodedRoleProtocolMapper">HardcodedRoleProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>role_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.HardcodedRoleProtocolMapper">HardcodedRoleProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>role_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -701,7 +791,7 @@ Get an existing HardcodedRoleProtocolMapper resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>role_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>role_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

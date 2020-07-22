@@ -79,6 +79,36 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/saml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := saml.NewIdentityProvider(ctx, "realmIdentityProvider", &saml.IdentityProviderArgs{
+			Alias:                   pulumi.String("my-idp"),
+			BackchannelSupported:    pulumi.Bool(true),
+			ForceAuthn:              pulumi.Bool(true),
+			PostBindingAuthnRequest: pulumi.Bool(true),
+			PostBindingLogout:       pulumi.Bool(true),
+			PostBindingResponse:     pulumi.Bool(true),
+			Realm:                   pulumi.String("my-realm"),
+			SingleLogoutServiceUrl:  pulumi.String("https://domain.com/adfs/ls/?wa=wsignout1.0"),
+			SingleSignOnServiceUrl:  pulumi.String("https://domain.com/adfs/ls/"),
+			StoreToken:              pulumi.Bool(false),
+			TrustEmail:              pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -125,7 +155,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#IdentityProvider">IdentityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_read_token_role_on_create=None<span class="p">, </span>alias=None<span class="p">, </span>authenticate_by_default=None<span class="p">, </span>backchannel_supported=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>first_broker_login_flow_alias=None<span class="p">, </span>force_authn=None<span class="p">, </span>hide_on_login_page=None<span class="p">, </span>link_only=None<span class="p">, </span>name_id_policy_format=None<span class="p">, </span>post_binding_authn_request=None<span class="p">, </span>post_binding_logout=None<span class="p">, </span>post_binding_response=None<span class="p">, </span>post_broker_login_flow_alias=None<span class="p">, </span>realm=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>single_logout_service_url=None<span class="p">, </span>single_sign_on_service_url=None<span class="p">, </span>store_token=None<span class="p">, </span>trust_email=None<span class="p">, </span>validate_signature=None<span class="p">, </span>want_assertions_encrypted=None<span class="p">, </span>want_assertions_signed=None<span class="p">, </span>xml_sign_key_info_key_name_transformer=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#pulumi_keycloak.saml.IdentityProvider">IdentityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_read_token_role_on_create=None<span class="p">, </span>alias=None<span class="p">, </span>authenticate_by_default=None<span class="p">, </span>backchannel_supported=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>first_broker_login_flow_alias=None<span class="p">, </span>force_authn=None<span class="p">, </span>hide_on_login_page=None<span class="p">, </span>link_only=None<span class="p">, </span>name_id_policy_format=None<span class="p">, </span>post_binding_authn_request=None<span class="p">, </span>post_binding_logout=None<span class="p">, </span>post_binding_response=None<span class="p">, </span>post_broker_login_flow_alias=None<span class="p">, </span>realm=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>single_logout_service_url=None<span class="p">, </span>single_sign_on_service_url=None<span class="p">, </span>store_token=None<span class="p">, </span>trust_email=None<span class="p">, </span>validate_signature=None<span class="p">, </span>want_assertions_encrypted=None<span class="p">, </span>want_assertions_signed=None<span class="p">, </span>xml_sign_key_info_key_name_transformer=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1624,7 +1654,7 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_read_token_role_on_create=None<span class="p">, </span>alias=None<span class="p">, </span>authenticate_by_default=None<span class="p">, </span>backchannel_supported=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>first_broker_login_flow_alias=None<span class="p">, </span>force_authn=None<span class="p">, </span>hide_on_login_page=None<span class="p">, </span>internal_id=None<span class="p">, </span>link_only=None<span class="p">, </span>name_id_policy_format=None<span class="p">, </span>post_binding_authn_request=None<span class="p">, </span>post_binding_logout=None<span class="p">, </span>post_binding_response=None<span class="p">, </span>post_broker_login_flow_alias=None<span class="p">, </span>realm=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>single_logout_service_url=None<span class="p">, </span>single_sign_on_service_url=None<span class="p">, </span>store_token=None<span class="p">, </span>trust_email=None<span class="p">, </span>validate_signature=None<span class="p">, </span>want_assertions_encrypted=None<span class="p">, </span>want_assertions_signed=None<span class="p">, </span>xml_sign_key_info_key_name_transformer=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_read_token_role_on_create=None<span class="p">, </span>alias=None<span class="p">, </span>authenticate_by_default=None<span class="p">, </span>backchannel_supported=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>first_broker_login_flow_alias=None<span class="p">, </span>force_authn=None<span class="p">, </span>hide_on_login_page=None<span class="p">, </span>internal_id=None<span class="p">, </span>link_only=None<span class="p">, </span>name_id_policy_format=None<span class="p">, </span>post_binding_authn_request=None<span class="p">, </span>post_binding_logout=None<span class="p">, </span>post_binding_response=None<span class="p">, </span>post_broker_login_flow_alias=None<span class="p">, </span>realm=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>single_logout_service_url=None<span class="p">, </span>single_sign_on_service_url=None<span class="p">, </span>store_token=None<span class="p">, </span>trust_email=None<span class="p">, </span>validate_signature=None<span class="p">, </span>want_assertions_encrypted=None<span class="p">, </span>want_assertions_signed=None<span class="p">, </span>xml_sign_key_info_key_name_transformer=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

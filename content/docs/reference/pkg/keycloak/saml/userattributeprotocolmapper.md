@@ -89,6 +89,45 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/saml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		samlClient, err := saml.NewClient(ctx, "samlClient", &saml.ClientArgs{
+			ClientId: pulumi.String("test-saml-client"),
+			RealmId:  pulumi.String(keycloak_realm.Test.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = saml.NewUserAttributeProtocolMapper(ctx, "samlUserAttributeMapper", &saml.UserAttributeProtocolMapperArgs{
+			ClientId:                samlClient.ID(),
+			RealmId:                 pulumi.String(keycloak_realm.Test.Id),
+			SamlAttributeName:       pulumi.String("displayName"),
+			SamlAttributeNameFormat: pulumi.String("Unspecified"),
+			UserAttribute:           pulumi.String("displayName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -114,7 +153,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#UserAttributeProtocolMapper">UserAttributeProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_attribute=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/saml/#pulumi_keycloak.saml.UserAttributeProtocolMapper">UserAttributeProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_attribute=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -725,7 +764,7 @@ Get an existing UserAttributeProtocolMapper resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_attribute=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_attribute=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
