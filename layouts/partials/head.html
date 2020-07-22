@@ -95,7 +95,7 @@
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
     <!-- Our CSS bundle. -->
-    <link rel="stylesheet" href="/css/styles.{{ getenv "GIT_SHA" }}.css">
+    <link rel="stylesheet" href="{{ getenv "REL_CSS_BUNDLE" }}">
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     {{- if eq hugo.Environment "production" }}

@@ -3,7 +3,7 @@
     crossorigin="anonymous"></script>
 
 <!-- Our JavaScript bundle. -->
-<script src="/js/bundle.min.{{ getenv "GIT_SHA" }}.js"></script>
+<script src="{{ getenv "REL_JS_BUNDLE" }}"></script>
 
 <!--
     These two scripts are provided separately in order to allow browsers to decide which
