@@ -26,6 +26,9 @@ else
     hugo --minify --templateMetrics -e production
 fi
 
+ls -al node_modules/node-sass
+ls -al node_modules/node-sass/vendor/
+
 printf "Compiling the JavaScripts...\n\n"
 yarn run tsc --outFile ${JS_BUNDLE}
 
