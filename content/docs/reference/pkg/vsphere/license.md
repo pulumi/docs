@@ -43,7 +43,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vsphere.NewLicense(ctx, "licenseKey", &vsphere.LicenseArgs{
+			Labels: pulumi.StringMap{
+				"VpxClientLicenseLabel": pulumi.String("Hello World"),
+				"Workflow":              pulumi.String("Hello World"),
+			},
+			LicenseKey: pulumi.String("452CQ-2EK54-K8742-00000-00000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +114,7 @@ const licenseKey = new vsphere.License("licenseKey", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#License">License</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>labels=None<span class="p">, </span>license_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.License">License</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>labels=None<span class="p">, </span>license_key=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,7 +669,7 @@ Get an existing License resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>edition_key=None<span class="p">, </span>labels=None<span class="p">, </span>license_key=None<span class="p">, </span>name=None<span class="p">, </span>total=None<span class="p">, </span>used=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>edition_key=None<span class="p">, </span>labels=None<span class="p">, </span>license_key=None<span class="p">, </span>name=None<span class="p">, </span>total=None<span class="p">, </span>used=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

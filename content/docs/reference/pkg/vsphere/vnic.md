@@ -11,10 +11,203 @@ meta_desc: "Explore the Vnic resource of the vSphere package, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a VMware vSphere vnic resource.
+## Importing
 
-## Example Usages
+An existing vNic can be [imported][docs-import] into this resource
+via supplying the vNic's ID. An example is below:
 
-### Create a vnic attached to a portgroup using the default TCP/IP stack
+[docs-import]: /docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
+The above would import the the vnic `vmk2` from host with ID `host-123`.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "mydc",
+        }));
+        var h1 = dc.Apply(dc => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            Name = "esxi1.host.test",
+            DatacenterId = dc.Id,
+        })));
+        var d1 = new VSphere.DistributedVirtualSwitch("d1", new VSphere.DistributedVirtualSwitchArgs
+        {
+            DatacenterId = dc.Apply(dc => dc.Id),
+            Hosts = 
+            {
+                new VSphere.Inputs.DistributedVirtualSwitchHostArgs
+                {
+                    HostSystemId = h1.Apply(h1 => h1.Id),
+                    Devices = 
+                    {
+                        "vnic3",
+                    },
+                },
+            },
+        });
+        var p1 = new VSphere.DistributedPortGroup("p1", new VSphere.DistributedPortGroupArgs
+        {
+            VlanId = 1234,
+            DistributedVirtualSwitchUuid = d1.Id,
+        });
+        var v1 = new VSphere.Vnic("v1", new VSphere.VnicArgs
+        {
+            Host = h1.Apply(h1 => h1.Id),
+            DistributedSwitchPort = d1.Id,
+            DistributedPortGroup = p1.Id,
+            Ipv4 = new VSphere.Inputs.VnicIpv4Args
+            {
+                Dhcp = true,
+            },
+            Netstack = "vmotion",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "mydc"
+		dc, err := vsphere.LookupDatacenter(ctx, &vsphere.LookupDatacenterArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "esxi1.host.test"
+		h1, err := vsphere.LookupHost(ctx, &vsphere.LookupHostArgs{
+			Name:         &opt1,
+			DatacenterId: dc.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		d1, err := vsphere.NewDistributedVirtualSwitch(ctx, "d1", &vsphere.DistributedVirtualSwitchArgs{
+			DatacenterId: pulumi.String(dc.Id),
+			Hosts: vsphere.DistributedVirtualSwitchHostArray{
+				&vsphere.DistributedVirtualSwitchHostArgs{
+					HostSystemId: pulumi.String(h1.Id),
+					Devices: pulumi.StringArray{
+						pulumi.String("vnic3"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		p1, err := vsphere.NewDistributedPortGroup(ctx, "p1", &vsphere.DistributedPortGroupArgs{
+			VlanId:                       pulumi.Int(1234),
+			DistributedVirtualSwitchUuid: d1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vsphere.NewVnic(ctx, "v1", &vsphere.VnicArgs{
+			Host:                  pulumi.String(h1.Id),
+			DistributedSwitchPort: d1.ID(),
+			DistributedPortGroup:  p1.ID(),
+			Ipv4: &vsphere.VnicIpv4Args{
+				Dhcp: pulumi.Bool(true),
+			},
+			Netstack: pulumi.String("vmotion"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="mydc")
+h1 = vsphere.get_host(name="esxi1.host.test",
+    datacenter_id=dc.id)
+d1 = vsphere.DistributedVirtualSwitch("d1",
+    datacenter_id=dc.id,
+    hosts=[{
+        "host_system_id": h1.id,
+        "devices": ["vnic3"],
+    }])
+p1 = vsphere.DistributedPortGroup("p1",
+    vlan_id=1234,
+    distributed_virtual_switch_uuid=d1.id)
+v1 = vsphere.Vnic("v1",
+    host=h1.id,
+    distributed_switch_port=d1.id,
+    distributed_port_group=p1.id,
+    ipv4={
+        "dhcp": True,
+    },
+    netstack="vmotion")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -27,52 +220,32 @@ const h1 = dc.then(dc => vsphere.getHost({
     name: "esxi1.host.test",
     datacenterId: dc.id,
 }));
-const hvs1 = new vsphere.HostVirtualSwitch("hvs1", {
-    hostSystemId: h1.then(h1 => h1.id),
-    networkAdapters: [
-        "vmnic3",
-        "vmnic4",
-    ],
-    activeNics: ["vmnic3"],
-    standbyNics: ["vmnic4"],
+const d1 = new vsphere.DistributedVirtualSwitch("d1", {
+    datacenterId: dc.then(dc => dc.id),
+    hosts: [{
+        hostSystemId: h1.then(h1 => h1.id),
+        devices: ["vnic3"],
+    }],
 });
-const p1 = new vsphere.HostPortGroup("p1", {
-    virtualSwitchName: hvs1.name,
-    hostSystemId: h1.then(h1 => h1.id),
+const p1 = new vsphere.DistributedPortGroup("p1", {
+    vlanId: 1234,
+    distributedVirtualSwitchUuid: d1.id,
 });
 const v1 = new vsphere.Vnic("v1", {
     host: h1.then(h1 => h1.id),
-    portgroup: p1.name,
+    distributedSwitchPort: d1.id,
+    distributedPortGroup: p1.id,
     ipv4: {
         dhcp: true,
     },
+    netstack: "vmotion",
 });
 ```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
 
-dc = vsphere.get_datacenter(name="mydc")
-h1 = vsphere.get_host(name="esxi1.host.test",
-    datacenter_id=dc.id)
-hvs1 = vsphere.HostVirtualSwitch("hvs1",
-    host_system_id=h1.id,
-    network_adapters=[
-        "vmnic3",
-        "vmnic4",
-    ],
-    active_nics=["vmnic3"],
-    standby_nics=["vmnic4"])
-p1 = vsphere.HostPortGroup("p1",
-    virtual_switch_name=hvs1.name,
-    host_system_id=h1.id)
-v1 = vsphere.Vnic("v1",
-    host=h1.id,
-    portgroup=p1.name,
-    ipv4={
-        "dhcp": True,
-    })
-```
+{{% /example %}}
+
+### Create a vnic attached to a portgroup using the default TCP/IP stack
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using VSphere = Pulumi.VSphere;
@@ -126,33 +299,141 @@ class MyStack : Stack
 }
 ```
 
-## Importing
+{{% /example %}}
 
-An existing vNic can be [imported][docs-import] into this resource
-via supplying the vNic's ID. An example is below:
+{{% example go %}}
+```go
+package main
 
-[docs-import]: /docs/import/index.html
+import (
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "mydc"
+		dc, err := vsphere.LookupDatacenter(ctx, &vsphere.LookupDatacenterArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "esxi1.host.test"
+		h1, err := vsphere.LookupHost(ctx, &vsphere.LookupHostArgs{
+			Name:         &opt1,
+			DatacenterId: dc.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		hvs1, err := vsphere.NewHostVirtualSwitch(ctx, "hvs1", &vsphere.HostVirtualSwitchArgs{
+			HostSystemId: pulumi.String(h1.Id),
+			NetworkAdapters: pulumi.StringArray{
+				pulumi.String("vmnic3"),
+				pulumi.String("vmnic4"),
+			},
+			ActiveNics: pulumi.StringArray{
+				pulumi.String("vmnic3"),
+			},
+			StandbyNics: pulumi.StringArray{
+				pulumi.String("vmnic4"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		p1, err := vsphere.NewHostPortGroup(ctx, "p1", &vsphere.HostPortGroupArgs{
+			VirtualSwitchName: hvs1.Name,
+			HostSystemId:      pulumi.String(h1.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vsphere.NewVnic(ctx, "v1", &vsphere.VnicArgs{
+			Host:      pulumi.String(h1.Id),
+			Portgroup: p1.Name,
+			Ipv4: &vsphere.VnicIpv4Args{
+				Dhcp: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
-The above would import the the vnic `vmk2` from host with ID `host-123`.
+{{% /example %}}
 
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="mydc")
+h1 = vsphere.get_host(name="esxi1.host.test",
+    datacenter_id=dc.id)
+hvs1 = vsphere.HostVirtualSwitch("hvs1",
+    host_system_id=h1.id,
+    network_adapters=[
+        "vmnic3",
+        "vmnic4",
+    ],
+    active_nics=["vmnic3"],
+    standby_nics=["vmnic4"])
+p1 = vsphere.HostPortGroup("p1",
+    virtual_switch_name=hvs1.name,
+    host_system_id=h1.id)
+v1 = vsphere.Vnic("v1",
+    host=h1.id,
+    portgroup=p1.name,
+    ipv4={
+        "dhcp": True,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = vsphere.getDatacenter({
+    name: "mydc",
+});
+const h1 = dc.then(dc => vsphere.getHost({
+    name: "esxi1.host.test",
+    datacenterId: dc.id,
+}));
+const hvs1 = new vsphere.HostVirtualSwitch("hvs1", {
+    hostSystemId: h1.then(h1 => h1.id),
+    networkAdapters: [
+        "vmnic3",
+        "vmnic4",
+    ],
+    activeNics: ["vmnic3"],
+    standbyNics: ["vmnic4"],
+});
+const p1 = new vsphere.HostPortGroup("p1", {
+    virtualSwitchName: hvs1.name,
+    hostSystemId: h1.then(h1 => h1.id),
+});
+const v1 = new vsphere.Vnic("v1", {
+    host: h1.then(h1 => h1.id),
+    portgroup: p1.name,
+    ipv4: {
+        dhcp: true,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Vnic Resource {#create}
@@ -164,7 +445,7 @@ The above would import the the vnic `vmk2` from host with ID `host-123`.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Vnic">Vnic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.Vnic">Vnic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -355,7 +636,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,7 +742,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -567,7 +848,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,7 +954,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,7 +1132,7 @@ Get an existing Vnic resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -973,7 +1254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1079,7 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1185,7 +1466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,7 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to. 
+    <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
