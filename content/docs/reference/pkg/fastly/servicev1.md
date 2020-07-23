@@ -519,7 +519,7 @@ const demo = new fastly.Servicev1("demo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/fastly/#Servicev1">Servicev1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3098,7 +3098,7 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -15204,6 +15204,17 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
 </span> 
@@ -15361,6 +15372,17 @@ content. (Does not apply to the `delete` action.)
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -15526,6 +15548,17 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
@@ -15683,6 +15716,17 @@ content. (Does not apply to the `delete` action.)
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_python">
+<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

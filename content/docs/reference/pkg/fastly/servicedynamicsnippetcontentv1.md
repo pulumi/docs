@@ -23,7 +23,7 @@ Defines content that represents blocks of VCL logic that is inserted into your s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/fastly/#ServiceDynamicSnippetContentv1">ServiceDynamicSnippetContentv1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceDynamicSnippetContentv1">ServiceDynamicSnippetContentv1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -446,7 +446,7 @@ Get an existing ServiceDynamicSnippetContentv1 resource's state with the given n
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -16,6 +16,7 @@ A Pulumi package for creating and managing fastly cloud resources.
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="serviceaclentriesv1" title="ServiceACLEntriesv1"><span class="symbol resource"></span>ServiceACLEntriesv1</a></li>
+    <li><a href="servicecompute" title="ServiceCompute"><span class="symbol resource"></span>ServiceCompute</a></li>
     <li><a href="servicedictionaryitemsv1" title="ServiceDictionaryItemsv1"><span class="symbol resource"></span>ServiceDictionaryItemsv1</a></li>
     <li><a href="servicedynamicsnippetcontentv1" title="ServiceDynamicSnippetContentv1"><span class="symbol resource"></span>ServiceDynamicSnippetContentv1</a></li>
     <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
@@ -36,7 +37,7 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
-	<dd>2.6.0</dd>
+	<dd>2.7.0</dd>
 </dl>
 
 
