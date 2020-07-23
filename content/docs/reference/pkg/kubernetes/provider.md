@@ -23,7 +23,7 @@ The provider type for the kubernetes package.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kubernetes/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>context=None<span class="p">, </span>enable_dry_run=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>namespace=None<span class="p">, </span>render_yaml_to_directory=None<span class="p">, </span>suppress_deprecation_warnings=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/#pulumi_kubernetes.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>context=None<span class="p">, </span>enable_dry_run=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>namespace=None<span class="p">, </span>render_yaml_to_directory=None<span class="p">, </span>suppress_deprecation_warnings=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
