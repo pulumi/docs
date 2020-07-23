@@ -1,8 +1,8 @@
 
 ---
 title: "GetPrivateEndpointInterfaceLink"
-title_tag: "Function GetPrivateEndpointInterfaceLink | Package mongodbatlas"
-meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the mongodbatlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas_private_endpoint_link` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project."
+title_tag: "Function GetPrivateEndpointInterfaceLink | Package MongoDB Atlas"
+meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas_private_endpoint_link` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project."
 ---
 
 
@@ -13,9 +13,6 @@ meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the mongodba
 `mongodbatlas_private_endpoint_link` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project.
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 

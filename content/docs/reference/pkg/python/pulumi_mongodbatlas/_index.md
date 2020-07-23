@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_mongodbatlas"></span><dl class="py class">
 <dt id="pulumi_mongodbatlas.AlertConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AlertConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AlertConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.AlertConfiguration</span></code> provides an Alert Configuration resource to define the conditions that trigger an alert and the methods of notification within a MongoDB Atlas project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AlertConfiguration</span></code> provides an Alert Configuration resource to define the conditions that trigger an alert and the methods of notification within a MongoDB Atlas project.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -504,7 +504,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.Auditing">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Auditing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_authorization_success</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Auditing" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Auditing</span></code> provides an Auditing resource. This allows auditing to be created.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Auditing</span></code> provides an Auditing resource. This allows auditing to be created.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
 
@@ -654,12 +654,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotRestoreJobResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cancelled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finished_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotRestoreJobResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cancelled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finished_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oplog_inc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oplog_ts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">point_in_time_utc_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotRestoreJobsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotRestoreJobsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotRestoreJobsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -669,12 +669,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_scaling_compute_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_scale_down_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_max_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_min_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -743,13 +743,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetProjectIpWhitelistResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectIpWhitelistResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectIpWhitelistResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetProjectResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetProjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -765,7 +770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CloudProviderSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CloudProviderSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderSnapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshot</span></code> provides a resource to take a cloud provider snapshot on demand.
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshot</span></code> provides a resource to take a cloud backup snapshot on demand.
 On-demand snapshots happen immediately, unlike scheduled snapshots which occur at regular intervals. If there is already an on-demand snapshot with a status of queued or inProgress, you must wait until Atlas has completed the on-demand snapshot before taking another.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
@@ -956,7 +961,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CloudProviderSnapshotBackupPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_hour_of_day</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_minute_of_hour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_snapshots</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshotBackupPolicy</span></code> provides a resource that enables you to view and modify the snapshot schedule and retention settings for an Atlas cluster with Cloud Provider Snapshots enabled.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshotBackupPolicy</span></code> provides a resource that enables you to view and modify the snapshot schedule and retention settings for an Atlas cluster with Cloud Backup enabled.  A default policy is created automatically when Cloud Backup is enabled for the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -980,7 +985,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">restore_window_days</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">policies</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;policy_item&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;policyItems&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policyItems&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
                 <span class="s2">&quot;frequencyInterval&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1023,7 +1028,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the .Cluster resource. provider_backup_enabled of the .Cluster resource must be set to true. See the example above for how to refer to the .Cluster resource for policies.#.id
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the Cluster resource. provider_backup_enabled of the Cluster resource must be set to true. See the example above for how to refer to the Cluster resource for policies.#.id
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1073,7 +1078,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains a document for each backup policy item in the desired updated backup policy.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">policies.#.id</span></code> - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the .Cluster resource. provider_backup_enabled of the .Cluster resource must be set to true. See the example above for how to refer to the .Cluster resource for policies.#.id</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">policies.#.id</span></code> - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the Cluster resource. provider_backup_enabled of the Cluster resource must be set to true. See the example above for how to refer to the Cluster resource for policies.#.id</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyItems</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
@@ -1138,7 +1143,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the .Cluster resource. provider_backup_enabled of the .Cluster resource must be set to true. See the example above for how to refer to the .Cluster resource for policies.#.id
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the Cluster resource. provider_backup_enabled of the Cluster resource must be set to true. See the example above for how to refer to the Cluster resource for policies.#.id
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1208,13 +1213,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CloudProviderSnapshotRestoreJob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CloudProviderSnapshotRestoreJob</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderSnapshotRestoreJob" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshotRestoreJob</span></code> provides a resource to create a new restore job from a cloud provider snapshot of a specified cluster. The restore job can be one of two types:</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshotRestoreJob</span></code> provides a resource to create a new restore job from a cloud backup snapshot of a specified cluster. The restore job can be one of three types:</p>
 <ul class="simple">
 <li><p><strong>automated:</strong> Atlas automatically restores the snapshot with snapshotId to the Atlas cluster with name targetClusterName in the Atlas project with targetGroupId.</p></li>
 <li><p><strong>download:</strong> Atlas provides a URL to download a .tar.gz of the snapshot with snapshotId. The contents of the archive contain the data files for your Atlas cluster.</p></li>
+<li><p><strong>pointInTime:</strong>  Atlas performs a Continuous Cloud Backup restore.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<div><p><strong>Important:</strong> If you specify <code class="docutils literal notranslate"><span class="pre">deliveryType</span></code> : <code class="docutils literal notranslate"><span class="pre">automated</span></code> or <code class="docutils literal notranslate"><span class="pre">deliveryType</span></code> : <code class="docutils literal notranslate"><span class="pre">pointInTime</span></code> in your request body to create an automated restore job, Atlas removes all existing data on the target cluster prior to the restore.</p>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
@@ -1241,7 +1248,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;automated&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;target_cluster_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
         <span class="s2">&quot;target_project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
-    <span class="p">})</span>
+    <span class="p">},</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_cloud_provider_snapshot.test&quot;</span><span class="p">]))</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1286,6 +1294,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">download</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_inc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_ts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time_utc_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_cluster_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target Atlas cluster to which the restore job restores the snapshot. Only required if deliveryType is automated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -1314,6 +1326,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automated</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">download</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_inc</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_ts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time_utc_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_cluster_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the target Atlas cluster to which the restore job restores the snapshot. Only required if deliveryType is automated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -1397,6 +1413,10 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">download</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_inc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplog_ts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_in_time_utc_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_cluster_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target Atlas cluster to which the restore job restores the snapshot. Only required if deliveryType is automated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -1442,8 +1462,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advanced_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Cluster</span></code> provides a Cluster resource. The resource lets you create, edit and delete clusters. The resource requires your Project ID.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advanced_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_scale_down_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_max_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_min_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Cluster</span></code> provides a Cluster resource. The resource lets you create, edit and delete clusters. The resource requires your Project ID.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 <p><strong>IMPORTANT:</strong>
@@ -1458,7 +1478,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
     <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1476,7 +1496,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
     <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1493,7 +1513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
-    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
     <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1518,7 +1538,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
     <span class="n">replication_specs</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;regionsConfigs&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
@@ -1557,7 +1577,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;regionsConfigs&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1567,7 +1587,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;regionsConfigs&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1597,8 +1617,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_scaling_disk_gb_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether disk auto-scaling is enabled. The default is true.</p></li>
+<li><p><strong>auto_scaling_compute_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether cluster tier auto-scaling is enabled. The default is false.</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>auto_scaling_compute_scale_down_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the cluster tier to scale down. This option is only available if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>auto_scaling_disk_gb_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether disk auto-scaling is enabled. The default is true.</p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Set to `true` to enable disk auto-scaling.
@@ -1609,27 +1646,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backing_provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud service provider on which the server for a multi-tenant cluster is provisioned.</p></li>
-<li><p><strong>backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Legacy Option - Set to true to enable Atlas continuous backups for the cluster.</p></li>
+<li><p><strong>backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+<strong>Important</strong> - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using <a class="reference external" href="https://docs.atlas.mongodb.com/backup/cloud-backup/overview/">Cloud Backups</a>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>bi_connector</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.</p></li>
 <li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.</p></li>
-<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p></li>
-<li><p><strong>encryption_at_rest_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.</p></li>
+<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">The</span> <span class="n">minimum</span> <span class="n">disk</span> <span class="n">size</span> <span class="k">for</span> <span class="n">dedicated</span> <span class="n">clusters</span> <span class="ow">is</span> <span class="mi">10</span><span class="n">GB</span> <span class="k">for</span> <span class="n">AWS</span> <span class="ow">and</span> <span class="n">GCP</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">specify</span> <span class="n">diskSizeGB</span> <span class="k">with</span> <span class="n">a</span> <span class="n">lower</span> <span class="n">disk</span> <span class="n">size</span><span class="p">,</span> <span class="n">Atlas</span> <span class="n">defaults</span> <span class="n">to</span> <span class="n">the</span> <span class="n">minimum</span> <span class="n">disk</span> <span class="n">size</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Note</span><span class="p">:</span> <span class="n">The</span> <span class="n">maximum</span> <span class="n">value</span> <span class="k">for</span> <span class="n">disk</span> <span class="n">storage</span> <span class="n">cannot</span> <span class="n">exceed</span> <span class="mi">50</span> <span class="n">times</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">RAM</span> <span class="k">for</span> <span class="n">the</span> <span class="n">selected</span> <span class="n">cluster</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">require</span> <span class="n">additional</span> <span class="n">storage</span> <span class="n">space</span> <span class="n">beyond</span> <span class="n">this</span> <span class="n">limitation</span><span class="p">,</span> <span class="n">consider</span> <span class="n">upgrading</span> <span class="n">your</span> <span class="n">cluster</span> <span class="n">to</span> <span class="n">a</span> <span class="n">higher</span> <span class="n">tier</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Cannot</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">clusters</span> <span class="k">with</span> <span class="n">local</span> <span class="n">NVMe</span> <span class="n">SSDs</span>
+<span class="o">*</span> <span class="n">Cannot</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">Azure</span> <span class="n">clusters</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encryption_at_rest_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see <a class="reference external" href="https://docs.atlas.mongodb.com/security-aws-kms/">Encryption at Rest using Customer Key Management</a> for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. <strong>Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array containing key-value pairs that tag and categorize the cluster. Each key and value has a maximum length of 255 characters. You cannot set the key <code class="docutils literal notranslate"><span class="pre">Infrastructure</span> <span class="pre">Tool</span></code>, it is used for internal purposes to track aggregate usage.</p></li>
 <li><p><strong>mongo_db_major_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: <code class="docutils literal notranslate"><span class="pre">3.6</span></code>, <code class="docutils literal notranslate"><span class="pre">4.0</span></code>, or <code class="docutils literal notranslate"><span class="pre">4.2</span></code>. You must set this value to <code class="docutils literal notranslate"><span class="pre">4.2</span></code> if <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> is either M2 or M5.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.</p></li>
-<li><p><strong>num_shards</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of shards to deploy in the specified zone.</p></li>
+<li><p><strong>num_shards</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of shards to deploy in the specified zone, minimum 1.</p></li>
 <li><p><strong>pit_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <ul>
-<li><p>Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.</p></li>
+<li><p>Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.</p></li>
 </ul>
 </p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
-<li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Provider Snapshots for backups.</p></li>
-<li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.</p></li>
+<li><p><strong>provider_auto_scaling_compute_max_instance_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>provider_auto_scaling_compute_min_instance_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.scaleDownEnabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Backup for backups.</p></li>
+<li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code>.</p></li>
 <li><p><strong>provider_disk_type_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">https://docs.atlas.mongodb.com/reference/api/clusters-create-one/</a>.</p></li>
-<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.</p></li>
-<li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources.</p></li>
+<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p></li>
+<li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources. 
+<strong>Note</strong> free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)</p></li>
 <li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud service provider on which the servers are provisioned.</p></li>
-<li><p><strong>provider_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
+<li><p><strong>provider_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.</p></li>
 <li><p><strong>provider_volume_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the volume. The possible values are: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code> and <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.  <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> required if setting IOPS higher than the default instance IOPS.</p></li>
 <li><p><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.</p></li>
@@ -1639,17 +1703,18 @@ Do not specify this field when creating a multi-region cluster using the replica
 </dl>
 <p>The <strong>advanced_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fail_index_key_too_long</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">javascript_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum_enabled_tls_protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">no_table_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oplog_size_mb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample_refresh_interval_bi_connector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample_size_bi_connector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failIndexKeyTooLong</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">javascriptEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumEnabledTlsProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noTableScan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplogSizeMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleRefreshIntervalBiConnector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleSizeBiConnector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
 </ul>
 <p>The <strong>bi_connector</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*</p>
 <ul>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable BI Connector for Atlas.</p></li>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable BI Connector for Atlas.</p></li>
@@ -1665,18 +1730,49 @@ Do not specify this field when creating a multi-region cluster using the replica
 <p>The <strong>replication_specs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifer of the replication document for a zone in a Global Cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of shards to deploy in the specified zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of shards to deploy in the specified zone, minimum 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionsConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p>
+<ul>
+<li><p>The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.</p></li>
+<li><p>Specify 0 if you do not want any electable nodes in the region.</p></li>
+<li><p>You cannot create electable nodes in a region if <code class="docutils literal notranslate"><span class="pre">priority</span></code> is 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p>
+<ul>
+<li><p>For regions where <code class="docutils literal notranslate"><span class="pre">electable_nodes</span></code> is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.</p></li>
+<li><p>The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.</p></li>
+<li><p>Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readOnlyNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name for the region specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name for the zone in a Global Cluster.</p></li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.Cluster.auto_scaling_compute_enabled">
+<code class="sig-name descname">auto_scaling_compute_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.auto_scaling_compute_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether cluster tier auto-scaling is enabled. The default is false.</p>
+<ul class="simple">
+<li><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable cluster tier auto-scaling. If enabled, you must specify a value for <code class="docutils literal notranslate"><span class="pre">providerSettings.autoScaling.compute.maxInstanceSize</span></code>.</p></li>
+<li><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable cluster tier auto-scaling.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.Cluster.auto_scaling_compute_scale_down_enabled">
+<code class="sig-name descname">auto_scaling_compute_scale_down_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.auto_scaling_compute_scale_down_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the cluster tier to scale down. This option is only available if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<ul class="simple">
+<li><p>If this option is enabled, you must specify a value for <code class="docutils literal notranslate"><span class="pre">providerSettings.autoScaling.compute.minInstanceSize</span></code></p></li>
+</ul>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.auto_scaling_disk_gb_enabled">
 <code class="sig-name descname">auto_scaling_disk_gb_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.auto_scaling_disk_gb_enabled" title="Permalink to this definition">¶</a></dt>
@@ -1696,7 +1792,13 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.backup_enabled">
 <code class="sig-name descname">backup_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.backup_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Legacy Option - Set to true to enable Atlas continuous backups for the cluster.</p>
+<dd><p>Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+<strong>Important</strong> - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using <a class="reference external" href="https://docs.atlas.mongodb.com/backup/cloud-backup/overview/">Cloud Backups</a>.</p>
+<ul class="simple">
+<li><p>Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, <code class="docutils literal notranslate"><span class="pre">provider_backup_enabled</span></code>, to enable Cloud Backup.  If you create a new Atlas cluster and set <code class="docutils literal notranslate"><span class="pre">backup_enabled</span></code> to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.</p></li>
+<li><p>Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.</p></li>
+<li><p>The default value is false.  M10 and above only.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1704,7 +1806,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 <code class="sig-name descname">bi_connector</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.bi_connector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*</p>
 <ul>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable BI Connector for Atlas.</p></li>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable BI Connector for Atlas.</p></li>
@@ -1731,13 +1834,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 <code class="sig-name descname">connection_strings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.connection_strings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set of connection strings that your applications use to connect to this cluster. More info in <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/">Connection-strings</a>. Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/">Connection String Options</a>. NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.standard</span></code> -   Public mongodb:// connection string for this cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.standard_srv</span></code> - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.aws_private_link</span></code> -  <a class="reference external" href="https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings">Private-endpoint-aware</a> mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.aws_private_link_srv</span></code> - <a class="reference external" href="https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings">Private-endpoint-aware</a> mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.private</span></code> -   <a class="reference external" href="https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering">Network-peering-endpoint-aware</a> mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.private_srv</span></code> -  <a class="reference external" href="https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering">Network-peering-endpoint-aware</a> mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsPrivateLink</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsPrivateLinkSrv</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -1745,20 +1841,30 @@ Do not specify this field when creating a multi-region cluster using the replica
 <li><p><code class="docutils literal notranslate"><span class="pre">standard</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">standardSrv</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-</li>
-</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.Cluster.container_id">
+<code class="sig-name descname">container_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.container_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.disk_size_gb">
 <code class="sig-name descname">disk_size_gb</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.disk_size_gb" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p>
+<dd><p>Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p>
+<ul class="simple">
+<li><p>The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.</p></li>
+<li><p>Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.</p></li>
+<li><p>Cannot be used with clusters with local NVMe SSDs</p></li>
+<li><p>Cannot be used with Azure clusters</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.encryption_at_rest_provider">
 <code class="sig-name descname">encryption_at_rest_provider</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.encryption_at_rest_provider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.</p>
+<dd><p>Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see <a class="reference external" href="https://docs.atlas.mongodb.com/security-aws-kms/">Encryption at Rest using Customer Key Management</a> for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. <strong>Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1810,7 +1916,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.num_shards">
 <code class="sig-name descname">num_shards</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.num_shards" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of shards to deploy in the specified zone.</p>
+<dd><p>Number of shards to deploy in the specified zone, minimum 1.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1823,7 +1929,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dt id="pulumi_mongodbatlas.Cluster.pit_enabled">
 <code class="sig-name descname">pit_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.pit_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
-<li><p>Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.</p></li>
+<li><p>Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.</p></li>
 </ul>
 </dd></dl>
 
@@ -1834,15 +1940,27 @@ Do not specify this field when creating a multi-region cluster using the replica
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_mongodbatlas.Cluster.provider_auto_scaling_compute_max_instance_size">
+<code class="sig-name descname">provider_auto_scaling_compute_max_instance_size</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_auto_scaling_compute_max_instance_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.Cluster.provider_auto_scaling_compute_min_instance_size">
+<code class="sig-name descname">provider_auto_scaling_compute_min_instance_size</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_auto_scaling_compute_min_instance_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.scaleDownEnabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.provider_backup_enabled">
 <code class="sig-name descname">provider_backup_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_backup_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flag indicating if the cluster uses Cloud Provider Snapshots for backups.</p>
+<dd><p>Flag indicating if the cluster uses Cloud Backup for backups.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.provider_disk_iops">
 <code class="sig-name descname">provider_disk_iops</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_disk_iops" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.</p>
+<dd><p>The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1854,13 +1972,14 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.provider_encrypt_ebs_volume">
 <code class="sig-name descname">provider_encrypt_ebs_volume</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_encrypt_ebs_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.</p>
+<dd><p>If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.provider_instance_size_name">
 <code class="sig-name descname">provider_instance_size_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_instance_size_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources.</p>
+<dd><p>Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources. 
+<strong>Note</strong> free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1872,7 +1991,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Cluster.provider_region_name">
 <code class="sig-name descname">provider_region_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_region_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
+<dd><p>Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.</p>
 </dd></dl>
 
@@ -1894,14 +2013,26 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dd><p>Configuration for cluster regions.  See Replication Spec below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifer of the replication document for a zone in a Global Cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of shards to deploy in the specified zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of shards to deploy in the specified zone, minimum 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionsConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p>
+<ul>
+<li><p>The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.</p></li>
+<li><p>Specify 0 if you do not want any electable nodes in the region.</p></li>
+<li><p>You cannot create electable nodes in a region if <code class="docutils literal notranslate"><span class="pre">priority</span></code> is 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p>
+<ul>
+<li><p>For regions where <code class="docutils literal notranslate"><span class="pre">electable_nodes</span></code> is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.</p></li>
+<li><p>The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.</p></li>
+<li><p>Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readOnlyNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name for the region specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name for the zone in a Global Cluster.</p></li>
@@ -1959,7 +2090,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 <dl class="py method">
 <dt id="pulumi_mongodbatlas.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advanced_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advanced_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_scale_down_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_max_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_min_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1968,8 +2099,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_scaling_disk_gb_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether disk auto-scaling is enabled. The default is true.</p></li>
+<li><p><strong>auto_scaling_compute_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether cluster tier auto-scaling is enabled. The default is false.</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>auto_scaling_compute_scale_down_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the cluster tier to scale down. This option is only available if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>auto_scaling_disk_gb_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether disk auto-scaling is enabled. The default is true.</p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Set to `true` to enable disk auto-scaling.
@@ -1980,28 +2128,41 @@ properties used to qualify the lookup.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backing_provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud service provider on which the server for a multi-tenant cluster is provisioned.</p></li>
-<li><p><strong>backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Legacy Option - Set to true to enable Atlas continuous backups for the cluster.</p></li>
-<li><p><strong>bi_connector</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster ID.</p></li>
-<li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.</p></li>
-<li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Set of connection strings that your applications use to connect to this cluster. More info in <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/">Connection-strings</a>. Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/">Connection String Options</a>. NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.</p>
+<li><p><strong>backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+<strong>Important</strong> - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using <a class="reference external" href="https://docs.atlas.mongodb.com/backup/cloud-backup/overview/">Cloud Backups</a>.</p>
 </p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 </pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p></li>
-<li><p><strong>encryption_at_rest_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.</p></li>
+<li><p><strong>bi_connector</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster ID.</p></li>
+<li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.</p></li>
+<li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Set of connection strings that your applications use to connect to this cluster. More info in <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/">Connection-strings</a>. Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/">Connection String Options</a>. NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.</p>
+</p></li>
+<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.</p></li>
+<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">The</span> <span class="n">minimum</span> <span class="n">disk</span> <span class="n">size</span> <span class="k">for</span> <span class="n">dedicated</span> <span class="n">clusters</span> <span class="ow">is</span> <span class="mi">10</span><span class="n">GB</span> <span class="k">for</span> <span class="n">AWS</span> <span class="ow">and</span> <span class="n">GCP</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">specify</span> <span class="n">diskSizeGB</span> <span class="k">with</span> <span class="n">a</span> <span class="n">lower</span> <span class="n">disk</span> <span class="n">size</span><span class="p">,</span> <span class="n">Atlas</span> <span class="n">defaults</span> <span class="n">to</span> <span class="n">the</span> <span class="n">minimum</span> <span class="n">disk</span> <span class="n">size</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Note</span><span class="p">:</span> <span class="n">The</span> <span class="n">maximum</span> <span class="n">value</span> <span class="k">for</span> <span class="n">disk</span> <span class="n">storage</span> <span class="n">cannot</span> <span class="n">exceed</span> <span class="mi">50</span> <span class="n">times</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">RAM</span> <span class="k">for</span> <span class="n">the</span> <span class="n">selected</span> <span class="n">cluster</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">require</span> <span class="n">additional</span> <span class="n">storage</span> <span class="n">space</span> <span class="n">beyond</span> <span class="n">this</span> <span class="n">limitation</span><span class="p">,</span> <span class="n">consider</span> <span class="n">upgrading</span> <span class="n">your</span> <span class="n">cluster</span> <span class="n">to</span> <span class="n">a</span> <span class="n">higher</span> <span class="n">tier</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Cannot</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">clusters</span> <span class="k">with</span> <span class="n">local</span> <span class="n">NVMe</span> <span class="n">SSDs</span>
+<span class="o">*</span> <span class="n">Cannot</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">Azure</span> <span class="n">clusters</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encryption_at_rest_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see <a class="reference external" href="https://docs.atlas.mongodb.com/security-aws-kms/">Encryption at Rest using Customer Key Management</a> for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. <strong>Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p>
+</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array containing key-value pairs that tag and categorize the cluster. Each key and value has a maximum length of 255 characters. You cannot set the key <code class="docutils literal notranslate"><span class="pre">Infrastructure</span> <span class="pre">Tool</span></code>, it is used for internal purposes to track aggregate usage.</p></li>
 <li><p><strong>mongo_db_major_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: <code class="docutils literal notranslate"><span class="pre">3.6</span></code>, <code class="docutils literal notranslate"><span class="pre">4.0</span></code>, or <code class="docutils literal notranslate"><span class="pre">4.2</span></code>. You must set this value to <code class="docutils literal notranslate"><span class="pre">4.2</span></code> if <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> is either M2 or M5.</p></li>
 <li><p><strong>mongo_db_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of MongoDB the cluster runs, in <code class="docutils literal notranslate"><span class="pre">major-version</span></code>.<code class="docutils literal notranslate"><span class="pre">minor-version</span></code> format.</p></li>
@@ -2009,21 +2170,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>mongo_uri_updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.</p></li>
 <li><p><strong>mongo_uri_with_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.</p></li>
-<li><p><strong>num_shards</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of shards to deploy in the specified zone.</p></li>
+<li><p><strong>num_shards</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of shards to deploy in the specified zone, minimum 1.</p></li>
 <li><p><strong>paused</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag that indicates whether the cluster is paused or not.</p></li>
 <li><p><strong>pit_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <ul>
-<li><p>Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.</p></li>
+<li><p>Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.</p></li>
 </ul>
 </p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
-<li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Provider Snapshots for backups.</p></li>
-<li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.</p></li>
+<li><p><strong>provider_auto_scaling_compute_max_instance_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>provider_auto_scaling_compute_min_instance_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if <code class="docutils literal notranslate"><span class="pre">autoScaling.compute.scaleDownEnabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Backup for backups.</p></li>
+<li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code>.</p></li>
 <li><p><strong>provider_disk_type_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">https://docs.atlas.mongodb.com/reference/api/clusters-create-one/</a>.</p></li>
-<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.</p></li>
-<li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources.</p>
+<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p></li>
+<li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources. 
+<strong>Note</strong> free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)</p>
 </p></li>
 <li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud service provider on which the servers are provisioned.</p></li>
-<li><p><strong>provider_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
+<li><p><strong>provider_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.</p>
 </p></li>
 <li><p><strong>provider_volume_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the volume. The possible values are: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code> and <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.  <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> required if setting IOPS higher than the default instance IOPS.</p></li>
@@ -2045,17 +2209,18 @@ Do not specify this field when creating a multi-region cluster using the replica
 </div>
 <p>The <strong>advanced_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fail_index_key_too_long</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">javascript_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum_enabled_tls_protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">no_table_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oplog_size_mb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample_refresh_interval_bi_connector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample_size_bi_connector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failIndexKeyTooLong</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">javascriptEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumEnabledTlsProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noTableScan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oplogSizeMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleRefreshIntervalBiConnector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleSizeBiConnector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.</p></li>
 </ul>
 <p>The <strong>bi_connector</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*</p>
 <ul>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable BI Connector for Atlas.</p></li>
 <li><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable BI Connector for Atlas.</p></li>
@@ -2080,14 +2245,26 @@ Do not specify this field when creating a multi-region cluster using the replica
 <p>The <strong>replication_specs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifer of the replication document for a zone in a Global Cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of shards to deploy in the specified zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_shards</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of shards to deploy in the specified zone, minimum 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionsConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analyticsNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electableNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.</p>
+<ul>
+<li><p>The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.</p></li>
+<li><p>Specify 0 if you do not want any electable nodes in the region.</p></li>
+<li><p>You cannot create electable nodes in a region if <code class="docutils literal notranslate"><span class="pre">priority</span></code> is 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Election priority of the region. For regions with only read-only nodes, set this value to 0.</p>
+<ul>
+<li><p>For regions where <code class="docutils literal notranslate"><span class="pre">electable_nodes</span></code> is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.</p></li>
+<li><p>The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.</p></li>
+<li><p>Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readOnlyNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name for the region specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the <strong>Atlas region name</strong>, see the reference list for <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/google-gcp/">GCP</a>, <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name for the zone in a Global Cluster.</p></li>
@@ -2159,7 +2336,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CustomDbRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CustomDbRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CustomDbRole" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CustomDbRole</span></code> provides a Custom DB Role resource. The customDBRoles resource lets you retrieve, create and modify the custom MongoDB roles in your cluster. Use custom MongoDB roles to specify custom sets of actions which cannot be described by the built-in Atlas database user privileges.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CustomDbRole</span></code> provides a Custom DB Role resource. The customDBRoles resource lets you retrieve, create and modify the custom MongoDB roles in your cluster. Use custom MongoDB roles to specify custom sets of actions which cannot be described by the built-in Atlas database user privileges.</p>
 <blockquote>
 <div><p><strong>IMPORTANT</strong> Custom roles cannot use actions unavailable to any cluster version in your project. Custom roles are defined at the project level, and must be compatible with each MongoDB version used by your project’s clusters. If you have a cluster in your project with MongoDB 3.4, you cannot create a custom role that uses actions introduced in MongoDB 3.6, such as useUUID.</p>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
@@ -2371,15 +2548,69 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.DatabaseUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">DatabaseUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x509_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.DatabaseUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DatabaseUser resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] auth_database_name: The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
-:param pulumi.Input[str] database_name: Database on which the user has the specified role. A role on the <code class="docutils literal notranslate"><span class="pre">admin</span></code> database can include privileges that apply to the other databases.
-:param pulumi.Input[str] project_id: The unique ID for the project to create the database user.
-:param pulumi.Input[list] roles: List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-:param pulumi.Input[str] username: Username for authenticating to MongoDB.
-:param pulumi.Input[str] x509_type: X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">DatabaseUser</span></code> provides a Database User resource. This represents a database user which will be applied to all clusters within the project.</p>
+<p>Each user has a set of roles that provide access to the project’s databases. User’s roles apply to all the clusters in the project: if two clusters have a <code class="docutils literal notranslate"><span class="pre">products</span></code> database and a user has a role granting <code class="docutils literal notranslate"><span class="pre">read</span></code> access on the products database, the user has that access on both clusters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+<p><strong>IMPORTANT:</strong> All arguments including the password will be stored in the raw state as plain-text.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">auth_database_name</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;My Key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;My Value&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;test-acc-password&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;dbforApp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;readAnyDatabase&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-acc-username&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">auth_database_name</span><span class="o">=</span><span class="s2">&quot;$external&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;readAnyDatabase&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-acc-username&quot;</span><span class="p">,</span>
+    <span class="n">x509_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database on which the user has the specified role. A role on the <code class="docutils literal notranslate"><span class="pre">admin</span></code> database can include privileges that apply to the other databases.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User’s initial password. A value is required to create the database user, however the argument but may be removed from your configuration after user creation without impacting the user, password or management. IMPORTANT — Passwords may show up in provider related logs and it will be stored in the state file as plain-text. Password can be changed after creation using your preferred method, e.g. via the MongoDB Atlas UI, to ensure security.  If you do change management of the password to outside of provider be sure to remove the argument from the provider configuration so it is not inadvertently updated to the original password.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for authenticating to MongoDB.</p></li>
+<li><p><strong>x509_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key that you want to write.</p></li>
@@ -2401,6 +2632,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.DatabaseUser.database_name">
 <code class="sig-name descname">database_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.DatabaseUser.database_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database on which the user has the specified role. A role on the <code class="docutils literal notranslate"><span class="pre">admin</span></code> database can include privileges that apply to the other databases.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.DatabaseUser.password">
+<code class="sig-name descname">password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.DatabaseUser.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>User’s initial password. A value is required to create the database user, however the argument but may be removed from your configuration after user creation without impacting the user, password or management. IMPORTANT — Passwords may show up in provider related logs and it will be stored in the state file as plain-text. Password can be changed after creation using your preferred method, e.g. via the MongoDB Atlas UI, to ensure security.  If you do change management of the password to outside of provider be sure to remove the argument from the provider configuration so it is not inadvertently updated to the original password.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2445,6 +2682,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auth_database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database on which the user has the specified role. A role on the <code class="docutils literal notranslate"><span class="pre">admin</span></code> database can include privileges that apply to the other databases.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User’s initial password. A value is required to create the database user, however the argument but may be removed from your configuration after user creation without impacting the user, password or management. IMPORTANT — Passwords may show up in provider related logs and it will be stored in the state file as plain-text. Password can be changed after creation using your preferred method, e.g. via the MongoDB Atlas UI, to ensure security.  If you do change management of the password to outside of provider be sure to remove the argument from the provider configuration so it is not inadvertently updated to the original password.</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
 <li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for authenticating to MongoDB.</p></li>
@@ -2506,11 +2744,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.EncryptionAtRest">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">EncryptionAtRest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_kms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_key_vault</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">google_cloud_kms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.EncryptionAtRest" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.EncryptionAtRest</span></code> Atlas encrypts your data at rest using encrypted storage media. 
-Using keys you manage with AWS KMS, Atlas encrypts your data a second time when it writes it to the MongoDB encrypted storage engine. 
-You can use the following clouds: AWS CMK, AZURE KEY VAULT and GOOGLE KEY VAULT to encrypt the MongoDB master encryption keys.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">EncryptionAtRest</span></code> Allows management of encryption at rest for an Atlas project with one of the following providers:</p>
+<p><a class="reference external" href="https://docs.atlas.mongodb.com/security-aws-kms/#security-aws-kms">Amazon Web Services Key Management Service</a>
+<a class="reference external" href="https://docs.atlas.mongodb.com/security-azure-kms/#security-azure-kms">Azure Key Vault</a>
+<a class="reference external" href="https://docs.atlas.mongodb.com/security-gcp-kms/#security-gcp-kms">Google Cloud KMS</a></p>
+<p>After configuring at least one Encryption at Rest provider for the Atlas project, Project Owners can enable Encryption at Rest for each Atlas cluster for which they require encryption. The Encryption at Rest provider does not have to match the cluster cloud service provider.</p>
+<p>Atlas does not automatically rotate user-managed encryption keys. Defer to your preferred Encryption at Rest provider’s documentation and guidance for best practices on key rotation. Atlas automatically creates a 365-day key rotation alert when you configure Encryption at Rest using your Key Management in an Atlas project.</p>
+<p>See <a class="reference external" href="https://docs.atlas.mongodb.com/security-kms-encryption/index.html">Encryption at Rest</a> for more information, including prerequisites and restrictions.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<div><p><strong>IMPORTANT</strong> Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.</p>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
@@ -2882,14 +3125,14 @@ Sharded cluster</p></li>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotBackupPolicyResult.restore_window_days">
 <code class="sig-name descname">restore_window_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotBackupPolicyResult.restore_window_days" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a restore window in days for the cloud provider backup to maintain.</p>
+<dd><p>Specifies a restore window in days for cloud backup to maintain.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotRestoreJobResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cancelled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finished_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotRestoreJobResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cancelled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finished_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oplog_inc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oplog_ts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">point_in_time_utc_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCloudProviderSnapshotRestoreJob.</p>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobResult.cancelled">
@@ -2961,7 +3204,7 @@ Sharded cluster</p></li>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotRestoreJobsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotRestoreJobsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCloudProviderSnapshotRestoreJobs.</p>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotRestoreJobsResult.id">
@@ -3045,7 +3288,7 @@ Sharded cluster</p></li>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCloudProviderSnapshots.</p>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotsResult.id">
@@ -3063,8 +3306,20 @@ Sharded cluster</p></li>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_scaling_compute_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_compute_scale_down_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backing_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bi_connector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_at_rest_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_major_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mongo_uri_with_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pit_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_max_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_auto_scaling_compute_min_instance_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_backup_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_iops</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_disk_type_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_instance_size_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_backup_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srv_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetClusterResult.auto_scaling_compute_enabled">
+<code class="sig-name descname">auto_scaling_compute_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.auto_scaling_compute_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetClusterResult.auto_scaling_compute_scale_down_enabled">
+<code class="sig-name descname">auto_scaling_compute_scale_down_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.auto_scaling_compute_scale_down_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the cluster tier to scale down.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetClusterResult.auto_scaling_disk_gb_enabled">
 <code class="sig-name descname">auto_scaling_disk_gb_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.auto_scaling_disk_gb_enabled" title="Permalink to this definition">¶</a></dt>
@@ -3107,6 +3362,12 @@ Sharded cluster</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.private</span></code> -   <a class="reference external" href="https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering">Network-peering-endpoint-aware</a> mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">connection_strings.private_srv</span></code> -  <a class="reference external" href="https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering">Network-peering-endpoint-aware</a> mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetClusterResult.container_id">
+<code class="sig-name descname">container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.container_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Network Peering Container ID.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3178,13 +3439,25 @@ Sharded cluster</p></li>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetClusterResult.pit_enabled">
 <code class="sig-name descname">pit_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.pit_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flag that indicates if the cluster uses Point-in-Time backups.</p>
+<dd><p>Flag that indicates if the cluster uses Continuous Cloud Backup.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetClusterResult.provider_auto_scaling_compute_max_instance_size">
+<code class="sig-name descname">provider_auto_scaling_compute_max_instance_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.provider_auto_scaling_compute_max_instance_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) Maximum instance size to which your cluster can automatically scale.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetClusterResult.provider_auto_scaling_compute_min_instance_size">
+<code class="sig-name descname">provider_auto_scaling_compute_min_instance_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.provider_auto_scaling_compute_min_instance_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) Minimum instance size to which your cluster can automatically scale.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetClusterResult.provider_backup_enabled">
 <code class="sig-name descname">provider_backup_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.provider_backup_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flag indicating if the cluster uses Cloud Provider Snapshots for backups.</p>
+<dd><p>Flag indicating if the cluster uses Cloud Backup Snapshots for backups.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3734,6 +4007,24 @@ Returns one of the following values:</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.GetProjectIpWhitelistResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectIpWhitelistResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpWhitelistResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProjectIpWhitelist.</p>
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetProjectIpWhitelistResult.comment">
+<code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpWhitelistResult.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comment to add to the whitelist entry.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetProjectIpWhitelistResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpWhitelistResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.GetProjectResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
@@ -3771,7 +4062,7 @@ The following are valid roles:</p></li>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GetProjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjects.</p>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetProjectsResult.id">
@@ -3798,6 +4089,12 @@ The following are valid roles:</p></li>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_mongodbatlas.GetTeamResult.team_id">
+<code class="sig-name descname">team_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetTeamResult.team_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique identifier for the team.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_mongodbatlas.GetTeamResult.usernames">
 <code class="sig-name descname">usernames</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GetTeamResult.usernames" title="Permalink to this definition">¶</a></dt>
 <dd><p>The users who are part of the organization.</p>
@@ -3820,7 +4117,7 @@ The following are valid roles:</p></li>
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.GlobalClusterConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GlobalClusterConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_zone_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GlobalClusterConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.GlobalClusterConfig</span></code> provides a Global Cluster Configuration resource.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">GlobalClusterConfig</span></code> provides a Global Cluster Configuration resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -3840,7 +4137,7 @@ The following are valid roles:</p></li>
         <span class="p">{</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
             <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;regionsConfigs&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
@@ -3850,7 +4147,7 @@ The following are valid roles:</p></li>
         <span class="p">{</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;regionsConfigs&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
@@ -3960,7 +4257,7 @@ The following are valid roles:</p></li>
 <code class="sig-name descname">project_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.GlobalClusterConfig.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique ID for the project to create the database user.</p>
 <ul class="simple">
-<li><p><a href="#id34"><span class="problematic" id="id35">`</span></a>cluster_name - (Required) The name of the Global Cluster.</p></li>
+<li><p><a href="#id43"><span class="problematic" id="id44">`</span></a>cluster_name - (Required) The name of the Global Cluster.</p></li>
 </ul>
 </dd></dl>
 
@@ -4040,7 +4337,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.MaintenanceWindow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">MaintenanceWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">day_of_week</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hour_of_day</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_deferrals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.MaintenanceWindow</span></code> provides a resource to schedule a maintenance window for your MongoDB Atlas Project and/or set to defer a scheduled maintenance up to two times.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MaintenanceWindow</span></code> provides a resource to schedule a maintenance window for your MongoDB Atlas Project and/or set to defer a scheduled maintenance up to two times.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -4058,6 +4355,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">day_of_week</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">hour_of_day</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;your-project-id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">defer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;your-project-id&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4173,15 +4478,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.NetworkContainer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">NetworkContainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.NetworkContainer</span></code> provides a Network Peering Container resource. The resource lets you create, edit and delete network peering containers. The resource requires your Project ID.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">NetworkContainer</span></code> provides a Network Peering Container resource. The resource lets you create, edit and delete network peering containers. The resource requires your Project ID.  Each cloud provider requires slightly different attributes so read the argument reference carefully.</p>
 <blockquote>
-<div><p><strong>IMPORTANT:</strong> This resource creates one Network Peering container into which Atlas can deploy Network Peering connections. An Atlas project can have a maximum of one container for each cloud provider. You must have either the Project Owner or Organization Owner role to successfully call this endpoint.</p>
+<div><p>Network peering container is a general term used to describe any cloud providers’ VPC/VNet concept.  Containers only need to be created if the peering connection to the cloud provider will be created before the first cluster that requires the container.  If the cluster has been/will be created first Atlas automatically creates the required container per the “containers per cloud provider” information that follows (in this case you can obtain the container id from the cluster resource attribute <code class="docutils literal notranslate"><span class="pre">container_id</span></code>).</p>
 </div></blockquote>
-<p>The following table outlines the maximum number of Network Peering containers per cloud provider:</p>
-<ul class="simple">
-<li><p>Cloud Provider:  GCP - Container Limit: One container per project.</p></li>
-<li><p>Cloud Provider:  AWS and Azure - Container Limit: One container per cloud provider region.</p></li>
-</ul>
+<p>The following is the maximum number of Network Peering containers per cloud provider:
+<span class="raw-html-m2r"><br></span> &amp;#8226;  GCP -  One container per project.
+<span class="raw-html-m2r"><br></span> &amp;#8226;  AWS and Azure - One container per cloud provider region.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -4219,25 +4522,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>atlas_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>CIDR block that Atlas uses for your clusters. Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>.</p>
+<li><p><strong>atlas_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>CIDR block that Atlas uses for the Network Peering containers in your project.  Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>:</p>
 </p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
-<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for this Network Peering connection. If omitted, Atlas sets this parameter to AWS.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas Azure region name for where this container will exist.</p></li>
-<li><p><strong>region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas AWS region name for where this container will exist.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>        <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">10.255</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>   <span class="n">Prefix</span><span class="p">:</span> <span class="mi">10</span><span class="o">/</span><span class="mi">8</span>
+<span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>      <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span><span class="mf">172.31</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>    <span class="n">Prefix</span><span class="p">:</span> <span class="mf">172.16</span><span class="o">/</span><span class="mi">12</span>
+<span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>     <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>   <span class="n">Prefix</span><span class="p">:</span> <span class="mf">192.168</span><span class="o">/</span><span class="mi">16</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the Atlas project for this Network Peering Container.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for this Network Peering connection.  Accepted values are GCP, AWS, AZURE. If omitted, Atlas sets this parameter to AWS.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Atlas region where the container resides, see the reference list for Atlas Azure region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p>
+</p></li>
+<li><p><strong>region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>.</p>
+</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.atlas_cidr_block">
 <code class="sig-name descname">atlas_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.atlas_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>CIDR block that Atlas uses for your clusters. Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>.</p>
+<dd><p>CIDR block that Atlas uses for the Network Peering containers in your project.  Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>:</p>
+<ul class="simple">
+<li><p>Lower bound: 10.0.0.0 -   Upper bound: 10.255.255.255 -   Prefix: 10/8</p></li>
+<li><p>Lower bound: 172.16.0.0 - Upper bound:172.31.255.255 -    Prefix: 172.16/12</p></li>
+<li><p>Lower bound: 192.168.0.0 -        Upper bound:192.168.255.255 -   Prefix: 192.168/16</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.azure_subscription_id">
 <code class="sig-name descname">azure_subscription_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.azure_subscription_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifer of the Azure subscription in which the VNet resides.</p>
+<dd><p>Unique identifier of the Azure subscription in which the VNet resides.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4249,55 +4570,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.gcp_project_id">
 <code class="sig-name descname">gcp_project_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.gcp_project_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier of the GCP project in which the Network Peering connection resides.</p>
+<dd><p>Unique identifier of the GCP project in which the network peer resides. Returns null. This value is populated once you create a new network peering connection with the network peering resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.network_name">
 <code class="sig-name descname">network_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.network_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the Network Peering connection in the Atlas project.</p>
+<dd><p>Unique identifier of the Network Peering connection in the Atlas project. Returns null. This value is populated once you create a new network peering connection with the network peering resource.
+<strong>AZURE ONLY:</strong></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.project_id">
 <code class="sig-name descname">project_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.project_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique ID for the project to create the database user.</p>
+<dd><p>Unique identifier for the Atlas project for this Network Peering Container.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.provider_name">
 <code class="sig-name descname">provider_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.provider_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cloud provider for this Network Peering connection. If omitted, Atlas sets this parameter to AWS.</p>
+<dd><p>Cloud provider for this Network Peering connection.  Accepted values are GCP, AWS, AZURE. If omitted, Atlas sets this parameter to AWS.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.provisioned">
 <code class="sig-name descname">provisioned</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.provisioned" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether the project has Network Peering connections deployed in the container.</p>
+<dd><p>Indicates whether the project has Network Peering connections deployed in the container.
+<strong>AWS ONLY:</strong></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Atlas Azure region name for where this container will exist.</p>
+<dd><p>Atlas region where the container resides, see the reference list for Atlas Azure region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.region_name">
 <code class="sig-name descname">region_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.region_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Atlas AWS region name for where this container will exist.</p>
+<dd><p>The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.vnet_name">
 <code class="sig-name descname">vnet_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.vnet_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Azure VNet. This value is null until you provision an Azure VNet in the container.</p>
+<dd><p>The name of the Azure VNet. Returns null. This value is populated once you create a new network peering connection with the network peering resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkContainer.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkContainer.vpc_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier of the project’s VPC.</p>
+<dd><p>Unique identifier of Atlas’ AWS VPC.
+<strong>CGP ONLY:</strong></p>
 </dd></dl>
 
 <dl class="py method">
@@ -4311,19 +4635,35 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>atlas_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>CIDR block that Atlas uses for your clusters. Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>.</p>
+<li><p><strong>atlas_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>CIDR block that Atlas uses for the Network Peering containers in your project.  Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following <a class="reference external" href="https://tools.ietf.org/html/rfc1918.html#section-3">private networks</a>:</p>
 </p></li>
-<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifer of the Azure subscription in which the VNet resides.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>        <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">10.255</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>   <span class="n">Prefix</span><span class="p">:</span> <span class="mi">10</span><span class="o">/</span><span class="mi">8</span>
+<span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>      <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span><span class="mf">172.31</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>    <span class="n">Prefix</span><span class="p">:</span> <span class="mf">172.16</span><span class="o">/</span><span class="mi">12</span>
+<span class="o">*</span> <span class="n">Lower</span> <span class="n">bound</span><span class="p">:</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.0</span> <span class="o">-</span>     <span class="n">Upper</span> <span class="n">bound</span><span class="p">:</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">255.255</span> <span class="o">-</span>   <span class="n">Prefix</span><span class="p">:</span> <span class="mf">192.168</span><span class="o">/</span><span class="mi">16</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Azure subscription in which the VNet resides.</p></li>
 <li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Network Peering Container ID.</p></li>
-<li><p><strong>gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the GCP project in which the Network Peering connection resides.</p></li>
-<li><p><strong>network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Network Peering connection in the Atlas project.</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
-<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for this Network Peering connection. If omitted, Atlas sets this parameter to AWS.</p></li>
-<li><p><strong>provisioned</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the project has Network Peering connections deployed in the container.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas Azure region name for where this container will exist.</p></li>
-<li><p><strong>region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas AWS region name for where this container will exist.</p></li>
-<li><p><strong>vnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Azure VNet. This value is null until you provision an Azure VNet in the container.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the project’s VPC.</p></li>
+<li><p><strong>gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the GCP project in which the network peer resides. Returns null. This value is populated once you create a new network peering connection with the network peering resource.</p></li>
+<li><p><strong>network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Network Peering connection in the Atlas project. Returns null. This value is populated once you create a new network peering connection with the network peering resource.
+<strong>AZURE ONLY:</strong></p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the Atlas project for this Network Peering Container.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for this Network Peering connection.  Accepted values are GCP, AWS, AZURE. If omitted, Atlas sets this parameter to AWS.</p></li>
+<li><p><strong>provisioned</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the project has Network Peering connections deployed in the container.
+<strong>AWS ONLY:</strong></p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Atlas region where the container resides, see the reference list for Atlas Azure region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/">Azure</a>.</p>
+</p></li>
+<li><p><strong>region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">AWS</a>.</p>
+</p></li>
+<li><p><strong>vnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Azure VNet. Returns null. This value is populated once you create a new network peering connection with the network peering resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of Atlas’ AWS VPC.
+<strong>CGP ONLY:</strong></p></li>
 </ul>
 </dd>
 </dl>
@@ -4370,35 +4710,238 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.NetworkPeering">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">NetworkPeering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepter_region_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_gcp_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_vpc_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_subscription_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcp_project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vnet_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NetworkPeering resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] accepter_region_name: Specifies the region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.
-:param pulumi.Input[str] atlas_cidr_block: Unique identifier for an Azure AD directory.
-:param pulumi.Input[str] atlas_gcp_project_id: The Atlas GCP Project ID for the GCP VPC used by your atlas cluster that it is need to set up the reciprocal connection.
-:param pulumi.Input[str] atlas_vpc_name: The Atlas VPC Name is used by your atlas clister that it is need to set up the reciprocal connection.
-:param pulumi.Input[str] aws_account_id: Account ID of the owner of the peer VPC.
-:param pulumi.Input[str] azure_directory_id: Unique identifier for an Azure AD directory.
-:param pulumi.Input[str] azure_subscription_id: Unique identifer of the Azure subscription in which the VNet resides.
-:param pulumi.Input[str] container_id: Unique identifier of the Atlas VPC container for the region. You can create an Atlas VPC container using the Create Container endpoint. You cannot create more than one container per region. To retrieve a list of container IDs, use the Get list of VPC containers endpoint.
-:param pulumi.Input[str] gcp_project_id: GCP project ID of the owner of the network peer.
-:param pulumi.Input[str] network_name: Name of the network peer to which Atlas connects.
-:param pulumi.Input[str] project_id: The unique ID for the project to create the database user.
-:param pulumi.Input[str] provider_name: Cloud provider for this VPC peering connection. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).
-:param pulumi.Input[str] resource_group_name: Name of your Azure resource group.
-:param pulumi.Input[str] route_table_cidr_block: Peer VPC CIDR block or subnet.
-:param pulumi.Input[str] vnet_name: Name of your Azure VNet.
-:param pulumi.Input[str] vpc_id: Unique identifier of the peer VPC.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">NetworkPeering</span></code> provides a Network Peering Connection resource. The resource lets you create, edit and delete network peering connections. The resource requires your Project ID.</p>
+<p>Ensure you have first created a network container if it is required for your configuration.  See the network_container resource documentation to determine if you need a network container first.  Examples for creating both container and peering resource are shown below as well as examples for creating the peering connection only.</p>
+<blockquote>
+<div><p><strong>GCP AND AZURE ONLY:</strong> Connect via Peering Only mode is deprecated, so no longer needed.  See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/#disable-peering-mode">disable Peering Only mode</a> for details and <code class="docutils literal notranslate"><span class="pre">private_ip_mode</span></code> resource to disable.</p>
+<dl class="simple">
+<dt><strong>AZURE ONLY:</strong> To create the peering request with an Azure VNET, you must grant Atlas the following permissions on the virtual network.</dt><dd><p>Microsoft.Network/virtualNetworks/virtualNetworkPeerings/read
+Microsoft.Network/virtualNetworks/virtualNetworkPeerings/write
+Microsoft.Network/virtualNetworks/virtualNetworkPeerings/delete
+Microsoft.Network/virtualNetworks/peer/action</p>
+</dd>
+</dl>
+<p>For more information see <a class="reference external" href="https://docs.atlas.mongodb.com/security-vpc-peering/">https://docs.atlas.mongodb.com/security-vpc-peering/</a> and <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/vpc-create-peering-connection/">https://docs.atlas.mongodb.com/reference/api/vpc-create-peering-connection/</a></p>
+<p><strong>Create a Whitelist:</strong> Ensure you whitelist the private IP ranges of the subnets in which your application is hosted in order to connect to your Atlas cluster.  See the project_ip_whitelist resource.</p>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Container example provided but not always required, </span>
+<span class="c1"># see network_container documentation for details. </span>
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">accepter_region_name</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="s2">&quot;507f1f77bcf86cd799439011&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">route_table_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-abc123abc123&quot;</span><span class="p">,</span>
+    <span class="n">aws_account_id</span><span class="o">=</span><span class="s2">&quot;abc123abc123&quot;</span><span class="p">)</span>
+<span class="c1"># the following assumes an AWS provider is configured</span>
+<span class="c1"># Accept the peering connection request</span>
+<span class="n">peer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnectionAccepter</span><span class="p">(</span><span class="s2">&quot;peer&quot;</span><span class="p">,</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">test_network_peering</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Container example provided but not always required, </span>
+<span class="c1"># see network_container documentation for details. </span>
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">)</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_network_container</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">gcp_project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;GCP_PROJECT_ID&quot;</span><span class="p">],</span>
+    <span class="n">network_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="c1"># Create the GCP peer</span>
+<span class="n">peering</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_network_peering</span><span class="o">.</span><span class="n">atlas_gcp_project_id</span><span class="p">,</span> <span class="n">test_network_peering</span><span class="o">.</span><span class="n">atlas_vpc_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">atlas_gcp_project_id</span><span class="p">,</span> <span class="n">atlas_vpc_name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://www.googleapis.com/compute/v1/projects/</span><span class="si">{</span><span class="n">atlas_gcp_project_id</span><span class="si">}</span><span class="s2">/global/networks/</span><span class="si">{</span><span class="n">atlas_vpc_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="c1"># Create the cluster once the peering connection is completed</span>
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_4&quot;</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;google_compute_network_peering.peering&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Container example provided but not always required, </span>
+<span class="c1"># see network_container documentation for details. </span>
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">azure_directory_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_DIRECTORY_ID&quot;</span><span class="p">],</span>
+    <span class="n">azure_subscription_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_SUBSCRIPTION_ID&quot;</span><span class="p">],</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_network_container</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_RESOURCES_GROUP_NAME&quot;</span><span class="p">],</span>
+    <span class="n">vnet_name</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_VNET_NAME&quot;</span><span class="p">])</span>
+<span class="c1"># Create the cluster once the peering connection is completed</span>
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">provider_disk_type_name</span><span class="o">=</span><span class="s2">&quot;P4&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_network_peering.test&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Create an Atlas cluster, this creates a container if one</span>
+<span class="c1"># does not yet exist for this AWS region</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+<span class="c1"># the following assumes an AWS provider is configured</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultVpc</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default VPC&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">mongo_peer</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;mongoPeer&quot;</span><span class="p">,</span>
+    <span class="n">accepter_region_name</span><span class="o">=</span><span class="s2">&quot;us-east-2&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">route_table_cidr_block</span><span class="o">=</span><span class="s2">&quot;172.31.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">aws_account_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AWS_ACCOUNT_ID&quot;</span><span class="p">])</span>
+<span class="c1"># Accept the connection </span>
+<span class="n">aws_peer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnectionAccepter</span><span class="p">(</span><span class="s2">&quot;awsPeer&quot;</span><span class="p">,</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">mongo_peer</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Create an Atlas cluster, this creates a container if one</span>
+<span class="c1"># does not yet exist for this GCP </span>
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/18&quot;</span><span class="p">,</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_cluster</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">,</span>
+    <span class="n">gcp_project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;GCP_PROJECT_ID&quot;</span><span class="p">],</span>
+    <span class="n">network_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="c1"># Create the GCP peer</span>
+<span class="n">peering</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_network_peering</span><span class="o">.</span><span class="n">atlas_gcp_project_id</span><span class="p">,</span> <span class="n">test_network_peering</span><span class="o">.</span><span class="n">atlas_vpc_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">atlas_gcp_project_id</span><span class="p">,</span> <span class="n">atlas_vpc_name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://www.googleapis.com/compute/v1/projects/</span><span class="si">{</span><span class="n">atlas_gcp_project_id</span><span class="si">}</span><span class="s2">/global/networks/</span><span class="si">{</span><span class="n">atlas_vpc_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="c1"># Ensure you have created the required Azure service principal first, see</span>
+<span class="c1"># see https://docs.atlas.mongodb.com/security-vpc-peering/</span>
+<span class="c1"># Create an Atlas cluster, this creates a container if one</span>
+<span class="c1"># does not yet exist for this AZURE region</span>
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+<span class="c1"># Create the peering connection request</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_cluster</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">azure_directory_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_DIRECTORY_ID&quot;</span><span class="p">],</span>
+    <span class="n">azure_subscription_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_SUBCRIPTION_ID&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_RESOURCE_GROUP_NAME&quot;</span><span class="p">],</span>
+    <span class="n">vnet_name</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;AZURE_VNET_NAME&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accepter_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the AWS region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
+</p></li>
+<li><p><strong>atlas_gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas GCP Project ID for the GCP VPC used by your atlas cluster that it is need to set up the reciprocal connection.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Account ID of the owner of the peer VPC.</p></li>
+<li><p><strong>azure_directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for an Azure AD directory.</p></li>
+<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Azure subscription in which the VNet resides.</p></li>
+<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the MongoDB Atlas container for the provider (GCP) or provider/region (AWS, AZURE). You can create an MongoDB Atlas container using the network_container resource or it can be obtained from the cluster returned values if a cluster has been created before the first container.</p></li>
+<li><p><strong>gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP project ID of the owner of the network peer.</p></li>
+<li><p><strong>network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the network peer to which Atlas connects.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the MongoDB Atlas project to create the database user.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider to whom the peering connection is being made. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure resource group.</p></li>
+<li><p><strong>route_table_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS VPC CIDR block or subnet.</p></li>
+<li><p><strong>vnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure VNet.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS peer VPC (Note: this is <strong>not</strong> the same as the Atlas AWS VPC that is returned by the network_container resource).</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.accepter_region_name">
 <code class="sig-name descname">accepter_region_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.accepter_region_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_mongodbatlas.NetworkPeering.atlas_cidr_block">
-<code class="sig-name descname">atlas_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.atlas_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier for an Azure AD directory.</p>
+<dd><p>Specifies the AWS region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4408,15 +4951,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="pulumi_mongodbatlas.NetworkPeering.atlas_vpc_name">
-<code class="sig-name descname">atlas_vpc_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.atlas_vpc_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Atlas VPC Name is used by your atlas clister that it is need to set up the reciprocal connection.</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.aws_account_id">
 <code class="sig-name descname">aws_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.aws_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Account ID of the owner of the peer VPC.</p>
+<dd><p>AWS Account ID of the owner of the peer VPC.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4428,19 +4965,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.azure_subscription_id">
 <code class="sig-name descname">azure_subscription_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.azure_subscription_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifer of the Azure subscription in which the VNet resides.</p>
+<dd><p>Unique identifier of the Azure subscription in which the VNet resides.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.connection_id">
 <code class="sig-name descname">connection_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.connection_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier for the peering connection.</p>
+<dd><p>Unique identifier of the Atlas network peering container.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.container_id">
 <code class="sig-name descname">container_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.container_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier of the Atlas VPC container for the region. You can create an Atlas VPC container using the Create Container endpoint. You cannot create more than one container per region. To retrieve a list of container IDs, use the Get list of VPC containers endpoint.</p>
+<dd><p>Unique identifier of the MongoDB Atlas container for the provider (GCP) or provider/region (AWS, AZURE). You can create an MongoDB Atlas container using the network_container resource or it can be obtained from the cluster returned values if a cluster has been created before the first container.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4476,19 +5013,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.peer_id">
 <code class="sig-name descname">peer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.peer_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Network Peering Container ID.</p>
+<dd><p>Unique identifier of the Atlas network peer.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.project_id">
 <code class="sig-name descname">project_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.project_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique ID for the project to create the database user.</p>
+<dd><p>The unique ID for the MongoDB Atlas project to create the database user.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.provider_name">
 <code class="sig-name descname">provider_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.provider_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cloud provider for this VPC peering connection. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p>
+<dd><p>Cloud provider to whom the peering connection is being made. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4500,13 +5037,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.route_table_cidr_block">
 <code class="sig-name descname">route_table_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.route_table_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>Peer VPC CIDR block or subnet.</p>
+<dd><p>AWS VPC CIDR block or subnet.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.status">
 <code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Azure/GCP Only) Status of the Atlas network peering connection.  Azure/GCP: <code class="docutils literal notranslate"><span class="pre">ADDING_PEER</span></code>, <code class="docutils literal notranslate"><span class="pre">AVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> GCP Only:  <code class="docutils literal notranslate"><span class="pre">WAITING_FOR_USER</span></code>.</p>
+<dd><p>Status of the Atlas network peering connection.  Azure/GCP: <code class="docutils literal notranslate"><span class="pre">ADDING_PEER</span></code>, <code class="docutils literal notranslate"><span class="pre">AVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> GCP Only:  <code class="docutils literal notranslate"><span class="pre">WAITING_FOR_USER</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4524,7 +5061,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.NetworkPeering.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.vpc_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier of the peer VPC.</p>
+<dd><p>Unique identifier of the AWS peer VPC (Note: this is <strong>not</strong> the same as the Atlas AWS VPC that is returned by the network_container resource).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4538,30 +5075,28 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>accepter_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
+<li><p><strong>accepter_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the AWS region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
 </p></li>
-<li><p><strong>atlas_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for an Azure AD directory.</p></li>
 <li><p><strong>atlas_gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas GCP Project ID for the GCP VPC used by your atlas cluster that it is need to set up the reciprocal connection.</p></li>
-<li><p><strong>atlas_vpc_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas VPC Name is used by your atlas clister that it is need to set up the reciprocal connection.</p></li>
-<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID of the owner of the peer VPC.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Account ID of the owner of the peer VPC.</p></li>
 <li><p><strong>azure_directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for an Azure AD directory.</p></li>
-<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifer of the Azure subscription in which the VNet resides.</p></li>
-<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the peering connection.</p></li>
-<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Atlas VPC container for the region. You can create an Atlas VPC container using the Create Container endpoint. You cannot create more than one container per region. To retrieve a list of container IDs, use the Get list of VPC containers endpoint.</p></li>
+<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Azure subscription in which the VNet resides.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Atlas network peering container.</p></li>
+<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the MongoDB Atlas container for the provider (GCP) or provider/region (AWS, AZURE). You can create an MongoDB Atlas container using the network_container resource or it can be obtained from the cluster returned values if a cluster has been created before the first container.</p></li>
 <li><p><strong>error_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">&quot;status&quot;</span> <span class="pre">:</span> <span class="pre">&quot;FAILED&quot;</span></code>, Atlas provides a description of the error.</p></li>
 <li><p><strong>error_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the Atlas error when <code class="docutils literal notranslate"><span class="pre">status</span></code> is <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, Otherwise, Atlas returns <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
 <li><p><strong>error_state_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Error state, if any. The VPC peering connection error state value can be one of the following: <code class="docutils literal notranslate"><span class="pre">REJECTED</span></code>, <code class="docutils literal notranslate"><span class="pre">EXPIRED</span></code>, <code class="docutils literal notranslate"><span class="pre">INVALID_ARGUMENT</span></code>.</p></li>
 <li><p><strong>gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP project ID of the owner of the network peer.</p></li>
 <li><p><strong>network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the network peer to which Atlas connects.</p></li>
-<li><p><strong>peer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Network Peering Container ID.</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
-<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for this VPC peering connection. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p></li>
+<li><p><strong>peer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Atlas network peer.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the MongoDB Atlas project to create the database user.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider to whom the peering connection is being made. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure resource group.</p></li>
-<li><p><strong>route_table_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Peer VPC CIDR block or subnet.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Azure/GCP Only) Status of the Atlas network peering connection.  Azure/GCP: <code class="docutils literal notranslate"><span class="pre">ADDING_PEER</span></code>, <code class="docutils literal notranslate"><span class="pre">AVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> GCP Only:  <code class="docutils literal notranslate"><span class="pre">WAITING_FOR_USER</span></code>.</p></li>
+<li><p><strong>route_table_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS VPC CIDR block or subnet.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the Atlas network peering connection.  Azure/GCP: <code class="docutils literal notranslate"><span class="pre">ADDING_PEER</span></code>, <code class="docutils literal notranslate"><span class="pre">AVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> GCP Only:  <code class="docutils literal notranslate"><span class="pre">WAITING_FOR_USER</span></code>.</p></li>
 <li><p><strong>status_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (AWS Only) The VPC peering connection status value can be one of the following: <code class="docutils literal notranslate"><span class="pre">INITIATING</span></code>, <code class="docutils literal notranslate"><span class="pre">PENDING_ACCEPTANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>, <code class="docutils literal notranslate"><span class="pre">FINALIZING</span></code>, <code class="docutils literal notranslate"><span class="pre">AVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">TERMINATING</span></code>.</p></li>
 <li><p><strong>vnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure VNet.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the peer VPC.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS peer VPC (Note: this is <strong>not</strong> the same as the Atlas AWS VPC that is returned by the network_container resource).</p></li>
 </ul>
 </dd>
 </dl>
@@ -4608,7 +5143,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.PrivateEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.PrivateEndpoint</span></code> provides a Private Endpoint resource. This represents a Private Endpoint Connection that can be created in an Atlas project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> provides a Private Endpoint resource. This represents a Private Endpoint Connection that can be created in an Atlas project.</p>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
 <ul class="simple">
@@ -4811,7 +5346,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.PrivateEndpointInterfaceLink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateEndpointInterfaceLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateEndpointInterfaceLink" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.PrivateEndpointInterfaceLink</span></code> provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpointInterfaceLink</span></code> provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project.</p>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
 <ul class="simple">
@@ -4846,7 +5381,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>interface_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the interface endpoint you created in your VPC with the AWS resource.</p></li>
-<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">.PrivateEndpoint</span></code> resource.</p></li>
+<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> resource.</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project.</p></li>
 </ul>
 </dd>
@@ -4879,7 +5414,7 @@ Returns one of the following values:</p>
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.PrivateEndpointInterfaceLink.private_link_id">
 <code class="sig-name descname">private_link_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.PrivateEndpointInterfaceLink.private_link_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">.PrivateEndpoint</span></code> resource.</p>
+<dd><p>Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4904,7 +5439,7 @@ Returns one of the following values:</p></li>
 <li><p><strong>delete_requested</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.</p></li>
 <li><p><strong>error_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Error message pertaining to the interface endpoint. Returns null if there are no errors.</p></li>
 <li><p><strong>interface_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the interface endpoint you created in your VPC with the AWS resource.</p></li>
-<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">.PrivateEndpoint</span></code> resource.</p></li>
+<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> resource.</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project.</p></li>
 </ul>
 </dd>
@@ -4952,7 +5487,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.PrivateIpMode">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateIpMode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateIpMode" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.PrivateIpMode</span></code> provides a Private IP Mode resource. This allows one to disable Connect via Peering Only mode for a MongoDB Atlas Project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateIpMode</span></code> provides a Private IP Mode resource. This allows one to disable Connect via Peering Only mode for a MongoDB Atlas Project.</p>
 <blockquote>
 <div><p><strong>Deprecated Feature</strong>: <span class="raw-html-m2r"><br></span> This feature has been deprecated. Use <a class="reference external" href="https://dochub.mongodb.org/core/atlas-horizon-faq">Split Horizon connection strings</a> to connect to your cluster. These connection strings allow you to connect using both VPC/VNet Peering and whitelisted public IP addresses. To learn more about support for Split Horizon, see <a class="reference external" href="https://dochub.mongodb.org/core/atlas-horizon-faq">this FAQ</a>. You need this endpoint to <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/#disable-peering-mode">disable Peering Only</a>.</p>
 </div></blockquote>
@@ -5045,11 +5580,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the project you want to create. (Cannot be changed via this Provider after creation.)
-:param pulumi.Input[str] org_id: The ID of the organization you want to create the project within.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Project</span></code> provides a Project resource. This allows project to be created.</p>
+<blockquote>
+<div><p><strong>IMPORTANT WARNING:</strong>  Changing the name of an existing Project in your configuration will result the destruction of that Project and related resources (including Clusters) and the re-creation of those resources.  The provider will inform you of the destroyed/created resources before applying so be sure to verify any change to your environment before applying.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;&lt;ORG_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">teams</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;roleNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GROUP_OWNER&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;team_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5e0fa8c99ccf641c722fe645&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;roleNames&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GROUP_READ_ONLY&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;GROUP_DATA_ACCESS_READ_WRITE&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;team_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5e1dd7b4f2a30ba80a70cd4rw&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project you want to create. (Cannot be changed via this Provider after creation.)</p></li>
+<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the organization you want to create the project within.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>teams</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">roleNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Each string in the array represents a project role you want to assign to the team. Every user associated with the team inherits these roles. You must specify an array even if you are only associating a single role with the team.
@@ -5165,7 +5729,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.ProjectIpWhitelist">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">ProjectIpWhitelist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpWhitelist" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.ProjectIpWhitelist</span></code> provides an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ProjectIpWhitelist</span></code> provides an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 <p><strong>IMPORTANT:</strong>
@@ -5208,9 +5772,13 @@ When you remove an entry from the whitelist, existing connections from the remov
 <span class="n">test_project_ip_whitelist</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpWhitelist</span><span class="p">(</span><span class="s2">&quot;testProjectIpWhitelist&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">aws_security_group</span><span class="o">=</span><span class="s2">&quot;sg-0026348ec11780bd1&quot;</span><span class="p">,</span>
-    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;TestAcc for awsSecurityGroup&quot;</span><span class="p">)</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;TestAcc for awsSecurityGroup&quot;</span><span class="p">,</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_network_peering.test&quot;</span><span class="p">]))</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p><strong>IMPORTANT:</strong> In order to use AWS Security Group(s) VPC Peering must be enabled like above example.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5371,7 +5939,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.Team">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usernames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Team" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Teams</span></code> provides a Team resource. The resource lets you create, edit and delete Teams. Also, Teams can be assigned to multiple projects, and team members’ access to the project is determined by the team’s project role.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Teams</span></code> provides a Team resource. The resource lets you create, edit and delete Teams. Also, Teams can be assigned to multiple projects, and team members’ access to the project is determined by the team’s project role.</p>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong> MongoDB Atlas Team limits: max 250 teams in an organization and max 100 teams per project.</p>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
@@ -5383,9 +5951,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Teams</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;&lt;ORGANIZATION-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">usernames</span><span class="o">=</span><span class="p">[</span>
-        <span class="s2">&quot;user1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;user2&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;user3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user1@email.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user2@email.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user3@email.com&quot;</span><span class="p">,</span>
     <span class="p">])</span>
 </pre></div>
 </div>
@@ -5396,7 +5964,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the team you want to create.</p></li>
 <li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the organization you want to associate the team with.</p></li>
-<li><p><strong>usernames</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p></li>
+<li><p><strong>usernames</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5421,7 +5989,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_mongodbatlas.Team.usernames">
 <code class="sig-name descname">usernames</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mongodbatlas.Team.usernames" title="Permalink to this definition">¶</a></dt>
-<dd><p>You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p>
+<dd><p>The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5438,7 +6006,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the team you want to create.</p></li>
 <li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the organization you want to associate the team with.</p></li>
 <li><p><strong>team_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the team.</p></li>
-<li><p><strong>usernames</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p></li>
+<li><p><strong>usernames</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5545,7 +6113,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.X509AuthenticationDatabaseUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">X509AuthenticationDatabaseUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_x509_cas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">months_until_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.X509AuthenticationDatabaseUser" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.X509AuthenticationDatabaseUser</span></code> provides a X509 Authentication Database User resource. The .X509AuthenticationDatabaseUser resource lets you manage MongoDB users who authenticate using X.509 certificates. You can manage these X.509 certificates or let Atlas do it for you.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">X509AuthenticationDatabaseUser</span></code> provides a X509 Authentication Database User resource. The X509AuthenticationDatabaseUser resource lets you manage MongoDB users who authenticate using X.509 certificates. You can manage these X.509 certificates or let Atlas do it for you.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -5572,7 +6140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
 
 <span class="n">user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
-    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$$external&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$external&quot;</span><span class="p">,</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;My Key&quot;</span><span class="p">,</span>
         <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;My Value&quot;</span><span class="p">,</span>
@@ -5741,7 +6309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get509_authentication_database_user">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get509_authentication_database_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get509_authentication_database_user" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.X509AuthenticationDatabaseUser</span></code> describe a X509 Authentication Database User. This represents a X509 Authentication Database User.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">X509AuthenticationDatabaseUser</span></code> describe a X509 Authentication Database User. This represents a X509 Authentication Database User.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -5749,7 +6317,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
 
 <span class="n">user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
-    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$$external&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$external&quot;</span><span class="p">,</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;My Key&quot;</span><span class="p">,</span>
         <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;My Value&quot;</span><span class="p">,</span>
@@ -5808,7 +6376,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_alert_configuration">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_alert_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alert_configuration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_alert_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.AlertConfiguration</span></code> describes an Alert Configuration.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AlertConfiguration</span></code> describes an Alert Configuration.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -5825,7 +6393,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_auditing">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_auditing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_auditing" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Auditing</span></code> describes a Auditing.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Auditing</span></code> describes a Auditing.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -5839,7 +6407,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshot">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshot</span></code> provides an Cloud Provider Snapshot entry datasource. Atlas Cloud Provider Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service provider.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshot</span></code> provides an Cloud Backup Snapshot datasource. Atlas Cloud Backup Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -5856,7 +6424,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshot_backup_policy">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot_backup_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot_backup_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshotBackupPolicy</span></code> provides a Cloud Provider Snapshot Backup Policy entry datasource. An Atlas Cloud Provider Snapshot Backup Policy provides the current snapshot schedule and retention settings for the cluster.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshotBackupPolicy</span></code> provides a Cloud Backup Snapshot Backup Policy datasource. An Atlas Cloud Backup Snapshot Policy provides the current snapshot schedule and retention settings for the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -5873,7 +6441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshot_restore_job">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot_restore_job</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot_restore_job" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CloudProviderSnapshotRestoreJob</span></code> provides a Cloud Provider Snapshot Restore Job entry datasource. Gets all cloud provider snapshot restore jobs for the specified cluster.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshotRestoreJob</span></code> provides a Cloud Backup Snapshot Restore Job datasource. Gets all the cloud backup snapshot restore jobs for the specified cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -5890,11 +6458,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshot_restore_jobs">
-<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot_restore_jobs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot_restore_jobs" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getCloudProviderSnapshotRestoreJobs</span></code> provides a Cloud Provider Snapshot Restore Jobs entry datasource. Gets all cloud provider snapshot restore jobs for the specified cluster.</p>
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot_restore_jobs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot_restore_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getCloudProviderSnapshotRestoreJobs</span></code> provides a Cloud Backup Snapshot Restore Jobs datasource. Gets all the cloud backup snapshot restore jobs for the specified cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<p>First create a snapshot of the desired cluster. Then request that snapshot be restored in an automated fashion to the designated cluster and project.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
 
@@ -5913,6 +6482,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
     <span class="n">snapshot_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">test_cloud_provider_snapshot_restore_jobs</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_cloud_provider_snapshot_restore_job</span><span class="o">.</span><span class="n">cluster_name</span><span class="p">,</span> <span class="n">test_cloud_provider_snapshot_restore_job</span><span class="o">.</span><span class="n">project_id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">cluster_name</span><span class="p">,</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_cloud_provider_snapshot_restore_jobs</span><span class="p">(</span><span class="n">cluster_name</span><span class="o">=</span><span class="n">cluster_name</span><span class="p">,</span>
+    <span class="n">items_per_page</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">page_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -5920,6 +6491,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cluster_name</strong> (<em>str</em>) – The name of the Atlas cluster for which you want to retrieve restore jobs.</p></li>
+<li><p><strong>items_per_page</strong> (<em>float</em>) – Number of items to return per page, up to a maximum of 500. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><strong>page_num</strong> (<em>float</em>) – The page to return. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – The unique identifier of the project for the Atlas cluster.</p></li>
 </ul>
 </dd>
@@ -5928,14 +6501,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshots">
-<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshots" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getCloudProviderSnapshots</span></code> provides an Cloud Provider Snapshot entry datasource. Atlas Cloud Provider Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service provider.</p>
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshots" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getCloudProviderSnapshots</span></code> provides an Cloud Backup Snapshot datasource. Atlas Cloud Backup Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – The name of the Atlas cluster that contains the snapshot you want to retrieve.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_name</strong> (<em>str</em>) – The name of the Atlas cluster that contains the snapshot you want to retrieve.</p></li>
+<li><p><strong>items_per_page</strong> (<em>float</em>) – Number of items to return per page, up to a maximum of 500. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><strong>page_num</strong> (<em>float</em>) – The page to return. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -5943,7 +6520,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cluster">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Cluster</span></code> describes a Cluster. The. The data source requires your Project ID.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Cluster</span></code> describes a Cluster. The. The data source requires your Project ID.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 <p><strong>IMPORTANT:</strong>
@@ -5963,7 +6540,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_clusters">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_clusters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_clusters" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Cluster</span></code> describes all Clusters by the provided project_id. The data source requires your Project ID.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Cluster</span></code> describes all Clusters by the provided project_id. The data source requires your Project ID.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 <p><strong>IMPORTANT:</strong>
@@ -5999,7 +6576,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_custom_db_role">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_custom_db_role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inherited_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_custom_db_role" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.CustomDbRole</span></code> describe a Custom DB Role. This represents a custom db role.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CustomDbRole</span></code> describe a Custom DB Role. This represents a custom db role.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -6047,7 +6624,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_custom_db_roles">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_custom_db_roles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_custom_db_roles" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getCustomDbRoles</span></code> describe all Custom DB Roles. This represents a custom db roles.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getCustomDbRoles</span></code> describe all Custom DB Roles. This represents a custom db roles.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -6082,7 +6659,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_database_user">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_database_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auth_database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_database_user" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.DatabaseUser</span></code> describe a Database User. This represents a database user which will be applied to all clusters within the project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">DatabaseUser</span></code> describe a Database User. This represents a database user which will be applied to all clusters within the project.</p>
 <p>Each user has a set of roles that provide access to the project’s databases. User’s roles apply to all the clusters in the project: if two clusters have a <code class="docutils literal notranslate"><span class="pre">products</span></code> database and a user has a role granting <code class="docutils literal notranslate"><span class="pre">read</span></code> access on the products database, the user has that access on both clusters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
@@ -6102,7 +6679,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_database_users">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_database_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_database_users" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getDatabaseUsers</span></code> describe all Database Users. This represents a database user which will be applied to all clusters within the project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getDatabaseUsers</span></code> describe all Database Users. This represents a database user which will be applied to all clusters within the project.</p>
 <p>Each user has a set of roles that provide access to the project’s databases. User’s roles apply to all the clusters in the project: if two clusters have a <code class="docutils literal notranslate"><span class="pre">products</span></code> database and a user has a role granting <code class="docutils literal notranslate"><span class="pre">read</span></code> access on the products database, the user has that access on both clusters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
@@ -6148,7 +6725,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_global_cluster_config">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_global_cluster_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_global_cluster_config" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.GlobalClusterConfig</span></code> describes all managed namespaces and custom zone mappings associated with the specified Global Cluster.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">GlobalClusterConfig</span></code> describes all managed namespaces and custom zone mappings associated with the specified Global Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -6175,7 +6752,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_maintenance_window">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_maintenance_window</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_maintenance_window" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.MaintenanceWindow</span></code> provides a Maintenance Window entry datasource. Gets information regarding the configured maintenance window for a MongoDB Atlas project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MaintenanceWindow</span></code> provides a Maintenance Window entry datasource. Gets information regarding the configured maintenance window for a MongoDB Atlas project.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
@@ -6189,7 +6766,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_network_container">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_network_container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_network_container" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.NetworkContainer</span></code> describes a Network Peering Container. The resource requires your Project ID and container ID.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">NetworkContainer</span></code> describes a Network Peering Container. The resource requires your Project ID and container ID.</p>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong> This resource creates one Network Peering container into which Atlas can deploy Network Peering connections. An Atlas project can have a maximum of one container for each cloud provider. You must have either the Project Owner or Organization Owner role to successfully call this endpoint.</p>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
@@ -6207,7 +6784,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_network_containers">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_network_containers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_network_containers" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getNetworkContainers</span></code> describes all Network Peering Containers. The data source requires your Project ID.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getNetworkContainers</span></code> describes all Network Peering Containers. The data source requires your Project ID.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -6236,7 +6813,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_network_peering">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_network_peering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">peering_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_network_peering" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.NetworkPeering</span></code> describes a Network Peering Connection.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">NetworkPeering</span></code> describes a Network Peering Connection.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -6253,7 +6830,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_network_peerings">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_network_peerings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_network_peerings" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getNetworkPeerings</span></code> describes all Network Peering Connections.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getNetworkPeerings</span></code> describes all Network Peering Connections.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
@@ -6281,7 +6858,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_private_endpoint">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_private_endpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_private_endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.PrivateEndpoint</span></code> describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -6315,7 +6892,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_project">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_project" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Project</span></code> describes a MongoDB Atlas Project. This represents a project that has been created.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Project</span></code> describes a MongoDB Atlas Project. This represents a project that has been created.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -6330,24 +6907,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_mongodbatlas.get_project_ip_whitelist">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_project_ip_whitelist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_project_ip_whitelist" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ProjectIpWhitelist</span></code> describes an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<p><strong>IMPORTANT:</strong>
+When you remove an entry from the whitelist, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aws_security_group</strong> (<em>str</em>) – ID of the whitelisted AWS security group. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> and <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>.</p></li>
+<li><p><strong>cidr_block</strong> (<em>str</em>) – Whitelist entry in Classless Inter-Domain Routing (CIDR) notation. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code> and <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>.</p></li>
+<li><p><strong>ip_address</strong> (<em>str</em>) – Whitelisted IP address. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code> and <code class="docutils literal notranslate"><span class="pre">cidr_block</span></code>.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – The ID of the project in which to add the whitelist entry.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_mongodbatlas.get_projects">
-<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_projects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_projects" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getProjects</span></code> describe all Projects. This represents projects that have been created.</p>
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_projects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items_per_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_projects" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getProjects</span></code> describe all Projects. This represents projects that have been created.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>items_per_page</strong> (<em>float</em>) – Number of items to return per page, up to a maximum of 500. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><strong>page_num</strong> (<em>float</em>) – The page to return. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_team">
-<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_team" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.Teams</span></code> describes a Team. The resource requires your Organization ID, Project ID and Team ID.</p>
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_team" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Teams</span></code> describes a Team. The resource requires your Organization ID, Project ID and Team ID.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The team name.</p></li>
 <li><p><strong>org_id</strong> (<em>str</em>) – The unique identifier for the organization you want to associate the team with.</p></li>
 <li><p><strong>team_id</strong> (<em>str</em>) – The unique identifier for the team.</p></li>
 </ul>
@@ -6357,7 +6964,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_teams">
-<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_teams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_teams" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_teams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.get_teams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
