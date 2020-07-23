@@ -64,8 +64,8 @@ main:
     presenters:
         - name: Praneet Loke
           role: Software Engineer, Pulumi
-        - name: Mike Metral
-          role: Software Architect & Engineer, Pulumi
+        - name: Daniel Peach
+          role: Senior Software Engineer, Armory
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
