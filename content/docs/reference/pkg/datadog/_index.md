@@ -15,6 +15,7 @@ A Pulumi package for creating and managing Datadog resources.
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
+    <li><a href="azure/" title="azure"><span class="symbol module"></span>azure</a></li>
     <li><a href="gcp/" title="gcp"><span class="symbol module"></span>gcp</a></li>
     <li><a href="pagerduty/" title="pagerduty"><span class="symbol module"></span>pagerduty</a></li>
 </ul>
@@ -24,6 +25,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="dashboardlist" title="DashboardList"><span class="symbol resource"></span>DashboardList</a></li>
     <li><a href="downtime" title="Downtime"><span class="symbol resource"></span>Downtime</a></li>
+    <li><a href="logsarchive" title="LogsArchive"><span class="symbol resource"></span>LogsArchive</a></li>
     <li><a href="logscustompipeline" title="LogsCustomPipeline"><span class="symbol resource"></span>LogsCustomPipeline</a></li>
     <li><a href="logsindex" title="LogsIndex"><span class="symbol resource"></span>LogsIndex</a></li>
     <li><a href="logsindexorder" title="LogsIndexOrder"><span class="symbol resource"></span>LogsIndexOrder</a></li>
@@ -42,6 +44,7 @@ A Pulumi package for creating and managing Datadog resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -53,7 +56,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

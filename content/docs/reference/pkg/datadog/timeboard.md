@@ -12,10 +12,7 @@ meta_desc: "Explore the TimeBoard resource of the Datadog package, including exa
 
 Provides a Datadog timeboard resource. This can be used to create and manage Datadog timeboards.
 
-> **Note:**This resource is outdated. Use the new `datadog..Dashboard` resource instead.
-
-{{% examples %}}
-{{% /examples %}}
+> **Note:**This resource is outdated. Use the new `datadog.Dashboard` resource instead.
 
 
 
@@ -28,7 +25,7 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/datadog/#TimeBoard">TimeBoard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.TimeBoard">TimeBoard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +532,7 @@ Get an existing TimeBoard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

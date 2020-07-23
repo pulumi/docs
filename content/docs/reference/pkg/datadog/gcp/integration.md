@@ -12,8 +12,6 @@ meta_desc: "Explore the Integration resource of the gcp module, including exampl
 
 Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,10 +44,38 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/gcp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gcp.NewIntegration(ctx, "awesomeGcpProjectIntegration", &gcp.IntegrationArgs{
+			ClientEmail:  pulumi.String("awesome-service-account@awesome-project-id.iam.gserviceaccount.com"),
+			ClientId:     pulumi.String("123456789012345678901"),
+			HostFilters:  pulumi.String("foo:bar,buzz:lightyear"),
+			PrivateKey:   pulumi.String(fmt.Sprintf("%v%v%v%v", "-----BEGIN PRIVATE KEY-----\n", "...\n", "-----END PRIVATE KEY-----\n", "\n")),
+			PrivateKeyId: pulumi.String("1234567890123456789012345678901234567890"),
+			ProjectId:    pulumi.String("awesome-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +96,11 @@ awesome_gcp_project_integration = datadog.gcp.Integration("awesomeGcpProjectInte
     private_key_id="1234567890123456789012345678901234567890",
     project_id="awesome-project-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
@@ -90,6 +118,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     projectId: "awesome-project-id",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -104,7 +133,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/gcp/#Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_email=None<span class="p">, </span>client_id=None<span class="p">, </span>host_filters=None<span class="p">, </span>private_key=None<span class="p">, </span>private_key_id=None<span class="p">, </span>project_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/gcp/#pulumi_datadog.gcp.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_email=None<span class="p">, </span>client_id=None<span class="p">, </span>host_filters=None<span class="p">, </span>private_key=None<span class="p">, </span>private_key_id=None<span class="p">, </span>project_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -659,7 +688,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_email=None<span class="p">, </span>client_id=None<span class="p">, </span>host_filters=None<span class="p">, </span>private_key=None<span class="p">, </span>private_key_id=None<span class="p">, </span>project_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_email=None<span class="p">, </span>client_id=None<span class="p">, </span>host_filters=None<span class="p">, </span>private_key=None<span class="p">, </span>private_key_id=None<span class="p">, </span>project_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,10 +12,6 @@ meta_desc: "Explore the Integration resource of the aws module, including exampl
 
 Provides a Datadog - Amazon Web Services integration resource. This can be used to create and manage Datadog - Amazon Web Services integration.
 
-Update operations are currently not supported with datadog API so any change forces a new resource.
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +35,11 @@ class MyStack : Stack
                 { "auto_scaling", false },
                 { "opsworks", false },
             },
+            ExcludedRegions = 
+            {
+                "us-east-1",
+                "us-west-2",
+            },
             FilterTags = 
             {
                 "key:value",
@@ -54,10 +55,47 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewIntegration(ctx, "sandbox", &aws.IntegrationArgs{
+			AccountId: pulumi.String("1234567890"),
+			AccountSpecificNamespaceRules: pulumi.BoolMap{
+				"auto_scaling": pulumi.Bool(false),
+				"opsworks":     pulumi.Bool(false),
+			},
+			ExcludedRegions: pulumi.StringArray{
+				pulumi.String("us-east-1"),
+				pulumi.String("us-west-2"),
+			},
+			FilterTags: pulumi.StringArray{
+				pulumi.String("key:value"),
+			},
+			HostTags: pulumi.StringArray{
+				pulumi.String("key:value"),
+				pulumi.String("key2:value2"),
+			},
+			RoleName: pulumi.String("DatadogAWSIntegrationRole"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,6 +110,10 @@ sandbox = datadog.aws.Integration("sandbox",
         "auto_scaling": False,
         "opsworks": False,
     },
+    excluded_regions=[
+        "us-east-1",
+        "us-west-2",
+    ],
     filter_tags=["key:value"],
     host_tags=[
         "key:value",
@@ -79,9 +121,11 @@ sandbox = datadog.aws.Integration("sandbox",
     ],
     role_name="DatadogAWSIntegrationRole")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
@@ -93,6 +137,10 @@ const sandbox = new datadog.aws.Integration("sandbox", {
         auto_scaling: false,
         opsworks: false,
     },
+    excludedRegions: [
+        "us-east-1",
+        "us-west-2",
+    ],
     filterTags: ["key:value"],
     hostTags: [
         "key:value",
@@ -101,6 +149,7 @@ const sandbox = new datadog.aws.Integration("sandbox", {
     roleName: "DatadogAWSIntegrationRole",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -115,7 +164,7 @@ const sandbox = new datadog.aws.Integration("sandbox", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/aws/#Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>account_specific_namespace_rules=None<span class="p">, </span>filter_tags=None<span class="p">, </span>host_tags=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/aws/#pulumi_datadog.aws.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>account_specific_namespace_rules=None<span class="p">, </span>excluded_regions=None<span class="p">, </span>filter_tags=None<span class="p">, </span>host_tags=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,7 +366,18 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedregions_csharp">
+<a href="#excludedregions_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,7 +439,18 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedregions_go">
+<a href="#excludedregions_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,7 +512,18 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedregions_nodejs">
+<a href="#excludedregions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,7 +585,18 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excluded_regions_python">
+<a href="#excluded_regions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +763,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>account_specific_namespace_rules=None<span class="p">, </span>external_id=None<span class="p">, </span>filter_tags=None<span class="p">, </span>host_tags=None<span class="p">, </span>role_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>account_specific_namespace_rules=None<span class="p">, </span>excluded_regions=None<span class="p">, </span>external_id=None<span class="p">, </span>filter_tags=None<span class="p">, </span>host_tags=None<span class="p">, </span>role_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -803,7 +896,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludedregions_csharp">
+<a href="#state_excludedregions_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,7 +980,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludedregions_go">
+<a href="#state_excludedregions_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,7 +1064,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludedregions_nodejs">
+<a href="#state_excludedregions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1022,7 +1148,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excluded_regions_python">
+<a href="#state_excluded_regions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

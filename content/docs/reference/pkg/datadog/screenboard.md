@@ -12,10 +12,7 @@ meta_desc: "Explore the ScreenBoard resource of the Datadog package, including e
 
 Provides a Datadog screenboard resource. This can be used to create and manage Datadog screenboards.
 
-> **Note:** This resource is outdated. Use the new `datadog..Dashboard` resource instead.
-
-{{% examples %}}
-{{% /examples %}}
+> **Note:** This resource is outdated. Use the new `datadog.Dashboard` resource instead.
 
 
 
@@ -28,7 +25,7 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/datadog/#ScreenBoard">ScreenBoard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ScreenBoard">ScreenBoard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -623,7 +620,7 @@ Get an existing ScreenBoard resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4949,7 +4946,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5156,7 +5154,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5363,7 +5362,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5570,7 +5570,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

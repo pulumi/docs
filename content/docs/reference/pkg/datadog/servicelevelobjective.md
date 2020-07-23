@@ -12,8 +12,6 @@ meta_desc: "Explore the ServiceLevelObjective resource of the Datadog package, i
 
 Provides a Datadog service level objective resource. This can be used to create and manage Datadog service level objectives.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,10 +66,57 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.NewServiceLevelObjective(ctx, "foo", &datadog.ServiceLevelObjectiveArgs{
+			Description: pulumi.String("My custom metric SLO"),
+			Name:        pulumi.String("Example Metric SLO"),
+			Query: &datadog.ServiceLevelObjectiveQueryArgs{
+				Denominator: pulumi.String("sum:my.custom.count.metric{*}.as_count()"),
+				Numerator:   pulumi.String("sum:my.custom.count.metric{type:good_events}.as_count()"),
+			},
+			Tags: pulumi.StringArray{
+				pulumi.String("foo:bar"),
+				pulumi.String("baz"),
+			},
+			Thresholds: datadog.ServiceLevelObjectiveThresholdArray{
+				&datadog.ServiceLevelObjectiveThresholdArgs{
+					Target:         pulumi.Float64(99.9),
+					TargetDisplay:  pulumi.String("99.900"),
+					Timeframe:      pulumi.String("7d"),
+					Warning:        pulumi.Float64(99.99),
+					WarningDisplay: pulumi.String("99.990"),
+				},
+				&datadog.ServiceLevelObjectiveThresholdArgs{
+					Target:         pulumi.Float64(99.9),
+					TargetDisplay:  pulumi.String("99.900"),
+					Timeframe:      pulumi.String("30d"),
+					Warning:        pulumi.Float64(99.99),
+					WarningDisplay: pulumi.String("99.990"),
+				},
+			},
+			Type: pulumi.String("metric"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,6 +154,7 @@ foo = datadog.ServiceLevelObjective("foo",
     ],
     type="metric")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -147,128 +193,7 @@ const foo = new datadog.ServiceLevelObjective("foo", {
     type: "metric",
 });
 ```
-{{% /example %}}
 
-### Monitor-Based SLO
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create a new Datadog service level objective
-        var bar = new Datadog.ServiceLevelObjective("bar", new Datadog.ServiceLevelObjectiveArgs
-        {
-            Description = "My custom monitor SLO",
-            MonitorIds = 
-            {
-                1,
-                2,
-                3,
-            },
-            Name = "Example Monitor SLO",
-            Tags = 
-            {
-                "foo:bar",
-                "baz",
-            },
-            Thresholds = 
-            {
-                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
-                {
-                    Target = 99.9,
-                    Timeframe = "7d",
-                    Warning = 99.99,
-                },
-                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
-                {
-                    Target = 99.9,
-                    Timeframe = "30d",
-                    Warning = 99.99,
-                },
-            },
-            Type = "monitor",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-# Create a new Datadog service level objective
-bar = datadog.ServiceLevelObjective("bar",
-    description="My custom monitor SLO",
-    monitor_ids=[
-        1,
-        2,
-        3,
-    ],
-    name="Example Monitor SLO",
-    tags=[
-        "foo:bar",
-        "baz",
-    ],
-    thresholds=[
-        {
-            "target": 99.9,
-            "timeframe": "7d",
-            "warning": 99.99,
-        },
-        {
-            "target": 99.9,
-            "timeframe": "30d",
-            "warning": 99.99,
-        },
-    ],
-    type="monitor")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-// Create a new Datadog service level objective
-const bar = new datadog.ServiceLevelObjective("bar", {
-    description: "My custom monitor SLO",
-    monitorIds: [
-        1,
-        2,
-        3,
-    ],
-    name: "Example Monitor SLO",
-    tags: [
-        "foo:bar",
-        "baz",
-    ],
-    thresholds: [
-        {
-            target: 99.9,
-            timeframe: "7d",
-            warning: 99.99,
-        },
-        {
-            target: 99.9,
-            timeframe: "30d",
-            warning: 99.99,
-        },
-    ],
-    type: "monitor",
-});
-```
 {{% /example %}}
 
 {{% /examples %}}
@@ -283,7 +208,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/datadog/#ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -485,7 +410,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -582,7 +507,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -679,7 +604,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -776,7 +701,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -934,7 +859,7 @@ Get an existing ServiceLevelObjective resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1133,7 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -1230,7 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -1327,7 +1252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -1424,7 +1349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `metric`
 * `monitor`
 {{% /md %}}</dd>
@@ -1619,7 +1544,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `7d`
 * `30d`
 * `90d`
@@ -1684,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `7d`
 * `30d`
 * `90d`
@@ -1749,7 +1674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `7d`
 * `30d`
 * `90d`
@@ -1814,7 +1739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/?lang=python#create-a-service-level-objective) page. Available options to choose from are:
+    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
 * `7d`
 * `30d`
 * `90d`

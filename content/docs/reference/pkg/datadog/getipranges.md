@@ -12,7 +12,6 @@ meta_desc: "Explore the GetIpRanges function of the Datadog package, including e
 
 Use this data source to retrieve information about Datadog's IP addresses.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,10 +31,29 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.GetIpRanges(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -45,15 +63,18 @@ import pulumi_datadog as datadog
 
 test = datadog.get_ip_ranges()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
 const test = pulumi.output(datadog.getIpRanges({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
