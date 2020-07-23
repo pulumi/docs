@@ -134,6 +134,61 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("test"),
+		})
+		if err != nil {
+			return err
+		}
+		ldapUserFederation, err := ldap.NewUserFederation(ctx, "ldapUserFederation", &ldap.UserFederationArgs{
+			BindCredential:   pulumi.String("admin"),
+			BindDn:           pulumi.String("cn=admin,dc=example,dc=org"),
+			ConnectionUrl:    pulumi.String("ldap://openldap"),
+			RdnLdapAttribute: pulumi.String("cn"),
+			RealmId:          realm.ID(),
+			UserObjectClasses: pulumi.StringArray{
+				pulumi.String("simpleSecurityObject"),
+				pulumi.String("organizationalRole"),
+			},
+			UsernameLdapAttribute: pulumi.String("cn"),
+			UsersDn:               pulumi.String("dc=example,dc=org"),
+			UuidLdapAttribute:     pulumi.String("entryDN"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ldap.NewGroupMapper(ctx, "ldapGroupMapper", &ldap.GroupMapperArgs{
+			GroupNameLdapAttribute: pulumi.String("cn"),
+			GroupObjectClasses: pulumi.StringArray{
+				pulumi.String("groupOfNames"),
+			},
+			LdapGroupsDn:                pulumi.String("dc=example,dc=org"),
+			LdapUserFederationId:        ldapUserFederation.ID(),
+			MemberofLdapAttribute:       pulumi.String("memberOf"),
+			MembershipAttributeType:     pulumi.String("DN"),
+			MembershipLdapAttribute:     pulumi.String("member"),
+			MembershipUserLdapAttribute: pulumi.String("cn"),
+			RealmId:                     realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -168,7 +223,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#GroupMapper">GroupMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drop_non_existing_groups_during_sync=None<span class="p">, </span>group_name_ldap_attribute=None<span class="p">, </span>group_object_classes=None<span class="p">, </span>groups_ldap_filter=None<span class="p">, </span>ignore_missing_groups=None<span class="p">, </span>ldap_groups_dn=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>mapped_group_attributes=None<span class="p">, </span>memberof_ldap_attribute=None<span class="p">, </span>membership_attribute_type=None<span class="p">, </span>membership_ldap_attribute=None<span class="p">, </span>membership_user_ldap_attribute=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>preserve_group_inheritance=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_roles_retrieve_strategy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#pulumi_keycloak.ldap.GroupMapper">GroupMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drop_non_existing_groups_during_sync=None<span class="p">, </span>group_name_ldap_attribute=None<span class="p">, </span>group_object_classes=None<span class="p">, </span>groups_ldap_filter=None<span class="p">, </span>ignore_missing_groups=None<span class="p">, </span>ldap_groups_dn=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>mapped_group_attributes=None<span class="p">, </span>memberof_ldap_attribute=None<span class="p">, </span>membership_attribute_type=None<span class="p">, </span>membership_ldap_attribute=None<span class="p">, </span>membership_user_ldap_attribute=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>preserve_group_inheritance=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_roles_retrieve_strategy=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1151,7 +1206,7 @@ Get an existing GroupMapper resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>drop_non_existing_groups_during_sync=None<span class="p">, </span>group_name_ldap_attribute=None<span class="p">, </span>group_object_classes=None<span class="p">, </span>groups_ldap_filter=None<span class="p">, </span>ignore_missing_groups=None<span class="p">, </span>ldap_groups_dn=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>mapped_group_attributes=None<span class="p">, </span>memberof_ldap_attribute=None<span class="p">, </span>membership_attribute_type=None<span class="p">, </span>membership_ldap_attribute=None<span class="p">, </span>membership_user_ldap_attribute=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>preserve_group_inheritance=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_roles_retrieve_strategy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>drop_non_existing_groups_during_sync=None<span class="p">, </span>group_name_ldap_attribute=None<span class="p">, </span>group_object_classes=None<span class="p">, </span>groups_ldap_filter=None<span class="p">, </span>ignore_missing_groups=None<span class="p">, </span>ldap_groups_dn=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>mapped_group_attributes=None<span class="p">, </span>memberof_ldap_attribute=None<span class="p">, </span>membership_attribute_type=None<span class="p">, </span>membership_ldap_attribute=None<span class="p">, </span>membership_user_ldap_attribute=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>preserve_group_inheritance=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_roles_retrieve_strategy=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

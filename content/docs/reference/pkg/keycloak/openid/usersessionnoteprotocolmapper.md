@@ -22,7 +22,7 @@ meta_desc: "Explore the UserSessionNoteProtocolMapper resource of the openid mod
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#UserSessionNoteProtocolMapper">UserSessionNoteProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>session_note_label=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.UserSessionNoteProtocolMapper">UserSessionNoteProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>session_note_label=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +705,7 @@ Get an existing UserSessionNoteProtocolMapper resource's state with the given na
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>session_note_label=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>session_note_label=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

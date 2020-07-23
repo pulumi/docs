@@ -22,7 +22,7 @@ meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/keycloak/#CustomUserFederation">CustomUserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cache_policy=None<span class="p">, </span>config=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>provider_id=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.CustomUserFederation">CustomUserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cache_policy=None<span class="p">, </span>config=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>priority=None<span class="p">, </span>provider_id=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +214,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,6 +261,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parentid_csharp">
+<a href="#parentid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
@@ -297,7 +308,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,6 +355,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parentid_go">
+<a href="#parentid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
@@ -380,7 +402,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,6 +449,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parentid_nodejs">
+<a href="#parentid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
@@ -463,7 +496,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,6 +539,17 @@ interface
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_id_python">
+<a href="#parent_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,7 +661,7 @@ Get an existing CustomUserFederation resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cache_policy=None<span class="p">, </span>config=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>provider_id=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cache_policy=None<span class="p">, </span>config=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>priority=None<span class="p">, </span>provider_id=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -775,6 +819,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_parentid_csharp">
+<a href="#state_parentid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
@@ -804,7 +859,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -858,6 +913,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_parentid_go">
+<a href="#state_parentid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
@@ -887,7 +953,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -941,6 +1007,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_parentid_nodejs">
+<a href="#state_parentid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
@@ -970,7 +1047,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -1024,6 +1101,17 @@ interface
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_parent_id_python">
+<a href="#state_parent_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
@@ -1053,7 +1141,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
+    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>

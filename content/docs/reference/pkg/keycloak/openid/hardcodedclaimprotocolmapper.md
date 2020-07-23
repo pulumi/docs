@@ -98,6 +98,49 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		openidClient, err := openid.NewClient(ctx, "openidClient", &openid.ClientArgs{
+			AccessType: pulumi.String("CONFIDENTIAL"),
+			ClientId:   pulumi.String("test-client"),
+			Enabled:    pulumi.Bool(true),
+			RealmId:    realm.ID(),
+			ValidRedirectUris: pulumi.StringArray{
+				pulumi.String("http://localhost:8080/openid-callback"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewHardcodedClaimProtocolMapper(ctx, "hardcodedClaimMapper", &openid.HardcodedClaimProtocolMapperArgs{
+			ClaimName:  pulumi.String("foo"),
+			ClaimValue: pulumi.String("bar"),
+			ClientId:   openidClient.ID(),
+			RealmId:    realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Example Usage (Client Scope)
 
@@ -161,6 +204,43 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		clientScope, err := openid.NewClientScope(ctx, "clientScope", &openid.ClientScopeArgs{
+			RealmId: realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewHardcodedClaimProtocolMapper(ctx, "hardcodedClaimMapper", &openid.HardcodedClaimProtocolMapperArgs{
+			ClaimName:     pulumi.String("foo"),
+			ClaimValue:    pulumi.String("bar"),
+			ClientScopeId: clientScope.ID(),
+			RealmId:       realm.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -188,7 +268,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#HardcodedClaimProtocolMapper">HardcodedClaimProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>add_to_userinfo=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.HardcodedClaimProtocolMapper">HardcodedClaimProtocolMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>add_to_userinfo=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -911,7 +991,7 @@ Get an existing HardcodedClaimProtocolMapper resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>add_to_userinfo=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_to_access_token=None<span class="p">, </span>add_to_id_token=None<span class="p">, </span>add_to_userinfo=None<span class="p">, </span>claim_name=None<span class="p">, </span>claim_value=None<span class="p">, </span>claim_value_type=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

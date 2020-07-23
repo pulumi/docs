@@ -107,6 +107,48 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("test"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ldap.NewUserFederation(ctx, "ldapUserFederation", &ldap.UserFederationArgs{
+			BindCredential:    pulumi.String("admin"),
+			BindDn:            pulumi.String("cn=admin,dc=example,dc=org"),
+			ConnectionTimeout: pulumi.String("5s"),
+			ConnectionUrl:     pulumi.String("ldap://openldap"),
+			Enabled:           pulumi.Bool(true),
+			RdnLdapAttribute:  pulumi.String("cn"),
+			ReadTimeout:       pulumi.String("10s"),
+			RealmId:           realm.ID(),
+			UserObjectClasses: pulumi.StringArray{
+				pulumi.String("simpleSecurityObject"),
+				pulumi.String("organizationalRole"),
+			},
+			UsernameLdapAttribute: pulumi.String("cn"),
+			UsersDn:               pulumi.String("dc=example,dc=org"),
+			UuidLdapAttribute:     pulumi.String("entryDN"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -156,7 +198,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#UserFederation">UserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#pulumi_keycloak.ldap.UserFederation">UserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1675,7 +1717,7 @@ Get an existing UserFederation resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

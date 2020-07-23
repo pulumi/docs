@@ -63,6 +63,37 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realmManagement, err := openid.LookupClient(ctx, &openid.LookupClientArgs{
+			RealmId:  "my-realm",
+			ClientId: "realm-management",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := realmManagement.Id
+		_, err = keycloak.LookupRole(ctx, &keycloak.LookupRoleArgs{
+			RealmId:  "my-realm",
+			ClientId: &opt0,
+			Name:     "realm-admin",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 

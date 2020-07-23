@@ -34,12 +34,14 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="grouproles" title="GroupRoles"><span class="symbol resource"></span>GroupRoles</a></li>
     <li><a href="hardcodedattributeidentityprovidermapper" title="HardcodedAttributeIdentityProviderMapper"><span class="symbol resource"></span>HardcodedAttributeIdentityProviderMapper</a></li>
     <li><a href="hardcodedroleidentitymapper" title="HardcodedRoleIdentityMapper"><span class="symbol resource"></span>HardcodedRoleIdentityMapper</a></li>
+    <li><a href="identityprovidertokenexchangescopepermission" title="IdentityProviderTokenExchangeScopePermission"><span class="symbol resource"></span>IdentityProviderTokenExchangeScopePermission</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
     <li><a href="realmevents" title="RealmEvents"><span class="symbol resource"></span>RealmEvents</a></li>
     <li><a href="requiredaction" title="RequiredAction"><span class="symbol resource"></span>RequiredAction</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="userroles" title="UserRoles"><span class="symbol resource"></span>UserRoles</a></li>
     <li><a href="usertemplateimporteridentityprovidermapper" title="UserTemplateImporterIdentityProviderMapper"><span class="symbol resource"></span>UserTemplateImporterIdentityProviderMapper</a></li>
 </ul>
 
@@ -60,7 +62,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.3.2</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

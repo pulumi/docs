@@ -78,6 +78,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("my-realm"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = openid.NewClient(ctx, "openidClient", &openid.ClientArgs{
+			AccessType: pulumi.String("CONFIDENTIAL"),
+			ClientId:   pulumi.String("test-client"),
+			Enabled:    pulumi.Bool(true),
+			RealmId:    realm.ID(),
+			ValidRedirectUris: pulumi.StringArray{
+				pulumi.String("http://localhost:8080/openid-callback"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -95,14 +129,14 @@ The following arguments are supported:
       URIs for security. This client should be used for applications using the Implicit grant flow.
     - `BEARER-ONLY` - Used for services that never initiate a login. This client will only allow bearer token requests.
 - `client_secret` - (Optional) The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and
-should be treated with the same care as a password. If omitted, Keycloak will generate a GUID for this attribute.
+  should be treated with the same care as a password. If omitted, Keycloak will generate a GUID for this attribute.
 - `standard_flow_enabled` - (Optional) When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 - `implicit_flow_enabled` - (Optional) When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 - `direct_access_grants_enabled` - (Optional) When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 - `service_accounts_enabled` - (Optional) When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 - `valid_redirect_uris` - (Optional) A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
-wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
-is set to `true`.
+  wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
+  is set to `true`.
 - `web_origins` - (Optional) A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 - `admin_url` - (Optional) URL to the admin interface of the client.
 - `base_url` - (Optional) Default URL to use when the auth server needs to redirect or link back to the client.
@@ -126,7 +160,7 @@ In addition to the arguments listed above, the following computed attributes are
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1457,7 +1491,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

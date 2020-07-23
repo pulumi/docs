@@ -115,6 +115,54 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+			Enabled: pulumi.Bool(true),
+			Realm:   pulumi.String("test"),
+		})
+		if err != nil {
+			return err
+		}
+		ldapUserFederation, err := ldap.NewUserFederation(ctx, "ldapUserFederation", &ldap.UserFederationArgs{
+			BindCredential:   pulumi.String("admin"),
+			BindDn:           pulumi.String("cn=admin,dc=example,dc=org"),
+			ConnectionUrl:    pulumi.String("ldap://openldap"),
+			RdnLdapAttribute: pulumi.String("cn"),
+			RealmId:          realm.ID(),
+			UserObjectClasses: pulumi.StringArray{
+				pulumi.String("simpleSecurityObject"),
+				pulumi.String("organizationalRole"),
+			},
+			UsernameLdapAttribute: pulumi.String("cn"),
+			UsersDn:               pulumi.String("dc=example,dc=org"),
+			UuidLdapAttribute:     pulumi.String("entryDN"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ldap.NewUserAttributeMapper(ctx, "ldapUserAttributeMapper", &ldap.UserAttributeMapperArgs{
+			LdapAttribute:        pulumi.String("bar"),
+			LdapUserFederationId: ldapUserFederation.ID(),
+			RealmId:              realm.ID(),
+			UserModelAttribute:   pulumi.String("foo"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ### Argument Reference
 
@@ -140,7 +188,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#UserAttributeMapper">UserAttributeMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_read_value_from_ldap=None<span class="p">, </span>is_mandatory_in_ldap=None<span class="p">, </span>ldap_attribute=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>name=None<span class="p">, </span>read_only=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_model_attribute=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#pulumi_keycloak.ldap.UserAttributeMapper">UserAttributeMapper</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_read_value_from_ldap=None<span class="p">, </span>is_mandatory_in_ldap=None<span class="p">, </span>ldap_attribute=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>name=None<span class="p">, </span>read_only=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_model_attribute=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -783,7 +831,7 @@ Get an existing UserAttributeMapper resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>always_read_value_from_ldap=None<span class="p">, </span>is_mandatory_in_ldap=None<span class="p">, </span>ldap_attribute=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>name=None<span class="p">, </span>read_only=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_model_attribute=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>always_read_value_from_ldap=None<span class="p">, </span>is_mandatory_in_ldap=None<span class="p">, </span>ldap_attribute=None<span class="p">, </span>ldap_user_federation_id=None<span class="p">, </span>name=None<span class="p">, </span>read_only=None<span class="p">, </span>realm_id=None<span class="p">, </span>user_model_attribute=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
