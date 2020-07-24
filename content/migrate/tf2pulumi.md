@@ -35,8 +35,9 @@ form:
 
 <p class="m-0 -mt-4 p-2 bg-purple-300 text-white font-bold font-mono font-xs"
     style="font-size: 0.75rem !important; color: #fff !important">main.tf</p>
-<textarea id="terraform-code" rows="27" class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-hidden whitespace-no-wrap"
-    style="resize:vertical-auto" title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
+<textarea id="terraform-code" rows="27"
+    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-hidden whitespace-pre-wrap"
+    title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
 </textarea>
 
 {{% /choosable %}}
@@ -112,14 +113,6 @@ form:
 <pre id="pulumi-errors" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#ff0000"></pre>
 <pre id="pulumi-warnings" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#cc6600"></pre>
 
-<p id="couldnt-convert-code" class="text-sm mt-8 text-center hidden" style="color:#cc6600; font-size:1rem">
-    <b>Sorry, we couldn't convert your code.</b><br><br>
-    There may be a problem with the code you submitted, or it might use a feature the
-    converter doesn't yet support. To work with an engineer to help with your evaluation, please
-    <a href="{{< relref "/about#contactus" >}})" class="link">contact us</a> or
-    <a href="https://slack.pulumi.com" class="link">join our Community Slack</a>. We are here to help!
-</p>
-
 <script>
 // Extracts a query string variable from the browser's location.
 function getQueryVariable(variable) {
@@ -135,13 +128,31 @@ function getQueryVariable(variable) {
     }
 }
 
-function setInputKind(ik) {
+function getCurrentInputKind() {
+    var ik;
+    $("pulumi-chooser[type='input-kind'] > ul > li.active > a").each(function (i, e) {
+        ik = $(e).text().trim().toLowerCase();
+        return false;
+    });
+    return ik;
+}
+
+function setCurrentInputKind(ik) {
     $("pulumi-chooser[type='input-kind'] > ul > li > a").each(function (i, e) {
         if ($(e).text().trim().toLowerCase() === ik) {
             $(e)[0].click();
             return false;
         }
     });
+}
+
+function getCurrentLanguage() {
+    var cl;
+    $("pulumi-chooser[type='language'] > ul > li.active > a").each(function (i, e) {
+        cl = e.innerText.trim().toLowerCase();
+        return false;
+    });
+    return cl;
 }
 
 // currentCode will be updated to keep track of the currently converted code files. This
@@ -192,8 +203,29 @@ function addLanguageFile(language, fn, code) {
     addCopyButton($(`#${filediv}`));
 }
 
+// Display the "could not convert" boilerplate.
+function displayCouldNotConvert(language) {
+    clearLanguageFiles(language);
+    $("#pulumi-code-"+language+"-files").html(`
+        <div id="couldnt-convert-code" class="container mx-auto pt-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <h3>Sorry, we couldn't convert your code.</h3><br>
+                <p class="text-lg mt-0 mb-16">
+                    There may be a problem with the code you submitted, or it might use a feature the
+                    converter doesn't yet support. To work with an engineer to help with your evaluation, please
+                    <a href="{{< relref "/about#contactus" >}})" class="link">contact us</a> or
+                    <a href="https://slack.pulumi.com" class="link">join our Community Slack</a>. We are here to help!
+                </p>
+            </div>
+        </div>
+    `);
+}
+
 // Now set up our event handler for conversion.
 function convertCode(language) {
+    // If we got called without an explicit language, look it up.
+    language = language || getCurrentLanguage();
+
     // Get the currently chosen language by looking up the active language chooser tab.
     let languageTextbox = language;
     if (language === "c#") {
@@ -207,7 +239,6 @@ function convertCode(language) {
     // Clear the current fields.
     $("#pulumi-errors").hide();
     $("#pulumi-warnings").hide();
-    $("#couldnt-convert-code").hide();
     clearLanguageFiles(languageTextbox);
 
     // Now read the various possible code sources.
@@ -218,24 +249,35 @@ function convertCode(language) {
         tfUrl = "";
     }
 
-    // If there isn't any code, bail early.
-    if (tfCode === "" && tfUrl === "" && (!tfUploadFiles || !tfUploadFiles.length)) {
-        $("#pulumi-errors").text("Error: Please enter the code to convert above, and then try again");
-        $("#pulumi-errors").show();
-        return;
-    }
-
-    // Make sure the right input tab is selected, for clarity.
-    if (tfCode) {
-        setInputKind("code");
-    } else if (tfUrl) {
-        setInputKind("url");
-    } else if (tfUploadFiles.length) {
-        setInputKind("upload");
+    // Read the input kind and verify that we've got what we need.
+    let tfIk = getCurrentInputKind();
+    switch (tfIk) {
+    case "url":
+        if (tfUrl === "") {
+            $("#pulumi-errors").text("Error: Please enter a URL for the code to convert above, and then try again");
+            $("#pulumi-errors").show();
+            return;
+        }
+        break;
+    case "upload":
+        if (!tfUploadFiles || !tfUploadFiles.length) {
+            $("#pulumi-errors").text("Error: Please choose code files to upload above, and then try again");
+            $("#pulumi-errors").show();
+            return;
+        }
+        break;
+    default: // "code"
+        if (tfCode === "") {
+            $("#pulumi-errors").text("Error: Please enter the code to convert above, and then try again");
+            $("#pulumi-errors").show();
+            return;
+        }
+        break;
     }
 
     // Add some "waiting" touches.
     $(document.body).css({ "cursor": "wait" });
+    $("#terraform-code, #terraform-url").css({ "cursor": "wait" });
     $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "wait" });
     addLanguageFile(languageTextbox, "…", "…");
 
@@ -243,7 +285,7 @@ function convertCode(language) {
     let post = {
         url: "https://ukfk72ln69.execute-api.us-west-2.amazonaws.com/stage/convert",
     };
-    if (tfUploadFiles.length) {
+    if (tfIk === "upload") {
         // If uploading files, we need to take a slightly more complex path.
         var fd = new FormData();
         for (let i = 0; i < tfUploadFiles.length; i++) {
@@ -256,11 +298,14 @@ function convertCode(language) {
         // Since the payload is the multipart form upload, send the language in the querystring.
         post.url += "?language=" + language;
     } else {
-        post.data = JSON.stringify({
-            code: tfCode,
-            url: tfUrl,
-            language: language,
-        });
+        switch (tfIk) {
+        case "url":
+            post.data = JSON.stringify({ url: tfUrl, language: language });
+            break;
+        default: // "code"
+            post.data = JSON.stringify({ code: tfCode, language: language });
+            break;
+        }
         post.dataType = "json";
     }
     $.post(post)
@@ -278,7 +323,7 @@ function convertCode(language) {
                 $("#pulumi-code-download-icon").show();
                 $("#pulumi-code-download-button").removeClass([ "opacity-50", "cursor-not-allowed" ]);
             } else {
-                $("#couldnt-convert-code").show();
+                displayCouldNotConvert(languageTextbox);
             }
 
             if (data.diagnostics) {
@@ -304,10 +349,11 @@ function convertCode(language) {
             }
             $("#pulumi-errors").text(errorText);
             $("#pulumi-errors").show();
-            $("#couldnt-convert-code").show();
+            displayCouldNotConvert(languageTextbox);
         }).
         always(function() {
             $(document.body).css({ "cursor": "default" });
+            $("#terraform-code, #terraform-url").css({ "cursor": "default" });
             $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "pointer" });
         });
 }
@@ -331,7 +377,7 @@ window.onload = function() {
         let tfCode = getQueryVariable("code");
         if (tfUrl) {
             $("#terraform-url").val(tfUrl);
-            setInputKind("url");
+            setCurrentInputKind("url");
         } else {
             if (!tfCode) {
                 // Populate a simple default example.
@@ -366,55 +412,78 @@ resource "aws_instance" "web" {
 `;
             }
             $("#terraform-code").val(tfCode);
-            setInputKind("code");
+            setCurrentInputKind("code");
         }
 
-        // Clear the URL box when selecting the code box.
-        $("#terraform-code").click(function() {
-            $(this).select()
-            $("#terraform-url").val("https://");
-            $("#terraform-upload").val("");
-        });
+        // We auto-submit the code based on user interaction, including (1) after they finish typing,
+        // (2) if they hit enter in the URL box, (3) after selecting files to upload, and (4) when
+        // switching the language in the right-hand converted code box.
 
-        // URL is pre-populated with "https://" -- select it upon click.
-        // Also clear the code box since we can't issue multiple at once.
-        $("#terraform-url").click(function() {
-            $(this).select();
-            $("#terraform-code").val("");
-            $("#terraform-upload").val("");
+        // After a while of no typing, submit.
+        var typingTimer;
+        let doneTypingMs = 1500;
+        $("#terraform-code").keyup(function (e) {
+            clearTimeout(typingTimer);
+            if ($(this).val() !== "") {
+                typingTimer = setTimeout(convertCode, doneTypingMs);
+            }
         });
-
-        // Clear the other text boxes when selecting.
-        $("#terraform-upload").click(function() {
-            $("#terraform-code").val("");
-            $("#terraform-url").val("https://");
+        $("#terraform-code").keydown(function (e) {
+            clearTimeout(typingTimer);
         });
-
-        // If you hit enter in the URL bar, submit.
-        $("#terraform-url").keypress(function (e) {
-            if (e.which == 13) {
+        $("#terraform-url").keyup(function (e) {
+            clearTimeout(typingTimer);
+            if ($(this).val() !== "" && e.which !== 13) {
+                typingTimer = setTimeout(convertCode, doneTypingMs);
+            }
+        });
+        $("#terraform-url").keydown(function (e) {
+            clearTimeout(typingTimer);
+            if (e.which === 13) {
+                // If you hit enter in the URL bar, submit immediately.
                 convertCode();
                 return false;
             }
         });
 
+        // After the file upload selector has occurred, submit.
+        $("#terraform-upload").change(function (e) {
+            let files = $("#terraform-upload")[0].files;
+            if (files && files.length) {
+                convertCode();
+                return false;
+            }
+        });
+
+        // Enable tabs within the code window, to make it easier to type code.
+        $("#terraform-code").keydown(function (e) {
+            if ((e.which || e.keyCode) === 9) {
+                e.preventDefault();
+                let start = this.selectionStart;
+                let end = this.selectionEnd;
+                $(this).val(
+                    $(this).val().substring(0, start) +
+                    "\t" +
+                    $(this).val().substring(end)
+                );
+                this.selectionStart = this.selectionEnd = start + 1;
+            }
+        });
+
         // Hook up event handlers for the language choosers.
         $("pulumi-chooser[type='language'] > ul > li > a").each(function (i, e) {
-            $(e)[0].addEventListener("click", function() {
+            $(e).click(function() {
                 convertCode($(e).text().trim().toLowerCase());
             });
         });
 
         // Fire off a conversion just to get started using the default code snippet example.
-        let currentLanguage = "";
-        $("pulumi-chooser[type='language'] > ul > li.active > a").each(function (i, e) {
-            currentLanguage = e.innerText.toLowerCase();
-        });
-        convertCode(currentLanguage || "typescript");
+        convertCode(getCurrentLanguage() || "typescript");
     });
 }
 </script>
 
 <div class="text-center py-8">
-    <a id="pulumi-code-download-button" class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode()">Download Results</a>
+    <a id="pulumi-code-download-button"
+        class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode()">Download Code</a>
 </div>
