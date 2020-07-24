@@ -203,22 +203,23 @@ function addLanguageFile(language, fn, code) {
     addCopyButton($(`#${filediv}`));
 }
 
+var couldNotConvertError =`<div id="couldnt-convert-code" class="container mx-auto pt-8">
+    <div class="text-center max-w-2xl mx-auto">
+        <h3>Sorry, we couldn't convert your code.</h3><br>
+        <p class="text-lg mt-0 mb-16">
+            There may be a problem with the code you submitted, or it might use a feature the
+            converter doesn't yet support. To work with an engineer to help with your evaluation, please
+            <a href="{{< relref "/about#contactus" >}})" class="link">contact us</a> or
+            <a href="https://slack.pulumi.com" class="link">join our Community Slack</a>. We are here to help!
+        </p>
+    </div>
+</div>
+`;
+
 // Display the "could not convert" boilerplate.
 function displayCouldNotConvert(language) {
     clearLanguageFiles(language);
-    $("#pulumi-code-"+language+"-files").html(`
-        <div id="couldnt-convert-code" class="container mx-auto pt-8">
-            <div class="text-center max-w-2xl mx-auto">
-                <h3>Sorry, we couldn't convert your code.</h3><br>
-                <p class="text-lg mt-0 mb-16">
-                    There may be a problem with the code you submitted, or it might use a feature the
-                    converter doesn't yet support. To work with an engineer to help with your evaluation, please
-                    <a href="{{< relref "/about#contactus" >}})" class="link">contact us</a> or
-                    <a href="https://slack.pulumi.com" class="link">join our Community Slack</a>. We are here to help!
-                </p>
-            </div>
-        </div>
-    `);
+    $("#pulumi-code-"+language+"-files").html(couldNotConvertError);
 }
 
 // Now set up our event handler for conversion.
