@@ -22,7 +22,7 @@ meta_desc: "Explore the PrivateKey resource of the TLS package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/tls/#PrivateKey">PrivateKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>ecdsa_curve=None<span class="p">, </span>rsa_bits=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.PrivateKey">PrivateKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>ecdsa_curve=None<span class="p">, </span>rsa_bits=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -665,7 +665,7 @@ Get an existing PrivateKey resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>ecdsa_curve=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>public_key_fingerprint_md5=None<span class="p">, </span>public_key_openssh=None<span class="p">, </span>public_key_pem=None<span class="p">, </span>rsa_bits=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>ecdsa_curve=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>public_key_fingerprint_md5=None<span class="p">, </span>public_key_openssh=None<span class="p">, </span>public_key_pem=None<span class="p">, </span>rsa_bits=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

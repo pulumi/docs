@@ -23,6 +23,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getpublickey" title="GetPublicKey"><span class="symbol function"></span>GetPublicKey</a></li>
 </ul>
 
@@ -35,7 +36,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
 	<dt>Version</dt>
-	<dd>2.1.3</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 

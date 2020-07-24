@@ -13,8 +13,6 @@ meta_desc: "Explore the GetPublicKey function of the TLS package, including exam
 Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_tls as tls
 
 example = tls.get_public_key(private_key_pem=(lambda path: open(path).read())("~/.ssh/id_rsa"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
@@ -63,6 +64,7 @@ const example = pulumi.output(tls.getPublicKey({
     privateKeyPem: fs.readFileSync("~/.ssh/id_rsa", "utf-8"),
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -17,6 +17,11 @@ block_external_search_index: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/issues">terraform-providers/terraform-provider-tls repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_tls"></span><dl class="py class">
+<dt id="pulumi_tls.AwaitableGetCertificateResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">certificates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_chain</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_tls.AwaitableGetPublicKeyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">AwaitableGetPublicKeyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key_pem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key_fingerprint_md5</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key_openssh</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key_pem</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.AwaitableGetPublicKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -181,6 +186,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_tls.GetCertificateResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">GetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">certificates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_chain</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCertificate.</p>
+<dl class="py attribute">
+<dt id="pulumi_tls.GetCertificateResult.certificates">
+<code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.GetCertificateResult.certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>The certificates protecting the site, with the root of the chain first.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.not_after</span></code> - The time until which the certificate is invalid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.not_before</span></code> - The time after which the certificate is valid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.is_ca</span></code> - <code class="docutils literal notranslate"><span class="pre">true</span></code> if this certificate is a ca certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.issuer</span></code> - Who verified and signed the certificate, roughly following
+<a class="reference external" href="https://tools.ietf.org/html/rfc2253">RFC2253</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.public_key_algorithm</span></code> - The algorithm used to create the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.serial_number</span></code> - Number that uniquely identifies the certificate with the CA’s system. The <code class="docutils literal notranslate"><span class="pre">format</span></code>
+function can be used to convert this base 10 number into other bases, such as hex.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.sha1_fingerprint</span></code> - The SHA1 fingerprint of the public key of the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.signature_algorithm</span></code> - The algorithm used to sign the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.subject</span></code> - The entity the certificate belongs to, roughly following
+<a class="reference external" href="https://tools.ietf.org/html/rfc2253">RFC2253</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates.#.version</span></code> - The version the certificate is in.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_tls.GetCertificateResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -648,7 +688,7 @@ the subject key identifier. Defaults to <code class="docutils literal notranslat
 key identifier is not set at all.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p></li>
+corresponding block for <code class="docutils literal notranslate"><span class="pre">CertRequest</span></code>.</p></li>
 <li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 <li><p><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
 certificate will become invalid.</p></li>
@@ -732,7 +772,7 @@ key identifier is not set at all.</p>
 <code class="sig-name descname">subjects</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.subjects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p>
+corresponding block for <code class="docutils literal notranslate"><span class="pre">CertRequest</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">country</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -801,7 +841,7 @@ the subject key identifier. Defaults to <code class="docutils literal notranslat
 key identifier is not set at all.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p></li>
+corresponding block for <code class="docutils literal notranslate"><span class="pre">CertRequest</span></code>.</p></li>
 <li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 <li><p><strong>validity_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time until which the certificate is invalid, as an
 <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
@@ -864,6 +904,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_tls.get_certificate">
+<code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.get_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information, such as SHA1 fingerprint or serial number, about the TLS certificates that
+protect an HTTPS website. Note that the certificate chain isn’t verified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – The URL of the website to get the certificates from.</p></li>
+<li><p><strong>verify_chain</strong> (<em>bool</em>) – Whether to verify the certificate chain while parsing it or not</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
