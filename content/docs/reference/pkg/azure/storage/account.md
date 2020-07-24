@@ -342,7 +342,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>allow_blob_public_access=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,6 +571,17 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowblobpublicaccess_csharp">
+<a href="#allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="blobproperties_csharp">
 <a href="#blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
 </span> 
@@ -751,6 +762,17 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowblobpublicaccess_go">
+<a href="#allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -939,6 +961,17 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowblobpublicaccess_nodejs">
+<a href="#allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="blobproperties_nodejs">
 <a href="#blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
 </span> 
@@ -1119,6 +1152,17 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_blob_public_access_python">
+<a href="#allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2749,7 +2793,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>primary_access_key=None<span class="p">, </span>primary_blob_connection_string=None<span class="p">, </span>primary_blob_endpoint=None<span class="p">, </span>primary_blob_host=None<span class="p">, </span>primary_connection_string=None<span class="p">, </span>primary_dfs_endpoint=None<span class="p">, </span>primary_dfs_host=None<span class="p">, </span>primary_file_endpoint=None<span class="p">, </span>primary_file_host=None<span class="p">, </span>primary_location=None<span class="p">, </span>primary_queue_endpoint=None<span class="p">, </span>primary_queue_host=None<span class="p">, </span>primary_table_endpoint=None<span class="p">, </span>primary_table_host=None<span class="p">, </span>primary_web_endpoint=None<span class="p">, </span>primary_web_host=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_access_key=None<span class="p">, </span>secondary_blob_connection_string=None<span class="p">, </span>secondary_blob_endpoint=None<span class="p">, </span>secondary_blob_host=None<span class="p">, </span>secondary_connection_string=None<span class="p">, </span>secondary_dfs_endpoint=None<span class="p">, </span>secondary_dfs_host=None<span class="p">, </span>secondary_file_endpoint=None<span class="p">, </span>secondary_file_host=None<span class="p">, </span>secondary_location=None<span class="p">, </span>secondary_queue_endpoint=None<span class="p">, </span>secondary_queue_host=None<span class="p">, </span>secondary_table_endpoint=None<span class="p">, </span>secondary_table_host=None<span class="p">, </span>secondary_web_endpoint=None<span class="p">, </span>secondary_web_host=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>allow_blob_public_access=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>primary_access_key=None<span class="p">, </span>primary_blob_connection_string=None<span class="p">, </span>primary_blob_endpoint=None<span class="p">, </span>primary_blob_host=None<span class="p">, </span>primary_connection_string=None<span class="p">, </span>primary_dfs_endpoint=None<span class="p">, </span>primary_dfs_host=None<span class="p">, </span>primary_file_endpoint=None<span class="p">, </span>primary_file_host=None<span class="p">, </span>primary_location=None<span class="p">, </span>primary_queue_endpoint=None<span class="p">, </span>primary_queue_host=None<span class="p">, </span>primary_table_endpoint=None<span class="p">, </span>primary_table_host=None<span class="p">, </span>primary_web_endpoint=None<span class="p">, </span>primary_web_host=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_access_key=None<span class="p">, </span>secondary_blob_connection_string=None<span class="p">, </span>secondary_blob_endpoint=None<span class="p">, </span>secondary_blob_host=None<span class="p">, </span>secondary_connection_string=None<span class="p">, </span>secondary_dfs_endpoint=None<span class="p">, </span>secondary_dfs_host=None<span class="p">, </span>secondary_file_endpoint=None<span class="p">, </span>secondary_file_host=None<span class="p">, </span>secondary_location=None<span class="p">, </span>secondary_queue_endpoint=None<span class="p">, </span>secondary_queue_host=None<span class="p">, </span>secondary_table_endpoint=None<span class="p">, </span>secondary_table_host=None<span class="p">, </span>secondary_web_endpoint=None<span class="p">, </span>secondary_web_host=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2905,6 +2949,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowblobpublicaccess_csharp">
+<a href="#state_allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3445,6 +3500,17 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowblobpublicaccess_go">
+<a href="#state_allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_blobproperties_go">
 <a href="#state_blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
 </span> 
@@ -3981,6 +4047,17 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowblobpublicaccess_nodejs">
+<a href="#state_allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_blobproperties_nodejs">
 <a href="#state_blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
 </span> 
@@ -4513,6 +4590,17 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allow_blob_public_access_python">
+<a href="#state_allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

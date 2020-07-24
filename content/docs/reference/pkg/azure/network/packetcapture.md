@@ -199,7 +199,7 @@ const examplePacketCapture = new azure.network.PacketCapture("examplePacketCaptu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PacketCapture">PacketCapture</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PacketCapture">PacketCapture</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -886,7 +886,7 @@ Get an existing PacketCapture resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

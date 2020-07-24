@@ -61,10 +61,6 @@ class MyStack : Stack
                     Name = "testconfiguration1",
                     SubnetId = exampleSubnet.Id,
                     PrivateIpAddressAllocation = "Dynamic",
-                    ApplicationSecurityGroupIds = 
-                    {
-                        exampleApplicationSecurityGroup.Id,
-                    },
                 },
             },
         });
@@ -131,9 +127,6 @@ func main() {
 					Name:                       pulumi.String("testconfiguration1"),
 					SubnetId:                   exampleSubnet.ID(),
 					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
-					ApplicationSecurityGroupIds: pulumi.StringArray{
-						exampleApplicationSecurityGroup.ID(),
-					},
 				},
 			},
 		})
@@ -178,7 +171,6 @@ example_network_interface = azure.network.NetworkInterface("exampleNetworkInterf
         "name": "testconfiguration1",
         "subnet_id": example_subnet.id,
         "privateIpAddressAllocation": "Dynamic",
-        "applicationSecurityGroupIds": [example_application_security_group.id],
     }])
 example_network_interface_application_security_group_association = azure.network.NetworkInterfaceApplicationSecurityGroupAssociation("exampleNetworkInterfaceApplicationSecurityGroupAssociation",
     network_interface_id=example_network_interface.id,
@@ -215,7 +207,6 @@ const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetwo
         name: "testconfiguration1",
         subnetId: exampleSubnet.id,
         privateIpAddressAllocation: "Dynamic",
-        applicationSecurityGroupIds: [exampleApplicationSecurityGroup.id],
     }],
 });
 const exampleNetworkInterfaceApplicationSecurityGroupAssociation = new azure.network.NetworkInterfaceApplicationSecurityGroupAssociation("exampleNetworkInterfaceApplicationSecurityGroupAssociation", {
@@ -238,7 +229,7 @@ const exampleNetworkInterfaceApplicationSecurityGroupAssociation = new azure.net
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation">NetworkInterfaceApplicationSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation">NetworkInterfaceApplicationSecurityGroupAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -617,7 +608,7 @@ Get an existing NetworkInterfaceApplicationSecurityGroupAssociation resource's s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_security_group_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

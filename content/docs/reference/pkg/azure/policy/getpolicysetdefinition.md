@@ -371,6 +371,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="policydefinitionreferences_csharp">
+<a href="#policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">List&lt;Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="policydefinitions_csharp">
 <a href="#policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span> 
@@ -471,6 +481,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="policydefinitionreferences_go">
+<a href="#policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">[]Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,6 +597,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="policydefinitionreferences_nodejs">
+<a href="#policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="policydefinitions_nodejs">
 <a href="#policydefinitions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definitions</a>
 </span> 
@@ -680,6 +710,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="policy_definition_references_python">
+<a href="#policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">List[Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="policy_definitions_python">
 <a href="#policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
 </span> 
@@ -704,6 +744,182 @@ The following output properties are available:
             title="">
         <span id="management_group_name_python">
 <a href="#management_group_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getpolicysetdefinitionpolicydefinitionreference">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#GetPolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.GetPolicySetDefinitionPolicyDefinitionReference.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_csharp">
+<a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referenceid_csharp">
+<a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_go">
+<a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referenceid_go">
+<a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_nodejs">
+<a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referenceid_nodejs">
+<a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_definition_id_python">
+<a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referenceid_python">
+<a href="#referenceid_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

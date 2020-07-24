@@ -460,7 +460,7 @@ const examplePlan = new azure.appservice.Plan("examplePlan", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.Plan">Plan</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_environment_id=None<span class="p">, </span>is_xenon=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>maximum_elastic_worker_count=None<span class="p">, </span>name=None<span class="p">, </span>per_site_scaling=None<span class="p">, </span>reserved=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.Plan">Plan</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_environment_id=None<span class="p">, </span>is_xenon=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>maximum_elastic_worker_count=None<span class="p">, </span>name=None<span class="p">, </span>per_site_scaling=None<span class="p">, </span>reserved=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1275,7 +1275,7 @@ Get an existing Plan resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_service_environment_id=None<span class="p">, </span>is_xenon=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>maximum_elastic_worker_count=None<span class="p">, </span>maximum_number_of_workers=None<span class="p">, </span>name=None<span class="p">, </span>per_site_scaling=None<span class="p">, </span>reserved=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_service_environment_id=None<span class="p">, </span>is_xenon=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>maximum_elastic_worker_count=None<span class="p">, </span>maximum_number_of_workers=None<span class="p">, </span>name=None<span class="p">, </span>per_site_scaling=None<span class="p">, </span>reserved=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -42,7 +42,7 @@ example_schedule = azure.automation.Schedule("exampleSchedule",
     automation_account_name=example_account.name,
     frequency="Week",
     interval=1,
-    timezone="Central Europe Standard Time",
+    timezone="Australia/Perth",
     start_time="2014-04-15T18:00:15+02:00",
     description="This is an example schedule",
     week_days=["Friday"])
@@ -69,7 +69,7 @@ const exampleSchedule = new azure.automation.Schedule("exampleSchedule", {
     automationAccountName: exampleAccount.name,
     frequency: "Week",
     interval: 1,
-    timezone: "Central Europe Standard Time",
+    timezone: "Australia/Perth",
     startTime: "2014-04-15T18:00:15+02:00",
     description: "This is an example schedule",
     weekDays: ["Friday"],
@@ -90,7 +90,7 @@ const exampleSchedule = new azure.automation.Schedule("exampleSchedule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>expiry_time=None<span class="p">, </span>frequency=None<span class="p">, </span>interval=None<span class="p">, </span>month_days=None<span class="p">, </span>monthly_occurrences=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_time=None<span class="p">, </span>timezone=None<span class="p">, </span>week_days=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>expiry_time=None<span class="p">, </span>frequency=None<span class="p">, </span>interval=None<span class="p">, </span>month_days=None<span class="p">, </span>monthly_occurrences=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_time=None<span class="p">, </span>timezone=None<span class="p">, </span>week_days=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -380,7 +380,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -519,7 +519,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,7 +658,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -797,7 +797,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -909,7 +909,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>expiry_time=None<span class="p">, </span>frequency=None<span class="p">, </span>interval=None<span class="p">, </span>month_days=None<span class="p">, </span>monthly_occurrences=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_time=None<span class="p">, </span>timezone=None<span class="p">, </span>week_days=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automation_account_name=None<span class="p">, </span>description=None<span class="p">, </span>expiry_time=None<span class="p">, </span>frequency=None<span class="p">, </span>interval=None<span class="p">, </span>month_days=None<span class="p">, </span>monthly_occurrences=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_time=None<span class="p">, </span>timezone=None<span class="p">, </span>week_days=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1280,7 +1280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1558,7 +1558,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values
+    <dd>{{% md %}}The timezone of the start time. Defaults to `UTC`. For possible values see: https://s2.automation.ext.azure.com/api/Orchestrator/TimeZones?_=1594792230258
 {{% /md %}}</dd>
 
     <dt class="property-optional"

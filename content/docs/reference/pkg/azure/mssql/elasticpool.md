@@ -200,7 +200,7 @@ const exampleElasticPool = new azure.mssql.ElasticPool("exampleElasticPool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.ElasticPool">ElasticPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.ElasticPool">ElasticPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -975,7 +975,7 @@ Get an existing ElasticPool resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_size_bytes=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>per_database_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>zone_redundant=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -210,7 +210,7 @@ const sqlvnetrule = new azure.sql.VirtualNetworkRule("sqlvnetrule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.VirtualNetworkRule">VirtualNetworkRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ignore_missing_vnet_service_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.VirtualNetworkRule">VirtualNetworkRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ignore_missing_vnet_service_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -721,7 +721,7 @@ Get an existing VirtualNetworkRule resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ignore_missing_vnet_service_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ignore_missing_vnet_service_endpoint=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>subnet_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

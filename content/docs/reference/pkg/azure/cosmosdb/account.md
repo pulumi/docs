@@ -221,7 +221,7 @@ const db = new azure.cosmosdb.Account("db", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_free_tier=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -461,6 +461,17 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefreetier_csharp">
+<a href="#enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablemultiplewritelocations_csharp">
 <a href="#enablemultiplewritelocations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -618,6 +629,17 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablefreetier_go">
+<a href="#enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -783,6 +805,17 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefreetier_nodejs">
+<a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablemultiplewritelocations_nodejs">
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -940,6 +973,17 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_free_tier_python">
+<a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1480,7 +1524,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>capabilities=None<span class="p">, </span>connection_strings=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>endpoint=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>primary_master_key=None<span class="p">, </span>primary_readonly_master_key=None<span class="p">, </span>read_endpoints=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_master_key=None<span class="p">, </span>secondary_readonly_master_key=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>write_endpoints=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>capabilities=None<span class="p">, </span>connection_strings=None<span class="p">, </span>consistency_policy=None<span class="p">, </span>enable_automatic_failover=None<span class="p">, </span>enable_free_tier=None<span class="p">, </span>enable_multiple_write_locations=None<span class="p">, </span>endpoint=None<span class="p">, </span>geo_locations=None<span class="p">, </span>ip_range_filter=None<span class="p">, </span>is_virtual_network_filter_enabled=None<span class="p">, </span>kind=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>offer_type=None<span class="p">, </span>primary_master_key=None<span class="p">, </span>primary_readonly_master_key=None<span class="p">, </span>read_endpoints=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_master_key=None<span class="p">, </span>secondary_readonly_master_key=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_rules=None<span class="p">, </span>write_endpoints=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1636,6 +1680,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablefreetier_csharp">
+<a href="#state_enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1889,6 +1944,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablefreetier_go">
+<a href="#state_enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablemultiplewritelocations_go">
 <a href="#state_enablemultiplewritelocations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -2138,6 +2204,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablefreetier_nodejs">
+<a href="#state_enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablemultiplewritelocations_nodejs">
 <a href="#state_enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -2383,6 +2460,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_free_tier_python">
+<a href="#state_enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2917,8 +3005,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
 </span> 
@@ -2926,7 +3014,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2968,8 +3056,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
 </span> 
@@ -2977,7 +3065,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3019,8 +3107,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span> 
@@ -3028,7 +3116,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3070,8 +3158,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span> 
@@ -3079,7 +3167,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

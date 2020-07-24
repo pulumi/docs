@@ -139,9 +139,9 @@ func main() {
 		}
 		_, err = monitoring.NewMetricAlert(ctx, "example", &monitoring.MetricAlertArgs{
 			ResourceGroupName: mainResourceGroup.Name,
-			Scopes: pulumi.String(pulumi.String{
+			Scopes: pulumi.StringArray{
 				toMonitor.ID(),
-			}),
+			},
 			Description: pulumi.String("Action will be triggered when Transactions count is greater than 50."),
 			Criterias: monitoring.MetricAlertCriteriaArray{
 				&monitoring.MetricAlertCriteriaArgs{
@@ -275,7 +275,7 @@ const example = new azure.monitoring.MetricAlert("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.MetricAlert">MetricAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>window_size=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.MetricAlert">MetricAlert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>application_insights_web_test_location_availability_criteria=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_criteria=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>target_resource_location=None<span class="p">, </span>target_resource_type=None<span class="p">, </span>window_size=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -449,17 +449,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="criterias_csharp">
-<a href="#criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">List&lt;Metric<wbr>Alert<wbr>Criteria<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -475,7 +464,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -493,6 +482,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationinsightswebtestlocationavailabilitycriteria_csharp">
+<a href="#applicationinsightswebtestlocationavailabilitycriteria_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="automitigate_csharp">
 <a href="#automitigate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
 </span> 
@@ -504,6 +504,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="criterias_csharp">
+<a href="#criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertcriteria">List&lt;Metric<wbr>Alert<wbr>Criteria<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -511,6 +522,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamiccriteria_csharp">
+<a href="#dynamiccriteria_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -570,6 +592,28 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="targetresourcelocation_csharp">
+<a href="#targetresourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_csharp">
+<a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
 </span> 
@@ -588,17 +632,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="criterias_go">
-<a href="#criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -614,7 +647,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -632,6 +665,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationinsightswebtestlocationavailabilitycriteria_go">
+<a href="#applicationinsightswebtestlocationavailabilitycriteria_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="automitigate_go">
 <a href="#automitigate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
 </span> 
@@ -643,6 +687,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="criterias_go">
+<a href="#criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -650,6 +705,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamiccriteria_go">
+<a href="#dynamiccriteria_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -709,6 +775,28 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="targetresourcelocation_go">
+<a href="#targetresourcelocation_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_go">
+<a href="#targetresourcetype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
 </span> 
@@ -727,17 +815,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="criterias_nodejs">
-<a href="#criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">Metric<wbr>Alert<wbr>Criteria[]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -753,7 +830,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -771,6 +848,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationinsightswebtestlocationavailabilitycriteria_nodejs">
+<a href="#applicationinsightswebtestlocationavailabilitycriteria_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="automitigate_nodejs">
 <a href="#automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
 </span> 
@@ -782,6 +870,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="criterias_nodejs">
+<a href="#criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertcriteria">Metric<wbr>Alert<wbr>Criteria[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -789,6 +888,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamiccriteria_nodejs">
+<a href="#dynamiccriteria_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -848,6 +958,28 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="targetresourcelocation_nodejs">
+<a href="#targetresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_nodejs">
+<a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
 </span> 
@@ -866,17 +998,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="criterias_python">
-<a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
@@ -892,7 +1013,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -910,6 +1031,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="application_insights_web_test_location_availability_criteria_python">
+<a href="#application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Dict[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria]</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="auto_mitigate_python">
 <a href="#auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
 </span> 
@@ -921,6 +1053,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="criterias_python">
+<a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -928,6 +1071,17 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_criteria_python">
+<a href="#dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Dict[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria]</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -983,6 +1137,28 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_resource_location_python">
+<a href="#target_resource_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_resource_type_python">
+<a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,7 +1270,7 @@ Get an existing MetricAlert resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>window_size=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>application_insights_web_test_location_availability_criteria=None<span class="p">, </span>auto_mitigate=None<span class="p">, </span>criterias=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_criteria=None<span class="p">, </span>enabled=None<span class="p">, </span>frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>severity=None<span class="p">, </span>tags=None<span class="p">, </span>target_resource_location=None<span class="p">, </span>target_resource_type=None<span class="p">, </span>window_size=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1221,6 +1397,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_applicationinsightswebtestlocationavailabilitycriteria_csharp">
+<a href="#state_applicationinsightswebtestlocationavailabilitycriteria_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_automitigate_csharp">
 <a href="#state_automitigate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
 </span> 
@@ -1238,7 +1425,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricalertcriteria">List&lt;Metric<wbr>Alert<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1250,6 +1437,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamiccriteria_csharp">
+<a href="#state_dynamiccriteria_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -1327,6 +1525,28 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcelocation_csharp">
+<a href="#state_targetresourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcetype_csharp">
+<a href="#state_targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1360,6 +1580,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_applicationinsightswebtestlocationavailabilitycriteria_go">
+<a href="#state_applicationinsightswebtestlocationavailabilitycriteria_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_automitigate_go">
 <a href="#state_automitigate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
 </span> 
@@ -1377,7 +1608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria</a></span>
     </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1389,6 +1620,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamiccriteria_go">
+<a href="#state_dynamiccriteria_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1441,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -1466,6 +1708,28 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcelocation_go">
+<a href="#state_targetresourcelocation_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcetype_go">
+<a href="#state_targetresourcetype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1499,6 +1763,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_applicationinsightswebtestlocationavailabilitycriteria_nodejs">
+<a href="#state_applicationinsightswebtestlocationavailabilitycriteria_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_automitigate_nodejs">
 <a href="#state_automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
 </span> 
@@ -1516,7 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricalertcriteria">Metric<wbr>Alert<wbr>Criteria[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1528,6 +1803,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamiccriteria_nodejs">
+<a href="#state_dynamiccriteria_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1580,7 +1866,7 @@ The following state arguments are supported:
 <a href="#state_scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -1605,6 +1891,28 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcelocation_nodejs">
+<a href="#state_targetresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetresourcetype_nodejs">
+<a href="#state_targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1638,6 +1946,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_application_insights_web_test_location_availability_criteria_python">
+<a href="#state_application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Dict[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria]</a></span>
+    </dt>
+    <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_auto_mitigate_python">
 <a href="#state_auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
 </span> 
@@ -1655,7 +1974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `criteria` blocks as defined below.
+    <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1667,6 +1986,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamic_criteria_python">
+<a href="#state_dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Dict[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria]</a></span>
+    </dt>
+    <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1719,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd>
@@ -1744,6 +2074,28 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_target_resource_location_python">
+<a href="#state_target_resource_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the target resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_target_resource_type_python">
+<a href="#state_target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1897,6 +2249,184 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of custom string properties to include with the post operation. These data are appended to the webhook payload.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="componentid_csharp">
+<a href="#componentid_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_csharp">
+<a href="#failedlocationcount_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of failed locations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="webtestid_csharp">
+<a href="#webtestid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Web Test.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="componentid_go">
+<a href="#componentid_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_go">
+<a href="#failedlocationcount_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of failed locations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="webtestid_go">
+<a href="#webtestid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Web Test.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="componentid_nodejs">
+<a href="#componentid_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_nodejs">
+<a href="#failedlocationcount_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of failed locations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="webtestid_nodejs">
+<a href="#webtestid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Web Test.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="componentid_python">
+<a href="#componentid_python" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_python">
+<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of failed locations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="webtestid_python">
+<a href="#webtestid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Insights Web Test.
 {{% /md %}}</dd>
 
 </dl>
@@ -2226,6 +2756,626 @@ The following state arguments are supported:
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.MetricAlertCriteriaDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.MetricAlertCriteriaDimension.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the dimension names.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of dimension values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the dimension names.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of dimension values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the dimension names.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of dimension values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of the dimension names.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of dimension values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertDynamicCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertDynamicCriteria">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertDynamicCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertDynamicCriteriaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.MetricAlertDynamicCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.MetricAlertDynamicCriteria.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregation_csharp">
+<a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alertsensitivity_csharp">
+<a href="#alertsensitivity_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_csharp">
+<a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric names to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_csharp">
+<a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric namespaces to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_csharp">
+<a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List&lt;Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationfailurecount_csharp">
+<a href="#evaluationfailurecount_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Failure<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationtotalcount_csharp">
+<a href="#evaluationtotalcount_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Total<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredatabefore_csharp">
+<a href="#ignoredatabefore_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Data<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregation_go">
+<a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alertsensitivity_go">
+<a href="#alertsensitivity_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_go">
+<a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric names to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_go">
+<a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric namespaces to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_go">
+<a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">[]Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationfailurecount_go">
+<a href="#evaluationfailurecount_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Failure<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationtotalcount_go">
+<a href="#evaluationtotalcount_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Total<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredatabefore_go">
+<a href="#ignoredatabefore_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Data<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregation_nodejs">
+<a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alertsensitivity_nodejs">
+<a href="#alertsensitivity_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_nodejs">
+<a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric names to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_nodejs">
+<a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric namespaces to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_nodejs">
+<a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationfailurecount_nodejs">
+<a href="#evaluationfailurecount_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Failure<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationtotalcount_nodejs">
+<a href="#evaluationtotalcount_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Total<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredatabefore_nodejs">
+<a href="#ignoredatabefore_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregation_python">
+<a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alertsensitivity_python">
+<a href="#alertsensitivity_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_python">
+<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric names to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_python">
+<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of the metric namespaces to be monitored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_python">
+<a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationfailurecount_python">
+<a href="#evaluationfailurecount_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Failure<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="evaluationtotalcount_python">
+<a href="#evaluationtotalcount_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Total<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredatabefore_python">
+<a href="#ignoredatabefore_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="metricalertdynamiccriteriadimension">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertDynamicCriteriaDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertDynamicCriteriaDimension">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertDynamicCriteriaDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#MetricAlertDynamicCriteriaDimensionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.MetricAlertDynamicCriteriaDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.MetricAlertDynamicCriteriaDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

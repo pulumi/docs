@@ -419,6 +419,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="imagereferenceid_csharp">
+<a href="#imagereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the source image used for creating this Managed Disk.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -584,6 +595,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagereferenceid_go">
+<a href="#imagereferenceid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the source image used for creating this Managed Disk.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -757,6 +779,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="imagereferenceid_nodejs">
+<a href="#imagereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the source image used for creating this Managed Disk.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -922,6 +955,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="image_reference_id_python">
+<a href="#image_reference_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the source image used for creating this Managed Disk.
 {{% /md %}}</dd>
 
     <dt class="property-"

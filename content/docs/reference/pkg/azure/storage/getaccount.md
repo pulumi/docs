@@ -311,6 +311,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="allowblobpublicaccess_csharp">
+<a href="#allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="customdomains_csharp">
 <a href="#customdomains_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
 </span> 
@@ -798,6 +809,17 @@ for more information.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="allowblobpublicaccess_go">
+<a href="#allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1293,6 +1315,17 @@ for more information.
 
     <dt class="property-"
             title="">
+        <span id="allowblobpublicaccess_nodejs">
+<a href="#allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="customdomains_nodejs">
 <a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
 </span> 
@@ -1780,6 +1813,17 @@ for more information.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="allow_blob_public_access_python">
+<a href="#allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
 {{% /md %}}</dd>
 
     <dt class="property-"

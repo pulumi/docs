@@ -298,6 +298,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="enablefreetier_csharp">
+<a href="#enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enablemultiplewritelocations_csharp">
 <a href="#enablemultiplewritelocations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -539,6 +550,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablefreetier_go">
+<a href="#enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -788,6 +810,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="enablefreetier_nodejs">
+<a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enablemultiplewritelocations_nodejs">
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span> 
@@ -1029,6 +1062,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enable_free_tier_python">
+<a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
 {{% /md %}}</dd>
 
     <dt class="property-"

@@ -203,7 +203,7 @@ const exampleNatPool = new azure.lb.NatPool("exampleNatPool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.NatPool">NatPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_port=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port_end=None<span class="p">, </span>frontend_port_start=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.NatPool">NatPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_port=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port_end=None<span class="p">, </span>frontend_port_start=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -886,7 +886,7 @@ Get an existing NatPool resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_port=None<span class="p">, </span>frontend_ip_configuration_id=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port_end=None<span class="p">, </span>frontend_port_start=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_port=None<span class="p">, </span>frontend_ip_configuration_id=None<span class="p">, </span>frontend_ip_configuration_name=None<span class="p">, </span>frontend_port_end=None<span class="p">, </span>frontend_port_start=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

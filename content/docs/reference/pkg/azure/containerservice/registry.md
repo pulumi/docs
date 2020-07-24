@@ -139,7 +139,7 @@ const acr = new azure.containerservice.Registry("acr", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry">Registry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_enabled=None<span class="p">, </span>georeplication_locations=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rule_set=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry">Registry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_enabled=None<span class="p">, </span>georeplication_locations=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rule_set=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -958,7 +958,7 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_enabled=None<span class="p">, </span>admin_password=None<span class="p">, </span>admin_username=None<span class="p">, </span>georeplication_locations=None<span class="p">, </span>location=None<span class="p">, </span>login_server=None<span class="p">, </span>name=None<span class="p">, </span>network_rule_set=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_enabled=None<span class="p">, </span>admin_password=None<span class="p">, </span>admin_username=None<span class="p">, </span>georeplication_locations=None<span class="p">, </span>location=None<span class="p">, </span>login_server=None<span class="p">, </span>name=None<span class="p">, </span>network_rule_set=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

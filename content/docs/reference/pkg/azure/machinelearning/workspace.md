@@ -226,7 +226,7 @@ const exampleWorkspace = new azure.machinelearning.Workspace("exampleWorkspace",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/machinelearning/#pulumi_azure.machinelearning.Workspace">Workspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_insights_id=None<span class="p">, </span>container_registry_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>identity=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/machinelearning/#pulumi_azure.machinelearning.Workspace">Workspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_insights_id=None<span class="p">, </span>container_registry_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>high_business_impact=None<span class="p">, </span>identity=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -488,6 +488,17 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="highbusinessimpact_csharp">
+<a href="#highbusinessimpact_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -623,6 +634,17 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name for this Machine Learning Workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="highbusinessimpact_go">
+<a href="#highbusinessimpact_go" style="color: inherit; text-decoration: inherit;">High<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,6 +788,17 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="highbusinessimpact_nodejs">
+<a href="#highbusinessimpact_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -901,6 +934,17 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Friendly name for this Machine Learning Workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="high_business_impact_python">
+<a href="#high_business_impact_python" style="color: inherit; text-decoration: inherit;">high_<wbr>business_<wbr>impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1045,7 +1089,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_insights_id=None<span class="p">, </span>container_registry_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>identity=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_insights_id=None<span class="p">, </span>container_registry_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>high_business_impact=None<span class="p">, </span>identity=None<span class="p">, </span>key_vault_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku_name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1205,6 +1249,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_highbusinessimpact_csharp">
+<a href="#state_highbusinessimpact_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -1340,6 +1395,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name for this Machine Learning Workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_highbusinessimpact_go">
+<a href="#state_highbusinessimpact_go" style="color: inherit; text-decoration: inherit;">High<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1483,6 +1549,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_highbusinessimpact_nodejs">
+<a href="#state_highbusinessimpact_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Business<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -1618,6 +1695,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Friendly name for this Machine Learning Workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_high_business_impact_python">
+<a href="#state_high_business_impact_python" style="color: inherit; text-decoration: inherit;">high_<wbr>business_<wbr>impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd>
 
     <dt class="property-optional"

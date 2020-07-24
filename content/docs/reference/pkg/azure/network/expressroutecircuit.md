@@ -156,7 +156,7 @@ const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuit">ExpressRouteCircuit</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuit">ExpressRouteCircuit</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -931,7 +931,7 @@ Get an existing ExpressRouteCircuit resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_key=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>service_provider_provisioning_state=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_key=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>service_provider_provisioning_state=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

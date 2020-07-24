@@ -241,7 +241,7 @@ example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
     frontend_endpoints=[{
         "name": "exampleFrontendEndpoint1",
         "host_name": "example-FrontDoor.azurefd.net",
-        "customHttpsProvisioningEnabled": False,
+        "custom_https_provisioning_enabled": False,
     }])
 ```
 
@@ -309,7 +309,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1256,7 +1256,7 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>cname=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>header_frontdoor_id=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>cname=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>header_frontdoor_id=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3322,17 +3322,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customhttpsprovisioningenabled_csharp">
-<a href="#customhttpsprovisioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
 </span> 
@@ -3353,8 +3342,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="customhttpsconfiguration_csharp">
 <a href="#customhttpsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
 </span> 
@@ -3362,7 +3351,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="customhttpsprovisioningenabled_csharp">
+<a href="#customhttpsprovisioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3417,17 +3417,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customhttpsprovisioningenabled_go">
-<a href="#customhttpsprovisioningenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
 </span> 
@@ -3448,8 +3437,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="customhttpsconfiguration_go">
 <a href="#customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
 </span> 
@@ -3457,7 +3446,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="customhttpsprovisioningenabled_go">
+<a href="#customhttpsprovisioningenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3512,17 +3512,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customhttpsprovisioningenabled_nodejs">
-<a href="#customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span> 
@@ -3543,8 +3532,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="customhttpsconfiguration_nodejs">
 <a href="#customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
 </span> 
@@ -3552,7 +3541,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="customhttpsprovisioningenabled_nodejs">
+<a href="#customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3607,17 +3607,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customhttpsprovisioningenabled_python">
-<a href="#customhttpsprovisioningenabled_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span> 
@@ -3638,16 +3627,27 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="customhttpsconfiguration_python">
-<a href="#customhttpsconfiguration_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="custom_https_configuration_python">
+<a href="#custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Dict[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="custom_https_provisioning_enabled_python">
+<a href="#custom_https_provisioning_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>provisioning_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

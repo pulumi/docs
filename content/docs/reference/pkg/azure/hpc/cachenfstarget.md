@@ -12,6 +12,8 @@ meta_desc: "Explore the CacheNfsTarget resource of the hpc module, including exa
 
 Manages a NFS Target within a HPC Cache.
 
+> **NOTE:**: By request of the service team the provider no longer automatically registering the `Microsoft.StorageCache` Resource Provider for this resource. To register it you can run `az provider register --namespace 'Microsoft.StorageCache'`.
+
 
 
 ## Create a CacheNfsTarget Resource {#create}
@@ -23,7 +25,7 @@ Manages a NFS Target within a HPC Cache.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hpc/#pulumi_azure.hpc.CacheNfsTarget">CacheNfsTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cache_name=None<span class="p">, </span>name=None<span class="p">, </span>namespace_junctions=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>target_host_name=None<span class="p">, </span>usage_model=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hpc/#pulumi_azure.hpc.CacheNfsTarget">CacheNfsTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cache_name=None<span class="p">, </span>name=None<span class="p">, </span>namespace_junctions=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>target_host_name=None<span class="p">, </span>usage_model=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +580,7 @@ Get an existing CacheNfsTarget resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cache_name=None<span class="p">, </span>name=None<span class="p">, </span>namespace_junctions=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>target_host_name=None<span class="p">, </span>usage_model=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cache_name=None<span class="p">, </span>name=None<span class="p">, </span>namespace_junctions=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>target_host_name=None<span class="p">, </span>usage_model=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
