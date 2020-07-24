@@ -22,7 +22,7 @@ meta_desc: "Explore the User resource of the GitLab package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,17 +207,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span id="password_csharp">
-<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span> 
@@ -274,6 +263,17 @@ for the user.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the user.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectslimit_csharp">
 <a href="#projectslimit_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
 </span> 
@@ -321,17 +321,6 @@ for the user.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="password_go">
-<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -392,6 +381,17 @@ for the user.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the user.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectslimit_go">
 <a href="#projectslimit_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
 </span> 
@@ -439,17 +439,6 @@ for the user.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="password_nodejs">
-<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -510,6 +499,17 @@ for the user.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the user.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectslimit_nodejs">
 <a href="#projectslimit_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Limit</a>
 </span> 
@@ -557,17 +557,6 @@ for the user.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="password_python">
-<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -624,6 +613,17 @@ for the user.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the user.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +757,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

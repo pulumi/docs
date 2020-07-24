@@ -12,8 +12,6 @@ meta_desc: "Explore the TagProtection resource of the GitLab package, including 
 
 This resource allows you to protect a specific tag or wildcard by an access level so that the user with less access level cannot Create the tags.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,10 +36,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewTagProtection(ctx, "tagProtect", &gitlab.TagProtectionArgs{
+			CreateAccessLevel: pulumi.String("developer"),
+			Project:           pulumi.String("12345"),
+			Tag:               pulumi.String("TagProtected"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,9 +75,11 @@ tag_protect = gitlab.TagProtection("tagProtect",
     project="12345",
     tag="TagProtected")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -67,6 +90,7 @@ const tagProtect = new gitlab.TagProtection("TagProtect", {
     tag: "TagProtected",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -81,7 +105,7 @@ const tagProtect = new gitlab.TagProtection("TagProtect", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#TagProtection">TagProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_access_level=None<span class="p">, </span>project=None<span class="p">, </span>tag=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.TagProtection">TagProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_access_level=None<span class="p">, </span>project=None<span class="p">, </span>tag=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -504,7 +528,7 @@ Get an existing TagProtection resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_access_level=None<span class="p">, </span>project=None<span class="p">, </span>tag=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_access_level=None<span class="p">, </span>project=None<span class="p">, </span>tag=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,8 +14,6 @@ This resource allows you to enable pre-existing deploy keys for your GitLab proj
 
 **the GITLAB KEY_ID for the deploy key must be known**
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,10 +53,48 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		parentProject, err := gitlab.NewProject(ctx, "parentProject", nil)
+		if err != nil {
+			return err
+		}
+		fooProject, err := gitlab.NewProject(ctx, "fooProject", nil)
+		if err != nil {
+			return err
+		}
+		parentDeployKey, err := gitlab.NewDeployKey(ctx, "parentDeployKey", &gitlab.DeployKeyArgs{
+			Key:     pulumi.String("ssh-rsa AAAA..."),
+			Project: parentProject.ID(),
+			Title:   pulumi.String("Example deploy key"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = gitlab.NewDeployKeyEnable(ctx, "fooDeployKeyEnable", &gitlab.DeployKeyEnableArgs{
+			KeyId:   parentDeployKey.ID(),
+			Project: fooProject.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +116,11 @@ foo_deploy_key_enable = gitlab.DeployKeyEnable("fooDeployKeyEnable",
     key_id=parent_deploy_key.id,
     project=foo_project.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -103,6 +141,7 @@ const fooDeployKeyEnable = new gitlab.DeployKeyEnable("foo", {
     project: fooProject.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -117,7 +156,7 @@ const fooDeployKeyEnable = new gitlab.DeployKeyEnable("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#DeployKeyEnable">DeployKeyEnable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_push=None<span class="p">, </span>key=None<span class="p">, </span>key_id=None<span class="p">, </span>project=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.DeployKeyEnable">DeployKeyEnable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_push=None<span class="p">, </span>key=None<span class="p">, </span>key_id=None<span class="p">, </span>project=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +655,7 @@ Get an existing DeployKeyEnable resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_push=None<span class="p">, </span>key=None<span class="p">, </span>key_id=None<span class="p">, </span>project=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_push=None<span class="p">, </span>key=None<span class="p">, </span>key_id=None<span class="p">, </span>project=None<span class="p">, </span>title=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

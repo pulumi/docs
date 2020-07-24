@@ -12,9 +12,7 @@ meta_desc: "Explore the GetProjects function of the GitLab package, including ex
 
 Provides details about a list of projects in the Gitlab provider. Listing all projects and group projects with [project filtering](https://docs.gitlab.com/ee/api/projects.html#list-user-projects) or [group project filtering](https://docs.gitlab.com/ee/api/groups.html#list-a-groups-projects) is supported.
 
-> NOTE: This data source supports all available filters exposed by the `xanzy/go-gitlab` package, which might not expose all available filters exposed by the Gitlab APIs.   
-
-
+> NOTE: This data source supports all available filters exposed by the `xanzy/go-gitlab` package, which might not expose all available filters exposed by the Gitlab APIs.
 
 {{% examples %}}
 ## Example Usage
@@ -45,10 +43,45 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "mygroup"
+		mygroup, err := gitlab.LookupGroup(ctx, &gitlab.LookupGroupArgs{
+			FullPath: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := mygroup.Id
+		opt2 := "name"
+		opt3 := true
+		opt4 := false
+		_, err = gitlab.GetProjects(ctx, &gitlab.GetProjectsArgs{
+			GroupId:          &opt1,
+			OrderBy:          &opt2,
+			IncludeSubgroups: &opt3,
+			WithShared:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,9 +95,11 @@ group_projects = gitlab.get_projects(group_id=mygroup.id,
     include_subgroups=True,
     with_shared=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -79,6 +114,7 @@ const groupProjects = mygroup.then(mygroup => gitlab.getProjects({
     withShared: false,
 }));
 ```
+
 {{% /example %}}
 
 ### List projects using the search syntax
@@ -100,10 +136,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "postgresql"
+		opt1 := "private"
+		_, err := gitlab.GetProjects(ctx, &gitlab.GetProjectsArgs{
+			Search:     &opt0,
+			Visibility: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +174,11 @@ import pulumi_gitlab as gitlab
 projects = gitlab.get_projects(search="postgresql",
     visibility="private")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -126,6 +188,7 @@ const projects = pulumi.output(gitlab.getProjects({
     visibility: "private",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
