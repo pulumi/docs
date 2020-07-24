@@ -73,6 +73,35 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.NewDowntime(ctx, "foo", &datadog.DowntimeArgs{
+			End:       pulumi.Int(1483365600),
+			MonitorId: pulumi.Int(12345),
+			Recurrence: &datadog.DowntimeRecurrenceArgs{
+				Period: pulumi.Int(1),
+				Type:   pulumi.String("days"),
+			},
+			Scopes: pulumi.StringArray{
+				pulumi.String("*"),
+			},
+			Start: pulumi.Int(1483308000),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## Example: downtime for all monitors
 
@@ -132,6 +161,34 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.NewDowntime(ctx, "foo", &datadog.DowntimeArgs{
+			End: pulumi.Int(1483365600),
+			Recurrence: &datadog.DowntimeRecurrenceArgs{
+				Period: pulumi.Int(1),
+				Type:   pulumi.String("days"),
+			},
+			Scopes: pulumi.StringArray{
+				pulumi.String("*"),
+			},
+			Start: pulumi.Int(1483308000),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 
 
@@ -144,7 +201,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/datadog/#Downtime">Downtime</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.Downtime">Downtime</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,7 +381,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +447,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,7 +520,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,7 +586,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,7 +659,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,7 +725,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -741,7 +798,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -807,7 +864,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +1020,7 @@ Get an existing Downtime resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1140,7 +1197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1173,7 +1230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1279,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1312,7 +1369,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,7 +1475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1451,7 +1508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1557,7 +1614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
+    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1590,7 +1647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of items to apply the downtime to, e.g. host:X
+    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

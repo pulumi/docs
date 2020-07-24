@@ -12,6 +12,8 @@ Explore the resources and functions of the aws module in the Datadog package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
+    <li><a href="integrationlambdaarn" title="IntegrationLambdaArn"><span class="symbol resource"></span>IntegrationLambdaArn</a></li>
+    <li><a href="integrationlogcollection" title="IntegrationLogCollection"><span class="symbol resource"></span>IntegrationLogCollection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,7 +25,7 @@ Explore the resources and functions of the aws module in the Datadog package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

@@ -12,8 +12,6 @@ meta_desc: "Explore the MetricMetadata resource of the Datadog package, includin
 
 Provides a Datadog metric_metadata resource. This can be used to manage a metric's metadata.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +39,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.NewMetricMetadata(ctx, "requestTime", &datadog.MetricMetadataArgs{
+			Description: pulumi.String("99th percentile request time in millseconds"),
+			Metric:      pulumi.String("request.time"),
+			ShortName:   pulumi.String("Request time"),
+			Type:        pulumi.String("gauge"),
+			Unit:        pulumi.String("millisecond"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,9 +83,11 @@ request_time = datadog.MetricMetadata("requestTime",
     type="gauge",
     unit="millisecond")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
@@ -76,6 +101,7 @@ const requestTime = new datadog.MetricMetadata("request_time", {
     unit: "millisecond",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -90,7 +116,7 @@ const requestTime = new datadog.MetricMetadata("request_time", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/datadog/#MetricMetadata">MetricMetadata</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>metric=None<span class="p">, </span>per_unit=None<span class="p">, </span>short_name=None<span class="p">, </span>statsd_interval=None<span class="p">, </span>type=None<span class="p">, </span>unit=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.MetricMetadata">MetricMetadata</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>metric=None<span class="p">, </span>per_unit=None<span class="p">, </span>short_name=None<span class="p">, </span>statsd_interval=None<span class="p">, </span>type=None<span class="p">, </span>unit=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -685,7 +711,7 @@ Get an existing MetricMetadata resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>metric=None<span class="p">, </span>per_unit=None<span class="p">, </span>short_name=None<span class="p">, </span>statsd_interval=None<span class="p">, </span>type=None<span class="p">, </span>unit=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>metric=None<span class="p">, </span>per_unit=None<span class="p">, </span>short_name=None<span class="p">, </span>statsd_interval=None<span class="p">, </span>type=None<span class="p">, </span>unit=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
