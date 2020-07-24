@@ -14,10 +14,64 @@ This resource allows you to create and manage project clusters for your GitLab p
 For further information on clusters, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/user/project/clusters/index.html).
 
-
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+foo = gitlab.Project("foo")
+bar = gitlab.ProjectCluster("bar",
+    domain="example.com",
+    enabled=True,
+    environment_scope="*",
+    kubernetes_api_url="https://124.124.124",
+    kubernetes_authorization_type="rbac",
+    kubernetes_ca_cert="some-cert",
+    kubernetes_namespace="namespace",
+    kubernetes_token="some-token",
+    management_cluster_id="123456",
+    project=foo.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gitlab from "@pulumi/gitlab";
+
+const foo = new gitlab.Project("foo", {});
+const bar = new gitlab.ProjectCluster("bar", {
+    domain: "example.com",
+    enabled: true,
+    environmentScope: "*",
+    kubernetesApiUrl: "https://124.124.124",
+    kubernetesAuthorizationType: "rbac",
+    kubernetesCaCert: "some-cert",
+    kubernetesNamespace: "namespace",
+    kubernetesToken: "some-token",
+    managementClusterId: "123456",
+    project: foo.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProjectCluster Resource {#create}
@@ -29,7 +83,7 @@ documentation](https://docs.gitlab.com/ce/user/project/clusters/index.html).
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#ProjectCluster">ProjectCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.ProjectCluster">ProjectCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1004,7 +1058,7 @@ Get an existing ProjectCluster resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>created_at=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>platform_type=None<span class="p">, </span>project=None<span class="p">, </span>provider_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>created_at=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>platform_type=None<span class="p">, </span>project=None<span class="p">, </span>provider_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,36 +12,12 @@ meta_desc: "Explore the DeployToken resource of the GitLab package, including ex
 
 This resource allows you to create and manage deploy token for your GitLab projects and groups.
 
+{{% examples %}}
+## Example Usage
 
-## Example Usage - Project
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gitlab from "@pulumi/gitlab";
-
-const example = new gitlab.DeployToken("example", {
-    expiresAt: "2020-03-14T00:00:00.000Z",
-    project: "example/deploying",
-    scopes: [
-        "read_repository",
-        "read_registry",
-    ],
-    username: "example-username",
-});
-```
-```python
-import pulumi
-import pulumi_gitlab as gitlab
-
-example = gitlab.DeployToken("example",
-    expires_at="2020-03-14T00:00:00.000Z",
-    project="example/deploying",
-    scopes=[
-        "read_repository",
-        "read_registry",
-    ],
-    username="example-username")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Project
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using GitLab = Pulumi.GitLab;
@@ -66,25 +42,76 @@ class MyStack : Stack
 }
 ```
 
-## Example Usage - Group
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewDeployToken(ctx, "example", &gitlab.DeployTokenArgs{
+			ExpiresAt: pulumi.String("2020-03-14T00:00:00.000Z"),
+			Project:   pulumi.String("example/deploying"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("read_repository"),
+				pulumi.String("read_registry"),
+			},
+			Username: pulumi.String("example-username"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.DeployToken("example",
+    expires_at="2020-03-14T00:00:00.000Z",
+    project="example/deploying",
+    scopes=[
+        "read_repository",
+        "read_registry",
+    ],
+    username="example-username")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
 const example = new gitlab.DeployToken("example", {
-    group: "example/deploying",
-    scopes: ["read_repository"],
+    expiresAt: "2020-03-14T00:00:00.000Z",
+    project: "example/deploying",
+    scopes: [
+        "read_repository",
+        "read_registry",
+    ],
+    username: "example-username",
 });
 ```
-```python
-import pulumi
-import pulumi_gitlab as gitlab
 
-example = gitlab.DeployToken("example",
-    group="example/deploying",
-    scopes=["read_repository"])
-```
+{{% /example %}}
+
+### Group
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using GitLab = Pulumi.GitLab;
@@ -106,6 +133,62 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewDeployToken(ctx, "example", &gitlab.DeployTokenArgs{
+			Group: pulumi.String("example/deploying"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("read_repository"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.DeployToken("example",
+    group="example/deploying",
+    scopes=["read_repository"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gitlab from "@pulumi/gitlab";
+
+const example = new gitlab.DeployToken("example", {
+    group: "example/deploying",
+    scopes: ["read_repository"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DeployToken Resource {#create}
@@ -117,7 +200,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#DeployToken">DeployToken</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expires_at=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>scopes=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.DeployToken">DeployToken</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expires_at=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>scopes=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -720,7 +803,7 @@ Get an existing DeployToken resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>expires_at=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>scopes=None<span class="p">, </span>token=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>expires_at=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>scopes=None<span class="p">, </span>token=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,9 +14,6 @@ This resource allows you to create and manage CI/CD variables for your GitLab pr
 For further information on variables, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/ci/variables/README.html#variables).
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +39,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewProjectVariable(ctx, "example", &gitlab.ProjectVariableArgs{
+			Key:       pulumi.String("project_variable_key"),
+			Project:   pulumi.String("12345"),
+			Protected: pulumi.Bool(false),
+			Value:     pulumi.String("project_variable_value"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,9 +80,11 @@ example = gitlab.ProjectVariable("example",
     protected=False,
     value="project_variable_value")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -73,6 +96,7 @@ const example = new gitlab.ProjectVariable("example", {
     value: "project_variable_value",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +111,7 @@ const example = new gitlab.ProjectVariable("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#ProjectVariable">ProjectVariable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.ProjectVariable">ProjectVariable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +710,7 @@ Get an existing ProjectVariable resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

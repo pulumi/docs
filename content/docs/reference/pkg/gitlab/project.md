@@ -22,7 +22,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,7 +326,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,7 +602,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,7 +878,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1154,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1573,7 +1573,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>http_url_to_repo=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>runners_token=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>ssh_url_to_repo=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>web_url=None<span class="p">, </span>wiki_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>http_url_to_repo=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>runners_token=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>ssh_url_to_repo=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>web_url=None<span class="p">, </span>wiki_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1831,7 +1831,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2153,7 +2153,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2475,7 +2475,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2797,7 +2797,7 @@ Repositories are created with `merge` by default
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

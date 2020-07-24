@@ -12,8 +12,6 @@ meta_desc: "Explore the GetProject function of the GitLab package, including exa
 
 Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.LookupProject(ctx, &gitlab.LookupProjectArgs{
+			Id: 30,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +68,11 @@ import pulumi_gitlab as gitlab
 
 example = gitlab.get_project(id=30)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -60,6 +81,7 @@ const example = pulumi.output(gitlab.getProject({
     id: 30,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -211,7 +233,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,7 +462,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -669,7 +691,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -898,7 +920,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,7 +1162,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1369,7 +1391,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1598,7 +1620,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1827,7 +1849,7 @@ repository via HTTP.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
+See `gitlab.Group` for an example.
 {{% /md %}}</dd>
 
     <dt class="property-"

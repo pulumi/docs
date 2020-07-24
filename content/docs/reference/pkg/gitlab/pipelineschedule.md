@@ -14,8 +14,6 @@ This resource allows you to create and manage pipeline schedules.
 For further information on clusters, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/user/project/pipelines/schedules.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +39,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewPipelineSchedule(ctx, "example", &gitlab.PipelineScheduleArgs{
+			Cron:        pulumi.String("0 1 * * *"),
+			Description: pulumi.String("Used to schedule builds"),
+			Project:     pulumi.String("12345"),
+			Ref:         pulumi.String("master"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,9 +80,11 @@ example = gitlab.PipelineSchedule("example",
     project="12345",
     ref="master")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -72,6 +96,7 @@ const example = new gitlab.PipelineSchedule("example", {
     ref: "master",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -86,7 +111,7 @@ const example = new gitlab.PipelineSchedule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#PipelineSchedule">PipelineSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>cron=None<span class="p">, </span>cron_timezone=None<span class="p">, </span>description=None<span class="p">, </span>project=None<span class="p">, </span>ref=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.PipelineSchedule">PipelineSchedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>cron=None<span class="p">, </span>cron_timezone=None<span class="p">, </span>description=None<span class="p">, </span>project=None<span class="p">, </span>ref=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +666,7 @@ Get an existing PipelineSchedule resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>cron=None<span class="p">, </span>cron_timezone=None<span class="p">, </span>description=None<span class="p">, </span>project=None<span class="p">, </span>ref=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>cron=None<span class="p">, </span>cron_timezone=None<span class="p">, </span>description=None<span class="p">, </span>project=None<span class="p">, </span>ref=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

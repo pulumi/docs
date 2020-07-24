@@ -14,9 +14,6 @@ This resource allows you to create and manage labels for your GitLab groups.
 For further information on labels, consult the [gitlab
 documentation](https://docs.gitlab.com/ee/user/project/labels.html#group-labels).
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +38,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewGroupLabel(ctx, "fixme", &gitlab.GroupLabelArgs{
+			Color:       pulumi.String("#ffcc00"),
+			Description: pulumi.String("issue with failing tests"),
+			Group:       pulumi.String("example"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +77,11 @@ fixme = gitlab.GroupLabel("fixme",
     description="issue with failing tests",
     group="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -70,6 +92,7 @@ const fixme = new gitlab.GroupLabel("fixme", {
     group: "example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -84,7 +107,7 @@ const fixme = new gitlab.GroupLabel("fixme", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#GroupLabel">GroupLabel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.GroupLabel">GroupLabel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,7 +574,7 @@ Get an existing GroupLabel resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

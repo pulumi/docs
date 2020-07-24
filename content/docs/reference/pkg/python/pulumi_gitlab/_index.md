@@ -632,7 +632,7 @@ repository via HTTP.</p>
 <dt id="pulumi_gitlab.GetProjectResult.namespace_id">
 <code class="sig-name descname">namespace_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.namespace_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">.Group</span></code> for an example.</p>
+See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2146,7 +2146,7 @@ Repositories are created with <code class="docutils literal notranslate"><span c
 <li><p><strong>merge_requests_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable merge requests for the project.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project.</p></li>
 <li><p><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">.Group</span></code> for an example.</p></li>
+See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
@@ -2250,7 +2250,7 @@ Repositories are created with <code class="docutils literal notranslate"><span c
 <dt id="pulumi_gitlab.Project.namespace_id">
 <code class="sig-name descname">namespace_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.namespace_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">.Group</span></code> for an example.</p>
+See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2379,7 +2379,7 @@ Repositories are created with <code class="docutils literal notranslate"><span c
 <li><p><strong>merge_requests_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable merge requests for the project.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project.</p></li>
 <li><p><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">.Group</span></code> for an example.</p></li>
+See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
@@ -3331,19 +3331,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gitlab.ServiceGithub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServiceGithub</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">static_context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceGithub" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>NOTE</strong>: requires either EE (self-hosted) or Silver and above (GitLab.com).</p>
-<p>This resource manages a <a class="reference external" href="https://docs.gitlab.com/ee/user/project/integrations/github.html">GitHub integration</a> that updates pipeline statuses on a GitHub repo’s pull requests.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project you want to activate integration on.</p></li>
-<li><p><strong>static_context</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Append instance name instead of branch to the status. Must enable to set a GitLab status check as <em>required</em> in GitHub. See [Static / dynamic status check names] to learn more.</p></li>
-<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GitHub personal access token with at least <code class="docutils literal notranslate"><span class="pre">repo:status</span></code> scope.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceGithub resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: ID of the project you want to activate integration on.
+:param pulumi.Input[bool] static_context: Append instance name instead of branch to the status. Must enable to set a GitLab status check as <em>required</em> in GitHub. See [Static / dynamic status check names] to learn more.
+:param pulumi.Input[str] token: A GitHub personal access token with at least <code class="docutils literal notranslate"><span class="pre">repo:status</span></code> scope.</p>
 <dl class="py attribute">
 <dt id="pulumi_gitlab.ServiceGithub.project">
 <code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ServiceGithub.project" title="Permalink to this definition">¶</a></dt>
@@ -3422,37 +3415,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gitlab.ServiceJira">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServiceJira</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment_on_event_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jira_issue_transition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceJira" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to manage Jira integration.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
-
-<span class="n">awesome_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;awesomeProject&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome project.&quot;</span><span class="p">,</span>
-    <span class="n">visibility_level</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
-<span class="n">jira</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ServiceJira</span><span class="p">(</span><span class="s2">&quot;jira&quot;</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mypass&quot;</span><span class="p">,</span>
-    <span class="n">project</span><span class="o">=</span><span class="n">awesome_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://jira.example.com&quot;</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>comment_on_event_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable comments inside Jira issues on each GitLab event (commit / merge request)</p></li>
-<li><p><strong>commit_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for commit events</p></li>
-<li><p><strong>jira_issue_transition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration &gt; Issues &gt; Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.</p></li>
-<li><p><strong>merge_requests_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for merge request events</p></li>
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of the user created to be used with GitLab/JIRA.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project you want to activate integration on.</p></li>
-<li><p><strong>project_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short identifier for your JIRA project, all uppercase, e.g., PROJ.</p></li>
-<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the JIRA project which is being linked to this GitLab project. For example, <a class="reference external" href="https://jira.example.com">https://jira.example.com</a>.</p></li>
-<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the user created to be used with GitLab/JIRA.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceJira resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] comment_on_event_enabled: Enable comments inside Jira issues on each GitLab event (commit / merge request)
+:param pulumi.Input[bool] commit_events: Enable notifications for commit events
+:param pulumi.Input[str] jira_issue_transition_id: The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration &gt; Issues &gt; Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
+:param pulumi.Input[bool] merge_requests_events: Enable notifications for merge request events
+:param pulumi.Input[str] password: The password of the user created to be used with GitLab/JIRA.
+:param pulumi.Input[str] project: ID of the project you want to activate integration on.
+:param pulumi.Input[str] project_key: The short identifier for your JIRA project, all uppercase, e.g., PROJ.
+:param pulumi.Input[str] url: The URL to the JIRA project which is being linked to this GitLab project. For example, <a class="reference external" href="https://jira.example.com">https://jira.example.com</a>.
+:param pulumi.Input[str] username: The username of the user created to be used with GitLab/JIRA.</p>
 <dl class="py attribute">
 <dt id="pulumi_gitlab.ServiceJira.comment_on_event_enabled">
 <code class="sig-name descname">comment_on_event_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ServiceJira.comment_on_event_enabled" title="Permalink to this definition">¶</a></dt>
@@ -3573,52 +3547,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gitlab.ServiceSlack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServiceSlack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branches_to_be_notified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_issue_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_issues_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_note_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issue_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_request_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_broken_pipelines</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_push_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_push_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_page_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_page_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceSlack" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to manage Slack notifications integration.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
-
-<span class="n">awesome_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;awesomeProject&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome project.&quot;</span><span class="p">,</span>
-    <span class="n">visibility_level</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
-<span class="n">slack</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ServiceSlack</span><span class="p">(</span><span class="s2">&quot;slack&quot;</span><span class="p">,</span>
-    <span class="n">project</span><span class="o">=</span><span class="n">awesome_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">push_channel</span><span class="o">=</span><span class="s2">&quot;push_chan&quot;</span><span class="p">,</span>
-    <span class="n">push_events</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myuser&quot;</span><span class="p">,</span>
-    <span class="n">webhook</span><span class="o">=</span><span class="s2">&quot;https://webhook.com&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>branches_to_be_notified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Branches to send notifications for. Valid options are “all”, “default”, “protected”, and “default_and_protected”.</p></li>
-<li><p><strong>confidential_issue_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive confidential issue events notifications.</p></li>
-<li><p><strong>confidential_issues_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for confidential issues events.</p></li>
-<li><p><strong>confidential_note_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for confidential note events.</p></li>
-<li><p><strong>issue_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive issue events notifications.</p></li>
-<li><p><strong>issues_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for issues events.</p></li>
-<li><p><strong>merge_request_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive merge request events notifications.</p></li>
-<li><p><strong>merge_requests_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for merge requests events.</p></li>
-<li><p><strong>note_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive note events notifications.</p></li>
-<li><p><strong>note_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for note events.</p></li>
-<li><p><strong>notify_only_broken_pipelines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Send notifications for broken pipelines.</p></li>
-<li><p><strong>notify_only_default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – DEPRECATED: This parameter has been replaced with <code class="docutils literal notranslate"><span class="pre">branches_to_be_notified</span></code>.</p></li>
-<li><p><strong>pipeline_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive pipeline events notifications.</p></li>
-<li><p><strong>pipeline_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for pipeline events.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project you want to activate integration on.</p></li>
-<li><p><strong>push_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive push events notifications.</p></li>
-<li><p><strong>push_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for push events.</p></li>
-<li><p><strong>tag_push_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive tag push events notifications.</p></li>
-<li><p><strong>tag_push_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for tag push events.</p></li>
-<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username to use.</p></li>
-<li><p><strong>webhook</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Webhook URL (ex.: <a class="reference external" href="https://hooks.slack.com/services/">https://hooks.slack.com/services/</a>…)</p></li>
-<li><p><strong>wiki_page_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the channel to receive wiki page events notifications.</p></li>
-<li><p><strong>wiki_page_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable notifications for wiki page events.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceSlack resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] branches_to_be_notified: Branches to send notifications for. Valid options are “all”, “default”, “protected”, and “default_and_protected”.
+:param pulumi.Input[str] confidential_issue_channel: The name of the channel to receive confidential issue events notifications.
+:param pulumi.Input[bool] confidential_issues_events: Enable notifications for confidential issues events.
+:param pulumi.Input[bool] confidential_note_events: Enable notifications for confidential note events.
+:param pulumi.Input[str] issue_channel: The name of the channel to receive issue events notifications.
+:param pulumi.Input[bool] issues_events: Enable notifications for issues events.
+:param pulumi.Input[str] merge_request_channel: The name of the channel to receive merge request events notifications.
+:param pulumi.Input[bool] merge_requests_events: Enable notifications for merge requests events.
+:param pulumi.Input[str] note_channel: The name of the channel to receive note events notifications.
+:param pulumi.Input[bool] note_events: Enable notifications for note events.
+:param pulumi.Input[bool] notify_only_broken_pipelines: Send notifications for broken pipelines.
+:param pulumi.Input[bool] notify_only_default_branch: DEPRECATED: This parameter has been replaced with <code class="docutils literal notranslate"><span class="pre">branches_to_be_notified</span></code>.
+:param pulumi.Input[str] pipeline_channel: The name of the channel to receive pipeline events notifications.
+:param pulumi.Input[bool] pipeline_events: Enable notifications for pipeline events.
+:param pulumi.Input[str] project: ID of the project you want to activate integration on.
+:param pulumi.Input[str] push_channel: The name of the channel to receive push events notifications.
+:param pulumi.Input[bool] push_events: Enable notifications for push events.
+:param pulumi.Input[str] tag_push_channel: The name of the channel to receive tag push events notifications.
+:param pulumi.Input[bool] tag_push_events: Enable notifications for tag push events.
+:param pulumi.Input[str] username: Username to use.
+:param pulumi.Input[str] webhook: Webhook URL (ex.: <a class="reference external" href="https://hooks.slack.com/services/">https://hooks.slack.com/services/</a>…)
+:param pulumi.Input[str] wiki_page_channel: The name of the channel to receive wiki page events notifications.
+:param pulumi.Input[bool] wiki_page_events: Enable notifications for wiki page events.</p>
 <dl class="py attribute">
 <dt id="pulumi_gitlab.ServiceSlack.branches_to_be_notified">
 <code class="sig-name descname">branches_to_be_notified</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ServiceSlack.branches_to_be_notified" title="Permalink to this definition">¶</a></dt>
@@ -4088,10 +4042,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.get_group">
 <code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific group in the gitlab provider.</p>
+<p><strong>By group’s ID</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
 
 <span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group_id</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>By group’s full path</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">full_path</span><span class="o">=</span><span class="s2">&quot;foo/bar&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4127,7 +4089,7 @@ repository via HTTP.</p></li>
 <li><p><strong>lfs_enabled</strong> (<em>bool</em>) – Enable LFS for the project.</p></li>
 <li><p><strong>merge_requests_enabled</strong> (<em>bool</em>) – Enable merge requests for the project.</p></li>
 <li><p><strong>namespace_id</strong> (<em>float</em>) – The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">.Group</span></code> for an example.</p></li>
+See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The path of the repository.</p></li>
 <li><p><strong>pipelines_enabled</strong> (<em>bool</em>) – Enable pipelines for the project.</p></li>
 <li><p><strong>remove_source_branch_after_merge</strong> (<em>bool</em>) – Enable <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">source</span> <span class="pre">branch</span></code> option by default for all new merge requests</p></li>

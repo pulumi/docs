@@ -12,8 +12,6 @@ meta_desc: "Explore the GetGroup function of the GitLab package, including examp
 
 Provides details about a specific group in the gitlab provider.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,32 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := 123
+		_, err := gitlab.LookupGroup(ctx, &gitlab.LookupGroupArgs{
+			GroupId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +69,11 @@ import pulumi_gitlab as gitlab
 
 foo = gitlab.get_group(group_id=123)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -60,6 +82,7 @@ const foo = pulumi.output(gitlab.getGroup({
     groupId: 123,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GroupLdapLink resource of the GitLab package, including 
 
 This resource allows you to add an LDAP link to an existing GitLab group.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,10 +37,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewGroupLdapLink(ctx, "test", &gitlab.GroupLdapLinkArgs{
+			AccessLevel:  pulumi.String("developer"),
+			Cn:           pulumi.String("testuser"),
+			GroupId:      pulumi.String("12345"),
+			LdapProvider: pulumi.String("ldapmain"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,9 +78,11 @@ test = gitlab.GroupLdapLink("test",
     group_id="12345",
     ldap_provider="ldapmain")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -70,6 +94,7 @@ const test = new gitlab.GroupLdapLink("test", {
     ldapProvider: "ldapmain",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -84,7 +109,7 @@ const test = new gitlab.GroupLdapLink("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#GroupLdapLink">GroupLdapLink</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_level=None<span class="p">, </span>cn=None<span class="p">, </span>force=None<span class="p">, </span>group_id=None<span class="p">, </span>ldap_provider=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.GroupLdapLink">GroupLdapLink</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_level=None<span class="p">, </span>cn=None<span class="p">, </span>force=None<span class="p">, </span>group_id=None<span class="p">, </span>ldap_provider=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -591,7 +616,7 @@ Get an existing GroupLdapLink resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_level=None<span class="p">, </span>cn=None<span class="p">, </span>force=None<span class="p">, </span>group_id=None<span class="p">, </span>ldap_provider=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_level=None<span class="p">, </span>cn=None<span class="p">, </span>force=None<span class="p">, </span>group_id=None<span class="p">, </span>ldap_provider=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -14,9 +14,6 @@ This resource allows you to create and manage push rules for your GitLab project
 For further information on push rules, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ProjectPushRules Resource {#create}
@@ -28,7 +25,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#ProjectPushRules">ProjectPushRules</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>author_email_regex=None<span class="p">, </span>branch_name_regex=None<span class="p">, </span>commit_message_regex=None<span class="p">, </span>deny_delete_tag=None<span class="p">, </span>file_name_regex=None<span class="p">, </span>max_file_size=None<span class="p">, </span>member_check=None<span class="p">, </span>prevent_secrets=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.ProjectPushRules">ProjectPushRules</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>author_email_regex=None<span class="p">, </span>branch_name_regex=None<span class="p">, </span>commit_message_regex=None<span class="p">, </span>deny_delete_tag=None<span class="p">, </span>file_name_regex=None<span class="p">, </span>max_file_size=None<span class="p">, </span>member_check=None<span class="p">, </span>prevent_secrets=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,7 +712,7 @@ Get an existing ProjectPushRules resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>author_email_regex=None<span class="p">, </span>branch_name_regex=None<span class="p">, </span>commit_message_regex=None<span class="p">, </span>deny_delete_tag=None<span class="p">, </span>file_name_regex=None<span class="p">, </span>max_file_size=None<span class="p">, </span>member_check=None<span class="p">, </span>prevent_secrets=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>author_email_regex=None<span class="p">, </span>branch_name_regex=None<span class="p">, </span>commit_message_regex=None<span class="p">, </span>deny_delete_tag=None<span class="p">, </span>file_name_regex=None<span class="p">, </span>max_file_size=None<span class="p">, </span>member_check=None<span class="p">, </span>prevent_secrets=None<span class="p">, </span>project=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

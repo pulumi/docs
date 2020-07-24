@@ -12,8 +12,6 @@ meta_desc: "Explore the BranchProtection resource of the GitLab package, includi
 
 This resource allows you to protect a specific branch by an access level so that the user with less access level cannot Merge/Push to the branch. GitLab EE features to protect by group or user are not supported.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,10 +37,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewBranchProtection(ctx, "branchProtect", &gitlab.BranchProtectionArgs{
+			Branch:           pulumi.String("BranchProtected"),
+			MergeAccessLevel: pulumi.String("developer"),
+			Project:          pulumi.String("12345"),
+			PushAccessLevel:  pulumi.String("developer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,9 +78,11 @@ branch_protect = gitlab.BranchProtection("branchProtect",
     project="12345",
     push_access_level="developer")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -70,6 +94,7 @@ const branchProtect = new gitlab.BranchProtection("BranchProtect", {
     pushAccessLevel: "developer",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -84,7 +109,7 @@ const branchProtect = new gitlab.BranchProtection("BranchProtect", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,7 +576,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
