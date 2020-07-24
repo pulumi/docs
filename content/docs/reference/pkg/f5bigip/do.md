@@ -84,7 +84,7 @@ const do_example = new f5bigip.Do("do-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/f5bigip/#Do">Do</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, </span>timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.Do">Do</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, </span>timeout=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,7 +507,7 @@ Get an existing Do resource's state with the given name, ID, and optional extra 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, </span>timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, </span>timeout=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
