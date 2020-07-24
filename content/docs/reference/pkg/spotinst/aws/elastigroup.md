@@ -22,7 +22,7 @@ meta_desc: "Explore the Elastigroup resource of the aws module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#Elastigroup">Elastigroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>capacity_unit=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ips=None<span class="p">, </span>elastic_load_balancers=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>health_check_unhealthy_duration_before_replacement=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types_ondemand=None<span class="p">, </span>instance_types_preferred_spots=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>instance_types_weights=None<span class="p">, </span>integration_beanstalk=None<span class="p">, </span>integration_codedeploy=None<span class="p">, </span>integration_docker_swarm=None<span class="p">, </span>integration_ecs=None<span class="p">, </span>integration_gitlab=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_mesosphere=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>integration_nomad=None<span class="p">, </span>integration_rancher=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_name=None<span class="p">, </span>lifetime_period=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multai_target_sets=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>ondemand_count=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>private_ips=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_strategies=None<span class="p">, </span>scaling_target_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>signals=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>stateful_deallocation=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>wait_for_capacity=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>capacity_unit=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ips=None<span class="p">, </span>elastic_load_balancers=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>health_check_unhealthy_duration_before_replacement=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types_ondemand=None<span class="p">, </span>instance_types_preferred_spots=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>instance_types_weights=None<span class="p">, </span>integration_beanstalk=None<span class="p">, </span>integration_codedeploy=None<span class="p">, </span>integration_docker_swarm=None<span class="p">, </span>integration_ecs=None<span class="p">, </span>integration_gitlab=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_mesosphere=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>integration_nomad=None<span class="p">, </span>integration_rancher=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_name=None<span class="p">, </span>lifetime_period=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multai_target_sets=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>ondemand_count=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>private_ips=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_strategies=None<span class="p">, </span>scaling_target_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>signals=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>stateful_deallocation=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>wait_for_capacity=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +235,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -937,7 +937,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -988,7 +988,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1690,7 +1690,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -1741,7 +1741,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2443,7 +2443,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -2494,7 +2494,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3196,7 +3196,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -3297,7 +3297,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>availability_zones=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>capacity_unit=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ips=None<span class="p">, </span>elastic_load_balancers=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>health_check_unhealthy_duration_before_replacement=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types_ondemand=None<span class="p">, </span>instance_types_preferred_spots=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>instance_types_weights=None<span class="p">, </span>integration_beanstalk=None<span class="p">, </span>integration_codedeploy=None<span class="p">, </span>integration_docker_swarm=None<span class="p">, </span>integration_ecs=None<span class="p">, </span>integration_gitlab=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_mesosphere=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>integration_nomad=None<span class="p">, </span>integration_rancher=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_name=None<span class="p">, </span>lifetime_period=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multai_target_sets=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>ondemand_count=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>private_ips=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_strategies=None<span class="p">, </span>scaling_target_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>signals=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>stateful_deallocation=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>wait_for_capacity=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>availability_zones=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>capacity_unit=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ips=None<span class="p">, </span>elastic_load_balancers=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>health_check_unhealthy_duration_before_replacement=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types_ondemand=None<span class="p">, </span>instance_types_preferred_spots=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>instance_types_weights=None<span class="p">, </span>integration_beanstalk=None<span class="p">, </span>integration_codedeploy=None<span class="p">, </span>integration_docker_swarm=None<span class="p">, </span>integration_ecs=None<span class="p">, </span>integration_gitlab=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_mesosphere=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>integration_nomad=None<span class="p">, </span>integration_rancher=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_name=None<span class="p">, </span>lifetime_period=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multai_target_sets=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>ondemand_count=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>private_ips=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_strategies=None<span class="p">, </span>scaling_target_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>signals=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>stateful_deallocation=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>wait_for_capacity=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3865,7 +3865,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4154,7 +4154,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -4618,7 +4618,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4907,7 +4907,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -5371,7 +5371,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5660,7 +5660,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -6124,7 +6124,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.    
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6413,7 +6413,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment. 
+    <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
 
 </dl>

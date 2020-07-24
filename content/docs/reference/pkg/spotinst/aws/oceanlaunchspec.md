@@ -103,7 +103,77 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewOceanLaunchSpec(ctx, "example", &aws.OceanLaunchSpecArgs{
+			AutoscaleHeadrooms: aws.OceanLaunchSpecAutoscaleHeadroomArray{
+				&aws.OceanLaunchSpecAutoscaleHeadroomArgs{
+					CpuPerUnit:    pulumi.Int(1000),
+					GpuPerUnit:    pulumi.Int(0),
+					MemoryPerUnit: pulumi.Int(2048),
+					NumOfUnits:    pulumi.Int(5),
+				},
+			},
+			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
+				&aws.OceanLaunchSpecElasticIpPoolArgs{
+					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
+						TagKey:   pulumi.String("key"),
+						TagValue: pulumi.String("value"),
+					},
+				},
+			},
+			IamInstanceProfile: pulumi.String("iam-profile"),
+			ImageId:            pulumi.String("ami-123456"),
+			Labels: aws.OceanLaunchSpecLabelArray{
+				&aws.OceanLaunchSpecLabelArgs{
+					Key:   pulumi.String("fakeKey"),
+					Value: pulumi.String("fakeValue"),
+				},
+			},
+			OceanId: pulumi.String("o-123456"),
+			ResourceLimits: aws.OceanLaunchSpecResourceLimitArray{
+				&aws.OceanLaunchSpecResourceLimitArgs{
+					MaxInstanceCount: pulumi.Int(4),
+				},
+			},
+			RootVolumeSize: pulumi.Int(30),
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("sg-987654321"),
+			},
+			SubnetIds: pulumi.StringArray{
+				pulumi.String("subnet-1234"),
+			},
+			Tags: aws.OceanLaunchSpecTagArray{
+				&aws.OceanLaunchSpecTagArgs{
+					Key:   pulumi.String("Env"),
+					Value: pulumi.String("production"),
+				},
+			},
+			Taints: aws.OceanLaunchSpecTaintArray{
+				&aws.OceanLaunchSpecTaintArgs{
+					Effect: pulumi.String("NoExecute"),
+					Key:    pulumi.String("taint key updated"),
+					Value:  pulumi.String("taint value updated"),
+				},
+			},
+			UserData: pulumi.String("echo hello world"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -210,7 +280,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -390,7 +460,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,7 +526,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,7 +620,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,7 +686,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -710,7 +780,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -776,7 +846,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -870,7 +940,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,7 +1006,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1113,7 +1183,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1290,7 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1301,7 +1371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1450,7 +1520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1461,7 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1610,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1621,7 +1691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set Launch Specification name 
+    <dd>{{% md %}}Set Launch Specification name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1781,7 +1851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}The ocean cluster you wish to
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -37,6 +37,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="scheduled-task"></a>
 ## Scheduled Tasks
@@ -70,6 +83,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="load-balancers"></a>
 ## Load Balancers
@@ -101,6 +127,150 @@ load_balancers {
 
 <a id="route53"></a>
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+# Create an MangedInstance
+default_managed_instance = spotinst.aws.ManagedInstance("default-managed-instance",
+    auto_healing="true",
+    block_devices_mode="reattach",
+    cpu_credits="standard",
+    description="created by Terraform",
+    draining_timeout="120",
+    ebs_optimized="true",
+    elastic_ip="ip",
+    enable_monitoring="true",
+    fallback_to_ondemand=False,
+    grace_period="180",
+    health_check_type="EC2",
+    iam_instance_profile="iam-profile",
+    image_id="ami-1234",
+    instance_types=[
+        "t1.micro",
+        "t3.medium",
+        "t3.large",
+        "t2.medium",
+        "t2.large",
+        "z1d.large",
+    ],
+    key_pair="labs-oregon",
+    life_cycle="on_demand",
+    optimization_windows=["Mon:03:00-Wed:02:20"],
+    orientation="balanced",
+    persist_block_devices="true",
+    persist_private_ip="false",
+    persist_root_device="true",
+    placement_tenancy="default",
+    preferred_type="t1.micro",
+    private_ip="ip",
+    product="Linux/UNIX",
+    region="us-west-2",
+    revert_to_spot={
+        "performAt": "always",
+    },
+    security_group_ids=["sg-234"],
+    shutdown_script="managed instance bye world",
+    subnet_ids=["subnet-123"],
+    tags=[
+        {
+            "key": "explicit1",
+            "value": "value1",
+        },
+        {
+            "key": "explicit2",
+            "value": "value2",
+        },
+    ],
+    unhealthy_duration="60",
+    user_data="managed instance hello world",
+    utilize_reserved_instances="true",
+    vpc_id="vpc-123")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+// Create an MangedInstance
+const default_managed_instance = new spotinst.aws.ManagedInstance("default-managed-instance", {
+    autoHealing: true,
+    blockDevicesMode: "reattach",
+    cpuCredits: "standard",
+    description: "created by Terraform",
+    drainingTimeout: 120,
+    ebsOptimized: true,
+    elasticIp: "ip",
+    enableMonitoring: true,
+    fallbackToOndemand: false,
+    gracePeriod: 180,
+    healthCheckType: "EC2",
+    iamInstanceProfile: "iam-profile",
+    imageId: "ami-1234",
+    instanceTypes: [
+        "t1.micro",
+        "t3.medium",
+        "t3.large",
+        "t2.medium",
+        "t2.large",
+        "z1d.large",
+    ],
+    keyPair: "labs-oregon",
+    lifeCycle: "on_demand",
+    optimizationWindows: ["Mon:03:00-Wed:02:20"],
+    orientation: "balanced",
+    persistBlockDevices: true,
+    persistPrivateIp: false,
+    persistRootDevice: true,
+    placementTenancy: "default",
+    preferredType: "t1.micro",
+    privateIp: "ip",
+    product: "Linux/UNIX",
+    region: "us-west-2",
+    revertToSpot: {
+        performAt: "always",
+    },
+    securityGroupIds: ["sg-234"],
+    shutdownScript: "managed instance bye world",
+    subnetIds: ["subnet-123"],
+    tags: [
+        {
+            key: "explicit1",
+            value: "value1",
+        },
+        {
+            key: "explicit2",
+            value: "value2",
+        },
+    ],
+    unhealthyDuration: 60,
+    userData: "managed instance hello world",
+    utilizeReservedInstances: true,
+    vpcId: "vpc-123",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedInstance Resource {#create}
@@ -112,7 +282,7 @@ load_balancers {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#ManagedInstance">ManagedInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.ManagedInstance">ManagedInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +484,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -325,7 +495,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -357,7 +527,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,7 +750,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -625,7 +795,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -763,7 +933,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -774,7 +944,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -806,7 +976,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,7 +1199,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1074,7 +1244,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1212,7 +1382,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1223,7 +1393,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1255,7 +1425,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,7 +1648,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1523,7 +1693,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1661,7 +1831,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1672,7 +1842,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1704,7 +1874,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1927,7 +2097,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1972,7 +2142,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2171,7 +2341,7 @@ Get an existing ManagedInstance resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2293,7 +2463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2538,7 +2708,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2549,7 +2719,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2594,7 +2764,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2605,7 +2775,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2742,7 +2912,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2987,7 +3157,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2998,7 +3168,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3043,7 +3213,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3054,7 +3224,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3191,7 +3361,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3436,7 +3606,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3447,7 +3617,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3492,7 +3662,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3503,7 +3673,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3640,7 +3810,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3885,7 +4055,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+    <dd>{{% md %}}Should the instance maintain its Data volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3896,7 +4066,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
+    <dd>{{% md %}}Should the instance maintain its private IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3941,7 +4111,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3952,7 +4122,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

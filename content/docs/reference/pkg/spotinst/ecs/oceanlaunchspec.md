@@ -70,7 +70,52 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.NewOceanLaunchSpec(ctx, "example", &ecs.OceanLaunchSpecArgs{
+			Attributes: ecs.OceanLaunchSpecAttributeArray{
+				&ecs.OceanLaunchSpecAttributeArgs{
+					Key:   pulumi.String("fakeKey"),
+					Value: pulumi.String("fakeValue"),
+				},
+			},
+			AutoscaleHeadrooms: ecs.OceanLaunchSpecAutoscaleHeadroomArray{
+				&ecs.OceanLaunchSpecAutoscaleHeadroomArgs{
+					CpuPerUnit:    pulumi.Int(1000),
+					MemoryPerUnit: pulumi.Int(2048),
+					NumOfUnits:    pulumi.Int(5),
+				},
+			},
+			IamInstanceProfile: pulumi.String("iam-profile"),
+			ImageId:            pulumi.String("ami-123456"),
+			OceanId:            pulumi.String("o-123456"),
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.String("awseb-12345"),
+			},
+			Tags: ecs.OceanLaunchSpecTagArray{
+				&ecs.OceanLaunchSpecTagArgs{
+					Key:   pulumi.String("Env"),
+					Value: pulumi.String("production"),
+				},
+			},
+			UserData: pulumi.String("echo hello world"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -143,7 +188,7 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/ecs/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/ecs/#pulumi_spotinst.ecs.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -378,7 +423,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,7 +529,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -590,7 +635,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -696,7 +741,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,7 +875,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -996,7 +1041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,7 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean Launch Specification name. 
+    <dd>{{% md %}}The Ocean Launch Specification name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -46,6 +46,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="update-policy"></a>
 ## Update Policy
@@ -70,6 +83,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -104,6 +130,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -183,7 +222,69 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewOcean(ctx, "example", &aws.OceanArgs{
+			AssociatePublicIpAddress: pulumi.Bool(true),
+			ControllerId:             pulumi.String("fakeClusterId"),
+			DesiredCapacity:          pulumi.Int(2),
+			DrainingTimeout:          pulumi.Int(120),
+			EbsOptimized:             pulumi.Bool(true),
+			FallbackToOndemand:       pulumi.Bool(true),
+			GracePeriod:              pulumi.Int(600),
+			IamInstanceProfile:       pulumi.String("iam-profile"),
+			ImageId:                  pulumi.String("ami-123456"),
+			KeyName:                  pulumi.String("fake key"),
+			LoadBalancers: aws.OceanLoadBalancerArray{
+				&aws.OceanLoadBalancerArgs{
+					Arn:  pulumi.String("arn:aws:elasticloadbalancing:us-west-2:fake-arn"),
+					Type: pulumi.String("TARGET_GROUP"),
+				},
+				&aws.OceanLoadBalancerArgs{
+					Name: pulumi.String("AntonK"),
+					Type: pulumi.String("CLASSIC"),
+				},
+			},
+			MaxSize:        pulumi.Int(2),
+			MinSize:        pulumi.Int(1),
+			Monitoring:     pulumi.Bool(true),
+			Region:         pulumi.String("us-west-2"),
+			RootVolumeSize: pulumi.Int(20),
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("sg-987654321"),
+			},
+			SubnetIds: pulumi.StringArray{
+				pulumi.String("subnet-123456789"),
+			},
+			Tags: aws.OceanTagArray{
+				&aws.OceanTagArgs{
+					Key:   pulumi.String("fakeKey"),
+					Value: pulumi.String("fakeValue"),
+				},
+			},
+			UserData:                 pulumi.String("echo hello world"),
+			UtilizeReservedInstances: pulumi.Bool(false),
+			Whitelists: pulumi.StringArray{
+				pulumi.String("t1.micro"),
+				pulumi.String("m1.small"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -296,7 +397,7 @@ const example = new spotinst.aws.Ocean("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#Ocean">Ocean</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Ocean">Ocean</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1803,7 +1904,7 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

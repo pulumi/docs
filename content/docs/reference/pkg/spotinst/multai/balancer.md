@@ -51,7 +51,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := multai.NewBalancer(ctx, "myBalancer", &multai.BalancerArgs{
+			ConnectionTimeouts: &multai.BalancerConnectionTimeoutsArgs{
+				Draining: pulumi.Int(10),
+				Idle:     pulumi.Int(10),
+			},
+			Scheme: pulumi.String("internal"),
+			Tags: multai.BalancerTagArray{
+				&multai.BalancerTagArgs{
+					Key:   pulumi.String("env"),
+					Value: pulumi.String("prod"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,7 +136,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#Balancer">Balancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_timeouts=None<span class="p">, </span>dns_cname_aliases=None<span class="p">, </span>name=None<span class="p">, </span>scheme=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.Balancer">Balancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connection_timeouts=None<span class="p">, </span>dns_cname_aliases=None<span class="p">, </span>name=None<span class="p">, </span>scheme=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -605,7 +635,7 @@ Get an existing Balancer resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>connection_timeouts=None<span class="p">, </span>dns_cname_aliases=None<span class="p">, </span>name=None<span class="p">, </span>scheme=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>connection_timeouts=None<span class="p">, </span>dns_cname_aliases=None<span class="p">, </span>name=None<span class="p">, </span>scheme=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

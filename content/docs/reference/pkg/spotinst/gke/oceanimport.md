@@ -44,6 +44,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="autoscaler"></a>
 ## Autoscaler
@@ -80,6 +93,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -139,7 +165,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gke.NewOceanImport(ctx, "example", &gke.OceanImportArgs{
+			BackendServices: gke.OceanImportBackendServiceArray{
+				&gke.OceanImportBackendServiceArgs{
+					LocationType: pulumi.String("regional"),
+					NamedPorts: gke.OceanImportBackendServiceNamedPortArray{
+						&gke.OceanImportBackendServiceNamedPortArgs{
+							Name: pulumi.String("http"),
+							Ports: pulumi.StringArray{
+								pulumi.String("80"),
+								pulumi.String("8080"),
+							},
+						},
+					},
+					Scheme:      pulumi.String("INTERNAL"),
+					ServiceName: pulumi.String("example-backend-service"),
+				},
+			},
+			ClusterName:     pulumi.String("example-cluster-name"),
+			DesiredCapacity: pulumi.Int(0),
+			Location:        pulumi.String("us-central1-a"),
+			MaxSize:         pulumi.Int(2),
+			MinSize:         pulumi.Int(0),
+			Whitelists: pulumi.StringArray{
+				pulumi.String("n1-standard-1"),
+				pulumi.String("n1-standard-2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -218,7 +288,7 @@ const example = new spotinst.gke.OceanImport("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gke/#OceanImport">OceanImport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gke/#pulumi_spotinst.gke.OceanImport">OceanImport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +479,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,7 +511,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +582,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -544,7 +614,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,7 +685,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +717,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,7 +788,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,7 +820,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +1003,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1097,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,7 +1178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,7 +1280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1221,7 +1291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1334,7 +1404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1436,7 +1506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1447,7 +1517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
+    <dd>{{% md %}}The zone the master cluster is located in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

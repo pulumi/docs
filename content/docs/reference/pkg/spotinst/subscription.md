@@ -50,7 +50,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := spotinst.NewSubscription(ctx, "default_subscription", &spotinst.SubscriptionArgs{
+			Endpoint:  pulumi.String("http://endpoint.com"),
+			EventType: pulumi.String("AWS_EC2_INSTANCE_LAUNCH"),
+			Format: pulumi.StringMap{
+				"event":         pulumi.String(fmt.Sprintf("%v%v%v", "%", "event", "%")),
+				"instance_id":   pulumi.String(fmt.Sprintf("%v%v%v", "%", "instance-id", "%")),
+				"resource_id":   pulumi.String(fmt.Sprintf("%v%v%v", "%", "resource-id", "%")),
+				"resource_name": pulumi.String(fmt.Sprintf("%v%v%v", "%", "resource-name", "%")),
+				"tags":          pulumi.String("foo,baz,baz"),
+			},
+			Protocol:   pulumi.String("http"),
+			ResourceId: pulumi.String(spotinst_elastigroup_aws.My - eg.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,7 +143,7 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/spotinst/#Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint=None<span class="p">, </span>event_type=None<span class="p">, </span>format=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/#pulumi_spotinst.Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint=None<span class="p">, </span>event_type=None<span class="p">, </span>format=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -682,7 +714,7 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint=None<span class="p">, </span>event_type=None<span class="p">, </span>format=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint=None<span class="p">, </span>event_type=None<span class="p">, </span>format=None<span class="p">, </span>protocol=None<span class="p">, </span>resource_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

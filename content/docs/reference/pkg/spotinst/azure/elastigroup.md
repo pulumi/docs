@@ -36,6 +36,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="image"></a>
 ## Image
@@ -64,6 +77,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="health-check"></a>
 ## Health Check
@@ -88,6 +114,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -120,6 +159,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="login"></a>
 ## Login
@@ -139,6 +191,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -165,6 +230,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -200,6 +278,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="update-policy"></a>
 ## Update Policy
@@ -229,6 +320,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 <a id="third-party-integrations"></a>
 ## Third-Party Integrations
@@ -255,6 +359,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 * `integration_multai_runtime` - (Optional) Describes the [Multai Runtime](https://spotinst.com/) integration.
     * `deployment_id` - (Optional) The deployment id you want to get
@@ -276,6 +393,19 @@ class MyStack : Stack
     {
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
 
@@ -306,13 +436,13 @@ class MyStack : Stack
             {
                 new SpotInst.Azure.Inputs.ElastigroupImageArgs
                 {
-                    Marketplace = 
+                    Marketplaces = 
                     {
-                        
+                        new SpotInst.Azure.Inputs.ElastigroupImageMarketplaceArgs
                         {
-                            { "offer", "UbuntuServer" },
-                            { "publisher", "Canonical" },
-                            { "sku", "16.04-LTS" },
+                            Offer = "UbuntuServer",
+                            Publisher = "Canonical",
+                            Sku = "16.04-LTS",
                         },
                     },
                 },
@@ -451,7 +581,148 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azure.NewElastigroup(ctx, "testAzureGroup", &azure.ElastigroupArgs{
+			DesiredCapacity: pulumi.Int(1),
+			HealthCheck: &azure.ElastigroupHealthCheckArgs{
+				AutoHealing:     pulumi.Bool(true),
+				GracePeriod:     pulumi.Int(120),
+				HealthCheckType: pulumi.String("INSTANCE_STATE"),
+			},
+			Images: azure.ElastigroupImageArray{
+				&azure.ElastigroupImageArgs{
+					Marketplaces: azure.ElastigroupImageMarketplaceArray{
+						&azure.ElastigroupImageMarketplaceArgs{
+							Offer:     pulumi.String("UbuntuServer"),
+							Publisher: pulumi.String("Canonical"),
+							Sku:       pulumi.String("16.04-LTS"),
+						},
+					},
+				},
+			},
+			LoadBalancers: azure.ElastigroupLoadBalancerArray{
+				&azure.ElastigroupLoadBalancerArgs{
+					AutoWeight:  pulumi.Bool(true),
+					BalancerId:  pulumi.String("lb-1ee2e3q"),
+					TargetSetId: pulumi.String("ts-3eq"),
+					Type:        pulumi.String("MULTAI_TARGET_SET"),
+				},
+			},
+			Login: &azure.ElastigroupLoginArgs{
+				SshPublicKey: pulumi.String("33a2s1f3g5a1df5g1ad3f2g1adfg56dfg=="),
+				UserName:     pulumi.String("admin"),
+			},
+			LowPrioritySizes: pulumi.StringArray{
+				pulumi.String("standard_a1_v1"),
+				pulumi.String("standard_a1_v2"),
+			},
+			ManagedServiceIdentities: azure.ElastigroupManagedServiceIdentityArray{
+				&azure.ElastigroupManagedServiceIdentityArgs{
+					Name:              pulumi.String("example-identity"),
+					ResourceGroupName: pulumi.String("spotinst-azure"),
+				},
+			},
+			MaxSize: pulumi.Int(1),
+			MinSize: pulumi.Int(0),
+			Network: &azure.ElastigroupNetworkArgs{
+				AssignPublicIp:     pulumi.Bool(true),
+				ResourceGroupName:  pulumi.String("subnetResourceGroup"),
+				SubnetName:         pulumi.String("my-subnet-name"),
+				VirtualNetworkName: pulumi.String("vname"),
+			},
+			OdSizes: pulumi.StringArray{
+				pulumi.String("standard_a1_v1"),
+				pulumi.String("standard_a1_v2"),
+			},
+			Product:           pulumi.String("Linux"),
+			Region:            pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("spotinst-azure"),
+			ScalingDownPolicies: azure.ElastigroupScalingDownPolicyArray{
+				&azure.ElastigroupScalingDownPolicyArgs{
+					ActionType: pulumi.String("adjustment"),
+					Adjustment: pulumi.String("MIN(5,10)"),
+					Cooldown:   pulumi.Int(60),
+					Dimensions: azure.ElastigroupScalingDownPolicyDimensionArray{
+						&azure.ElastigroupScalingDownPolicyDimensionArgs{
+							Name:  pulumi.String("name-1"),
+							Value: pulumi.String("value-1"),
+						},
+					},
+					EvaluationPeriods: pulumi.Int(10),
+					MetricName:        pulumi.String("CPUUtilization"),
+					Namespace:         pulumi.String("Microsoft.Compute"),
+					Operator:          pulumi.String("gt"),
+					Period:            pulumi.Int(60),
+					PolicyName:        pulumi.String("policy-name"),
+					Statistic:         pulumi.String("average"),
+					Threshold:         pulumi.Float64(10),
+					Unit:              pulumi.String("percent"),
+				},
+			},
+			ScalingUpPolicies: azure.ElastigroupScalingUpPolicyArray{
+				&azure.ElastigroupScalingUpPolicyArgs{
+					ActionType: pulumi.String("setMinTarget"),
+					Cooldown:   pulumi.Int(60),
+					Dimensions: azure.ElastigroupScalingUpPolicyDimensionArray{
+						&azure.ElastigroupScalingUpPolicyDimensionArgs{
+							Name:  pulumi.String("resourceName"),
+							Value: pulumi.String("resource-name"),
+						},
+						&azure.ElastigroupScalingUpPolicyDimensionArgs{
+							Name:  pulumi.String("resourceGroupName"),
+							Value: pulumi.String("resource-group-name"),
+						},
+					},
+					EvaluationPeriods: pulumi.Int(10),
+					MetricName:        pulumi.String("CPUUtilization"),
+					MinTargetCapacity: pulumi.String("1"),
+					Namespace:         pulumi.String("Microsoft.Compute"),
+					Operator:          pulumi.String("gt"),
+					Period:            pulumi.Int(60),
+					PolicyName:        pulumi.String("policy-name"),
+					Statistic:         pulumi.String("average"),
+					Threshold:         pulumi.Float64(10),
+					Unit:              pulumi.String("percent"),
+				},
+			},
+			ScheduledTasks: azure.ElastigroupScheduledTaskArray{
+				&azure.ElastigroupScheduledTaskArgs{
+					Adjustment:           pulumi.String("2"),
+					AdjustmentPercentage: pulumi.String("50"),
+					BatchSizePercentage:  pulumi.String("33"),
+					CronExpression:       pulumi.String("* * * * *"),
+					GracePeriod:          pulumi.String("300"),
+					IsEnabled:            pulumi.Bool(true),
+					ScaleMaxCapacity:     pulumi.String("8"),
+					ScaleMinCapacity:     pulumi.String("5"),
+					ScaleTargetCapacity:  pulumi.String("6"),
+					TaskType:             pulumi.String("scale"),
+				},
+			},
+			ShutdownScript: pulumi.String(""),
+			Strategy: &azure.ElastigroupStrategyArgs{
+				DrainingTimeout: pulumi.Int(300),
+				OdCount:         pulumi.Int(1),
+			},
+			UserData: pulumi.String(""),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -467,7 +738,7 @@ test_azure_group = spotinst.azure.Elastigroup("testAzureGroup",
         "health_check_type": "INSTANCE_STATE",
     },
     images=[{
-        "marketplace": [{
+        "marketplaces": [{
             "offer": "UbuntuServer",
             "publisher": "Canonical",
             "sku": "16.04-LTS",
@@ -710,7 +981,7 @@ const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/azure/#Elastigroup">Elastigroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/azure/#pulumi_spotinst.azure.Elastigroup">Elastigroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2049,7 +2320,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

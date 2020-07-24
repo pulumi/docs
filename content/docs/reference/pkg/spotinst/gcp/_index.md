@@ -23,7 +23,7 @@ Explore the resources and functions of the gcp module in the Spotinst package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.6.0</dd>
+	<dd>2.7.0</dd>
 </dl>
 
 

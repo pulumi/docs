@@ -12,6 +12,74 @@ meta_desc: "Explore the Listener resource of the multai module, including exampl
 
 Provides a Spotinst Multai Listener.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_listener = spotinst.multai.Listener("myListener",
+    balancer_id="b-12345",
+    name="foo",
+    port=1337,
+    protocol="http",
+    tags=[{
+        "key": "env",
+        "value": "prod",
+    }],
+    tls_config={
+        "certificateIds": ["ce-12345"],
+        "cipherSuites": [""],
+        "maxVersion": "TLS12",
+        "minVersion": "TLS10",
+        "preferServerCipherSuites": True,
+        "sessionTicketsDisabled": False,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myListener = new spotinst.multai.Listener("my_listener", {
+    balancerId: "b-12345",
+    name: "foo",
+    port: 1337,
+    protocol: "http",
+    tags: [{
+        key: "env",
+        value: "prod",
+    }],
+    tlsConfig: {
+        certificateIds: ["ce-12345"],
+        cipherSuites: [""],
+        maxVersion: "TLS12",
+        minVersion: "TLS10",
+        preferServerCipherSuites: true,
+        sessionTicketsDisabled: false,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Listener Resource {#create}
@@ -23,7 +91,7 @@ Provides a Spotinst Multai Listener.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#Listener">Listener</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>tls_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.Listener">Listener</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>tls_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -534,7 +602,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>tls_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>tls_config=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

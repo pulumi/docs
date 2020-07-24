@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gke.NewOceanLaunchSpecImport(ctx, "example", &gke.OceanLaunchSpecImportArgs{
+			NodePoolName: pulumi.String("default-pool"),
+			OceanId:      pulumi.String("o-123456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,7 +101,7 @@ const example = new spotinst.gke.OceanLaunchSpecImport("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gke/#OceanLaunchSpecImport">OceanLaunchSpecImport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>node_pool_name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gke/#pulumi_spotinst.gke.OceanLaunchSpecImport">OceanLaunchSpecImport</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>node_pool_name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -271,7 +292,7 @@ The OceanLaunchSpecImport resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -300,7 +321,7 @@ The OceanLaunchSpecImport resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -329,7 +350,7 @@ The OceanLaunchSpecImport resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -358,7 +379,7 @@ The OceanLaunchSpecImport resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -459,7 +480,7 @@ Get an existing OceanLaunchSpecImport resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>node_pool_name=None<span class="p">, </span>ocean_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>node_pool_name=None<span class="p">, </span>ocean_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,7 +613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -621,7 +642,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -650,7 +671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
@@ -679,7 +700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create. 
+    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
 {{% /md %}}</dd>
 
 </dl>
