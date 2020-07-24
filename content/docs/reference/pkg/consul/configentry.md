@@ -14,8 +14,6 @@ The [Configuration Entry](https://www.consul.io/docs/agent/config_entries.html)
 resource can be used to provide cluster-wide defaults for various aspects of
 Consul.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -125,14 +123,234 @@ class MyStack : Stack
                  },
             }),
         });
+        var ingressGateway = new Consul.ConfigEntry("ingressGateway", new Consul.ConfigEntryArgs
+        {
+            Kind = "ingress-gateway",
+            ConfigJson = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "TLS", new Dictionary<string, object?>
+                {
+                    { "Enabled", true },
+                } },
+                { "Listeners", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Port", 8000 },
+                            { "Protocol", "http" },
+                            { "Services", new[]
+                                {
+                                    new Dictionary<string, object?>
+                                    {
+                                        { "Name", "*" },
+                                    },
+                                }
+                             },
+                        },
+                    }
+                 },
+            }),
+        });
+        var terminatingGateway = new Consul.ConfigEntry("terminatingGateway", new Consul.ConfigEntryArgs
+        {
+            Kind = "terminating-gateway",
+            ConfigJson = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Services", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Name", "billing" },
+                        },
+                    }
+                 },
+            }),
+        });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Config": map[string]interface{}{
+				"local_connect_timeout_ms": 1000,
+				"handshake_timeout_ms":     10000,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := consul.NewConfigEntry(ctx, "proxyDefaults", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("proxy-defaults"),
+			ConfigJson: pulumi.String(json0),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON1, err := json.Marshal(map[string]interface{}{
+			"Protocol": "http",
+		})
+		if err != nil {
+			return err
+		}
+		json1 := string(tmpJSON1)
+		_, err = consul.NewConfigEntry(ctx, "web", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-defaults"),
+			ConfigJson: pulumi.String(json1),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON2, err := json.Marshal(map[string]interface{}{
+			"Protocol": "http",
+		})
+		if err != nil {
+			return err
+		}
+		json2 := string(tmpJSON2)
+		_, err = consul.NewConfigEntry(ctx, "admin", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-defaults"),
+			ConfigJson: pulumi.String(json2),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON3, err := json.Marshal(map[string]interface{}{
+			"DefaultSubset": "v1",
+			"Subsets": map[string]interface{}{
+				"v1": map[string]interface{}{
+					"Filter": "Service.Meta.version == v1",
+				},
+				"v2": map[string]interface{}{
+					"Filter": "Service.Meta.version == v2",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json3 := string(tmpJSON3)
+		_, err = consul.NewConfigEntry(ctx, "serviceResolver", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-resolver"),
+			ConfigJson: pulumi.String(json3),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON4, err := json.Marshal(map[string]interface{}{
+			"Splits": []map[string]interface{}{
+				map[string]interface{}{
+					"Weight":        90,
+					"ServiceSubset": "v1",
+				},
+				map[string]interface{}{
+					"Weight":        10,
+					"ServiceSubset": "v2",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json4 := string(tmpJSON4)
+		_, err = consul.NewConfigEntry(ctx, "serviceSplitter", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-splitter"),
+			ConfigJson: pulumi.String(json4),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON5, err := json.Marshal(map[string]interface{}{
+			"Routes": []map[string]interface{}{
+				map[string]interface{}{
+					"Match": map[string]interface{}{
+						"HTTP": map[string]interface{}{
+							"PathPrefix": "/admin",
+						},
+					},
+					"Destination": map[string]interface{}{
+						"Service": "admin",
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json5 := string(tmpJSON5)
+		_, err = consul.NewConfigEntry(ctx, "serviceRouter", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-router"),
+			ConfigJson: pulumi.String(json5),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON6, err := json.Marshal(map[string]interface{}{
+			"TLS": map[string]interface{}{
+				"Enabled": true,
+			},
+			"Listeners": []map[string]interface{}{
+				map[string]interface{}{
+					"Port":     8000,
+					"Protocol": "http",
+					"Services": []map[string]interface{}{
+						map[string]interface{}{
+							"Name": "*",
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json6 := string(tmpJSON6)
+		_, err = consul.NewConfigEntry(ctx, "ingressGateway", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("ingress-gateway"),
+			ConfigJson: pulumi.String(json6),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON7, err := json.Marshal(map[string]interface{}{
+			"Services": []map[string]interface{}{
+				map[string]interface{}{
+					"Name": "billing",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json7 := string(tmpJSON7)
+		_, err = consul.NewConfigEntry(ctx, "terminatingGateway", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("terminating-gateway"),
+			ConfigJson: pulumi.String(json7),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -200,10 +418,33 @@ service_router = consul.ConfigEntry("serviceRouter",
             },
         }],
     }))
+ingress_gateway = consul.ConfigEntry("ingressGateway",
+    kind="ingress-gateway",
+    config_json=json.dumps({
+        "TLS": {
+            "Enabled": True,
+        },
+        "Listeners": [{
+            "Port": 8000,
+            "Protocol": "http",
+            "Services": [{
+                "Name": "*",
+            }],
+        }],
+    }))
+terminating_gateway = consul.ConfigEntry("terminatingGateway",
+    kind="terminating-gateway",
+    config_json=json.dumps({
+        "Services": [{
+            "Name": "billing",
+        }],
+    }))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -273,7 +514,31 @@ const serviceRouter = new consul.ConfigEntry("serviceRouter", {
         }],
     }),
 });
+const ingressGateway = new consul.ConfigEntry("ingressGateway", {
+    kind: "ingress-gateway",
+    configJson: JSON.stringify({
+        TLS: {
+            Enabled: true,
+        },
+        Listeners: [{
+            Port: 8000,
+            Protocol: "http",
+            Services: [{
+                Name: "*",
+            }],
+        }],
+    }),
+});
+const terminatingGateway = new consul.ConfigEntry("terminatingGateway", {
+    kind: "terminating-gateway",
+    configJson: JSON.stringify({
+        Services: [{
+            Name: "billing",
+        }],
+    }),
+});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -288,7 +553,7 @@ const serviceRouter = new consul.ConfigEntry("serviceRouter", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#ConfigEntry">ConfigEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_json=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.ConfigEntry">ConfigEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_json=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -711,7 +976,7 @@ Get an existing ConfigEntry resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config_json=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config_json=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

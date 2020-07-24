@@ -12,11 +12,9 @@ meta_desc: "Explore the License resource of the Consul package, including exampl
 
 > **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html).
 
-The `consul..License` resource provides datacenter-level management of
+The `consul.License` resource provides datacenter-level management of
 the Consul Enterprise license. If ACLs are enabled then a token with operator
 privileges may be required in order to use this command.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_consul as consul
 
 license = consul.License("license", license=(lambda path: open(path).read())("license.hclic"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -64,6 +65,7 @@ import * from "fs";
 
 const license = new consul.License("license", {license: fs.readFileSync("license.hclic")});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -78,7 +80,7 @@ const license = new consul.License("license", {license: fs.readFileSync("license
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#License">License</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>license=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.License">License</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>license=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -945,7 +947,7 @@ Get an existing License resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>customer_id=None<span class="p">, </span>datacenter=None<span class="p">, </span>expiration_time=None<span class="p">, </span>features=None<span class="p">, </span>flags=None<span class="p">, </span>installation_id=None<span class="p">, </span>issue_time=None<span class="p">, </span>license=None<span class="p">, </span>license_id=None<span class="p">, </span>product=None<span class="p">, </span>start_time=None<span class="p">, </span>valid=None<span class="p">, </span>warnings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>customer_id=None<span class="p">, </span>datacenter=None<span class="p">, </span>expiration_time=None<span class="p">, </span>features=None<span class="p">, </span>flags=None<span class="p">, </span>installation_id=None<span class="p">, </span>issue_time=None<span class="p">, </span>license=None<span class="p">, </span>license_id=None<span class="p">, </span>product=None<span class="p">, </span>start_time=None<span class="p">, </span>valid=None<span class="p">, </span>warnings=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

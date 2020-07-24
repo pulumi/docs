@@ -18,8 +18,6 @@ with a [local agent](https://www.consul.io/docs/agent/basics.html).
 If the Consul agent is running on the node where this service is registered, it is
 not recommended to use this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,10 +49,41 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		compute, err := consul.NewNode(ctx, "compute", &consul.NodeArgs{
+			Address: pulumi.String("www.google.com"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = consul.NewService(ctx, "google", &consul.ServiceArgs{
+			Node: compute.Name,
+			Port: pulumi.Int(80),
+			Tags: pulumi.StringArray{
+				pulumi.String("tag0"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +97,11 @@ google = consul.Service("google",
     port=80,
     tags=["tag0"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -84,6 +115,7 @@ const google = new consul.Service("google", {
     tags: ["tag0"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -98,7 +130,7 @@ const google = new consul.Service("google", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>enable_tag_override=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -315,6 +347,18 @@ address of the node.
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabletagoverride_csharp">
+<a href="#enabletagoverride_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_csharp">
@@ -444,6 +488,18 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabletagoverride_go">
+<a href="#enabletagoverride_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -577,6 +633,18 @@ address of the node.
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabletagoverride_nodejs">
+<a href="#enabletagoverride_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_nodejs">
@@ -706,6 +774,18 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_tag_override_python">
+<a href="#enable_tag_override_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tag_<wbr>override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -885,7 +965,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>enable_tag_override=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1033,6 +1113,18 @@ address of the node.
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enabletagoverride_csharp">
+<a href="#state_enabletagoverride_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_csharp">
@@ -1162,6 +1254,18 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enabletagoverride_go">
+<a href="#state_enabletagoverride_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1295,6 +1399,18 @@ address of the node.
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enabletagoverride_nodejs">
+<a href="#state_enabletagoverride_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tag<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_nodejs">
@@ -1424,6 +1540,18 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_tag_override_python">
+<a href="#state_enable_tag_override_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tag_<wbr>override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies to disable the
+anti-entropy feature for this service's tags. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"

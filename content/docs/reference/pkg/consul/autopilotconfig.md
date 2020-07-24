@@ -16,8 +16,6 @@ of Consul to automatically manage Consul servers.
 It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +40,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := consul.NewAutopilotConfig(ctx, "config", &consul.AutopilotConfigArgs{
+			CleanupDeadServers:   pulumi.Bool(false),
+			LastContactThreshold: pulumi.String("1s"),
+			MaxTrailingLogs:      pulumi.Int(500),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,9 +79,11 @@ config = consul.AutopilotConfig("config",
     last_contact_threshold="1s",
     max_trailing_logs=500)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -71,6 +94,7 @@ const config = new consul.AutopilotConfig("config", {
     maxTrailingLogs: 500,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -85,7 +109,7 @@ const config = new consul.AutopilotConfig("config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#AutopilotConfig">AutopilotConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.AutopilotConfig">AutopilotConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -768,7 +792,7 @@ Get an existing AutopilotConfig resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

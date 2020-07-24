@@ -15,10 +15,8 @@ rules for which services may connect to one another when using [Consul Connect](
 
 It is appropriate to either reference existing services or specify non-existent services
 that will be created in the future when creating intentions. This resource can be used
-in conjunction with the `consul..Service` datasource when referencing services
+in conjunction with the `consul.Service` datasource when referencing services
 registered on nodes that have a running Consul agent.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -44,10 +42,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := consul.NewIntention(ctx, "database", &consul.IntentionArgs{
+			Action:          pulumi.String("allow"),
+			DestinationName: pulumi.String("db"),
+			SourceName:      pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,9 +81,11 @@ database = consul.Intention("database",
     destination_name="db",
     source_name="api")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -73,6 +96,7 @@ const database = new consul.Intention("database", {
     sourceName: "api",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +111,7 @@ const database = new consul.Intention("database", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#Intention">Intention</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_name=None<span class="p">, </span>destination_namespace=None<span class="p">, </span>meta=None<span class="p">, </span>source_name=None<span class="p">, </span>source_namespace=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.Intention">Intention</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_name=None<span class="p">, </span>destination_namespace=None<span class="p">, </span>meta=None<span class="p">, </span>source_name=None<span class="p">, </span>source_namespace=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -710,7 +734,7 @@ Get an existing Intention resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_name=None<span class="p">, </span>destination_namespace=None<span class="p">, </span>meta=None<span class="p">, </span>source_name=None<span class="p">, </span>source_namespace=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_name=None<span class="p">, </span>destination_namespace=None<span class="p">, </span>meta=None<span class="p">, </span>source_name=None<span class="p">, </span>source_namespace=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

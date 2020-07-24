@@ -23,6 +23,7 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="agentservice" title="AgentService"><span class="symbol resource"></span>AgentService</a></li>
     <li><a href="autopilotconfig" title="AutopilotConfig"><span class="symbol resource"></span>AutopilotConfig</a></li>
     <li><a href="catalogentry" title="CatalogEntry"><span class="symbol resource"></span>CatalogEntry</a></li>
+    <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
     <li><a href="configentry" title="ConfigEntry"><span class="symbol resource"></span>ConfigEntry</a></li>
     <li><a href="intention" title="Intention"><span class="symbol resource"></span>Intention</a></li>
     <li><a href="keyprefix" title="KeyPrefix"><span class="symbol resource"></span>KeyPrefix</a></li>
@@ -68,7 +69,7 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 
