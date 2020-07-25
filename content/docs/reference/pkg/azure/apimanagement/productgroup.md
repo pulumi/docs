@@ -181,7 +181,7 @@ const exampleProductGroup = new azure.apimanagement.ProductGroup("exampleProduct
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ProductGroup">ProductGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>group_name=None<span class="p">, </span>product_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ProductGroup">ProductGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>group_name=None<span class="p">, </span>product_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -648,7 +648,7 @@ Get an existing ProductGroup resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_management_name=None<span class="p">, </span>group_name=None<span class="p">, </span>product_id=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_management_name=None<span class="p">, </span>group_name=None<span class="p">, </span>product_id=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

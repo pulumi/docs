@@ -182,7 +182,7 @@ const vm1 = new azure.backup.ProtectedVM("vm1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.ProtectedVM">ProtectedVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.ProtectedVM">ProtectedVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,7 +384,7 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -446,7 +446,7 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -508,7 +508,7 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -570,7 +570,7 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -693,7 +693,7 @@ Get an existing ProtectedVM resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -837,7 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

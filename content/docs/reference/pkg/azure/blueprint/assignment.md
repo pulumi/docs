@@ -22,7 +22,7 @@ meta_desc: "Explore the Assignment resource of the blueprint module, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/blueprint/#pulumi_azure.blueprint.Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>lock_exclude_principals=None<span class="p">, </span>lock_mode=None<span class="p">, </span>name=None<span class="p">, </span>parameter_values=None<span class="p">, </span>resource_groups=None<span class="p">, </span>target_subscription_id=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/blueprint/#pulumi_azure.blueprint.Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>lock_exclude_principals=None<span class="p">, </span>lock_mode=None<span class="p">, </span>name=None<span class="p">, </span>parameter_values=None<span class="p">, </span>resource_groups=None<span class="p">, </span>target_subscription_id=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -881,7 +881,7 @@ Get an existing Assignment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>blueprint_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>lock_exclude_principals=None<span class="p">, </span>lock_mode=None<span class="p">, </span>name=None<span class="p">, </span>parameter_values=None<span class="p">, </span>resource_groups=None<span class="p">, </span>target_subscription_id=None<span class="p">, </span>type=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>blueprint_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>lock_exclude_principals=None<span class="p">, </span>lock_mode=None<span class="p">, </span>name=None<span class="p">, </span>parameter_values=None<span class="p">, </span>resource_groups=None<span class="p">, </span>target_subscription_id=None<span class="p">, </span>type=None<span class="p">, </span>version_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

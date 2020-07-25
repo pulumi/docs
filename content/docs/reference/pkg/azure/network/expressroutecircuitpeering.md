@@ -217,7 +217,7 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_filter_id=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -480,6 +480,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="routefilterid_csharp">
+<a href="#routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
 </span> 
@@ -583,6 +594,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routefilterid_go">
+<a href="#routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,6 +716,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="routefilterid_nodejs">
+<a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span> 
@@ -797,6 +830,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_filter_id_python">
+<a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,7 +1084,7 @@ Get an existing ExpressRouteCircuitPeering resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>azure_asn=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_azure_port=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_azure_port=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>azure_asn=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_azure_port=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_filter_id=None<span class="p">, </span>secondary_azure_port=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1245,6 +1289,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routefilterid_csharp">
+<a href="#state_routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_secondaryazureport_csharp">
 <a href="#state_secondaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
 </span> 
@@ -1381,6 +1436,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_routefilterid_go">
+<a href="#state_routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,6 +1591,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routefilterid_nodejs">
+<a href="#state_routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_secondaryazureport_nodejs">
 <a href="#state_secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
 </span> 
@@ -1661,6 +1738,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_route_filter_id_python">
+<a href="#state_route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

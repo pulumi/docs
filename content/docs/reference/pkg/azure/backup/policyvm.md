@@ -297,7 +297,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1028,7 +1028,7 @@ Get an existing PolicyVM resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup=None<span class="p">, </span>name=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_daily=None<span class="p">, </span>retention_monthly=None<span class="p">, </span>retention_weekly=None<span class="p">, </span>retention_yearly=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

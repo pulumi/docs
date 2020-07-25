@@ -463,6 +463,16 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
+        <span id="trafficselectorpolicy_csharp">
+<a href="#trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -703,6 +713,16 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="trafficselectorpolicy_go">
+<a href="#trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -949,6 +969,16 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
+        <span id="trafficselectorpolicy_nodejs">
+<a href="#trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -1189,6 +1219,16 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="traffic_selector_policy_python">
+<a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Dict[Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1669,6 +1709,140 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetGatewayConnectionTrafficSelectorPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetGatewayConnectionTrafficSelectorPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetGatewayConnectionTrafficSelectorPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_csharp">
+<a href="#localaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of local CIDRs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_csharp">
+<a href="#remoteaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of remote CIDRs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_go">
+<a href="#localaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of local CIDRs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_go">
+<a href="#remoteaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of remote CIDRs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_nodejs">
+<a href="#localaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of local CIDRs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_nodejs">
+<a href="#remoteaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of remote CIDRs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_python">
+<a href="#localaddresscidrs_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of local CIDRs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_python">
+<a href="#remoteaddresscidrs_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of remote CIDRs.
 {{% /md %}}</dd>
 
 </dl>

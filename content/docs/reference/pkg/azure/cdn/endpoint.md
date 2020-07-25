@@ -46,7 +46,7 @@ class MyStack : Stack
                 new Azure.Cdn.Inputs.EndpointOriginArgs
                 {
                     Name = "example",
-                    HostName = "www.example.com",
+                    HostName = "www.contoso.com",
                 },
             },
         });
@@ -90,7 +90,7 @@ func main() {
 			Origins: cdn.EndpointOriginArray{
 				&cdn.EndpointOriginArgs{
 					Name:     pulumi.String("example"),
-					HostName: pulumi.String("www.example.com"),
+					HostName: pulumi.String("www.contoso.com"),
 				},
 			},
 		})
@@ -120,7 +120,7 @@ example_endpoint = azure.cdn.Endpoint("exampleEndpoint",
     resource_group_name=example_resource_group.name,
     origins=[{
         "name": "example",
-        "host_name": "www.example.com",
+        "host_name": "www.contoso.com",
     }])
 ```
 
@@ -144,7 +144,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     resourceGroupName: exampleResourceGroup.name,
     origins: [{
         name: "example",
-        hostName: "www.example.com",
+        hostName: "www.contoso.com",
     }],
 });
 ```
@@ -163,7 +163,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1290,7 +1290,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>host_name=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content_types_to_compresses=None<span class="p">, </span>delivery_rules=None<span class="p">, </span>geo_filters=None<span class="p">, </span>global_delivery_rule=None<span class="p">, </span>host_name=None<span class="p">, </span>is_compression_enabled=None<span class="p">, </span>is_http_allowed=None<span class="p">, </span>is_https_allowed=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>optimization_type=None<span class="p">, </span>origin_host_header=None<span class="p">, </span>origin_path=None<span class="p">, </span>origins=None<span class="p">, </span>probe_path=None<span class="p">, </span>profile_name=None<span class="p">, </span>querystring_caching_behaviour=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

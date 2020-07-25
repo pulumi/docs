@@ -65,6 +65,10 @@ class MyStack : Stack
             PolicyDefinitionId = exampleDefinition.Id,
             Description = "Policy Assignment created via an Acceptance Test",
             DisplayName = "My Example Policy Assignment",
+            Metadata = @"    {
+    ""category"": ""General""
+    }
+",
             Parameters = @"{
   ""allowedLocations"": {
     ""value"": [ ""West Europe"" ]
@@ -114,6 +118,7 @@ func main() {
 			PolicyDefinitionId: exampleDefinition.ID(),
 			Description:        pulumi.String("Policy Assignment created via an Acceptance Test"),
 			DisplayName:        pulumi.String("My Example Policy Assignment"),
+			Metadata:           pulumi.String(fmt.Sprintf("%v%v%v", "    {\n", "    \"category\": \"General\"\n", "    }\n")),
 			Parameters:         pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", "  \"allowedLocations\": {\n", "    \"value\": [ \"West Europe\" ]\n", "  }\n", "}\n")),
 		})
 		if err != nil {
@@ -164,6 +169,10 @@ example_assignment = azure.policy.Assignment("exampleAssignment",
     policy_definition_id=example_definition.id,
     description="Policy Assignment created via an Acceptance Test",
     display_name="My Example Policy Assignment",
+    metadata="""    {
+    "category": "General"
+    }
+""",
     parameters="""{
   "allowedLocations": {
     "value": [ "West Europe" ]
@@ -214,6 +223,10 @@ const exampleAssignment = new azure.policy.Assignment("exampleAssignment", {
     policyDefinitionId: exampleDefinition.id,
     description: "Policy Assignment created via an Acceptance Test",
     displayName: "My Example Policy Assignment",
+    metadata: `    {
+    "category": "General"
+    }
+`,
     parameters: `{
   "allowedLocations": {
     "value": [ "West Europe" ]
@@ -237,7 +250,7 @@ const exampleAssignment = new azure.policy.Assignment("exampleAssignment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enforcement_mode=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>not_scopes=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_id=None<span class="p">, </span>scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.Assignment">Assignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enforcement_mode=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>not_scopes=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_id=None<span class="p">, </span>scope=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,6 +502,17 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -603,6 +627,17 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,6 +760,17 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -839,6 +885,17 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,7 +1029,7 @@ Get an existing Assignment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enforcement_mode=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>not_scopes=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_id=None<span class="p">, </span>scope=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enforcement_mode=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>not_scopes=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_id=None<span class="p">, </span>scope=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1144,6 +1201,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1258,6 +1326,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1380,6 +1459,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1494,6 +1584,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

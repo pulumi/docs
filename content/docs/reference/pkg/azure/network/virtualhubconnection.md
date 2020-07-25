@@ -188,7 +188,7 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualHubConnection">VirtualHubConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hub_to_vitual_network_traffic_allowed=None<span class="p">, </span>internet_security_enabled=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vitual_network_to_hub_gateways_traffic_allowed=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualHubConnection">VirtualHubConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hub_to_vitual_network_traffic_allowed=None<span class="p">, </span>internet_security_enabled=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vitual_network_to_hub_gateways_traffic_allowed=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +743,7 @@ Get an existing VirtualHubConnection resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>hub_to_vitual_network_traffic_allowed=None<span class="p">, </span>internet_security_enabled=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vitual_network_to_hub_gateways_traffic_allowed=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>hub_to_vitual_network_traffic_allowed=None<span class="p">, </span>internet_security_enabled=None<span class="p">, </span>name=None<span class="p">, </span>remote_virtual_network_id=None<span class="p">, </span>virtual_hub_id=None<span class="p">, </span>vitual_network_to_hub_gateways_traffic_allowed=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -43,18 +43,17 @@ class MyStack : Stack
     }
 
 ",
-            PolicyDefinitions = @"    [
-        {
-            ""parameters"": {
-                ""listOfAllowedLocations"": {
-                    ""value"": ""[parameters('allowedLocations')]""
-                }
+            PolicyDefinitionReferences = 
+            {
+                new Azure.Policy.Inputs.PolicySetDefinitionPolicyDefinitionReferenceArgs
+                {
+                    Parameters = 
+                    {
+                        { "listOfAllowedLocations", "[parameters('allowedLocations')]" },
+                    },
+                    PolicyDefinitionId = "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
+                },
             },
-            ""policyDefinitionId"": ""/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988""
-        }
-    ]
-
-",
             PolicyType = "Custom",
         });
     }
@@ -78,10 +77,17 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := policy.NewPolicySetDefinition(ctx, "example", &policy.PolicySetDefinitionArgs{
-			DisplayName:       pulumi.String("Test Policy Set"),
-			Parameters:        pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "        \"allowedLocations\": {\n", "            \"type\": \"Array\",\n", "            \"metadata\": {\n", "                \"description\": \"The list of allowed locations for resources.\",\n", "                \"displayName\": \"Allowed locations\",\n", "                \"strongType\": \"location\"\n", "            }\n", "        }\n", "    }\n", "\n")),
-			PolicyDefinitions: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "    [\n", "        {\n", "            \"parameters\": {\n", "                \"listOfAllowedLocations\": {\n", "                    \"value\": \"[parameters('allowedLocations')]\"\n", "                }\n", "            },\n", "            \"policyDefinitionId\": \"/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988\"\n", "        }\n", "    ]\n", "\n")),
-			PolicyType:        pulumi.String("Custom"),
+			DisplayName: pulumi.String("Test Policy Set"),
+			Parameters:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "        \"allowedLocations\": {\n", "            \"type\": \"Array\",\n", "            \"metadata\": {\n", "                \"description\": \"The list of allowed locations for resources.\",\n", "                \"displayName\": \"Allowed locations\",\n", "                \"strongType\": \"location\"\n", "            }\n", "        }\n", "    }\n", "\n")),
+			PolicyDefinitionReferences: policy.PolicySetDefinitionPolicyDefinitionReferenceArray{
+				&policy.PolicySetDefinitionPolicyDefinitionReferenceArgs{
+					Parameters: pulumi.StringMap{
+						"listOfAllowedLocations": pulumi.String("[parameters('allowedLocations')]"),
+					},
+					PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988"),
+				},
+			},
+			PolicyType: pulumi.String("Custom"),
 		})
 		if err != nil {
 			return err
@@ -112,18 +118,12 @@ example = azure.policy.PolicySetDefinition("example",
     }
 
 """,
-    policy_definitions="""    [
-        {
-            "parameters": {
-                "listOfAllowedLocations": {
-                    "value": "[parameters('allowedLocations')]"
-                }
-            },
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988"
-        }
-    ]
-
-""",
+    policy_definition_references=[{
+        "parameters": {
+            "listOfAllowedLocations": "[parameters('allowedLocations')]",
+        },
+        "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
+    }],
     policy_type="Custom")
 ```
 
@@ -148,17 +148,12 @@ const example = new azure.policy.PolicySetDefinition("example", {
         }
     }
 `,
-    policyDefinitions: `    [
-        {
-            "parameters": {
-                "listOfAllowedLocations": {
-                    "value": "[parameters('allowedLocations')]"
-                }
-            },
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988"
-        }
-    ]
-`,
+    policyDefinitionReferences: [{
+        parameters: {
+            listOfAllowedLocations: "[parameters('allowedLocations')]",
+        },
+        policyDefinitionId: "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
+    }],
     policyType: "Custom",
 });
 ```
@@ -177,7 +172,7 @@ const example = new azure.policy.PolicySetDefinition("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.PolicySetDefinition">PolicySetDefinition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definitions=None<span class="p">, </span>policy_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.PolicySetDefinition">PolicySetDefinition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_references=None<span class="p">, </span>policy_definitions=None<span class="p">, </span>policy_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -439,6 +434,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policydefinitionreferences_csharp">
+<a href="#policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policydefinitions_csharp">
 <a href="#policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span> 
@@ -446,7 +452,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -545,6 +551,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policydefinitionreferences_go">
+<a href="#policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policydefinitions_go">
 <a href="#policydefinitions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span> 
@@ -552,7 +569,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -651,6 +668,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policydefinitionreferences_nodejs">
+<a href="#policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policydefinitions_nodejs">
 <a href="#policydefinitions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definitions</a>
 </span> 
@@ -658,7 +686,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -757,6 +785,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policy_definition_references_python">
+<a href="#policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policy_definitions_python">
 <a href="#policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
 </span> 
@@ -764,7 +803,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -864,7 +903,7 @@ Get an existing PolicySetDefinition resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definitions=None<span class="p">, </span>policy_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_definition_references=None<span class="p">, </span>policy_definitions=None<span class="p">, </span>policy_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1057,6 +1096,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policydefinitionreferences_csharp">
+<a href="#state_policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policydefinitions_csharp">
 <a href="#state_policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span> 
@@ -1064,7 +1114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1163,6 +1213,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policydefinitionreferences_go">
+<a href="#state_policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policydefinitions_go">
 <a href="#state_policydefinitions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span> 
@@ -1170,7 +1231,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1269,6 +1330,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policydefinitionreferences_nodejs">
+<a href="#state_policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policydefinitions_nodejs">
 <a href="#state_policydefinitions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definitions</a>
 </span> 
@@ -1276,7 +1348,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1375,6 +1447,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policy_definition_references_python">
+<a href="#state_policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policy_definitions_python">
 <a href="#state_policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
 </span> 
@@ -1382,7 +1465,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1399,6 +1482,190 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicySetDefinitionPolicyDefinitionReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#PolicySetDefinitionPolicyDefinitionReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#PolicySetDefinitionPolicyDefinitionReferenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Inputs.PolicySetDefinitionPolicyDefinitionReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.PolicySetDefinitionPolicyDefinitionReference.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_csharp">
+<a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceid_csharp">
+<a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_go">
+<a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceid_go">
+<a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_nodejs">
+<a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceid_nodejs">
+<a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_definition_id_python">
+<a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceid_python">
+<a href="#referenceid_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

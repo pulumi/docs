@@ -43,6 +43,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="publicip" title="PublicIp"><span class="symbol resource"></span>PublicIp</a></li>
     <li><a href="publicipprefix" title="PublicIpPrefix"><span class="symbol resource"></span>PublicIpPrefix</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="routefilter" title="RouteFilter"><span class="symbol resource"></span>RouteFilter</a></li>
     <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
     <li><a href="subnet" title="Subnet"><span class="symbol resource"></span>Subnet</a></li>
     <li><a href="subnetnatgatewayassociation" title="SubnetNatGatewayAssociation"><span class="symbol resource"></span>SubnetNatGatewayAssociation</a></li>
@@ -75,6 +76,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getpublicip" title="GetPublicIP"><span class="symbol function"></span>GetPublicIP</a></li>
     <li><a href="getpublicips" title="GetPublicIPs"><span class="symbol function"></span>GetPublicIPs</a></li>
     <li><a href="getpublicipprefix" title="GetPublicIpPrefix"><span class="symbol function"></span>GetPublicIpPrefix</a></li>
+    <li><a href="getroutefilter" title="GetRouteFilter"><span class="symbol function"></span>GetRouteFilter</a></li>
     <li><a href="getroutetable" title="GetRouteTable"><span class="symbol function"></span>GetRouteTable</a></li>
     <li><a href="getservicetags" title="GetServiceTags"><span class="symbol function"></span>GetServiceTags</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
@@ -93,7 +95,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.12.1</dd>
+	<dd>3.13.0</dd>
 </dl>
 
 

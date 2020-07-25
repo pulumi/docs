@@ -314,7 +314,7 @@ const exampleNetworkInterfaceNatRuleAssociation = new azure.network.NetworkInter
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceNatRuleAssociation">NetworkInterfaceNatRuleAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_configuration_name=None<span class="p">, </span>nat_rule_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkInterfaceNatRuleAssociation">NetworkInterfaceNatRuleAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_configuration_name=None<span class="p">, </span>nat_rule_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +737,7 @@ Get an existing NetworkInterfaceNatRuleAssociation resource's state with the giv
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ip_configuration_name=None<span class="p">, </span>nat_rule_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ip_configuration_name=None<span class="p">, </span>nat_rule_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

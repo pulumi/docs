@@ -270,7 +270,7 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -913,7 +913,7 @@ Get an existing NetworkWatcherFlowLog resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>network_security_group_id=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>traffic_analytics=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

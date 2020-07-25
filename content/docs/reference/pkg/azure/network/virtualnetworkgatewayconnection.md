@@ -712,7 +712,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGatewayConnection">VirtualNetworkGatewayConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorization_key=None<span class="p">, </span>connection_protocol=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>express_route_circuit_id=None<span class="p">, </span>express_route_gateway_bypass=None<span class="p">, </span>ipsec_policy=None<span class="p">, </span>local_network_gateway_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peer_virtual_network_gateway_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_weight=None<span class="p">, </span>shared_key=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>use_policy_based_traffic_selectors=None<span class="p">, </span>virtual_network_gateway_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGatewayConnection">VirtualNetworkGatewayConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorization_key=None<span class="p">, </span>connection_protocol=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>express_route_circuit_id=None<span class="p">, </span>express_route_gateway_bypass=None<span class="p">, </span>ipsec_policy=None<span class="p">, </span>local_network_gateway_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peer_virtual_network_gateway_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_weight=None<span class="p">, </span>shared_key=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_selector_policy=None<span class="p">, </span>type=None<span class="p">, </span>use_policy_based_traffic_selectors=None<span class="p">, </span>virtual_network_gateway_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1086,6 +1086,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicy_csharp">
+<a href="#trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepolicybasedtrafficselectors_csharp">
 <a href="#usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span> 
@@ -1302,6 +1315,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficselectorpolicy_go">
+<a href="#trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1526,6 +1552,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicy_nodejs">
+<a href="#trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepolicybasedtrafficselectors_nodejs">
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span> 
@@ -1746,6 +1785,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="traffic_selector_policy_python">
+<a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="use_policy_based_traffic_selectors_python">
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span> 
@@ -1855,7 +1907,7 @@ Get an existing VirtualNetworkGatewayConnection resource's state with the given 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorization_key=None<span class="p">, </span>connection_protocol=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>express_route_circuit_id=None<span class="p">, </span>express_route_gateway_bypass=None<span class="p">, </span>ipsec_policy=None<span class="p">, </span>local_network_gateway_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peer_virtual_network_gateway_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_weight=None<span class="p">, </span>shared_key=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>use_policy_based_traffic_selectors=None<span class="p">, </span>virtual_network_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorization_key=None<span class="p">, </span>connection_protocol=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>express_route_circuit_id=None<span class="p">, </span>express_route_gateway_bypass=None<span class="p">, </span>ipsec_policy=None<span class="p">, </span>local_network_gateway_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peer_virtual_network_gateway_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_weight=None<span class="p">, </span>shared_key=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_selector_policy=None<span class="p">, </span>type=None<span class="p">, </span>use_policy_based_traffic_selectors=None<span class="p">, </span>virtual_network_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2143,6 +2195,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trafficselectorpolicy_csharp">
+<a href="#state_trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -2359,6 +2424,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_trafficselectorpolicy_go">
+<a href="#state_trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2583,6 +2661,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trafficselectorpolicy_nodejs">
+<a href="#state_trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2799,6 +2890,19 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_traffic_selector_policy_python">
+<a href="#state_traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
+Only one block can be defined for a connection.
+For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3287,6 +3391,132 @@ or `None`.
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayConnectionTrafficSelectorPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayConnectionTrafficSelectorPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayConnectionTrafficSelectorPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_csharp">
+<a href="#localaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_csharp">
+<a href="#remoteaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_go">
+<a href="#localaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_go">
+<a href="#remoteaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_nodejs">
+<a href="#localaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_nodejs">
+<a href="#remoteaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localaddresscidrs_python">
+<a href="#localaddresscidrs_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remoteaddresscidrs_python">
+<a href="#remoteaddresscidrs_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

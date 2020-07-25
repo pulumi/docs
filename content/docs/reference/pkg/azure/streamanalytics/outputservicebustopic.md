@@ -210,7 +210,7 @@ const exampleOutputServicebusTopic = new azure.streamanalytics.OutputServicebusT
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.OutputServicebusTopic">OutputServicebusTopic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>serialization=None<span class="p">, </span>servicebus_namespace=None<span class="p">, </span>shared_access_policy_key=None<span class="p">, </span>shared_access_policy_name=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.OutputServicebusTopic">OutputServicebusTopic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>serialization=None<span class="p">, </span>servicebus_namespace=None<span class="p">, </span>shared_access_policy_key=None<span class="p">, </span>shared_access_policy_name=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -853,7 +853,7 @@ Get an existing OutputServicebusTopic resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>serialization=None<span class="p">, </span>servicebus_namespace=None<span class="p">, </span>shared_access_policy_key=None<span class="p">, </span>shared_access_policy_name=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>topic_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>serialization=None<span class="p">, </span>servicebus_namespace=None<span class="p">, </span>shared_access_policy_key=None<span class="p">, </span>shared_access_policy_name=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>topic_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

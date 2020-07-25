@@ -200,7 +200,7 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionRuleSuppression">ActionRuleSuppression</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>suppression=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionRuleSuppression">ActionRuleSuppression</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>suppression=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,7 +843,7 @@ Get an existing ActionRuleSuppression resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>suppression=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scope=None<span class="p">, </span>suppression=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1683,8 +1683,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetresourcetype_python">
-<a href="#targetresourcetype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
+        <span id="target_resource_type_python">
+<a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actionrulesuppressionconditiontargetresourcetype">Dict[Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type]</a></span>
