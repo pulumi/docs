@@ -117,7 +117,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys/#Provision">Provision</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_ratio=None<span class="p">, </span>disk_ratio=None<span class="p">, </span>full_path=None<span class="p">, </span>level=None<span class="p">, </span>memory_ratio=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys/#pulumi_f5bigip.sys.Provision">Provision</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_ratio=None<span class="p">, </span>disk_ratio=None<span class="p">, </span>full_path=None<span class="p">, </span>level=None<span class="p">, </span>memory_ratio=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -672,7 +672,7 @@ Get an existing Provision resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cpu_ratio=None<span class="p">, </span>disk_ratio=None<span class="p">, </span>full_path=None<span class="p">, </span>level=None<span class="p">, </span>memory_ratio=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cpu_ratio=None<span class="p">, </span>disk_ratio=None<span class="p">, </span>full_path=None<span class="p">, </span>level=None<span class="p">, </span>memory_ratio=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

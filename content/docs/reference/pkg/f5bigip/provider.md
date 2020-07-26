@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/f5bigip/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>login_ref=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>token_auth=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>login_ref=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>teem_disable=None<span class="p">, </span>token_auth=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -255,6 +255,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="teemdisable_csharp">
+<a href="#teemdisable_csharp" style="color: inherit; text-decoration: inherit;">Teem<wbr>Disable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If this flag set to true,sending telemetry data to TEEM will be disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tokenauth_csharp">
 <a href="#tokenauth_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Auth</a>
 </span> 
@@ -324,6 +335,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Management Port to connect to Bigip
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teemdisable_go">
+<a href="#teemdisable_go" style="color: inherit; text-decoration: inherit;">Teem<wbr>Disable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If this flag set to true,sending telemetry data to TEEM will be disabled
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -401,6 +423,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="teemdisable_nodejs">
+<a href="#teemdisable_nodejs" style="color: inherit; text-decoration: inherit;">teem<wbr>Disable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If this flag set to true,sending telemetry data to TEEM will be disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tokenauth_nodejs">
 <a href="#tokenauth_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Auth</a>
 </span> 
@@ -470,6 +503,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Management Port to connect to Bigip
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teem_disable_python">
+<a href="#teem_disable_python" style="color: inherit; text-decoration: inherit;">teem_<wbr>disable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If this flag set to true,sending telemetry data to TEEM will be disabled
 {{% /md %}}</dd>
 
     <dt class="property-optional"

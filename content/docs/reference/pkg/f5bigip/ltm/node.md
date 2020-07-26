@@ -140,7 +140,7 @@ const node = new f5bigip.ltm.Node("node", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#Node">Node</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Node">Node</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -867,7 +867,7 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

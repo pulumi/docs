@@ -87,7 +87,7 @@ const as3_example1 = new f5bigip.As3("as3-example1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/f5bigip/#As3">As3</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>as3_json=None<span class="p">, </span>tenant_filter=None<span class="p">, </span>tenant_list=None<span class="p">, </span>tenant_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.As3">As3</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_list=None<span class="p">, </span>as3_json=None<span class="p">, </span>tenant_filter=None<span class="p">, </span>tenant_list=None<span class="p">, </span>tenant_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -272,6 +272,17 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationlist_csharp">
+<a href="#applicationlist_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tenantfilter_csharp">
 <a href="#tenantfilter_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Filter</a>
 </span> 
@@ -319,6 +330,17 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationlist_go">
+<a href="#applicationlist_go" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,6 +396,17 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationlist_nodejs">
+<a href="#applicationlist_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tenantfilter_nodejs">
 <a href="#tenantfilter_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Filter</a>
 </span> 
@@ -421,6 +454,17 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_list_python">
+<a href="#application_list_python" style="color: inherit; text-decoration: inherit;">application_<wbr>list</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,7 +598,7 @@ Get an existing As3 resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>as3_json=None<span class="p">, </span>tenant_filter=None<span class="p">, </span>tenant_list=None<span class="p">, </span>tenant_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_list=None<span class="p">, </span>as3_json=None<span class="p">, </span>tenant_filter=None<span class="p">, </span>tenant_list=None<span class="p">, </span>tenant_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -670,6 +714,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_applicationlist_csharp">
+<a href="#state_applicationlist_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_as3json_csharp">
 <a href="#state_as3json_csharp" style="color: inherit; text-decoration: inherit;">As3Json</a>
 </span> 
@@ -718,6 +773,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_applicationlist_go">
+<a href="#state_applicationlist_go" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -772,6 +838,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_applicationlist_nodejs">
+<a href="#state_applicationlist_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_as3json_nodejs">
 <a href="#state_as3json_nodejs" style="color: inherit; text-decoration: inherit;">as3Json</a>
 </span> 
@@ -820,6 +897,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_application_list_python">
+<a href="#state_application_list_python" style="color: inherit; text-decoration: inherit;">application_<wbr>list</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Application
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

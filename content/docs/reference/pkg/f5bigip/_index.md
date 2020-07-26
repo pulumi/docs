@@ -24,6 +24,9 @@ A Pulumi package for creating and managing F5 BigIP resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="as3" title="As3"><span class="symbol resource"></span>As3</a></li>
+    <li><a href="bigiqas3" title="BigIqAs3"><span class="symbol resource"></span>BigIqAs3</a></li>
+    <li><a href="command" title="Command"><span class="symbol resource"></span>Command</a></li>
+    <li><a href="commonlicensemanagebigiq" title="CommonLicenseManageBigIq"><span class="symbol resource"></span>CommonLicenseManageBigIq</a></li>
     <li><a href="do" title="Do"><span class="symbol resource"></span>Do</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
@@ -37,7 +40,7 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 

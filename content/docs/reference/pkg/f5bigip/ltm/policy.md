@@ -180,7 +180,7 @@ const test_policy = new f5bigip.ltm.Policy("test-policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -735,7 +735,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
