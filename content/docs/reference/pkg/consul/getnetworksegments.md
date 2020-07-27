@@ -15,8 +15,6 @@ meta_desc: "Explore the GetNetworkSegments function of the Consul package, inclu
 The `consul_network_segment` data source can be used to retrieve the network
 segments defined in the configuration.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,10 +37,30 @@ class MyStack : Stack
     public Output<string> Segments { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		segmentsNetworkSegments, err := consul.GetNetworkSegments(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("segments", segmentsNetworkSegments.Segments)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -53,9 +71,11 @@ import pulumi_consul as consul
 segments_network_segments = consul.get_network_segments()
 pulumi.export("segments", segments_network_segments.segments)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -63,6 +83,7 @@ import * as consul from "@pulumi/consul";
 const segmentsNetworkSegments = consul.getNetworkSegments({});
 export const segments = segmentsNetworkSegments.then(segmentsNetworkSegments => segmentsNetworkSegments.segments);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

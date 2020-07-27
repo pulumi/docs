@@ -12,9 +12,7 @@ meta_desc: "Explore the Namespace resource of the Consul package, including exam
 
 > **NOTE:** This feature requires Consul Enterprise.
 
-The `consul..Namespace` resource provides isolated [Consul Enterprise Namespaces](https://www.consul.io/docs/enterprise/namespaces/index.html).
-
-
+The `consul.Namespace` resource provides isolated [Consul Enterprise Namespaces](https://www.consul.io/docs/enterprise/namespaces/index.html).
 
 {{% examples %}}
 ## Example Usage
@@ -42,10 +40,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := consul.NewNamespace(ctx, "production", &consul.NamespaceArgs{
+			Description: pulumi.String("Production namespace"),
+			Meta: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,9 +81,11 @@ production = consul.Namespace("production",
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -73,6 +97,7 @@ const production = new consul.Namespace("production", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +112,7 @@ const production = new consul.Namespace("production", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#Namespace">Namespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>policy_defaults=None<span class="p">, </span>role_defaults=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.Namespace">Namespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>policy_defaults=None<span class="p">, </span>role_defaults=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +635,7 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>policy_defaults=None<span class="p">, </span>role_defaults=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>policy_defaults=None<span class="p">, </span>role_defaults=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

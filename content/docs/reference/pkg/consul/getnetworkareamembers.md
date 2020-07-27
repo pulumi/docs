@@ -12,83 +12,9 @@ meta_desc: "Explore the GetNetworkAreaMembers function of the Consul package, in
 
 > **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html).
 
-The `consul..getNetworkAreaMembers` data source provides a list of the Consul
+The `consul.getNetworkAreaMembers` data source provides a list of the Consul
 servers present in a specific network area.
 
-
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Consul = Pulumi.Consul;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dc2NetworkArea = new Consul.NetworkArea("dc2NetworkArea", new Consul.NetworkAreaArgs
-        {
-            PeerDatacenter = "dc2",
-            RetryJoins = 
-            {
-                "1.2.3.4",
-            },
-            UseTls = true,
-        });
-        var dc2NetworkAreaMembers = dc2NetworkArea.Id.Apply(id => Consul.GetNetworkAreaMembers.InvokeAsync(new Consul.GetNetworkAreaMembersArgs
-        {
-            Uuid = id,
-        }));
-        this.Members = dc2NetworkAreaMembers.Apply(dc2NetworkAreaMembers => dc2NetworkAreaMembers.Members);
-    }
-
-    [Output("members")]
-    public Output<string> Members { get; set; }
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_consul as consul
-
-dc2_network_area = consul.NetworkArea("dc2NetworkArea",
-    peer_datacenter="dc2",
-    retry_joins=["1.2.3.4"],
-    use_tls=True)
-dc2_network_area_members = dc2_network_area.id.apply(lambda id: consul.get_network_area_members(uuid=id))
-pulumi.export("members", dc2_network_area_members.members)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as consul from "@pulumi/consul";
-
-const dc2NetworkArea = new consul.NetworkArea("dc2NetworkArea", {
-    peerDatacenter: "dc2",
-    retryJoins: ["1.2.3.4"],
-    useTls: true,
-});
-const dc2NetworkAreaMembers = dc2NetworkArea.id.apply(id => consul.getNetworkAreaMembers({
-    uuid: id,
-}));
-export const members = dc2NetworkAreaMembers.members;
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNetworkAreaMembers {#using}

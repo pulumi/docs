@@ -12,15 +12,13 @@ meta_desc: "Explore the NetworkArea resource of the Consul package, including ex
 
 > **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html).
 
-The `consul..NetworkArea` resource manages a relationship between servers in two
+The `consul.NetworkArea` resource manages a relationship between servers in two
 different Consul datacenters.
 
 Unlike Consul's WAN feature, network areas use just the server RPC port for
 communication, and relationships can be made between independent pairs of
 datacenters, so not all servers need to be fully connected. This allows for
 complex topologies among Consul datacenters like hub/spoke and more general trees.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -49,10 +47,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := consul.NewNetworkArea(ctx, "dc2", &consul.NetworkAreaArgs{
+			PeerDatacenter: pulumi.String("dc2"),
+			RetryJoins: pulumi.StringArray{
+				pulumi.String("1.2.3.4"),
+			},
+			UseTls: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,9 +88,11 @@ dc2 = consul.NetworkArea("dc2",
     retry_joins=["1.2.3.4"],
     use_tls=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -78,6 +103,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     useTls: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -92,7 +118,7 @@ const dc2 = new consul.NetworkArea("dc2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/consul/#NetworkArea">NetworkArea</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>peer_datacenter=None<span class="p">, </span>retry_joins=None<span class="p">, </span>token=None<span class="p">, </span>use_tls=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.NetworkArea">NetworkArea</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>peer_datacenter=None<span class="p">, </span>retry_joins=None<span class="p">, </span>token=None<span class="p">, </span>use_tls=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -623,7 +649,7 @@ Get an existing NetworkArea resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>datacenter=None<span class="p">, </span>peer_datacenter=None<span class="p">, </span>retry_joins=None<span class="p">, </span>token=None<span class="p">, </span>use_tls=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>datacenter=None<span class="p">, </span>peer_datacenter=None<span class="p">, </span>retry_joins=None<span class="p">, </span>token=None<span class="p">, </span>use_tls=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
