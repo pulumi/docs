@@ -22,7 +22,7 @@ meta_desc: "Explore the SelfSignedCert resource of the TLS package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/tls/#SelfSignedCert">SelfSignedCert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_uses=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.SelfSignedCert">SelfSignedCert</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_uses=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -239,7 +239,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -376,7 +376,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -513,7 +513,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -650,7 +650,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1013,7 +1013,7 @@ Get an existing SelfSignedCert resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_uses=None<span class="p">, </span>cert_pem=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>ready_for_renewal=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_end_time=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>validity_start_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_uses=None<span class="p">, </span>cert_pem=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>ready_for_renewal=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_end_time=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>validity_start_time=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1252,7 +1252,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1434,7 +1434,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1616,7 +1616,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1798,7 +1798,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls..CertRequest`.
+corresponding block for `tls.CertRequest`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
