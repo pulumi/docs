@@ -49,7 +49,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := multai.NewRoutingRule(ctx, "myRoutingRule", &multai.RoutingRuleArgs{
+			BalancerId: pulumi.String("b-12345"),
+			ListenerId: pulumi.String("l-98765"),
+			Route:      pulumi.String("Path(`/bar`)"),
+			Strategy:   pulumi.String("LEASTCONN"),
+			Tags: multai.RoutingRuleTagArray{
+				&multai.RoutingRuleTagArgs{
+					Key:   pulumi.String("env"),
+					Value: pulumi.String("prod"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,7 +131,7 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#RoutingRule">RoutingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.RoutingRule">RoutingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -733,7 +762,7 @@ Get an existing RoutingRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -50,7 +50,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := multai.NewTarget(ctx, "myTarget", &multai.TargetArgs{
+			BalancerId: pulumi.String("b-12345"),
+			Host:       pulumi.String("host"),
+			Port:       pulumi.Int(1338),
+			Tags: multai.TargetTagArray{
+				&multai.TargetTagArgs{
+					Key:   pulumi.String("env"),
+					Value: pulumi.String("prod"),
+				},
+			},
+			TargetSetId: pulumi.String("l-98765"),
+			Weight:      pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,7 +135,7 @@ const myTarget = new spotinst.multai.Target("my_target", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -704,7 +734,7 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

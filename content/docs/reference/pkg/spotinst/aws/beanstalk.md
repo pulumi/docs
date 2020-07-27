@@ -50,6 +50,19 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -74,12 +87,12 @@ class MyStack : Stack
                 AutomaticRoll = true,
                 BatchSizePercentage = 100,
                 GracePeriod = 90,
-                Strategy = 
+                Strategies = 
                 {
-                    
+                    new SpotInst.Aws.Inputs.BeanstalkDeploymentPreferencesStrategyArgs
                     {
-                        { "action", "REPLACE_SERVER" },
-                        { "shouldDrainInstances", true },
+                        Action = "REPLACE_SERVER",
+                        ShouldDrainInstances = true,
                     },
                 },
             },
@@ -112,7 +125,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewBeanstalk(ctx, "elastigoup_aws_beanstalk", &aws.BeanstalkArgs{
+			BeanstalkEnvironmentId:   pulumi.String("e-example"),
+			BeanstalkEnvironmentName: pulumi.String("example-env"),
+			DeploymentPreferences: &aws.BeanstalkDeploymentPreferencesArgs{
+				AutomaticRoll:       pulumi.Bool(true),
+				BatchSizePercentage: pulumi.Int(100),
+				GracePeriod:         pulumi.Int(90),
+				Strategies: aws.BeanstalkDeploymentPreferencesStrategyArray{
+					&aws.BeanstalkDeploymentPreferencesStrategyArgs{
+						Action:               pulumi.String("REPLACE_SERVER"),
+						ShouldDrainInstances: pulumi.Bool(true),
+					},
+				},
+			},
+			DesiredCapacity: pulumi.Int(0),
+			InstanceTypesSpots: pulumi.StringArray{
+				pulumi.String("t2.micro"),
+				pulumi.String("t2.medium"),
+				pulumi.String("t2.large"),
+			},
+			ManagedActions: &aws.BeanstalkManagedActionsArgs{
+				PlatformUpdate: &aws.BeanstalkManagedActionsPlatformUpdateArgs{
+					PerformAt:   pulumi.String("timeWindow"),
+					TimeWindow:  pulumi.String("Mon:23:50-Tue:00:20"),
+					UpdateLevel: pulumi.String("minorAndPatch"),
+				},
+			},
+			MaxSize: pulumi.Int(1),
+			MinSize: pulumi.Int(0),
+			Product: pulumi.String("Linux/UNIX"),
+			Region:  pulumi.String("us-west-2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,7 +189,7 @@ elastigoup_aws_beanstalk = spotinst.aws.Beanstalk("elastigoup-aws-beanstalk",
         "automaticRoll": True,
         "batchSizePercentage": 100,
         "grace_period": 90,
-        "strategy": [{
+        "strategies": [{
             "action": "REPLACE_SERVER",
             "shouldDrainInstances": True,
         }],
@@ -205,7 +267,7 @@ const elastigoup_aws_beanstalk = new spotinst.aws.Beanstalk("elastigoup-aws-bean
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#Beanstalk">Beanstalk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>beanstalk_environment_id=None<span class="p">, </span>beanstalk_environment_name=None<span class="p">, </span>deployment_preferences=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>maintenance=None<span class="p">, </span>managed_actions=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Beanstalk">Beanstalk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>beanstalk_environment_id=None<span class="p">, </span>beanstalk_environment_name=None<span class="p">, </span>deployment_preferences=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>maintenance=None<span class="p">, </span>managed_actions=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +514,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +663,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,7 +812,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,7 +961,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1064,7 +1126,7 @@ Get an existing Beanstalk resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>beanstalk_environment_id=None<span class="p">, </span>beanstalk_environment_name=None<span class="p">, </span>deployment_preferences=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>maintenance=None<span class="p">, </span>managed_actions=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>scheduled_tasks=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>beanstalk_environment_id=None<span class="p">, </span>beanstalk_environment_name=None<span class="p">, </span>deployment_preferences=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>instance_types_spots=None<span class="p">, </span>maintenance=None<span class="p">, </span>managed_actions=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>scheduled_tasks=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1186,7 +1248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,7 +1397,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1484,7 +1546,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1633,7 +1695,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+    <dd>{{% md %}}The id of an existing Beanstalk environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2041,7 +2103,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool value if to wait to drain instance 
+    <dd>{{% md %}}Bool value if to wait to drain instance
 {{% /md %}}</dd>
 
 </dl>
@@ -2070,7 +2132,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool value if to wait to drain instance 
+    <dd>{{% md %}}Bool value if to wait to drain instance
 {{% /md %}}</dd>
 
 </dl>
@@ -2099,7 +2161,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Bool value if to wait to drain instance 
+    <dd>{{% md %}}Bool value if to wait to drain instance
 {{% /md %}}</dd>
 
 </dl>
@@ -2128,7 +2190,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool value if to wait to drain instance 
+    <dd>{{% md %}}Bool value if to wait to drain instance
 {{% /md %}}</dd>
 
 </dl>

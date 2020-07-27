@@ -60,7 +60,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := multai.NewTargetSet(ctx, "myTargetSet", &multai.TargetSetArgs{
+			BalancerId:   pulumi.String("b-12345"),
+			DeploymentId: pulumi.String("dp-12345"),
+			HealthCheck: &multai.TargetSetHealthCheckArgs{
+				HealthyThreshold:   pulumi.Int(3),
+				Interval:           pulumi.Int(20),
+				Path:               pulumi.String("/"),
+				Port:               pulumi.Int(3001),
+				Protocol:           pulumi.String("http"),
+				Timeout:            pulumi.Int(5),
+				UnhealthyThreshold: pulumi.Int(3),
+			},
+			Port:     pulumi.Int(1338),
+			Protocol: pulumi.String("http"),
+			Tags: multai.TargetSetTagArray{
+				&multai.TargetSetTagArgs{
+					Key:   pulumi.String("env"),
+					Value: pulumi.String("prod"),
+				},
+			},
+			Weight: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -133,7 +172,7 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#TargetSet">TargetSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>health_check=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.TargetSet">TargetSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>health_check=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +811,7 @@ Get an existing TargetSet resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>health_check=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>balancer_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>health_check=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>tags=None<span class="p">, </span>weight=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
