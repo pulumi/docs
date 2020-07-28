@@ -83,6 +83,14 @@ check_links:
 	$(MAKE) ensure
 	./scripts/check-links.sh www
 
+.PHONY: new_learn_module
+new_learn_module:
+	./scripts/new-learn-module.sh
+
+.PHONY: new_learn_topic
+new_learn_topic:
+	./scripts/new-learn-topic.sh
+
 .PHONY: ci_push
 ci_push::
 	$(MAKE) banner
