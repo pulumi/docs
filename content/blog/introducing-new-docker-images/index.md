@@ -258,7 +258,7 @@ As you can see below, the uncompressed images are up to six times smaller than t
 [pulumi/pulumi-go:2.4.0](https://hub.docker.com/layers/pulumi/pulumi-go/2.4.0/images/sha256-5374f4e78ec0c3bfb2e31aa40de647186a4ed3ec5447503bb99853d4ebf32d99?context=explore) | 208.7MB | 592MB
 [pulumi/pulumi-go:2.4.0-ubi](https://hub.docker.com/layers/pulumi/pulumi-go/2.4.0-ubi/images/sha256-e039133008638c3300a1b518383906e6bb832010b3f5f6c30b4386f95169e904?context=explore) | 255.07MB | 701MB
 [pulumi/pulumi-nodejs:2.4.0](https://hub.docker.com/layers/pulumi/pulumi-nodejs/2.4.0/images/sha256-e8b2be79dd4f0ed67251265fa3c803d3bb4df220351a23ba6be1226cbca12549?context=explore) | 121MB | 341MB
-[pulumi/pulumi-nodejs:2.4.0-ubi](https://hub.docker.com/layers/pulumi/pulumi-nodejs/2.4.0/images/sha256-e8b2be79dd4f0ed67251265fa3c803d3bb4df220351a23ba6be1226cbca12549?context=explore) | 149.37MB | 439MB
+[pulumi/pulumi-nodejs:2.4.0-ubi](https://hub.docker.com/layers/pulumi/pulumi-nodejs/2.4.0-ubi/images/sha256-1ceca8ba7f48460456d11b525355cc98e42356f60c955aafef244e17bfe176b2?context=explore) | 149.37MB | 439MB
 [pulumi/pulumi-dotnet:2.4.0](https://hub.docker.com/layers/pulumi/pulumi-dotnet/2.4.0/images/sha256-fe989abf02b01569f3fa01a4553f271dbbde71a550eb826c1ee19e45efa6ca96?context=explore) | 213.08MB |  598MB
 [pulumi/pulumi-dotnet:2.4.0-ubi](https://hub.docker.com/layers/pulumi/pulumi-dotnet/2.4.0-ubi/images/sha256-b8512a747a7fb7a0d94ec30d1dde822264946fced7a46da717ce7e001589b6af?context=explore) | 241.39MB | 677MB
 [pulumi/pulumi-python:2.4.0](https://hub.docker.com/layers/pulumi/pulumi-python/2.4.0/images/sha256-831e33017d4d9f49df846b603abe6214ce059b3141c42dfc9d53b447215eccd1?context=explore) | 106.48MB | 308MB
