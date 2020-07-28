@@ -20,36 +20,113 @@
             <div class="max-w-4xl">
                 <h2>What is Kubernetes?</h2>
                 <p>
-                    Kubernetes is a system for automating the deployment, scaling, and
+                    Kubernetes is a resilient architecture for automating the deployment, scaling, and
                     management of containerized applications.
                 </p>
                 <p>
-                    As an open-source system, it is becoming widely deployed in on-premises
+                    It is widely deployed in on-premises
                     data centers, self-hosted on cloud infrastructure, or as a cloud managed
                     service, such as Google GKE, Azure AKS, and Amazon EKS.
                 </p>
             </div>
         </div>
     </section>
-    <section id="kubernetes-everywhere" class="py-16 px-4">
+    <section id="superpowers" class="py-16 px-4">
+        <div class="container md:mx-auto">
+            <div class="max-w-4xl">
+                <h2>Superpowers</h2>
+                <p>
+                    <b>Multi-cloud Kubernetes</b>
+                    <p>
+                    Create clusters at scale on all the clouds and on-premises and deploy
+                    <a href="https://www.pulumi.com/blog/multicloud-app/">your apps into those clusters with
+                    ease.</a>
+                    </p>
+                    <b>No YAML or YAML, your choice:</b>
+                    <p>
+                    Use existing YAML manifests and Helm charts with your Pulumi programs or define resources
+                    in Python, JavaScript, TypeScript, Go, and .NET languages. The Pulumi YAML converter can
+                    translate your old YAML manifests into modern code and Pulumi can even export your modern
+                    cloud programs into Kubernetes YAML.
+                    </p>
+                    <b>Cloud native tools:</b>
+                    <p>
+                        <ul>
+                            <li>Kustomize</li>
+                            <li>Custom Resource Definitions</li>
+                            <li>Open Policy Agent</li>
+                        </ul>
+                    </p>
+                    <b>Automated deployments</b>
+                    <p>
+                        <ul>
+                            <li>CI/CD integrations</li>
+                            <li>Spinnaker</li>
+                        </ul>
+                    </p>
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="kubernetes-everywhere" class="py-16 bg-gray-200 px-4">
         <div class="container md:mx-auto ">
             <div class="max-w-4xl">
-                <h2>Kubernetes Everywhere</h2>
-                <p>
-                    Pulumi's Cloud Native SDK makes it easy to target any Kubernetes
-                    environment to provision a cluster, configure and deploy applications, and
-                    update them as required.
-                </p>
-                <p>
-                    Pulumi uses real code which makes it easy, and efficient, for the
-                    development inner loop, at the same time as unlocking more complicated,
-                    real-world DevOps scenarios.
-                </p>
-                <p>
-                    Pulumi works with Minikube, on-premises and cloud-hosted custom Kubernetes
-                    clusters, and the managed services from Google (GKE), Azure (AKS), and
-                    Amazon (EKS).
-                </p>
+                <h2>The Pulumi Advantage</h2>
+                    <h3>For Developers</h3>
+                        <p>
+                            <b>Use the full Kubernetes API surface</b> – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go)
+                            are generated from the OpenAPI spec. This is critical because it means that resource definitions in any
+                            language are a 1:1 match with the upstream API. In the example below, the deployment manifest on the left
+                            corresponds to the TypeScript on the right.
+                        </p>
+                        <p>
+                            <b>Conditional logic</b> – Another significant drawback of YAML is the lack of conditional logic. It’s common to change
+                            parameters depending on the environment, but this usually calls for separate tools to template your YAML. With
+                            Pulumi, this logic can go right into your resource definitions. It’s common to develop your application locally
+                            using minikube, which doesn’t natively support LoadBalancer Services. On the other hand, many cloud deployments
+                            do use a LoadBalancer Service to route traffic.
+                        </p>
+                        <p>
+                            <b>Strongly typed resources</b> – A tricky part about defining Kubernetes resources in YAML/JSON is the lack of typing.
+                            It’s hard to track typos, and you have to apply the resource to a cluster to get any feedback. Pulumi helps here
+                            by showing type information right in the SDK.
+                        </p>
+                        <p>
+                            <b>Readiness logic</b> – Pulumi includes readiness logic to help you understand when your Kubernetes resources are ready.
+                            This makes it easy to integrate Kubernetes workflows into CI systems! Unlike kubectl apply, Pulumi doesn’t indicate
+                            success until all of the resources are ready to go. Let Pulumi worry about the bookkeeping so you can focus on more
+                            interesting matters.
+                        </p>
+                        <p>
+                            <b>Deprecation warnings</b> – Pulumi warns you if you’re using Kubernetes resources with deprecated apiVersions,
+                            and gives you info about which versions remove them entirely. Don’t be caught by surprise when you upgrade your
+                            clusters!
+                        </p>
+                    <h3>For Operators</h3>
+                        <p>
+                            <b>Manage Kubernetes clusters</b> – With Pulumi, you can manage every layer of your stack, from specifying a custom VPC
+                            to deploying Kubernetes clusters! Check out this example where we create clusters on AWS, AKS, and GKE, and then
+                            deploy an app to all of them.
+                        </p>
+                        <p>
+                            <b>Use existing YAML manifests</b> – Many of us already have a pile of YAML Kubernetes definitions to manage. Manage these
+                            manifests directly; no conversion needed! Pulumi shows detailed previews and allows you to run arbitrary
+                            transformations on the YAML before it is applied.
+                        </p>
+                        <p>
+                            <b>Helm support</b> – Pulumi lets you manage Helm charts similarly to our YAML support. It’s common for organizations to fork
+                            upstream charts to customize a few values, but this can often be avoided with the use of transformations in Pulumi.
+                        </p>
+                        <p>
+                            <b>Extension libraries</b> – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a
+                            lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access
+                            to the full API surface if you need it.
+                        </p>
+                        <p>
+                            <b>YAML export</b> – Pulumi lets you export YAML manifests from the resource definitions in your program. This can be useful for
+                            integrating with other systems that expect Kubernetes YAML.
+                        </p>
                 <ul class="flex list-none mt-8 p-0">
                     <li><img class="h-8 mr-6" src="/logos/tech/logo-minikube.png" alt="MiniKube" title="MiniKube"></li>
                     <li><img class="h-8 mx-6" src="/logos/tech/logo-kubernetes.png" alt="Kubernetes" title="Kubernetes"></li>
@@ -60,7 +137,7 @@
             </div>
         </div>
     </section>
-    <section id="code" class="py-16 bg-gray-200 px-4">
+    <section id="code" class="py-16 px-4">
         {{ range .Params.examples }}
             <div id="{{ .id }}" class="container md:mx-auto md:flex">
                 <div class="md:w-1/2">
@@ -79,11 +156,6 @@
         {{ end }}
     </section>
 
-    {{ partial "how-pulumi-works.html" . }}
-
-    {{ partial "get-started.html" . }}
-
     {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 
-    {{ partial "more-from-pulumi.html" . }}
 {{ end }}
