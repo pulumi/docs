@@ -8,6 +8,12 @@ source ./scripts/common.sh
 # existing, previously tested bucket or to make a new one. It expects to be run on GitHub
 # Actions push events only.
 
+curl \
+  -H "Accept: application/vnd.github.groot-preview+json" \
+  https://api.github.com/repos/cnunciato/actions-testing/commits/cfee5e33ecd8e32bdf7fd15c1238dbd832a20723/pulls | jq -r '.[0].head.sha'
+
+exit
+
 build_and_sync_bucket() {
     echo "Making a new bucket..."
     ./scripts/build-site.sh
@@ -26,6 +32,8 @@ if [[ "$GITHUB_EVENT_NAME" == "push" && ! -z "$GITHUB_EVENT_PATH" ]]; then
         # directly to master. In these cases, we build and test a new bucket before
         # deploying it in a later step. Otherwise, if we do find a bucket associated with
         # the merged commit, we run a few checks, and if things look good, we exit.
+        #
+        # It's also common for the merged commit to be something other than the commit that triggered the build; squashed merges, for example, will generate new commits and subsequent GitHub Actions events that contain no reference to the commit that triggered the build. To handle these cases, we have to query GitHub to determine whether the merged commit is related to any PRs, and if so, use the commits on this PRs
 
         # Query AWS Parameter Store for a bucket associated with the referenced commit.
         candidate_bucket="$(aws ssm get-parameter \

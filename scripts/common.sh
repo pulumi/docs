@@ -31,12 +31,19 @@ post_github_pr_comment() {
         $pr_comment_api_url > /dev/null
 }
 
+# Returns the Git SHA of the HEAD commit. For pull requests, we take this from GitHub event metadata, since in that case, the HEAD commit will contain the SHA of the merge commit with the base branch.
 git_sha() {
-    echo "$(git rev-parse HEAD)"
+    if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
+        echo "$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request.head.sha")"
+    else
+        echo "$(git rev-parse HEAD)"
+    fi
 }
 
+# Returns the shortened version of either the GITHUB_SHA, if present, or that of the most
+# recent commit.
 git_sha_short() {
-    echo "$(git rev-parse --short HEAD)"
+    echo "$(git_sha)" | cut -c1-8
 }
 
 origin_bucket_prefix() {
@@ -55,7 +62,7 @@ pr_number_or_git_sha() {
     if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
         echo "pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
     else
-        echo "push-${GITHUB_SHA:=$(git_sha_short)}"
+        echo "push-$(git_sha_short)"
     fi
 }
 
