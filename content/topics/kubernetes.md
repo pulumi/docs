@@ -8,12 +8,13 @@ meta_desc: Pulumi provides a cloud native programming model for Kubernetes deplo
 hero:
     title: Kubernetes with Pulumi
     body: >
-        Pulumi provides a cloud native programming model for Kubernetes
-        deployments and orchestration: from on-premises to AWS EKS, Microsoft
-        AKS, and Google GKE.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna
+        libero, viverra eu odio eget, finibus sodales orci. Donec ut nulla sit
+        amet nisi dictum suscipit. Vestibulum maximus dui id lacinia dignissim.
+        In quis turpis convallis, consequat libero ac, aliquet erat.
 
 
-        Any code, any cloud, any language.
+        Lorem ipsum dolor sit amet, consectetur.
     code: |
         import * as kx from "@pulumi/kubernetesx";
 
@@ -34,110 +35,113 @@ hero:
 
         export const serviceIP = service.ip;
 
-sections:
-    - id: code
-      label: Code
-    - id: get-started
-      label: Get Started
-    - id: contact
-      label: Contact Us
+kubernetes_overview:
+    title: Vestibulum maximus dui
+    description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis, velit felis placerat tortor, eu laoreet dolor dui id nunc.
+    list:
+        - Nam iaculis felis at arcu auctor pretium. Proin interdum mollis aliquam.
+        - Phasellus nisl nulla, dapibus id facilisis vel, vestibulum et velit. Ut porttitor libero nec quam porttitor pretium. Vestibulum ante ipsum primis in faucibus orci.
+        - Nulla ultrices est at orci egestas consectetur.
+    cta: REQUEST MORE INFORMATION
 
-kubernetes_crosswalk:
-    code: |
-        import * as gcp from "@pulumi/gcp";
-        import * as k8s from "@pulumi/kubernetes";
+superpowers:
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: cloud
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-        // Create a GKE cluster.
-        const cluster = new gcp.container.Cluster("gke-cluster");
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: provisioning
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-        // Create a performant node pool in the cluster.
-        const performantNodes = new gcp.container.NodePool("performant-nodes", {
-            cluster: cluster.name,
-            nodeConfig: { machineType: "n1-standard-16"}
-        });
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: delivery
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-        // Create an Apps namespace.
-        const appsNamespace = new k8s.core.v1.Namespace("apps");
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: architecture
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-        // Create a quota.
-        const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
-            spec: {hard: {cpu: "200", memory: "1Gi", pods: "10"}},
-        })
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: policy
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-        // Create a restrictive PodSecurityPolicy.
-        const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
-            spec: { privileged: false,
-                runAsUser: { rule: "RunAsAny" }, fsGroup: { rule: "RunAsAny" },
-                seLinux: { rule: "RunAsAny" }, supplementalGroups: { rule: "RunAsAny" },
-            }
-        });
+    - title: Vestibulum maximus dui
+      cta: Learn more
+      ctaUrl: "/docs/get-started"
+      iconType: testing
+      description: |
+        Donec auctor massa eu est gravida, et sollicitudin elit congue.
+        Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis,
+        velit felis placerat tortor, eu laoreet dolor dui id nunc.
 
-examples:
-    - title: Use existing YAML and Helm Charts
-      body: >
-          Pulumi can also process YAML and Helm Charts, adding them to Pulumi programs which unlocks multi-cloud and advanced delivery scenarios.
+detail_sections:
+    - title: Vestibulum maximus dui
+      description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis.
+      cta: Contact Us
+      ctaUrl: "/contact.md"
+      items:
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-car-side
 
-          These examples use YAML and Helm to deploy the Kubernetes Guestbook app and Wordpress.
-      code: |
-          // Use YAML.
-          import * as k8s from "@pulumi/kubernetes";
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-book
 
-          const guestbook = new k8s.yaml.ConfigGroup(
-              "guestbook", { files: "guestbook/*.yaml" });
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-key
 
-          export const frontendIp =
-              guestbook.getResource("v1/Service", "frontend").
-              spec.apply(spec => spec.clusterIP);
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-people-carry
 
-          // Use Helm.
-          import * as k8s from "@pulumi/kubernetes";
+    - title: Vestibulum maximus dui
+      description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo. Phasellus blandit, velit at pretium convallis.
+      cta: Contact Us
+      ctaUrl: "/contact.md"
+      items:
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-user-tie
 
-          const wordpress = new k8s.helm.v2.Chart("wordpress", {
-              repo: "stable",
-              version: "2.1.3",
-              chart: "wordpress"
-          });
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-phone
 
-          export const frontendIp = wordpress
-              .getResource("v1/Service", "wpdev-wordpress")
-              .status.apply(status => status.loadBalancer.ingress[0].ip);
-      cta:
-          id: get-started-kubernetes-yaml-helm
-          url: /docs/get-started/kubernetes/
-          label: TRY IT NOW
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-chalkboard-teacher
 
-    - title: Provision Kubernetes clusters in any cloud
-      body: >
-          Kubernetes can be used in many environments &mdash; local dev, in the data center, self-hosted
-          in the cloud, and as a managed cloud service. Pulumi supports all of those options.
-
-          In this example, we show how to deploy a GKE cluster with configurable settings, which
-          can then be used to deploy apps to.
-      code: |
-          import * as gcp from "@pulumi/gcp";
-          import { nodeCount, nodeMachineType, password, username } from "./config";
-
-          const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
-          export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
-              initialNodeCount: nodeCount,
-              minMasterVersion: engineVersion,
-              nodeVersion: engineVersion,
-              masterAuth: { username, password },
-              nodeConfig: {
-                  machineType: nodeMachineType,
-                  oauthScopes: [
-                      "https://www.googleapis.com/auth/compute",
-                      "https://www.googleapis.com/auth/devstorage.read_only",
-                      "https://www.googleapis.com/auth/logging.write",
-                      "https://www.googleapis.com/auth/monitoring"
-                  ],
-              },
-          });
-
-      cta:
-          id: get-started-kubernetes-multi-cloud
-          url: /docs/get-started/kubernetes/
-          label: GET STARTED
+          - title: Vestibulum maximus dui
+            description: Donec auctor massa eu est gravida, et sollicitudin elit congue. Aliquam eu ligula leo.
+            icon: fa-pager
 
 contact_us_form:
     section_id: contact

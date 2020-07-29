@@ -4,8 +4,14 @@
             <div class="header-hero-item pr-20">
                 <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
-                <h3 class="text-white">Create an Account</h3>
-                {{ partial "create-account-cta" }}
+                <div class="header-hero-actions">
+                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started/kubernetes" }}">
+                        Get Started
+                    </a>
+                    <a class="btn btn-lg btn-orange-translucent" href="#contact">
+                        Request a demo
+                    </a>
+                </div>
             </div>
             <div class="header-hero-item">
                 {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
@@ -15,119 +21,154 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ $pageContext := . }}
 
-    <section id="logos" class="py-16 bg-gray-200 px-4 md:px-0">
+    <!-- Customer logos -->
+    <section id="customers" class="mb-16 px-4">
         <h2 class="text-center">Powering top engineering teams</h2>
         <div class="container mx-auto">
             <div class="lg:flex items-center justify-center my-4">
-                <a id="lemonade-logo" href="https://www.tableau.com/" target="_blank" track-click>
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
                 </a>
-                <a id="mercedes-logo" href="https://mbrdna.com/" target="_blank" track-click>
-                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
-                <a id="mindbody-logo" href="https://www.mindbodyonline.com/" target="_blank" track-click>
-                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/mercedes-benz" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
-                <a id="nih-logo" href="https://www.nih.gov/" target="_blank" track-click>
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
-                <a id="snopes-logo" href="https://www.snopes.com/" target="_blank" track-click>
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
-                <a id="lemonade-logo" href="https://www.lemonade.com/" target="_blank" track-click>
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                </a>
+                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                </a>
+                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
+                </a>
+                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.lykke.com/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lykke_logo.svg" alt="Lykke" title="Lykke">
+                </a>
+                <a data-track="customer-logo" href="https://www.ware2go.co/" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-5 mx-8" src="/logos/customers/ware2go_logo.png" title="Ware2Go" alt="Ware2Go">
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/credijusto" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/credijusto_logo.svg" alt="Credijusto" title="Credijusto">
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/menta-network" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/menta_logo.svg" alt="Menta Network" title="Menta Network">
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="kubernetes-cake" class="py-8 bg-white px-4 md:px-0">
+    <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 md:px-0">
         <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-last mt-16 md:w-2/5 md:order-none split-section--left">
-                <h2>Pulumi's Kubernetes Platform</h2>
-                <p>
-                    The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and
-                    deployment of app workloads to clusters. Users of Kubernetes and Pulumi can:
-                </p>
-                <ul>
-                    <li>Provision self-managed (open source) and managed Kubernetes clusters from the major cloud providers.</li>
-                    <li>Increase productivity using the power of dev tools such as IDE auto-completion, type & error checking, linting, refactoring,
-                        and testing frameworks to validate Kubernetes clusters, app workloads, or both.</li>
-                    <li>And more...</li>
-                </ul>
-                <a id="kubernetes-request-more-information" class="btn inline-block split-section--cta-btn" href="#contact" track-click>
-                    REQUEST MORE INFORMATION
-                </a>
-            </div>
-            <div class="w1/1 order-first md:w-3/5 md:order-none split-section--right">
+            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
                 <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
-        </div>
-    </section>
-
-    <section id="k8s-crosswalk" class="py-8 bg-white px-4 md:px-0">
-        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-last mt-16 md:mt-0 md:w-3/5 md:order-none split-section--left">
-                {{ partial "code" (dict "code" .Params.kubernetes_crosswalk.code "lang" "js" "mode" "dark") }}
-            </div>
-            <div class="w1/1 order-first md:w-2/5 md:order-none split-section--right">
-                <h2>Crosswalk for Kubernetes - Playbooks for Infrastructure</h2>
-                <p>
-                    Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings
-                    such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes
-                    Engine (GKE). Benefit from tried-and-true Day Two and beyond integrations and playbooks, improving your
-                    organization's security, manageability, and cost effectiveness.
-                </p>
-                <p>
-                    With Pulumi's unique approach to infrastructure as code, you'll focus more on code and business logic,
-                    and less on YAML or DSL configuration languages.
-                </p>
-                <a id="kubernetes-crosswalk-learn-more" class="btn inline-block split-section--cta-btn"
-                   href="/docs/guides/crosswalk/kubernetes/" track-click>
-                    LEARN MORE
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="code" class="py-8 bg-gray-200 px-4 md:px-0">
-        {{ range $index, $val := .Params.examples }}
-            <div id="{{ $val.id }}" class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-                {{ if not (modBool $index 2) }}
-                    <div class="w1/1 order-last md:w-3/5 md:order-none split-section--left">
-                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
-                    </div>
-                    <div class="w1/1 order-first md:w-2/5 md:order-none split-section--right">
-                        <h2>{{ $val.title }}</h2>
-                        <p>
-                            {{ $val.body | safeHTML }}
-                        </p>
-                        <a id="{{ $val.cta.id }}" class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}" track-click>
-                            {{ $val.cta.label }}
-                        </a>
-                    </div>
-                {{ else }}
-                    <div class="w1/1 order-first md:w-2/5 md:order-none split-section--left">
-                        <h2>{{ $val.title }}</h2>
-                        <p>
-                            {{ $val.body | safeHTML }}
-                        </p>
-                        <a id="{{ $val.cta.id }}" class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}" track-click>
-                            {{ $val.cta.label }}
-                        </a>
-                    </div>
-                    <div class="w1/1 order-last md:text-base md:w-3/5 md:order-none split-section--right">
-                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
-                    </div>
+            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
+                {{ with .Params.kubernetes_overview }}
+                    <h2>{{ .title }}</h2>
+                    <p>{{ .description }}</p>
+                    <ul>
+                        {{ range $i, $item := .list }}
+                            <li>{{ $item }}</li>
+                        {{ end }}
+                    </ul>
+                    <a id="kubernetes-request-more-information" class="btn inline-block split-section--cta-btn" href="#contact" track-click>
+                        {{ .cta }}
+                    </a>
                 {{ end }}
             </div>
-        {{ end }}
+        </div>
     </section>
 
-    {{ partial "how-pulumi-works-lite.html" . }}
+    <section class="bg-white pt-24 px-4 justify-center" id="editions">
+        <div class="container mx-auto lg:flex justify-center">
+            <ul class="flex flex-col md:flex-row md:flex-wrap items-start list-none p-0">
+                {{ range $i, $item := .Params.superpowers }}
+                    {{ $testHref := "/docs/get-started" }}
+                    <li class="md:w-1/2 md:flex items-start mt-0">
+                        <div class="text-center md:text-left mb-4 md:mb-0">
+                            <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                                {{ partial "superpower-icons.html" (dict "type" $item.iconType) }}
+                            </div>
+                        </div>
+                        <div class="md:pl-6 md:pr-12">
+                            <h3 class="text-center md:text-left font-normal text-gray-800 text-3xl mt-0" >
+                                <a href="{{ relref $pageContext $item.ctaUrl }}">
+                                    <span class="align-middle text-blue-700">{{ $item.title }}</span>
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">{{ $item.description }}</p>
+                            <p class="m-0 text-lg text-center md:text-left">
+                                <a href="{{ relref $pageContext $item.ctaUrl }}">
+                                    <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
+                                    <span class="text-blue-400">&rarr;</span>
+                                </a>
+                            </p>
+                            <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
 
-    <section id="get-started" class="bg-white py-16 px-4 md:px-0">
+    {{ range $index, $item := .Params.detail_sections }}
+        {{ $bgColor := "bg-gray-100" }}
+        {{ $iconColor := "text-purple-100" }}
+        {{ $ctaButtonColor := "btn-orange" }}
+        {{ if not (modBool $index 2) }}
+            {{ $bgColor = "bg-white" }}
+            {{ $iconColor = "text-orange-300" }}
+            {{ $ctaButtonColor = "btn-purple" }}
+        {{ end }}
+
+        <section id="teams" class="{{ $bgColor }} py-16 px-4">
+            <div class="container md:mx-auto md:flex">
+                <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                    <h2>{{ $item.title }}</h2>
+                    <p class="text-xl">{{ $item.description }}</p>
+                    <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.ctaUrl }}">
+                        {{ $item.cta }}
+                    </a>
+                </div>
+                <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
+                    {{ range $i, $row := $item.items }}
+                        <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
+                            <div class="flex items-start">
+                                <i class="w-12 mr-4 fas fa-2x {{ $row.icon }} {{ $iconColor }}"></i>
+                                <div>
+                                    <h5>{{ $row.title }}</h5>
+                                    <p class="text-sm">{{ $row.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+    {{ end }}
+
+    <section id="get-started" class="bg-gray-100 py-16 px-4 md:px-0">
             <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
                 <div class="md:w3-/12 mr-4">
                     <h2>Get Started with Pulumi</h2>
@@ -160,7 +201,7 @@
             </div>
         </section>
 
-    <section id="contact" class="bg-gray-200 mb-0 py-16 text-white px-4 md:px-0">
+    <section id="contact" class="bg-white mb-0 py-16 text-white px-4 md:px-0">
         <div class="container mx-auto max-w-5xl bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
             <div class="md:flex my-8 md:max-w-32 align-top">
                 <div class="md:w-1/2">
