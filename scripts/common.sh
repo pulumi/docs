@@ -39,6 +39,10 @@ git_sha_short() {
     echo "$(git rev-parse --short HEAD)"
 }
 
+origin_bucket_prefix() {
+    echo "pulumi-docs-origin"
+}
+
 # Returns the name of the metadata file we expect to exist locally before running Pulumi.
 origin_bucket_metadata_filepath() {
     echo "./origin-bucket-metadata.json"
@@ -58,7 +62,7 @@ pr_number_or_git_sha() {
 # Get the AWS SSM Parameter Store key for the specified commit SHA. Used for mapping a
 # commit to a previously created bucket.
 ssm_parameter_key_for_commit() {
-    echo "pulumi-docs-bucket-for-commit-$1"
+    echo "/docs/commits/$1/bucket"
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.

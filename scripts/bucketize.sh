@@ -25,13 +25,13 @@ metadata_file="$(origin_bucket_metadata_filepath)"
 
 # Verify we have at least 1000 index.html files in total across the site.
 if [ ! "$(find $build_dir -type f | grep index.html | wc -l)" -ge 1000 ]; then
-    echo "Page-count check failed. See the archive extraction log above for details."
+    echo "Page-count check failed. Exiting."
     exit 1
 fi
 
 # For previews, name the destination bucket with the PR number, to reduce the number of
 # buckets we create and to facilitate shorter sync times.
-destination_bucket="pulumi-docs-origin-$(pr_number_or_git_sha)"
+destination_bucket="$(origin_bucket_prefix)-$(pr_number_or_git_sha)"
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
