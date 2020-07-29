@@ -8,16 +8,25 @@ source ./scripts/common.sh
 # existing, previously tested bucket or to make a new one. It expects to be run on GitHub
 # Actions push events only.
 
-curl \
-  -H "Accept: application/vnd.github.groot-preview+json" \
-  https://api.github.com/repos/cnunciato/actions-testing/commits/cfee5e33ecd8e32bdf7fd15c1238dbd832a20723/pulls | jq -r '.[0].head.sha'
-
-exit
-
 build_and_sync_bucket() {
     echo "Making a new bucket..."
     ./scripts/build-site.sh
     ./scripts/bucketize.sh
+}
+
+get_bucket_for_commit() {
+    aws ssm get-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --query Parameter.Value \
+        --region us-west-2 \
+        --output text || echo ""
+}
+
+get_associated_pr_commit_for_commit() {
+    # Note that this uses a GitHub preview API.
+    # https://docs.github.com/en/rest/reference/repos#list-pull-requests-associated-with-a-commit
+    curl -H "Accept: application/vnd.github.groot-preview+json" \
+        "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/$1/pulls" | jq -r '.[0].head.sha' || echo ""
 }
 
 # Examine GitHub event metadata. If it's a push, and there's a referenced commit, find the
@@ -32,17 +41,22 @@ if [[ "$GITHUB_EVENT_NAME" == "push" && ! -z "$GITHUB_EVENT_PATH" ]]; then
         # directly to master. In these cases, we build and test a new bucket before
         # deploying it in a later step. Otherwise, if we do find a bucket associated with
         # the merged commit, we run a few checks, and if things look good, we exit.
-        #
-        # It's also common for the merged commit to be something other than the commit that triggered the build; squashed merges, for example, will generate new commits and subsequent GitHub Actions events that contain no reference to the commit that triggered the build. To handle these cases, we have to query GitHub to determine whether the merged commit is related to any PRs, and if so, use the commits on this PRs
 
         # Query AWS Parameter Store for a bucket associated with the referenced commit.
-        candidate_bucket="$(aws ssm get-parameter \
-            --name "$(ssm_parameter_key_for_commit $merged_commit)" \
-            --query Parameter.Value \
-            --region us-west-2 \
-            --output text || echo '')"
+        candidate_bucket="$(get_bucket_for_commit $merged_commit)"
 
-        # If a matching bucket wasn't found, make one.
+        # If a matching bucket wasn't found, check to see whether the merged commit
+        # relates to a PR, and if it does (e.g., when a PR is squashed-and-merged), check
+        # to see whether the PR's HEAD commit has an associated bucket.
+        if [ -z "$candidate_bucket" ]; then
+            pr_commit="$(get_associated_pr_commit_for_commit $merged_commit)"
+
+            if [ ! -z "$pr_commit" ]; then
+                candidate_bucket="$(get_bucket_for_commit $pr_commit)"
+            fi
+        fi
+
+        # Otherwise, if a matching bucket wasn't found, just make one.
         if [ -z "$candidate_bucket" ]; then
             echo "Push event detected, but there doesn't seem to be a bucket associated with the referenced commit ${merged_commit}."
             build_and_sync_bucket
