@@ -15,8 +15,6 @@ create and manage applications on Mailgun.
 
 After DNS records are set, domain verification should be triggered manually using [PUT /domains/\<domain\>/verify](https://documentation.mailgun.com/en/latest/api-domains.html#domains)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,16 +33,40 @@ class MyStack : Stack
         var @default = new Mailgun.Domain("default", new Mailgun.DomainArgs
         {
             Region = "us",
+            SmtpPassword = "supersecretpassword1234",
             SpamAction = "disabled",
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := mailgun.NewDomain(ctx, "_default", &mailgun.DomainArgs{
+			Region:       pulumi.String("us"),
+			SmtpPassword: pulumi.String("supersecretpassword1234"),
+			SpamAction:   pulumi.String("disabled"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,11 +77,14 @@ import pulumi_mailgun as mailgun
 # Create a new Mailgun domain
 default = mailgun.Domain("default",
     region="us",
+    smtp_password="supersecretpassword1234",
     spam_action="disabled")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mailgun from "@pulumi/mailgun";
@@ -67,9 +92,11 @@ import * as mailgun from "@pulumi/mailgun";
 // Create a new Mailgun domain
 const defaultDomain = new mailgun.Domain("default", {
     region: "us",
+    smtpPassword: "supersecretpassword1234",
     spamAction: "disabled",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -84,7 +111,7 @@ const defaultDomain = new mailgun.Domain("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/mailgun/#Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>spam_action=None<span class="p">, </span>wildcard=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mailgun/#pulumi_mailgun.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>smtp_password=None<span class="p">, </span>spam_action=None<span class="p">, </span>wildcard=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,6 +307,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="smtppassword_csharp">
+<a href="#smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for SMTP authentication
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spamaction_csharp">
 <a href="#spamaction_csharp" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
 </span> 
@@ -330,6 +368,17 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smtppassword_go">
+<a href="#smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,6 +437,17 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="smtppassword_nodejs">
+<a href="#smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for SMTP authentication
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spamaction_nodejs">
 <a href="#spamaction_nodejs" style="color: inherit; text-decoration: inherit;">spam<wbr>Action</a>
 </span> 
@@ -438,6 +498,17 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smtp_password_python">
+<a href="#smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -526,17 +597,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The login email for the SMTP server.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="smtppassword_csharp">
-<a href="#smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password to the SMTP server.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -585,17 +645,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="smtppassword_go">
-<a href="#smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password to the SMTP server.
 {{% /md %}}</dd>
 
 </dl>
@@ -648,17 +697,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The login email for the SMTP server.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="smtppassword_nodejs">
-<a href="#smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password to the SMTP server.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -709,17 +747,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The login email for the SMTP server.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="smtp_password_python">
-<a href="#smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The password to the SMTP server.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -739,7 +766,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>receiving_records=None<span class="p">, </span>region=None<span class="p">, </span>sending_records=None<span class="p">, </span>smtp_login=None<span class="p">, </span>smtp_password=None<span class="p">, </span>spam_action=None<span class="p">, </span>wildcard=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>receiving_records=None<span class="p">, </span>region=None<span class="p">, </span>sending_records=None<span class="p">, </span>smtp_login=None<span class="p">, </span>smtp_password=None<span class="p">, </span>spam_action=None<span class="p">, </span>wildcard=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -916,7 +943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to the SMTP server.
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,7 +1041,7 @@ the domain will accept email for sub-domains.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to the SMTP server.
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,7 +1139,7 @@ the domain will accept email for sub-domains.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to the SMTP server.
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,7 +1237,7 @@ the domain will accept email for sub-domains.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The password to the SMTP server.
+    <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd>
 
     <dt class="property-optional"

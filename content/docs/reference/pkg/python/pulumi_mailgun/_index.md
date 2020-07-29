@@ -18,7 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_mailgun"></span><dl class="py class">
 <dt id="pulumi_mailgun.Domain">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_mailgun.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spam_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wildcard</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mailgun.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mailgun.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spam_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wildcard</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mailgun.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Mailgun App resource. This can be used to
 create and manage applications on Mailgun.</p>
 <p>After DNS records are set, domain verification should be triggered manually using <a class="reference external" href="https://documentation.mailgun.com/en/latest/api-domains.html#domains">PUT /domains/&lt;domain&amp;gt;/verify</a></p>
@@ -28,6 +28,7 @@ create and manage applications on Mailgun.</p>
 <span class="c1"># Create a new Mailgun domain</span>
 <span class="n">default</span> <span class="o">=</span> <span class="n">mailgun</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us&quot;</span><span class="p">,</span>
+    <span class="n">smtp_password</span><span class="o">=</span><span class="s2">&quot;supersecretpassword1234&quot;</span><span class="p">,</span>
     <span class="n">spam_action</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -38,6 +39,7 @@ create and manage applications on Mailgun.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to add to Mailgun</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where domain will be created. Default value is <code class="docutils literal notranslate"><span class="pre">us</span></code>.</p></li>
+<li><p><strong>smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for SMTP authentication</p></li>
 <li><p><strong>spam_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">disabled</span></code> or <code class="docutils literal notranslate"><span class="pre">tag</span></code> Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.</p></li>
@@ -91,7 +93,7 @@ the domain will accept email for sub-domains.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_mailgun.Domain.smtp_password">
 <code class="sig-name descname">smtp_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_mailgun.Domain.smtp_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>The password to the SMTP server.</p>
+<dd><p>Password for SMTP authentication</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -125,7 +127,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where domain will be created. Default value is <code class="docutils literal notranslate"><span class="pre">us</span></code>.</p></li>
 <li><p><strong>sending_records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DNS records for sending validation.</p></li>
 <li><p><strong>smtp_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The login email for the SMTP server.</p></li>
-<li><p><strong>smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to the SMTP server.</p></li>
+<li><p><strong>smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for SMTP authentication</p></li>
 <li><p><strong>spam_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">disabled</span></code> or <code class="docutils literal notranslate"><span class="pre">tag</span></code> Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.</p></li>

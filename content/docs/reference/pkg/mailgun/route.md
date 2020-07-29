@@ -12,8 +12,6 @@ meta_desc: "Explore the Route resource of the Mailgun package, including example
 
 Provides a Mailgun Route resource. This can be used to create and manage routes on Mailgun.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,10 +42,37 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := mailgun.NewRoute(ctx, "_default", &mailgun.RouteArgs{
+			Actions: pulumi.StringArray{
+				pulumi.String("forward('http://example.com/api/v1/foos/')"),
+				pulumi.String("stop()"),
+			},
+			Description: pulumi.String("inbound"),
+			Expression:  pulumi.String("match_recipient('.*@foo.example.com')"),
+			Priority:    pulumi.Int(0),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,9 +90,11 @@ default = mailgun.Route("default",
     expression="match_recipient('.*@foo.example.com')",
     priority="0")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mailgun from "@pulumi/mailgun";
@@ -83,6 +110,7 @@ const defaultRoute = new mailgun.Route("default", {
     priority: 0,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -97,7 +125,7 @@ const defaultRoute = new mailgun.Route("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/mailgun/#Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>description=None<span class="p">, </span>expression=None<span class="p">, </span>priority=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mailgun/#pulumi_mailgun.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>description=None<span class="p">, </span>expression=None<span class="p">, </span>priority=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -600,7 +628,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>description=None<span class="p">, </span>expression=None<span class="p">, </span>priority=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>description=None<span class="p">, </span>expression=None<span class="p">, </span>priority=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
