@@ -71,7 +71,7 @@ echo "Checking links on $s3_website_url..."
 ./scripts/check-links.sh "url" "$s3_website_url"
 
 echo "Running browser tests on $s3_website_url..."
-CYPRESS_BASE_URL="$s3_website_url" yarn run cypress run --headless
+./scripts/run-browser-tests.sh "$s3_website_url"
 
 # At this point, we have a bucket that's suitable for deployment. As a result of this run,
 # we leave a file in the project root indicating the name of the bucket that was generated

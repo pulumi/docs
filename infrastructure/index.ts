@@ -12,7 +12,6 @@ import * as tar from "tar";
 import * as tmp from "tmp";
 
 const stackConfig = new pulumi.Config();
-const awsConfig = new pulumi.Config("aws");
 
 const config = {
     // pathToWebsiteContents is a relative path to the website's contents.
