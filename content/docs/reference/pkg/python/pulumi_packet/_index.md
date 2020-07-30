@@ -160,7 +160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">always_pxe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_cycle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">facilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_detach_volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hardware_reservation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipxe_script_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ssh_key_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_reservation_deprovision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">always_pxe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_cycle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">facilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_detach_volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hardware_reservation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipxe_script_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ssh_key_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_reservation_deprovision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
@@ -451,7 +451,11 @@ The fields of the network attributes are:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IPv4 or IPv6 address string</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - IP version - “4” or “6”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - IP version - “4” or “6”</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> Network type of a device, used in <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">Layer 2 networking</a>. Will be one of <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - address of router</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - whether the address is routable from the Internet</p></li>
 </ul>
@@ -637,7 +641,11 @@ The fields of the network attributes are:
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 or IPv6 address string</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP version - “4” or “6”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP version - “4” or “6”</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> Network type of a device, used in <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">Layer 2 networking</a>. Will be one of <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - address of router</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - whether the address is routable from the Internet</p></li>
 </ul>
@@ -676,6 +684,82 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_packet.Device.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_packet.DeviceNetworkType">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">DeviceNetworkType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.DeviceNetworkType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a DeviceNetworkType resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] device_id: The ID of the device on which the network type should be set.
+:param pulumi.Input[str] type: Network type to set. Must be one of <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>.</p>
+<dl class="py attribute">
+<dt id="pulumi_packet.DeviceNetworkType.device_id">
+<code class="sig-name descname">device_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.DeviceNetworkType.device_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the device on which the network type should be set.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_packet.DeviceNetworkType.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.DeviceNetworkType.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network type to set. Must be one of <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_packet.DeviceNetworkType.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.DeviceNetworkType.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DeviceNetworkType resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device on which the network type should be set.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network type to set. Must be one of <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_packet.DeviceNetworkType.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.DeviceNetworkType.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_packet.DeviceNetworkType.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.DeviceNetworkType.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1366,10 +1450,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
     <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
     <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
-    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
-    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;hybrid&quot;</span><span class="p">)</span>
-<span class="n">test_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;testPortVlanAttachment&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">test_device_network_type</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">DeviceNetworkType</span><span class="p">(</span><span class="s2">&quot;testDeviceNetworkType&quot;</span><span class="p">,</span>
     <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;hybrid&quot;</span><span class="p">)</span>
+<span class="n">test_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;testPortVlanAttachment&quot;</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device_network_type</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">,</span>
     <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">)</span>
 <span class="c1"># Layer 2 network</span>
@@ -1379,8 +1465,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
     <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
     <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
-    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
-    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;layer2-individual&quot;</span><span class="p">)</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">test_index_device_network_type_device_network_type</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">DeviceNetworkType</span><span class="p">(</span><span class="s2">&quot;testIndex/deviceNetworkTypeDeviceNetworkType&quot;</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;layer2-individual&quot;</span><span class="p">)</span>
 <span class="n">test1_vlan</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Vlan</span><span class="p">(</span><span class="s2">&quot;test1Vlan&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;VLAN in New Jersey&quot;</span><span class="p">,</span>
     <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
@@ -1390,11 +1478,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
 <span class="n">test1_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;test1PortVlanAttachment&quot;</span><span class="p">,</span>
-    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device_network_type</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test1_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">,</span>
     <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">)</span>
 <span class="n">test2_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;test2PortVlanAttachment&quot;</span><span class="p">,</span>
-    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device_network_type</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test2_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">,</span>
     <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">,</span>
     <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1978,7 +2066,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – length of CIDR prefix of the block as integer</p></li>
 <li><p><strong>cidr_notation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address and mask in CIDR notation, e.g. “147.229.15.30/31”</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary description</p></li>
-<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id16"><span class="problematic" id="id17">*</span></a>ipv4</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id17"><span class="problematic" id="id18">*</span></a>ipv4</p></li>
 </ul>
 </dd>
 </dl>

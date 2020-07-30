@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi-packet/sdk/v3/go/packet"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -69,7 +69,7 @@ func main() {
 			},
 			OperatingSystem: pulumi.String("coreos_stable"),
 			BillingCycle:    pulumi.String("hourly"),
-			ProjectId:       pulumi.String(local.Project_id),
+			ProjectId:       pulumi.Any(local.Project_id),
 		})
 		if err != nil {
 			return err
@@ -127,11 +127,11 @@ const web1 = new packet.Device("web1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/packet/#Device">Device</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>network_type=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.Device">Device</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Device">NewDevice</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Device">NewDevice</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -205,7 +205,7 @@ const web1 = new packet.Device("web1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -225,7 +225,7 @@ const web1 = new packet.Device("web1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +235,7 @@ const web1 = new packet.Device("web1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -438,16 +438,6 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networktype_csharp">
-<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="projectsshkeyids_csharp">
 <a href="#projectsshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
 </span> 
@@ -644,16 +634,6 @@ information is in the
 [Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
 doc.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="networktype_go">
-<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -856,16 +836,6 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networktype_nodejs">
-<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Network<wbr>Type</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="projectsshkeyids_nodejs">
 <a href="#projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
 </span> 
@@ -1065,16 +1035,6 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="network_type_python">
-<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_ssh_key_ids_python">
 <a href="#project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
 </span> 
@@ -1221,6 +1181,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1376,6 +1346,16 @@ The fields of the network attributes are:
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="networks_go">
@@ -1529,6 +1509,16 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Network<wbr>Type</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1684,6 +1674,16 @@ The fields of the network attributes are:
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="networks_python">
@@ -1774,11 +1774,11 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_private_ipv4=None<span class="p">, </span>access_public_ipv4=None<span class="p">, </span>access_public_ipv6=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>created=None<span class="p">, </span>deployed_facility=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>locked=None<span class="p">, </span>network_type=None<span class="p">, </span>networks=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>ports=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>root_password=None<span class="p">, </span>ssh_key_ids=None<span class="p">, </span>state=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>updated=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_private_ipv4=None<span class="p">, </span>access_public_ipv4=None<span class="p">, </span>access_public_ipv6=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>created=None<span class="p">, </span>deployed_facility=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>locked=None<span class="p">, </span>network_type=None<span class="p">, </span>networks=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>ports=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>root_password=None<span class="p">, </span>ssh_key_ids=None<span class="p">, </span>state=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>updated=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2058,15 +2058,15 @@ doc.
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_networktype_csharp">
 <a href="#state_networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2404,15 +2404,15 @@ doc.
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_networktype_go">
 <a href="#state_networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2750,15 +2750,15 @@ doc.
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_networktype_nodejs">
 <a href="#state_networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Network<wbr>Type</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3096,15 +3096,15 @@ doc.
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_network_type_python">
 <a href="#state_network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new packet_device_network_type resource.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3286,7 +3286,7 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceIpAddressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceIpAddressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Inputs.DeviceIpAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.DeviceIpAddress.html">output</a> API doc for this type.
@@ -3460,7 +3460,7 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceNetworkOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DeviceNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.DeviceNetwork.html">output</a> API doc for this type.
@@ -3503,6 +3503,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
+* `network_type` Network type of a device, used in [Layer 2 networking](https://www.packet.com/developers/docs/network/advanced/layer-2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3565,6 +3566,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
+* `network_type` Network type of a device, used in [Layer 2 networking](https://www.packet.com/developers/docs/network/advanced/layer-2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3627,6 +3629,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
+* `network_type` Network type of a device, used in [Layer 2 networking](https://www.packet.com/developers/docs/network/advanced/layer-2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3689,6 +3692,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
+* `network_type` Network type of a device, used in [Layer 2 networking](https://www.packet.com/developers/docs/network/advanced/layer-2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3726,7 +3730,7 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DevicePortOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#DevicePortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.DevicePort.html">output</a> API doc for this type.

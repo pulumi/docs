@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi-packet/sdk/v3/go/packet"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 			},
 			OperatingSystem: pulumi.String(example.Id),
 			BillingCycle:    pulumi.String("hourly"),
-			ProjectId:       pulumi.String(local.Project_id),
+			ProjectId:       pulumi.Any(local.Project_id),
 		})
 		if err != nil {
 			return err
@@ -159,7 +159,7 @@ const server = new packet.Device("server", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOperatingSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetOperatingSystemArgs">GetOperatingSystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetOperatingSystemResult">GetOperatingSystemResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOperatingSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#GetOperatingSystemArgs">GetOperatingSystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#GetOperatingSystemResult">GetOperatingSystemResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
