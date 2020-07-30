@@ -38,7 +38,7 @@ const config = {
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
 // program will fail.
-let originBucketName: string | undefined;
+export let originBucketName: string | undefined;
 
 // If a build metadata file is present and contains valid content, use that for the bucket
 // name by default. Will fail if there's a file present that isn't parsable as expected.
