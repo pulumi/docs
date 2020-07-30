@@ -12,6 +12,185 @@ meta_desc: "Explore the GetEntity function of the New Relic package, including e
 
 Use this data source to get information about a specific entity in New Relic One that already exists.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "my-app",
+            Domain = "APM",
+            Type = "APPLICATION",
+            Tag = new NewRelic.Inputs.GetEntityTagArgs
+            {
+                Key = "my-tag",
+                Value = "my-tag-value",
+            },
+        }));
+        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
+        {
+        });
+        var fooAlertCondition = new NewRelic.AlertCondition("fooAlertCondition", new NewRelic.AlertConditionArgs
+        {
+            PolicyId = fooAlertPolicy.Id,
+            Type = "apm_app_metric",
+            Entities = 
+            {
+                data.Newrelic_application.App.Application_id,
+            },
+            Metric = "apdex",
+            RunbookUrl = "https://www.example.com",
+            Terms = 
+            {
+                new NewRelic.Inputs.AlertConditionTermArgs
+                {
+                    Duration = 5,
+                    Operator = "below",
+                    Priority = "critical",
+                    Threshold = 0.75,
+                    TimeFunction = "all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "APM"
+		opt1 := "APPLICATION"
+		_, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "my-app",
+			Domain: &opt0,
+			Type:   &opt1,
+			Tag: newrelic.GetEntityTag{
+				Key:   "my-tag",
+				Value: "my-tag-value",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertCondition(ctx, "fooAlertCondition", &newrelic.AlertConditionArgs{
+			PolicyId: fooAlertPolicy.ID(),
+			Type:     pulumi.String("apm_app_metric"),
+			Entities: pulumi.IntArray{
+				pulumi.Any(data.Newrelic_application.App.Application_id),
+			},
+			Metric:     pulumi.String("apdex"),
+			RunbookUrl: pulumi.String("https://www.example.com"),
+			Terms: newrelic.AlertConditionTermArray{
+				&newrelic.AlertConditionTermArgs{
+					Duration:     pulumi.Int(5),
+					Operator:     pulumi.String("below"),
+					Priority:     pulumi.String("critical"),
+					Threshold:    pulumi.Float64(0.75),
+					TimeFunction: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+app = newrelic.get_entity(name="my-app",
+    domain="APM",
+    type="APPLICATION",
+    tag={
+        "key": "my-tag",
+        "value": "my-tag-value",
+    })
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    type="apm_app_metric",
+    entities=[data["newrelic_application"]["app"]["application_id"]],
+    metric="apdex",
+    runbook_url="https://www.example.com",
+    terms=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const app = newrelic.getEntity({
+    name: "my-app",
+    domain: "APM",
+    type: "APPLICATION",
+    tag: {
+        key: "my-tag",
+        value: "my-tag-value",
+    },
+});
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    type: "apm_app_metric",
+    entities: [data.newrelic_application.app.application_id],
+    metric: "apdex",
+    runbookUrl: "https://www.example.com",
+    terms: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetEntity {#using}

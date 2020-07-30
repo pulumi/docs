@@ -35,6 +35,7 @@ A Pulumi package for creating and managing New Relic resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getalertchannel" title="GetAlertChannel"><span class="symbol function"></span>GetAlertChannel</a></li>
     <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="symbol function"></span>GetAlertPolicy</a></li>
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
@@ -51,7 +52,7 @@ A Pulumi package for creating and managing New Relic resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

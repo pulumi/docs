@@ -11,6 +11,7 @@ meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
+
 ## NRQL
 
 The `nrql` block supports the following arguments:
@@ -27,8 +28,7 @@ NRQL alert conditions support up to two terms. At least one `term` must have `pr
 
 The `term` block the following arguments:
 
-- `duration` - (Required) In minutes, must be in the range of `1` to `120`, inclusive.
-- `operator` - (Optional) `above`, `below`, or `equal`. Defaults to `equal`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+- `operator` - (Optional) Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
 - `priority` - (Optional) `critical` or `warning`. Defaults to `critical`.
 - `threshold` - (Required) The value which will trigger a violation. Must be `0` or greater.
 - `threshold_duration` - (Optional) The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
@@ -50,7 +50,7 @@ The `term` block the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -230,7 +230,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -252,7 +252,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,8 +263,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -275,7 +274,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,7 +296,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,7 +307,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -319,7 +318,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -341,7 +340,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -363,7 +362,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -374,7 +373,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,7 +384,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,9 +395,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -409,8 +406,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -421,7 +417,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -439,7 +435,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -461,7 +457,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -472,8 +468,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,7 +479,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,7 +501,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -517,7 +512,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -528,7 +523,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -550,7 +545,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -572,7 +567,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">[]Nrql<wbr>Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -583,7 +578,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,7 +589,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -605,9 +600,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -618,8 +611,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -630,7 +622,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -648,7 +640,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -670,7 +662,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,8 +673,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +684,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,7 +706,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -726,7 +717,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -737,7 +728,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -759,7 +750,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +772,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -792,7 +783,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -803,7 +794,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -814,9 +805,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -827,8 +816,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -839,7 +827,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -857,7 +845,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Nrql]</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -879,7 +867,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -890,8 +878,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -902,7 +889,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +911,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -935,7 +922,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -946,7 +933,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -968,7 +955,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,7 +977,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term]</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1001,7 +988,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1012,7 +999,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1023,9 +1010,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1036,8 +1021,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1048,7 +1032,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1149,7 +1133,7 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1271,7 +1255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1294,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1316,7 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1327,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1338,7 +1321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1360,7 +1343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1371,7 +1354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1404,7 +1387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1415,7 +1398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1426,7 +1409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1437,9 +1420,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1450,8 +1431,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1462,7 +1442,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1480,7 +1460,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1491,8 +1471,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1503,7 +1482,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,7 +1504,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1515,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1547,7 +1526,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1569,7 +1548,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1580,7 +1559,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1613,7 +1592,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">[]Nrql<wbr>Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1624,7 +1603,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1635,7 +1614,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1646,9 +1625,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1659,8 +1636,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1671,7 +1647,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1689,7 +1665,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1700,8 +1676,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1712,7 +1687,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1734,7 +1709,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1745,7 +1720,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1756,7 +1731,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1778,7 +1753,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1789,7 +1764,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1822,7 +1797,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1833,7 +1808,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1844,7 +1819,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1855,9 +1830,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1868,8 +1841,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1880,7 +1852,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1898,7 +1870,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID for managing your NRQL alert conditions.
+    <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1909,8 +1881,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The baseline direction of a baseline NRQL alert condition. Valid values are: 'LOWER_ONLY', 'UPPER_AND_LOWER',
-'UPPER_ONLY' (case insensitive).
+    <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1921,7 +1892,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditioncritical">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to critical.
+    <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1943,7 +1914,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to enable the alert condition.
+    <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1954,7 +1925,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of expected groups when using outlier detection.
+    <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1965,7 +1936,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to look for a convergence of groups when using outlier detection.
+    <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1987,7 +1958,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionnrql">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Nrql]</a></span>
     </dt>
-    <dd>{{% md %}}A NRQL query.
+    <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1998,7 +1969,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether overlapping groups should produce a violation.
+    <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2031,7 +2002,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term]</a></span>
     </dt>
-    <dd>{{% md %}}A set of terms for this condition. Max 2 terms allowed - at least one 1 critical term and 1 optional warning term.
+    <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -2042,7 +2013,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of NRQL alert condition to create. Valid values are: 'static', 'outlier', 'baseline'.
+    <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2053,7 +2024,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid values are: 'single_value' or 'sum'
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2064,9 +2035,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS', 'TWELVE_HOURS', 'TWENTY_FOUR_HOURS'
-(case insensitive).
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2077,8 +2046,7 @@ select. Possible values are 'ONE_HOUR', 'TWO_HOURS', 'FOUR_HOURS', 'EIGHT_HOURS'
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you
-select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -2089,7 +2057,7 @@ select. Possible values are 3600, 7200, 14400, 28800, 43200, and 86400.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nrqlalertconditionwarning">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
     </dt>
-    <dd>{{% md %}}A condition term with priority set to warning.
+    <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
 
 </dl>

@@ -103,7 +103,89 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := newrelic.NewAlertPolicy(ctx, "foo", nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewInfraAlertCondition(ctx, "highDiskUsage", &newrelic.InfraAlertConditionArgs{
+			PolicyId:   foo.ID(),
+			Type:       pulumi.String("infra_metric"),
+			Event:      pulumi.String("StorageSample"),
+			Select:     pulumi.String("diskUsedPercent"),
+			Comparison: pulumi.String("above"),
+			Where:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "frontend", "%", "')")),
+			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+				Duration:     pulumi.Int(25),
+				Value:        pulumi.Float64(90),
+				TimeFunction: pulumi.String("all"),
+			},
+			Warning: &newrelic.InfraAlertConditionWarningArgs{
+				Duration:     pulumi.Int(10),
+				Value:        pulumi.Float64(80),
+				TimeFunction: pulumi.String("all"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewInfraAlertCondition(ctx, "highDbConnCount", &newrelic.InfraAlertConditionArgs{
+			PolicyId:            foo.ID(),
+			Type:                pulumi.String("infra_metric"),
+			Event:               pulumi.String("DatastoreSample"),
+			Select:              pulumi.String("provider.databaseConnections.Average"),
+			Comparison:          pulumi.String("above"),
+			Where:               pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "db", "%", "')")),
+			IntegrationProvider: pulumi.String("RdsDbInstance"),
+			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+				Duration:     pulumi.Int(25),
+				Value:        pulumi.Float64(90),
+				TimeFunction: pulumi.String("all"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewInfraAlertCondition(ctx, "processNotRunning", &newrelic.InfraAlertConditionArgs{
+			PolicyId:     foo.ID(),
+			Type:         pulumi.String("infra_process_running"),
+			Comparison:   pulumi.String("equal"),
+			ProcessWhere: pulumi.String("`commandName` = '/usr/bin/ruby'"),
+			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+				Duration: pulumi.Int(5),
+				Value:    pulumi.Float64(0),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewInfraAlertCondition(ctx, "hostNotReporting", &newrelic.InfraAlertConditionArgs{
+			PolicyId: foo.ID(),
+			Type:     pulumi.String("infra_host_not_reporting"),
+			Where:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "frontend", "%", "')")),
+			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+				Duration: pulumi.Int(5),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -235,7 +317,7 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comparison=None<span class="p">, </span>critical=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comparison=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,6 +535,17 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -610,6 +703,17 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -775,6 +879,17 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
@@ -932,6 +1047,17 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1230,7 +1356,7 @@ Get an existing InfraAlertCondition resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>comparison=None<span class="p">, </span>created_at=None<span class="p">, </span>critical=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>comparison=None<span class="p">, </span>created_at=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1375,6 +1501,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1562,6 +1699,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -1745,6 +1893,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
@@ -1924,6 +2083,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the Infrastructure alert condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

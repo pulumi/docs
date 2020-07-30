@@ -40,7 +40,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synthetics.NewSecureCredential(ctx, "foo", &synthetics.SecureCredentialArgs{
+			Description: pulumi.String("My description"),
+			Key:         pulumi.String("MY_KEY"),
+			Value:       pulumi.String("My value"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,7 +105,7 @@ const foo = new newrelic.synthetics.SecureCredential("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#SecureCredential">SecureCredential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>key=None<span class="p">, </span>last_updated=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#pulumi_newrelic.synthetics.SecureCredential">SecureCredential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>key=None<span class="p">, </span>last_updated=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The SecureCredential resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,7 +358,7 @@ The SecureCredential resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -398,7 +420,7 @@ The SecureCredential resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,7 +482,7 @@ The SecureCredential resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,7 +616,7 @@ Get an existing SecureCredential resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>key=None<span class="p">, </span>last_updated=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>key=None<span class="p">, </span>last_updated=None<span class="p">, </span>value=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -760,7 +782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
 </dl>
@@ -822,7 +844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
 </dl>
@@ -884,7 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
 </dl>
@@ -946,7 +968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secure credential's value. 
+    <dd>{{% md %}}The secure credential's value.
 {{% /md %}}</dd>
 
 </dl>

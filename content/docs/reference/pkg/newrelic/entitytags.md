@@ -12,6 +12,165 @@ meta_desc: "Explore the EntityTags resource of the New Relic package, including 
 
 Use this resource to create, update, and delete tags for a New Relic One entity.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooEntity = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "Example application",
+            Type = "APPLICATION",
+            Domain = "APM",
+        }));
+        var fooEntityTags = new NewRelic.EntityTags("fooEntityTags", new NewRelic.EntityTagsArgs
+        {
+            Guid = fooEntity.Apply(fooEntity => fooEntity.Guid),
+            Tags = 
+            {
+                new NewRelic.Inputs.EntityTagsTagArgs
+                {
+                    Key = "my-key",
+                    Values = 
+                    {
+                        "my-value",
+                        "my-other-value",
+                    },
+                },
+                new NewRelic.Inputs.EntityTagsTagArgs
+                {
+                    Key = "my-key-2",
+                    Values = 
+                    {
+                        "my-value-2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "APPLICATION"
+		opt1 := "APM"
+		fooEntity, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "Example application",
+			Type:   &opt0,
+			Domain: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewEntityTags(ctx, "fooEntityTags", &newrelic.EntityTagsArgs{
+			Guid: pulumi.String(fooEntity.Guid),
+			Tags: newrelic.EntityTagsTagArray{
+				&newrelic.EntityTagsTagArgs{
+					Key: pulumi.String("my-key"),
+					Values: pulumi.StringArray{
+						pulumi.String("my-value"),
+						pulumi.String("my-other-value"),
+					},
+				},
+				&newrelic.EntityTagsTagArgs{
+					Key: pulumi.String("my-key-2"),
+					Values: pulumi.StringArray{
+						pulumi.String("my-value-2"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_entity = newrelic.get_entity(name="Example application",
+    type="APPLICATION",
+    domain="APM")
+foo_entity_tags = newrelic.EntityTags("fooEntityTags",
+    guid=foo_entity.guid,
+    tags=[
+        {
+            "key": "my-key",
+            "values": [
+                "my-value",
+                "my-other-value",
+            ],
+        },
+        {
+            "key": "my-key-2",
+            "values": ["my-value-2"],
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooEntity = newrelic.getEntity({
+    name: "Example application",
+    type: "APPLICATION",
+    domain: "APM",
+});
+const fooEntityTags = new newrelic.EntityTags("fooEntityTags", {
+    guid: fooEntity.then(fooEntity => fooEntity.guid),
+    tags: [
+        {
+            key: "my-key",
+            values: [
+                "my-value",
+                "my-other-value",
+            ],
+        },
+        {
+            key: "my-key-2",
+            values: ["my-value-2"],
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EntityTags Resource {#create}
@@ -23,7 +182,7 @@ Use this resource to create, update, and delete tags for a New Relic One entity.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#EntityTags">EntityTags</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>guid=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.EntityTags">EntityTags</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>guid=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +561,7 @@ Get an existing EntityTags resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>guid=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>guid=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

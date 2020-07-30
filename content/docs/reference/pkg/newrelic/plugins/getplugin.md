@@ -14,6 +14,158 @@ Use this data source to get information about a specific installed plugin in New
 
 Each plugin published to New Relic's Plugin Central is assigned a [GUID](https://docs.newrelic.com/docs/plugins/plugin-developer-resources/planning-your-plugin/parts-plugin#guid). Once you have installed a plugin into your account it is assigned an ID. This account-specific ID is required when creating Plugins alert conditions.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooPlugin = Output.Create(NewRelic.Plugins.GetPlugin.InvokeAsync(new NewRelic.Plugins.GetPluginArgs
+        {
+            Guid = "com.example.my-plugin",
+        }));
+        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
+        {
+        });
+        var fooAlertCondition = new NewRelic.Plugins.AlertCondition("fooAlertCondition", new NewRelic.Plugins.AlertConditionArgs
+        {
+            PolicyId = fooAlertPolicy.Id,
+            Metric = "Component/Summary/Consumers[consumers]",
+            PluginId = fooPlugin.Apply(fooPlugin => fooPlugin.Id),
+            PluginGuid = fooPlugin.Apply(fooPlugin => fooPlugin.Guid),
+            ValueFunction = "average",
+            MetricDescription = "Queue consumers",
+            Terms = 
+            {
+                new NewRelic.Plugins.Inputs.AlertConditionTermArgs
+                {
+                    Duration = 5,
+                    Operator = "below",
+                    Priority = "critical",
+                    Threshold = 0.75,
+                    TimeFunction = "all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/plugins"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooPlugin, err := plugins.GetPlugin(ctx, &plugins.GetPluginArgs{
+			Guid: "com.example.my-plugin",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
+		if err != nil {
+			return err
+		}
+		_, err = plugins.NewAlertCondition(ctx, "fooAlertCondition", &plugins.AlertConditionArgs{
+			PolicyId:          fooAlertPolicy.ID(),
+			Metric:            pulumi.String("Component/Summary/Consumers[consumers]"),
+			PluginId:          pulumi.String(fooPlugin.Id),
+			PluginGuid:        pulumi.String(fooPlugin.Guid),
+			ValueFunction:     pulumi.String("average"),
+			MetricDescription: pulumi.String("Queue consumers"),
+			Terms: plugins.AlertConditionTermArray{
+				&plugins.AlertConditionTermArgs{
+					Duration:     pulumi.Int(5),
+					Operator:     pulumi.String("below"),
+					Priority:     pulumi.String("critical"),
+					Threshold:    pulumi.Float64(0.75),
+					TimeFunction: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_plugin = newrelic.plugins.get_plugin(guid="com.example.my-plugin")
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.plugins.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    metric="Component/Summary/Consumers[consumers]",
+    plugin_id=foo_plugin.id,
+    plugin_guid=foo_plugin.guid,
+    value_function="average",
+    metric_description="Queue consumers",
+    terms=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooPlugin = newrelic.plugins.getPlugin({
+    guid: "com.example.my-plugin",
+});
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    metric: "Component/Summary/Consumers[consumers]",
+    pluginId: fooPlugin.then(fooPlugin => fooPlugin.id),
+    pluginGuid: fooPlugin.then(fooPlugin => fooPlugin.guid),
+    valueFunction: "average",
+    metricDescription: "Queue consumers",
+    terms: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPlugin {#using}

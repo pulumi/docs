@@ -47,24 +47,24 @@ class MyStack : Stack
             {
                 new NewRelic.Insights.Inputs.EventEventArgs
                 {
-                    Attribute = 
+                    Attributes = 
                     {
-                        
+                        new NewRelic.Insights.Inputs.EventEventAttributeArgs
                         {
-                            { "key", "a_string_attribute" },
-                            { "value", "a string" },
+                            Key = "a_string_attribute",
+                            Value = "a string",
                         },
-                        
+                        new NewRelic.Insights.Inputs.EventEventAttributeArgs
                         {
-                            { "key", "an_integer_attribute" },
-                            { "type", "int" },
-                            { "value", 42 },
+                            Key = "an_integer_attribute",
+                            Type = "int",
+                            Value = "42",
                         },
-                        
+                        new NewRelic.Insights.Inputs.EventEventAttributeArgs
                         {
-                            { "key", "a_float_attribute" },
-                            { "type", "float" },
-                            { "value", 101.1 },
+                            Key = "a_float_attribute",
+                            Type = "float",
+                            Value = "101.1",
                         },
                     },
                     Timestamp = 1232471100,
@@ -80,7 +80,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewEvent(ctx, "foo", &insights.EventArgs{
+			Events: insights.EventEventArray{
+				&insights.EventEventArgs{
+					Attributes: insights.EventEventAttributeArray{
+						&insights.EventEventAttributeArgs{
+							Key:   pulumi.String("a_string_attribute"),
+							Value: pulumi.String("a string"),
+						},
+						&insights.EventEventAttributeArgs{
+							Key:   pulumi.String("an_integer_attribute"),
+							Type:  pulumi.String("int"),
+							Value: pulumi.String("42"),
+						},
+						&insights.EventEventAttributeArgs{
+							Key:   pulumi.String("a_float_attribute"),
+							Type:  pulumi.String("float"),
+							Value: pulumi.String("101.1"),
+						},
+					},
+					Timestamp: pulumi.Int(1232471100),
+					Type:      pulumi.String("MyEvent"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,7 +130,7 @@ import pulumi
 import pulumi_newrelic as newrelic
 
 foo = newrelic.insights.Event("foo", events=[{
-    "attribute": [
+    "attributes": [
         {
             "key": "a_string_attribute",
             "value": "a string",
@@ -156,7 +197,7 @@ const foo = new newrelic.insights.Event("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/insights/#Event">Event</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>events=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/insights/#pulumi_newrelic.insights.Event">Event</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>events=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -491,7 +532,7 @@ Get an existing Event resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>events=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>events=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

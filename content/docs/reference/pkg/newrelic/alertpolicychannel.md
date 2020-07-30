@@ -69,7 +69,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.LookupAlertPolicy(ctx, &newrelic.LookupAlertPolicyArgs{
+			Name: "my-alert-policy",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		emailChannel, err := newrelic.NewAlertChannel(ctx, "emailChannel", &newrelic.AlertChannelArgs{
+			Type: pulumi.String("email"),
+			Config: &newrelic.AlertChannelConfigArgs{
+				Recipients:            pulumi.String("foo@example.com"),
+				IncludeJsonAttachment: pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		slackChannel, err := newrelic.NewAlertChannel(ctx, "slackChannel", &newrelic.AlertChannelArgs{
+			Type: pulumi.String("slack"),
+			Config: &newrelic.AlertChannelConfigArgs{
+				Channel: pulumi.String("#example-channel"),
+				Url:     pulumi.String("http://example-org.slack.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertPolicyChannel(ctx, "foo", &newrelic.AlertPolicyChannelArgs{
+			PolicyId: pulumi.Any(newrelic_alert_policy.Example_policy.Id),
+			ChannelIds: pulumi.IntArray{
+				emailChannel.ID(),
+				slackChannel.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -154,7 +204,7 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicyChannel">AlertPolicyChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertPolicyChannel">AlertPolicyChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -537,7 +587,7 @@ Get an existing AlertPolicyChannel resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
