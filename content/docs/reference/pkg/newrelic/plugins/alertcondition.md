@@ -21,6 +21,185 @@ The `term` mapping supports the following arguments:
   * `threshold` - (Required) Must be 0 or greater.
   * `time_function` - (Required) `all` or `any`.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooPlugin = Output.Create(NewRelic.Plugins.GetPlugin.InvokeAsync(new NewRelic.Plugins.GetPluginArgs
+        {
+            Guid = "com.example.my-plugin",
+        }));
+        var fooPluginComponent = fooPlugin.Apply(fooPlugin => Output.Create(NewRelic.Plugins.GetPluginComponent.InvokeAsync(new NewRelic.Plugins.GetPluginComponentArgs
+        {
+            PluginId = fooPlugin.Id,
+            Name = "MyPlugin",
+        })));
+        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
+        {
+        });
+        var fooAlertCondition = new NewRelic.Plugins.AlertCondition("fooAlertCondition", new NewRelic.Plugins.AlertConditionArgs
+        {
+            PolicyId = fooAlertPolicy.Id,
+            Entities = 
+            {
+                fooPluginComponent.Apply(fooPluginComponent => fooPluginComponent.Id),
+            },
+            Metric = "Component/Summary/Consumers[consumers]",
+            PluginId = fooPlugin.Apply(fooPlugin => fooPlugin.Id),
+            PluginGuid = fooPlugin.Apply(fooPlugin => fooPlugin.Guid),
+            ValueFunction = "average",
+            MetricDescription = "Queue consumers",
+            Terms = 
+            {
+                new NewRelic.Plugins.Inputs.AlertConditionTermArgs
+                {
+                    Duration = 5,
+                    Operator = "below",
+                    Priority = "critical",
+                    Threshold = 0.75,
+                    TimeFunction = "all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/plugins"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooPlugin, err := plugins.GetPlugin(ctx, &plugins.GetPluginArgs{
+			Guid: "com.example.my-plugin",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooPluginComponent, err := plugins.GetPluginComponent(ctx, &plugins.GetPluginComponentArgs{
+			PluginId: fooPlugin.Id,
+			Name:     "MyPlugin",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
+		if err != nil {
+			return err
+		}
+		_, err = plugins.NewAlertCondition(ctx, "fooAlertCondition", &plugins.AlertConditionArgs{
+			PolicyId: fooAlertPolicy.ID(),
+			Entities: pulumi.IntArray{
+				pulumi.String(fooPluginComponent.Id),
+			},
+			Metric:            pulumi.String("Component/Summary/Consumers[consumers]"),
+			PluginId:          pulumi.String(fooPlugin.Id),
+			PluginGuid:        pulumi.String(fooPlugin.Guid),
+			ValueFunction:     pulumi.String("average"),
+			MetricDescription: pulumi.String("Queue consumers"),
+			Terms: plugins.AlertConditionTermArray{
+				&plugins.AlertConditionTermArgs{
+					Duration:     pulumi.Int(5),
+					Operator:     pulumi.String("below"),
+					Priority:     pulumi.String("critical"),
+					Threshold:    pulumi.Float64(0.75),
+					TimeFunction: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_plugin = newrelic.plugins.get_plugin(guid="com.example.my-plugin")
+foo_plugin_component = newrelic.plugins.get_plugin_component(plugin_id=foo_plugin.id,
+    name="MyPlugin")
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.plugins.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    entities=[foo_plugin_component.id],
+    metric="Component/Summary/Consumers[consumers]",
+    plugin_id=foo_plugin.id,
+    plugin_guid=foo_plugin.guid,
+    value_function="average",
+    metric_description="Queue consumers",
+    terms=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooPlugin = newrelic.plugins.getPlugin({
+    guid: "com.example.my-plugin",
+});
+const fooPluginComponent = fooPlugin.then(fooPlugin => newrelic.plugins.getPluginComponent({
+    pluginId: fooPlugin.id,
+    name: "MyPlugin",
+}));
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    entities: [fooPluginComponent.then(fooPluginComponent => fooPluginComponent.id)],
+    metric: "Component/Summary/Consumers[consumers]",
+    pluginId: fooPlugin.then(fooPlugin => fooPlugin.id),
+    pluginGuid: fooPlugin.then(fooPlugin => fooPlugin.guid),
+    valueFunction: "average",
+    metricDescription: "Queue consumers",
+    terms: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertCondition Resource {#create}
@@ -32,7 +211,7 @@ The `term` mapping supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>metric=None<span class="p">, </span>metric_description=None<span class="p">, </span>name=None<span class="p">, </span>plugin_guid=None<span class="p">, </span>plugin_id=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>value_function=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#pulumi_newrelic.plugins.AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>metric=None<span class="p">, </span>metric_description=None<span class="p">, </span>name=None<span class="p">, </span>plugin_guid=None<span class="p">, </span>plugin_id=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>value_function=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -807,7 +986,7 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>metric=None<span class="p">, </span>metric_description=None<span class="p">, </span>name=None<span class="p">, </span>plugin_guid=None<span class="p">, </span>plugin_id=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>value_function=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>metric=None<span class="p">, </span>metric_description=None<span class="p">, </span>name=None<span class="p">, </span>plugin_guid=None<span class="p">, </span>plugin_id=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>value_function=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

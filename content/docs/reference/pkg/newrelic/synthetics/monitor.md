@@ -75,6 +75,36 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synthetics.NewMonitor(ctx, "foo", &synthetics.MonitorArgs{
+			BypassHeadRequest: pulumi.Bool(true),
+			Frequency:         pulumi.Int(5),
+			Locations: pulumi.StringArray{
+				pulumi.String("AWS_US_EAST_1"),
+			},
+			Status:                 pulumi.String("ENABLED"),
+			TreatRedirectAsFailure: pulumi.Bool(true),
+			Type:                   pulumi.String("BROWSER"),
+			Uri:                    pulumi.String("https://example.com"),
+			ValidationString:       pulumi.String("add example validation check here"),
+			VerifySsl:              pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 Type: `SCRIPT_BROWSER`
 
@@ -119,6 +149,31 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synthetics.NewMonitor(ctx, "foo", &synthetics.MonitorArgs{
+			Frequency: pulumi.Int(5),
+			Locations: pulumi.StringArray{
+				pulumi.String("AWS_US_EAST_1"),
+			},
+			Status: pulumi.String("ENABLED"),
+			Type:   pulumi.String("SCRIPT_BROWSER"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -167,6 +222,31 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synthetics.NewMonitor(ctx, "foo", &synthetics.MonitorArgs{
+			Frequency: pulumi.Int(5),
+			Locations: pulumi.StringArray{
+				pulumi.String("AWS_US_EAST_1"),
+			},
+			Status: pulumi.String("ENABLED"),
+			Type:   pulumi.String("SCRIPT_API"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -205,7 +285,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synthetics.NewMonitor(ctx, "foo", &synthetics.MonitorArgs{
+			Frequency: pulumi.Int(5),
+			Locations: pulumi.StringArray{
+				pulumi.String("AWS_US_EAST_1"),
+				pulumi.String("AWS_US_EAST_2"),
+			},
+			Status:           pulumi.String("ENABLED"),
+			Type:             pulumi.String("SIMPLE"),
+			Uri:              pulumi.String("https://example.com"),
+			ValidationString: pulumi.String("add example validation check here"),
+			VerifySsl:        pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -262,7 +371,7 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#Monitor">Monitor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#pulumi_newrelic.synthetics.Monitor">Monitor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1037,7 +1146,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

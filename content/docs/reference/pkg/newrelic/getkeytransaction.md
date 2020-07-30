@@ -12,6 +12,158 @@ meta_desc: "Explore the GetKeyTransaction function of the New Relic package, inc
 
 Use this data source to get information about a specific key transaction in New Relic that already exists.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var txn = Output.Create(NewRelic.GetKeyTransaction.InvokeAsync(new NewRelic.GetKeyTransactionArgs
+        {
+            Name = "txn",
+        }));
+        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
+        {
+        });
+        var fooAlertCondition = new NewRelic.AlertCondition("fooAlertCondition", new NewRelic.AlertConditionArgs
+        {
+            PolicyId = fooAlertPolicy.Id,
+            Type = "apm_kt_metric",
+            Entities = 
+            {
+                txn.Apply(txn => txn.Id),
+            },
+            Metric = "error_percentage",
+            RunbookUrl = "https://www.example.com",
+            Terms = 
+            {
+                new NewRelic.Inputs.AlertConditionTermArgs
+                {
+                    Duration = 5,
+                    Operator = "below",
+                    Priority = "critical",
+                    Threshold = 0.75,
+                    TimeFunction = "all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		txn, err := newrelic.GetKeyTransaction(ctx, &newrelic.GetKeyTransactionArgs{
+			Name: "txn",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertCondition(ctx, "fooAlertCondition", &newrelic.AlertConditionArgs{
+			PolicyId: fooAlertPolicy.ID(),
+			Type:     pulumi.String("apm_kt_metric"),
+			Entities: pulumi.IntArray{
+				pulumi.String(txn.Id),
+			},
+			Metric:     pulumi.String("error_percentage"),
+			RunbookUrl: pulumi.String("https://www.example.com"),
+			Terms: newrelic.AlertConditionTermArray{
+				&newrelic.AlertConditionTermArgs{
+					Duration:     pulumi.Int(5),
+					Operator:     pulumi.String("below"),
+					Priority:     pulumi.String("critical"),
+					Threshold:    pulumi.Float64(0.75),
+					TimeFunction: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+txn = newrelic.get_key_transaction(name="txn")
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    type="apm_kt_metric",
+    entities=[txn.id],
+    metric="error_percentage",
+    runbook_url="https://www.example.com",
+    terms=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const txn = newrelic.getKeyTransaction({
+    name: "txn",
+});
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    type: "apm_kt_metric",
+    entities: [txn.then(txn => txn.id)],
+    metric: "error_percentage",
+    runbookUrl: "https://www.example.com",
+    terms: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKeyTransaction {#using}

@@ -21,6 +21,172 @@ The `term` mapping supports the following arguments:
   * `threshold` - (Required) Must be 0 or greater.
   * `time_function` - (Required) `all` or `any`.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "my-app",
+            Type = "APPLICATION",
+            Domain = "APM",
+        }));
+        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
+        {
+        });
+        var fooAlertCondition = new NewRelic.AlertCondition("fooAlertCondition", new NewRelic.AlertConditionArgs
+        {
+            PolicyId = fooAlertPolicy.Id,
+            Type = "apm_app_metric",
+            Entities = 
+            {
+                data.Newrelic_application.App.Application_id,
+            },
+            Metric = "apdex",
+            RunbookUrl = "https://www.example.com",
+            ConditionScope = "application",
+            Terms = 
+            {
+                new NewRelic.Inputs.AlertConditionTermArgs
+                {
+                    Duration = 5,
+                    Operator = "below",
+                    Priority = "critical",
+                    Threshold = 0.75,
+                    TimeFunction = "all",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "APPLICATION"
+		opt1 := "APM"
+		_, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "my-app",
+			Type:   &opt0,
+			Domain: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertCondition(ctx, "fooAlertCondition", &newrelic.AlertConditionArgs{
+			PolicyId: fooAlertPolicy.ID(),
+			Type:     pulumi.String("apm_app_metric"),
+			Entities: pulumi.IntArray{
+				pulumi.Any(data.Newrelic_application.App.Application_id),
+			},
+			Metric:         pulumi.String("apdex"),
+			RunbookUrl:     pulumi.String("https://www.example.com"),
+			ConditionScope: pulumi.String("application"),
+			Terms: newrelic.AlertConditionTermArray{
+				&newrelic.AlertConditionTermArgs{
+					Duration:     pulumi.Int(5),
+					Operator:     pulumi.String("below"),
+					Priority:     pulumi.String("critical"),
+					Threshold:    pulumi.Float64(0.75),
+					TimeFunction: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+app = newrelic.get_entity(name="my-app",
+    type="APPLICATION",
+    domain="APM")
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    type="apm_app_metric",
+    entities=[data["newrelic_application"]["app"]["application_id"]],
+    metric="apdex",
+    runbook_url="https://www.example.com",
+    condition_scope="application",
+    terms=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const app = newrelic.getEntity({
+    name: "my-app",
+    type: "APPLICATION",
+    domain: "APM",
+});
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    type: "apm_app_metric",
+    entities: [data.newrelic_application.app.application_id],
+    metric: "apdex",
+    runbookUrl: "https://www.example.com",
+    conditionScope: "application",
+    terms: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertCondition Resource {#create}
@@ -32,7 +198,7 @@ The `term` mapping supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1043,7 +1209,7 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

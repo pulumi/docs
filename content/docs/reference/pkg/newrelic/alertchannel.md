@@ -11,335 +11,6 @@ meta_desc: "Explore the AlertChannel resource of the New Relic package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage New Relic alert policies.
-## Additional Examples
-
-##### Slack
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    config: {
-        channel: "example-alerts-channel",
-        url: "https://<YourOrganization>.slack.com",
-    },
-    type: "slack",
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    config={
-        "channel": "example-alerts-channel",
-        "url": "https://<YourOrganization>.slack.com",
-    },
-    type="slack")
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                Channel = "example-alerts-channel",
-                Url = "https://<YourOrganization>.slack.com",
-            },
-            Type = "slack",
-        });
-    }
-
-}
-```
-
-##### OpsGenie
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    config: {
-        apiKey: "abc123",
-        recipients: "user1@domain.com, user2@domain.com",
-        tags: "tag1, tag2",
-        teams: "team1, team2",
-    },
-    type: "opsgenie",
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    config={
-        "apiKey": "abc123",
-        "recipients": "user1@domain.com, user2@domain.com",
-        "tags": "tag1, tag2",
-        "teams": "team1, team2",
-    },
-    type="opsgenie")
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                ApiKey = "abc123",
-                Recipients = "user1@domain.com, user2@domain.com",
-                Tags = "tag1, tag2",
-                Teams = "team1, team2",
-            },
-            Type = "opsgenie",
-        });
-    }
-
-}
-```
-
-##### PagerDuty
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    config: {
-        serviceKey: "abc123",
-    },
-    type: "pagerduty",
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    config={
-        "serviceKey": "abc123",
-    },
-    type="pagerduty")
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                ServiceKey = "abc123",
-            },
-            Type = "pagerduty",
-        });
-    }
-
-}
-```
-
-##### VictorOps
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    config: {
-        key: "abc123",
-        routeKey: "/example",
-    },
-    type: "victorops",
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    config={
-        "key": "abc123",
-        "routeKey": "/example",
-    },
-    type="victorops")
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                Key = "abc123",
-                RouteKey = "/example",
-            },
-            Type = "victorops",
-        });
-    }
-
-}
-```
-
-##### Webhook
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    type: "webhook",
-    config: {
-        baseUrl: "http://www.test.com",
-        payloadType: "application/json",
-        payload: {
-            condition_name: `$CONDITION_NAME`,
-            policy_name: `$POLICY_NAME`,
-        },
-        headers: {
-            header1: value1,
-            header2: value2,
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    type="webhook",
-    config={
-        "baseUrl": "http://www.test.com",
-        "payloadType": "application/json",
-        "payload": {
-            "condition_name": "$CONDITION_NAME",
-            "policy_name": "$POLICY_NAME",
-        },
-        "headers": {
-            "header1": value1,
-            "header2": value2,
-        },
-    })
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Type = "webhook",
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                BaseUrl = "http://www.test.com",
-                PayloadType = "application/json",
-                Payload = 
-                {
-                    { "condition_name", "$CONDITION_NAME" },
-                    { "policy_name", "$POLICY_NAME" },
-                },
-                Headers = 
-                {
-                    { "header1", value1 },
-                    { "header2", value2 },
-                },
-            },
-        });
-    }
-
-}
-```
-
-##### Webhook with complex payload
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.AlertChannel("foo", {
-    config: {
-        baseUrl: "http://www.test.com",
-        payloadString: `{
-  "my_custom_values": {
-    "condition_name": "$CONDITION_NAME",
-    "policy_name": "$POLICY_NAME"
-  }
-}
-`,
-        payloadType: "application/json",
-    },
-    type: "webhook",
-});
-```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.AlertChannel("foo",
-    config={
-        "baseUrl": "http://www.test.com",
-        "payloadString": """{
-  "my_custom_values": {
-    "condition_name": "$$CONDITION_NAME",
-    "policy_name": "$$POLICY_NAME"
-  }
-}
-
-""",
-        "payloadType": "application/json",
-    },
-    type="webhook")
-```
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
-        {
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                BaseUrl = "http://www.test.com",
-                PayloadString = @"{
-  ""my_custom_values"": {
-    ""condition_name"": ""$$CONDITION_NAME"",
-    ""policy_name"": ""$$POLICY_NAME""
-  }
-}
-
-",
-                PayloadType = "application/json",
-            },
-            Type = "webhook",
-        });
-    }
-
-}
-```
 
 {{% examples %}}
 ## Example Usage
@@ -372,7 +43,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				IncludeJsonAttachment: pulumi.String("1"),
+				Recipients:            pulumi.String("foo@example.com"),
+			},
+			Type: pulumi.String("email"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -418,7 +113,7 @@ const foo = new newrelic.AlertChannel("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertChannel">AlertChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertChannel">AlertChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -841,7 +536,7 @@ Get an existing AlertChannel resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

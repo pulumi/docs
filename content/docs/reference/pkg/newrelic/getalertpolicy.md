@@ -12,6 +12,54 @@ meta_desc: "Explore the GetAlertPolicy function of the New Relic package, includ
 
 Use this data source to get information about a specific alert policy in New Relic that already exists.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_alert_channel = newrelic.get_alert_channel(name="foo@example.com")
+foo_alert_policy = newrelic.get_alert_policy(name="foo policy")
+foo_alert_policy_channel = newrelic.AlertPolicyChannel("fooAlertPolicyChannel",
+    policy_id=foo_alert_policy.id,
+    channel_id=foo_alert_channel.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooAlertChannel = newrelic.getAlertChannel({
+    name: "foo@example.com",
+});
+const fooAlertPolicy = newrelic.getAlertPolicy({
+    name: "foo policy",
+});
+const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyChannel", {
+    policyId: fooAlertPolicy.then(fooAlertPolicy => fooAlertPolicy.id),
+    channelId: fooAlertChannel.then(fooAlertChannel => fooAlertChannel.id),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAlertPolicy {#using}

@@ -18,15 +18,57 @@ Use this resource to create and manage New Relic alert policies.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertPolicy("foo", new NewRelic.AlertPolicyArgs
+        {
+            IncidentPreference = "PER_POLICY",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertPolicy(ctx, "foo", &newrelic.AlertPolicyArgs{
+			IncidentPreference: pulumi.String("PER_POLICY"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertPolicy("foo", incident_preference="PER_POLICY")
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -37,201 +79,6 @@ import * as newrelic from "@pulumi/newrelic";
 
 const foo = new newrelic.AlertPolicy("foo", {
     incidentPreference: "PER_POLICY", // PER_POLICY is default
-});
-```
-
-{{% /example %}}
-
-### Provision multiple notification channels and add those channels to a policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Provision a Slack notification channel.
-        var slackChannel = new NewRelic.AlertChannel("slackChannel", new NewRelic.AlertChannelArgs
-        {
-            Type = "slack",
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                Url = "https://hooks.slack.com/services/<*****>/<*****>",
-                Channel = "example-alerts-channel",
-            },
-        });
-        // Provision an email notification channel.
-        var emailChannel = new NewRelic.AlertChannel("emailChannel", new NewRelic.AlertChannelArgs
-        {
-            Type = "email",
-            Config = new NewRelic.Inputs.AlertChannelConfigArgs
-            {
-                Recipients = "example@testing.com",
-                IncludeJsonAttachment = "1",
-            },
-        });
-        // Provision the alert policy.
-        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
-        {
-            IncidentPreference = "PER_CONDITION",
-            ChannelIds = 
-            {
-                slackChannel.Id,
-                emailChannel.Id,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-# Provision a Slack notification channel.
-slack_channel = newrelic.AlertChannel("slackChannel",
-    type="slack",
-    config={
-        "url": "https://hooks.slack.com/services/<*****>/<*****>",
-        "channel": "example-alerts-channel",
-    })
-# Provision an email notification channel.
-email_channel = newrelic.AlertChannel("emailChannel",
-    type="email",
-    config={
-        "recipients": "example@testing.com",
-        "includeJsonAttachment": "1",
-    })
-# Provision the alert policy.
-policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
-    incident_preference="PER_CONDITION",
-    channel_ids=[
-        slack_channel.id,
-        email_channel.id,
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-// Provision a Slack notification channel.
-const slackChannel = new newrelic.AlertChannel("slackChannel", {
-    type: "slack",
-    config: {
-        url: "https://hooks.slack.com/services/<*****>/<*****>",
-        channel: "example-alerts-channel",
-    },
-});
-// Provision an email notification channel.
-const emailChannel = new newrelic.AlertChannel("emailChannel", {
-    type: "email",
-    config: {
-        recipients: "example@testing.com",
-        includeJsonAttachment: "1",
-    },
-});
-// Provision the alert policy.
-const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
-    incidentPreference: "PER_CONDITION",
-    channelIds: [
-        slackChannel.id,
-        emailChannel.id,
-    ],
-});
-```
-
-{{% /example %}}
-
-### Reference existing notification channels and add those channel to a policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var slackChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
-        {
-            Name = "slack-channel-notification",
-        }));
-        var emailChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
-        {
-            Name = "test@example.com",
-        }));
-        // Provision the alert policy.
-        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
-        {
-            IncidentPreference = "PER_CONDITION",
-            ChannelIds = 
-            {
-                slackChannel.Apply(slackChannel => slackChannel.Id),
-                emailChannel.Apply(emailChannel => emailChannel.Id),
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-slack_channel = newrelic.get_alert_channel(name="slack-channel-notification")
-email_channel = newrelic.get_alert_channel(name="test@example.com")
-# Provision the alert policy.
-policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
-    incident_preference="PER_CONDITION",
-    channel_ids=[
-        slack_channel.id,
-        email_channel.id,
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const slackChannel = newrelic.getAlertChannel({
-    name: "slack-channel-notification",
-});
-const emailChannel = newrelic.getAlertChannel({
-    name: "test@example.com",
-});
-// Provision the alert policy.
-const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
-    incidentPreference: "PER_CONDITION",
-    channelIds: [
-        slackChannel.then(slackChannel => slackChannel.id),
-        emailChannel.then(emailChannel => emailChannel.id),
-    ],
 });
 ```
 
@@ -249,7 +96,7 @@ const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicy">AlertPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertPolicy">AlertPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +276,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,7 +287,9 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,7 +329,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,7 +340,9 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +382,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,7 +393,9 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -582,7 +435,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,7 +446,9 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,7 +571,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -838,7 +693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -849,7 +704,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,7 +757,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -940,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +810,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -991,7 +852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The New Relic account ID to operate on.
+    <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1002,7 +863,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
+in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
+imported via terraform import.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

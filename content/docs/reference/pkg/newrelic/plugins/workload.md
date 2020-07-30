@@ -16,85 +16,6 @@ A New Relic Personal API key is required to provision this resource.  Set the `a
 attribute in the `provider` block or the `NEW_RELIC_API_KEY` environment
 variable with your Personal API key.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new NewRelic.Plugins.Workload("foo", new NewRelic.Plugins.WorkloadArgs
-        {
-            AccountId = 12345678,
-            EntityGuids = 
-            {
-                "MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1",
-            },
-            EntitySearchQueries = 
-            {
-                new NewRelic.Plugins.Inputs.WorkloadEntitySearchQueryArgs
-                {
-                    Query = "name like 'Example application'",
-                },
-            },
-            ScopeAccountIds = 
-            {
-                12345678,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo = newrelic.plugins.Workload("foo",
-    account_id=12345678,
-    entity_guids=["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
-    entity_search_queries=[{
-        "query": "name like 'Example application'",
-    }],
-    scope_account_ids=[12345678])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.plugins.Workload("foo", {
-    accountId: 12345678,
-    entityGuids: ["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
-    entitySearchQueries: [{
-        query: "name like 'Example application'",
-    }],
-    scopeAccountIds: [12345678],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Workload Resource {#create}
@@ -106,7 +27,7 @@ const foo = new newrelic.plugins.Workload("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#Workload">Workload</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>entity_guids=None<span class="p">, </span>entity_search_queries=None<span class="p">, </span>name=None<span class="p">, </span>scope_account_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#pulumi_newrelic.plugins.Workload">Workload</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>entity_guids=None<span class="p">, </span>entity_search_queries=None<span class="p">, </span>name=None<span class="p">, </span>scope_account_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -793,7 +714,7 @@ Get an existing Workload resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>composite_entity_search_query=None<span class="p">, </span>entity_guids=None<span class="p">, </span>entity_search_queries=None<span class="p">, </span>guid=None<span class="p">, </span>name=None<span class="p">, </span>permalink=None<span class="p">, </span>scope_account_ids=None<span class="p">, </span>workload_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>composite_entity_search_query=None<span class="p">, </span>entity_guids=None<span class="p">, </span>entity_search_queries=None<span class="p">, </span>guid=None<span class="p">, </span>name=None<span class="p">, </span>permalink=None<span class="p">, </span>scope_account_ids=None<span class="p">, </span>workload_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
