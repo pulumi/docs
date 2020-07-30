@@ -345,6 +345,15 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             minTtl: 0,
             maxTtl: 0,
         },
+
+        // Build-metadata files are never cached.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/metadata.json",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
     ],
 
     // "All" is the most broad distribution, and also the most expensive.
