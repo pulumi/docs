@@ -12,10 +12,10 @@ The self-hosted option allows you to control various aspects of the Pulumi Servi
 
 ## Creating The Keys
 
-Before you can use SAML SSO to logon to the Console, however, you will need to ensure that the [API service]({{< relref "api" >}}) has a pair of keys that will be used to sign
-and validate requests/responses regardless of the IdP you choose to use.
+Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service]({{< relref "api" >}}) has a pair of keys that will be used to sign
+and validate requests/responses, regardless of the IdP you choose to use.
 
-The credentials are simply a public/private key pair that will be supplied as environment variables to the API service.
+The credentials are simply a public/private key pair that are supplied as environment variables to the API service.
 In the following snippets, we show you how you can generate a key pair by using `openssl`.
 The snippet shows the command for a self-hosted API service that is accessible via `api.company.com`.
 Be sure to adjust the value accordingly.
@@ -47,11 +47,11 @@ openssl \
 
 ## Configure The API Service
 
-Once the key pair has been generated, set the value of the following environment variables for the API service.
+Once the key pair has been generated, set the value of the following environment variables for the API service:
 
-`SAML_CERTIFICATE_PUBLIC_KEY` should be set to the value of the `*.cert` file, i.e. the public key file.
-`SAML_CERTIFICATE_PRIVATE_KEY` should be set to the value of the `*.key` file, i.e. the private key file.
+`SAML_CERTIFICATE_PUBLIC_KEY` should be set to the value of the `*cert.cert` file, i.e. the public key file.
+`SAML_CERTIFICATE_PRIVATE_KEY` should be set to the value of the `cert.key` file, i.e. the private key file.
 
 For these values to take effect, you will need to restart the API Service.
 
-> Restart the service only if it is safe to do so or during a planned maintenance window.
+> Restart the service only during a planned maintenance window.
