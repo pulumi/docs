@@ -24,7 +24,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         fi
 
         echo "Found bucket ${pr_bucket_name}."
-        prod_bucket_name="$(pulumi -C infrastructure stack originBucketName)"
+        prod_bucket_name="$(pulumi -C infrastructure stack output originBucketName)"
 
         if [ "$pr_bucket_name" == "$prod_bucket_name" ]; then
             echo "PR bucket name (${pr_bucket_name}) matches production bucket name (${prod_bucket_name}). Skipping delete."

@@ -1,17 +1,13 @@
 name: Close PR
-
 on:
   pull_request:
     types:
       - closed
-
 jobs:
   clean_up:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
     - name: Clean up
       run: make ci_pull_request_closed
       env:
