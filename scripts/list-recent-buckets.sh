@@ -31,14 +31,19 @@ echo "Found ${bucket_count} recent $(origin_bucket_prefix)-* buckets:"
 for bucket in $buckets; do
     echo
     echo "Fetching metadata for ${bucket}..."
-    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" - || true)"
+    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" - || echo '')"
 
     if [ ! -z "$metadata" ]; then
+        bucket_url="$(echo $metadata | jq -r '.url')"
+        bucket_name="$(echo $metadata | jq -r '.bucket')"
+        bucket_timestamp="$(echo $metadata | jq -r '.timestamp / 1000 | strftime("%Y-%m-%d %H:%M:%S UTC")')"
+        bucket_commit="$(echo $metadata | jq -r '.commit')"
+
         echo
-        echo "Bucket URL:  $(echo $metadata | jq -r '.url')"
-        echo "Bucket Name: $(echo $metadata | jq -r '.bucket')"
-        echo "Synced:      $(echo $metadata | jq -r '.timestamp / 1000 | strftime("%Y-%m-%d %H:%M:%S UTC")')"
-        echo "Commit:      https://github.com/pulumi/docs/commit/$(echo $metadata | jq -r '.commit')"
+        echo "Bucket URL:  ${bucket_url}"
+        echo "Bucket Name: ${bucket_name}"
+        echo "Synced:      ${bucket_timestamp}"
+        echo "Commit:      https://github.com/pulumi/docs/commit/${bucket_commit}"
     else
         echo "Missing metadata file. This bucket may not have been built and tested successfully."
     fi
@@ -49,7 +54,7 @@ done
 
 echo
 echo "To run browser tests on one of these buckets, run:"
-echo "nvm use && make ensure && CYPRESS_BASE_URL=\"<s3-bucket-url>\" yarn run cypress run --headless"
+echo "nvm use && make ensure && ./scripts/run-browser-tests.sh \"<s3-bucket-url>\""
 echo
 echo "To pin the website to one of these buckets, run:"
 echo "pulumi -C infrastructure config set originBucketNameOverride <bucket-name>"

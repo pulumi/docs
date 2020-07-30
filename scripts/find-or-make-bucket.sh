@@ -23,10 +23,11 @@ get_bucket_for_commit() {
 }
 
 get_associated_pr_commit_for_commit() {
-    # Note that this uses a GitHub preview API.
+    # Note that this GitHub API is still in preview.
     # https://docs.github.com/en/rest/reference/repos#list-pull-requests-associated-with-a-commit
-    curl -H "Accept: application/vnd.github.groot-preview+json" \
-        "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/$1/pulls" | jq -r '.[0].head.sha' || echo ""
+    curl -s \
+         -H "Accept: application/vnd.github.groot-preview+json" \
+         "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/$1/pulls" | jq -r '.[0].head.sha' || echo ""
 }
 
 # For push events, the GITHUB_SHA is the HEAD of the base branch (e.g., master).

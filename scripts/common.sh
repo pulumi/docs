@@ -9,12 +9,12 @@ post_to_slack() {
     local escaped=$(echo ${message} | sed 's/"/\"/g' | sed "s/'/\'/g" )
     local json="{\"channel\": \"#${channel}\", \"text\": \"${escaped}\", \"as_user\": true}"
 
-    curl \
-        -X POST \
-        -H "Content-type: application/json" \
-        -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
-        -d  "${json}" \
-        https://slack.com/api/chat.postMessage > /dev/null
+    curl -s \
+         -X POST \
+         -H "Content-type: application/json" \
+         -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+         -d  "${json}" \
+         https://slack.com/api/chat.postMessage > /dev/null
 }
 
 # Posts a comment to a GitHub PR. Requires a GitHub token is available in $GITHUB_TOKEN.
@@ -24,11 +24,11 @@ post_github_pr_comment() {
     local pr_comment_api_url=$2
     local pr_comment_body=$(printf '{ "body": "%s" }' "$pr_comment")
 
-    curl \
-        -X POST \
-        -H "Authorization: token ${GITHUB_TOKEN}" \
-        -d "$pr_comment_body" \
-        $pr_comment_api_url > /dev/null
+    curl -s \
+         -X POST \
+         -H "Authorization: token ${GITHUB_TOKEN}" \
+         -d "$pr_comment_body" \
+         $pr_comment_api_url > /dev/null
 }
 
 # Returns the Git SHA of the HEAD commit. For pull requests, we take this from GitHub event metadata, since in that case, the HEAD commit will contain the SHA of the merge commit with the base branch.

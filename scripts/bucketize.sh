@@ -3,17 +3,17 @@
 set -o errexit -o pipefail
 
 # This script takes the built Hugo site and:
-#   * creates a new S3 bucket named with either the current PR number or Git SHA
-#   * creates a list of all Hugo-generated client-side ("meta-refresh") redirects that
-#     we'll use to produce proper 301s later.
-#   * pushes the content of the website into the new S3 bucket.
-#   * tests the built website, first for broken links, then with Cypress to ensure pages
-#     render and behave properly.
-#   * emits a metadata file containing information about the commit and bucket, which
-#     Pulumi will use to process its update.
-#   * writes a record to AWS Parameter Store relating the generated bucket to the commit
-#     responsible for producing it.
-#   * Posts a PR comment back to GitHub, if applicable.
+#   - creates a new S3 bucket named with either the current PR number or Git SHA
+#   - creates a list of all Hugo-generated client-side ("meta-refresh") redirects that
+#   - we'll use to produce proper 301s later.
+#   - pushes the content of the website into the new S3 bucket.
+#   - tests the built website, first for broken links, then with Cypress to ensure pages
+#   - render and behave properly.
+#   - emits a metadata file containing information about the commit and bucket, which
+#   - Pulumi will use to process its update.
+#   - writes a record to AWS Parameter Store relating the generated bucket to the commit
+#   - responsible for producing it.
+#   - Posts a PR comment back to GitHub, if applicable.
 
 source ./scripts/common.sh
 
@@ -107,7 +107,7 @@ aws ssm put-parameter \
 if [ "$1" == "preview" ]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     post_github_pr_comment \
-        "Your site preview build for for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
+        "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
         $pr_comment_api_url
 fi
 
