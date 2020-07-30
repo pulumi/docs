@@ -94,6 +94,11 @@ ci_pull_request:
 	$(MAKE) lint
 	./scripts/ci-pull-request.sh
 
+.PHONY: ci_pull_request_closed
+ci_pull_request_closed:
+	$(MAKE) banner
+	./scripts/ci-pull-request-closed.sh
+
 .PHONY: ci_schedule
 ci_schedule:
 	$(MAKE) banner
