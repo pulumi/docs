@@ -58,11 +58,15 @@ class MyStack : Stack
             OperatingSystem = "ubuntu_16_04",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
-            NetworkType = "hybrid",
+        });
+        var testDeviceNetworkType = new Packet.DeviceNetworkType("testDeviceNetworkType", new Packet.DeviceNetworkTypeArgs
+        {
+            DeviceId = testDevice.Id,
+            Type = "hybrid",
         });
         var testPortVlanAttachment = new Packet.PortVlanAttachment("testPortVlanAttachment", new Packet.PortVlanAttachmentArgs
         {
-            DeviceId = testDevice.Id,
+            DeviceId = testDeviceNetworkType.Id,
             PortName = "eth1",
             VlanVnid = testVlan.Vxlan,
         });
@@ -78,7 +82,11 @@ class MyStack : Stack
             OperatingSystem = "ubuntu_16_04",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
-            NetworkType = "layer2-individual",
+        });
+        var testIndex_deviceNetworkTypeDeviceNetworkType = new Packet.DeviceNetworkType("testIndex/deviceNetworkTypeDeviceNetworkType", new Packet.DeviceNetworkTypeArgs
+        {
+            DeviceId = testDevice.Id,
+            Type = "layer2-individual",
         });
         var test1Vlan = new Packet.Vlan("test1Vlan", new Packet.VlanArgs
         {
@@ -94,13 +102,13 @@ class MyStack : Stack
         });
         var test1PortVlanAttachment = new Packet.PortVlanAttachment("test1PortVlanAttachment", new Packet.PortVlanAttachmentArgs
         {
-            DeviceId = testDevice.Id,
+            DeviceId = testDeviceNetworkType.Id,
             VlanVnid = test1Vlan.Vxlan,
             PortName = "eth1",
         });
         var test2PortVlanAttachment = new Packet.PortVlanAttachment("test2PortVlanAttachment", new Packet.PortVlanAttachmentArgs
         {
-            DeviceId = testDevice.Id,
+            DeviceId = testDeviceNetworkType.Id,
             VlanVnid = test2Vlan.Vxlan,
             PortName = "eth1",
             Native = true,
@@ -123,7 +131,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi-packet/sdk/v3/go/packet"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,7 +140,7 @@ func main() {
 		testVlan, err := packet.NewVlan(ctx, "testVlan", &packet.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
 			Facility:    pulumi.String("ewr1"),
-			ProjectId:   pulumi.String(local.Project_id),
+			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
 			return err
@@ -145,14 +153,20 @@ func main() {
 			},
 			OperatingSystem: pulumi.String("ubuntu_16_04"),
 			BillingCycle:    pulumi.String("hourly"),
-			ProjectId:       pulumi.String(local.Project_id),
-			NetworkType:     pulumi.String("hybrid"),
+			ProjectId:       pulumi.Any(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		testDeviceNetworkType, err := packet.NewDeviceNetworkType(ctx, "testDeviceNetworkType", &packet.DeviceNetworkTypeArgs{
+			DeviceId: testDevice.ID(),
+			Type:     pulumi.String("hybrid"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = packet.NewPortVlanAttachment(ctx, "testPortVlanAttachment", &packet.PortVlanAttachmentArgs{
-			DeviceId: testDevice.ID(),
+			DeviceId: testDeviceNetworkType.ID(),
 			PortName: pulumi.String("eth1"),
 			VlanVnid: testVlan.Vxlan,
 		})
@@ -167,8 +181,14 @@ func main() {
 			},
 			OperatingSystem: pulumi.String("ubuntu_16_04"),
 			BillingCycle:    pulumi.String("hourly"),
-			ProjectId:       pulumi.String(local.Project_id),
-			NetworkType:     pulumi.String("layer2-individual"),
+			ProjectId:       pulumi.Any(local.Project_id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = packet.NewDeviceNetworkType(ctx, "testIndex_deviceNetworkTypeDeviceNetworkType", &packet.DeviceNetworkTypeArgs{
+			DeviceId: testDevice.ID(),
+			Type:     pulumi.String("layer2-individual"),
 		})
 		if err != nil {
 			return err
@@ -176,7 +196,7 @@ func main() {
 		test1Vlan, err := packet.NewVlan(ctx, "test1Vlan", &packet.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
 			Facility:    pulumi.String("ewr1"),
-			ProjectId:   pulumi.String(local.Project_id),
+			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
 			return err
@@ -184,13 +204,13 @@ func main() {
 		test2Vlan, err := packet.NewVlan(ctx, "test2Vlan", &packet.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
 			Facility:    pulumi.String("ewr1"),
-			ProjectId:   pulumi.String(local.Project_id),
+			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = packet.NewPortVlanAttachment(ctx, "test1PortVlanAttachment", &packet.PortVlanAttachmentArgs{
-			DeviceId: testDevice.ID(),
+			DeviceId: testDeviceNetworkType.ID(),
 			VlanVnid: test1Vlan.Vxlan,
 			PortName: pulumi.String("eth1"),
 		})
@@ -198,7 +218,7 @@ func main() {
 			return err
 		}
 		_, err = packet.NewPortVlanAttachment(ctx, "test2PortVlanAttachment", &packet.PortVlanAttachmentArgs{
-			DeviceId: testDevice.ID(),
+			DeviceId: testDeviceNetworkType.ID(),
 			VlanVnid: test2Vlan.Vxlan,
 			PortName: pulumi.String("eth1"),
 			Native:   pulumi.Bool(true),
@@ -231,10 +251,12 @@ test_device = packet.Device("testDevice",
     facilities=["ewr1"],
     operating_system="ubuntu_16_04",
     billing_cycle="hourly",
-    project_id=local["project_id"],
-    network_type="hybrid")
-test_port_vlan_attachment = packet.PortVlanAttachment("testPortVlanAttachment",
+    project_id=local["project_id"])
+test_device_network_type = packet.DeviceNetworkType("testDeviceNetworkType",
     device_id=test_device.id,
+    type="hybrid")
+test_port_vlan_attachment = packet.PortVlanAttachment("testPortVlanAttachment",
+    device_id=test_device_network_type.id,
     port_name="eth1",
     vlan_vnid=test_vlan.vxlan)
 # Layer 2 network
@@ -244,8 +266,10 @@ test_index_device_device = packet.Device("testIndex/deviceDevice",
     facilities=["ewr1"],
     operating_system="ubuntu_16_04",
     billing_cycle="hourly",
-    project_id=local["project_id"],
-    network_type="layer2-individual")
+    project_id=local["project_id"])
+test_index_device_network_type_device_network_type = packet.DeviceNetworkType("testIndex/deviceNetworkTypeDeviceNetworkType",
+    device_id=test_device.id,
+    type="layer2-individual")
 test1_vlan = packet.Vlan("test1Vlan",
     description="VLAN in New Jersey",
     facility="ewr1",
@@ -255,11 +279,11 @@ test2_vlan = packet.Vlan("test2Vlan",
     facility="ewr1",
     project_id=local["project_id"])
 test1_port_vlan_attachment = packet.PortVlanAttachment("test1PortVlanAttachment",
-    device_id=test_device.id,
+    device_id=test_device_network_type.id,
     vlan_vnid=test1_vlan.vxlan,
     port_name="eth1")
 test2_port_vlan_attachment = packet.PortVlanAttachment("test2PortVlanAttachment",
-    device_id=test_device.id,
+    device_id=test_device_network_type.id,
     vlan_vnid=test2_vlan.vxlan,
     port_name="eth1",
     native=True,
@@ -287,10 +311,13 @@ const testDevice = new packet.Device("testDevice", {
     operatingSystem: "ubuntu_16_04",
     billingCycle: "hourly",
     projectId: local.project_id,
-    networkType: "hybrid",
+});
+const testDeviceNetworkType = new packet.DeviceNetworkType("testDeviceNetworkType", {
+    deviceId: testDevice.id,
+    type: "hybrid",
 });
 const testPortVlanAttachment = new packet.PortVlanAttachment("testPortVlanAttachment", {
-    deviceId: testDevice.id,
+    deviceId: testDeviceNetworkType.id,
     portName: "eth1",
     vlanVnid: testVlan.vxlan,
 });
@@ -302,7 +329,10 @@ const testIndex_deviceDevice = new packet.Device("testIndex/deviceDevice", {
     operatingSystem: "ubuntu_16_04",
     billingCycle: "hourly",
     projectId: local.project_id,
-    networkType: "layer2-individual",
+});
+const testIndex_deviceNetworkTypeDeviceNetworkType = new packet.DeviceNetworkType("testIndex/deviceNetworkTypeDeviceNetworkType", {
+    deviceId: testDevice.id,
+    type: "layer2-individual",
 });
 const test1Vlan = new packet.Vlan("test1Vlan", {
     description: "VLAN in New Jersey",
@@ -315,12 +345,12 @@ const test2Vlan = new packet.Vlan("test2Vlan", {
     projectId: local.project_id,
 });
 const test1PortVlanAttachment = new packet.PortVlanAttachment("test1PortVlanAttachment", {
-    deviceId: testDevice.id,
+    deviceId: testDeviceNetworkType.id,
     vlanVnid: test1Vlan.vxlan,
     portName: "eth1",
 });
 const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAttachment", {
-    deviceId: testDevice.id,
+    deviceId: testDeviceNetworkType.id,
     vlanVnid: test2Vlan.vxlan,
     portName: "eth1",
     native: true,
@@ -343,11 +373,11 @@ const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAtta
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/packet/#PortVlanAttachment">PortVlanAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device_id=None<span class="p">, </span>force_bond=None<span class="p">, </span>native=None<span class="p">, </span>port_name=None<span class="p">, </span>vlan_vnid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.PortVlanAttachment">PortVlanAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device_id=None<span class="p">, </span>force_bond=None<span class="p">, </span>native=None<span class="p">, </span>port_name=None<span class="p">, </span>vlan_vnid=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachment">NewPortVlanAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachmentArgs">PortVlanAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachment">PortVlanAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachment">NewPortVlanAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachmentArgs">PortVlanAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachment">PortVlanAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -421,7 +451,7 @@ const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAtta
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -441,7 +471,7 @@ const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAtta
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachmentArgs">PortVlanAttachmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachmentArgs">PortVlanAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -451,7 +481,7 @@ const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAtta
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -934,11 +964,11 @@ Get an existing PortVlanAttachment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>device_id=None<span class="p">, </span>force_bond=None<span class="p">, </span>native=None<span class="p">, </span>port_id=None<span class="p">, </span>port_name=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_vnid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>device_id=None<span class="p">, </span>force_bond=None<span class="p">, </span>native=None<span class="p">, </span>port_id=None<span class="p">, </span>port_name=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_vnid=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPortVlanAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachmentState">PortVlanAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#PortVlanAttachment">PortVlanAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPortVlanAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachmentState">PortVlanAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#PortVlanAttachment">PortVlanAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
