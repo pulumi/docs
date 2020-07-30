@@ -26,7 +26,41 @@ const config = {
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
     redirectDomain: stackConfig.get("redirectDomain") || undefined,
+    // originBucketNameOverride is an optional value that can be used to manually pin the
+    // website to a specific S3 bucket. Values are of the form "bucket-name-123", rather
+    // than "s3://bucket-name-123".
+    originBucketNameOverride: stackConfig.get("originBucketNameOverride") || undefined,
+    // pathToOriginBucketMetadata is the path to the file produced at the end of the
+    // bucketize script (i.e., scripts/bucketize.sh).
+    pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
 };
+
+// originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
+// website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
+// program will fail.
+export let originBucketName: string | undefined;
+
+// If a build metadata file is present and contains valid content, use that for the bucket
+// name by default. Will fail if there's a file present that isn't parsable as expected.
+if (fs.existsSync(config.pathToOriginBucketMetadata)) {
+    originBucketName = JSON.parse(fs.readFileSync(config.pathToOriginBucketMetadata).toString()).bucket;
+}
+
+// However, if the bucket's been configured manually, use that instead. A manually
+// configured bucket means that someone's decided to pin it.
+if (config.originBucketNameOverride) {
+    originBucketName = config.originBucketNameOverride;
+}
+
+// If there's still no bucket selected, it's an error.
+if (!originBucketName) {
+    throw new Error("An origin bucket was not specified.");
+}
+
+// Fetch the bucket we'll use for the preview or update.
+const originBucket = pulumi.output(aws.s3.getBucket({
+    bucket: originBucketName,
+}));
 
 // redirectDomain is the domain to use when redirecting.
 const redirectDomain = config.redirectDomain || config.websiteDomain;
@@ -56,6 +90,29 @@ const websiteBucket = new aws.s3.Bucket(
 const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
     bucket: websiteBucket.bucket,
     policy: websiteBucket.arn.apply(arn => JSON.stringify({
+        Version: "2008-10-17",
+        Statement: [
+            {
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:ListBucket",
+                Resource: arn,
+                Condition: {
+                    StringNotEquals: {
+                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
+                    },
+                },
+            },
+        ],
+    })),
+});
+
+// The origin bucket needs to have the "public-read" ACL so its contents can be read by
+// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
+// users to prevent unintended disclosure of the bucket's contents.
+const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
+    bucket: originBucket.bucket,
+    policy: originBucket.arn.apply(arn => JSON.stringify({
         Version: "2008-10-17",
         Statement: [
             {
@@ -152,7 +209,7 @@ const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
 const baseCacheBehavior = {
-    targetOriginId: websiteBucket.arn,
+    targetOriginId: originBucket.arn,
     compress: true,
 
     viewerProtocolPolicy: "redirect-to-https",
@@ -198,8 +255,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
         {
-            originId: websiteBucket.arn,
-            domainName: websiteBucket.websiteEndpoint,
+            originId: originBucket.arn,
+            domainName: originBucket.websiteEndpoint,
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
@@ -284,6 +341,15 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/js/components/components.esm.js",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+
+        // Build-metadata files are never cached.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/metadata.json",
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
@@ -424,6 +490,7 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
 // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
 async function createAliasRecord(
         targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+
     const domainParts = getDomainAndSubdomain(targetDomain);
     const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
     return new aws.route53.Record(
@@ -503,8 +570,11 @@ if (!pulumi.runtime.isDryRun()) {
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
 
-export const archiveBucketUri = archiveBucket.bucket.apply(b => `s3://${b}`);
-export const websiteBucketUri = websiteBucket.bucket.apply(b => `s3://${b}`);
+export const archiveBucketUri = pulumi.interpolate`s3://${archiveBucket.bucket}`;
+export const websiteBucketUri = pulumi.interpolate`s3://${websiteBucket.bucket}`;
 export const websiteBucketWebsiteDomain = websiteBucket.websiteDomain;
 export const websiteBucketWebsiteEndpoint = websiteBucket.websiteEndpoint;
+export const originBucketUri = pulumi.interpolate`s3://${originBucket.bucket}`;
+export const originBucketWebsiteDomain = originBucket.websiteDomain;
+export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;

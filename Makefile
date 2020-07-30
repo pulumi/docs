@@ -12,6 +12,7 @@ banner:
 
 .PHONY: clean
 clean:
+	yarn cache clean
 	rm -rf node_modules
 	rm -rf components/node_modules
 	rm -rf public
@@ -25,14 +26,10 @@ ensure_tools:
 	echo "Restoring resourcedocsgen deps..."
 	cd tools/resourcedocsgen && go mod tidy && go mod download
 
-.PHONY: lint_markdown
-lint_markdown:
-	yarn lint-markdown
-
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	yarn lint-markdown --no-error
+	$(MAKE) lint
 	./scripts/serve.sh
 
 .PHONY: serve_components
@@ -66,21 +63,19 @@ copy_static_prebuilt:
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
-	yarn lint-markdown
+	$(MAKE) lint
 	./scripts/build-site.sh
 
-.PHONY: pulumify
-pulumify:
-	@echo -e "\033[0;32mBUILD PULUMIFY:\033[0m"
-	$(MAKE) ensure
-	./scripts/build-site.sh preview
+.PHONY: lint
+lint:
+	yarn run lint-markdown
 
 .PHONY: test
 test:
 	$(MAKE) check_links_local
 
 .PHONY: check_links_local
-check_links_local::
+check_links_local:
 	$(MAKE) banner
 	$(MAKE) ensure
 	./scripts/check-links.sh local
@@ -89,19 +84,23 @@ check_links_local::
 ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) build
-	./scripts/run-pulumi.sh update production
+	$(MAKE) lint
+	./scripts/ci-push.sh
 
 .PHONY: ci_pull_request
-ci_pull_request::
+ci_pull_request:
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) build
-	$(MAKE) test
-	./scripts/run-pulumi.sh preview production
+	$(MAKE) lint
+	./scripts/ci-pull-request.sh
+
+.PHONY: ci_pull_request_closed
+ci_pull_request_closed:
+	$(MAKE) banner
+	./scripts/ci-pull-request-closed.sh
 
 .PHONY: ci_schedule
-ci_schedule::
+ci_schedule:
 	$(MAKE) banner
 	$(MAKE) ensure
 	./scripts/check-links.sh www

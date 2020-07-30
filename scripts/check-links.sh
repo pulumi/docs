@@ -15,7 +15,7 @@ check_links_www() {
 	#       although valid and publicly available, is reported as a broken link.
 	#     - A number of synthetic illustrative links come from our examples/tutorials.
     #     - GitLab 503s for requests for protected pages that don't contain certain cookies.
-    npx blc https://www.pulumi.com --recursive --follow --get \
+    yarn run blc https://www.pulumi.com --recursive --follow --get \
         --exclude "/docs/reference/pkg" \
         --exclude "/docs/get-started/install/versions" \
         --exclude "https://api.pulumi.com/" \
@@ -50,11 +50,11 @@ check_links_www() {
 
 check_links_local() {
     # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions
-    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/versions/ --follow \
+    yarn run blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/versions/ --follow \
         --exclude-internal \
         --exclude "https://www*"
 
-    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/ --follow \
+    yarn run blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/ --follow \
         --exclude-internal \
         --exclude "https://www*"
 }
@@ -77,7 +77,20 @@ if [ $CHECK_TYPE = "local" ]; then
 fi
 
 if [ $CHECK_TYPE = "www" ]; then
-
     echo "Checking all links on pulumi.com"
     retry check_links_www 3 15 || (post_to_slack "ops-notifications" "Eek! :scream_cat: There are broken links on pulumi.com. See the GitHub Actions log for details. https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" && exit 1)
+fi
+
+# This variation lets us check important links at a specified URL.
+if [ $CHECK_TYPE = "url" ]; then
+    base_url="$2"
+
+    # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions
+    yarn run blc "${base_url}/docs/get-started/install/versions/" --follow \
+        --exclude-internal \
+        --exclude "https://www*"
+
+    yarn run blc "${base_url}/docs/get-started/install/" --follow \
+        --exclude-internal \
+        --exclude "https://www*"
 fi
