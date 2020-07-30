@@ -71,3 +71,53 @@ curl \
 ```
 
 > _Note: Substitute `${org}`, `${user}`,  and `${time}` for your actual values - e.g. `org`, `username`, and `1583460637`._
+
+## Supported Audit Log Formats
+
+We currently support two formats for exporting audit logs through the API. The two formats we currently support
+are CSV and CEF. These formats can be specified by appending the `format` query parameter as follows, `format=csv`
+or `format=cef`. CSV is the default, so if no format is specified the logs will be returned as CSV.
+
+```
+GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}&format=cef
+```
+
+### CEF Format Support
+
+CEF is an audit and logging event format that is supported by a wide range of SIEMs. The format is as follows:
+
+```
+MMM dd hh:mm:ss host CEF:Version|Device Vendor|Device Product|Device Version|Device Event Class ID|Name|Severity|[Extension]
+```
+
+The following fields are part of the standard header defined by CEF:
+
+_Device Vendor_, _Device Product_, _Device Version_: these are strings that uniquely identify the sending device
+
+_Device Event Class ID_: string or integer identifying the type of event reported
+
+_Name_: a human readable description of the event
+
+_Severity_: severity level reflecting the importance of the event
+
+The Extension section is collection of key-value pairs. These keys come from a pre-defined set as well as some keys that we have
+defined on our own.
+
+Pre-defined keys by the CEF standard:
+
+| Key     | Description                                                                                                          |
+|---------|------------------------------------------------------------------------------|
+| dvchost | identifies the device host name.                                             |
+| rt      | identifies the time at which the event related to the activity was received. |
+| src     | identifies the source that an event refers to in an IP network.              |
+| suser   | identifies the source user by user name.                                     |
+
+Custom defined keys:
+
+| Key                   | Description                                                                                                             |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------|
+| orgID                 | the ID of the organization this event belongs to.                                                                       |
+| userID                | the ID of the user who invoked this event.                                                                              |
+| requireOrgAdmin       | indicates whether the event required organizational admin level permissions, the value will either be "true" or "false" |
+| requireStackAdmin     | indicates whether the event required stack admin level permissions, the value will either be "true" or "false"          |
+| authenticationFailure | indicates whether the event occurred  due to an authentication failure, the value will either be "true" or "false"      |
