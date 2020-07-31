@@ -3,7 +3,7 @@ title: "Module settings"
 title_tag: "Module settings | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "settings"
 meta_desc: "Explore members of the settings module in the @pulumi/kubernetes package."
-git_sha: "7c4a21b9244f8e1d4c027abcf1d1c0965236a5e0"
+git_sha: "ffb56cbd66a23d2c0ce121749832115f40ec831a"
 block_external_search_index: true
 ---
 
