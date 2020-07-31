@@ -180,17 +180,6 @@ archiveBucket.onObjectCreated("archive-bucket-subscription", new aws.lambda.Call
     },
 }));
 
-// logsBucket stores the request logs for incoming requests.
-const logsBucket = new aws.s3.Bucket(
-    "requestLogs",
-    {
-        bucket: `${config.targetDomain}-logs`,
-        acl: "private",
-    },
-    {
-        protect: true,
-    });
-
 // websiteLogsBucket stores the request logs for incoming requests.
 const websiteLogsBucket = new aws.s3.Bucket(
     "website-logs-bucket",
