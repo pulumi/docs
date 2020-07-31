@@ -18,7 +18,7 @@ main:
   title: Advanced Infrastructure as Code
   sortable_date: 2020-04-02T06:00:00.000-07:00
   duration: 90 minutes
-  datetime: Wed Apr 15, 2020 'PM'T 05:00PM P'15'T
+  datetime: "Friday, July 10, 2020 12:00 AM "
   description: >
     This workshop will cover advanced infrastructure as code topics including
     using and authoring components, multi-stack architectures and testing - as
