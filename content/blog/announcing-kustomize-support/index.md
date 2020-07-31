@@ -16,7 +16,7 @@ Kubernetes is complex, and there are many ways to manage Kubernetes resources. P
 
 Over the past year, we've heard from many users that they'd like to manage Kustomize resources directly with Pulumi.
 The [v2.4.0 release] of our Kubernetes provider adds support for Kustomize to all of our SDKs (Go, TypeScript, .NET, Python).
-One of our primary goals at Pulumi is to meet users where they are. Our support for Kustomize, Helm, and YAML means that
+One of our primary goals at Pulumi is to meet users where they are. Our support for [Kustomize], [Helm], and [YAML] means that
 you don't have to "boil the ocean" to get started with Pulumi. The following examples show you how to get started with
 Pulumi and Kustomize today!
 
@@ -345,4 +345,7 @@ any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
 [v2.4.0 release]: https://github.com/pulumi/pulumi-kubernetes/releases/tag/v2.4.0
+[Kustomize]: https://www.pulumi.com/docs/reference/pkg/kubernetes/kustomize/directory
+[Helm]: https://www.pulumi.com/docs/reference/pkg/kubernetes/helm/v3/chart/
+[YAML]: https://www.pulumi.com/docs/reference/pkg/kubernetes/yaml/configgroup/
 <!-- markdownlint-enable url -->
