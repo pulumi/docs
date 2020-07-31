@@ -49,7 +49,7 @@ openssl \
 
 Once the key pair has been generated, set the value of the following environment variables for the API service:
 
-`SAML_CERTIFICATE_PUBLIC_KEY` should be set to the value of the `*cert.cert` file, i.e. the public key file.
+`SAML_CERTIFICATE_PUBLIC_KEY` should be set to the value of the `cert.cert` file, i.e. the public key file.
 `SAML_CERTIFICATE_PRIVATE_KEY` should be set to the value of the `cert.key` file, i.e. the private key file.
 
 For these values to take effect, you will need to restart the API Service.
