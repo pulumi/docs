@@ -498,6 +498,45 @@ async function createAliasRecord(
         });
 }
 
+// Import the existing A record for www.pulumi.com, so that we can manage it with Pulumi.
+//
+// $ aws route53 list-hosted-zones
+// {
+//     "Id": "/hostedzone/ZO6LPSL2G2BAO",
+//     "Name": "pulumi.com.",
+//     ...
+// },
+//
+// $ aws route53 list-resource-record-sets --hosted-zone-id ZO6LPSL2G2BAO
+// {
+//     "Name": "www.pulumi.com.",
+//     "Type": "A",
+//     "AliasTarget": {
+//         "HostedZoneId": "Z2FDTNDATAQYW2",
+//         "DNSName": "dhy4niicdm7ba.cloudfront.net.",
+//         "EvaluateTargetHealth": true
+//     }
+// },
+const importedAlias = new aws.route53.Record(
+    "www.pulumi.com",
+    {
+        name: "www",
+        zoneId: "ZO6LPSL2G2BAO",                        // The hosted zone ID for "pulumi.com".
+        type: "A",
+        aliases: [
+            {
+                name: "dhy4niicdm7ba.cloudfront.net.",  // The current, unused distribution.
+                zoneId: "Z2FDTNDATAQYW2",               // The common CloudFront hosted zone ID.
+                evaluateTargetHealth: true,             // The current value
+            },
+        ],
+    },
+    {
+        import: "ZO6LPSL2G2BAO_www_A",                  // The id Pulumi would assign if it were to
+                                                        // create this record from scratch.
+    }
+);
+
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
 
