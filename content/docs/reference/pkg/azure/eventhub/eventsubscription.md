@@ -551,16 +551,16 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="topicname_csharp">
 <a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -778,16 +778,16 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="topicname_go">
 <a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1005,16 +1005,16 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="topicname_nodejs">
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1232,16 +1232,16 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="topic_name_python">
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1664,16 +1664,16 @@ The following state arguments are supported:
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_topicname_csharp">
 <a href="#state_topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1891,16 +1891,16 @@ The following state arguments are supported:
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_topicname_go">
 <a href="#state_topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2118,16 +2118,16 @@ The following state arguments are supported:
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_topicname_nodejs">
 <a href="#state_topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2345,16 +2345,16 @@ The following state arguments are supported:
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_topic_name_python">
 <a href="#state_topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4948,7 +4948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time to live (in minutes) for events.
+    <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4977,7 +4977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time to live (in minutes) for events.
+    <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5006,7 +5006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time to live (in minutes) for events.
+    <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5035,7 +5035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time to live (in minutes) for events.
+    <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
