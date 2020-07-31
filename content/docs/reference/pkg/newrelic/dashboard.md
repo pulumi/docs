@@ -54,7 +54,8 @@ Each `visualization` type supports an additional set of arguments:
     * `duration` - (Required) The duration, in ms, of the time window represented in the chart.
     * `end_time` - (Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
     * `facet` - (Optional) Can be set to "host" to facet the metric data by host.
-    * `limit` - (Optional) The limit of distinct data series to display.
+    * `limit` - (Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
+    * `order_by` - (Optional) Set the order of the results.  Required when using `limit`.
   * `application_breakdown`:
     * `entity_ids` - (Required) A collection of entity IDs to display data. These are typically application IDs.
 
