@@ -18,186 +18,6 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### With The Default Node Pool
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
-        {
-            InitialNodeCount = 3,
-            Location = "us-central1-a",
-            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
-            {
-                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
-                {
-                    IssueClientCertificate = false,
-                },
-                Password = "",
-                Username = "",
-            },
-            NodeConfig = new Gcp.Container.Inputs.ClusterNodeConfigArgs
-            {
-                Labels = 
-                {
-                    { "foo", "bar" },
-                },
-                Metadata = 
-                {
-                    { "disable-legacy-endpoints", "true" },
-                },
-                OauthScopes = 
-                {
-                    "https://www.googleapis.com/auth/logging.write",
-                    "https://www.googleapis.com/auth/monitoring",
-                },
-                Tags = 
-                {
-                    "foo",
-                    "bar",
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = container.NewCluster(ctx, "primary", &container.ClusterArgs{
-			InitialNodeCount: pulumi.Int(3),
-			Location:         pulumi.String("us-central1-a"),
-			MasterAuth: &container.ClusterMasterAuthArgs{
-				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
-					IssueClientCertificate: pulumi.Bool(false),
-				},
-				Password: pulumi.String(""),
-				Username: pulumi.String(""),
-			},
-			NodeConfig: &container.ClusterNodeConfigArgs{
-				Labels: pulumi.Map{
-					"foo": pulumi.String("bar"),
-				},
-				Metadata: pulumi.Map{
-					"disable-legacy-endpoints": pulumi.String("true"),
-				},
-				OauthScopes: pulumi.StringArray{
-					pulumi.String("https://www.googleapis.com/auth/logging.write"),
-					pulumi.String("https://www.googleapis.com/auth/monitoring"),
-				},
-				Tags: pulumi.StringArray{
-					pulumi.String("foo"),
-					pulumi.String("bar"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-primary = gcp.container.Cluster("primary",
-    initial_node_count=3,
-    location="us-central1-a",
-    master_auth={
-        "clientCertificateConfig": {
-            "issueClientCertificate": False,
-        },
-        "password": "",
-        "username": "",
-    },
-    node_config={
-        "labels": {
-            "foo": "bar",
-        },
-        "metadata": {
-            "disable-legacy-endpoints": "true",
-        },
-        "oauthScopes": [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-        "tags": [
-            "foo",
-            "bar",
-        ],
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const primary = new gcp.container.Cluster("primary", {
-    initialNodeCount: 3,
-    location: "us-central1-a",
-    masterAuth: {
-        clientCertificateConfig: {
-            issueClientCertificate: false,
-        },
-        password: "",
-        username: "",
-    },
-    nodeConfig: {
-        labels: {
-            foo: "bar",
-        },
-        metadata: {
-            "disable-legacy-endpoints": "true",
-        },
-        oauthScopes: [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-        tags: [
-            "foo",
-            "bar",
-        ],
-    },
-}, { timeouts: {
-    create: "30m",
-    update: "40m",
-} });
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -209,7 +29,7 @@ const primary = new gcp.container.Cluster("primary", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>networking_mode=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,8 +276,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,6 +549,19 @@ shared network.
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
 feature. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkingmode_csharp">
+<a href="#networkingmode_csharp" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,8 +840,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,6 +1113,19 @@ shared network.
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
 feature. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkingmode_go">
+<a href="#networkingmode_go" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1560,8 +1404,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1834,6 +1677,19 @@ shared network.
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
 feature. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkingmode_nodejs">
+<a href="#networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2112,8 +1968,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Dict[Cluster<wbr>Database<wbr>Encryption]</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2386,6 +2241,19 @@ shared network.
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
 feature. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networking_mode_python">
+<a href="#networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3016,7 +2884,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>endpoint=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>instance_group_urls=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>master_version=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>operation=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>services_ipv4_cidr=None<span class="p">, </span>subnetwork=None<span class="p">, </span>tpu_ipv4_cidr_block=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>endpoint=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>instance_group_urls=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>master_version=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>networking_mode=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>operation=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>services_ipv4_cidr=None<span class="p">, </span>subnetwork=None<span class="p">, </span>tpu_ipv4_cidr_block=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3205,8 +3073,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3530,6 +3397,19 @@ feature. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkingmode_csharp">
+<a href="#state_networkingmode_csharp" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_csharp">
 <a href="#state_nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span> 
@@ -3841,8 +3721,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4166,6 +4045,19 @@ feature. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkingmode_go">
+<a href="#state_networkingmode_go" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_go">
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span> 
@@ -4477,8 +4369,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4802,6 +4693,19 @@ feature. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkingmode_nodejs">
+<a href="#state_networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_nodejs">
 <a href="#state_nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span> 
@@ -5113,8 +5017,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdatabaseencryption">Dict[Cluster<wbr>Database<wbr>Encryption]</a></span>
     </dt>
-    <dd>{{% md %}}.
-Structure is documented below.
+    <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5434,6 +5337,19 @@ shared network.
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
 feature. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_networking_mode_python">
+<a href="#state_networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -13,6 +13,7 @@ meta_desc: "Explore the Job resource of the dataflow module, including examples,
 Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
 the official documentation for
 [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
+
 ## Note on "destroy" / "apply"
 
 There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.
@@ -21,101 +22,6 @@ The Dataflow resource is considered 'existing' while it is in a nonterminal stat
 
 A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancelled", the job terminates - any data written remains where it is, but no new data will be processed.  If "drained", no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is "cancelled", but if a user sets `on_delete` to `"drain"` in the configuration, you may experience a long wait for your `pulumi destroy` to complete.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bigDataJob = new Gcp.Dataflow.Job("bigDataJob", new Gcp.Dataflow.JobArgs
-        {
-            Parameters = 
-            {
-                { "baz", "qux" },
-                { "foo", "bar" },
-            },
-            TempGcsLocation = "gs://my-bucket/tmp_dir",
-            TemplateGcsPath = "gs://my-bucket/templates/template_file",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataflow"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataflow.NewJob(ctx, "bigDataJob", &dataflow.JobArgs{
-			Parameters: pulumi.Map{
-				"baz": pulumi.String("qux"),
-				"foo": pulumi.String("bar"),
-			},
-			TempGcsLocation: pulumi.String("gs://my-bucket/tmp_dir"),
-			TemplateGcsPath: pulumi.String("gs://my-bucket/templates/template_file"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-big_data_job = gcp.dataflow.Job("bigDataJob",
-    parameters={
-        "baz": "qux",
-        "foo": "bar",
-    },
-    temp_gcs_location="gs://my-bucket/tmp_dir",
-    template_gcs_path="gs://my-bucket/templates/template_file")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bigDataJob = new gcp.dataflow.Job("big_data_job", {
-    parameters: {
-        baz: "qux",
-        foo: "bar",
-    },
-    tempGcsLocation: "gs://my-bucket/tmp_dir",
-    templateGcsPath: "gs://my-bucket/templates/template_file",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

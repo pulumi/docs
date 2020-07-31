@@ -23,7 +23,7 @@ Explore the resources and functions of the datastore module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.13.0</dd>
 </dl>
 
 

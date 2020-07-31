@@ -240,6 +240,17 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_csharp">
@@ -480,17 +491,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_csharp">
-<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span> 
@@ -561,6 +561,17 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -803,17 +814,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_go">
-<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span> 
@@ -884,6 +884,17 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,17 +1137,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_nodejs">
-<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span> 
@@ -1207,6 +1207,17 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1445,17 +1456,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_python">
-<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"

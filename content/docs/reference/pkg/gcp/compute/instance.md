@@ -15,216 +15,6 @@ Manages a VM instance resource within GCE. For more information see
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.Compute.Instance("default", new Gcp.Compute.InstanceArgs
-        {
-            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
-            {
-                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
-                {
-                    Image = "debian-cloud/debian-9",
-                },
-            },
-            MachineType = "n1-standard-1",
-            Metadata = 
-            {
-                { "foo", "bar" },
-            },
-            MetadataStartupScript = "echo hi > /test.txt",
-            NetworkInterfaces = 
-            {
-                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
-                {
-                    AccessConfig = 
-                    {
-                        ,
-                    },
-                    Network = "default",
-                },
-            },
-            ScratchDisks = 
-            {
-                new Gcp.Compute.Inputs.InstanceScratchDiskArgs
-                {
-                    Interface = "SCSI",
-                },
-            },
-            ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
-            {
-                Scopes = 
-                {
-                    "userinfo-email",
-                    "compute-ro",
-                    "storage-ro",
-                },
-            },
-            Tags = 
-            {
-                "foo",
-                "bar",
-            },
-            Zone = "us-central1-a",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewInstance(ctx, "default", &compute.InstanceArgs{
-			BootDisk: &compute.InstanceBootDiskArgs{
-				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
-					Image: pulumi.String("debian-cloud/debian-9"),
-				},
-			},
-			MachineType: pulumi.String("n1-standard-1"),
-			Metadata: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
-			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
-				&compute.InstanceNetworkInterfaceArgs{
-					AccessConfig: pulumi.MapArray{
-						nil,
-					},
-					Network: pulumi.String("default"),
-				},
-			},
-			ScratchDisks: compute.InstanceScratchDiskArray{
-				&compute.InstanceScratchDiskArgs{
-					Interface: pulumi.String("SCSI"),
-				},
-			},
-			ServiceAccount: &compute.InstanceServiceAccountArgs{
-				Scopes: pulumi.StringArray{
-					pulumi.String("userinfo-email"),
-					pulumi.String("compute-ro"),
-					pulumi.String("storage-ro"),
-				},
-			},
-			Tags: pulumi.StringArray{
-				pulumi.String("foo"),
-				pulumi.String("bar"),
-			},
-			Zone: pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.Instance("default",
-    boot_disk={
-        "initializeParams": {
-            "image": "debian-cloud/debian-9",
-        },
-    },
-    machine_type="n1-standard-1",
-    metadata={
-        "foo": "bar",
-    },
-    metadata_startup_script="echo hi > /test.txt",
-    network_interfaces=[{
-        "accessConfig": [{}],
-        "network": "default",
-    }],
-    scratch_disks=[{
-        "interface": "SCSI",
-    }],
-    service_account={
-        "scopes": [
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
-    },
-    tags=[
-        "foo",
-        "bar",
-    ],
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultInstance = new gcp.compute.Instance("default", {
-    bootDisk: {
-        initializeParams: {
-            image: "debian-cloud/debian-9",
-        },
-    },
-    machineType: "n1-standard-1",
-    metadata: {
-        foo: "bar",
-    },
-    metadataStartupScript: "echo hi > /test.txt",
-    networkInterfaces: [{
-        accessConfigs: [{}],
-        network: "default",
-    }],
-    // Local SSD disk
-    scratchDisks: [{
-        interface: "SCSI",
-    }],
-    serviceAccount: {
-        scopes: [
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
-    },
-    tags: [
-        "foo",
-        "bar",
-    ],
-    zone: "us-central1-a",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -4565,7 +4355,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -4625,7 +4415,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -4685,7 +4475,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -4745,7 +4535,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>

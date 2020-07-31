@@ -23,6 +23,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="binaryauthorization/" title="binaryauthorization"><span class="symbol module"></span>binaryauthorization</a></li>
     <li><a href="cloudbuild/" title="cloudbuild"><span class="symbol module"></span>cloudbuild</a></li>
     <li><a href="cloudfunctions/" title="cloudfunctions"><span class="symbol module"></span>cloudfunctions</a></li>
+    <li><a href="cloudidentity/" title="cloudidentity"><span class="symbol module"></span>cloudidentity</a></li>
     <li><a href="cloudrun/" title="cloudrun"><span class="symbol module"></span>cloudrun</a></li>
     <li><a href="cloudscheduler/" title="cloudscheduler"><span class="symbol module"></span>cloudscheduler</a></li>
     <li><a href="cloudtasks/" title="cloudtasks"><span class="symbol module"></span>cloudtasks</a></li>
@@ -91,7 +92,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.13.0</dd>
 </dl>
 
 

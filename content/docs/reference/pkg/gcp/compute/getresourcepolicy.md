@@ -12,61 +12,6 @@ meta_desc: "Explore the GetResourcePolicy function of the compute module, includ
 
 Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const daily = gcp.compute.getResourcePolicy({
-    name: "daily",
-    region: "us-central1",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-daily = gcp.compute.get_resource_policy(name="daily",
-    region="us-central1")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var daily = Output.Create(Gcp.Compute.GetResourcePolicy.InvokeAsync(new Gcp.Compute.GetResourcePolicyArgs
-        {
-            Name = "daily",
-            Region = "us-central1",
-        }));
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.LookupResourcePolicy(ctx, &compute.LookupResourcePolicyArgs{
-			Name:   "daily",
-			Region: "us-central1",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetResourcePolicy {#using}

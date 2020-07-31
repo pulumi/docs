@@ -35,105 +35,6 @@ To get more information about Disk, see:
 > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Disk Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.Compute.Disk("default", new Gcp.Compute.DiskArgs
-        {
-            Image = "debian-8-jessie-v20170523",
-            Labels = 
-            {
-                { "environment", "dev" },
-            },
-            PhysicalBlockSizeBytes = 4096,
-            Type = "pd-ssd",
-            Zone = "us-central1-a",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewDisk(ctx, "default", &compute.DiskArgs{
-			Image: pulumi.String("debian-8-jessie-v20170523"),
-			Labels: pulumi.Map{
-				"environment": pulumi.String("dev"),
-			},
-			PhysicalBlockSizeBytes: pulumi.Int(4096),
-			Type:                   pulumi.String("pd-ssd"),
-			Zone:                   pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.Disk("default",
-    image="debian-8-jessie-v20170523",
-    labels={
-        "environment": "dev",
-    },
-    physical_block_size_bytes=4096,
-    type="pd-ssd",
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultDisk = new gcp.compute.Disk("default", {
-    image: "debian-8-jessie-v20170523",
-    labels: {
-        environment: "dev",
-    },
-    physicalBlockSizeBytes: 4096,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Disk Resource {#create}
@@ -362,7 +263,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -571,7 +472,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -780,7 +681,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -989,7 +890,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -1782,7 +1683,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2083,7 +1984,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2384,7 +2285,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2685,7 +2586,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
