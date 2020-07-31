@@ -61,3 +61,25 @@ The API service is a Go-based application. This is a single binary application t
 | SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to set this value [here]({{< relref "saml-sso" >}}). |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
+
+### TLS Environment Variables
+
+#### API Service
+
+The service is configurable to serve the API using TLS. The following environment variables are _all_ required in order to enable TLS.
+
+| Variable Name       | Description                                                                                               |
+|---------------------|-----------------------------------------------------------------------------------------------------------|
+| API_TLS_CERTIFICATE | The TLS certificate. The certificate must be supplied in X.509 format and must be PEM encoded.            |
+| API_TLS_PRIVATE_KEY | The private key associated with the TLS certificate. The private key must be PEM encoded.                 |
+| API_MIN_TLS_VERSION | The minimum version of TLS to use when serving the API (must be in \<major>.\<minor> format, e.g. `1.2`). |
+
+#### Database Connections
+
+The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_
+required to connect to the database using TLS.
+
+| Variable Name            | Description                                                                                                   |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. |
+| DATABASE_MIN_TLS_VERSION | The minimum TLS version to use for database connections (must be in \<major>.\<minor> format, e.g. `1.2`).    |
