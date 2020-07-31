@@ -5,7 +5,7 @@ meta_desc: Learn how the Pulumi plugin for Spinnaker simplifies your deployments
 featured: false
 pre_recorded: false
 pulumi_tv: false
-preview_image: ../../../static/images/webinar/backgrou-d.jpg
+preview_image: /images/webinar/backgrou-d.jpg
 unlisted: false
 gated: true
 type: webinars
