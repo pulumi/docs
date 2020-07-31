@@ -180,17 +180,6 @@ archiveBucket.onObjectCreated("archive-bucket-subscription", new aws.lambda.Call
     },
 }));
 
-// logsBucket stores the request logs for incoming requests.
-const logsBucket = new aws.s3.Bucket(
-    "requestLogs",
-    {
-        bucket: `${config.targetDomain}-logs`,
-        acl: "private",
-    },
-    {
-        protect: true,
-    });
-
 // websiteLogsBucket stores the request logs for incoming requests.
 const websiteLogsBucket = new aws.s3.Bucket(
     "website-logs-bucket",
@@ -507,64 +496,6 @@ async function createAliasRecord(
                 },
             ],
         });
-}
-
-// If the current run is an update (i.e., not a preview), zip up the contents of the
-// website directory and upload the archive to S3.
-if (!pulumi.runtime.isDryRun()) {
-    archiveBucket.id.apply(bucketID => {
-
-        // Wait for the update to complete before running the code to upload the archive,
-        // to ensure the task that handles it is the one most recently deployed.
-        process.on("beforeExit", async (code) => {
-            if (code === 0 /* success */) {
-                const s3 = new aws.sdk.S3();
-
-                // For each Hugo-generated redirect, write the relative path and destination URL
-                // to a text file to be processed later in the sync step.
-                const redirectPaths = new Map<string, string>();
-                glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
-                    const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-                    const redirect = getMetaRefreshRedirect(filePath);
-
-                    if (redirect) {
-                        redirectPaths.set(relativeFilePath, translateRedirect(filePath, redirect));
-                    }
-                });
-
-                fs.writeFileSync(
-                    `${webContentsRootPath}/redirects.txt`,
-                    Array.from(redirectPaths, ([k, v]) => `${k}|${v}`).join("\n") + "\n",
-                );
-
-                // Tar up the files in the `public` directory.
-                const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
-                tar.c(
-                    {
-                        gzip: true,
-                        sync: true,
-                        file: archivePath,
-                        C: config.pathToWebsiteContents,
-                        portable: true,
-                    },
-                    fs.readdirSync(config.pathToWebsiteContents),
-                );
-
-                // Upload the archive.
-                const result = await s3.putObject({
-                    Bucket: bucketID,
-                    Key: path.basename(archivePath),
-                    Body: fs.readFileSync(archivePath),
-                })
-                .promise();
-
-                console.log(`Website archive ${archivePath} was uploaded.`);
-
-                // Properly exit.
-                process.exit(code);
-            }
-        });
-    });
 }
 
 const aRecord = createAliasRecord(config.targetDomain, cdn);

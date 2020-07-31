@@ -3,7 +3,10 @@ title: Package pulumi_postgresql
 title_tag: Package pulumi_postgresql | Python SDK
 linktitle: pulumi_postgresql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "postgresql" >}}
 
 <div class="section" id="pulumi-postgresql">
 <h1>Pulumi PostgreSQL<a class="headerlink" href="#pulumi-postgresql" title="Permalink to this headline">¶</a></h1>
@@ -16,28 +19,17 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_postgresql"></span><dl class="py class">
 <dt id="pulumi_postgresql.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_collate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_ctype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tablespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Database" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/managing-databases.html">database
-objects</a>
-within a PostgreSQL server instance.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
-
-<span class="n">my_db</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;myDb&quot;</span><span class="p">,</span>
-    <span class="n">allow_connections</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">connection_limit</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">lc_collate</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>
-    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;my_role&quot;</span><span class="p">,</span>
-    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;template0&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
+<dd><p>Create a Database resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] allow_connections: If <code class="docutils literal notranslate"><span class="pre">false</span></code> then no one can connect to this</p>
+<blockquote>
+<div><p>database. The default is <code class="docutils literal notranslate"><span class="pre">true</span></code>, allowing connections (except as restricted by
+other mechanisms, such as <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> or <code class="docutils literal notranslate"><span class="pre">REVOKE</span> <span class="pre">CONNECT</span></code>).</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_connections</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">false</span></code> then no one can connect to this
-database. The default is <code class="docutils literal notranslate"><span class="pre">true</span></code>, allowing connections (except as restricted by
-other mechanisms, such as <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> or <code class="docutils literal notranslate"><span class="pre">REVOKE</span> <span class="pre">CONNECT</span></code>).</p></li>
 <li><p><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How many concurrent connections can be
 established to this database. <code class="docutils literal notranslate"><span class="pre">-1</span></code> (the default) means no limit.</p></li>
 <li><p><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character set encoding to use in the new database</p></li>
@@ -218,7 +210,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] database: The database to grant default privileges for this role
-:param pulumi.Input[str] object_type: The PostgreSQL object type to set the default privileges on (one of: table, sequence)
+:param pulumi.Input[str] object_type: The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type)
 :param pulumi.Input[str] owner: Target role for which to alter default privileges.
 :param pulumi.Input[list] privileges: The list of privileges to apply as default privileges
 :param pulumi.Input[str] role: The name of the role to which grant default privileges on
@@ -232,7 +224,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.object_type">
 <code class="sig-name descname">object_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.object_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence)</p>
+<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -271,7 +263,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence)</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type)</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target role for which to alter default privileges.</p></li>
 <li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on</p></li>
@@ -322,7 +314,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.DefaultPrivileges">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">DefaultPrivileges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.DefaultPrivileges</span></code> resource creates and manages default privileges given to a user for a database schema.</p>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">DefaultPrivileges</span></code> resource creates and manages default privileges given to a user for a database schema.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </div></blockquote>
@@ -344,7 +336,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type).</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
 <li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
@@ -361,7 +353,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_postgresql.DefaultPrivileges.object_type">
 <code class="sig-name descname">object_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.object_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p>
+<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -400,7 +392,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence, function, type).</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
 <li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
@@ -451,7 +443,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.Extension">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Extension</span></code> resource creates and manages an extension on a PostgreSQL
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">Extension</span></code> resource creates and manages an extension on a PostgreSQL
 server.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
@@ -556,7 +548,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.Grant">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_grant_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Grant" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to a user for a database schema.</p>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">Grant</span></code> resource creates and manages privileges given to a user for a database schema.</p>
+<p>See <a class="reference external" href="https://www.postgresql.org/docs/current/sql-grant.html">PostgreSQL documentation</a></p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </div></blockquote>
@@ -577,8 +570,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant privileges on for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to grant the privileges on (one of: table, sequence).</p></li>
-<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to grant.</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to grant privileges on.</p></li>
 <li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to grant privileges on for this role.</p></li>
 <li><p><strong>with_grant_option</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Permit the grant recipient to grant it to others</p></li>
@@ -594,13 +587,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_postgresql.Grant.object_type">
 <code class="sig-name descname">object_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Grant.object_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PostgreSQL object type to grant the privileges on (one of: table, sequence).</p>
+<dd><p>The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_postgresql.Grant.privileges">
 <code class="sig-name descname">privileges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Grant.privileges" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of privileges to grant.</p>
+<dd><p>The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -633,8 +626,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant privileges on for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to grant the privileges on (one of: table, sequence).</p></li>
-<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to grant.</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to grant privileges on.</p></li>
 <li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to grant privileges on for this role.</p></li>
 <li><p><strong>with_grant_option</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Permit the grant recipient to grant it to others</p></li>
@@ -757,41 +750,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.Role">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bypass_row_level_security</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_paths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_drop_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_reassign_owned</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statement_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">superuser</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource creates and manages a role on a PostgreSQL
-server.</p>
-<p>When a <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource is removed, the PostgreSQL ROLE will
-automatically run a <cite>``REASSIGN
-OWNED`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-reassign-owned.html">https://www.postgresql.org/docs/current/static/sql-reassign-owned.html</a>&gt;`_
-and <cite>``DROP
-OWNED`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-drop-owned.html">https://www.postgresql.org/docs/current/static/sql-drop-owned.html</a>&gt;`_ to
-the <code class="docutils literal notranslate"><span class="pre">CURRENT_USER</span></code> (normally the connected user for the provider).  If the
-specified PostgreSQL ROLE owns objects in multiple PostgreSQL databases in the
-same PostgreSQL Cluster, one PostgreSQL provider per database must be created
-and all but the final <code class="docutils literal notranslate"><span class="pre">.Role</span></code> must specify a <code class="docutils literal notranslate"><span class="pre">skip_drop_role</span></code>.</p>
+<dd><p>Create a Role resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] bypass_row_level_security: Defines whether a role bypasses every</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<div><p>row-level security (RLS) policy.  Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
-
-<span class="n">my_role</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;myRole&quot;</span><span class="p">,</span>
-    <span class="n">login</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mypass&quot;</span><span class="p">)</span>
-<span class="n">my_replication_role</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;myReplicationRole&quot;</span><span class="p">,</span>
-    <span class="n">connection_limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-    <span class="n">login</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;md5c98cbfeb6a347a47eb8e96cfb4c4b890&quot;</span><span class="p">,</span>
-    <span class="n">replication</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bypass_row_level_security</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defines whether a role bypasses every
-row-level security (RLS) policy.  Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If this role can log in, this specifies how
 many concurrent connections the role can establish. <code class="docutils literal notranslate"><span class="pre">-1</span></code> (the default) means no
 limit.</p></li>
@@ -1101,45 +1069,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.Schema">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drop_cascade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">if_not_exists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Schema</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
-objects</a> within
-a PostgreSQL database.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
-
-<span class="n">app_www</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appWww&quot;</span><span class="p">)</span>
-<span class="n">app_dba</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appDba&quot;</span><span class="p">)</span>
-<span class="n">app_releng</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appReleng&quot;</span><span class="p">)</span>
-<span class="n">my_schema</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="s2">&quot;mySchema&quot;</span><span class="p">,</span>
-    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
-    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_www</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_releng</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;createWithGrant&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_dba</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="s2">&quot;usageWithGrant&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">])</span>
-</pre></div>
-</div>
+<dd><p>Create a Schema resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] database: The DATABASE in which where this schema will be created. (Default: The database used by your <code class="docutils literal notranslate"><span class="pre">provider</span></code> configuration)
+:param pulumi.Input[bool] drop_cascade: When true, will also drop all the objects that are contained in the schema. (Default: false)
+:param pulumi.Input[bool] if_not_exists: When true, use the existing schema if it exists. (Default: true)
+:param pulumi.Input[str] name: The name of the schema. Must be unique in the PostgreSQL</p>
+<blockquote>
+<div><p>database instance where it is configured.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DATABASE in which where this schema will be created. (Default: The database used by your <code class="docutils literal notranslate"><span class="pre">provider</span></code> configuration)</p></li>
-<li><p><strong>drop_cascade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, will also drop all the objects that are contained in the schema. (Default: false)</p></li>
-<li><p><strong>if_not_exists</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, use the existing schema if it exists. (Default: true)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the schema. Must be unique in the PostgreSQL
-database instance where it is configured.</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ROLE who owns the schema.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.</p></li>

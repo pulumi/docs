@@ -24,7 +24,7 @@ Explore the resources and functions of the flowcontrol/v1alpha1 module in the Ku
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.4.1</dd>
 </dl>
 
 

@@ -23,7 +23,7 @@ RoleBinding references a role, but does not contain it.  It can reference a Role
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac/v1beta1/#pulumi_kubernetes.rbac/v1beta1.RoleBinding">RoleBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>role_ref=None<span class="p">, </span>subjects=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac/v1beta1/#pulumi_kubernetes.rbac/v1beta1.RoleBinding">RoleBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>role_ref=None<span class="p">, </span>subjects=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
