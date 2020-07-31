@@ -13,7 +13,7 @@ external: false
 url_slug: advanced-infrastructure-as-code-2020-04-08
 hero:
   title: Advanced Infrastructure as Code
-  image: /icons/containers.svg
+  image: ../../../static/images/c4oh0sgwiaq36zg.jpg
 main:
   title: Advanced Infrastructure as Code
   sortable_date: 2020-04-08T11:30:00.000+02:00
