@@ -74,9 +74,7 @@ curl \
 
 ### Supported Audit Log Formats
 
-We currently support two formats for exporting audit logs through the API. The two formats we currently support
-are CSV and CEF. These formats can be specified by appending the `format` query parameter as follows, `format=csv`
-or `format=cef`.
+Pulumi supports multiple formats for exporting audit logs. These formats can be specified by appending the `format` query parameter, for example, `format=csv`or `format=cef`.
 
 #### CSV Format
 
