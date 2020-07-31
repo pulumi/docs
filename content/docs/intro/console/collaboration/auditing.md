@@ -91,14 +91,13 @@ MMM dd hh:mm:ss host CEF:Version|Device Vendor|Device Product|Device Version|Dev
 ```
 
 The following fields are part of the standard header defined by CEF:
+**Device Vendor**, **Device Product**, **Device Version**: these are strings that uniquely identify the sending device
 
-_Device Vendor_, _Device Product_, _Device Version_: these are strings that uniquely identify the sending device
+**Device Event Class ID**: string or integer identifying the type of event reported
 
-_Device Event Class ID_: string or integer identifying the type of event reported
+**Name**: a human readable description of the event
 
-_Name_: a human readable description of the event
-
-_Severity_: severity level reflecting the importance of the event
+**Severity**: severity level reflecting the importance of the event
 
 The Extension section is collection of key-value pairs. These keys come from a pre-defined set as well as some keys that we have
 defined on our own.
