@@ -80,7 +80,7 @@ or `format=cef`.
 
 #### CSV Format
 
-CSV is the default format returned when exporting logs through the API. If the `format` query param is not specified, the logs will be returned in CSV format. 
+CSV is the default format returned when exporting logs through the API. If the `format` query param is not specified, the logs will be returned in CSV format.
 
 ```
 GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}&format=csv
