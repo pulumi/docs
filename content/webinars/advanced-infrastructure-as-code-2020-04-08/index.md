@@ -16,7 +16,7 @@ hero:
   image: backgrou-d.jpg
 main:
   title: Advanced Infrastructure as Code
-  sortable_date: 2020-04-08T11:30:00.000+02:00
+  sortable_date: 2020-04-08T10:00:00.000-07:00:-07:00
   duration: 2 hours
   datetime: WED APR 08, 2020 AT 11:30AM CET
   description: >
