@@ -38,6 +38,7 @@ main:
     - Infrastructure as Code fundamentals.
     - Multi cloud architectures for moder applications.
     - Kubernetes best practices for production environments.
+  Date Time: Saturday, July 4, 2020 3:55 PM
 form:
   gotowebinar_key: "6839023203910074382"
   hubspot_form_id: 65d9ad2f-df3f-4fde-ab63-b56535f0faf7
