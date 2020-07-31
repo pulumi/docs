@@ -16,7 +16,7 @@ hero:
   image: /icons/containers.svg
 main:
   title: Advanced Infrastructure as Code
-  sortable_date: 2020-04-02T06:00:00.000-07:00
+  sortable_date: 2020-04-11T06:00:00.000-07:00
   duration: 90 minutes
   datetime: "Fri Jul 24, 2020 @ 08:00PM "
   description: >
