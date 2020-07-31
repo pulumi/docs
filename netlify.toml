@@ -1,0 +1,8 @@
+[build.environment]
+  YARN_VERSION = "1.12.1"
+  NPM_VERSION = "6.4.1"
+
+[build]
+  base = "."
+  command = "make ensure || make lint_markdown || make build"
+  publish = "public/"

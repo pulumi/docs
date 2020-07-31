@@ -5,7 +5,7 @@ meta_desc: Join us on April 08th, 2020 for a deep dive into Infrastructure as
 featured: false
 pre_recorded: false
 pulumi_tv: false
-preview_image: ../../../static/images/webinar/backgrou-d.jpg
+preview_image: /images/webinar/pulumi_workshop.jpg
 unlisted: true
 gated: true
 type: webinars
@@ -13,7 +13,7 @@ external: false
 url_slug: advanced-infrastructure-as-code-2020-04-08
 hero:
   title: Advanced Infrastructure as Code
-  image: ../../../static/images/c4oh0sgwiaq36zg.jpg
+  image: backgrou-d.jpg
 main:
   title: Advanced Infrastructure as Code
   sortable_date: 2020-04-08T11:30:00.000+02:00

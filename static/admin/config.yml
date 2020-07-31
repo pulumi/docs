@@ -1,0 +1,23 @@
+backend:
+    name: github
+    repo: zephyrz73/docs
+  
+  publish_mode: editorial_workflow
+  
+  
+  media_folder: "static/admin/cms-uploads" # Folder where user uploaded files should go
+  public_folder: "img/cms-uploads"
+  
+  collections: # A list of collection the CMS should be able to edit
+    - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
+      label: "Blog" # Used in the UI, ie.: "New Post"
+      preview_path: "blog/{{slug}}"
+      folder: "content/blog" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      fields: # The fields each document in this collection have
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Author Name", name: "author", widget: "string"}
+        - {label: "Description", name: "meta_desc", widget: "text"}
+        - {label: "Image", name: "meta_image", widget: "image", required: true}
+        - {label: "Body", name: "body", widget: "markdown"}
