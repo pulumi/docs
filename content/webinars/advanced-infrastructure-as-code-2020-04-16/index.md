@@ -16,7 +16,7 @@ hero:
   image: /icons/containers.svg
 main:
   title: Advanced Infrastructure as Code
-  sortable_date: 2020-04-10T06:00:00.000-0700
+  sortable_date: 2020-04-02T06:00:00.000-07:00
   duration: 90 minutes
   datetime: Wed Apr 15, 2020 'PM'T 05:00PM P'15'T
   description: >
@@ -38,7 +38,7 @@ main:
     - Infrastructure as Code fundamentals.
     - Multi cloud architectures for moder applications.
     - Kubernetes best practices for production environments.
-  Date Time: Saturday, July 4, 2020 3:55 PM
+  Date Time: Tuesday, July 14, 2020 3:55 PM
 form:
   gotowebinar_key: "6839023203910074382"
   hubspot_form_id: 65d9ad2f-df3f-4fde-ab63-b56535f0faf7
