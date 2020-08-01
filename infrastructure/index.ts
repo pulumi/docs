@@ -325,6 +325,9 @@ async function createAliasRecord(
                     evaluateTargetHealth: true,
                 },
             ],
+        },
+        {
+            protect: true,
         });
 }
 
