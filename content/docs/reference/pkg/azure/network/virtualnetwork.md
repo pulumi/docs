@@ -457,9 +457,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -470,8 +468,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,8 +501,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -516,8 +512,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,8 +523,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -558,9 +552,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -571,8 +563,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -605,8 +596,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,8 +607,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -629,8 +618,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -659,9 +647,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -672,8 +658,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,8 +691,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,8 +702,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,8 +713,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,9 +742,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -773,8 +753,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -807,8 +786,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,8 +797,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -831,8 +808,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1110,9 +1086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1156,8 +1130,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1168,8 +1141,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1180,8 +1152,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,8 +1163,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1222,9 +1192,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1268,8 +1236,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1280,8 +1247,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,8 +1258,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,8 +1269,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1334,9 +1298,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1380,8 +1342,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1392,8 +1353,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1404,8 +1364,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1416,8 +1375,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1446,9 +1404,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
+    <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1492,8 +1448,7 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The location/region where the virtual network is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,8 +1459,7 @@ created. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1516,8 +1470,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
+    <dd>{{% md %}}The name of the resource group in which to create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1528,8 +1481,7 @@ create the virtual network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1729,8 +1681,7 @@ subnets. Each `subnet` block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1752,8 +1703,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Security Group to associate with
-the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
+    <dd>{{% md %}}The Network Security Group to associate with the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
 {{% /md %}}</dd>
 
 </dl>
@@ -1782,8 +1732,7 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1805,8 +1754,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Security Group to associate with
-the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
+    <dd>{{% md %}}The Network Security Group to associate with the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
 {{% /md %}}</dd>
 
 </dl>
@@ -1835,8 +1783,7 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1858,8 +1805,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Security Group to associate with
-the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
+    <dd>{{% md %}}The Network Security Group to associate with the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
 {{% /md %}}</dd>
 
 </dl>
@@ -1888,8 +1834,7 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}The name of the virtual network. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1911,8 +1856,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Network Security Group to associate with
-the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
+    <dd>{{% md %}}The Network Security Group to associate with the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
 {{% /md %}}</dd>
 
 </dl>

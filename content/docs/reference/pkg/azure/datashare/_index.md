@@ -21,6 +21,7 @@ Explore the resources and functions of the datashare module in the Azure package
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getdatasetblobstorage" title="GetDatasetBlobStorage"><span class="symbol function"></span>GetDatasetBlobStorage</a></li>
+    <li><a href="getdatasetdatalakegen1" title="GetDatasetDataLakeGen1"><span class="symbol function"></span>GetDatasetDataLakeGen1</a></li>
     <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
 </ul>
 
@@ -33,7 +34,7 @@ Explore the resources and functions of the datashare module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.13.1</dd>
+	<dd>3.14.0</dd>
 </dl>
 
 

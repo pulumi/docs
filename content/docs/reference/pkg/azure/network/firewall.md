@@ -464,7 +464,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -548,7 +548,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -632,7 +632,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -716,7 +716,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1005,7 +1005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1257,7 +1257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created.
+    <dd>{{% md %}}Specifies the availability zones in which the Azure Firewall should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>

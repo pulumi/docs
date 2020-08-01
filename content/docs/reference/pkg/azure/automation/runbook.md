@@ -18,11 +18,91 @@ Manages a Automation Runbook.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Automation.Account("exampleAccount", new Azure.Automation.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Basic",
+        });
+        var exampleRunBook = new Azure.Automation.RunBook("exampleRunBook", new Azure.Automation.RunBookArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AutomationAccountName = exampleAccount.Name,
+            LogVerbose = true,
+            LogProgress = true,
+            Description = "This is an example runbook",
+            RunbookType = "PowerShellWorkflow",
+            PublishContentLink = new Azure.Automation.Inputs.RunBookPublishContentLinkArgs
+            {
+                Uri = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/c4935ffb69246a6058eb24f54640f53f69d3ac9f/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+            },
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = automation.NewRunBook(ctx, "exampleRunBook", &automation.RunBookArgs{
+			Location:              exampleResourceGroup.Location,
+			ResourceGroupName:     exampleResourceGroup.Name,
+			AutomationAccountName: exampleAccount.Name,
+			LogVerbose:            pulumi.Bool(true),
+			LogProgress:           pulumi.Bool(true),
+			Description:           pulumi.String("This is an example runbook"),
+			RunbookType:           pulumi.String("PowerShellWorkflow"),
+			PublishContentLink: &automation.RunBookPublishContentLinkArgs{
+				Uri: pulumi.String("https://raw.githubusercontent.com/Azure/azure-quickstart-templates/c4935ffb69246a6058eb24f54640f53f69d3ac9f/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -34,9 +114,7 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_account = azure.automation.Account("exampleAccount",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku=[{
-        "name": "Basic",
-    }])
+    sku_name="Basic")
 example_run_book = azure.automation.RunBook("exampleRunBook",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -62,9 +140,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleAccount = new azure.automation.Account("exampleAccount", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    sku: [{
-        name: "Basic",
-    }],
+    skuName: "Basic",
 });
 const exampleRunBook = new azure.automation.RunBook("exampleRunBook", {
     location: exampleResourceGroup.location,
@@ -94,7 +170,7 @@ const exampleRunBook = new azure.automation.RunBook("exampleRunBook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.RunBook">RunBook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>content=None<span class="p">, </span>description=None<span class="p">, </span>location=None<span class="p">, </span>log_progress=None<span class="p">, </span>log_verbose=None<span class="p">, </span>name=None<span class="p">, </span>publish_content_link=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>runbook_type=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.RunBook">RunBook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automation_account_name=None<span class="p">, </span>content=None<span class="p">, </span>description=None<span class="p">, </span>job_schedules=None<span class="p">, </span>location=None<span class="p">, </span>log_progress=None<span class="p">, </span>log_verbose=None<span class="p">, </span>name=None<span class="p">, </span>publish_content_link=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>runbook_type=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,6 +421,16 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="jobschedules_csharp">
+<a href="#jobschedules_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">List&lt;Run<wbr>Book<wbr>Job<wbr>Schedule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -470,6 +556,16 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A description for this credential.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobschedules_go">
+<a href="#jobschedules_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -601,6 +697,16 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="jobschedules_nodejs">
+<a href="#jobschedules_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">Run<wbr>Book<wbr>Job<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -726,6 +832,16 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A description for this credential.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="job_schedules_python">
+<a href="#job_schedules_python" style="color: inherit; text-decoration: inherit;">job_<wbr>schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">List[Run<wbr>Book<wbr>Job<wbr>Schedule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -869,7 +985,7 @@ Get an existing RunBook resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automation_account_name=None<span class="p">, </span>content=None<span class="p">, </span>description=None<span class="p">, </span>location=None<span class="p">, </span>log_progress=None<span class="p">, </span>log_verbose=None<span class="p">, </span>name=None<span class="p">, </span>publish_content_link=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>runbook_type=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automation_account_name=None<span class="p">, </span>content=None<span class="p">, </span>description=None<span class="p">, </span>job_schedules=None<span class="p">, </span>location=None<span class="p">, </span>log_progress=None<span class="p">, </span>log_verbose=None<span class="p">, </span>name=None<span class="p">, </span>publish_content_link=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>runbook_type=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1018,6 +1134,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_jobschedules_csharp">
+<a href="#state_jobschedules_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">List&lt;Run<wbr>Book<wbr>Job<wbr>Schedule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -1143,6 +1269,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A description for this credential.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_jobschedules_go">
+<a href="#state_jobschedules_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1274,6 +1410,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_jobschedules_nodejs">
+<a href="#state_jobschedules_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">Run<wbr>Book<wbr>Job<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1402,6 +1548,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_job_schedules_python">
+<a href="#state_job_schedules_python" style="color: inherit; text-decoration: inherit;">job_<wbr>schedules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookjobschedule">List[Run<wbr>Book<wbr>Job<wbr>Schedule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1501,6 +1657,212 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="runbookjobschedule">Run<wbr>Book<wbr>Job<wbr>Schedule</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookJobSchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RunBookJobSchedule">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation?tab=doc#RunBookJobScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation?tab=doc#RunBookJobScheduleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Automation.Inputs.RunBookJobScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Automation.Outputs.RunBookJobSchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schedulename_csharp">
+<a href="#schedulename_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobscheduleid_csharp">
+<a href="#jobscheduleid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedule<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runon_csharp">
+<a href="#runon_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schedulename_go">
+<a href="#schedulename_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobscheduleid_go">
+<a href="#jobscheduleid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedule<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runon_go">
+<a href="#runon_go" style="color: inherit; text-decoration: inherit;">Run<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schedulename_nodejs">
+<a href="#schedulename_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobscheduleid_nodejs">
+<a href="#jobscheduleid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Schedule<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runon_nodejs">
+<a href="#runon_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_name_python">
+<a href="#schedule_name_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="job_schedule_id_python">
+<a href="#job_schedule_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>schedule_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_on_python">
+<a href="#run_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</h4>

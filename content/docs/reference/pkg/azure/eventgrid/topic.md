@@ -376,7 +376,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -461,7 +460,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -546,7 +544,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -631,7 +628,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -1086,7 +1082,6 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -1204,7 +1199,6 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -1322,7 +1316,6 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
@@ -1440,7 +1433,6 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
----
 {{% /md %}}</dd>
 
 </dl>
