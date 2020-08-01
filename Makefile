@@ -12,10 +12,7 @@ banner:
 
 .PHONY: clean
 clean:
-	yarn cache clean
-	rm -rf node_modules
-	rm -rf components/node_modules
-	rm -rf public
+	./scripts/clean.sh
 
 .PHONY: ensure
 ensure:
