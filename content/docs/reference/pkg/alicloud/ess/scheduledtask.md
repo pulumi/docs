@@ -22,7 +22,7 @@ meta_desc: "Explore the ScheduledTask resource of the ess module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScheduledTask">ScheduledTask</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>max_value=None<span class="p">, </span>min_value=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScheduledTask">ScheduledTask</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>max_value=None<span class="p">, </span>min_value=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +235,7 @@ The ScheduledTask resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -397,7 +397,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -559,7 +559,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -721,7 +721,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -933,7 +933,7 @@ Get an existing ScheduledTask resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>max_value=None<span class="p">, </span>min_value=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>max_value=None<span class="p">, </span>min_value=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -1250,7 +1250,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -1412,7 +1412,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
@@ -1574,7 +1574,7 @@ The time must be in UTC. You cannot enter a time point later than 365 days from 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
+    <dd>{{% md %}}The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. 
 The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
 If the `recurrence_type` parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.

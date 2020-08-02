@@ -22,7 +22,7 @@ meta_desc: "Explore the Queue resource of the mns module, including examples, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mns/#pulumi_alicloud.mns.Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delay_seconds=None<span class="p">, </span>maximum_message_size=None<span class="p">, </span>message_retention_period=None<span class="p">, </span>name=None<span class="p">, </span>polling_wait_seconds=None<span class="p">, </span>visibility_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mns/#pulumi_alicloud.mns.Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delay_seconds=None<span class="p">, </span>maximum_message_size=None<span class="p">, </span>message_retention_period=None<span class="p">, </span>name=None<span class="p">, </span>polling_wait_seconds=None<span class="p">, </span>visibility_timeout=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -577,7 +577,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delay_seconds=None<span class="p">, </span>maximum_message_size=None<span class="p">, </span>message_retention_period=None<span class="p">, </span>name=None<span class="p">, </span>polling_wait_seconds=None<span class="p">, </span>visibility_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delay_seconds=None<span class="p">, </span>maximum_message_size=None<span class="p">, </span>message_retention_period=None<span class="p">, </span>name=None<span class="p">, </span>polling_wait_seconds=None<span class="p">, </span>visibility_timeout=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

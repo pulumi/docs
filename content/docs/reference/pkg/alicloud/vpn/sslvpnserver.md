@@ -22,7 +22,7 @@ meta_desc: "Explore the SslVpnServer resource of the vpn module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.SslVpnServer">SslVpnServer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>local_subnet=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.SslVpnServer">SslVpnServer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>local_subnet=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ Get an existing SslVpnServer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>connections=None<span class="p">, </span>internet_ip=None<span class="p">, </span>local_subnet=None<span class="p">, </span>max_connections=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>connections=None<span class="p">, </span>internet_ip=None<span class="p">, </span>local_subnet=None<span class="p">, </span>max_connections=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

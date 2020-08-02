@@ -22,7 +22,7 @@ meta_desc: "Explore the KeyPair resource of the ecs module, including examples, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPair">KeyPair</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_file=None<span class="p">, </span>key_name=None<span class="p">, </span>key_name_prefix=None<span class="p">, </span>public_key=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPair">KeyPair</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_file=None<span class="p">, </span>key_name=None<span class="p">, </span>key_name_prefix=None<span class="p">, </span>public_key=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,7 +234,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -305,7 +305,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,7 +376,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,7 +447,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,7 +609,7 @@ Get an existing KeyPair resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>finger_print=None<span class="p">, </span>key_file=None<span class="p">, </span>key_name=None<span class="p">, </span>key_name_prefix=None<span class="p">, </span>public_key=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>finger_print=None<span class="p">, </span>key_file=None<span class="p">, </span>key_name=None<span class="p">, </span>key_name_prefix=None<span class="p">, </span>public_key=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -773,7 +773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -854,7 +854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -935,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1016,7 +1016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it.
+    <dd>{{% md %}}You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, `resource_group_id` is the key pair belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -22,7 +22,7 @@ meta_desc: "Explore the NatGateway resource of the vpc module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NatGateway">NatGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth_packages=None<span class="p">, </span>description=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>spec=None<span class="p">, </span>specification=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NatGateway">NatGateway</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth_packages=None<span class="p">, </span>description=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>spec=None<span class="p">, </span>specification=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ Get an existing NatGateway resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth_package_ids=None<span class="p">, </span>bandwidth_packages=None<span class="p">, </span>description=None<span class="p">, </span>forward_table_ids=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>snat_table_ids=None<span class="p">, </span>spec=None<span class="p">, </span>specification=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth_package_ids=None<span class="p">, </span>bandwidth_packages=None<span class="p">, </span>description=None<span class="p">, </span>forward_table_ids=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>snat_table_ids=None<span class="p">, </span>spec=None<span class="p">, </span>specification=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

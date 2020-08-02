@@ -13,6 +13,7 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 <ul class="api">
     <li><a href="autoprovisioninggroup" title="AutoProvisioningGroup"><span class="symbol resource"></span>AutoProvisioningGroup</a></li>
     <li><a href="copyimage" title="CopyImage"><span class="symbol resource"></span>CopyImage</a></li>
+    <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskattachment" title="DiskAttachment"><span class="symbol resource"></span>DiskAttachment</a></li>
     <li><a href="eip" title="Eip"><span class="symbol resource"></span>Eip</a></li>
@@ -35,6 +36,7 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdedicatedhosts" title="GetDedicatedHosts"><span class="symbol function"></span>GetDedicatedHosts</a></li>
     <li><a href="getdisks" title="GetDisks"><span class="symbol function"></span>GetDisks</a></li>
     <li><a href="geteips" title="GetEips"><span class="symbol function"></span>GetEips</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
@@ -57,7 +59,7 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.12.1</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 

@@ -14,63 +14,6 @@ Provides a resource to create a oss bucket and set its attribution.
 
 > **NOTE:** The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bucket_acl = new AliCloud.Oss.Bucket("bucket-acl", new AliCloud.Oss.BucketArgs
-        {
-            Acl = "private",
-            Bucket = "bucket-170309-acl",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-bucket_acl = alicloud.oss.Bucket("bucket-acl",
-    acl="private",
-    bucket="bucket-170309-acl")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
-    acl: "private",
-    bucket: "bucket-170309-acl",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Bucket Resource {#create}
@@ -82,7 +25,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#pulumi_alicloud.oss.Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>policy=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#pulumi_alicloud.oss.Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>policy=None<span class="p">, </span>redundancy_type=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -343,6 +286,17 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="redundancytype_csharp">
+<a href="#redundancytype_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="refererconfig_csharp">
 <a href="#refererconfig_csharp" style="color: inherit; text-decoration: inherit;">Referer<wbr>Config</a>
 </span> 
@@ -499,6 +453,17 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redundancytype_go">
+<a href="#redundancytype_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,6 +628,17 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="redundancytype_nodejs">
+<a href="#redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="refererconfig_nodejs">
 <a href="#refererconfig_nodejs" style="color: inherit; text-decoration: inherit;">referer<wbr>Config</a>
 </span> 
@@ -819,6 +795,17 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redundancy_type_python">
+<a href="#redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1205,7 +1192,7 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>creation_date=None<span class="p">, </span>extranet_endpoint=None<span class="p">, </span>force_destroy=None<span class="p">, </span>intranet_endpoint=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>location=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>owner=None<span class="p">, </span>policy=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cors_rules=None<span class="p">, </span>creation_date=None<span class="p">, </span>extranet_endpoint=None<span class="p">, </span>force_destroy=None<span class="p">, </span>intranet_endpoint=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>location=None<span class="p">, </span>logging=None<span class="p">, </span>logging_isenable=None<span class="p">, </span>owner=None<span class="p">, </span>policy=None<span class="p">, </span>redundancy_type=None<span class="p">, </span>referer_config=None<span class="p">, </span>server_side_encryption_rule=None<span class="p">, </span>storage_class=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1463,6 +1450,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_redundancytype_csharp">
+<a href="#state_redundancytype_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_refererconfig_csharp">
 <a href="#state_refererconfig_csharp" style="color: inherit; text-decoration: inherit;">Referer<wbr>Config</a>
 </span> 
@@ -1674,6 +1672,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_redundancytype_go">
+<a href="#state_redundancytype_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1893,6 +1902,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_redundancytype_nodejs">
+<a href="#state_redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_refererconfig_nodejs">
 <a href="#state_refererconfig_nodejs" style="color: inherit; text-decoration: inherit;">referer<wbr>Config</a>
 </span> 
@@ -2104,6 +2124,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_redundancy_type_python">
+<a href="#state_redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3328,6 +3359,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmsmasterkeyid_csharp">
+<a href="#kmsmasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3344,6 +3386,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmsmasterkeyid_go">
+<a href="#kmsmasterkeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
 {{% /md %}}</dd>
 
 </dl>
@@ -3364,6 +3417,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmsmasterkeyid_nodejs">
+<a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3380,6 +3444,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmsmasterkeyid_python">
+<a href="#kmsmasterkeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
 {{% /md %}}</dd>
 
 </dl>
