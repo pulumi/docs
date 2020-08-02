@@ -29,6 +29,8 @@ This example provisions a Linux web server in an Azure Virtual Machine and gives
 
 ## Running the App
 
+1. Clone the example code from GitHub onto your local machine.
+
 1.  Create a new stack:
 
     ```
