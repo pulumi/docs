@@ -218,7 +218,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +641,7 @@ Get an existing NetworkAclEntries resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

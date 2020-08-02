@@ -22,7 +22,7 @@ meta_desc: "Explore the InstanceAttachment resource of the cen module, including
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceAttachment">InstanceAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>child_instance_id=None<span class="p">, </span>child_instance_owner_id=None<span class="p">, </span>child_instance_region_id=None<span class="p">, </span>instance_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceAttachment">InstanceAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>child_instance_id=None<span class="p">, </span>child_instance_owner_id=None<span class="p">, </span>child_instance_region_id=None<span class="p">, </span>instance_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,7 +489,7 @@ Get an existing InstanceAttachment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>child_instance_id=None<span class="p">, </span>child_instance_owner_id=None<span class="p">, </span>child_instance_region_id=None<span class="p">, </span>instance_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>child_instance_id=None<span class="p">, </span>child_instance_owner_id=None<span class="p">, </span>child_instance_region_id=None<span class="p">, </span>instance_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

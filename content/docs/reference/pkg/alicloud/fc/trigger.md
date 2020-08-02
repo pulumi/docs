@@ -22,7 +22,7 @@ meta_desc: "Explore the Trigger resource of the fc module, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/fc/#pulumi_alicloud.fc.Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/fc/#pulumi_alicloud.fc.Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>last_modified=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>trigger_id=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>last_modified=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>trigger_id=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
