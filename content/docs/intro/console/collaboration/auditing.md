@@ -78,7 +78,7 @@ Pulumi supports multiple formats for exporting audit logs. These formats can be 
 
 #### CSV Format
 
-CSV is the default format returned when exporting logs through the API. If the `format` query param is not specified, the logs will be returned in CSV format.
+CSV (comma separated values) is the default format returned when exporting logs through the API. If the `format` query param is not specified, the logs will be returned in CSV format.
 
 ```
 GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}&format=csv
@@ -104,7 +104,7 @@ Timestamp, Name, Login, Event, Description ,SourceIP, RequireOrgAdmin, RequireSt
 
 #### CEF Format
 
-CEF is an audit and logging event format supported by a wide range of SIEMs. Specify the query param `format=cef` to retrieve audit logs in CEF format:
+CEF (common event format) is an audit and logging event format supported by a wide range of SIEM (security information and event management) systems. Specify the query param `format=cef` to retrieve audit logs in CEF format:
 
 ```
 GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}&format=cef
