@@ -5,7 +5,7 @@ meta_desc: Join us on April 16th, 2020 for a deep dive into Infrastructure as
 featured: false
 pre_recorded: false
 pulumi_tv: false
-preview_image: /images/webinar}/backgrou-d.jpg
+preview_image: /images/webinar/circleci-pulumi.png
 unlisted: true
 gated: true
 type: webinars
