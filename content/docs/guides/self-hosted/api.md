@@ -74,10 +74,18 @@ The service is configurable to serve the API using TLS. The following environmen
 | API_TLS_PRIVATE_KEY | The private key associated with the TLS certificate. The private key must be PEM encoded.                 |
 | API_MIN_TLS_VERSION | The minimum version of TLS to use when serving the API (must be in \<major>.\<minor> format, e.g. `1.2`). |
 
+> _Note: Self-signed certificates may be used to configure TLS in the event the need for a trusted entity is not necessary. A self-signed cert and private key may be generated using OpenSSL. The following command uses OpenSSL to generate a self-signed certificate. This example will output two files, the certificate (cert.pem) and the private key (key.pem) used to sign it._
+
+>
+```
+openssl \
+  req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem \
+  -days { days_unitl_expiration } -nodes -subj "/CN={ common_name }"
+```
+
 #### Database Connections
 
-The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_
-required to connect to the database using TLS.
+The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_ required to connect to the database using TLS.
 
 | Variable Name            | Description                                                                                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
