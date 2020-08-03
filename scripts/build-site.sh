@@ -5,15 +5,16 @@ set -o errexit -o pipefail
 source ./scripts/common.sh
 
 export NODE_ENV="production"
+export BUILD_START="$(current_time_in_ms)"
 
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process.
-export CSS_BUNDLE="public/css/styles.$(pr_number_or_git_sha).css"
-export JS_BUNDLE="public/js/bundle.min.$(pr_number_or_git_sha).js"
+export CSS_BUNDLE="public/css/styles.$(build_identifier).css"
+export JS_BUNDLE="public/js/bundle.min.$(build_identifier).js"
 
 # Relative paths to those same files, read by Hugo templates.
-export REL_CSS_BUNDLE="/css/styles.$(pr_number_or_git_sha).css"
-export REL_JS_BUNDLE="/js/bundle.min.$(pr_number_or_git_sha).js"
+export REL_CSS_BUNDLE="/css/styles.$(build_identifier).css"
+export REL_JS_BUNDLE="/js/bundle.min.$(build_identifier).js"
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
@@ -23,7 +24,7 @@ make build_components
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
-    hugo --minify --templateMetrics --buildDrafts --buildFuture -e $(pr_number_or_git_sha)
+    hugo --minify --templateMetrics --buildDrafts --buildFuture -e $(build_identifier)
 else
     hugo --minify --templateMetrics -e production
 fi

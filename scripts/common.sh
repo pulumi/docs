@@ -46,6 +46,11 @@ git_sha_short() {
     echo "$(git_sha)" | cut -c1-8
 }
 
+# current_time_in_ms returns the epoch time in milliseconds.
+current_time_in_ms() {
+    echo "$(node -e 'console.log(Date.now())')"
+}
+
 origin_bucket_prefix() {
     echo "pulumi-docs-origin"
 }
@@ -55,15 +60,33 @@ origin_bucket_metadata_filepath() {
     echo "./origin-bucket-metadata.json"
 }
 
-# pr_number_or_git_sha returns either the PR number of the current GitHub Actions run or
-# the Git SHA of the current branch, for purposes of naming the destination bucket and
-# bundled build assets.
-pr_number_or_git_sha() {
-    if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
-        echo "pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+# build_identifier returns a string for use in identifying the current build, mainly for
+# use in uniquely naming S3 buckets and asset bundles.
+build_identifier() {
+    local identifier
+
+    # For CI builds, we use the GitHub Actions event to generate more readable identifiers.
+    # - For pull_request actions, return "pr-<number>-<git-sha>"
+    # - For others, return "<event-name>-<git-sha>".
+    if [[ ! -z "$GITHUB_EVENT_NAME" && ! -z "$GITHUB_EVENT_PATH" ]]; then
+        identifier="$GITHUB_EVENT_NAME"
+
+        if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+            identifier="pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+        fi
+
+        identifier="${identifier}-$(git_sha_short)"
     else
-        echo "push-$(git_sha_short)"
+        # By default, just use the current SHA.
+        identifier="$(git_sha_short)"
+
+        # If a BUILD_START time has been set, append that as well.
+        if [ ! -z "$BUILD_START" ]; then
+            identifier="${identifier}-${BUILD_START}"
+        fi
     fi
+
+    echo "$identifier"
 }
 
 # Get the AWS SSM Parameter Store key for the specified commit SHA. Used for mapping a

@@ -4,16 +4,18 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
+export BUILD_START="$(current_time_in_ms)"
+
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process, and we write to the static
 # folder rather than public (which we do for production builds) in order to be able to
 # use LiveReload in development.
-export CSS_BUNDLE="static/css/styles.$(pr_number_or_git_sha).css"
-export JS_BUNDLE="static/js/bundle.min.$(pr_number_or_git_sha).js"
+export CSS_BUNDLE="static/css/styles.$(build_identifier).css"
+export JS_BUNDLE="static/js/bundle.min.$(build_identifier).js"
 
 # Relative paths to those same files, read by Hugo templates.
-export REL_CSS_BUNDLE="/css/styles.$(pr_number_or_git_sha).css"
-export REL_JS_BUNDLE="/js/bundle.min.$(pr_number_or_git_sha).js"
+export REL_CSS_BUNDLE="/css/styles.$(build_identifier).css"
+export REL_JS_BUNDLE="/js/bundle.min.$(build_identifier).js"
 
 watch_hugo() {
     hugo server --buildDrafts --buildFuture --renderToDisk

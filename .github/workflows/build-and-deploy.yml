@@ -17,7 +17,7 @@ jobs:
       # Turnstyle is used to prevent multiple push jobs from running at the same time. We
       # exclude it for pull_requests to allow them to run concurrently.
       - name: Turnstyle
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'push' }}
         uses: softprops/turnstyle@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
