@@ -84,6 +84,7 @@ REPOS=(
     "azure,pulumi-azure,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
     "azuredevops,pulumi-azuredevops,sdk/nodejs"
+    "civo,pulumi-civo,sdk/nodejs"
     "cloud,pulumi-cloud/api"
     "cloudamqp,pulumi-cloudamqp,sdk/nodejs"
     "cloudflare,pulumi-cloudflare,sdk/nodejs"
