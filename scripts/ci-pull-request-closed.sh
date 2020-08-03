@@ -41,5 +41,5 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         fi
     fi
 
-    echo "PR action was ${pr_action}, merged ${merged}, so skipping."
+    echo "PR action was ${pr_action}, merged ${pr_merged}, so skipping."
 fi
