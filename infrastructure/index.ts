@@ -20,7 +20,7 @@ const config = {
     // than "s3://bucket-name-123".
     originBucketNameOverride: stackConfig.get("originBucketNameOverride") || undefined,
     // pathToOriginBucketMetadata is the path to the file produced at the end of the
-    // bucketize script (i.e., scripts/bucketize.sh).
+    // sync-and-test-bucket script (i.e., scripts/sync-and-test-bucket.sh).
     pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
 };
 
