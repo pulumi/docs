@@ -22,7 +22,7 @@ meta_desc: "Explore the Kubernetes resource of the cs module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>api_audiences=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>is_enterprise_security_group=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_account_issuer=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_data_disks=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -259,6 +259,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiaudiences_csharp">
+<a href="#apiaudiences_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
@@ -354,6 +365,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isenterprisesecuritygroup_csharp">
+<a href="#isenterprisesecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -583,7 +605,18 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountissuer_csharp">
+<a href="#serviceaccountissuer_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -682,6 +715,23 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerdatadisks_csharp">
+<a href="#workerdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -810,6 +860,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiaudiences_go">
+<a href="#apiaudiences_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
@@ -905,6 +966,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isenterprisesecuritygroup_go">
+<a href="#isenterprisesecuritygroup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,7 +1206,18 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountissuer_go">
+<a href="#serviceaccountissuer_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1233,6 +1316,23 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerdatadisks_go">
+<a href="#workerdatadisks_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">[]Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1361,6 +1461,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiaudiences_nodejs">
+<a href="#apiaudiences_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span> 
@@ -1456,6 +1567,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isenterprisesecuritygroup_nodejs">
+<a href="#isenterprisesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,7 +1807,18 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountissuer_nodejs">
+<a href="#serviceaccountissuer_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1784,6 +1917,23 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerdatadisks_nodejs">
+<a href="#workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1912,6 +2062,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="api_audiences_python">
+<a href="#api_audiences_python" style="color: inherit; text-decoration: inherit;">api_<wbr>audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span> 
@@ -2007,6 +2168,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_enterprise_security_group_python">
+<a href="#is_enterprise_security_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>security_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2236,7 +2408,18 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_account_issuer_python">
+<a href="#service_account_issuer_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2335,6 +2518,23 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="worker_data_disks_python">
+<a href="#worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">List[Kubernetes<wbr>Worker<wbr>Data<wbr>Disk]</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2877,7 +3077,7 @@ Get an existing Kubernetes resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>connections=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_nodes=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_id=None<span class="p">, </span>slb_internet=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>slb_intranet=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>vpc_id=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_nodes=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_ram_role_name=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>api_audiences=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>connections=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>is_enterprise_security_group=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_nodes=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_account_issuer=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_id=None<span class="p">, </span>slb_internet=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>slb_intranet=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>vpc_id=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_data_disks=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_nodes=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_ram_role_name=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3003,6 +3203,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_apiaudiences_csharp">
+<a href="#state_apiaudiences_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
@@ -3109,6 +3320,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_isenterprisesecuritygroup_csharp">
+<a href="#state_isenterprisesecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3381,7 +3603,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceaccountissuer_csharp">
+<a href="#state_serviceaccountissuer_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3525,6 +3758,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerdatadisks_csharp">
+<a href="#state_workerdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workerdiskcategory_csharp">
 <a href="#state_workerdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Category</a>
 </span> 
@@ -3651,6 +3901,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_apiaudiences_go">
+<a href="#state_apiaudiences_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
@@ -3757,6 +4018,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_isenterprisesecuritygroup_go">
+<a href="#state_isenterprisesecuritygroup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4029,7 +4301,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceaccountissuer_go">
+<a href="#state_serviceaccountissuer_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4173,6 +4456,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerdatadisks_go">
+<a href="#state_workerdatadisks_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">[]Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workerdiskcategory_go">
 <a href="#state_workerdiskcategory_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Category</a>
 </span> 
@@ -4299,6 +4599,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_apiaudiences_nodejs">
+<a href="#state_apiaudiences_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span> 
@@ -4405,6 +4716,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_isenterprisesecuritygroup_nodejs">
+<a href="#state_isenterprisesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4677,7 +4999,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceaccountissuer_nodejs">
+<a href="#state_serviceaccountissuer_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4821,6 +5154,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerdatadisks_nodejs">
+<a href="#state_workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workerdiskcategory_nodejs">
 <a href="#state_workerdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Category</a>
 </span> 
@@ -4947,6 +5297,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_api_audiences_python">
+<a href="#state_api_audiences_python" style="color: inherit; text-decoration: inherit;">api_<wbr>audiences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `service_account_issuer` as well.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span> 
@@ -5053,6 +5414,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: true 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_is_enterprise_security_group_python">
+<a href="#state_is_enterprise_security_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>security_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5325,7 +5697,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_account_issuer_python">
+<a href="#state_service_account_issuer_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `api_audiences` as well).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5466,6 +5849,23 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_worker_data_disks_python">
+<a href="#state_worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesworkerdatadisk">List[Kubernetes<wbr>Worker<wbr>Data<wbr>Disk]</a></span>
+    </dt>
+    <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
+- category: the type of the data disks. Valid values:
++ cloud: basic disks.
++ cloud_efficiency: ultra disks.
++ cloud_ssd: SSDs.
+- size: the size of a data disk. Unit: GiB.
+- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6153,6 +6553,376 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="kubernetesworkerdatadisk">Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesWorkerDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesWorkerDataDisk">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesWorkerDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesWorkerDataDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.KubernetesWorkerDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.KubernetesWorkerDataDisk.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autosnapshotpolicyid_csharp">
+<a href="#autosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="device_csharp">
+<a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autosnapshotpolicyid_go">
+<a href="#autosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="device_go">
+<a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autosnapshotpolicyid_nodejs">
+<a href="#autosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="device_nodejs">
+<a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autosnapshotpolicyid_python">
+<a href="#autosnapshotpolicyid_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="device_python">
+<a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

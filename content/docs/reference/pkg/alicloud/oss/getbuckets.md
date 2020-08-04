@@ -610,6 +610,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="redundancytype_csharp">
+<a href="#redundancytype_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redundancy type. Possible values: `LRS`, and `ZRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="refererconfig_csharp">
 <a href="#refererconfig_csharp" style="color: inherit; text-decoration: inherit;">Referer<wbr>Config</a>
 </span> 
@@ -799,6 +810,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Bucket owner.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redundancytype_go">
+<a href="#redundancytype_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redundancy type. Possible values: `LRS`, and `ZRS`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -996,6 +1018,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="redundancytype_nodejs">
+<a href="#redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redundancy type. Possible values: `LRS`, and `ZRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="refererconfig_nodejs">
 <a href="#refererconfig_nodejs" style="color: inherit; text-decoration: inherit;">referer<wbr>Config</a>
 </span> 
@@ -1185,6 +1218,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Bucket owner.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redundancy_type_python">
+<a href="#redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Redundancy type. Possible values: `LRS`, and `ZRS`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2180,6 +2224,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kmsmasterkeyid_csharp">
+<a href="#kmsmasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="ssealgorithm_csharp">
 <a href="#ssealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sse<wbr>Algorithm</a>
 </span> 
@@ -2195,6 +2250,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmsmasterkeyid_go">
+<a href="#kmsmasterkeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2216,6 +2282,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kmsmasterkeyid_nodejs">
+<a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="ssealgorithm_nodejs">
 <a href="#ssealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
 </span> 
@@ -2231,6 +2308,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmsmasterkeyid_python">
+<a href="#kmsmasterkeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

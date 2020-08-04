@@ -94,7 +94,7 @@ const thisInstance = new alicloud.dns.Instance("this", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/dns/#pulumi_alicloud.dns.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns_security=None<span class="p">, </span>domain_numbers=None<span class="p">, </span>period=None<span class="p">, </span>renew_period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>version_code=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/dns/#pulumi_alicloud.dns.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns_security=None<span class="p">, </span>domain_numbers=None<span class="p">, </span>period=None<span class="p">, </span>renew_period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>version_code=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -693,7 +693,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dns_security=None<span class="p">, </span>domain_numbers=None<span class="p">, </span>period=None<span class="p">, </span>renew_period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>version_code=None<span class="p">, </span>version_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dns_security=None<span class="p">, </span>domain_numbers=None<span class="p">, </span>period=None<span class="p">, </span>renew_period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>version_code=None<span class="p">, </span>version_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

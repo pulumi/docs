@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/#pulumi_alicloud.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_key=None<span class="p">, </span>account_id=None<span class="p">, </span>assume_role=None<span class="p">, </span>configuration_source=None<span class="p">, </span>ecs_role_name=None<span class="p">, </span>endpoints=None<span class="p">, </span>fc=None<span class="p">, </span>log_endpoint=None<span class="p">, </span>mns_endpoint=None<span class="p">, </span>ots_instance_name=None<span class="p">, </span>profile=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>secret_key=None<span class="p">, </span>security_token=None<span class="p">, </span>shared_credentials_file=None<span class="p">, </span>skip_region_validation=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/#pulumi_alicloud.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_key=None<span class="p">, </span>account_id=None<span class="p">, </span>assume_role=None<span class="p">, </span>configuration_source=None<span class="p">, </span>ecs_role_name=None<span class="p">, </span>endpoints=None<span class="p">, </span>fc=None<span class="p">, </span>log_endpoint=None<span class="p">, </span>mns_endpoint=None<span class="p">, </span>ots_instance_name=None<span class="p">, </span>profile=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>secret_key=None<span class="p">, </span>security_token=None<span class="p">, </span>shared_credentials_file=None<span class="p">, </span>skip_region_validation=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1650,6 +1650,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="oos_csharp">
+<a href="#oos_csharp" style="color: inherit; text-decoration: inherit;">Oos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="oss_csharp">
 <a href="#oss_csharp" style="color: inherit; text-decoration: inherit;">Oss</a>
 </span> 
@@ -2129,6 +2139,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ons_go">
 <a href="#ons_go" style="color: inherit; text-decoration: inherit;">Ons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oos_go">
+<a href="#oos_go" style="color: inherit; text-decoration: inherit;">Oos</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2624,6 +2644,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="oos_nodejs">
+<a href="#oos_nodejs" style="color: inherit; text-decoration: inherit;">oos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="oss_nodejs">
 <a href="#oss_nodejs" style="color: inherit; text-decoration: inherit;">oss</a>
 </span> 
@@ -3103,6 +3133,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ons_python">
 <a href="#ons_python" style="color: inherit; text-decoration: inherit;">ons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oos_python">
+<a href="#oos_python" style="color: inherit; text-decoration: inherit;">oos</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -1192,6 +1192,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualmachine_csharp">
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
 </span> 
@@ -1224,6 +1234,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1266,6 +1286,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualmachine_nodejs">
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
 </span> 
@@ -1298,6 +1328,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Dict[Provider<wbr>Features<wbr>Key<wbr>Vault]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Dict[Provider<wbr>Features<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1441,6 +1481,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="recoversoftdeletedkeyvaults_python">
 <a href="#recoversoftdeletedkeyvaults_python" style="color: inherit; text-decoration: inherit;">recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesNetwork">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesNetworkArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesNetworkArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relaxedlocking_csharp">
+<a href="#relaxedlocking_csharp" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relaxedlocking_go">
+<a href="#relaxedlocking_go" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relaxedlocking_nodejs">
+<a href="#relaxedlocking_nodejs" style="color: inherit; text-decoration: inherit;">relaxed<wbr>Locking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relaxedlocking_python">
+<a href="#relaxedlocking_python" style="color: inherit; text-decoration: inherit;">relaxed<wbr>Locking</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

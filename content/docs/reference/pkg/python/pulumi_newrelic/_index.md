@@ -1033,6 +1033,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="p">}],</span>
             <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span>
             <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;orderBy&quot;</span><span class="p">:</span> <span class="s2">&quot;score&quot;</span><span class="p">,</span>
             <span class="s2">&quot;row&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="s2">&quot;column&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="p">},</span>
@@ -1114,7 +1115,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> - (Required) The duration, in ms, of the time window represented in the chart.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">end_time</span></code> - (Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">facet</span></code> - (Optional) Can be set to “host” to facet the metric data by host.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">limit</span></code> - (Optional) The limit of distinct data series to display.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">limit</span></code> - (Optional) The limit of distinct data series to display.  Requires <code class="docutils literal notranslate"><span class="pre">order_by</span></code> to be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order_by</span></code> - (Optional) Set the order of the results.  Required when using <code class="docutils literal notranslate"><span class="pre">limit</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">application_breakdown</span></code>:</p>

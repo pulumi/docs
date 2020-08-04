@@ -26,7 +26,7 @@ Provides a PolarDB endpoint resource to allocate an Internet endpoint string for
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/polardb/#pulumi_alicloud.polardb.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_add_new_nodes=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>nodes=None<span class="p">, </span>read_write_mode=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/polardb/#pulumi_alicloud.polardb.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_add_new_nodes=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>nodes=None<span class="p">, </span>read_write_mode=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -581,7 +581,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_add_new_nodes=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>nodes=None<span class="p">, </span>read_write_mode=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_add_new_nodes=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>nodes=None<span class="p">, </span>read_write_mode=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

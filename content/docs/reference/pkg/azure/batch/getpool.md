@@ -1528,6 +1528,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="containerimagenames_csharp">
+<a href="#containerimagenames_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="containerregistries_csharp">
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span> 
@@ -1554,6 +1565,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="containerimagenames_go">
+<a href="#containerimagenames_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1586,6 +1608,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="containerimagenames_nodejs">
+<a href="#containerimagenames_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="containerregistries_nodejs">
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
 </span> 
@@ -1612,6 +1645,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="containerimagenames_python">
+<a href="#containerimagenames_python" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

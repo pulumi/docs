@@ -1,27 +1,16 @@
 // Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
 
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
 import * as pulumi from "@pulumi/pulumi";
-
 import * as fs from "fs";
-import * as glob from "glob";
-import * as mime from "mime";
-import * as path from "path";
-import * as tar from "tar";
-import * as tmp from "tmp";
 
 const stackConfig = new pulumi.Config();
 
 const config = {
-    // pathToWebsiteContents is a relative path to the website's contents.
-    pathToWebsiteContents: stackConfig.require("pathToWebsiteContents"),
-    // targetDomain is the domain/host to serve content at.
-    targetDomain: stackConfig.require("targetDomain"),
     // websiteDomain is the domain/host to serve content at.
     websiteDomain: stackConfig.require("websiteDomain"),
-    // alias is an optional domain alias the CDN will support as well.
-    alias: stackConfig.get("alias") || undefined,
+    // websiteLogsBucketName is the name of the S3 bucket used for storing access logs.
+    websiteLogsBucketName: stackConfig.require("websiteLogsBucketName"),
     // ACM certificate for the target domain. Must be in the us-east-1 region.
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
@@ -62,51 +51,6 @@ const originBucket = pulumi.output(aws.s3.getBucket({
     bucket: originBucketName,
 }));
 
-// redirectDomain is the domain to use when redirecting.
-const redirectDomain = config.redirectDomain || config.websiteDomain;
-
-// websiteBucket stores the static content to be served via the CDN.
-const websiteBucket = new aws.s3.Bucket(
-    "website-bucket",
-    {
-        bucket: config.websiteDomain,
-        acl: "public-read",
-
-        // Have S3 serve its contents as if it were a website. This is how we get the right behavior
-        // for routes like "foo/", which S3 will automatically translate to "foo/index.html".
-        website: {
-            indexDocument: "index.html",
-            errorDocument: "404.html",
-        },
-    },
-    {
-        protect: false,
-    },
-);
-
-// The website bucket needs to have the "public-read" ACL so its contents can be read by
-// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
-// users to prevent unintended disclosure of the bucket's contents.
-const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
-    bucket: websiteBucket.bucket,
-    policy: websiteBucket.arn.apply(arn => JSON.stringify({
-        Version: "2008-10-17",
-        Statement: [
-            {
-                Effect: "Deny",
-                Principal: "*",
-                Action: "s3:ListBucket",
-                Resource: arn,
-                Condition: {
-                    StringNotEquals: {
-                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
-                    },
-                },
-            },
-        ],
-    })),
-});
-
 // The origin bucket needs to have the "public-read" ACL so its contents can be read by
 // CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
 // users to prevent unintended disclosure of the bucket's contents.
@@ -130,62 +74,12 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     })),
 });
 
-// archiveBucket receives uploaded tarballs of website builds.
-const archiveBucket = new aws.s3.Bucket("archive-bucket");
-
-// archiveHandler processes those uploads.
-const archiveHandler = new awsx.ecs.FargateTaskDefinition("archive-handler", {
-    container: {
-        image: awsx.ecs.Image.fromPath("archive-handler-image", "./"),
-        memory: 4096,
-        cpu: 4,
-    },
-});
-
-// Handle uploads by running the archiveHandler task, which downloads the file, unpacks
-// it, and synchronizes its contents with S3.
-const cluster = awsx.ecs.Cluster.getDefault();
-archiveBucket.onObjectCreated("archive-bucket-subscription", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("archive-bucket-callback", {
-    runtime: "nodejs10.x",
-    policies: awsx.ecs.TaskDefinition.defaultTaskRolePolicyARNs(),
-    callback: async bucketArgs => {
-        if (!bucketArgs.Records) {
-            return;
-        }
-
-        for (const record of bucketArgs.Records) {
-            console.log(`A file was uploaded to the ${archiveBucket.id.get()} bucket: ${record.s3.object.key}`);
-            const source = `s3://${archiveBucket.id.get()}/${record.s3.object.key}`;
-            const dest = `s3://${websiteBucket.id.get()}`;
-
-            console.log(`Running the container task...`);
-            await archiveHandler.run({
-                cluster,
-                overrides: {
-                    containerOverrides: [
-                        {
-                            name: "container",
-
-                            // Pass the S3 URL of the uploaded tarball and destination
-                            // bucket to the container task.
-                            command: [
-                                source,
-                                dest,
-                            ],
-                        },
-                    ],
-                },
-            });
-        }
-    },
-}));
-
 // websiteLogsBucket stores the request logs for incoming requests.
 const websiteLogsBucket = new aws.s3.Bucket(
     "website-logs-bucket",
     {
-        bucket: `${config.websiteDomain}-logs`,
-        acl: "private",
+        bucket: config.websiteLogsBucketName,
+        acl: aws.s3.PrivateAcl,
     },
     {
         protect: true,
@@ -222,11 +116,10 @@ const baseCacheBehavior = {
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 // domain name to be used to access the website must be listed here.
 const domainAliases = [];
+
 // websiteDomain is the A record for the website bucket associated with the website.
 domainAliases.push(config.websiteDomain);
-// targetDomain is the A record associated with the bucket populated by Pulumi. It may be
-// removed once that bucket is removed.
-domainAliases.push(config.targetDomain);
+
 // redirectDomain is the domain to use for fully-qualified 301 redirects.
 if (config.redirectDomain) {
      domainAliases.push(config.redirectDomain);
@@ -380,78 +273,15 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 };
 
-// NOTE: Sometimes updating the CloudFront distribution will fail with:
-// "PreconditionFailed: The request failed because it didn't meet the preconditions in one or more
-// request-header fields."
-//
-// This is due to https://github.com/pulumi/pulumi/issues/1449:
-// Error "CloudFront ETag Out Of Sync" when externally modifying CloudFront resource
+// cdn is the CloudFront distribution that serves the content of the website.
 const cdn = new aws.cloudfront.Distribution(
     "cdn",
     distributionArgs,
     {
         protect: true,
-        dependsOn: [ websiteBucket, websiteLogsBucket ],
-    }
+        dependsOn: [ websiteLogsBucket ],
+    },
 );
-
-// Some files do not get the correct mime/type inferred from the mime package, and we
-// need to set our own.
-function getMimeType(filePath: string): string | undefined {
-    // Ensure that latest-version's mime type is always text/plain. Otherwise it
-    // will end up being set to binary/octet-stream, which is not what we want.
-    if (path.basename(filePath) === "latest-version") {
-        return "text/plain";
-    }
-
-    return mime.getType(filePath) || undefined;
-}
-
-// Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
-const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
-console.log("Syncing contents from local disk at", webContentsRootPath);
-
-// Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
-function getMetaRefreshRedirect(filePath: string): string | undefined {
-    // Only .html files contain meta refresh redirects.
-    if (path.extname(filePath) !== ".html") {
-        return undefined;
-    }
-
-    // Extract the redirect from the content of the file.
-    const text = fs.readFileSync(filePath, "utf8");
-    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
-    const match = regex.exec(text);
-
-    if (match && match.length === 2) {
-        const redirect = match[1];
-        if (!redirect || redirect.length === 0) {
-            throw new Error(`Meta refresh tag found in "${filePath}" but the redirect URL was empty.`);
-        }
-        return redirect;
-    }
-
-    return match && match.length === 2 ? match[1] : undefined;
-}
-
-// translateRedirect fixes up the redirect, if needed.
-// If the redirect is already prefixed with "https://" or "http://", it is returned unmodified.
-// If the redirect starts with "/", it is translated to an `https://${redirectDomain}${redirect}`.
-// Otherwise, an Error is thrown.
-function translateRedirect(filePath: string, redirect: string): string {
-    // If the redirect already has the https or http protocol specified, return it.
-    if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
-        return redirect;
-    }
-
-    // If the redirect starts with "/", prefix with the redirect domain and return it.
-    if (redirect.startsWith("/")) {
-        return `https://${redirectDomain}${redirect}`;
-    }
-
-    // Otherwise, it's not in a format that we expect so throw an error.
-    throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
-}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
@@ -495,17 +325,14 @@ async function createAliasRecord(
                     evaluateTargetHealth: true,
                 },
             ],
+        },
+        {
+            protect: true,
         });
 }
 
-const aRecord = createAliasRecord(config.targetDomain, cdn);
-const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
+[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
-export const archiveBucketUri = pulumi.interpolate`s3://${archiveBucket.bucket}`;
-export const websiteBucketUri = pulumi.interpolate`s3://${websiteBucket.bucket}`;
-export const websiteBucketWebsiteDomain = websiteBucket.websiteDomain;
-export const websiteBucketWebsiteEndpoint = websiteBucket.websiteEndpoint;
-export const originBucketUri = pulumi.interpolate`s3://${originBucket.bucket}`;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;

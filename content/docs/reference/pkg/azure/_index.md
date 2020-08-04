@@ -49,6 +49,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
     <li><a href="healthcare/" title="healthcare"><span class="symbol module"></span>healthcare</a></li>
     <li><a href="hpc/" title="hpc"><span class="symbol module"></span>hpc</a></li>
+    <li><a href="hsm/" title="hsm"><span class="symbol module"></span>hsm</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
@@ -114,7 +115,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.13.1</dd>
+	<dd>3.14.0</dd>
 </dl>
 
 

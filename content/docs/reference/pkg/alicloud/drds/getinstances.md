@@ -28,7 +28,7 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -55,6 +55,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="descriptionregex_csharp">
+<a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by instance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
@@ -64,16 +75,16 @@ The following arguments are supported:
     <dd>{{% md %}}A list of DRDS instance IDs.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by instance name.
-{{% /md %}}</dd>
+    <dd>{{% md %}}A regex string to filter results by instance description. It is deprecated since v1.91.0 and will be removed in a future release, please use 'description_regex' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -94,6 +105,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="descriptionregex_go">
+<a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by instance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
@@ -103,16 +125,16 @@ The following arguments are supported:
     <dd>{{% md %}}A list of DRDS instance IDs.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by instance name.
-{{% /md %}}</dd>
+    <dd>{{% md %}}A regex string to filter results by instance description. It is deprecated since v1.91.0 and will be removed in a future release, please use 'description_regex' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -133,6 +155,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="descriptionregex_nodejs">
+<a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by instance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
@@ -142,16 +175,16 @@ The following arguments are supported:
     <dd>{{% md %}}A list of DRDS instance IDs.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by instance name.
-{{% /md %}}</dd>
+    <dd>{{% md %}}A regex string to filter results by instance description. It is deprecated since v1.91.0 and will be removed in a future release, please use 'description_regex' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,6 +205,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="description_regex_python">
+<a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by instance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
@@ -181,16 +225,16 @@ The following arguments are supported:
     <dd>{{% md %}}A list of DRDS instance IDs.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by instance name.
-{{% /md %}}</dd>
+    <dd>{{% md %}}A regex string to filter results by instance description. It is deprecated since v1.91.0 and will be removed in a future release, please use 'description_regex' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -268,13 +312,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="descriptionregex_csharp">
+<a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -339,13 +393,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="descriptionregex_go">
+<a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -410,13 +474,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="descriptionregex_nodejs">
+<a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -481,13 +555,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="description_regex_python">
+<a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name_regex&#39; is deprecated and will be removed in a future release. Please use &#39;description_regex&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

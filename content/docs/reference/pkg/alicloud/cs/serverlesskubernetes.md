@@ -22,7 +22,7 @@ meta_desc: "Explore the ServerlessKubernetes resource of the cs module, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.ServerlessKubernetes">ServerlessKubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>endpoint_public_access_enabled=None<span class="p">, </span>force_update=None<span class="p">, </span>kube_config=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>private_zone=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.ServerlessKubernetes">ServerlessKubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>endpoint_public_access_enabled=None<span class="p">, </span>force_update=None<span class="p">, </span>kube_config=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>private_zone=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -205,16 +205,15 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_csharp">
-<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addons_csharp">
+<a href="#addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -340,6 +339,17 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -347,6 +357,28 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vswitchids_csharp">
+<a href="#vswitchids_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,16 +399,15 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_go">
-<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addons_go">
+<a href="#addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">[]Serverless<wbr>Kubernetes<wbr>Addon</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -502,6 +533,17 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -509,6 +551,28 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vswitchids_go">
+<a href="#vswitchids_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -529,16 +593,15 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_nodejs">
-<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addons_nodejs">
+<a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Serverless<wbr>Kubernetes<wbr>Addon[]</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -664,6 +727,17 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -671,6 +745,28 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vswitchids_nodejs">
+<a href="#vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,16 +787,15 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitch_id_python">
-<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addons_python">
+<a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">List[Serverless<wbr>Kubernetes<wbr>Addon]</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -826,6 +921,17 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -833,6 +939,28 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vswitch_ids_python">
+<a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -863,17 +991,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_csharp">
-<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -890,17 +1007,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_go">
-<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -919,17 +1025,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_nodejs">
-<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -946,17 +1041,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="security_group_id_python">
-<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -977,7 +1061,7 @@ Get an existing ServerlessKubernetes resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>endpoint_public_access_enabled=None<span class="p">, </span>force_update=None<span class="p">, </span>kube_config=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>private_zone=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>endpoint_public_access_enabled=None<span class="p">, </span>force_update=None<span class="p">, </span>kube_config=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>private_zone=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1090,6 +1174,16 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_addons_csharp">
+<a href="#state_addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1221,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,15 +1340,26 @@ The following state arguments are supported:
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchids_csharp">
+<a href="#state_vswitchids_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1263,6 +1368,16 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_addons_go">
+<a href="#state_addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">[]Serverless<wbr>Kubernetes<wbr>Addon</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1394,7 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1419,15 +1534,26 @@ The following state arguments are supported:
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchids_go">
+<a href="#state_vswitchids_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1436,6 +1562,16 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_addons_nodejs">
+<a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Serverless<wbr>Kubernetes<wbr>Addon[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1567,7 +1703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,15 +1728,26 @@ The following state arguments are supported:
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchids_nodejs">
+<a href="#state_vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1609,6 +1756,16 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_addons_python">
+<a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">List[Serverless<wbr>Kubernetes<wbr>Addon]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1740,7 +1897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+    <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1765,21 +1922,208 @@ The following state arguments are supported:
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+    <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitch_ids_python">
+<a href="#state_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="serverlesskubernetesaddon">Serverless<wbr>Kubernetes<wbr>Addon</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServerlessKubernetesAddon">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ServerlessKubernetesAddon">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ServerlessKubernetesAddonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ServerlessKubernetesAddonOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.ServerlessKubernetesAddonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ServerlessKubernetesAddon.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

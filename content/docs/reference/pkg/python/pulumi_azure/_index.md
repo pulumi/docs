@@ -61,6 +61,11 @@ registered?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoverSoftDeletedKeyVaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">relaxedLocking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOsDiskOnDeletion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>

@@ -22,7 +22,7 @@ meta_desc: "Explore the ScalingConfiguration resource of the ess module, includi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingConfiguration">ScalingConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>data_disks=None<span class="p">, </span>enable=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_ids=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>instance_types=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>override=None<span class="p">, </span>password=None<span class="p">, </span>password_inherit=None<span class="p">, </span>role_name=None<span class="p">, </span>scaling_configuration_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>substitute=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingConfiguration">ScalingConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>data_disks=None<span class="p">, </span>enable=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>instance_ids=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>instance_types=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>override=None<span class="p">, </span>password=None<span class="p">, </span>password_inherit=None<span class="p">, </span>role_name=None<span class="p">, </span>scaling_configuration_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>substitute=None<span class="p">, </span>system_disk_auto_snapshot_policy_id=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,17 +196,6 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="imageid_csharp">
-<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="scalinggroupid_csharp">
 <a href="#scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
 </span> 
@@ -258,6 +247,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_csharp">
+<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -482,6 +493,17 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="systemdiskautosnapshotpolicyid_csharp">
+<a href="#systemdiskautosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="systemdiskcategory_csharp">
 <a href="#systemdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
 </span> 
@@ -489,6 +511,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskdescription_csharp">
+<a href="#systemdiskdescription_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskname_csharp">
+<a href="#systemdiskname_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,17 +576,6 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="imageid_go">
-<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -597,6 +630,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_go">
+<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -821,6 +876,17 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="systemdiskautosnapshotpolicyid_go">
+<a href="#systemdiskautosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="systemdiskcategory_go">
 <a href="#systemdiskcategory_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
 </span> 
@@ -828,6 +894,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskdescription_go">
+<a href="#systemdiskdescription_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskname_go">
+<a href="#systemdiskname_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,17 +959,6 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="imageid_nodejs">
-<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -936,6 +1013,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_nodejs">
+<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1160,6 +1259,17 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="systemdiskautosnapshotpolicyid_nodejs">
+<a href="#systemdiskautosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="systemdiskcategory_nodejs">
 <a href="#systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
 </span> 
@@ -1167,6 +1277,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskdescription_nodejs">
+<a href="#systemdiskdescription_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdiskname_nodejs">
+<a href="#systemdiskname_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,17 +1342,6 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="image_id_python">
-<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1275,6 +1396,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1499,6 +1642,17 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="system_disk_auto_snapshot_policy_id_python">
+<a href="#system_disk_auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="system_disk_category_python">
 <a href="#system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
 </span> 
@@ -1506,6 +1660,28 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="system_disk_description_python">
+<a href="#system_disk_description_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="system_disk_name_python">
+<a href="#system_disk_name_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1641,7 +1817,7 @@ Get an existing ScalingConfiguration resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>data_disks=None<span class="p">, </span>enable=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_ids=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>instance_types=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>override=None<span class="p">, </span>password=None<span class="p">, </span>password_inherit=None<span class="p">, </span>role_name=None<span class="p">, </span>scaling_configuration_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>substitute=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>data_disks=None<span class="p">, </span>enable=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>instance_ids=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>instance_types=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>override=None<span class="p">, </span>password=None<span class="p">, </span>password_inherit=None<span class="p">, </span>role_name=None<span class="p">, </span>scaling_configuration_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>substitute=None<span class="p">, </span>system_disk_auto_snapshot_policy_id=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1808,6 +1984,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagename_csharp">
+<a href="#state_imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2043,6 +2230,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_systemdiskautosnapshotpolicyid_csharp">
+<a href="#state_systemdiskautosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_systemdiskcategory_csharp">
 <a href="#state_systemdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
 </span> 
@@ -2050,6 +2248,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskdescription_csharp">
+<a href="#state_systemdiskdescription_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskname_csharp">
+<a href="#state_systemdiskname_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2147,6 +2367,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagename_go">
+<a href="#state_imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2382,6 +2613,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_systemdiskautosnapshotpolicyid_go">
+<a href="#state_systemdiskautosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_systemdiskcategory_go">
 <a href="#state_systemdiskcategory_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
 </span> 
@@ -2389,6 +2631,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskdescription_go">
+<a href="#state_systemdiskdescription_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskname_go">
+<a href="#state_systemdiskname_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2486,6 +2750,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagename_nodejs">
+<a href="#state_imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2721,6 +2996,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_systemdiskautosnapshotpolicyid_nodejs">
+<a href="#state_systemdiskautosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_systemdiskcategory_nodejs">
 <a href="#state_systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
 </span> 
@@ -2728,6 +3014,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskdescription_nodejs">
+<a href="#state_systemdiskdescription_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_systemdiskname_nodejs">
+<a href="#state_systemdiskname_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2825,6 +3133,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of an image file, indicating the image resource selected when an instance is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_image_name_python">
+<a href="#state_image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of an image file, indicating the image resource selected when an instance is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -3060,6 +3379,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_system_disk_auto_snapshot_policy_id_python">
+<a href="#state_system_disk_auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of auto snapshot policy for system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_system_disk_category_python">
 <a href="#state_system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
 </span> 
@@ -3067,6 +3397,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of the system disk. The parameter value options are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_system_disk_description_python">
+<a href="#state_system_disk_description_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_system_disk_name_python">
+<a href="#state_system_disk_name_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3139,6 +3491,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autosnapshotpolicyid_csharp">
+<a href="#autosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span> 
@@ -3157,6 +3519,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="device_csharp">
@@ -3166,6 +3538,36 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute device has been deprecated on disk attachment resource. Suggest to remove it from your template.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3196,6 +3598,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autosnapshotpolicyid_go">
+<a href="#autosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
 </span> 
@@ -3214,6 +3626,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="device_go">
@@ -3223,6 +3645,36 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute device has been deprecated on disk attachment resource. Suggest to remove it from your template.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3253,6 +3705,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autosnapshotpolicyid_nodejs">
+<a href="#autosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
@@ -3271,6 +3733,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="device_nodejs">
@@ -3280,6 +3752,36 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute device has been deprecated on disk attachment resource. Suggest to remove it from your template.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3310,6 +3812,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autosnapshotpolicyid_python">
+<a href="#autosnapshotpolicyid_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
@@ -3328,6 +3840,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="device_python">
@@ -3337,6 +3859,36 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute device has been deprecated on disk attachment resource. Suggest to remove it from your template.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

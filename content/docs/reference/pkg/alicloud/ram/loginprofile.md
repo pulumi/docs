@@ -104,7 +104,7 @@ const profile = new alicloud.ram.LoginProfile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.LoginProfile">LoginProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.LoginProfile">LoginProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +571,7 @@ Get an existing LoginProfile resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

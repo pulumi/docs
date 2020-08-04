@@ -49,6 +49,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="mns/" title="mns"><span class="symbol module"></span>mns</a></li>
     <li><a href="mongodb/" title="mongodb"><span class="symbol module"></span>mongodb</a></li>
     <li><a href="nas/" title="nas"><span class="symbol module"></span>nas</a></li>
+    <li><a href="oos/" title="oos"><span class="symbol module"></span>oos</a></li>
     <li><a href="oss/" title="oss"><span class="symbol module"></span>oss</a></li>
     <li><a href="ots/" title="ots"><span class="symbol module"></span>ots</a></li>
     <li><a href="polardb/" title="polardb"><span class="symbol module"></span>polardb</a></li>
@@ -88,7 +89,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.12.1</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 

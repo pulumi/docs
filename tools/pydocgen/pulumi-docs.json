@@ -56,6 +56,12 @@
       "terraform_provider_name": "azuredevops"
     },
     {
+      "name": "Pulumi Civo",
+      "package_name": "pulumi_civo",
+      "pulumi_provider_name": "civo",
+      "terraform_provider_name": "civo"
+    },
+    {
       "name": "Pulumi Cloudflare",
       "package_name": "pulumi_cloudflare",
       "pulumi_provider_name": "cloudflare",

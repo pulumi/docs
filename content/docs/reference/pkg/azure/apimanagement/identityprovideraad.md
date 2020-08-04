@@ -162,7 +162,7 @@ const exampleIdentityProviderAad = new azure.apimanagement.IdentityProviderAad("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.IdentityProviderAad">IdentityProviderAad</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_tenants=None<span class="p">, </span>api_management_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.IdentityProviderAad">IdentityProviderAad</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_tenants=None<span class="p">, </span>api_management_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>signin_tenant=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -389,6 +389,17 @@ The IdentityProviderAad resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signintenant_csharp">
+<a href="#signintenant_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -449,6 +460,17 @@ The IdentityProviderAad resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signintenant_go">
+<a href="#signintenant_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
 {{% /md %}}</dd>
 
 </dl>
@@ -513,6 +535,17 @@ The IdentityProviderAad resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signintenant_nodejs">
+<a href="#signintenant_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -573,6 +606,17 @@ The IdentityProviderAad resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signin_tenant_python">
+<a href="#signin_tenant_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
 {{% /md %}}</dd>
 
 </dl>
@@ -673,7 +717,7 @@ Get an existing IdentityProviderAad resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_tenants=None<span class="p">, </span>api_management_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_tenants=None<span class="p">, </span>api_management_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>signin_tenant=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -842,6 +886,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signintenant_csharp">
+<a href="#state_signintenant_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -902,6 +957,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signintenant_go">
+<a href="#state_signintenant_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
 {{% /md %}}</dd>
 
 </dl>
@@ -966,6 +1032,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signintenant_nodejs">
+<a href="#state_signintenant_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1026,6 +1103,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signin_tenant_python">
+<a href="#state_signin_tenant_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AAD Tenant to use instead of Common when logging into Active Directory
 {{% /md %}}</dd>
 
 </dl>

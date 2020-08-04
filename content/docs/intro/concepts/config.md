@@ -297,7 +297,7 @@ console.log(`Active: ${data.active}`);
 ```python
 config = pulumi.Config()
 data = config.require_object("data")
-print(f"Active: ${data.active}")
+print("Active:", data.get("active"))
 ```
 
 {{% /choosable %}}
