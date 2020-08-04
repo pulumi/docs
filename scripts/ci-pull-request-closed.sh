@@ -44,7 +44,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
             fi
         done
 
-        # Post a PR comment that any links to previously built previews won't work anymore.
+        # Post a PR comment that any links to previously built previews will no longer work.
         post_github_pr_comment \
             "Site previews for this pull request have been removed. ✨" \
             $pr_comment_api_url

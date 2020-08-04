@@ -4,8 +4,6 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-export BUILD_START="$(current_time_in_ms)"
-
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process, and we write to the static
 # folder rather than public (which we do for production builds) in order to be able to

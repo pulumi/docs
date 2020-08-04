@@ -5,7 +5,6 @@ set -o errexit -o pipefail
 source ./scripts/common.sh
 
 export NODE_ENV="production"
-export BUILD_START="$(current_time_in_ms)"
 
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process.

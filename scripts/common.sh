@@ -60,12 +60,8 @@ origin_bucket_metadata_filepath() {
     echo "./origin-bucket-metadata.json"
 }
 
-# build_identifier returns a string for use in identifying the current build, mainly for
-# use in uniquely naming S3 buckets and asset bundles.
-#
-# Any changes made to the way these identifiers are generated should be paired with
-# modifications to the scripts responsible for bucket cleanup, including:
-# - scripts/ci-pull-request-closed.sh
+# build_identifier returns a string that is used to identify the current build for naming
+# S3 buckets and asset bundles.
 build_identifier() {
     local identifier
 
@@ -81,12 +77,12 @@ build_identifier() {
 
         identifier="${identifier}-$(git_sha_short)"
     else
-        # By default, just use the current SHA.
-        identifier="$(git_sha_short)"
+        # For on-demand builds, if an identifier's been set, use it.
+        identifier="$BUILD_IDENTIFIER"
 
-        # If a BUILD_START time has been set, append that as well.
-        if [ ! -z "$BUILD_START" ]; then
-            identifier="${identifier}-${BUILD_START}"
+        # Otherwise, just use the current Git SHA.
+        if [ -z "$BUILD_IDENTIFIER" ]; then
+            identifier="$(git_sha_short)"
         fi
     fi
 
