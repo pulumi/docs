@@ -14,6 +14,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
     pr_action="$(echo $event | jq -r ".action")"
 
     if [[ "$pr_action" == "closed" ]]; then
+        pr_comment_api_url="$(echo $event | jq -r ".pull_request._links.comments.href")"
 
         # Find all commits associated with the PR.
         pr_commits="$(curl \
@@ -24,7 +25,6 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         # For each PR commit, if a bucket exists for it, delete it.
         for commit in $(echo $pr_commits | jq -r ".[].sha"); do
             pr_bucket_name="$(get_bucket_for_commit $commit)"
-            pr_comment_api_url="$(echo $event | jq -r ".pull_request._links.comments.href")"
 
             if [ ! -z "$pr_bucket_name" ]; then
                 echo "Found bucket ${pr_bucket_name} associated with commit ${commit}."
