@@ -31,7 +31,6 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See additional examples.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
 
@@ -703,7 +702,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">slack_channel</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertChannel</span><span class="p">(</span><span class="s2">&quot;slackChannel&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;slack&quot;</span><span class="p">,</span>
     <span class="n">config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hooks.slack.com/services/&lt;*****&gt;/&lt;*****&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hooks.slack.com/services/xxxxxxx/yyyyyyyy&quot;</span><span class="p">,</span>
         <span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="s2">&quot;example-alerts-channel&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="c1"># Provision an email notification channel.</span>
@@ -742,9 +741,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The New Relic account ID to operate on.  This allows the user to override the <code class="docutils literal notranslate"><span class="pre">account_id</span></code> attribute set on the provider. Defaults to the environment variable <code class="docutils literal notranslate"><span class="pre">NEW_RELIC_ACCOUNT_ID</span></code>.</p></li>
-<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.</p></li>
+<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs <em>cannot</em> be imported.</p></li>
 <li><p><strong>incident_preference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rollup strategy for the policy.  Options include: <code class="docutils literal notranslate"><span class="pre">PER_POLICY</span></code>, <code class="docutils literal notranslate"><span class="pre">PER_CONDITION</span></code>, or <code class="docutils literal notranslate"><span class="pre">PER_CONDITION_AND_TARGET</span></code>.  The default is <code class="docutils literal notranslate"><span class="pre">PER_POLICY</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
 </ul>
@@ -759,9 +756,7 @@ imported via terraform import.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_newrelic.AlertPolicy.channel_ids">
 <code class="sig-name descname">channel_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.AlertPolicy.channel_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.</p>
+<dd><p>An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs <em>cannot</em> be imported.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -788,9 +783,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The New Relic account ID to operate on.  This allows the user to override the <code class="docutils literal notranslate"><span class="pre">account_id</span></code> attribute set on the provider. Defaults to the environment variable <code class="docutils literal notranslate"><span class="pre">NEW_RELIC_ACCOUNT_ID</span></code>.</p></li>
-<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.</p></li>
+<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs <em>cannot</em> be imported.</p></li>
 <li><p><strong>incident_preference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rollup strategy for the policy.  Options include: <code class="docutils literal notranslate"><span class="pre">PER_POLICY</span></code>, <code class="docutils literal notranslate"><span class="pre">PER_CONDITION</span></code>, or <code class="docutils literal notranslate"><span class="pre">PER_CONDITION_AND_TARGET</span></code>.  The default is <code class="docutils literal notranslate"><span class="pre">PER_POLICY</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
 </ul>
@@ -874,8 +867,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.</p></li>
+<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid drift in your state.</p></li>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the policy.</p></li>
 </ul>
 </dd>
@@ -883,8 +875,7 @@ drift your Terraform state.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_newrelic.AlertPolicyChannel.channel_ids">
 <code class="sig-name descname">channel_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.AlertPolicyChannel.channel_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.</p>
+<dd><p>Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid drift in your state.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -904,8 +895,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.</p></li>
+<li><p><strong>channel_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid drift in your state.</p></li>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the policy.</p></li>
 </ul>
 </dd>
