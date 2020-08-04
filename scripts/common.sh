@@ -46,6 +46,11 @@ git_sha_short() {
     echo "$(git_sha)" | cut -c1-8
 }
 
+# current_time_in_ms returns the epoch time in milliseconds.
+current_time_in_ms() {
+    echo "$(node -e 'console.log(Date.now())')"
+}
+
 origin_bucket_prefix() {
     echo "pulumi-docs-origin"
 }
@@ -55,21 +60,56 @@ origin_bucket_metadata_filepath() {
     echo "./origin-bucket-metadata.json"
 }
 
-# pr_number_or_git_sha returns either the PR number of the current GitHub Actions run or
-# the Git SHA of the current branch, for purposes of naming the destination bucket and
-# bundled build assets.
-pr_number_or_git_sha() {
-    if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
-        echo "pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+# build_identifier returns a string that is used to identify the current build for naming
+# S3 buckets and asset bundles.
+build_identifier() {
+    local identifier
+
+    # For CI builds, we use the GitHub Actions event to generate more readable identifiers.
+    # - For pull_request actions, return "pr-<number>-<git-sha>"
+    # - For others, return "<event-name>-<git-sha>".
+    if [[ ! -z "$GITHUB_EVENT_NAME" && ! -z "$GITHUB_EVENT_PATH" ]]; then
+        identifier="$GITHUB_EVENT_NAME"
+
+        if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+            identifier="pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+        fi
+
+        identifier="${identifier}-$(git_sha_short)"
     else
-        echo "push-$(git_sha_short)"
+        # For on-demand builds, if an identifier's been set, use it.
+        identifier="$BUILD_IDENTIFIER"
+
+        # Otherwise, just use the current Git SHA.
+        if [ -z "$BUILD_IDENTIFIER" ]; then
+            identifier="$(git_sha_short)"
+        fi
     fi
+
+    echo "$identifier"
 }
 
 # Get the AWS SSM Parameter Store key for the specified commit SHA. Used for mapping a
 # commit to a previously created bucket.
 ssm_parameter_key_for_commit() {
     echo "/docs/commits/$1/bucket"
+}
+
+get_bucket_for_commit() {
+    aws ssm get-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --query Parameter.Value \
+        --region us-west-2 \
+        --output text || echo ""
+}
+
+set_bucket_for_commit() {
+    aws ssm put-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --value "$2" \
+        --type String \
+        --region $3 \
+        --overwrite
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.
