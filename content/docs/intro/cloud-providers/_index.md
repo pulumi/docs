@@ -23,6 +23,7 @@ aliases: ["/docs/reference/clouds/"]
 ## Cloud Providers
 
 * [Alibaba Cloud]({{< relref "./alicloud" >}})
+* [Civo]({{< relref "./civo" >}})
 * [CloudAMQP]({{< relref "./cloudamqp" >}})
 * [Fastly]({{< relref "./fastly" >}})
 * [DigitalOcean]({{< relref "./digitalocean" >}})
