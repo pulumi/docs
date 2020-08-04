@@ -96,12 +96,7 @@ printf "$metadata" "$(current_time_in_ms)" "$(git_sha)" "$destination_bucket" "$
 aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region $aws_region --acl public-read
 
 # Persist an association between the current commit and the bucket we just deployed to.
-aws ssm put-parameter \
-    --name "$(ssm_parameter_key_for_commit $(git_sha))" \
-    --value "$destination_bucket" \
-    --type String \
-    --region $aws_region \
-    --overwrite
+set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$aws_region"
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [ "$1" == "preview" ]; then

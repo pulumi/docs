@@ -62,6 +62,10 @@ origin_bucket_metadata_filepath() {
 
 # build_identifier returns a string for use in identifying the current build, mainly for
 # use in uniquely naming S3 buckets and asset bundles.
+#
+# Any changes made to the way these identifiers are generated should be paired with
+# modifications to the scripts responsible for bucket cleanup, including:
+# - scripts/ci-pull-request-closed.sh
 build_identifier() {
     local identifier
 
@@ -93,6 +97,23 @@ build_identifier() {
 # commit to a previously created bucket.
 ssm_parameter_key_for_commit() {
     echo "/docs/commits/$1/bucket"
+}
+
+get_bucket_for_commit() {
+    aws ssm get-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --query Parameter.Value \
+        --region us-west-2 \
+        --output text || echo ""
+}
+
+set_bucket_for_commit() {
+    aws ssm put-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --value "$2" \
+        --type String \
+        --region $3 \
+        --overwrite
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.
