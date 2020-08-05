@@ -5,12 +5,13 @@ meta_desc: "Join Pulumi at our Infrastructure As Code Workshop at KubeCon EU and
 
 # Events with unlisted as true will not be shown on the event list
 unlisted: true
+block_external_search_index: true
 
 # The layout of the landing page.
 type: events
 
 # The url slug for the even landing page.
-url_slug: "workshop-amsterdam-2020-03-30"
+url_slug: "workshop-amsterdam-eu-kubecon-2020"
 
 # Event information
 event:
