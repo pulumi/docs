@@ -1,8 +1,0 @@
-language: generic
-dist: xenial
-sudo: true
-branches:
-  only:
-  - master
-script:
-- echo "The use of Travis is deprecated. See .github/workflows/hugo-build.yml."
