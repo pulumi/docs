@@ -3,7 +3,10 @@
         <div class="header-hero-items container mx-auto">
             <div class="header-hero-item pr-20">
                 <h1>{{ .Params.hero.title }}</h1>
-                {{ .Params.hero.body | markdownify }}
+                <p>{{ .Params.hero.body | markdownify }}</p>
+
+                <img class="my-10" src="/logos/tech/lang_block_horizontal.svg" alt="Pulumi Languages" />
+
                 <div class="header-hero-actions">
                     <a class="btn btn-lg" href="{{ relref . "/docs/get-started/kubernetes" }}">
                         Get Started
@@ -14,7 +17,7 @@
                 </div>
             </div>
             <div class="header-hero-item">
-                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+                <img src="/images/topics/kubernetes/kubernets-super-pulumipus.png" alt="Kubernetes and Pulumi" />
             </div>
         </div>
     </header>
@@ -45,12 +48,6 @@
                 </a>
             </div>
             <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
-                </a>
-                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
-                </a>
                 <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
                     <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
                 </a>
@@ -61,26 +58,12 @@
                     <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
                 </a>
             </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.lykke.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lykke_logo.svg" alt="Lykke" title="Lykke">
-                </a>
-                <a data-track="customer-logo" href="https://www.ware2go.co/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-5 mx-8" src="/logos/customers/ware2go_logo.png" title="Ware2Go" alt="Ware2Go">
-                </a>
-                <a data-track="customer-logo" href="{{ relref . "/case-studies/credijusto" }}">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/credijusto_logo.svg" alt="Credijusto" title="Credijusto">
-                </a>
-                <a data-track="customer-logo" href="{{ relref . "/case-studies/menta-network" }}">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/menta_logo.svg" alt="Menta Network" title="Menta Network">
-                </a>
-            </div>
         </div>
     </section>
 
     <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 md:px-0">
         <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
+            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right  pl-0 pr-20">
                 <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
             <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
@@ -89,7 +72,7 @@
                     <p>{{ .description }}</p>
                     <ul>
                         {{ range $i, $item := .list }}
-                            <li>{{ $item }}</li>
+                            <li>{{ $item | markdownify }}</li>
                         {{ end }}
                     </ul>
                     <a id="kubernetes-request-more-information" class="btn inline-block split-section--cta-btn" href="#contact" track-click>
@@ -136,22 +119,26 @@
         {{ $bgColor := "bg-gray-100" }}
         {{ $iconColor := "text-purple-100" }}
         {{ $ctaButtonColor := "btn-orange" }}
+        {{ $ctaBlockOrder := "order-first" }}
+        {{ $detailsBlockOrder := "order-last" }}
         {{ if not (modBool $index 2) }}
             {{ $bgColor = "bg-white" }}
             {{ $iconColor = "text-orange-300" }}
             {{ $ctaButtonColor = "btn-purple" }}
+            {{ $ctaBlockOrder = "order-last pl-20" }}
+            {{ $detailsBlockOrder = "order-first" }}
         {{ end }}
 
         <section id="teams" class="{{ $bgColor }} py-16 px-4">
             <div class="container md:mx-auto md:flex">
-                <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <div class="md:w-1/2 {{ $ctaBlockOrder }} flex-shrink-0 md:mr-8">
                     <h2>{{ $item.title }}</h2>
                     <p class="text-xl">{{ $item.description }}</p>
                     <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.ctaUrl }}">
                         {{ $item.cta }}
                     </a>
                 </div>
-                <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
+                <div class="md:w-1/2 {{ $detailsBlockOrder }} md:flex flex-wrap flex-shrink-0">
                     {{ range $i, $row := $item.items }}
                         <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                             <div class="flex items-start">
@@ -166,6 +153,27 @@
                 </div>
             </div>
         </section>
+    {{ end }}
+
+    {{ with .Params.video_section }}
+        <div class="max-w-4xl my-24 mx-auto px-4">
+            <div class="text-center mb-8">
+                <h3>{{ .title }}</h3>
+                <p class="my-0">
+                    {{ .subtitle }}
+                </p>
+            </div>
+
+            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
+            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe
+                    src="//www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                    allowfullscreen=""
+                    title="{{ .video_title }}"
+                ></iframe>
+            </div>
+        </div>
     {{ end }}
 
     <section id="get-started" class="bg-gray-100 py-16 px-4 md:px-0">
@@ -203,44 +211,38 @@
 
     <section id="contact" class="bg-white mb-0 py-16 text-white px-4 md:px-0">
         <div class="container mx-auto max-w-5xl bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-            <div class="md:flex my-8 md:max-w-32 align-top">
-                <div class="md:w-1/2">
-                    <h3 class="text-black">
-                        See why the world’s best engineering teams use Pulumi to enable true collaboration between
-                        developers and operators.
-                    </h3>
-                    <div class="relative contact-form--customer-quote">
-                        <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                        <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time
-                            that it took them previously, by giving them the ability to work with the languages they already know,
-                            bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by
-                            eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi
-                            Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application
-                            lifecycle management throughout our organization.
-                        </p>
-                        <div class="leading-relaxed flex items-start">
-                            <div>
-                                <div class="text-blue-700 font-semibold text-xl">
-                                        Fernando Carletti
-                                </div>
-                                <div class="text-blue-500">
-                                        Head of DevOps, Credijusto
+            {{ with .Params.contact_us_form }}
+                <div class="md:flex my-8 md:max-w-32 align-top">
+                    <div class="md:w-1/2">
+                        <h3 class="text-black">{{ .quote.title }}</h3>
+                        <div class="relative contact-form--customer-quote">
+                            <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                            <p class="leading-loose mt-0 z-10 relative text-gray-800">
+                                {{ .quote.content }}
+                            </p>
+                            <div class="leading-relaxed flex items-start">
+                                <div>
+                                    <div class="text-blue-700 font-semibold text-xl">
+                                            {{ .quote.name }}
+                                    </div>
+                                    <div class="text-blue-500">
+                                        {{ .quote.name_title }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="mt-16 mx-auto md:w-1/2 md:ml-8 md:mt-0">
-                    <h2 class="text-black text-center md:text-left">Demo Request</h2>
-                    <div class="hs-form hs-form-fg-light hs-demo-form text-black">
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "8ffce4b8-9eb1-4c9d-804b-2d9054806aa2") }}
+                    <div class="mt-16 mx-auto md:w-1/2 md:ml-8 md:mt-0">
+                        <h2 class="text-black text-center md:text-left">{{ .headline }}</h2>
+                        <div class="hs-form hs-form-fg-light hs-demo-form text-black">
+                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id) }}
+                        </div>
+                        <p class="text-black text-right text-base">
+                            ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>Start Free Trial</a>
+                        </p>
                     </div>
-                    <p class="text-black text-right text-base">
-                        ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>Start Free Trial</a>
-                    </p>
                 </div>
-            </div>
+            {{ end }}
         </div>
     </section>
 
