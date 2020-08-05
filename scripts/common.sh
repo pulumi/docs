@@ -95,6 +95,7 @@ ssm_parameter_key_for_commit() {
     echo "/docs/commits/$1/bucket"
 }
 
+# Get the S3 bucket associated with a specific commit.
 get_bucket_for_commit() {
     aws ssm get-parameter \
         --name "$(ssm_parameter_key_for_commit $1)" \
@@ -103,6 +104,7 @@ get_bucket_for_commit() {
         --output text || echo ""
 }
 
+# Set the S3 bucket associated with a specific commit.
 set_bucket_for_commit() {
     aws ssm put-parameter \
         --name "$(ssm_parameter_key_for_commit $1)" \
@@ -110,6 +112,24 @@ set_bucket_for_commit() {
         --type String \
         --region $3 \
         --overwrite
+}
+
+# Get the GitHub pull_request object associated with a particular commit.
+# Note that this GitHub API is still in preview:
+# https://docs.github.com/en/rest/reference/repos#list-pull-requests-associated-with-a-commit
+get_pr_for_commit() {
+    curl -s \
+         -H "Accept: application/vnd.github.groot-preview+json" \
+         "https://api.github.com/repos/pulumi/docs/commits/$1/pulls" || echo ""
+}
+
+# List the 50 most recent bucket in the current account, sorted descendingly by
+# CreationDate, matching the prefix we use to name website buckets. Supports an optional
+# suffix to filter by (e.g., "pr" or "push").
+get_recent_buckets() {
+    aws s3api list-buckets \
+        --query "reverse(sort_by(Buckets,&CreationDate))[:50].{id:Name,date:CreationDate}|[?starts_with(id,'$(origin_bucket_prefix)-${1}')]" \
+        --output json | jq -r '.[].id'
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.
