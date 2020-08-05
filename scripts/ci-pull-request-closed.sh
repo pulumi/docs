@@ -33,9 +33,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
                 # aws s3api head-bucket is a quick way to determine whether the bucket exists
                 # and we have access to it.
                 if aws s3api head-bucket --bucket "$pr_bucket_name" 2>/dev/null; then
-
-                    # Deliberately logging this at first just to make sure it works as designed.
-                    echo "aws s3 rb s3://${pr_bucket_name} --force"
+                    aws s3 rb "s3://${pr_bucket_name}" --force
                 else
                     echo "Unable to delete ${pr_bucket_name}. Skipping."
                 fi
@@ -48,7 +46,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         post_github_pr_comment \
             "Site previews for this pull request have been removed. ✨" \
             $pr_comment_api_url
+    else
+        echo "PR action was ${pr_action}. Skipping."
     fi
-
-    echo "PR action was ${pr_action}. Skipping."
 fi
