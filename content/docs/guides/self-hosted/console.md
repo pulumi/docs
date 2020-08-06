@@ -82,7 +82,7 @@ The following are the core environment variables that are required at a minimum.
 
 ### TLS Environment Variables
 
-The following environment variables must be configured to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the console will be served over HTTPS (i.e. using TLS) using port `3443`. If the following variables are not set the console will default to serving over HTTP using port `3000`. 
+The following environment variables must be configured to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the console will be served over HTTPS (i.e. using TLS) using port `3443`. If the following variables are not set the console will default to serving over HTTP using port `3000`.
 
 | Variable Name       | Description                                                                                                       |
 |---------------------|-------------------------------------------------------------------------------------------------------------------|
