@@ -52,7 +52,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := database.NewInstance(ctx, "test", &database.InstanceArgs{
+			Datastore: &database.InstanceDatastoreArgs{
+				Type:    pulumi.String("mysql"),
+				Version: pulumi.String("mysql-5.7"),
+			},
+			FlavorId: pulumi.String("31792d21-c355-4587-9290-56c1ed0ca376"),
+			Networks: database.InstanceNetworkArray{
+				&database.InstanceNetworkArgs{
+					Uuid: pulumi.String("c0612505-caf2-4fb0-b7cb-56a0240a2b12"),
+				},
+			},
+			Region: pulumi.String("region-test"),
+			Size:   pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,7 +140,7 @@ const test = new openstack.database.Instance("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -832,7 +863,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

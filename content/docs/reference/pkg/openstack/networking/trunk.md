@@ -42,11 +42,23 @@ class MyStack : Stack
         {
             AdminStateUp = true,
             NetworkId = network1.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "openstack_networking_subnet_v2.subnet_1",
+            },
         });
         var subport1 = new OpenStack.Networking.Port("subport1", new OpenStack.Networking.PortArgs
         {
             AdminStateUp = true,
             NetworkId = network1.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "openstack_networking_subnet_v2.subnet_1",
+            },
         });
         var trunk1 = new OpenStack.Networking.Trunk("trunk1", new OpenStack.Networking.TrunkArgs
         {
@@ -84,7 +96,83 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewSubnet(ctx, "subnet1", &networking.SubnetArgs{
+			Cidr:       pulumi.String("192.168.1.0/24"),
+			EnableDhcp: pulumi.Bool(true),
+			IpVersion:  pulumi.Int(4),
+			NetworkId:  network1.ID(),
+			NoGateway:  pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		parentPort1, err := networking.NewPort(ctx, "parentPort1", &networking.PortArgs{
+			AdminStateUp: pulumi.Bool(true),
+			NetworkId:    network1.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"openstack_networking_subnet_v2.subnet_1",
+		}))
+		if err != nil {
+			return err
+		}
+		subport1, err := networking.NewPort(ctx, "subport1", &networking.PortArgs{
+			AdminStateUp: pulumi.Bool(true),
+			NetworkId:    network1.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"openstack_networking_subnet_v2.subnet_1",
+		}))
+		if err != nil {
+			return err
+		}
+		trunk1, err := networking.NewTrunk(ctx, "trunk1", &networking.TrunkArgs{
+			AdminStateUp: pulumi.Bool(true),
+			PortId:       parentPort1.ID(),
+			SubPorts: networking.TrunkSubPortArray{
+				&networking.TrunkSubPortArgs{
+					PortId:           subport1.ID(),
+					SegmentationId:   pulumi.Int(1),
+					SegmentationType: pulumi.String("vlan"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "instance1", &compute.InstanceArgs{
+			Networks: compute.InstanceNetworkArray{
+				&compute.InstanceNetworkArgs{
+					Port: trunk1.PortId,
+				},
+			},
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("default"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,10 +189,12 @@ subnet1 = openstack.networking.Subnet("subnet1",
     no_gateway=True)
 parent_port1 = openstack.networking.Port("parentPort1",
     admin_state_up="true",
-    network_id=network1.id)
+    network_id=network1.id,
+    opts=ResourceOptions(depends_on=["openstack_networking_subnet_v2.subnet_1"]))
 subport1 = openstack.networking.Port("subport1",
     admin_state_up="true",
-    network_id=network1.id)
+    network_id=network1.id,
+    opts=ResourceOptions(depends_on=["openstack_networking_subnet_v2.subnet_1"]))
 trunk1 = openstack.networking.Trunk("trunk1",
     admin_state_up="true",
     port_id=parent_port1.id,
@@ -177,7 +267,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#Trunk">Trunk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Trunk">Trunk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -904,7 +994,7 @@ Get an existing Trunk resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

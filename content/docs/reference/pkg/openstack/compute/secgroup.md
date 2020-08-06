@@ -40,56 +40,21 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
 
-A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-### Referencing Security Groups
-
-When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const test_server = new openstack.compute.Instance("test-server", {
-    flavorId: "3",
-    imageId: "ad091b52-742f-469e-8f3c-fd81cadf0743",
-    keyPair: "my_key_pair_name",
-    securityGroups: [openstack_compute_secgroup_v2_secgroup_1.name],
-});
-```
-```python
-import pulumi
-import pulumi_openstack as openstack
-
-test_server = openstack.compute.Instance("test-server",
-    flavor_id="3",
-    image_id="ad091b52-742f-469e-8f3c-fd81cadf0743",
-    key_pair="my_key_pair_name",
-    security_groups=[openstack_compute_secgroup_v2["secgroup_1"]["name"]])
-```
-```csharp
-using Pulumi;
-using OpenStack = Pulumi.OpenStack;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test_server = new OpenStack.Compute.Instance("test-server", new OpenStack.Compute.InstanceArgs
-        {
-            FlavorId = "3",
-            ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
-            KeyPair = "my_key_pair_name",
-            SecurityGroups = 
-            {
-                openstack_compute_secgroup_v2.Secgroup_1.Name,
-            },
-        });
-    }
-
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
 }
 ```
+
+A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
 
 {{% examples %}}
 ## Example Usage
@@ -134,7 +99,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSecGroup(ctx, "secgroup1", &compute.SecGroupArgs{
+			Description: pulumi.String("my security group"),
+			Rules: compute.SecGroupRuleArray{
+				&compute.SecGroupRuleArgs{
+					Cidr:       pulumi.String("0.0.0.0/0"),
+					FromPort:   pulumi.Int(22),
+					IpProtocol: pulumi.String("tcp"),
+					ToPort:     pulumi.Int(22),
+				},
+				&compute.SecGroupRuleArgs{
+					Cidr:       pulumi.String("0.0.0.0/0"),
+					FromPort:   pulumi.Int(80),
+					IpProtocol: pulumi.String("tcp"),
+					ToPort:     pulumi.Int(80),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -201,7 +200,7 @@ const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#SecGroup">SecGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.SecGroup">SecGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +699,7 @@ Get an existing SecGroup resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

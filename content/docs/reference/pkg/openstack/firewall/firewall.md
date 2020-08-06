@@ -62,7 +62,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rule1, err := firewall.NewRule(ctx, "rule1", &firewall.RuleArgs{
+			Action:          pulumi.String("deny"),
+			Description:     pulumi.String("drop TELNET traffic"),
+			DestinationPort: pulumi.String("23"),
+			Enabled:         pulumi.Bool(true),
+			Protocol:        pulumi.String("tcp"),
+		})
+		if err != nil {
+			return err
+		}
+		rule2, err := firewall.NewRule(ctx, "rule2", &firewall.RuleArgs{
+			Action:          pulumi.String("deny"),
+			Description:     pulumi.String("drop NTP traffic"),
+			DestinationPort: pulumi.String("123"),
+			Enabled:         pulumi.Bool(false),
+			Protocol:        pulumi.String("udp"),
+		})
+		if err != nil {
+			return err
+		}
+		policy1, err := firewall.NewPolicy(ctx, "policy1", &firewall.PolicyArgs{
+			Rules: pulumi.StringArray{
+				rule1.ID(),
+				rule2.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = firewall.NewFirewall(ctx, "firewall1", &firewall.FirewallArgs{
+			PolicyId: policy1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -136,7 +185,7 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/firewall/#Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>associated_routers=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>no_routers=None<span class="p">, </span>policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/firewall/#pulumi_openstack.firewall.Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>associated_routers=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>no_routers=None<span class="p">, </span>policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -879,7 +928,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>associated_routers=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>no_routers=None<span class="p">, </span>policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>associated_routers=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>no_routers=None<span class="p">, </span>policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

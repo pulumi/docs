@@ -212,7 +212,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/containerinfra"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerinfra.NewClusterTemplate(ctx, "clustertemplate1", &containerinfra.ClusterTemplateArgs{
+			Coe:                 pulumi.String("kubernetes"),
+			DnsNameserver:       pulumi.String("1.1.1.1"),
+			DockerStorageDriver: pulumi.String("devicemapper"),
+			DockerVolumeSize:    pulumi.Int(10),
+			Flavor:              pulumi.String("m1.small"),
+			FloatingIpEnabled:   pulumi.Bool(false),
+			Image:               pulumi.String("Fedora-Atomic-27"),
+			Labels: pulumi.StringMap{
+				"influx_grafana_dashboard_enabled": pulumi.String("true"),
+				"kube_dashboard_enabled":           pulumi.String("true"),
+				"kube_tag":                         pulumi.String("1.11.1"),
+				"prometheus_monitoring":            pulumi.String("true"),
+			},
+			MasterFlavor:    pulumi.String("m1.medium"),
+			MasterLbEnabled: pulumi.Bool(true),
+			NetworkDriver:   pulumi.String("flannel"),
+			ServerType:      pulumi.String("vm"),
+			VolumeDriver:    pulumi.String("cinder"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -285,7 +322,7 @@ const clustertemplate1 = new openstack.containerinfra.ClusterTemplate("clusterte
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra/#ClusterTemplate">ClusterTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>volume_driver=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra/#pulumi_openstack.containerinfra.ClusterTemplate">ClusterTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>volume_driver=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1856,7 +1893,7 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>created_at=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>project_id=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, </span>volume_driver=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>created_at=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>project_id=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, </span>volume_driver=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

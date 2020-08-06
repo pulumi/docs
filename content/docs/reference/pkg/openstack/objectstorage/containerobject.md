@@ -58,7 +58,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		container1, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContentType: pulumi.String("application/json"),
+			Metadata: pulumi.StringMap{
+				"test": pulumi.String("true"),
+			},
+			Region: pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = objectstorage.NewContainerObject(ctx, "doc1", &objectstorage.ContainerObjectArgs{
+			ContainerName: container1.Name,
+			Content:       pulumi.String(fmt.Sprintf("%v%v%v%v", "               {\n", "                 \"foo\" : \"bar\"\n", "               }\n", "\n")),
+			ContentType:   pulumi.String("application/json"),
+			Metadata: pulumi.StringMap{
+				"test": pulumi.String("true"),
+			},
+			Region: pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -155,7 +193,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		container1, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContentType: pulumi.String("application/json"),
+			Metadata: pulumi.StringMap{
+				"test": pulumi.String("true"),
+			},
+			Region: pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = objectstorage.NewContainerObject(ctx, "doc1", &objectstorage.ContainerObjectArgs{
+			ContainerName: container1.Name,
+			ContentType:   pulumi.String("application/json"),
+			Metadata: pulumi.StringMap{
+				"test": pulumi.String("true"),
+			},
+			Region: pulumi.String("RegionOne"),
+			Source: pulumi.String("./default.json"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -219,7 +293,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#ContainerObject">ContainerObject</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_name=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_type=None<span class="p">, </span>copy_from=None<span class="p">, </span>delete_after=None<span class="p">, </span>delete_at=None<span class="p">, </span>detect_content_type=None<span class="p">, </span>etag=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>object_manifest=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#pulumi_openstack.objectstorage.ContainerObject">ContainerObject</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_name=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_type=None<span class="p">, </span>copy_from=None<span class="p">, </span>delete_after=None<span class="p">, </span>delete_at=None<span class="p">, </span>detect_content_type=None<span class="p">, </span>etag=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>object_manifest=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1478,7 +1552,7 @@ Get an existing ContainerObject resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_name=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_length=None<span class="p">, </span>content_type=None<span class="p">, </span>copy_from=None<span class="p">, </span>date=None<span class="p">, </span>delete_after=None<span class="p">, </span>delete_at=None<span class="p">, </span>detect_content_type=None<span class="p">, </span>etag=None<span class="p">, </span>last_modified=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>object_manifest=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>trans_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_name=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_length=None<span class="p">, </span>content_type=None<span class="p">, </span>copy_from=None<span class="p">, </span>date=None<span class="p">, </span>delete_after=None<span class="p">, </span>delete_at=None<span class="p">, </span>detect_content_type=None<span class="p">, </span>etag=None<span class="p">, </span>last_modified=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>object_manifest=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>trans_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

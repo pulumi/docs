@@ -40,7 +40,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := 4
+		opt1 := "public_addressscope"
+		opt2 := true
+		_, err := networking.LookupAddressScope(ctx, &networking.LookupAddressScopeArgs{
+			IpVersion: &opt0,
+			Name:      &opt1,
+			Shared:    &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

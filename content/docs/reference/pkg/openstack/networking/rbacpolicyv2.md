@@ -57,7 +57,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewRbacPolicyV2(ctx, "rbacPolicy1", &networking.RbacPolicyV2Args{
+			Action:       pulumi.String("access_as_shared"),
+			ObjectId:     network1.ID(),
+			ObjectType:   pulumi.String("network"),
+			TargetTenant: pulumi.String("20415a973c9e45d3917f078950644697"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,7 +135,7 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#RbacPolicyV2">RbacPolicyV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>object_id=None<span class="p">, </span>object_type=None<span class="p">, </span>region=None<span class="p">, </span>target_tenant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.RbacPolicyV2">RbacPolicyV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>object_id=None<span class="p">, </span>object_type=None<span class="p">, </span>region=None<span class="p">, </span>target_tenant=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -689,7 +718,7 @@ Get an existing RbacPolicyV2 resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>object_id=None<span class="p">, </span>object_type=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>target_tenant=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>object_id=None<span class="p">, </span>object_type=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>target_tenant=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

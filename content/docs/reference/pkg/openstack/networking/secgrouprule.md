@@ -50,7 +50,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		secgroup1, err := networking.NewSecGroup(ctx, "secgroup1", &networking.SecGroupArgs{
+			Description: pulumi.String("My neutron security group"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewSecGroupRule(ctx, "secgroupRule1", &networking.SecGroupRuleArgs{
+			Direction:       pulumi.String("ingress"),
+			Ethertype:       pulumi.String("IPv4"),
+			PortRangeMax:    pulumi.Int(22),
+			PortRangeMin:    pulumi.Int(22),
+			Protocol:        pulumi.String("tcp"),
+			RemoteIpPrefix:  pulumi.String("0.0.0.0/0"),
+			SecurityGroupId: secgroup1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,7 +137,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#SecGroupRule">SecGroupRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.SecGroupRule">SecGroupRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1028,7 +1060,7 @@ Get an existing SecGroupRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

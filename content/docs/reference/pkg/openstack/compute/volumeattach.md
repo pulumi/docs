@@ -51,7 +51,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		volume1, err := blockstorage.NewVolumeV2(ctx, "volume1", &blockstorage.VolumeV2Args{
+			Size: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		instance1, err := compute.NewInstance(ctx, "instance1", &compute.InstanceArgs{
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("default"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewVolumeAttach(ctx, "va1", &compute.VolumeAttachArgs{
+			InstanceId: instance1.ID(),
+			VolumeId:   volume1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,6 +120,47 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
     instanceId: instance1.id,
     volumeId: volume1.id,
 });
+```
+
+{{% /example %}}
+
+### Attaching multiple volumes to a single instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volumes: openstack.blockstorage.VolumeV2[] = [];
+for (let i = 0; i < 2; i++) {
+    volumes.push(new openstack.blockstorage.VolumeV2(`volumes-${i}`, {
+        size: 1,
+    }));
+}
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const attachments: openstack.compute.VolumeAttach[] = [];
+for (let i = 0; i < 2; i++) {
+    attachments.push(new openstack.compute.VolumeAttach(`attachments-${i}`, {
+        instanceId: instance1.id,
+        volumeId: pulumi.all(volumes.map(v => v.id)).apply(id => id.map(v => v)[i]),
+    }));
+}
+
+export const volumeDevices = attachments.map(v => v.device);
 ```
 
 {{% /example %}}
@@ -128,6 +205,12 @@ class MyStack : Stack
             InstanceId = instance2.Id,
             Multiattach = true,
             VolumeId = openstack_blockstorage_volume_v2.Volume_1.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "openstack_compute_volume_attach_v2.va_1",
+            },
         });
     }
 
@@ -137,7 +220,63 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blockstorage.NewVolume(ctx, "volume1", &blockstorage.VolumeArgs{
+			Multiattach: pulumi.Bool(true),
+			Size:        pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		instance1, err := compute.NewInstance(ctx, "instance1", &compute.InstanceArgs{
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("default"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		instance2, err := compute.NewInstance(ctx, "instance2", &compute.InstanceArgs{
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("default"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewVolumeAttach(ctx, "va1", &compute.VolumeAttachArgs{
+			InstanceId:  instance1.ID(),
+			Multiattach: pulumi.Bool(true),
+			VolumeId:    pulumi.Any(openstack_blockstorage_volume_v2.Volume_1.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewVolumeAttach(ctx, "va2", &compute.VolumeAttachArgs{
+			InstanceId:  instance2.ID(),
+			Multiattach: pulumi.Bool(true),
+			VolumeId:    pulumi.Any(openstack_blockstorage_volume_v2.Volume_1.Id),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"openstack_compute_volume_attach_v2.va_1",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -157,7 +296,8 @@ va1 = openstack.compute.VolumeAttach("va1",
 va2 = openstack.compute.VolumeAttach("va2",
     instance_id=instance2.id,
     multiattach=True,
-    volume_id=openstack_blockstorage_volume_v2["volume_1"]["id"])
+    volume_id=openstack_blockstorage_volume_v2["volume_1"]["id"],
+    opts=ResourceOptions(depends_on=["openstack_compute_volume_attach_v2.va_1"]))
 ```
 
 {{% /example %}}
@@ -204,7 +344,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#VolumeAttach">VolumeAttach</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.VolumeAttach">VolumeAttach</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -735,7 +875,7 @@ Get an existing VolumeAttach resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

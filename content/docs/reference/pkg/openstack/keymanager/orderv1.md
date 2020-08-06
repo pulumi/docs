@@ -45,7 +45,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keymanager.NewOrderV1(ctx, "order1", &keymanager.OrderV1Args{
+			Meta: &keymanager.OrderV1MetaArgs{
+				Algorithm: pulumi.String("aes"),
+				BitLength: pulumi.Int(256),
+				Mode:      pulumi.String("cbc"),
+				Name:      pulumi.String("mysecret"),
+			},
+			Type: pulumi.String("key"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,7 +138,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keymanager.NewOrderV1(ctx, "order1", &keymanager.OrderV1Args{
+			Meta: &keymanager.OrderV1MetaArgs{
+				Algorithm: pulumi.String("rsa"),
+				BitLength: pulumi.Int(4096),
+				Name:      pulumi.String("mysecret"),
+			},
+			Type: pulumi.String("asymmetric"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -161,7 +212,7 @@ const order1 = new openstack.keymanager.OrderV1("order_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#OrderV1">OrderV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>meta=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.OrderV1">OrderV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>meta=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -992,7 +1043,7 @@ Get an existing OrderV1 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_ref=None<span class="p">, </span>created=None<span class="p">, </span>creator_id=None<span class="p">, </span>meta=None<span class="p">, </span>order_ref=None<span class="p">, </span>region=None<span class="p">, </span>secret_ref=None<span class="p">, </span>status=None<span class="p">, </span>sub_status=None<span class="p">, </span>sub_status_message=None<span class="p">, </span>type=None<span class="p">, </span>updated=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_ref=None<span class="p">, </span>created=None<span class="p">, </span>creator_id=None<span class="p">, </span>meta=None<span class="p">, </span>order_ref=None<span class="p">, </span>region=None<span class="p">, </span>secret_ref=None<span class="p">, </span>status=None<span class="p">, </span>sub_status=None<span class="p">, </span>sub_status_message=None<span class="p">, </span>type=None<span class="p">, </span>updated=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

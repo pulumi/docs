@@ -59,7 +59,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		container1, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			Metadata: pulumi.StringMap{
+				"Temp-URL-Key": pulumi.String("testkey"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		object1, err := objectstorage.NewContainerObject(ctx, "object1", &objectstorage.ContainerObjectArgs{
+			ContainerName: container1.Name,
+			Content:       pulumi.String("Hello, world!"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = objectstorage.NewTempUrl(ctx, "objTempurl", &objectstorage.TempUrlArgs{
+			Container: container1.Name,
+			Method:    pulumi.String("post"),
+			Object:    object1.Name,
+			Ttl:       pulumi.Int(20),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,7 +157,7 @@ const objTempurl = new openstack.objectstorage.TempUrl("obj_tempurl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#TempUrl">TempUrl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container=None<span class="p">, </span>method=None<span class="p">, </span>object=None<span class="p">, </span>regenerate=None<span class="p">, </span>region=None<span class="p">, </span>split=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#pulumi_openstack.objectstorage.TempUrl">TempUrl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container=None<span class="p">, </span>method=None<span class="p">, </span>object=None<span class="p">, </span>regenerate=None<span class="p">, </span>region=None<span class="p">, </span>split=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -774,7 +812,7 @@ Get an existing TempUrl resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container=None<span class="p">, </span>method=None<span class="p">, </span>object=None<span class="p">, </span>regenerate=None<span class="p">, </span>region=None<span class="p">, </span>split=None<span class="p">, </span>ttl=None<span class="p">, </span>url=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container=None<span class="p">, </span>method=None<span class="p">, </span>object=None<span class="p">, </span>regenerate=None<span class="p">, </span>region=None<span class="p">, </span>split=None<span class="p">, </span>ttl=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

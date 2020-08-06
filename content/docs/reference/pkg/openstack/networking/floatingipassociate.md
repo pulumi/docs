@@ -45,7 +45,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		port1, err := networking.NewPort(ctx, "port1", &networking.PortArgs{
+			NetworkId: pulumi.String("a5bbd213-e1d3-49b6-aed1-9df60ea94b9a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewFloatingIpAssociate(ctx, "fip1", &networking.FloatingIpAssociateArgs{
+			FloatingIp: pulumi.String("1.2.3.4"),
+			PortId:     port1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +117,7 @@ const fip1 = new openstack.networking.FloatingIpAssociate("fip_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#FloatingIpAssociate">FloatingIpAssociate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>floating_ip=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.FloatingIpAssociate">FloatingIpAssociate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>floating_ip=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -573,7 +600,7 @@ Get an existing FloatingIpAssociate resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>fixed_ip=None<span class="p">, </span>floating_ip=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>fixed_ip=None<span class="p">, </span>floating_ip=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
