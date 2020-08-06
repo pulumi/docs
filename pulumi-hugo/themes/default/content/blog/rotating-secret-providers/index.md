@@ -28,7 +28,7 @@ ensure that the the configuration values in `Pulumi.<stack>.yaml` are re-encrypt
 with the new secrets provider and that the latest checkpoint (state file)
 also has any secrets held within are migrated with the new secrets provider.
 
-[![asciicast](https://asciinema.org/a/gApPSWG2lNxC4sWxdKIPkuXLc.svg)](https://asciinema.org/a/gApPSWG2lNxC4sWxdKIPkuXLc)
+{{< asciicast id="gApPSWG2lNxC4sWxdKIPkuXLc" >}}
 
 ## Creating New Stacks based on existing stacks
 
@@ -48,7 +48,7 @@ We can, of course, pass a secrets provider to this new stack:
 pulumi stack init test --secrets-provider="awskms://alias/ChangeSecretsProvider?region=us-west-2" --copy-config-from dev
 ```
 
-[![asciicast](https://asciinema.org/a/QZDHSYjXYUPDBLvALbZM776CX.svg)](https://asciinema.org/a/QZDHSYjXYUPDBLvALbZM776CX)
+{{< asciicast id="QZDHSYjXYUPDBLvALbZM776CX" >}}
 
 ## Copying Config Between Stacks
 
@@ -72,7 +72,7 @@ pulumi config cp --dest production
 We can iterate over all of the stacks that we need to copy the configuration to and the new configuration
 values will be encrypted as per the new stack.
 
-[![asciicast](https://asciinema.org/a/VCc6J56RzOv2r08lP9veTE6Rr.svg)](https://asciinema.org/a/VCc6J56RzOv2r08lP9veTE6Rr)
+{{< asciicast id="VCc6J56RzOv2r08lP9veTE6Rr" >}}
 
 ## Learn More
 
