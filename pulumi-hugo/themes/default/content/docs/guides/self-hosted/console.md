@@ -36,7 +36,11 @@ You can run this container on the same host that your API container is running o
 
 ## What's In The Container?
 
-The Console container is a Node 10-based image. A single web server handles delivering UI static assets to your web browser, as well as handling authentication callbacks.
+The Console container runs a web server using a Node 10-based image.
+
+### Server
+
+The container runs a single web server which handles delivering UI static assets to your web browser, as well as handling authentication callbacks. The console will be served using port `3000` over HTTP by default. If [TLS](#tls-environment-variables) is configured the console will instead be served using port `3443` over HTTPS.
 
 ## Primary Environment Variables
 
@@ -82,7 +86,7 @@ The following are the core environment variables that are required at a minimum.
 
 ### TLS Environment Variables
 
-The following environment variables must be configured to enable TLS.
+The following environment variables must be configured to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the console will be served over HTTPS (i.e. using TLS) using port `3443`. If the following variables are not set the console will default to serving over HTTP using port `3000`.
 
 | Variable Name       | Description                                                                                                       |
 |---------------------|-------------------------------------------------------------------------------------------------------------------|
