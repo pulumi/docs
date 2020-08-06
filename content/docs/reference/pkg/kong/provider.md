@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kong/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kong_admin_password=None<span class="p">, </span>kong_admin_token=None<span class="p">, </span>kong_admin_uri=None<span class="p">, </span>kong_admin_username=None<span class="p">, </span>kong_api_key=None<span class="p">, </span>strict_plugins_match=None<span class="p">, </span>tls_skip_verify=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kong_admin_password=None<span class="p">, </span>kong_admin_token=None<span class="p">, </span>kong_admin_uri=None<span class="p">, </span>kong_admin_username=None<span class="p">, </span>kong_api_key=None<span class="p">, </span>strict_plugins_match=None<span class="p">, </span>tls_skip_verify=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
