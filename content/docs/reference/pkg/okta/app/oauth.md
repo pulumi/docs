@@ -14,8 +14,6 @@ Creates an OIDC Application.
 
 This resource allows you to create and configure an OIDC Application.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,10 +49,41 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewOAuth(ctx, "example", &app.OAuthArgs{
+			GrantTypes: pulumi.StringArray{
+				pulumi.String("authorization_code"),
+			},
+			Label: pulumi.String("example"),
+			RedirectUris: pulumi.StringArray{
+				pulumi.String("https://example.com/"),
+			},
+			ResponseTypes: pulumi.StringArray{
+				pulumi.String("code"),
+			},
+			Type: pulumi.String("web"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +98,11 @@ example = okta.app.OAuth("example",
     response_types=["code"],
     type="web")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -84,6 +115,7 @@ const example = new okta.app.OAuth("example", {
     type: "web",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -98,7 +130,7 @@ const example = new okta.app.OAuth("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#OAuth">OAuth</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.OAuth">OAuth</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1665,7 +1697,7 @@ Get an existing OAuth resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>name=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>name=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetApp function of the app module, including examples, i
 
 Use this data source to retrieve the collaborators for a given repository.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,32 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Example App"
+		_, err := app.GetApp(ctx, &app.GetAppArgs{
+			Label: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +69,11 @@ import pulumi_okta as okta
 
 example = okta.app.get_app(label="Example App")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -60,6 +82,7 @@ const example = pulumi.output(okta.app.getApp({
     label: "Example App",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

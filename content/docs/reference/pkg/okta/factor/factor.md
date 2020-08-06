@@ -14,8 +14,6 @@ Allows you to manage the activation of Okta MFA methods.
 
 This resource allows you to manage Okta MFA methods.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,15 +30,37 @@ class MyStack : Stack
     {
         var example = new Okta.Factor.Factor("example", new Okta.Factor.FactorArgs
         {
+        }, new CustomResourceOptions
+        {
+            Provider = "google_otp",
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/factor"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := factor.NewFactor(ctx, "example", nil, pulumi.Provider("google_otp"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -48,17 +68,22 @@ Coming soon!
 import pulumi
 import pulumi_okta as okta
 
-example = okta.factor.Factor("example")
+example = okta.factor.Factor("example", opts=ResourceOptions(provider="google_otp"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = new okta.factor.Factor("example", {});
+const example = new okta.factor.Factor("example", {}, {
+    provider: "google_otp",
+});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -73,7 +98,7 @@ const example = new okta.factor.Factor("example", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/factor/#Factor">Factor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>provider_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/factor/#pulumi_okta.factor.Factor">Factor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>provider_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +477,7 @@ Get an existing Factor resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>provider_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>provider_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

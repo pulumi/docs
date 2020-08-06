@@ -12,8 +12,6 @@ meta_desc: "Explore the GetUserProfileMappingSource function of the user module,
 
 Use this data source to retrieve the base user Profile Mapping source or target from Okta.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -33,10 +31,29 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := user.GetUserProfileMappingSource(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -46,15 +63,18 @@ import pulumi_okta as okta
 
 example = okta.user.get_user_profile_mapping_source()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

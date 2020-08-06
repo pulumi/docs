@@ -12,8 +12,6 @@ meta_desc: "Explore the GetMetadataSaml function of the app module, including ex
 
 Use this data source to retrieve the collaborators for a given repository.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,10 +35,32 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.GetMetadataSaml(ctx, &app.GetMetadataSamlArgs{
+			AppId: "<app id>",
+			KeyId: "<cert key id>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -51,9 +71,11 @@ import pulumi_okta as okta
 example = okta.app.get_metadata_saml(app_id="<app id>",
     key_id="<cert key id>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -63,6 +85,7 @@ const example = pulumi.output(okta.app.getMetadataSaml({
     keyId: "<cert key id>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

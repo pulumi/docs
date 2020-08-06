@@ -16,70 +16,6 @@ This resource allows you to create and configure a Password Policy.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Okta = Pulumi.Okta;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Okta.Policy.Password("example", new Okta.Policy.PasswordArgs
-        {
-            Description = "Example",
-            GroupsIncludeds = 
-            {
-                data.Okta_group.Everyone.Id,
-            },
-            PasswordHistoryCount = 4,
-            Status = "ACTIVE",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_okta as okta
-
-example = okta.policy.Password("example",
-    description="Example",
-    groups_includeds=[data["okta.group.Group"]["everyone"]["id"]],
-    password_history_count=4,
-    status="ACTIVE")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as okta from "@pulumi/okta";
-
-const example = new okta.policy.Password("example", {
-    description: "Example",
-    groupsIncludeds: [okta_group_everyone.id],
-    passwordHistoryCount: 4,
-    status: "ACTIVE",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a Password Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -89,7 +25,7 @@ const example = new okta.policy.Password("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#Password">Password</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.Password">Password</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1612,7 +1548,7 @@ Get an existing Password resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

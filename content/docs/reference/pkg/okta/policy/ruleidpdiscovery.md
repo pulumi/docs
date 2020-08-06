@@ -14,8 +14,6 @@ Creates an IdP Discovery Policy Rule.
 
 This resource allows you to create and configure an IdP Discovery Policy Rule.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,10 +49,42 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := policy.NewRuleIdpDiscovery(ctx, "example", &policy.RuleIdpDiscoveryArgs{
+			IdpId:                   pulumi.String("<idp id>"),
+			IdpType:                 pulumi.String("SAML2"),
+			Policyid:                pulumi.String("<policy id>"),
+			Priority:                pulumi.Int(1),
+			UserIdentifierAttribute: pulumi.String("company"),
+			UserIdentifierPatterns: policy.RuleIdpDiscoveryUserIdentifierPatternArray{
+				&policy.RuleIdpDiscoveryUserIdentifierPatternArgs{
+					MatchType: pulumi.String("EQUALS"),
+					Value:     pulumi.String("Articulate"),
+				},
+			},
+			UserIdentifierType: pulumi.String("ATTRIBUTE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +104,11 @@ example = okta.policy.RuleIdpDiscovery("example",
     }],
     user_identifier_type="ATTRIBUTE")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -94,6 +126,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
     userIdentifierType: "ATTRIBUTE",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -108,7 +141,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1035,7 +1068,7 @@ Get an existing RuleIdpDiscovery resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

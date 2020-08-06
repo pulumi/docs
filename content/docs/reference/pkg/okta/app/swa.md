@@ -14,8 +14,6 @@ Creates an SWA Application.
 
 This resource allows you to create and configure an SWA Application.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +40,35 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewSwa(ctx, "example", &app.SwaArgs{
+			ButtonField:   pulumi.String("btn-login"),
+			Label:         pulumi.String("example"),
+			PasswordField: pulumi.String("txtbox-password"),
+			Url:           pulumi.String("https://example.com/login.html"),
+			UsernameField: pulumi.String("txtbox-username"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,9 +83,11 @@ example = okta.app.Swa("example",
     url="https://example.com/login.html",
     username_field="txtbox-username")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -75,6 +100,7 @@ const example = new okta.app.Swa("example", {
     usernameField: "txtbox-username",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -89,7 +115,7 @@ const example = new okta.app.Swa("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#Swa">Swa</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_field=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>password_field=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>username_field=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.Swa">Swa</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_field=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>password_field=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>username_field=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1216,7 +1242,7 @@ Get an existing Swa resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_field=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>password_field=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>username_field=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_field=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>password_field=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>username_field=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

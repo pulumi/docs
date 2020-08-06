@@ -15,8 +15,51 @@ Creates an Three Field Application.
 This resource allows you to create and configure an Three Field Application.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.ThreeField("example",
+    credentials_scheme="EDIT_USERNAME_AND_PASSWORD",
+    label="Example App",
+    reveal_password=True,
+    sign_on_redirect_url="https://example.com",
+    sign_on_url="https://example.com/login.html")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.ThreeField("example", {
+    credentialsScheme: "EDIT_USERNAME_AND_PASSWORD",
+    label: "Example App",
+    revealPassword: true,
+    signOnRedirectUrl: "https://example.com",
+    signOnUrl: "https://example.com/login.html",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ThreeField Resource {#create}
@@ -28,7 +71,7 @@ This resource allows you to create and configure an Three Field Application.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#ThreeField">ThreeField</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_selector=None<span class="p">, </span>extra_field_selector=None<span class="p">, </span>extra_field_value=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>password_selector=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>username_selector=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.ThreeField">ThreeField</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_selector=None<span class="p">, </span>extra_field_selector=None<span class="p">, </span>extra_field_value=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>password_selector=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>username_selector=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1199,7 +1242,7 @@ Get an existing ThreeField resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_selector=None<span class="p">, </span>extra_field_selector=None<span class="p">, </span>extra_field_value=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>password_selector=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>username_selector=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>button_selector=None<span class="p">, </span>extra_field_selector=None<span class="p">, </span>extra_field_value=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>password_selector=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>url_regex=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>username_selector=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
