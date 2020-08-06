@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupVpcPeeringConnection(ctx, &aiven.LookupVpcPeeringConnectionArgs{
+			VpcId:            data.Aiven_project_vpc.Vpc_id,
+			PeerCloudAccount: "<PEER_ACCOUNT_ID>",
+			PeerVpc:          "<PEER_VPC_ID/NAME>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -47,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-mypeeringconnection = aiven.get_vpc_peering_connection(vpc_id=data["aiven..ProjectVpc"]["vpc_id"],
+mypeeringconnection = aiven.get_vpc_peering_connection(vpc_id=data["aiven_project_vpc"]["vpc_id"],
     peer_cloud_account="<PEER_ACCOUNT_ID>",
     peer_vpc="<PEER_VPC_ID/NAME>")
 ```

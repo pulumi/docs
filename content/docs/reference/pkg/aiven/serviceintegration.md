@@ -42,7 +42,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewServiceIntegration(ctx, "myintegration", &aiven.ServiceIntegrationArgs{
+			DestinationEndpointId:  pulumi.Any(aiven_service_integration_endpoint.Myendpoint.Id),
+			DestinationServiceName: pulumi.String(""),
+			IntegrationType:        pulumi.String("datadog"),
+			Project:                pulumi.Any(aiven_project.Myproject.Project),
+			SourceEndpointId:       pulumi.String(""),
+			SourceServiceName:      pulumi.Any(aiven_service.Testkafka.Service_name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,7 +116,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#ServiceIntegration">ServiceIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_endpoint_id=None<span class="p">, </span>destination_service_name=None<span class="p">, </span>integration_type=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>logs_user_config=None<span class="p">, </span>mirrormaker_user_config=None<span class="p">, </span>project=None<span class="p">, </span>source_endpoint_id=None<span class="p">, </span>source_service_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegration">ServiceIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_endpoint_id=None<span class="p">, </span>destination_service_name=None<span class="p">, </span>integration_type=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>logs_user_config=None<span class="p">, </span>mirrormaker_user_config=None<span class="p">, </span>project=None<span class="p">, </span>source_endpoint_id=None<span class="p">, </span>source_service_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -822,7 +847,7 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_endpoint_id=None<span class="p">, </span>destination_service_name=None<span class="p">, </span>integration_type=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>logs_user_config=None<span class="p">, </span>mirrormaker_user_config=None<span class="p">, </span>project=None<span class="p">, </span>source_endpoint_id=None<span class="p">, </span>source_service_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_endpoint_id=None<span class="p">, </span>destination_service_name=None<span class="p">, </span>integration_type=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>logs_user_config=None<span class="p">, </span>mirrormaker_user_config=None<span class="p">, </span>project=None<span class="p">, </span>source_endpoint_id=None<span class="p">, </span>source_service_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

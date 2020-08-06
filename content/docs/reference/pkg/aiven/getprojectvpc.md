@@ -38,7 +38,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupProjectVpc(ctx, &aiven.LookupProjectVpcArgs{
+			Project:   data.Aiven_project.Myproject.Project,
+			CloudName: "google-europe-west1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -46,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-myvpc = aiven.get_project_vpc(project=data["aiven..Project"]["myproject"]["project"],
+myvpc = aiven.get_project_vpc(project=data["aiven_project"]["myproject"]["project"],
     cloud_name="google-europe-west1")
 ```
 

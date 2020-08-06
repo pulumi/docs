@@ -30,7 +30,7 @@ class MyStack : Stack
             CloudName = "google-europe-west1",
             PgUserConfig = new Aiven.Inputs.ServicePgUserConfigArgs
             {
-                IpFilter = 
+                IpFilters = 
                 {
                     "0.0.0.0/0",
                 },
@@ -51,7 +51,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewService(ctx, "myservice", &aiven.ServiceArgs{
+			CloudName: pulumi.String("google-europe-west1"),
+			PgUserConfig: &aiven.ServicePgUserConfigArgs{
+				IpFilters: pulumi.StringArray{
+					pulumi.String("0.0.0.0/0"),
+				},
+				PgVersion: pulumi.String("10"),
+			},
+			Plan:                  pulumi.String("business-8"),
+			Project:               pulumi.Any(aiven_project.Myproject.Project),
+			ProjectVpcId:          pulumi.Any(aiven_project_vpc.Vpc_gcp_europe_west1.Id),
+			ServiceName:           pulumi.String("<SERVICE_NAME>"),
+			ServiceType:           pulumi.String("pg"),
+			TerminationProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,7 +94,7 @@ import pulumi_aiven as aiven
 myservice = aiven.Service("myservice",
     cloud_name="google-europe-west1",
     pg_user_config={
-        "ipFilter": ["0.0.0.0/0"],
+        "ipFilters": ["0.0.0.0/0"],
         "pgVersion": "10",
     },
     plan="business-8",
@@ -110,7 +142,7 @@ const myservice = new aiven.Service("myservice", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2073,7 +2105,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5497,6 +5529,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="searchmaxbuckets_csharp">
+<a href="#searchmaxbuckets_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="threadpoolanalyzequeuesize_csharp">
 <a href="#threadpoolanalyzequeuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
 </span> 
@@ -5729,6 +5771,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_go">
+<a href="#searchmaxbuckets_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5971,6 +6023,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="searchmaxbuckets_nodejs">
+<a href="#searchmaxbuckets_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="threadpoolanalyzequeuesize_nodejs">
 <a href="#threadpoolanalyzequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
 </span> 
@@ -6203,6 +6265,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_python">
+<a href="#searchmaxbuckets_python" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8563,7 +8635,7 @@ The following state arguments are supported:
 <a href="#teamids_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8620,7 +8692,7 @@ The following state arguments are supported:
 <a href="#teamids_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8677,7 +8749,7 @@ The following state arguments are supported:
 <a href="#teamids_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8734,7 +8806,7 @@ The following state arguments are supported:
 <a href="#teamids_python" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12393,6 +12465,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_csharp">
+<a href="#maxincrementalfetchsessioncacheslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="messagemaxbytes_csharp">
 <a href="#messagemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
 </span> 
@@ -12622,6 +12704,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxconnectionsperip_go">
 <a href="#maxconnectionsperip_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_go">
+<a href="#maxincrementalfetchsessioncacheslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -12867,6 +12959,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_nodejs">
+<a href="#maxincrementalfetchsessioncacheslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="messagemaxbytes_nodejs">
 <a href="#messagemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
 </span> 
@@ -13096,6 +13198,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxconnectionsperip_python">
 <a href="#maxconnectionsperip_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_python">
+<a href="#maxincrementalfetchsessioncacheslots_python" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

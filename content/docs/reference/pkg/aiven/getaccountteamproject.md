@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupAccountTeamProject(ctx, &aiven.LookupAccountTeamProjectArgs{
+			AccountId:   aiven_account_team.Developers.Account_id,
+			ProjectName: aiven_project.Project1.Project,
+			TeamId:      aiven_account_team.Developers.Team_id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

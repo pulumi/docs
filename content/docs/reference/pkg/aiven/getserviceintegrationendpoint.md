@@ -38,7 +38,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupServiceIntegrationEndpoint(ctx, &aiven.LookupServiceIntegrationEndpointArgs{
+			Project:      data.Aiven_project.Myproject.Project,
+			EndpointName: "<ENDPOINT_NAME>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -46,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-myendpoint = aiven.get_service_integration_endpoint(project=data["aiven..Project"]["myproject"]["project"],
+myendpoint = aiven.get_service_integration_endpoint(project=data["aiven_project"]["myproject"]["project"],
     endpoint_name="<ENDPOINT_NAME>")
 ```
 

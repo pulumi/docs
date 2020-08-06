@@ -397,9 +397,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invited_by_user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>During the creation of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> resource, an email invitation will be sent
-to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team. 
-The deletion of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the 
+<dd><p>During the creation of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> resource, an email invitation will be sent
+to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team.
+The deletion of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the
 user, and it will also eliminate an account team member if one has accepted an invitation previously.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
@@ -523,7 +523,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamProject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note 
+<dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note
 that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set and equal to account team you are trying to link this project.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
@@ -2605,7 +2605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
     <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">,</span>
     <span class="n">pg_user_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;ipFilter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;ipFilters&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
         <span class="s2">&quot;pgVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;business-8&quot;</span><span class="p">,</span>
@@ -2696,6 +2696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2921,6 +2922,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -3233,6 +3235,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3511,6 +3514,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3963,6 +3967,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4188,6 +4193,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5245,8 +5251,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_connection_pool</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_connection_pool</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;&lt;POOLNAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5258,8 +5264,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;&lt;DATABASE_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5284,15 +5290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_aiven.get_kafka_acl">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_acl" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
-
-<span class="n">mytestacl</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_acl</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
-    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME_PATTERN&gt;&quot;</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME_PATTERN&gt;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -5324,8 +5322,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_topic</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_topic</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5359,7 +5357,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">email</span><span class="o">=</span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5371,7 +5369,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_vpc</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_vpc</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5388,7 +5386,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5443,6 +5441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5668,6 +5667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5932,7 +5932,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_integration_endpoint</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_integration_endpoint</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">endpoint_name</span><span class="o">=</span><span class="s2">&quot;&lt;ENDPOINT_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5976,8 +5976,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5989,7 +5989,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.ProjectVpc&quot;</span><span class="p">][</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">],</span>
+<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project_vpc&quot;</span><span class="p">][</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">],</span>
     <span class="n">peer_cloud_account</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_ACCOUNT_ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">peer_vpc</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_VPC_ID/NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>

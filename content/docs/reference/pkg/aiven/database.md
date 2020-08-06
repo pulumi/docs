@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewDatabase(ctx, "mydatabase", &aiven.DatabaseArgs{
+			DatabaseName: pulumi.String("<DATABASE_NAME>"),
+			Project:      pulumi.Any(aiven_project.Myproject.Project),
+			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,7 +104,7 @@ const mydatabase = new aiven.Database("mydatabase", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_name=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Database">Database</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_name=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +663,7 @@ Get an existing Database resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>database_name=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>database_name=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

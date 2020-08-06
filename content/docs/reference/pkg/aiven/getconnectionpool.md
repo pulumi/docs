@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupConnectionPool(ctx, &aiven.LookupConnectionPoolArgs{
+			Project:     data.Aiven_service.Myservice.Project,
+			ServiceName: data.Aiven_service.Myservice.Service_name,
+			PoolName:    "<POOLNAME>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -47,8 +69,8 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-mytestpool = aiven.get_connection_pool(project=data["aiven..Service"]["myservice"]["project"],
-    service_name=data["aiven..Service"]["myservice"]["service_name"],
+mytestpool = aiven.get_connection_pool(project=data["aiven_service"]["myservice"]["project"],
+    service_name=data["aiven_service"]["myservice"]["service_name"],
     pool_name="<POOLNAME>")
 ```
 

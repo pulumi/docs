@@ -40,7 +40,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewVpcPeeringConnection(ctx, "mypeeringconnection", &aiven.VpcPeeringConnectionArgs{
+			PeerCloudAccount: pulumi.String("<PEER_ACCOUNT_ID>"),
+			PeerRegion:       pulumi.String("<PEER_REGION>"),
+			PeerVpc:          pulumi.String("<PEER_VPC_ID/NAME>"),
+			VpcId:            pulumi.Any(aiven_project_vpc.Myvpc.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,7 +108,7 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -728,7 +751,7 @@ Get an existing VpcPeeringConnection resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
