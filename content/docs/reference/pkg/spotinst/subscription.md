@@ -73,7 +73,7 @@ func main() {
 				"tags":          pulumi.String("foo,baz,baz"),
 			},
 			Protocol:   pulumi.String("http"),
-			ResourceId: pulumi.String(spotinst_elastigroup_aws.My - eg.Id),
+			ResourceId: pulumi.Any(spotinst_elastigroup_aws.My - eg.Id),
 		})
 		if err != nil {
 			return err

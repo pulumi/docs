@@ -2993,7 +2993,7 @@ The following state arguments are supported:
 <a href="#maxscaledownpercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3010,7 +3010,7 @@ The following state arguments are supported:
 <a href="#maxscaledownpercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3027,7 +3027,7 @@ The following state arguments are supported:
 <a href="#maxscaledownpercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

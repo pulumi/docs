@@ -60,9 +60,9 @@ Each `scheduled_task` supports the following:
 * `frequency` - (Optional) Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
 * `start_time` - (Optional) DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
    Example: 2019-05-23T10:55:09Z
-* `cron_expression` - (Optional) A valid cron expression. For example : " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+* `cron_expression` - (Optional) A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
    Example: 0 1 * * *
-* `task_type`- (Required) The task type to run. Valid Values: "pause", "resume", "recycle".
+* `task_type`- (Required) The task type to run. Valid values: "pause", "resume", "recycle".
 
 Usage:
 
@@ -100,7 +100,8 @@ func main() {
 <a id="load-balancers"></a>
 ## Load Balancers
 
-   * `loadBalancersConfig` - (Optional) LB integration object.
+   * `loadBalancersConfig` - (Optional) Load Balancers integration object.
+     
        * `load_balancers` - (Optional) List of load balancers configs.
             * `name` - The AWS resource name. Required for Classic Load Balancer. Optional for Application Load Balancer.
             * `arn` - The AWS resource ARN (Required only for ALB target groups).
@@ -108,24 +109,89 @@ func main() {
                  Default: lb-123456
             * `target_set_id` - The Multai load target set ID.
                  Default: ts-123456
-            * `auto_weight` - “Auto Weight” will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
-            * `zone_awareness` - “AZ Awareness” will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+            * `auto_weight` - "Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+            * `zone_awareness` - "AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
             * `type` - The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
 
 Usage:
 
-```hcl
-load_balancers {
-    arn  = "arn"
-    type = "CLASSIC"
-    balancer_id   = "lb-123"
-    target_set_id = "ts-123"
-    auto_weight   = "true"
-    az_awareness = "true"
-  }
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
 ```
 
 <a id="route53"></a>
+## route53
+
+   * `integration_route53` - (Optional) Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+     
+       * `domains` - (Required) Route 53 Domain configurations.
+           * `hosted_zone_id` - (Required) The Route 53 Hosted Zone Id for the registered Domain.
+           * `spotinst_acct_id` - (Optional) The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
+           * `record_set_type` - (Optional, Default: `a`) The type of the record set. Valid values: `"a"`, `"cname"`.
+           * `record_sets` - (Required) List of record sets
+               * `name` - (Required) The record set name.
+               * `use_public_ip` - (Optional, Default: `false`) - Designates whether the IP address should be exposed to connections outside the VPC.
+               * `use_public_dns` - (Optional, Default: `false`) - Designates whether the DNS address should be exposed to connections outside the VPC.
+
+Usage:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -145,7 +211,7 @@ Coming soon!
 import pulumi
 import pulumi_spotinst as spotinst
 
-# Create an MangedInstance
+# Create a Manged Instance
 default_managed_instance = spotinst.aws.ManagedInstance("default-managed-instance",
     auto_healing="true",
     block_devices_mode="reattach",
@@ -210,7 +276,7 @@ default_managed_instance = spotinst.aws.ManagedInstance("default-managed-instanc
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
 
-// Create an MangedInstance
+// Create a Manged Instance
 const default_managed_instance = new spotinst.aws.ManagedInstance("default-managed-instance", {
     autoHealing: true,
     blockDevicesMode: "reattach",
@@ -527,7 +593,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,7 +616,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -584,7 +650,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -629,7 +695,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,8 +706,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,7 +750,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -727,7 +793,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -772,7 +838,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -870,7 +936,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,7 +1042,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +1065,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -1033,7 +1099,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -1078,7 +1144,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1089,8 +1155,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1133,7 +1199,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -1176,7 +1242,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1221,7 +1287,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -1319,7 +1385,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1425,7 +1491,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1448,7 +1514,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -1482,7 +1548,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -1527,7 +1593,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1538,8 +1604,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1582,7 +1648,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -1625,7 +1691,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1670,7 +1736,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -1768,7 +1834,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,7 +1940,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1897,7 +1963,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -1931,7 +1997,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -1976,7 +2042,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1987,8 +2053,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2031,7 +2097,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -2074,7 +2140,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2119,7 +2185,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -2217,7 +2283,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2463,7 +2529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2486,7 +2552,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -2520,7 +2586,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -2565,7 +2631,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2576,8 +2642,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2642,7 +2708,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -2685,7 +2751,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2741,7 +2807,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -2861,7 +2927,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2912,7 +2978,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2935,7 +3001,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -2969,7 +3035,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -3014,7 +3080,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3025,8 +3091,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3091,7 +3157,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -3134,7 +3200,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3190,7 +3256,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -3310,7 +3376,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3361,7 +3427,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3384,7 +3450,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -3418,7 +3484,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -3463,7 +3529,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3474,8 +3540,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3540,7 +3606,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -3583,7 +3649,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3639,7 +3705,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -3759,7 +3825,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3810,7 +3876,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`.
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3833,7 +3899,7 @@ Default: `"onLaunch"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+    <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
 Default: unlimited
 {{% /md %}}</dd>
 
@@ -3867,7 +3933,7 @@ Default: unlimited
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+    <dd>{{% md %}}Enable EBS optimization for supported instances. Note: Additional charges will be applied by the Cloud Provider.
 Default: false
 {{% /md %}}</dd>
 
@@ -3912,7 +3978,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3923,8 +3989,8 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
+Default: `"EC2"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3989,7 +4055,7 @@ Default: `“EC2”`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
 Default `"spot"`.
 {{% /md %}}</dd>
 
@@ -4032,7 +4098,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+    <dd>{{% md %}}When `performAt` is `"timeWindow"`: must specify a list of `"timeWindows"` with at least one time window. Each string should be formatted as `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4088,7 +4154,7 @@ Default: `"availabilityOriented"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
+    <dd>{{% md %}}Valid values: `"default"`, `"dedicated"`.
 Default: default
 {{% /md %}}</dd>
 
@@ -4208,7 +4274,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `"120"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4385,6 +4451,16 @@ Default: `"false"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recordsettype_csharp">
+<a href="#recordsettype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotinstacctid_csharp">
 <a href="#spotinstacctid_csharp" style="color: inherit; text-decoration: inherit;">Spotinst<wbr>Acct<wbr>Id</a>
 </span> 
@@ -4417,6 +4493,16 @@ Default: `"false"`.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">[]Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recordsettype_go">
+<a href="#recordsettype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4459,6 +4545,16 @@ Default: `"false"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recordsettype_nodejs">
+<a href="#recordsettype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotinstacctid_nodejs">
 <a href="#spotinstacctid_nodejs" style="color: inherit; text-decoration: inherit;">spotinst<wbr>Acct<wbr>Id</a>
 </span> 
@@ -4491,6 +4587,16 @@ Default: `"false"`.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">List[Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recordsettype_python">
+<a href="#recordsettype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4542,6 +4648,16 @@ Default: `"false"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usepublicdns_csharp">
+<a href="#usepublicdns_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepublicip_csharp">
 <a href="#usepublicip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip</a>
 </span> 
@@ -4567,6 +4683,16 @@ Default: `"false"`.
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usepublicdns_go">
+<a href="#usepublicdns_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4598,6 +4724,16 @@ Default: `"false"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usepublicdns_nodejs">
+<a href="#usepublicdns_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepublicip_nodejs">
 <a href="#usepublicip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip</a>
 </span> 
@@ -4623,6 +4759,16 @@ Default: `"false"`.
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usepublicdns_python">
+<a href="#usepublicdns_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5163,7 +5309,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: “always”, “never”, "timeWindow".
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
 Default `"never"`.
 {{% /md %}}</dd>
 
@@ -5182,7 +5328,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: “always”, “never”, "timeWindow".
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
 Default `"never"`.
 {{% /md %}}</dd>
 
@@ -5201,7 +5347,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: “always”, “never”, "timeWindow".
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
 Default `"never"`.
 {{% /md %}}</dd>
 
@@ -5220,7 +5366,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid values: “always”, “never”, "timeWindow".
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
 Default `"never"`.
 {{% /md %}}</dd>
 
