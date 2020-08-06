@@ -25,7 +25,7 @@ This resource allows you to create and configure an MFA Policy Rule.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#RuleMfa">RuleMfa</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enroll=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.RuleMfa">RuleMfa</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enroll=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -712,7 +712,7 @@ Get an existing RuleMfa resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enroll=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enroll=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

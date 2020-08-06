@@ -14,8 +14,6 @@ Creates a SAML Identity Provider.
 
 This resource allows you to create and configure a SAML Identity Provider.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,10 +45,40 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := idp.NewSaml(ctx, "example", &idp.SamlArgs{
+			AcsBinding:             pulumi.String("HTTP-POST"),
+			AcsType:                pulumi.String("INSTANCE"),
+			Issuer:                 pulumi.String("https://idp.example.com"),
+			Kid:                    pulumi.Any(okta_idp_saml_key.Test.Id),
+			RequestSignatureScope:  pulumi.String("REQUEST"),
+			ResponseSignatureScope: pulumi.String("ANY"),
+			SsoBinding:             pulumi.String("HTTP-POST"),
+			SsoDestination:         pulumi.String("https://idp.example.com"),
+			SsoUrl:                 pulumi.String("https://idp.example.com"),
+			UsernameTemplate:       pulumi.String("idpuser.email"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +98,11 @@ example = okta.idp.Saml("example",
     sso_url="https://idp.example.com",
     username_template="idpuser.email")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -90,6 +120,7 @@ const example = new okta.idp.Saml("example", {
     usernameTemplate: "idpuser.email",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -104,7 +135,7 @@ const example = new okta.idp.Saml("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#Saml">Saml</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>kid=None<span class="p">, </span>name=None<span class="p">, </span>name_format=None<span class="p">, </span>profile_master=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>sso_binding=None<span class="p">, </span>sso_destination=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_filter=None<span class="p">, </span>subject_formats=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>username_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#pulumi_okta.idp.Saml">Saml</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>kid=None<span class="p">, </span>name=None<span class="p">, </span>name_format=None<span class="p">, </span>profile_master=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>sso_binding=None<span class="p">, </span>sso_destination=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_filter=None<span class="p">, </span>subject_formats=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>username_template=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1803,7 +1834,7 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>audience=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>kid=None<span class="p">, </span>name=None<span class="p">, </span>name_format=None<span class="p">, </span>profile_master=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>sso_binding=None<span class="p">, </span>sso_destination=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_filter=None<span class="p">, </span>subject_formats=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>type=None<span class="p">, </span>username_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>audience=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>kid=None<span class="p">, </span>name=None<span class="p">, </span>name_format=None<span class="p">, </span>profile_master=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>sso_binding=None<span class="p">, </span>sso_destination=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_filter=None<span class="p">, </span>subject_formats=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>type=None<span class="p">, </span>username_template=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

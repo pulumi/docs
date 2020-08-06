@@ -14,8 +14,6 @@ Creates an Application User Schema property.
 
 This resource allows you to create and configure a custom user schema property and associate it with an application.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,10 +42,37 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewUserSchema(ctx, "example", &app.UserSchemaArgs{
+			AppId:       pulumi.String("<app id>"),
+			Description: pulumi.String("My custom property name"),
+			Index:       pulumi.String("customPropertyName"),
+			Master:      pulumi.String("OKTA"),
+			Scope:       pulumi.String("SELF"),
+			Title:       pulumi.String("customPropertyName"),
+			Type:        pulumi.String("string"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,9 +89,11 @@ example = okta.app.UserSchema("example",
     title="customPropertyName",
     type="string")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -81,6 +108,7 @@ const example = new okta.app.UserSchema("example", {
     type: "string",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -95,7 +123,7 @@ const example = new okta.app.UserSchema("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#UserSchema">UserSchema</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.UserSchema">UserSchema</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1134,7 +1162,7 @@ Get an existing UserSchema resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

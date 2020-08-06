@@ -12,8 +12,6 @@ meta_desc: "Explore the GetGroup function of the group module, including example
 
 Use this data source to retrieve a group from Okta.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/group"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := group.LookupGroup(ctx, &group.LookupGroupArgs{
+			Name: "Example App",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +68,11 @@ import pulumi_okta as okta
 
 example = okta.group.get_group(name="Example App")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -60,6 +81,7 @@ const example = pulumi.output(okta.group.getGroup({
     name: "Example App",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

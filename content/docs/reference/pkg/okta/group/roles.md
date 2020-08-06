@@ -14,8 +14,6 @@ Creates Group level Admin Role Assignments.
 
 This resource allows you to create and configure Group level Admin Role Assignments.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,10 +40,34 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/group"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := group.NewRoles(ctx, "example", &group.RolesArgs{
+			AdminRoles: pulumi.StringArray{
+				pulumi.String("SUPER_ADMIN"),
+			},
+			GroupId: pulumi.String("<group id>"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,9 +79,11 @@ example = okta.group.Roles("example",
     admin_roles=["SUPER_ADMIN"],
     group_id="<group id>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -69,6 +93,7 @@ const example = new okta.group.Roles("example", {
     groupId: "<group id>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -83,7 +108,7 @@ const example = new okta.group.Roles("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/group/#Roles">Roles</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_roles=None<span class="p">, </span>group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/group/#pulumi_okta.group.Roles">Roles</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_roles=None<span class="p">, </span>group_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -462,7 +487,7 @@ Get an existing Roles resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_roles=None<span class="p">, </span>group_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_roles=None<span class="p">, </span>group_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

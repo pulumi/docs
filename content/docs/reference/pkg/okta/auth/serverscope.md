@@ -14,8 +14,6 @@ Creates an Authorization Server Scope.
 
 This resource allows you to create and configure an Authorization Server Scope.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,10 +38,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/auth"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := auth.NewServerScope(ctx, "example", &auth.ServerScopeArgs{
+			AuthServerId:    pulumi.String("<auth server id>"),
+			Consent:         pulumi.String("IMPLICIT"),
+			MetadataPublish: pulumi.String("NO_CLIENTS"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,9 +77,11 @@ example = okta.auth.ServerScope("example",
     consent="IMPLICIT",
     metadata_publish="NO_CLIENTS")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -69,6 +92,7 @@ const example = new okta.auth.ServerScope("example", {
     metadataPublish: "NO_CLIENTS",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -83,7 +107,7 @@ const example = new okta.auth.ServerScope("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#ServerScope">ServerScope</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#pulumi_okta.auth.ServerScope">ServerScope</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +662,7 @@ Get an existing ServerScope resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

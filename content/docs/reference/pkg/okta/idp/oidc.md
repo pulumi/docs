@@ -14,8 +14,6 @@ Creates an OIDC Identity Provider.
 
 This resource allows you to create and configure an OIDC Identity Provider.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,10 +53,47 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := idp.NewOidc(ctx, "example", &idp.OidcArgs{
+			AcsBinding:           pulumi.String("HTTP-POST"),
+			AcsType:              pulumi.String("INSTANCE"),
+			AuthorizationBinding: pulumi.String("HTTP-REDIRECT"),
+			AuthorizationUrl:     pulumi.String("https://idp.example.com/authorize"),
+			ClientId:             pulumi.String("efg456"),
+			ClientSecret:         pulumi.String("efg456"),
+			IssuerUrl:            pulumi.String("https://id.example.com"),
+			JwksBinding:          pulumi.String("HTTP-REDIRECT"),
+			JwksUrl:              pulumi.String("https://idp.example.com/keys"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("openid"),
+			},
+			TokenBinding:     pulumi.String("HTTP-POST"),
+			TokenUrl:         pulumi.String("https://idp.example.com/token"),
+			UserInfoBinding:  pulumi.String("HTTP-REDIRECT"),
+			UserInfoUrl:      pulumi.String("https://idp.example.com/userinfo"),
+			UsernameTemplate: pulumi.String("idpuser.email"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +118,11 @@ example = okta.idp.Oidc("example",
     user_info_url="https://idp.example.com/userinfo",
     username_template="idpuser.email")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -108,6 +145,7 @@ const example = new okta.idp.Oidc("example", {
     usernameTemplate: "idpuser.email",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -122,7 +160,7 @@ const example = new okta.idp.Oidc("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#Oidc">Oidc</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#pulumi_okta.idp.Oidc">Oidc</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2037,7 +2075,7 @@ Get an existing Oidc resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>type=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>type=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

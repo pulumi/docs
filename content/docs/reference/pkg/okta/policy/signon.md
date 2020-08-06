@@ -16,67 +16,6 @@ This resource allows you to create and configure a Sign On Policy.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Okta = Pulumi.Okta;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Okta.Policy.Signon("example", new Okta.Policy.SignonArgs
-        {
-            Description = "Example",
-            GroupsIncludeds = 
-            {
-                data.Okta_group.Everyone.Id,
-            },
-            Status = "ACTIVE",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_okta as okta
-
-example = okta.policy.Signon("example",
-    description="Example",
-    groups_includeds=[data["okta.group.Group"]["everyone"]["id"]],
-    status="ACTIVE")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as okta from "@pulumi/okta";
-
-const example = new okta.policy.Signon("example", {
-    description: "Example",
-    groupsIncludeds: [okta_group_everyone.id],
-    status: "ACTIVE",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a Signon Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -86,7 +25,7 @@ const example = new okta.policy.Signon("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#Signon">Signon</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.Signon">Signon</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +536,7 @@ Get an existing Signon resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
