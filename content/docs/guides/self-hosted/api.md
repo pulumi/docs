@@ -38,7 +38,11 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 
 ## What's In The Container?
 
-The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run. This container will serve using port `8080` over HTTP by default or port `8443` over HTTPS when [TLS](#tls-environment-variables) is configured.
+The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
+
+### Server
+
+This container runs an HTTP server which provides the APIs needed by the Console and the CLI. By default this container will serve using port `8080` over standard HTTP. If [TLS](#tls-environment-variables) is configured the server will instead serve over port `8443` using HTTPS.
 
 ## Primary Environment Variables
 

@@ -36,7 +36,11 @@ You can run this container on the same host that your API container is running o
 
 ## What's In The Container?
 
-The Console container is a Node 10-based image. A single web server handles delivering UI static assets to your web browser, as well as handling authentication callbacks. The console will be served using port `3000` over HTTP by default. If [TLS](#tls-environment-variables) is configured the console will be served using port `3443` over HTTPS.
+The Console container runs a web server using a Node 10-based image.
+
+### Server
+
+The container runs a single web server which handles delivering UI static assets to your web browser, as well as handling authentication callbacks. The console will be served using port `3000` over HTTP by default. If [TLS](#tls-environment-variables) is configured the console will instead be served using port `3443` over HTTPS.
 
 ## Primary Environment Variables
 
