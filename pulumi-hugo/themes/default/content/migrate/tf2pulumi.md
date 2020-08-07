@@ -36,9 +36,19 @@ form:
 <p class="m-0 -mt-4 p-2 bg-purple-300 text-white font-bold font-mono font-xs"
     style="font-size: 0.75rem !important; color: #fff !important">main.tf</p>
 <textarea id="terraform-code" rows="27"
-    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-hidden whitespace-pre-wrap"
+    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-y-scroll overflow-x-hidden whitespace-no-wrap"
     title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
 </textarea>
+
+<p class="text-gray-700 text-xs mb-1">
+    Canned Examples:
+</p>
+<select id="terraform-canned-example" class="text-gray-700 text-xs">
+    <option id=""></option>
+    <option id="aws_ec2" selected>AWS EC2 instance running Ubuntu</option>
+    <option id="azure_vm">Azure Virtual Machine running Ubuntu</option>
+    <option id="google_gke">Google Kubernetes Engine cluster</option>
+</select>
 
 {{% /choosable %}}
 
@@ -354,7 +364,7 @@ function convertCode(language) {
         }).
         always(function() {
             $(document.body).css({ "cursor": "default" });
-            $("#terraform-code, #terraform-url").css({ "cursor": "default" });
+            $("#terraform-code, #terraform-url").css({ "cursor": "text" });
             $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "pointer" });
         });
 }
@@ -371,20 +381,20 @@ function downloadCode() {
     });
 }
 
-window.onload = function() {
-    $(document).ready(function() {
-        // If there are querystring parameters populate the fields.
-        let tfUrl = getQueryVariable("url");
-        let tfCode = getQueryVariable("code");
-        if (tfUrl) {
-            $("#terraform-url").val(tfUrl);
-            setCurrentInputKind("url");
-        } else {
-            if (!tfCode) {
-                // Populate a simple default example.
-                let comment = "#"; // to suppress Markdown lint errors.
-                tfCode = `${comment} This Terraform sample provisions an AWS EC2 instance running Ubuntu.
-${comment} Choose a language and click CONVERT below -- or try replacing it with your own!
+function getCannedExample(id) {
+    if (id === undefined) {
+        // Look up the currently selected example ID.
+        id = $("#terraform-canned-example").children("option:selected").attr("id");
+    }
+
+    let comment = "#"; // to suppress Markdown lint errors.
+    switch (id) {
+        case "":
+            return "";
+
+        case "aws_ec2":
+            return `${comment} This Terraform sample provisions an AWS EC2 instance running Ubuntu.
+${comment} Choose a language on the right hand side -- or try replacing it with your own!
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -399,7 +409,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["099720109477"] # Canonical
+  owners = ["099720109477"] ${comment} Canonical
 }
 
 resource "aws_instance" "web" {
@@ -411,8 +421,135 @@ resource "aws_instance" "web" {
   }
 }
 `;
+
+        case "azure_vm":
+            return `${comment} This Terraform sample provisions an Azure Virtual Machine running Ubuntu.
+${comment} Choose a language on the right hand side -- or try replacing it with your own!
+
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
+
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+}
+
+resource "azurerm_subnet" "example" {
+  name                 = "internal"
+  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.example.name
+  address_prefix       = "10.0.2.0/24"
+}
+
+resource "azurerm_network_interface" "example" {
+  name                = "example-nic"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.example.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
+resource "azurerm_linux_virtual_machine" "example" {
+  name                = "example-machine"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  size                = "Standard_F2"
+  admin_username      = "adminuser"
+  network_interface_ids = [
+    azurerm_network_interface.example.id,
+  ]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    version   = "latest"
+  }
+}
+`;
+
+        case "google_gke":
+            return `${comment} This Terraform sample provisions a Google Kubernetes Engine (GKE) cluster.
+${comment} Choose a language on the right hand side -- or try replacing it with your own!
+
+resource "google_container_cluster" "primary" {
+  name     = "my-gke-cluster"
+  location = "us-central1"
+
+  ${comment} We can't create a cluster with no node pool defined, but we want to only use
+  ${comment} separately managed node pools. So we create the smallest possible default
+  ${comment} node pool and immediately delete it.
+  remove_default_node_pool = true
+  initial_node_count       = 1
+
+  master_auth {
+    username = ""
+    password = ""
+
+    client_certificate_config {
+      issue_client_certificate = false
+    }
+  }
+}
+
+resource "google_container_node_pool" "primary_preemptible_nodes" {
+  name       = "my-node-pool"
+  location   = "us-central1"
+  cluster    = google_container_cluster.primary.name
+  node_count = 1
+
+  node_config {
+    preemptible  = true
+    machine_type = "e2-medium"
+
+    metadata = {
+      disable-legacy-endpoints = "true"
+    }
+
+    oauth_scopes = [
+      "https://www.googleapis.com/auth/logging.write",
+      "https://www.googleapis.com/auth/monitoring",
+    ]
+  }
+}
+`;
+
+        default:
+            throw new Error("unrecognized canned example ID: " + id);
+    }
+}
+
+function loadCannedExample(id) {
+    $("#terraform-code").val(getCannedExample(id));
+}
+
+window.onload = function() {
+    $(document).ready(function() {
+        // If there are querystring parameters populate the fields.
+        let tfUrl = getQueryVariable("url");
+        let tfCode = getQueryVariable("code");
+        if (tfUrl) {
+            $("#terraform-url").val(tfUrl);
+            setCurrentInputKind("url");
+        } else {
+            if (tfCode) {
+                $("#terraform-code").val(tfCode);
+            } else {
+                loadCannedExample();
             }
-            $("#terraform-code").val(tfCode);
             setCurrentInputKind("code");
         }
 
@@ -469,6 +606,12 @@ resource "aws_instance" "web" {
                 );
                 this.selectionStart = this.selectionEnd = start + 1;
             }
+        });
+
+        // If the canned example is changed, use it to load the code.
+        $("#terraform-canned-example").change(function (e) {
+            loadCannedExample();
+            convertCode();
         });
 
         // Hook up event handlers for the language choosers.
