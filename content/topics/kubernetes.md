@@ -35,8 +35,8 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: cloud
+      cta_url: "/docs/get-started"
+      icon_type: cloud
       description: |
         With support for all public clouds and dozens of popular infrastructure service
         providers including private and hybrid clouds, Pulumi gives you the flexibility
@@ -44,8 +44,8 @@ superpowers:
 
     - title: Reduce Provisioning Time
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: provisioning
+      cta_url: "/docs/get-started"
+      icon_type: provisioning
       description: |
         With Pulumi you are able to take advantage of the features of programming
         languages, helping you reduce boilerplate code and ultimately ship applications
@@ -53,8 +53,8 @@ superpowers:
 
     - title: Automate Delivery
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: delivery
+      cta_url: "/docs/get-started"
+      icon_type: delivery
       description: |
         You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
         continuously deliver apps and infrastructure. Improve the velocity and visibility
@@ -62,8 +62,8 @@ superpowers:
 
     - title: Smart Architecture
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: architecture
+      cta_url: "/docs/get-started"
+      icon_type: architecture
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over. Using
         Pulumi allows you to codify those patterns and best practices so you can stop reinventing
@@ -71,8 +71,8 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: policy
+      cta_url: "/docs/get-started"
+      icon_type: policy
       description: |
         When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent
         mistakes from being deployed. Enforce security, compliance, cost controls, and best
@@ -80,8 +80,8 @@ superpowers:
 
     - title: Reduce Deployment Anxiety
       cta: Learn more
-      ctaUrl: "/docs/get-started"
-      iconType: testing
+      cta_url: "/docs/get-started"
+      icon_type: testing
       description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
         of common tools, frameworks, and techniques to unit, integration, and property test your
@@ -93,7 +93,7 @@ detail_sections:
         Pulumi has first-class support for the Kubernetes tools you might already be working with such as
         Helm, Kustomize, YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
       cta: Learn More
-      ctaUrl: "/"
+      cta_url: "/"
       items:
           - title: First Class Support
             description: Easily make the best use of existing tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
@@ -115,7 +115,7 @@ detail_sections:
       description: |
         Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE).
       cta: Learn More
-      ctaUrl: "/docs/guides/crosswalk/kubernetes"
+      cta_url: "/docs/guides/crosswalk/kubernetes"
       items:
           - title: Day 2 and Beyond
             description: By using Pulumi Crosswalk, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.

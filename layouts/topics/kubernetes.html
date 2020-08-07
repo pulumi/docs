@@ -91,18 +91,18 @@
                     <li class="md:w-1/2 md:flex items-start mt-0">
                         <div class="text-center md:text-left mb-4 md:mb-0">
                             <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
-                                {{ partial "superpower-icons.html" (dict "type" $item.iconType) }}
+                                {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
                             </div>
                         </div>
                         <div class="md:pl-6 md:pr-12">
                             <h3 class="text-center md:text-left font-normal text-gray-800 text-3xl mt-0" >
-                                <a href="{{ relref $pageContext $item.ctaUrl }}">
+                                <a href="{{ relref $pageContext $item.cta_url }}">
                                     <span class="align-middle text-blue-700">{{ $item.title }}</span>
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed">{{ $item.description }}</p>
                             <p class="m-0 text-lg text-center md:text-left">
-                                <a href="{{ relref $pageContext $item.ctaUrl }}">
+                                <a href="{{ relref $pageContext $item.cta_url }}">
                                     <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
                                     <span class="text-blue-400">&rarr;</span>
                                 </a>
@@ -134,7 +134,7 @@
                 <div class="md:w-1/2 {{ $ctaBlockOrder }} flex-shrink-0 md:mr-8">
                     <h2>{{ $item.title }}</h2>
                     <p class="text-xl">{{ $item.description }}</p>
-                    <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.ctaUrl }}">
+                    <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
