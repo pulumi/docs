@@ -38,7 +38,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupProjectUser(ctx, &aiven.LookupProjectUserArgs{
+			Project: data.Aiven_project.Myproject.Project,
+			Email:   "john.doe@example.com",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -46,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-mytestuser = aiven.get_project_user(project=data["aiven..Project"]["myproject"]["project"],
+mytestuser = aiven.get_project_user(project=data["aiven_project"]["myproject"]["project"],
     email="john.doe@example.com")
 ```
 

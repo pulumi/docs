@@ -22,7 +22,7 @@ meta_desc: "Explore the ElasticSearchAcl resource of the Aiven package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#ElasticSearchAcl">ElasticSearchAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>enabled=None<span class="p">, </span>extended_acl=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ElasticSearchAcl">ElasticSearchAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>enabled=None<span class="p">, </span>extended_acl=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -541,7 +541,7 @@ Get an existing ElasticSearchAcl resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>enabled=None<span class="p">, </span>extended_acl=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>enabled=None<span class="p">, </span>extended_acl=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
