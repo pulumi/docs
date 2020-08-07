@@ -60,7 +60,9 @@
 
     <!-- Customer logos -->
     <section id="customers" class="mb-16 px-4">
-        <h2 class="text-center">Powering top engineering teams</h2>
+        <h3 class="my-12 text-center">
+            Powering top engineering teams
+        </h3>
         <div class="container mx-auto">
             <div class="lg:flex items-center justify-center my-4">
                 <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank">
@@ -94,11 +96,11 @@
     </section>
 
     <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 md:px-0">
-        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right  pl-0 pr-20">
+        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row">
+            <div class="w1/1 order-first md:w-1/2 md:order-none pl-0 pr-20">
                 <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
-            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
+            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none">
                 {{ with .Params.kubernetes_overview }}
                     <h2>{{ .title }}</h2>
                     <p>{{ .description }}</p>
@@ -107,9 +109,11 @@
                             <li>{{ $item | markdownify }}</li>
                         {{ end }}
                     </ul>
-                    <a id="kubernetes-request-more-information" class="btn inline-block split-section--cta-btn" href="#contact" track-click>
-                        {{ .cta }}
-                    </a>
+                    <div class="my-8">
+                        <a id="kubernetes-request-more-information" class="btn" href="#contact" track-click>
+                            {{ .cta }}
+                        </a>
+                    </div>
                 {{ end }}
             </div>
         </div>
