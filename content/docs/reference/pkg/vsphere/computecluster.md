@@ -22,7 +22,7 @@ meta_desc: "Explore the ComputeCluster resource of the vSphere package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.ComputeCluster">ComputeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.ComputeCluster">ComputeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>vsan_disk_groups=None<span class="p">, </span>vsan_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -908,6 +908,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsandiskgroups_csharp">
+<a href="#vsandiskgroups_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsanenabled_csharp">
+<a href="#vsanenabled_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1627,6 +1649,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsandiskgroups_go">
+<a href="#vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsanenabled_go">
+<a href="#vsanenabled_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -2350,6 +2394,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsandiskgroups_nodejs">
+<a href="#vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsanenabled_nodejs">
+<a href="#vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3071,6 +3137,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsan_disk_groups_python">
+<a href="#vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">List[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vsan_enabled_python">
+<a href="#vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3213,7 +3301,7 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, </span>vsan_disk_groups=None<span class="p">, </span>vsan_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4052,6 +4140,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsandiskgroups_csharp">
+<a href="#state_vsandiskgroups_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsanenabled_csharp">
+<a href="#state_vsanenabled_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4782,6 +4892,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsandiskgroups_go">
+<a href="#state_vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsanenabled_go">
+<a href="#state_vsanenabled_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -5516,6 +5648,28 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsandiskgroups_nodejs">
+<a href="#state_vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsanenabled_nodejs">
+<a href="#state_vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6248,10 +6402,164 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsan_disk_groups_python">
+<a href="#state_vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">List[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vsan_enabled_python">
+<a href="#state_vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#ComputeClusterVsanDiskGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#ComputeClusterVsanDiskGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVsanDiskGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVsanDiskGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.ComputeClusterVsanDiskGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.ComputeClusterVsanDiskGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_csharp">
+<a href="#cache_csharp" style="color: inherit; text-decoration: inherit;">Cache</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storages_csharp">
+<a href="#storages_csharp" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_go">
+<a href="#cache_go" style="color: inherit; text-decoration: inherit;">Cache</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storages_go">
+<a href="#storages_go" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_nodejs">
+<a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storages_nodejs">
+<a href="#storages_nodejs" style="color: inherit; text-decoration: inherit;">storages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_python">
+<a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storages_python">
+<a href="#storages_python" style="color: inherit; text-decoration: inherit;">storages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
