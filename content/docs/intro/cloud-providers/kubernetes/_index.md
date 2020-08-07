@@ -105,7 +105,7 @@ resource, and use the `StackController` to drive the updates of the Stack until
 success.
 
 Deploying [Pulumi Stacks][stack] in Kubernetes provides the capability to build
-out CI/CD and automation systems into your clusters, creating native support to manage your infrastructure alonside your Kubernetes workloads.
+out CI/CD and automation systems into your clusters, creating native support to manage your infrastructure alongside your Kubernetes workloads.
 
 [Get started][k8s-operator-cicd] with the Pulumi Kubernetes Operator in your CI/CD pipelines.
 

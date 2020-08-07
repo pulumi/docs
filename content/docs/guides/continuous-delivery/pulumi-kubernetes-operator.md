@@ -66,11 +66,10 @@ a simple [NGINX][nginx-stack] Deployment in Kubernetes.
 When the Stack is processed and deployed by the operator, NGINX will be created
 in the same cluster as the operator. This is because the NGINX Pulumi program does not
 explicitly use a [Kubernetes Provider resource][k8s-provider], and the Operator
-makes it's ServiceAccount credentials available to Stacks that rely on
+makes its ServiceAccount credentials available to Stacks that rely on
 the [default, ambient kubeconfig credentials][default-kubeconfig].
 
-To adjust what in-cluster API resource provisioning is or is not allowed
-is simply a matter of adjusting the role permissions for the operator.
+The role permissions for the operator can be adjusted to control what in-cluster API resources are allowed.
 
 [nginx-stack]: https://github.com/metral/pulumi-nginx/blob/master/index.ts
 [k8s-provider]: {{< relref "/docs/reference/pkg/kubernetes/provider" >}}
@@ -92,7 +91,7 @@ const pulumiAccessToken = pulumiConfig.requireSecret("pulumiAccessToken")
 
 // Create the API token as a Kubernetes Secret.
 const accessToken = new kx.Secret("accesstoken", {
-    stringData: { accessToken: pulumiAccessToken},
+    stringData: { accessToken: pulumiAccessToken },
 });
 
 // Create an NGINX deployment in-cluster.
@@ -161,19 +160,18 @@ Coming Soon
 
 ### Stack Settings
 
-Stack CustomResources can have the following properties configured that
-influence the Stack update run:
+Stack CustomResources provide the following properties to configure the Stack update run:
 
-- The first is the access token secret, better known as `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
+- The first is the access token secret (`PULUMI_ACCESS_TOKEN`), which is required to authenticate with pulumi.com to
   perform the update. You can create a new Pulumi access token specifically for your
   CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
-- Environment variables to make available to the Stack that are sourced from Kubernetes ConfigMaps and/or Secrets. Examples include
-  cloud provider credentials, and other application settings.
+- Environment variables for the Stack that are sourced from Kubernetes ConfigMaps and/or Secrets. Examples include
+  cloud provider credentials and other application settings.
 - Pulumi Stack configs and secrets that can complement or override settings
   in the repo for use within the Stack.
 - Project repo settings like the repo URL, the commit to deploy, and a repo
   access token for private repos or rate-limiting.
-- And, lifecyle control such as creating the stack if it does not exist,
+- Lifecyle control such as creating the stack if it does not exist,
   issuing a refresh before the update, and destroying the Stack's resources
   and stack itself upon deletion of the CR.
 
@@ -187,18 +185,17 @@ using the Operator and a Stack CR.
 ## Concurrency
 
 When using the operator to continuously deploy your Pulumi stacks, you may run into a problem. What
-happens if multiple reconcilation loops are run for the same commit in succession?
+happens if multiple reconciliation loops run for the same commit in succession?
 
-Operators by definition will invoke a reconcilation loop for the creation, update, or deletion of a Stack CR.
+Operators, by definition, will invoke a reconciliation loop for the creation, update, or deletion of a Stack CR.
 
-Pulumi blocks any stack updates while one is already in progress. (To avoid conflicting resource
-updates or corrupting resource state.) So the stack and its resources won't be harmed by the
-concurrent update. By default, the operator is informed if a conflicting
-update is already in progress and will not spawn another reconcilation loop to
-give the current update in progress sole control of the update run.
+To avoid conflicting resource updates or corrupting resource state, Pulumi only
+runs one update at a time per stack. By default, the operator checks for updates
+already in progress, and will not spawn another reconciliation loop if one is already
+running.
 
-You can optionally retry on update conflicts rather than the operator default of
-not retrying, by using the `RetryOnUpdateConflict` toggle in the Stack.
+You can optionally choose to retry on update conflicts by using the
+`RetryOnUpdateConflict` field in the Stack.
 
 > Note: This is only recommended if you are sure that the stack updates are idempotent, and if you are willing to accept retry loops until
 > all spawned retries succeed. This will also create a more populated, and randomized activity timeline for the stack in the Pulumi Service.
