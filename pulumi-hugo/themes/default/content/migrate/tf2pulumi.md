@@ -36,7 +36,7 @@ form:
 <p class="m-0 -mt-4 p-2 bg-purple-300 text-white font-bold font-mono font-xs"
     style="font-size: 0.75rem !important; color: #fff !important">main.tf</p>
 <textarea id="terraform-code" rows="27"
-    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-y-scroll overflow-x-hidden whitespace-no-wrap"
+    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-y-scroll overflow-x-hidden whitespace-pre"
     title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
 </textarea>
 
