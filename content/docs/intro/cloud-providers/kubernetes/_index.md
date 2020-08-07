@@ -92,3 +92,24 @@ to run and manage Kubernetes in production.
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
 [prod-arch-for-teams]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
+
+## Pulumi Kubernetes Operator
+
+<a href="{{< relref "./" >}}">
+    <img src="/logos/tech/ci-cd/kubernetes.png" align="right" width="150" style="margin: 0 0 32px 16px;">
+</a>
+
+The [Pulumi Kubernetes Operator][k8s-operator] is an [extension pattern][k8s-ext-pattern] that
+enables Kuberentes users to create a `Stack` as a first-class API
+resource, and use the `StackController` to drive the updates of the Stack until
+success.
+
+Deploying [Pulumi Stacks][stack] in Kubernetes provides the capability to build
+out CI/CD and automation systems into your clusters, creating native support to manage your infrastructure alonside your Kubernetes workloads.
+
+[Get started][k8s-operator-cicd] with the Pulumi Kubernetes Operator in your CI/CD pipelines.
+
+[k8s-operator]: https://github.com/pulumi/pulumi-kubernetes-operator
+[k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
+[stack]: {{< relref "/docs/intro/concepts/stack" >}}
+[k8s-operator-cicd]: {{< relref "/docs/guides/continuous-delivery/pulumi-kubernetes-operator" >}}
