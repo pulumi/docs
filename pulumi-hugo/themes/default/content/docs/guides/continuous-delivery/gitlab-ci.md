@@ -188,7 +188,7 @@ yarn install
 pulumi stack select product-catalog-service
 # The following is just a sample config setting that the hypothetical pulumi
 # program needs.
-# Learn more about pulumi configuration at: {{< absurl "/reference/config/" >}}
-pulumi config set mysetting:myvalue
+# Learn more about pulumi configuration at: {{< absurl "/docs/intro/concepts/config/" >}}
+pulumi config set mysetting myvalue
 pulumi up --yes
 ```
