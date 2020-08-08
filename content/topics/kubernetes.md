@@ -22,13 +22,138 @@ kubernetes_overview:
         Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
 
         With Pulumi you can:
+    ide:
+        tabs:
+            - title: index.ts
+              language: typescript
+              code: |
+                import * as pulumi from "@pulumi/pulumi";
+                import * as kubernetes from "@pulumi/kubernetes";
 
+                // Create a namespace.
+                const devNamespace = new kubernetes.core.v1.Namespace("devNamespace", {
+                    apiVersion: "v1",
+                    kind: "Namespace",
+                    metadata: {
+                        name: "dev",
+                    },
+                });
+
+                // Deploy the nginx-ingress Helm chart into the created namespace.
+                const nginxIngress = new kubernetes.helm.v3.Chart("nginx-ingress", {
+                    chart: "nginx-ingress",
+                    namespace: devNamespace.metadata.name,
+                    fetchOpts:{
+                        repo: "https://kubernetes-charts.storage.googleapis.com/",
+                    },
+                });
+            - title: __main__.py
+              language: python
+              code: |
+                import pulumi_kubernetes as kubernetes
+
+                # Create a namespace.
+                dev_namespace = kubernetes.core.v1.Namespace(
+                    "devNamespace",
+                    api_version="v1",
+                    kind="Namespace",
+                    metadata={
+                        "name": "dev",
+                    })
+
+                # Deploy the nginx-ingress Helm chart into the created namespace.
+                nginx_ingress = kubernetes.helm.v3.Chart(
+                    "nginx-ingress",
+                    kubernetes.helm.v3.ChartOpts(
+                        chart="nginx-ingress",
+                        namespace=dev_namespace.metadata["name"],
+                        fetch_opts=kubernetes.helm.v3.FetchOpts(
+                            repo="https://kubernetes-charts.storage.googleapis.com/",
+                        ),
+                    ),
+                )
+            - title: main.go
+              language: go
+              code: |
+                    package main
+
+                    import (
+                        corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+                        "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v3"
+                        metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+                        "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+                    )
+
+                    func main() {
+                        pulumi.Run(func(ctx *pulumi.Context) error {
+
+                            // Create a namespace.
+                            ns, err := corev1.NewNamespace(ctx, "devNamespace", &corev1.NamespaceArgs{
+                                ApiVersion: pulumi.String("v1"),
+                                Kind:       pulumi.String("Namespace"),
+                                Metadata: &metav1.ObjectMetaArgs{
+                                    Name: pulumi.String("dev"),
+                                },
+                            })
+                            if err != nil {
+                                return err
+                            }
+
+                            // Deploy the nginx-ingress Helm chart into the created namespace.
+                            _, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
+                                Chart: pulumi.String("nginx-ingress"),
+                                Namespace: ns.Metadata.ApplyT(func(metadata interface{}) string {
+                                    return *metadata.(*metav1.ObjectMeta).Name
+                                }).(pulumi.StringOutput),
+                                FetchArgs: helm.FetchArgs{
+                                    Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+                                },
+                            })
+                            if err != nil {
+                                return err
+                            }
+
+                            return nil
+                        })
+                    }
+            - title: MyStack.cs
+              language: csharp
+              code: |
+                using Pulumi;
+                using Kubernetes = Pulumi.Kubernetes;
+
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                        // Create a namespace.
+                        var devNamespace = new Kubernetes.Core.V1.Namespace("devNamespace", new Kubernetes.Types.Inputs.Core.V1.NamespaceArgs
+                        {
+                            ApiVersion = "v1",
+                            Kind = "Namespace",
+                            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                            {
+                                Name = "dev",
+                            },
+                        });
+
+                        // Deploy the nginx-ingress Helm chart into the created namespace.
+                        var nginx = new Kubernetes.Helm.V3.Chart("nginx-ingress", new Kubernetes.Helm.ChartArgs
+                        {
+                            Chart = "nginx-ingress",
+                            Namespace = devNamespace.Metadata.Apply(x => x.Name),
+                            FetchOptions = new Kubernetes.Helm.ChartFetchArgs
+                            {
+                                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                            },
+                        });
+                    }
+                }
     list:
         - Provision Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
         - Automate deployments with CI/CD integrations for [Spinnaker](https://www.pulumi.com/blog/unlocking-spinnaker-with-pulumi/), [Octopus](https://www.pulumi.com/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](https://www.pulumi.com/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](https://www.pulumi.com/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](https://www.pulumi.com/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](https://www.pulumi.com/docs/guides/continuous-delivery/).
         - Seamlessly manage cloud resources with the Pulumi Kubernetes Operator.
-        - And more...
 
     cta: REQUEST MORE INFORMATION
 

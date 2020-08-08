@@ -97,10 +97,15 @@
 
     <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 md:px-0">
         <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row">
-            <div class="w1/1 order-first md:w-1/2 md:order-none pl-0 pr-20">
-                <img src="/images/docs/quickstart/kubernetes/cake.svg" />
+            <div class="md:w-1/2 text-center">
+                <div class="text-left">
+                    {{ partial "code-tabbed" (dict "tabs" .Params.kubernetes_overview.ide.tabs "chrome" "true" "mode" "dark") }}
+                </div>
+                <p>
+                    Deploy Helm charts in your language of choice with Pulumi
+                </p>
             </div>
-            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none">
+            <div class="mt-16 md:w-1/2 md:pl-12">
                 {{ with .Params.kubernetes_overview }}
                     <h2>{{ .title }}</h2>
                     <p>{{ .description }}</p>
@@ -155,26 +160,24 @@
         {{ $bgColor := "bg-gray-100" }}
         {{ $iconColor := "text-purple-100" }}
         {{ $ctaButtonColor := "btn-orange" }}
-        {{ $ctaBlockOrder := "order-first" }}
-        {{ $detailsBlockOrder := "order-last" }}
+        {{ $detailsBlockOrder := "order-first" }}
         {{ if not (modBool $index 2) }}
             {{ $bgColor = "bg-white" }}
             {{ $iconColor = "text-orange-300" }}
             {{ $ctaButtonColor = "btn-purple" }}
-            {{ $ctaBlockOrder = "order-last pl-20" }}
             {{ $detailsBlockOrder = "order-first" }}
         {{ end }}
 
         <section id="teams" class="{{ $bgColor }} py-16 px-4">
             <div class="container md:mx-auto md:flex">
-                <div class="md:w-1/2 {{ $ctaBlockOrder }} flex-shrink-0 md:mr-8">
+                <div class="md:w-1/2 flex-shrink-0 md:mr-8">
                     <h2>{{ $item.title }}</h2>
                     <p class="text-xl">{{ $item.description }}</p>
                     <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
-                <div class="md:w-1/2 {{ $detailsBlockOrder }} md:flex flex-wrap flex-shrink-0">
+                <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
                     {{ range $i, $row := $item.items }}
                         <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                             <div class="flex items-start">

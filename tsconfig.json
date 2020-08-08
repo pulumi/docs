@@ -15,6 +15,7 @@
         "assets/js/event-filtering.js",
         "assets/js/webinar.js",
         "assets/js/copybutton.js",
+        "assets/js/code-tabbed.js",
         "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js",
     ],
     "exclude": [
