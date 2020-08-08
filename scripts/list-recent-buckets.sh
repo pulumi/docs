@@ -10,9 +10,18 @@ set -o errexit -o pipefail
 # whether a given bucket can be safely deleted.
 #
 # Usage:
-#   ./scripts/list-recent-buckets.sh            # List all buckets
-#   ./scripts/list-recent-buckets.sh pr         # List all buckets prefixed with "-pr-" (to filter pull_request builds)
-#   ./scripts/list-recent-buckets.sh push       # List all buckets prefixed with "-push-" (to filter push builds)
+#
+#   # List all buckets
+#   ./scripts/list-recent-buckets.sh
+#
+#   # List all buckets prefixed with "-pr-" (to filter pull_request builds)
+#   ./scripts/list-recent-buckets.sh pr
+#
+#   # List all buckets prefixed with "-push-" (to filter push builds)
+#   ./scripts/list-recent-buckets.sh push
+#
+#   # List only the buckets that can be safely deleted
+#   ./scripts/list-recent-buckets.sh [push | pr] --only-deletables
 
 source ./scripts/common.sh
 
@@ -20,17 +29,30 @@ bucket_prefix="$1"
 buckets=$(get_recent_buckets $bucket_prefix)
 buckets_as_array=($buckets)
 bucket_count=${#buckets_as_array[@]}
+only_deletables=false
+
+# Only pr and push buckets can be flagged as deletable.
+if [[ ( "$1" == "pr" || "$1" == "push" )  && "$2" == "--only-deletables" ]]; then
+    only_deletables=true
+fi
+
+# maybe_echo suppresses output to make lists more scriptable. There's probably a Bashier
+# way to do this, but hey, it works.
+maybe_echo() {
+    if [ $only_deletables == false ]; then
+        echo "$1"
+    fi
+}
 
 if [ "$bucket_count" == "0" ]; then
-    echo "No recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix} were found."
+    maybe_echo "No recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix} were found."
     exit
 fi
 
 # Query for the bucket currently serving pulumi.com.
 currently_deployed_bucket="$(curl -s https://www.pulumi.com/metadata.json | jq -r '.bucket' || echo '')"
 
-echo "Found ${bucket_count} recent buckets matching the prefix $(origin_bucket_prefix)${bucket_prefix}:"
-echo
+maybe_echo "Found ${bucket_count} recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix}:"
 
 # Variables used for determining whether a push-built bucket is safe to delete.
 
@@ -43,9 +65,12 @@ buckets_beyond_current=0
 # A flag denoting whether the current website bucket exists in the current result set.
 website_bucket_identified=false
 
+# The array of deletable buckets, if any.
+deletables=()
+
 for bucket in $buckets; do
-    echo
-    echo "Fetching metadata for ${bucket}..."
+    maybe_echo
+    maybe_echo "Fetching metadata for ${bucket}..."
     metadata="$(aws s3 cp "s3://${bucket}/metadata.json" - || echo '')"
 
     if [ ! -z "$metadata" ]; then
@@ -54,21 +79,21 @@ for bucket in $buckets; do
         bucket_timestamp="$(echo $metadata | jq -r '.timestamp / 1000 | strftime("%Y-%m-%d %H:%M:%S UTC")')"
         bucket_commit="$(echo $metadata | jq -r '.commit')"
 
-        echo "Bucket URL:  ${bucket_url}"
-        echo "Bucket Name: ${bucket_name}"
-        echo "Synced At:   ${bucket_timestamp}"
-        echo "Commit:      https://github.com/pulumi/docs/commit/${bucket_commit}"
+        maybe_echo "Bucket URL:  ${bucket_url}"
+        maybe_echo "Bucket Name: ${bucket_name}"
+        maybe_echo "Synced At:   ${bucket_timestamp}"
+        maybe_echo "Commit:      https://github.com/pulumi/docs/commit/${bucket_commit}"
 
         # Call out whether this bucket is the one currently serving pulumi.com.
         if [ "$bucket_name" == "$currently_deployed_bucket" ]; then
-            echo
-            echo "*"
-            echo "*"
-            echo "* ☝️  Head's up!"
-            echo "*    This bucket (${bucket_name}) is currently serving pulumi.com."
-            echo "*    https://www.pulumi.com/metadata.json"
-            echo "*"
-            echo "*"
+            maybe_echo
+            maybe_echo "*"
+            maybe_echo "*"
+            maybe_echo "* ☝️  Head's up!"
+            maybe_echo "*    This bucket (${bucket_name}) is currently serving pulumi.com."
+            maybe_echo "*    https://www.pulumi.com/metadata.json"
+            maybe_echo "*"
+            maybe_echo "*"
 
             website_bucket_identified=true
         fi
@@ -76,9 +101,11 @@ for bucket in $buckets; do
         # For push or pull_request buckets, indicate whether they can be safely deleted.
         if [ "$1" == "push" ]; then
             if [ "$buckets_beyond_current" -gt "$buckets_to_retain" ]; then
-                echo
-                echo "⭐️ This bucket is ${buckets_beyond_current} buckets behind the current website, so it can safely be deleted."
-                echo "   aws s3 rb s3://${bucket_name} --force"
+                maybe_echo
+                maybe_echo "❌ This bucket is ${buckets_beyond_current} buckets behind the current website, so it can safely be deleted."
+                maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+
+                deletables+=($bucket_name)
             fi
         elif [ "$1" == "pr" ]; then
             associated_pr="$(get_pr_for_commit $bucket_commit)"
@@ -88,9 +115,11 @@ for bucket in $buckets; do
                 pr_state="$(echo $associated_pr | jq -r '.[0].state')"
 
                 if [ "$pr_state" == "closed" ]; then
-                    echo
-                    echo "⭐️ This bucket's PR has been closed (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
-                    echo "   aws s3 rb s3://${bucket_name} --force"
+                    maybe_echo
+                    maybe_echo "❌ This bucket's PR has been closed (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
+                    maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+
+                    deletables+=($bucket_name)
                 fi
             fi
         fi
@@ -101,20 +130,34 @@ for bucket in $buckets; do
             buckets_beyond_current=$((buckets_beyond_current+1))
         fi
     else
-        echo "Missing metadata file. This bucket may not have been built and tested successfully."
+        maybe_echo "Missing metadata file. This bucket may not have been built and tested successfully."
     fi
 done
 
-echo
-echo "---"
-echo
-echo "To run browser tests on one of these buckets, run:"
-echo "nvm use && make ensure && ./scripts/run-browser-tests.sh \"<bucket-url>\""
-echo
-echo "To pin the website to one of these buckets, run:"
-echo "pulumi -C infrastructure config set originBucketNameOverride \"<bucket-name>\""
-echo "pulumi -C infrastructure up"
-echo
-echo "To delete one of these buckets, run:"
-echo "aws s3 rb \"s3://<bucket-name>\" --force"
-echo
+maybe_echo
+maybe_echo "---"
+maybe_echo
+maybe_echo "✅ To run browser tests on one of these buckets, run:"
+maybe_echo "   nvm use && make ensure && ./scripts/run-browser-tests.sh \"<bucket-url>\""
+maybe_echo
+maybe_echo "📌 To pin the website to one of these buckets, run:"
+maybe_echo "   pulumi -C infrastructure config set originBucketNameOverride \"<bucket-name>\""
+maybe_echo "   pulumi -C infrastructure up"
+maybe_echo
+maybe_echo "❌ To delete one of these buckets, run:"
+maybe_echo "   aws s3 rb \"s3://<bucket-name>\" --force"
+maybe_echo
+
+if [ ${#deletables} -gt 0 ]; then
+    maybe_echo "💥 To delete all buckets identified above as deletable, run:"
+
+    for deletable in ${deletables[@]}; do
+        if [ $only_deletables == true ]; then
+            echo "$deletable"
+        else
+            echo "   aws s3 rb \"s3://${deletable}\" --force"
+        fi
+    done
+
+    maybe_echo
+fi
