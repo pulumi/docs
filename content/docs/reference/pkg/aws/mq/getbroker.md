@@ -128,7 +128,7 @@ const byName = pulumi.output(aws.mq.getBroker({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_broker(</span>broker_id=None<span class="p">, </span>broker_name=None<span class="p">, </span>logs=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_broker(</span><span class="nx">broker_id</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span>  <span class="nx">Optional[Dict[GetBrokerLogs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span>  <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBrokerResult</code></pre></div>
 {{% /choosable %}}
 
 

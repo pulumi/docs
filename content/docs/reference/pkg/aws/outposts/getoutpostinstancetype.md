@@ -25,7 +25,7 @@ Information about single Outpost Instance Type.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_outpost_instance_type(</span>arn=None<span class="p">, </span>instance_type=None<span class="p">, </span>preferred_instance_types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_outpost_instance_type(</span><span class="nx">arn</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_instance_types</span><span class="p">:</span>  <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOutpostInstanceTypeResult</code></pre></div>
 {{% /choosable %}}
 
 

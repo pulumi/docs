@@ -171,7 +171,7 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret_version(</span>secret_id=None<span class="p">, </span>version_id=None<span class="p">, </span>version_stage=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret_version(</span><span class="nx">secret_id</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_stage</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretVersionResult</code></pre></div>
 {{% /choosable %}}
 
 

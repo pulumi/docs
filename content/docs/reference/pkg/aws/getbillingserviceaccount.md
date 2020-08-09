@@ -210,7 +210,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_billing_service_account(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_billing_service_account(</span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBillingServiceAccountResult</code></pre></div>
 {{% /choosable %}}
 
 

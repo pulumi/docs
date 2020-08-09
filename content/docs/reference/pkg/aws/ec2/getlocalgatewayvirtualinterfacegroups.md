@@ -91,7 +91,7 @@ const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups({ async:
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_local_gateway_virtual_interface_groups(</span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_local_gateway_virtual_interface_groups(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetLocalGatewayVirtualInterfaceGroupsFilter]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span>  <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocalGatewayVirtualInterfaceGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 

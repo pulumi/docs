@@ -114,7 +114,7 @@ export const foo = fooLocalGateways.ids;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_local_gateways(</span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_local_gateways(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetLocalGatewaysFilter]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span>  <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocalGatewaysResult</code></pre></div>
 {{% /choosable %}}
 
 

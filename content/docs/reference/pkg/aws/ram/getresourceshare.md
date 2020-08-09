@@ -185,7 +185,7 @@ const example = pulumi.output(aws.ram.getResourceShare({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_resource_share(</span>filters=None<span class="p">, </span>name=None<span class="p">, </span>resource_owner=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_share(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetResourceShareFilter]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span>  <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourceShareResult</code></pre></div>
 {{% /choosable %}}
 
 

@@ -154,7 +154,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_type_offering(</span>filters=None<span class="p">, </span>location_type=None<span class="p">, </span>preferred_instance_types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type_offering(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetInstanceTypeOfferingFilter]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_instance_types</span><span class="p">:</span>  <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeOfferingResult</code></pre></div>
 {{% /choosable %}}
 
 

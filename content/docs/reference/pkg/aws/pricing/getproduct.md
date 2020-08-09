@@ -227,7 +227,7 @@ const example = pulumi.output(aws.pricing.getProduct({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_product(</span>filters=None<span class="p">, </span>service_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetProductFilter]]</span> = None<span class="p">, </span><span class="nx">service_code</span><span class="p">:</span>  <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
 {{% /choosable %}}
 
 

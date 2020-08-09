@@ -38,7 +38,7 @@ Explore the resources and functions of the flowcontrol/v1alpha1 module in the Ku
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/flowcontrol/v1alpha1/#" title="@pulumi/kubernetes/flowcontrol/v1alpha1">@pulumi/kubernetes/flowcontrol/v1alpha1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1" title="pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1">pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol/v1alpha1" title="pulumi_kubernetes/flowcontrol/v1alpha1">pulumi_kubernetes/flowcontrol/v1alpha1</a></dd>
 
 </dl>
 

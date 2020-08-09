@@ -157,7 +157,7 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_snapshot_ids(</span>filters=None<span class="p">, </span>owners=None<span class="p">, </span>restorable_by_user_ids=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshot_ids(</span><span class="nx">filters</span><span class="p">:</span>  <span class="nx">Optional[List[GetSnapshotIdsFilter]]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span>  <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">restorable_by_user_ids</span><span class="p">:</span>  <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span>  <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotIdsResult</code></pre></div>
 {{% /choosable %}}
 
 
