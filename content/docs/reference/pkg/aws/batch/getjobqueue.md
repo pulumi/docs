@@ -99,7 +99,7 @@ const test_queue = pulumi.output(aws.batch.getJobQueue({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_job_queue(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job_queue(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobQueueResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -714,8 +714,8 @@ of the job queue.
 
     <dt class="property-required"
             title="Required">
-        <span id="computeenvironment_python">
-<a href="#computeenvironment_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Environment</a>
+        <span id="compute_environment_python">
+<a href="#compute_environment_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>environment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

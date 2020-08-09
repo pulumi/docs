@@ -144,7 +144,7 @@ const example = new aws.glue.SecurityConfiguration("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.SecurityConfiguration">SecurityConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>encryption_configuration=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.SecurityConfiguration">SecurityConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[SecurityConfigurationEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +409,7 @@ The SecurityConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}</dd>
@@ -523,7 +523,8 @@ Get an existing SecurityConfiguration resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>encryption_configuration=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[SecurityConfigurationEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -730,7 +731,7 @@ The following state arguments are supported:
 <a href="#state_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}</dd>
@@ -895,31 +896,31 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="cloudwatchencryption_python">
-<a href="#cloudwatchencryption_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Encryption</a>
+        <span id="cloudwatch_encryption_python">
+<a href="#cloudwatch_encryption_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobbookmarksencryption_python">
-<a href="#jobbookmarksencryption_python" style="color: inherit; text-decoration: inherit;">job<wbr>Bookmarks<wbr>Encryption</a>
+        <span id="job_bookmarks_encryption_python">
+<a href="#job_bookmarks_encryption_python" style="color: inherit; text-decoration: inherit;">job_<wbr>bookmarks_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="s3encryption_python">
-<a href="#s3encryption_python" style="color: inherit; text-decoration: inherit;">s3Encryption</a>
+        <span id="s3_encryption_python">
+<a href="#s3_encryption_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption]</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
 {{% /md %}}</dd>
@@ -1038,8 +1039,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudwatchencryptionmode_python">
-<a href="#cloudwatchencryptionmode_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Encryption<wbr>Mode</a>
+        <span id="cloudwatch_encryption_mode_python">
+<a href="#cloudwatch_encryption_mode_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>encryption_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1172,8 +1173,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jobbookmarksencryptionmode_python">
-<a href="#jobbookmarksencryptionmode_python" style="color: inherit; text-decoration: inherit;">job<wbr>Bookmarks<wbr>Encryption<wbr>Mode</a>
+        <span id="job_bookmarks_encryption_mode_python">
+<a href="#job_bookmarks_encryption_mode_python" style="color: inherit; text-decoration: inherit;">job_<wbr>bookmarks_<wbr>encryption_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1317,8 +1318,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3encryptionmode_python">
-<a href="#s3encryptionmode_python" style="color: inherit; text-decoration: inherit;">s3Encryption<wbr>Mode</a>
+        <span id="s3_encryption_mode_python">
+<a href="#s3_encryption_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>encryption_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

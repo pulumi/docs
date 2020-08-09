@@ -108,7 +108,7 @@ const byId = pulumi.output(aws.efs.getFileSystem({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_file_system(</span>creation_token=None<span class="p">, </span>file_system_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_system(</span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileSystemResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -280,7 +280,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#lifecycle_policy_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfilesystemlifecyclepolicy">Dict[Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getfilesystemlifecyclepolicy">Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -973,8 +973,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="transitiontoia_python">
-<a href="#transitiontoia_python" style="color: inherit; text-decoration: inherit;">transition<wbr>To<wbr>Ia</a>
+        <span id="transition_to_ia_python">
+<a href="#transition_to_ia_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>to_<wbr>ia</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

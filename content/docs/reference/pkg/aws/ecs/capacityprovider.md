@@ -132,7 +132,7 @@ const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.CapacityProvider">CapacityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_scaling_group_provider=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.CapacityProvider">CapacityProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -430,7 +430,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#auto_scaling_group_provider_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Dict[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -599,7 +599,8 @@ Get an existing CapacityProvider resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>auto_scaling_group_provider=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> CapacityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -883,7 +884,7 @@ The following state arguments are supported:
 <a href="#state_auto_scaling_group_provider_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Dict[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd>
@@ -905,7 +906,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -1065,8 +1066,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="autoscalinggrouparn_python">
-<a href="#autoscalinggrouparn_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Arn</a>
+        <span id="auto_scaling_group_arn_python">
+<a href="#auto_scaling_group_arn_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1076,19 +1077,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managedscaling_python">
-<a href="#managedscaling_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Scaling</a>
+        <span id="managed_scaling_python">
+<a href="#managed_scaling_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>scaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Dict[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managedterminationprotection_python">
-<a href="#managedterminationprotection_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Termination<wbr>Protection</a>
+        <span id="managed_termination_protection_python">
+<a href="#managed_termination_protection_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>termination_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1276,8 +1277,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumscalingstepsize_python">
-<a href="#maximumscalingstepsize_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Scaling<wbr>Step<wbr>Size</a>
+        <span id="maximum_scaling_step_size_python">
+<a href="#maximum_scaling_step_size_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>scaling_<wbr>step_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1287,8 +1288,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumscalingstepsize_python">
-<a href="#minimumscalingstepsize_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Scaling<wbr>Step<wbr>Size</a>
+        <span id="minimum_scaling_step_size_python">
+<a href="#minimum_scaling_step_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>scaling_<wbr>step_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

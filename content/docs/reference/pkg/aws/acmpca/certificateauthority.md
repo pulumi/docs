@@ -372,7 +372,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/acmpca/#pulumi_aws.acmpca.CertificateAuthority">CertificateAuthority</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_authority_configuration=None<span class="p">, </span>enabled=None<span class="p">, </span>permanent_deletion_time_in_days=None<span class="p">, </span>revocation_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/acmpca/#pulumi_aws.acmpca.CertificateAuthority">CertificateAuthority</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityCertificateAuthorityConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityRevocationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -769,7 +769,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#certificate_authority_configuration_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#revocation_configuration_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
@@ -1279,7 +1279,8 @@ Get an existing CertificateAuthority resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>certificate=None<span class="p">, </span>certificate_authority_configuration=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>certificate_signing_request=None<span class="p">, </span>enabled=None<span class="p">, </span>not_after=None<span class="p">, </span>not_before=None<span class="p">, </span>permanent_deletion_time_in_days=None<span class="p">, </span>revocation_configuration=None<span class="p">, </span>serial=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityCertificateAuthorityConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_signing_request</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">not_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_before</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityRevocationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">serial</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CertificateAuthority</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1904,7 +1905,7 @@ The following state arguments are supported:
 <a href="#state_certificate_authority_configuration_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd>
@@ -1981,7 +1982,7 @@ The following state arguments are supported:
 <a href="#state_revocation_configuration_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd>
@@ -2014,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
@@ -2185,8 +2186,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyalgorithm_python">
-<a href="#keyalgorithm_python" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
+        <span id="key_algorithm_python">
+<a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2196,8 +2197,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="signingalgorithm_python">
-<a href="#signingalgorithm_python" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
+        <span id="signing_algorithm_python">
+<a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2211,7 +2212,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd>
@@ -2693,8 +2694,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2715,8 +2716,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="distinguishednamequalifier_python">
-<a href="#distinguishednamequalifier_python" style="color: inherit; text-decoration: inherit;">distinguished<wbr>Name<wbr>Qualifier</a>
+        <span id="distinguished_name_qualifier_python">
+<a href="#distinguished_name_qualifier_python" style="color: inherit; text-decoration: inherit;">distinguished_<wbr>name_<wbr>qualifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2726,8 +2727,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="generationqualifier_python">
-<a href="#generationqualifier_python" style="color: inherit; text-decoration: inherit;">generation<wbr>Qualifier</a>
+        <span id="generation_qualifier_python">
+<a href="#generation_qualifier_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>qualifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2737,8 +2738,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="givenname_python">
-<a href="#givenname_python" style="color: inherit; text-decoration: inherit;">given<wbr>Name</a>
+        <span id="given_name_python">
+<a href="#given_name_python" style="color: inherit; text-decoration: inherit;">given_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2781,8 +2782,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationalunit_python">
-<a href="#organizationalunit_python" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
+        <span id="organizational_unit_python">
+<a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2915,11 +2916,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crlconfiguration_python">
-<a href="#crlconfiguration_python" style="color: inherit; text-decoration: inherit;">crl<wbr>Configuration</a>
+        <span id="crl_configuration_python">
+<a href="#crl_configuration_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd>
@@ -3104,8 +3105,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="expirationindays_python">
-<a href="#expirationindays_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>In<wbr>Days</a>
+        <span id="expiration_in_days_python">
+<a href="#expiration_in_days_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3115,8 +3116,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customcname_python">
-<a href="#customcname_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Cname</a>
+        <span id="custom_cname_python">
+<a href="#custom_cname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

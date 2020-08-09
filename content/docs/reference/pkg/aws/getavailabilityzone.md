@@ -100,7 +100,7 @@ const exampleSubnet = new aws.ec2.Subnet("example", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zone(</span>all_availability_zones=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>state=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_availability_zone(</span><span class="nx">all_availability_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAvailabilityZoneFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAvailabilityZoneResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -328,7 +328,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">List[Get<wbr>Availability<wbr>Zone<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">List[Get<wbr>Availability<wbr>Zone<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>

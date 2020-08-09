@@ -48,7 +48,7 @@ by setting the 'customTimeouts' option on the resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>spec=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.ServiceSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -307,7 +307,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -317,7 +317,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicespec">Dict[Service<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a service. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -436,7 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Dict[Service<wbr>Status]</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceringress">List[Load<wbr>Balancer<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.{{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1598,7 +1598,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1686,7 +1686,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -1696,7 +1696,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -1728,7 +1728,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2330,7 +2330,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">integer | string</span>
+        <span class="property-type">Union[float, str]</span>
     </dt>
     <dd>{{% md %}}Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service{{% /md %}}</dd>
 
@@ -2913,7 +2913,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceport">List[Service<wbr>Port]</a></span>
+        <span class="property-type"><a href="#serviceport">Service<wbr>Port<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies{{% /md %}}</dd>
 
@@ -2933,7 +2933,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Route service traffic to pods with label keys and values matching this selector. If empty or not present, the service is assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/{{% /md %}}</dd>
 
@@ -2953,7 +2953,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#session_affinity_config_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sessionaffinityconfig">Dict[Session<wbr>Affinity<wbr>Config]</a></span>
+        <span class="property-type"><a href="#sessionaffinityconfig">Session<wbr>Affinity<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}sessionAffinityConfig contains the configurations of session affinity.{{% /md %}}</dd>
 
@@ -3056,7 +3056,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstatus">Dict[Load<wbr>Balancer<wbr>Status]</a></span>
+        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}LoadBalancer contains the current status of the load-balancer, if one is present.{{% /md %}}</dd>
 
@@ -3139,7 +3139,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#client_ip_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientipconfig">Dict[Client<wbr>IPConfig]</a></span>
+        <span class="property-type"><a href="#clientipconfig">Client<wbr>IPConfig<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}clientIP contains the configurations of Client IP based session affinity.{{% /md %}}</dd>
 

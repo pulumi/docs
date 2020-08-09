@@ -525,7 +525,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentGroup">DeploymentGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alarm_configuration=None<span class="p">, </span>app_name=None<span class="p">, </span>auto_rollback_configuration=None<span class="p">, </span>autoscaling_groups=None<span class="p">, </span>blue_green_deployment_config=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>deployment_group_name=None<span class="p">, </span>deployment_style=None<span class="p">, </span>ec2_tag_filters=None<span class="p">, </span>ec2_tag_sets=None<span class="p">, </span>ecs_service=None<span class="p">, </span>load_balancer_info=None<span class="p">, </span>on_premises_instance_tag_filters=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>trigger_configurations=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentGroup">DeploymentGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1252,7 +1252,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Dict[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1263,7 +1263,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Dict[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1285,7 +1285,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Dict[Deployment<wbr>Group<wbr>Deployment<wbr>Style]</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd>
@@ -1318,7 +1318,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1329,7 +1329,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1340,7 +1340,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Dict[Deployment<wbr>Group<wbr>Ecs<wbr>Service]</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -1351,7 +1351,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -1362,7 +1362,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1373,7 +1373,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1476,7 +1476,8 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alarm_configuration=None<span class="p">, </span>app_name=None<span class="p">, </span>auto_rollback_configuration=None<span class="p">, </span>autoscaling_groups=None<span class="p">, </span>blue_green_deployment_config=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>deployment_group_name=None<span class="p">, </span>deployment_style=None<span class="p">, </span>ec2_tag_filters=None<span class="p">, </span>ec2_tag_sets=None<span class="p">, </span>ecs_service=None<span class="p">, </span>load_balancer_info=None<span class="p">, </span>on_premises_instance_tag_filters=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>trigger_configurations=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">) -&gt;</span> DeploymentGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2112,7 +2113,7 @@ The following state arguments are supported:
 <a href="#state_alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Dict[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -2134,7 +2135,7 @@ The following state arguments are supported:
 <a href="#state_auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Dict[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -2156,7 +2157,7 @@ The following state arguments are supported:
 <a href="#state_blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -2189,7 +2190,7 @@ The following state arguments are supported:
 <a href="#state_deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Dict[Deployment<wbr>Group<wbr>Deployment<wbr>Style]</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd>
@@ -2200,7 +2201,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2211,7 +2212,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2222,7 +2223,7 @@ The following state arguments are supported:
 <a href="#state_ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Dict[Deployment<wbr>Group<wbr>Ecs<wbr>Service]</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -2233,7 +2234,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -2244,7 +2245,7 @@ The following state arguments are supported:
 <a href="#state_on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2266,7 +2267,7 @@ The following state arguments are supported:
 <a href="#state_trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -2454,8 +2455,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignorepollalarmfailure_python">
-<a href="#ignorepollalarmfailure_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Poll<wbr>Alarm<wbr>Failure</a>
+        <span id="ignore_poll_alarm_failure_python">
+<a href="#ignore_poll_alarm_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>poll_<wbr>alarm_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2746,33 +2747,33 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymentreadyoption_python">
-<a href="#deploymentreadyoption_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Ready<wbr>Option</a>
+        <span id="deployment_ready_option_python">
+<a href="#deployment_ready_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>ready_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="greenfleetprovisioningoption_python">
-<a href="#greenfleetprovisioningoption_python" style="color: inherit; text-decoration: inherit;">green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
+        <span id="green_fleet_provisioning_option_python">
+<a href="#green_fleet_provisioning_option_python" style="color: inherit; text-decoration: inherit;">green_<wbr>fleet_<wbr>provisioning_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="terminateblueinstancesondeploymentsuccess_python">
-<a href="#terminateblueinstancesondeploymentsuccess_python" style="color: inherit; text-decoration: inherit;">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
+        <span id="terminate_blue_instances_on_deployment_success_python">
+<a href="#terminate_blue_instances_on_deployment_success_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -2897,8 +2898,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionontimeout_python">
-<a href="#actionontimeout_python" style="color: inherit; text-decoration: inherit;">action<wbr>On<wbr>Timeout</a>
+        <span id="action_on_timeout_python">
+<a href="#action_on_timeout_python" style="color: inherit; text-decoration: inherit;">action_<wbr>on_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2910,8 +2911,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waittimeinminutes_python">
-<a href="#waittimeinminutes_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Time<wbr>In<wbr>Minutes</a>
+        <span id="wait_time_in_minutes_python">
+<a href="#wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3150,8 +3151,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="terminationwaittimeinminutes_python">
-<a href="#terminationwaittimeinminutes_python" style="color: inherit; text-decoration: inherit;">termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</a>
+        <span id="termination_wait_time_in_minutes_python">
+<a href="#termination_wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3273,8 +3274,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymentoption_python">
-<a href="#deploymentoption_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Option</a>
+        <span id="deployment_option_python">
+<a href="#deployment_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3284,8 +3285,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3556,7 +3557,7 @@ The following state arguments are supported:
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -4020,33 +4021,33 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elbinfos_python">
-<a href="#elbinfos_python" style="color: inherit; text-decoration: inherit;">elb<wbr>Infos</a>
+        <span id="elb_infos_python">
+<a href="#elb_infos_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetgroupinfos_python">
-<a href="#targetgroupinfos_python" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Infos</a>
+        <span id="target_group_infos_python">
+<a href="#target_group_infos_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetgrouppairinfo_python">
-<a href="#targetgrouppairinfo_python" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Pair<wbr>Info</a>
+        <span id="target_group_pair_info_python">
+<a href="#target_group_pair_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>pair_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd>
@@ -4378,33 +4379,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="prodtrafficroute_python">
-<a href="#prodtrafficroute_python" style="color: inherit; text-decoration: inherit;">prod<wbr>Traffic<wbr>Route</a>
+        <span id="prod_traffic_route_python">
+<a href="#prod_traffic_route_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>traffic_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targetgroups_python">
-<a href="#targetgroups_python" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+        <span id="target_groups_python">
+<a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testtrafficroute_python">
-<a href="#testtrafficroute_python" style="color: inherit; text-decoration: inherit;">test<wbr>Traffic<wbr>Route</a>
+        <span id="test_traffic_route_python">
+<a href="#test_traffic_route_python" style="color: inherit; text-decoration: inherit;">test_<wbr>traffic_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd>
@@ -4490,8 +4491,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="listenerarns_python">
-<a href="#listenerarns_python" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
+        <span id="listener_arns_python">
+<a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4670,8 +4671,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="listenerarns_python">
-<a href="#listenerarns_python" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
+        <span id="listener_arns_python">
+<a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5004,8 +5005,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="triggerevents_python">
-<a href="#triggerevents_python" style="color: inherit; text-decoration: inherit;">trigger<wbr>Events</a>
+        <span id="trigger_events_python">
+<a href="#trigger_events_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5015,8 +5016,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="triggername_python">
-<a href="#triggername_python" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
+        <span id="trigger_name_python">
+<a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5026,8 +5027,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="triggertargetarn_python">
-<a href="#triggertargetarn_python" style="color: inherit; text-decoration: inherit;">trigger<wbr>Target<wbr>Arn</a>
+        <span id="trigger_target_arn_python">
+<a href="#trigger_target_arn_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>target_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

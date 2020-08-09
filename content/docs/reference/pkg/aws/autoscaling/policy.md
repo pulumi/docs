@@ -159,7 +159,7 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>adjustment_type=None<span class="p">, </span>autoscaling_group_name=None<span class="p">, </span>cooldown=None<span class="p">, </span>estimated_instance_warmup=None<span class="p">, </span>metric_aggregation_type=None<span class="p">, </span>min_adjustment_magnitude=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>scaling_adjustment=None<span class="p">, </span>step_adjustments=None<span class="p">, </span>target_tracking_configuration=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metric_aggregation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_adjustment_magnitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_adjustment</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[List[PolicyStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_tracking_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -827,7 +827,7 @@ up. A negative value scales down.
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List[Policy<wbr>Step<wbr>Adjustment]</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List[Policy<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -839,7 +839,7 @@ group scaling. These have the following structure:
 <a href="#target_tracking_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -986,7 +986,8 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>adjustment_type=None<span class="p">, </span>arn=None<span class="p">, </span>autoscaling_group_name=None<span class="p">, </span>cooldown=None<span class="p">, </span>estimated_instance_warmup=None<span class="p">, </span>metric_aggregation_type=None<span class="p">, </span>min_adjustment_magnitude=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>scaling_adjustment=None<span class="p">, </span>step_adjustments=None<span class="p">, </span>target_tracking_configuration=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metric_aggregation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_adjustment_magnitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_adjustment</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[List[PolicyStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_tracking_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingConfigurationArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1640,7 +1641,7 @@ up. A negative value scales down.
 <a href="#state_step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List[Policy<wbr>Step<wbr>Adjustment]</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List[Policy<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1652,7 +1653,7 @@ group scaling. These have the following structure:
 <a href="#state_target_tracking_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1846,8 +1847,8 @@ up. A negative value scales down.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervallowerbound_python">
-<a href="#metricintervallowerbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
+        <span id="metric_interval_lower_bound_python">
+<a href="#metric_interval_lower_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1859,8 +1860,8 @@ Without a value, AWS will treat this bound as infinity.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervalupperbound_python">
-<a href="#metricintervalupperbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
+        <span id="metric_interval_upper_bound_python">
+<a href="#metric_interval_upper_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2051,8 +2052,8 @@ must be greater than the lower bound.
 
     <dt class="property-required"
             title="Required">
-        <span id="targetvalue_python">
-<a href="#targetvalue_python" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
+        <span id="target_value_python">
+<a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2062,19 +2063,19 @@ must be greater than the lower bound.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customizedmetricspecification_python">
-<a href="#customizedmetricspecification_python" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
+        <span id="customized_metric_specification_python">
+<a href="#customized_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>metric_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablescalein_python">
-<a href="#disablescalein_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
+        <span id="disable_scale_in_python">
+<a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2084,11 +2085,11 @@ must be greater than the lower bound.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predefinedmetricspecification_python">
-<a href="#predefinedmetricspecification_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
+        <span id="predefined_metric_specification_python">
+<a href="#predefined_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd>
@@ -2339,11 +2340,11 @@ must be greater than the lower bound.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricdimensions_python">
-<a href="#metricdimensions_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Dimensions</a>
+        <span id="metric_dimensions_python">
+<a href="#metric_dimensions_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd>
@@ -2607,8 +2608,8 @@ must be greater than the lower bound.
 
     <dt class="property-required"
             title="Required">
-        <span id="predefinedmetrictype_python">
-<a href="#predefinedmetrictype_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2618,8 +2619,8 @@ must be greater than the lower bound.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcelabel_python">
-<a href="#resourcelabel_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

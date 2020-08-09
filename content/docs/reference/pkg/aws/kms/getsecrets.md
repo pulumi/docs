@@ -25,7 +25,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secrets(</span>secrets=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secrets(</span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[GetSecretsSecretArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -110,7 +110,7 @@ The following arguments are supported:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretssecret">List[Get<wbr>Secrets<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#getsecretssecret">List[Get<wbr>Secrets<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map containing each `secret` `name` as the key with its decrypted plaintext value
 {{% /md %}}</dd>
@@ -496,15 +496,15 @@ The following output properties are available:
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An optional mapping that makes up the Encryption Context for the secret.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="granttokens_python">
-<a href="#granttokens_python" style="color: inherit; text-decoration: inherit;">grant<wbr>Tokens</a>
+        <span id="grant_tokens_python">
+<a href="#grant_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

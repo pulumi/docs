@@ -131,7 +131,7 @@ const yada = new aws.cloudwatch.LogMetricFilter("yada", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.LogMetricFilter">LogMetricFilter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>log_group_name=None<span class="p">, </span>metric_transformation=None<span class="p">, </span>name=None<span class="p">, </span>pattern=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.LogMetricFilter">LogMetricFilter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_transformation</span><span class="p">:</span> <span class="nx">Optional[LogMetricFilterMetricTransformationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -479,7 +479,7 @@ for extracting metric data out of ingested log events.
 <a href="#metric_transformation_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Dict[Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation]</a></span>
+        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -606,7 +606,8 @@ Get an existing LogMetricFilter resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>log_group_name=None<span class="p">, </span>metric_transformation=None<span class="p">, </span>name=None<span class="p">, </span>pattern=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_transformation</span><span class="p">:</span> <span class="nx">Optional[LogMetricFilterMetricTransformationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LogMetricFilter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -896,7 +897,7 @@ for extracting metric data out of ingested log events.
 <a href="#state_metric_transformation_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Dict[Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation]</a></span>
+        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block defining collection of information
 needed to define how metric data gets emitted. See below.

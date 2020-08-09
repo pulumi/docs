@@ -188,7 +188,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/servicediscovery/#pulumi_aws.servicediscovery.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_config=None<span class="p">, </span>health_check_config=None<span class="p">, </span>health_check_custom_config=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/servicediscovery/#pulumi_aws.servicediscovery.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ServiceDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckConfigArgs]</span> = None<span class="p">, </span><span class="nx">health_check_custom_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckCustomConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +629,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfig">Dict[Service<wbr>Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#health_check_config_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#health_check_custom_config_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>custom_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for ECS managed health checks.
 {{% /md %}}</dd>
@@ -684,7 +684,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the service.
 {{% /md %}}</dd>
@@ -831,7 +831,8 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>dns_config=None<span class="p">, </span>health_check_config=None<span class="p">, </span>health_check_custom_config=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ServiceDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckConfigArgs]</span> = None<span class="p">, </span><span class="nx">health_check_custom_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckCustomConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1258,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfig">Dict[Service<wbr>Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd>
@@ -1269,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_health_check_config_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 {{% /md %}}</dd>
@@ -1280,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_health_check_custom_config_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>custom_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for ECS managed health checks.
 {{% /md %}}</dd>
@@ -1313,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the service.
 {{% /md %}}</dd>
@@ -1473,11 +1474,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dnsrecords_python">
-<a href="#dnsrecords_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Records</a>
+        <span id="dns_records_python">
+<a href="#dns_records_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfigdnsrecord">List[Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record]</a></span>
+        <span class="property-type"><a href="#servicednsconfigdnsrecord">List[Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains one DnsRecord object for each resource record set.
 {{% /md %}}</dd>
@@ -1495,8 +1496,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingpolicy_python">
-<a href="#routingpolicy_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Policy</a>
+        <span id="routing_policy_python">
+<a href="#routing_policy_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

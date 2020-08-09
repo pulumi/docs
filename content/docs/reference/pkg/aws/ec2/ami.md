@@ -143,7 +143,7 @@ const example = new aws.ec2.Ami("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Ami">Ami</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>architecture=None<span class="p">, </span>description=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ena_support=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>image_location=None<span class="p">, </span>kernel_id=None<span class="p">, </span>name=None<span class="p">, </span>ramdisk_id=None<span class="p">, </span>root_device_name=None<span class="p">, </span>sriov_net_support=None<span class="p">, </span>tags=None<span class="p">, </span>virtualization_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Ami">Ami</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[AmiEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[AmiEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -817,7 +817,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List[Ami<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">List[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -840,7 +840,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List[Ami<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">List[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -922,7 +922,7 @@ for created instances. No other value is supported at this time.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1166,7 +1166,8 @@ Get an existing Ami resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>architecture=None<span class="p">, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ena_support=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>image_location=None<span class="p">, </span>kernel_id=None<span class="p">, </span>manage_ebs_snapshots=None<span class="p">, </span>name=None<span class="p">, </span>ramdisk_id=None<span class="p">, </span>root_device_name=None<span class="p">, </span>root_snapshot_id=None<span class="p">, </span>sriov_net_support=None<span class="p">, </span>tags=None<span class="p">, </span>virtualization_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[AmiEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[AmiEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manage_ebs_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Ami</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1889,7 +1890,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List[Ami<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">List[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1912,7 +1913,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List[Ami<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">List[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2015,7 +2016,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2352,8 +2353,8 @@ default), "io1" or "gp2".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2400,18 +2401,6 @@ snapshot.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1" or "gp2".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
@@ -2421,6 +2410,18 @@ default), "io1" or "gp2".
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
+default), "io1" or "gp2".
 {{% /md %}}</dd>
 
 </dl>
@@ -2551,8 +2552,8 @@ as the selected snapshot.
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

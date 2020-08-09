@@ -224,7 +224,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_logging_options=None<span class="p">, </span>code=None<span class="p">, </span>description=None<span class="p">, </span>inputs=None<span class="p">, </span>name=None<span class="p">, </span>outputs=None<span class="p">, </span>reference_data_sources=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -693,7 +693,7 @@ See Reference Data Sources below for more details.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -727,7 +727,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#reference_data_sources_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -772,7 +772,7 @@ See Reference Data Sources below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1095,7 +1095,8 @@ Get an existing AnalyticsApplication resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_logging_options=None<span class="p">, </span>code=None<span class="p">, </span>create_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>inputs=None<span class="p">, </span>last_update_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>outputs=None<span class="p">, </span>reference_data_sources=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> AnalyticsApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1682,7 +1683,7 @@ See Reference Data Sources below for more details.
 <a href="#state_cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1727,7 +1728,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -1760,7 +1761,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -1771,7 +1772,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_reference_data_sources_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1794,7 +1795,7 @@ See Reference Data Sources below for more details.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1965,8 +1966,8 @@ See Reference Data Sources below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="logstreamarn_python">
-<a href="#logstreamarn_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Arn</a>
+        <span id="log_stream_arn_python">
+<a href="#log_stream_arn_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2362,7 +2363,7 @@ See Processing Configuration below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd>
@@ -2380,11 +2381,11 @@ See Processing Configuration below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kinesisfirehose_python">
-<a href="#kinesisfirehose_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose</a>
+        <span id="kinesis_firehose_python">
+<a href="#kinesis_firehose_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -2392,11 +2393,11 @@ See Kinesis Firehose below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kinesisstream_python">
-<a href="#kinesisstream_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream</a>
+        <span id="kinesis_stream_python">
+<a href="#kinesis_stream_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -2408,7 +2409,7 @@ See Kinesis Stream below for more details.
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of Parallel in-application streams to create.
 See Parallelism below for more details.
@@ -2416,11 +2417,11 @@ See Parallelism below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingconfiguration_python">
-<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
@@ -2428,18 +2429,18 @@ See Processing Configuration below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startingpositionconfigurations_python">
-<a href="#startingpositionconfigurations_python" style="color: inherit; text-decoration: inherit;">starting<wbr>Position<wbr>Configurations</a>
+        <span id="starting_position_configurations_python">
+<a href="#starting_position_configurations_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="streamnames_python">
-<a href="#streamnames_python" style="color: inherit; text-decoration: inherit;">stream<wbr>Names</a>
+        <span id="stream_names_python">
+<a href="#stream_names_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2885,11 +2886,11 @@ See Processing Configuration below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
 {{% /md %}}</dd>
@@ -3181,11 +3182,11 @@ See Record Format below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordcolumns_python">
-<a href="#recordcolumns_python" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
+        <span id="record_columns_python">
+<a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -3193,11 +3194,11 @@ See Record Columns below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordformat_python">
-<a href="#recordformat_python" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
+        <span id="record_format_python">
+<a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -3205,8 +3206,8 @@ See Record Format below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordencoding_python">
-<a href="#recordencoding_python" style="color: inherit; text-decoration: inherit;">record<wbr>Encoding</a>
+        <span id="record_encoding_python">
+<a href="#record_encoding_python" style="color: inherit; text-decoration: inherit;">record_<wbr>encoding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3372,8 +3373,8 @@ See Record Format below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="sqltype_python">
-<a href="#sqltype_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Type</a>
+        <span id="sql_type_python">
+<a href="#sql_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3509,11 +3510,11 @@ See Mapping Parameters below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mappingparameters_python">
-<a href="#mappingparameters_python" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
+        <span id="mapping_parameters_python">
+<a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3521,8 +3522,8 @@ See Mapping Parameters below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordformattype_python">
-<a href="#recordformattype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
+        <span id="record_format_type_python">
+<a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3654,7 +3655,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_python" style="color: inherit; text-decoration: inherit;">csv</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3666,7 +3667,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3786,8 +3787,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordcolumndelimiter_python">
-<a href="#recordcolumndelimiter_python" style="color: inherit; text-decoration: inherit;">record<wbr>Column<wbr>Delimiter</a>
+        <span id="record_column_delimiter_python">
+<a href="#record_column_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>column_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3797,8 +3798,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordrowdelimiter_python">
-<a href="#recordrowdelimiter_python" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Delimiter</a>
+        <span id="record_row_delimiter_python">
+<a href="#record_row_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3887,8 +3888,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordrowpath_python">
-<a href="#recordrowpath_python" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Path</a>
+        <span id="record_row_path_python">
+<a href="#record_row_path_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4249,7 +4250,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputschema">Dict[Analytics<wbr>Application<wbr>Output<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd>
@@ -4267,11 +4268,11 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kinesisfirehose_python">
-<a href="#kinesisfirehose_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose</a>
+        <span id="kinesis_firehose_python">
+<a href="#kinesis_firehose_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -4279,11 +4280,11 @@ See Kinesis Firehose below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kinesisstream_python">
-<a href="#kinesisstream_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream</a>
+        <span id="kinesis_stream_python">
+<a href="#kinesis_stream_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -4291,11 +4292,11 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd>
@@ -4783,8 +4784,8 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordformattype_python">
-<a href="#recordformattype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
+        <span id="record_format_type_python">
+<a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4976,7 +4977,7 @@ See Kinesis Stream below for more details.
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
 {{% /md %}}</dd>
@@ -4987,7 +4988,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd>
@@ -5161,8 +5162,8 @@ See Kinesis Stream below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5172,8 +5173,8 @@ See Kinesis Stream below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="filekey_python">
-<a href="#filekey_python" style="color: inherit; text-decoration: inherit;">file<wbr>Key</a>
+        <span id="file_key_python">
+<a href="#file_key_python" style="color: inherit; text-decoration: inherit;">file_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5345,11 +5346,11 @@ See Record Format below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordcolumns_python">
-<a href="#recordcolumns_python" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
+        <span id="record_columns_python">
+<a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -5357,11 +5358,11 @@ See Record Columns below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordformat_python">
-<a href="#recordformat_python" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
+        <span id="record_format_python">
+<a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -5369,8 +5370,8 @@ See Record Format below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordencoding_python">
-<a href="#recordencoding_python" style="color: inherit; text-decoration: inherit;">record<wbr>Encoding</a>
+        <span id="record_encoding_python">
+<a href="#record_encoding_python" style="color: inherit; text-decoration: inherit;">record_<wbr>encoding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5536,8 +5537,8 @@ See Record Format below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="sqltype_python">
-<a href="#sqltype_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Type</a>
+        <span id="sql_type_python">
+<a href="#sql_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5673,11 +5674,11 @@ See Mapping Parameters below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mappingparameters_python">
-<a href="#mappingparameters_python" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
+        <span id="mapping_parameters_python">
+<a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -5685,8 +5686,8 @@ See Mapping Parameters below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordformattype_python">
-<a href="#recordformattype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
+        <span id="record_format_type_python">
+<a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5818,7 +5819,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_python" style="color: inherit; text-decoration: inherit;">csv</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -5830,7 +5831,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -5950,8 +5951,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordcolumndelimiter_python">
-<a href="#recordcolumndelimiter_python" style="color: inherit; text-decoration: inherit;">record<wbr>Column<wbr>Delimiter</a>
+        <span id="record_column_delimiter_python">
+<a href="#record_column_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>column_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5961,8 +5962,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordrowdelimiter_python">
-<a href="#recordrowdelimiter_python" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Delimiter</a>
+        <span id="record_row_delimiter_python">
+<a href="#record_row_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6051,8 +6052,8 @@ See JSON Mapping Parameters below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordrowpath_python">
-<a href="#recordrowpath_python" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Path</a>
+        <span id="record_row_path_python">
+<a href="#record_row_path_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

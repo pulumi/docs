@@ -436,7 +436,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Group">Group</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[List[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[List[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1770,7 +1770,7 @@ Capacity below.)
 <a href="#enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Metric]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
 {{% /md %}}</dd>
@@ -1818,7 +1818,7 @@ behavior and potentially leaves resources dangling.
 <a href="#initial_lifecycle_hooks_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>lifecycle_<wbr>hooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook]</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -1835,7 +1835,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -1846,7 +1846,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Dict[Group<wbr>Launch<wbr>Template]</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -1880,7 +1880,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -1905,7 +1905,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <a href="#mixed_instances_policy_python" style="color: inherit; text-decoration: inherit;">mixed_<wbr>instances_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd>
@@ -1939,7 +1939,7 @@ prefix. Conflicts with `name`.
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -1986,7 +1986,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
@@ -1997,7 +1997,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Map<String>]</span>
+        <span class="property-type">List[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -2207,7 +2207,8 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[List[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[List[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3504,7 +3505,7 @@ Capacity below.)
 <a href="#state_enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Metric]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
 {{% /md %}}</dd>
@@ -3552,7 +3553,7 @@ behavior and potentially leaves resources dangling.
 <a href="#state_initial_lifecycle_hooks_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>lifecycle_<wbr>hooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook]</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3569,7 +3570,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -3580,7 +3581,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Dict[Group<wbr>Launch<wbr>Template]</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -3625,7 +3626,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#state_metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -3662,7 +3663,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <a href="#state_mixed_instances_policy_python" style="color: inherit; text-decoration: inherit;">mixed_<wbr>instances_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd>
@@ -3696,7 +3697,7 @@ prefix. Conflicts with `name`.
 <a href="#state_placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -3743,7 +3744,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
@@ -3754,7 +3755,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Map<String>]</span>
+        <span class="property-type">List[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -4456,18 +4457,18 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancesdistribution_python">
-<a href="#instancesdistribution_python" style="color: inherit; text-decoration: inherit;">instances<wbr>Distribution</a>
+        <span id="instances_distribution_python">
+<a href="#instances_distribution_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd>
@@ -4718,8 +4719,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ondemandallocationstrategy_python">
-<a href="#ondemandallocationstrategy_python" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+        <span id="on_demand_allocation_strategy_python">
+<a href="#on_demand_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>allocation_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4729,8 +4730,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ondemandbasecapacity_python">
-<a href="#ondemandbasecapacity_python" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Base<wbr>Capacity</a>
+        <span id="on_demand_base_capacity_python">
+<a href="#on_demand_base_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>base_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4740,8 +4741,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ondemandpercentageabovebasecapacity_python">
-<a href="#ondemandpercentageabovebasecapacity_python" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Percentage<wbr>Above<wbr>Base<wbr>Capacity</a>
+        <span id="on_demand_percentage_above_base_capacity_python">
+<a href="#on_demand_percentage_above_base_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>percentage_<wbr>above_<wbr>base_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4751,8 +4752,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotallocationstrategy_python">
-<a href="#spotallocationstrategy_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
+        <span id="spot_allocation_strategy_python">
+<a href="#spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4762,8 +4763,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotinstancepools_python">
-<a href="#spotinstancepools_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools</a>
+        <span id="spot_instance_pools_python">
+<a href="#spot_instance_pools_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4773,8 +4774,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotmaxprice_python">
-<a href="#spotmaxprice_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
+        <span id="spot_max_price_python">
+<a href="#spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4896,11 +4897,11 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-required"
             title="Required">
-        <span id="launchtemplatespecification_python">
-<a href="#launchtemplatespecification_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+        <span id="launch_template_specification_python">
+<a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
 {{% /md %}}</dd>
@@ -4911,7 +4912,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd>
@@ -5063,8 +5064,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplateid_python">
-<a href="#launchtemplateid_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+        <span id="launch_template_id_python">
+<a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5074,8 +5075,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplatename_python">
-<a href="#launchtemplatename_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
+        <span id="launch_template_name_python">
+<a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5219,8 +5220,8 @@ precedence over `min_elb_capacity` behavior.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedcapacity_python">
-<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5389,8 +5390,8 @@ Amazon EC2 instances launched via this ASG
 
     <dt class="property-required"
             title="Required">
-        <span id="propagateatlaunch_python">
-<a href="#propagateatlaunch_python" style="color: inherit; text-decoration: inherit;">propagate<wbr>At<wbr>Launch</a>
+        <span id="propagate_at_launch_python">
+<a href="#propagate_at_launch_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>at_<wbr>launch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

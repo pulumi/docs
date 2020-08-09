@@ -114,7 +114,7 @@ const example = new aws.gamelift.Alias("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.Alias">Alias</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>routing_strategy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.Alias">Alias</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_strategy</span><span class="p">:</span> <span class="nx">Optional[AliasRoutingStrategyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -445,7 +445,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#routing_strategy_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingstrategy">Dict[Alias<wbr>Routing<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fleet and/or routing type to use for the alias.
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -625,7 +625,8 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>routing_strategy=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_strategy</span><span class="p">:</span> <span class="nx">Optional[AliasRoutingStrategyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Alias</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -964,7 +965,7 @@ The following state arguments are supported:
 <a href="#state_routing_strategy_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingstrategy">Dict[Alias<wbr>Routing<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fleet and/or routing type to use for the alias.
 {{% /md %}}</dd>
@@ -975,7 +976,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1146,8 +1147,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fleetid_python">
-<a href="#fleetid_python" style="color: inherit; text-decoration: inherit;">fleet<wbr>Id</a>
+        <span id="fleet_id_python">
+<a href="#fleet_id_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

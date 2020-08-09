@@ -269,7 +269,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.DeliveryChannel">DeliveryChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>snapshot_delivery_properties=None<span class="p">, </span>sns_topic_arn=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.DeliveryChannel">DeliveryChannel</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_delivery_properties</span><span class="p">:</span> <span class="nx">Optional[DeliveryChannelSnapshotDeliveryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">sns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -666,7 +666,7 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
 <a href="#snapshot_delivery_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>delivery_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -780,7 +780,8 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>snapshot_delivery_properties=None<span class="p">, </span>sns_topic_arn=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_delivery_properties</span><span class="p">:</span> <span class="nx">Optional[DeliveryChannelSnapshotDeliveryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">sns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DeliveryChannel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1119,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_snapshot_delivery_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>delivery_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -1230,8 +1231,8 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deliveryfrequency_python">
-<a href="#deliveryfrequency_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Frequency</a>
+        <span id="delivery_frequency_python">
+<a href="#delivery_frequency_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

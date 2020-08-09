@@ -276,7 +276,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_organization(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1563,11 +1563,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="policytypes_python">
-<a href="#policytypes_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Types</a>
+        <span id="policy_types_python">
+<a href="#policy_types_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationrootpolicytype">List[Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type]</a></span>
+        <span class="property-type"><a href="#getorganizationrootpolicytype">List[Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>

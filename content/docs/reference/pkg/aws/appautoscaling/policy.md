@@ -497,7 +497,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyStepScalingPolicyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">target_tracking_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingScalingPolicyConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -982,7 +982,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#step_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">step_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#target_tracking_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
@@ -1140,7 +1140,8 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyStepScalingPolicyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">target_tracking_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingScalingPolicyConfigurationArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1611,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_step_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">step_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
@@ -1622,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_target_tracking_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
@@ -1896,7 +1897,7 @@ The following state arguments are supported:
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd>
@@ -2059,8 +2060,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervallowerbound_python">
-<a href="#metricintervallowerbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
+        <span id="metric_interval_lower_bound_python">
+<a href="#metric_interval_lower_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2070,8 +2071,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervalupperbound_python">
-<a href="#metricintervalupperbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
+        <span id="metric_interval_upper_bound_python">
+<a href="#metric_interval_upper_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2325,8 +2326,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetvalue_python">
-<a href="#targetvalue_python" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
+        <span id="target_value_python">
+<a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2336,19 +2337,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customizedmetricspecification_python">
-<a href="#customizedmetricspecification_python" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
+        <span id="customized_metric_specification_python">
+<a href="#customized_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>metric_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablescalein_python">
-<a href="#disablescalein_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
+        <span id="disable_scale_in_python">
+<a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2358,19 +2359,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predefinedmetricspecification_python">
-<a href="#predefinedmetricspecification_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
+        <span id="predefined_metric_specification_python">
+<a href="#predefined_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleincooldown_python">
-<a href="#scaleincooldown_python" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Cooldown</a>
+        <span id="scale_in_cooldown_python">
+<a href="#scale_in_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2380,8 +2381,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleoutcooldown_python">
-<a href="#scaleoutcooldown_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Out<wbr>Cooldown</a>
+        <span id="scale_out_cooldown_python">
+<a href="#scale_out_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>out_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2639,7 +2640,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd>
@@ -2903,8 +2904,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="predefinedmetrictype_python">
-<a href="#predefinedmetrictype_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2914,8 +2915,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcelabel_python">
-<a href="#resourcelabel_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

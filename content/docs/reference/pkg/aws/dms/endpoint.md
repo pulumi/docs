@@ -159,7 +159,7 @@ const test = new aws.dms.Endpoint("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dms/#pulumi_aws.dms.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kafka_settings=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dms/#pulumi_aws.dms.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointElasticsearchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKafkaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKinesisSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointMongodbSettingsArgs]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointS3SettingsArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1040,7 +1040,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Dict[Endpoint<wbr>Elasticsearch<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
@@ -1062,7 +1062,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Dict[Endpoint<wbr>Kafka<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Dict[Endpoint<wbr>Kinesis<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1330,7 +1330,8 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_arn=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kafka_settings=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointElasticsearchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKafkaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKinesisSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointMongodbSettingsArgs]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointS3SettingsArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2153,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Dict[Endpoint<wbr>Elasticsearch<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
@@ -2219,7 +2220,7 @@ The following state arguments are supported:
 <a href="#state_kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Dict[Endpoint<wbr>Kafka<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
@@ -2230,7 +2231,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Dict[Endpoint<wbr>Kinesis<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
@@ -2252,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
@@ -2285,7 +2286,7 @@ The following state arguments are supported:
 <a href="#state_s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
@@ -2329,7 +2330,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2533,8 +2534,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2544,8 +2545,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceaccessrolearn_python">
-<a href="#serviceaccessrolearn_python" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
+        <span id="service_access_role_arn_python">
+<a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2555,8 +2556,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorretryduration_python">
-<a href="#errorretryduration_python" style="color: inherit; text-decoration: inherit;">error<wbr>Retry<wbr>Duration</a>
+        <span id="error_retry_duration_python">
+<a href="#error_retry_duration_python" style="color: inherit; text-decoration: inherit;">error_<wbr>retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2566,8 +2567,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fullloaderrorpercentage_python">
-<a href="#fullloaderrorpercentage_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Error<wbr>Percentage</a>
+        <span id="full_load_error_percentage_python">
+<a href="#full_load_error_percentage_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>error_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2856,8 +2857,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageformat_python">
-<a href="#messageformat_python" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+        <span id="message_format_python">
+<a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2867,8 +2868,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceaccessrolearn_python">
-<a href="#serviceaccessrolearn_python" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
+        <span id="service_access_role_arn_python">
+<a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3133,8 +3134,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authmechanism_python">
-<a href="#authmechanism_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Mechanism</a>
+        <span id="auth_mechanism_python">
+<a href="#auth_mechanism_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>mechanism</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3144,8 +3145,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authsource_python">
-<a href="#authsource_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Source</a>
+        <span id="auth_source_python">
+<a href="#auth_source_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3166,8 +3167,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="docstoinvestigate_python">
-<a href="#docstoinvestigate_python" style="color: inherit; text-decoration: inherit;">docs<wbr>To<wbr>Investigate</a>
+        <span id="docs_to_investigate_python">
+<a href="#docs_to_investigate_python" style="color: inherit; text-decoration: inherit;">docs_<wbr>to_<wbr>investigate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3177,8 +3178,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extractdocid_python">
-<a href="#extractdocid_python" style="color: inherit; text-decoration: inherit;">extract<wbr>Doc<wbr>Id</a>
+        <span id="extract_doc_id_python">
+<a href="#extract_doc_id_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>doc_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3188,8 +3189,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nestinglevel_python">
-<a href="#nestinglevel_python" style="color: inherit; text-decoration: inherit;">nesting<wbr>Level</a>
+        <span id="nesting_level_python">
+<a href="#nesting_level_python" style="color: inherit; text-decoration: inherit;">nesting_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3476,8 +3477,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketfolder_python">
-<a href="#bucketfolder_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Folder</a>
+        <span id="bucket_folder_python">
+<a href="#bucket_folder_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3498,8 +3499,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressiontype_python">
-<a href="#compressiontype_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
+        <span id="compression_type_python">
+<a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3509,8 +3510,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="csvdelimiter_python">
-<a href="#csvdelimiter_python" style="color: inherit; text-decoration: inherit;">csv<wbr>Delimiter</a>
+        <span id="csv_delimiter_python">
+<a href="#csv_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3520,8 +3521,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="csvrowdelimiter_python">
-<a href="#csvrowdelimiter_python" style="color: inherit; text-decoration: inherit;">csv<wbr>Row<wbr>Delimiter</a>
+        <span id="csv_row_delimiter_python">
+<a href="#csv_row_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>row_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3531,8 +3532,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="externaltabledefinition_python">
-<a href="#externaltabledefinition_python" style="color: inherit; text-decoration: inherit;">external<wbr>Table<wbr>Definition</a>
+        <span id="external_table_definition_python">
+<a href="#external_table_definition_python" style="color: inherit; text-decoration: inherit;">external_<wbr>table_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3542,8 +3543,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceaccessrolearn_python">
-<a href="#serviceaccessrolearn_python" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
+        <span id="service_access_role_arn_python">
+<a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

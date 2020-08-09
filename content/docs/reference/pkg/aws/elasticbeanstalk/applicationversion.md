@@ -166,7 +166,7 @@ const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.ApplicationVersion">ApplicationVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application=None<span class="p">, </span>bucket=None<span class="p">, </span>description=None<span class="p">, </span>force_delete=None<span class="p">, </span>key=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.ApplicationVersion">ApplicationVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -599,7 +599,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -666,7 +666,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -813,7 +813,8 @@ Get an existing ApplicationVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>description=None<span class="p">, </span>force_delete=None<span class="p">, </span>key=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ApplicationVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1221,7 +1222,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -1243,7 +1244,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -1299,7 +1300,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>

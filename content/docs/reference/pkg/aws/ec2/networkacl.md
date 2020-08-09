@@ -193,7 +193,7 @@ const main = new aws.ec2.NetworkAcl("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.NetworkAcl">NetworkAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>egress=None<span class="p">, </span>ingress=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.NetworkAcl">NetworkAcl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,7 +568,7 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress]</a></span>
+        <span class="property-type"><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -792,7 +792,8 @@ Get an existing NetworkAcl resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>egress=None<span class="p">, </span>ingress=None<span class="p">, </span>owner_id=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkAcl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1175,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress]</a></span>
+        <span class="property-type"><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -1186,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -1219,7 +1220,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1628,8 +1629,8 @@ protocol, you must specify a from and to port of 0.
 
     <dt class="property-required"
             title="Required">
-        <span id="ruleno_python">
-<a href="#ruleno_python" style="color: inherit; text-decoration: inherit;">rule<wbr>No</a>
+        <span id="rule_no_python">
+<a href="#rule_no_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>no</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2078,8 +2079,8 @@ protocol, you must specify a from and to port of 0.
 
     <dt class="property-required"
             title="Required">
-        <span id="ruleno_python">
-<a href="#ruleno_python" style="color: inherit; text-decoration: inherit;">rule<wbr>No</a>
+        <span id="rule_no_python">
+<a href="#rule_no_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>no</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

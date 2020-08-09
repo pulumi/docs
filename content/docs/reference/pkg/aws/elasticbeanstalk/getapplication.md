@@ -111,7 +111,7 @@ export const description = example.description;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#appversion_lifecycle_python" style="color: inherit; text-decoration: inherit;">appversion_<wbr>lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationappversionlifecycle">Dict[Get<wbr>Application<wbr>Appversion<wbr>Lifecycle]</a></span>
+        <span class="property-type"><a href="#getapplicationappversionlifecycle">Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -642,8 +642,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deletesourcefroms3_python">
-<a href="#deletesourcefroms3_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Source<wbr>From<wbr>S3</a>
+        <span id="delete_source_from_s3_python">
+<a href="#delete_source_from_s3_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>source_<wbr>from_<wbr>s3</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -653,8 +653,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxageindays_python">
-<a href="#maxageindays_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Days</a>
+        <span id="max_age_in_days_python">
+<a href="#max_age_in_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -664,8 +664,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxcount_python">
-<a href="#maxcount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
+        <span id="max_count_python">
+<a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

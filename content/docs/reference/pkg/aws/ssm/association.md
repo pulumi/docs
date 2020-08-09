@@ -23,7 +23,7 @@ Associates an SSM Document to an instance or EC2 tag.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.Association">Association</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>association_name=None<span class="p">, </span>automation_target_parameter_name=None<span class="p">, </span>compliance_severity=None<span class="p">, </span>document_version=None<span class="p">, </span>instance_id=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>output_location=None<span class="p">, </span>parameters=None<span class="p">, </span>schedule_expression=None<span class="p">, </span>targets=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.Association">Association</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">association_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automation_target_parameter_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compliance_severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_concurrency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_location</span><span class="p">:</span> <span class="nx">Optional[AssociationOutputLocationArgs]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">schedule_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[AssociationTargetArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -706,7 +706,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#output_location_python" style="color: inherit; text-decoration: inherit;">output_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Dict[Association<wbr>Output<wbr>Location]</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -739,7 +739,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List[Association<wbr>Target]</a></span>
+        <span class="property-type"><a href="#associationtarget">List[Association<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
@@ -886,7 +886,8 @@ Get an existing Association resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>association_id=None<span class="p">, </span>association_name=None<span class="p">, </span>automation_target_parameter_name=None<span class="p">, </span>compliance_severity=None<span class="p">, </span>document_version=None<span class="p">, </span>instance_id=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>output_location=None<span class="p">, </span>parameters=None<span class="p">, </span>schedule_expression=None<span class="p">, </span>targets=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">association_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automation_target_parameter_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compliance_severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_concurrency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_location</span><span class="p">:</span> <span class="nx">Optional[AssociationOutputLocationArgs]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">schedule_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[AssociationTargetArgs]]</span> = None<span class="p">) -&gt;</span> Association</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1555,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_output_location_python" style="color: inherit; text-decoration: inherit;">output_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Dict[Association<wbr>Output<wbr>Location]</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -1566,7 +1567,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1588,7 +1589,7 @@ The following state arguments are supported:
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List[Association<wbr>Target]</a></span>
+        <span class="property-type"><a href="#associationtarget">List[Association<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>

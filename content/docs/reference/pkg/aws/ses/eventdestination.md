@@ -354,7 +354,7 @@ const sns = new aws.ses.EventDestination("sns", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.EventDestination">EventDestination</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_destinations=None<span class="p">, </span>configuration_set_name=None<span class="p">, </span>enabled=None<span class="p">, </span>kinesis_destination=None<span class="p">, </span>matching_types=None<span class="p">, </span>name=None<span class="p">, </span>sns_destination=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.EventDestination">EventDestination</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[List[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -806,7 +806,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#kinesis_destination_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Dict[Event<wbr>Destination<wbr>Kinesis<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd>
@@ -850,7 +850,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#sns_destination_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Dict[Event<wbr>Destination<wbr>Sns<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd>
@@ -953,7 +953,8 @@ Get an existing EventDestination resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloudwatch_destinations=None<span class="p">, </span>configuration_set_name=None<span class="p">, </span>enabled=None<span class="p">, </span>kinesis_destination=None<span class="p">, </span>matching_types=None<span class="p">, </span>name=None<span class="p">, </span>sns_destination=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[List[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">) -&gt;</span> EventDestination</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1325,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd>
@@ -1358,7 +1359,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_destination_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Dict[Event<wbr>Destination<wbr>Kinesis<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd>
@@ -1391,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_sns_destination_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Dict[Event<wbr>Destination<wbr>Sns<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd>
@@ -1562,8 +1563,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dimensionname_python">
-<a href="#dimensionname_python" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
+        <span id="dimension_name_python">
+<a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1573,8 +1574,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="valuesource_python">
-<a href="#valuesource_python" style="color: inherit; text-decoration: inherit;">value<wbr>Source</a>
+        <span id="value_source_python">
+<a href="#value_source_python" style="color: inherit; text-decoration: inherit;">value_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

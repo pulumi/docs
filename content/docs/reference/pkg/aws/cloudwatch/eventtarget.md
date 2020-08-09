@@ -751,7 +751,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventTarget">EventTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>batch_target=None<span class="p">, </span>ecs_target=None<span class="p">, </span>input=None<span class="p">, </span>input_path=None<span class="p">, </span>input_transformer=None<span class="p">, </span>kinesis_target=None<span class="p">, </span>role_arn=None<span class="p">, </span>rule=None<span class="p">, </span>run_command_targets=None<span class="p">, </span>sqs_target=None<span class="p">, </span>target_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventTarget">EventTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[List[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1371,7 +1371,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#batch_target_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Dict[Event<wbr>Target<wbr>Batch<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1382,7 +1382,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#input_transformer_python" style="color: inherit; text-decoration: inherit;">input_<wbr>transformer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Dict[Event<wbr>Target<wbr>Input<wbr>Transformer]</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
 {{% /md %}}</dd>
@@ -1427,7 +1427,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#kinesis_target_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Dict[Event<wbr>Target<wbr>Kinesis<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1449,7 +1449,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#run_command_targets_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd>
@@ -1460,7 +1460,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#sqs_target_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Dict[Event<wbr>Target<wbr>Sqs<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1574,7 +1574,8 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>batch_target=None<span class="p">, </span>ecs_target=None<span class="p">, </span>input=None<span class="p">, </span>input_path=None<span class="p">, </span>input_transformer=None<span class="p">, </span>kinesis_target=None<span class="p">, </span>role_arn=None<span class="p">, </span>rule=None<span class="p">, </span>run_command_targets=None<span class="p">, </span>sqs_target=None<span class="p">, </span>target_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[List[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2125,7 +2126,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_batch_target_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Dict[Event<wbr>Target<wbr>Batch<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -2136,7 +2137,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -2170,7 +2171,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_input_transformer_python" style="color: inherit; text-decoration: inherit;">input_<wbr>transformer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Dict[Event<wbr>Target<wbr>Input<wbr>Transformer]</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
 {{% /md %}}</dd>
@@ -2181,7 +2182,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_kinesis_target_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Dict[Event<wbr>Target<wbr>Kinesis<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -2214,7 +2215,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_run_command_targets_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd>
@@ -2225,7 +2226,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#state_sqs_target_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Dict[Event<wbr>Target<wbr>Sqs<wbr>Target]</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -2429,8 +2430,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-required"
             title="Required">
-        <span id="jobdefinition_python">
-<a href="#jobdefinition_python" style="color: inherit; text-decoration: inherit;">job<wbr>Definition</a>
+        <span id="job_definition_python">
+<a href="#job_definition_python" style="color: inherit; text-decoration: inherit;">job_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2440,8 +2441,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-required"
             title="Required">
-        <span id="jobname_python">
-<a href="#jobname_python" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
+        <span id="job_name_python">
+<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2451,8 +2452,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="arraysize_python">
-<a href="#arraysize_python" style="color: inherit; text-decoration: inherit;">array<wbr>Size</a>
+        <span id="array_size_python">
+<a href="#array_size_python" style="color: inherit; text-decoration: inherit;">array_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2462,8 +2463,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jobattempts_python">
-<a href="#jobattempts_python" style="color: inherit; text-decoration: inherit;">job<wbr>Attempts</a>
+        <span id="job_attempts_python">
+<a href="#job_attempts_python" style="color: inherit; text-decoration: inherit;">job_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2717,8 +2718,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-required"
             title="Required">
-        <span id="taskdefinitionarn_python">
-<a href="#taskdefinitionarn_python" style="color: inherit; text-decoration: inherit;">task<wbr>Definition<wbr>Arn</a>
+        <span id="task_definition_arn_python">
+<a href="#task_definition_arn_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2754,7 +2755,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd>
@@ -2772,8 +2773,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="taskcount_python">
-<a href="#taskcount_python" style="color: inherit; text-decoration: inherit;">task<wbr>Count</a>
+        <span id="task_count_python">
+<a href="#task_count_python" style="color: inherit; text-decoration: inherit;">task_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2939,8 +2940,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="assignpublicip_python">
-<a href="#assignpublicip_python" style="color: inherit; text-decoration: inherit;">assign<wbr>Public<wbr>Ip</a>
+        <span id="assign_public_ip_python">
+<a href="#assign_public_ip_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3073,8 +3074,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-required"
             title="Required">
-        <span id="inputtemplate_python">
-<a href="#inputtemplate_python" style="color: inherit; text-decoration: inherit;">input<wbr>Template</a>
+        <span id="input_template_python">
+<a href="#input_template_python" style="color: inherit; text-decoration: inherit;">input_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3084,11 +3085,11 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputpaths_python">
-<a href="#inputpaths_python" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
+        <span id="input_paths_python">
+<a href="#input_paths_python" style="color: inherit; text-decoration: inherit;">input_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
 {{% /md %}}</dd>
@@ -3174,8 +3175,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partitionkeypath_python">
-<a href="#partitionkeypath_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
+        <span id="partition_key_path_python">
+<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3398,8 +3399,8 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagegroupid_python">
-<a href="#messagegroupid_python" style="color: inherit; text-decoration: inherit;">message<wbr>Group<wbr>Id</a>
+        <span id="message_group_id_python">
+<a href="#message_group_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

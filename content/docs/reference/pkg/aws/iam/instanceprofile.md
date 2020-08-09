@@ -158,7 +158,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.InstanceProfile">InstanceProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>roles=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.InstanceProfile">InstanceProfile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +555,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
@@ -801,7 +801,8 @@ Get an existing InstanceProfile resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>create_date=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>roles=None<span class="p">, </span>unique_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceProfile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1261,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
@@ -1272,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>

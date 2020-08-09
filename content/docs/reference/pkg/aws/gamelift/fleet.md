@@ -136,7 +136,7 @@ const example = new aws.gamelift.Fleet("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.Fleet">Fleet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>build_id=None<span class="p">, </span>description=None<span class="p">, </span>ec2_inbound_permissions=None<span class="p">, </span>ec2_instance_type=None<span class="p">, </span>fleet_type=None<span class="p">, </span>instance_role_arn=None<span class="p">, </span>metric_groups=None<span class="p">, </span>name=None<span class="p">, </span>new_game_session_protection_policy=None<span class="p">, </span>resource_creation_limit_policy=None<span class="p">, </span>runtime_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.Fleet">Fleet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ec2_inbound_permissions</span><span class="p">:</span> <span class="nx">Optional[List[FleetEc2InboundPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_game_session_protection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_creation_limit_policy</span><span class="p">:</span> <span class="nx">Optional[FleetResourceCreationLimitPolicyArgs]</span> = None<span class="p">, </span><span class="nx">runtime_configuration</span><span class="p">:</span> <span class="nx">Optional[FleetRuntimeConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -764,7 +764,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ec2_inbound_permissions_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>inbound_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_creation_limit_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>creation_<wbr>limit_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Dict[Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#runtime_configuration_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfiguration">Dict[Fleet<wbr>Runtime<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1083,7 +1083,8 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>build_id=None<span class="p">, </span>description=None<span class="p">, </span>ec2_inbound_permissions=None<span class="p">, </span>ec2_instance_type=None<span class="p">, </span>fleet_type=None<span class="p">, </span>instance_role_arn=None<span class="p">, </span>log_paths=None<span class="p">, </span>metric_groups=None<span class="p">, </span>name=None<span class="p">, </span>new_game_session_protection_policy=None<span class="p">, </span>operating_system=None<span class="p">, </span>resource_creation_limit_policy=None<span class="p">, </span>runtime_configuration=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ec2_inbound_permissions</span><span class="p">:</span> <span class="nx">Optional[List[FleetEc2InboundPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_paths</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_game_session_protection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_creation_limit_policy</span><span class="p">:</span> <span class="nx">Optional[FleetResourceCreationLimitPolicyArgs]</span> = None<span class="p">, </span><span class="nx">runtime_configuration</span><span class="p">:</span> <span class="nx">Optional[FleetRuntimeConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Fleet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1749,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_ec2_inbound_permissions_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>inbound_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
@@ -1847,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_resource_creation_limit_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>creation_<wbr>limit_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Dict[Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
@@ -1858,7 +1859,7 @@ The following state arguments are supported:
 <a href="#state_runtime_configuration_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfiguration">Dict[Fleet<wbr>Runtime<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
@@ -1869,7 +1870,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2073,8 +2074,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="iprange_python">
-<a href="#iprange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
+        <span id="ip_range_python">
+<a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2218,8 +2219,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newgamesessionspercreator_python">
-<a href="#newgamesessionspercreator_python" style="color: inherit; text-decoration: inherit;">new<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</a>
+        <span id="new_game_sessions_per_creator_python">
+<a href="#new_game_sessions_per_creator_python" style="color: inherit; text-decoration: inherit;">new_<wbr>game_<wbr>sessions_<wbr>per_<wbr>creator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2229,8 +2230,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyperiodinminutes_python">
-<a href="#policyperiodinminutes_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Period<wbr>In<wbr>Minutes</a>
+        <span id="policy_period_in_minutes_python">
+<a href="#policy_period_in_minutes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>period_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2385,8 +2386,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gamesessionactivationtimeoutseconds_python">
-<a href="#gamesessionactivationtimeoutseconds_python" style="color: inherit; text-decoration: inherit;">game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</a>
+        <span id="game_session_activation_timeout_seconds_python">
+<a href="#game_session_activation_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">game_<wbr>session_<wbr>activation_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2396,8 +2397,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentgamesessionactivations_python">
-<a href="#maxconcurrentgamesessionactivations_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</a>
+        <span id="max_concurrent_game_session_activations_python">
+<a href="#max_concurrent_game_session_activations_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>game_<wbr>session_<wbr>activations</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2407,11 +2408,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverprocesses_python">
-<a href="#serverprocesses_python" style="color: inherit; text-decoration: inherit;">server<wbr>Processes</a>
+        <span id="server_processes_python">
+<a href="#server_processes_python" style="color: inherit; text-decoration: inherit;">server_<wbr>processes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">List[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process]</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">List[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd>
@@ -2563,8 +2564,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="concurrentexecutions_python">
-<a href="#concurrentexecutions_python" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Executions</a>
+        <span id="concurrent_executions_python">
+<a href="#concurrent_executions_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>executions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2574,8 +2575,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="launchpath_python">
-<a href="#launchpath_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Path</a>
+        <span id="launch_path_python">
+<a href="#launch_path_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

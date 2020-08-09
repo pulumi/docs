@@ -471,7 +471,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_strategy=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[List[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[List[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1416,7 +1416,7 @@ the number of Spot pools that you specify.
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -1429,7 +1429,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
@@ -1473,7 +1473,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1718,7 +1718,8 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_strategy=None<span class="p">, </span>client_token=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>spot_request_state=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[List[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[List[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_request_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotFleetRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2665,7 +2666,7 @@ the number of Spot pools that you specify.
 <a href="#state_launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -2678,7 +2679,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
@@ -2733,7 +2734,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3529,7 +3530,7 @@ timeout of 10m is reached.
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3549,14 +3550,14 @@ timeout of 10m is reached.
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iaminstanceprofilearn_python">
-<a href="#iaminstanceprofilearn_python" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3565,8 +3566,8 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iam_instance_profile_python">
-<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+        <span id="iam_instance_profile_arn_python">
+<a href="#iam_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3619,7 +3620,7 @@ timeout of 10m is reached.
 <a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3651,7 +3652,7 @@ timeout of 10m is reached.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3678,8 +3679,8 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedcapacity_python">
-<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3985,8 +3986,8 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4035,21 +4036,21 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4171,8 +4172,8 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4407,8 +4408,8 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4447,21 +4448,21 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4579,11 +4580,11 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span id="launchtemplatespecification_python">
-<a href="#launchtemplatespecification_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+        <span id="launch_template_specification_python">
+<a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Dict[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
 {{% /md %}}</dd>
@@ -4594,7 +4595,7 @@ timeout of 10m is reached.
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
 {{% /md %}}</dd>
@@ -5078,8 +5079,8 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedcapacity_python">
-<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

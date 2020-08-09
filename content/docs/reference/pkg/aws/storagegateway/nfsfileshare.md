@@ -114,7 +114,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.NfsFileShare">NfsFileShare</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_lists=None<span class="p">, </span>default_storage_class=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>guess_mime_type_enabled=None<span class="p">, </span>kms_encrypted=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>location_arn=None<span class="p">, </span>nfs_file_share_defaults=None<span class="p">, </span>object_acl=None<span class="p">, </span>read_only=None<span class="p">, </span>requester_pays=None<span class="p">, </span>role_arn=None<span class="p">, </span>squash=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.NfsFileShare">NfsFileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +863,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1153,7 +1153,8 @@ Get an existing NfsFileShare resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>client_lists=None<span class="p">, </span>default_storage_class=None<span class="p">, </span>fileshare_id=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>guess_mime_type_enabled=None<span class="p">, </span>kms_encrypted=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>location_arn=None<span class="p">, </span>nfs_file_share_defaults=None<span class="p">, </span>object_acl=None<span class="p">, </span>path=None<span class="p">, </span>read_only=None<span class="p">, </span>requester_pays=None<span class="p">, </span>role_arn=None<span class="p">, </span>squash=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fileshare_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NfsFileShare</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1954,7 +1955,7 @@ The following state arguments are supported:
 <a href="#state_nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below.
 {{% /md %}}</dd>
@@ -2031,7 +2032,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2224,8 +2225,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directorymode_python">
-<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+        <span id="directory_mode_python">
+<a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2235,8 +2236,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2246,8 +2247,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupid_python">
-<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

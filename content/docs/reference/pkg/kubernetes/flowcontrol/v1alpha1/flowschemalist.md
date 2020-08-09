@@ -23,7 +23,7 @@ FlowSchemaList is a list of FlowSchema objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol/v1alpha1/#pulumi_kubernetes.flowcontrol/v1alpha1.FlowSchemaList">FlowSchemaList</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>items=None<span class="p">, </span>metadata=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol/v1alpha1/#pulumi_kubernetes.flowcontrol/v1alpha1.FlowSchemaList">FlowSchemaList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[List[_flowcontrol_apiserver_k8s_io_v1alpha1.FlowSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +282,7 @@ The FlowSchemaList resource accepts the following [input]({{< relref "/docs/intr
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschema">List[Flow<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#flowschema">Flow<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`items` is a list of FlowSchemas.{{% /md %}}</dd>
 
@@ -292,7 +292,7 @@ The FlowSchemaList resource accepts the following [input]({{< relref "/docs/intr
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`metadata` is the standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -606,7 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -616,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemaspec">Dict[Flow<wbr>Schema<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#flowschemaspec">Flow<wbr>Schema<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -626,7 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemastatus">Dict[Flow<wbr>Schema<wbr>Status]</a></span>
+        <span class="property-type"><a href="#flowschemastatus">Flow<wbr>Schema<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`status` is the current status of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -1042,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_level_configuration_python" style="color: inherit; text-decoration: inherit;">priority_<wbr>level_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prioritylevelconfigurationreference">Dict[Priority<wbr>Level<wbr>Configuration<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#prioritylevelconfigurationreference">Priority<wbr>Level<wbr>Configuration<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}`priorityLevelConfiguration` should reference a PriorityLevelConfiguration in the cluster. If the reference cannot be resolved, the FlowSchema will be ignored and marked as invalid in its status. Required.{{% /md %}}</dd>
 
@@ -1052,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distinguisher_method_python" style="color: inherit; text-decoration: inherit;">distinguisher_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowdistinguishermethod">Dict[Flow<wbr>Distinguisher<wbr>Method]</a></span>
+        <span class="property-type"><a href="#flowdistinguishermethod">Flow<wbr>Distinguisher<wbr>Method<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies that the distinguisher is disabled and thus will always be the empty string.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyruleswithsubjects">List[Policy<wbr>Rules<wbr>With<wbr>Subjects]</a></span>
+        <span class="property-type"><a href="#policyruleswithsubjects">Policy<wbr>Rules<wbr>With<wbr>Subjects<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}`rules` describes which requests will match this flow schema. This FlowSchema matches a request if and only if at least one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema.{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemacondition">List[Flow<wbr>Schema<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#flowschemacondition">Flow<wbr>Schema<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}`conditions` is a list of the current states of FlowSchema.{{% /md %}}</dd>
 
@@ -1702,7 +1702,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2460,7 +2460,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -2548,7 +2548,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -2558,7 +2558,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2590,7 +2590,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -3052,7 +3052,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subject">List[Subject]</a></span>
+        <span class="property-type"><a href="#subject">Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.{{% /md %}}</dd>
 
@@ -3062,7 +3062,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#non_resource_rules_python" style="color: inherit; text-decoration: inherit;">non_<wbr>resource_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonresourcepolicyrule">List[Non<wbr>Resource<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#nonresourcepolicyrule">Non<wbr>Resource<wbr>Policy<wbr>Rule<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}`nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.{{% /md %}}</dd>
 
@@ -3072,7 +3072,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resource_rules_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyrule">List[Resource<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#resourcepolicyrule">Resource<wbr>Policy<wbr>Rule<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}`resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.{{% /md %}}</dd>
 
@@ -3704,7 +3704,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupsubject">Dict[Group<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#groupsubject">Group<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3714,7 +3714,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountsubject">Dict[Service<wbr>Account<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#serviceaccountsubject">Service<wbr>Account<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3724,7 +3724,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersubject">Dict[User<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#usersubject">User<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

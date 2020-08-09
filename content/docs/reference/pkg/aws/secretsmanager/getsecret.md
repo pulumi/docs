@@ -168,7 +168,7 @@ const by_name = pulumi.output(aws.secretsmanager.getSecret({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret(</span>arn=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -776,7 +776,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
 {{% /md %}}</dd>
@@ -865,8 +865,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="automaticallyafterdays_python">
-<a href="#automaticallyafterdays_python" style="color: inherit; text-decoration: inherit;">automatically<wbr>After<wbr>Days</a>
+        <span id="automatically_after_days_python">
+<a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

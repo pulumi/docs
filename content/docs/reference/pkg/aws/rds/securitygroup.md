@@ -113,7 +113,7 @@ const defaultSecurityGroup = new aws.rds.SecurityGroup("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.SecurityGroup">SecurityGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ingress=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.SecurityGroup">SecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[SecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -444,7 +444,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -624,7 +624,8 @@ Get an existing SecurityGroup resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>ingress=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[SecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> SecurityGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -952,7 +953,7 @@ The following state arguments are supported:
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
 {{% /md %}}</dd>
@@ -974,7 +975,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1181,8 +1182,19 @@ by `security_group_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitygroupname_python">
-<a href="#securitygroupname_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Name</a>
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group to authorize
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_group_name_python">
+<a href="#security_group_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1192,25 +1204,14 @@ by `security_group_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitygroupownerid_python">
-<a href="#securitygroupownerid_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Owner<wbr>Id</a>
+        <span id="security_group_owner_id_python">
+<a href="#security_group_owner_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>owner_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner Id of the security group provided
 by `security_group_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="security_group_id_python">
-<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the security group to authorize
 {{% /md %}}</dd>
 
 </dl>

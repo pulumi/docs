@@ -198,7 +198,7 @@ const test = new aws.batch.JobDefinition("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/batch/#pulumi_aws.batch.JobDefinition">JobDefinition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/batch/#pulumi_aws.batch.JobDefinition">JobDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_properties</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">retry_strategy</span><span class="p">:</span> <span class="nx">Optional[JobDefinitionRetryStrategyArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[JobDefinitionTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +635,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#retry_strategy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -658,7 +658,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
@@ -849,7 +849,8 @@ Get an existing JobDefinition resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>revision=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_properties</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">retry_strategy</span><span class="p">:</span> <span class="nx">Optional[JobDefinitionRetryStrategyArgs]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[JobDefinitionTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> JobDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1294,7 +1295,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}</dd>
@@ -1305,7 +1306,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#state_retry_strategy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -1328,7 +1329,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
@@ -1523,8 +1524,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attemptdurationseconds_python">
-<a href="#attemptdurationseconds_python" style="color: inherit; text-decoration: inherit;">attempt<wbr>Duration<wbr>Seconds</a>
+        <span id="attempt_duration_seconds_python">
+<a href="#attempt_duration_seconds_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

@@ -379,7 +379,7 @@ const example = new aws.glue.Classifier("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Classifier">Classifier</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>csv_classifier=None<span class="p">, </span>grok_classifier=None<span class="p">, </span>json_classifier=None<span class="p">, </span>name=None<span class="p">, </span>xml_classifier=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Classifier">Classifier</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csv_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierCsvClassifierArgs]</span> = None<span class="p">, </span><span class="nx">grok_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierGrokClassifierArgs]</span> = None<span class="p">, </span><span class="nx">json_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierJsonClassifierArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xml_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierXmlClassifierArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +743,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#csv_classifier_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grok_classifier_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#json_classifier_python" style="color: inherit; text-decoration: inherit;">json_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#xml_classifier_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
@@ -890,7 +890,8 @@ Get an existing Classifier resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>csv_classifier=None<span class="p">, </span>grok_classifier=None<span class="p">, </span>json_classifier=None<span class="p">, </span>name=None<span class="p">, </span>xml_classifier=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csv_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierCsvClassifierArgs]</span> = None<span class="p">, </span><span class="nx">grok_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierGrokClassifierArgs]</span> = None<span class="p">, </span><span class="nx">json_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierJsonClassifierArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xml_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierXmlClassifierArgs]</span> = None<span class="p">) -&gt;</span> Classifier</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1196,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_csv_classifier_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
@@ -1207,7 +1208,7 @@ The following state arguments are supported:
 <a href="#state_grok_classifier_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
@@ -1218,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_json_classifier_python" style="color: inherit; text-decoration: inherit;">json_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
@@ -1240,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_xml_classifier_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>classifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
@@ -1499,8 +1500,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsinglecolumn_python">
-<a href="#allowsinglecolumn_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Single<wbr>Column</a>
+        <span id="allow_single_column_python">
+<a href="#allow_single_column_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>single_<wbr>column</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1510,8 +1511,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containsheader_python">
-<a href="#containsheader_python" style="color: inherit; text-decoration: inherit;">contains<wbr>Header</a>
+        <span id="contains_header_python">
+<a href="#contains_header_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1532,8 +1533,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablevaluetrimming_python">
-<a href="#disablevaluetrimming_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Value<wbr>Trimming</a>
+        <span id="disable_value_trimming_python">
+<a href="#disable_value_trimming_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>value_<wbr>trimming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1554,8 +1555,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quotesymbol_python">
-<a href="#quotesymbol_python" style="color: inherit; text-decoration: inherit;">quote<wbr>Symbol</a>
+        <span id="quote_symbol_python">
+<a href="#quote_symbol_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>symbol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1721,8 +1722,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="grokpattern_python">
-<a href="#grokpattern_python" style="color: inherit; text-decoration: inherit;">grok<wbr>Pattern</a>
+        <span id="grok_pattern_python">
+<a href="#grok_pattern_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1732,8 +1733,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custompatterns_python">
-<a href="#custompatterns_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Patterns</a>
+        <span id="custom_patterns_python">
+<a href="#custom_patterns_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1822,8 +1823,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="jsonpath_python">
-<a href="#jsonpath_python" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
+        <span id="json_path_python">
+<a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1956,8 +1957,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rowtag_python">
-<a href="#rowtag_python" style="color: inherit; text-decoration: inherit;">row<wbr>Tag</a>
+        <span id="row_tag_python">
+<a href="#row_tag_python" style="color: inherit; text-decoration: inherit;">row_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

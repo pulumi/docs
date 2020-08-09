@@ -144,7 +144,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualRouter">VirtualRouter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualRouter">VirtualRouter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualRouterSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -486,7 +486,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspec">Dict[Virtual<wbr>Router<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router specification to apply.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -743,7 +743,8 @@ Get an existing VirtualRouter resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualRouterSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualRouter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1170,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspec">Dict[Virtual<wbr>Router<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router specification to apply.
 {{% /md %}}</dd>
@@ -1181,7 +1182,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1282,7 +1283,7 @@ Currently only one listener is supported per virtual router.
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistener">Dict[Virtual<wbr>Router<wbr>Spec<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the virtual router is expected to receive inbound traffic from.
 Currently only one listener is supported per virtual router.
@@ -1369,11 +1370,11 @@ Currently only one listener is supported per virtual router.
 
     <dt class="property-required"
             title="Required">
-        <span id="portmapping_python">
-<a href="#portmapping_python" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
+        <span id="port_mapping_python">
+<a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Dict[Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>

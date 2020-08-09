@@ -291,7 +291,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dynamodb/#pulumi_aws.dynamodb.GlobalTable">GlobalTable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>replicas=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dynamodb/#pulumi_aws.dynamodb.GlobalTable">GlobalTable</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[List[GlobalTableReplicaArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -556,7 +556,7 @@ The GlobalTable resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></span>
+        <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
@@ -714,7 +714,8 @@ Get an existing GlobalTable resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>replicas=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[List[GlobalTableReplicaArgs]]</span> = None<span class="p">) -&gt;</span> GlobalTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -976,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></span>
+        <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
@@ -1070,8 +1071,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionname_python">
-<a href="#regionname_python" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+        <span id="region_name_python">
+<a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

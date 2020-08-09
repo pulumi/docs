@@ -305,7 +305,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.Inventory">Inventory</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>destination=None<span class="p">, </span>enabled=None<span class="p">, </span>filter=None<span class="p">, </span>included_object_versions=None<span class="p">, </span>name=None<span class="p">, </span>optional_fields=None<span class="p">, </span>schedule=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.Inventory">Inventory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[InventoryDestinationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[InventoryFilterArgs]</span> = None<span class="p">, </span><span class="nx">included_object_versions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_fields</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[InventoryScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -782,7 +782,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestination">Dict[Inventory<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#inventorydestination">Inventory<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about where to publish the inventory results (documented below).
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventoryschedule">Dict[Inventory<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#inventoryschedule">Inventory<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for generating inventory results (documented below).
 {{% /md %}}</dd>
@@ -826,7 +826,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventoryfilter">Dict[Inventory<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#inventoryfilter">Inventory<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
 {{% /md %}}</dd>
@@ -952,7 +952,8 @@ Get an existing Inventory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket=None<span class="p">, </span>destination=None<span class="p">, </span>enabled=None<span class="p">, </span>filter=None<span class="p">, </span>included_object_versions=None<span class="p">, </span>name=None<span class="p">, </span>optional_fields=None<span class="p">, </span>schedule=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[InventoryDestinationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[InventoryFilterArgs]</span> = None<span class="p">, </span><span class="nx">included_object_versions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_fields</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[InventoryScheduleArgs]</span> = None<span class="p">) -&gt;</span> Inventory</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1371,7 +1372,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestination">Dict[Inventory<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#inventorydestination">Inventory<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about where to publish the inventory results (documented below).
 {{% /md %}}</dd>
@@ -1393,7 +1394,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventoryfilter">Dict[Inventory<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#inventoryfilter">Inventory<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
 {{% /md %}}</dd>
@@ -1438,7 +1439,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventoryschedule">Dict[Inventory<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#inventoryschedule">Inventory<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for generating inventory results (documented below).
 {{% /md %}}</dd>
@@ -1536,7 +1537,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestinationbucket">Dict[Inventory<wbr>Destination<wbr>Bucket]</a></span>
+        <span class="property-type"><a href="#inventorydestinationbucket">Inventory<wbr>Destination<wbr>Bucket<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket configuration where inventory results are published (documented below).
 {{% /md %}}</dd>
@@ -1754,8 +1755,8 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1791,7 +1792,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestinationbucketencryption">Dict[Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#inventorydestinationbucketencryption">Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the type of server-side encryption to use to encrypt the inventory (documented below).
 {{% /md %}}</dd>
@@ -1921,22 +1922,22 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssekms_python">
-<a href="#ssekms_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms</a>
+        <span id="sse_kms_python">
+<a href="#sse_kms_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestinationbucketencryptionssekms">Dict[Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms]</a></span>
+        <span class="property-type"><a href="#inventorydestinationbucketencryptionssekms">Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the inventory file (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sses3_python">
-<a href="#sses3_python" style="color: inherit; text-decoration: inherit;">sse<wbr>S3</a>
+        <span id="sse_s3_python">
+<a href="#sse_s3_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inventorydestinationbucketencryptionsses3">Dict[Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>S3]</a></span>
+        <span class="property-type"><a href="#inventorydestinationbucketencryptionsses3">Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to encrypt the inventory file.
 {{% /md %}}</dd>

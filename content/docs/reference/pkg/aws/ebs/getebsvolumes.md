@@ -27,7 +27,7 @@ This data source can be useful for getting a list of volume IDs with (for exampl
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ebs_volumes(</span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ebs_volumes(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetEbsVolumesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEbsVolumesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -148,7 +148,7 @@ a pair on the desired volumes.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getebsvolumesfilter">List[Get<wbr>Ebs<wbr>Volumes<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getebsvolumesfilter">List[Get<wbr>Ebs<wbr>Volumes<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ a pair on the desired volumes.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired volumes.
@@ -374,7 +374,7 @@ no volumes match the provided criteria.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -40,7 +40,7 @@ browser.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elb/#pulumi_aws.elb.LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_logs=None<span class="p">, </span>availability_zones=None<span class="p">, </span>connection_draining=None<span class="p">, </span>connection_draining_timeout=None<span class="p">, </span>cross_zone_load_balancing=None<span class="p">, </span>health_check=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>instances=None<span class="p">, </span>internal=None<span class="p">, </span>listeners=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>security_groups=None<span class="p">, </span>source_security_group=None<span class="p">, </span>subnets=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elb/#pulumi_aws.elb.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerListenerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -779,7 +779,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd>
@@ -790,7 +790,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd>
@@ -845,7 +845,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1235,7 +1235,8 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_logs=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>connection_draining=None<span class="p">, </span>connection_draining_timeout=None<span class="p">, </span>cross_zone_load_balancing=None<span class="p">, </span>dns_name=None<span class="p">, </span>health_check=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>instances=None<span class="p">, </span>internal=None<span class="p">, </span>listeners=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>security_groups=None<span class="p">, </span>source_security_group=None<span class="p">, </span>source_security_group_id=None<span class="p">, </span>subnets=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerListenerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2054,7 +2055,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd>
@@ -2131,7 +2132,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd>
@@ -2175,7 +2176,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd>
@@ -2258,7 +2259,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2726,8 +2727,8 @@ values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2773,8 +2774,8 @@ values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3004,18 +3005,6 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
     <dt class="property-required"
             title="Required">
-        <span id="instanceprotocol_python">
-<a href="#instanceprotocol_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Protocol</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The protocol to use to the instance. Valid
-values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instance_port_python">
 <a href="#instance_port_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>port</a>
 </span> 
@@ -3027,14 +3016,14 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 
     <dt class="property-required"
             title="Required">
-        <span id="lbprotocol_python">
-<a href="#lbprotocol_python" style="color: inherit; text-decoration: inherit;">lb<wbr>Protocol</a>
+        <span id="instance_protocol_python">
+<a href="#instance_protocol_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
-`HTTPS`, `TCP`, or `SSL`
+    <dd>{{% md %}}The protocol to use to the instance. Valid
+values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3048,10 +3037,22 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
     <dd>{{% md %}}The port to listen on for the load balancer
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="lb_protocol_python">
+<a href="#lb_protocol_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
+`HTTPS`, `TCP`, or `SSL`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertificateid_python">
-<a href="#sslcertificateid_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Id</a>
+        <span id="ssl_certificate_id_python">
+<a href="#ssl_certificate_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

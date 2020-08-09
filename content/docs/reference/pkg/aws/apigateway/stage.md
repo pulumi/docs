@@ -308,7 +308,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Stage">Stage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_log_settings=None<span class="p">, </span>cache_cluster_enabled=None<span class="p">, </span>cache_cluster_size=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>deployment=None<span class="p">, </span>description=None<span class="p">, </span>documentation_version=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_name=None<span class="p">, </span>tags=None<span class="p">, </span>variables=None<span class="p">, </span>xray_tracing_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Stage">Stage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_log_settings</span><span class="p">:</span> <span class="nx">Optional[StageAccessLogSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cache_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cache_cluster_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">xray_tracing_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -906,7 +906,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the deployment that the stage points to
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
@@ -939,7 +939,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables access logs for the API stage. Detailed below.
 {{% /md %}}</dd>
@@ -1006,7 +1006,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1017,7 +1017,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables
 {{% /md %}}</dd>
@@ -1275,7 +1275,8 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_log_settings=None<span class="p">, </span>arn=None<span class="p">, </span>cache_cluster_enabled=None<span class="p">, </span>cache_cluster_size=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>deployment=None<span class="p">, </span>description=None<span class="p">, </span>documentation_version=None<span class="p">, </span>execution_arn=None<span class="p">, </span>invoke_url=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_name=None<span class="p">, </span>tags=None<span class="p">, </span>variables=None<span class="p">, </span>xray_tracing_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_log_settings</span><span class="p">:</span> <span class="nx">Optional[StageAccessLogSettingsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cache_cluster_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invoke_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">xray_tracing_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Stage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1923,7 +1924,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 <a href="#state_access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables access logs for the API stage. Detailed below.
 {{% /md %}}</dd>
@@ -1979,7 +1980,7 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 <a href="#state_deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the deployment that the stage points to
 {{% /md %}}</dd>
@@ -2037,7 +2038,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
@@ -2059,7 +2060,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2070,7 +2071,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables
 {{% /md %}}</dd>

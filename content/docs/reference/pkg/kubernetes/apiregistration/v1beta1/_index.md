@@ -36,7 +36,7 @@ Explore the resources and functions of the apiregistration/v1beta1 module in the
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiregistration/v1beta1/#" title="@pulumi/kubernetes/apiregistration/v1beta1">@pulumi/kubernetes/apiregistration/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiregistration.k8s.io/v1beta1" title="pulumi_kubernetes/apiregistration.k8s.io/v1beta1">pulumi_kubernetes/apiregistration.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiregistration/v1beta1" title="pulumi_kubernetes/apiregistration/v1beta1">pulumi_kubernetes/apiregistration/v1beta1</a></dd>
 
 </dl>
 

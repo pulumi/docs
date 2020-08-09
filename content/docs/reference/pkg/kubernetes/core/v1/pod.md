@@ -38,7 +38,7 @@ by setting the 'customTimeouts' option on the resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Pod">Pod</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>spec=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Pod">Pod</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.PodSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,7 +297,7 @@ The Pod resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ The Pod resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podspec">Dict[Pod<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#podspec">Pod<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -426,7 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podstatus">Dict[Pod<wbr>Status]</a></span>
+        <span class="property-type"><a href="#podstatus">Pod<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaffinity">Dict[Node<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#nodeaffinity">Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes node affinity scheduling rules for the pod.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_affinity_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>affinity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinity">Dict[Pod<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#podaffinity">Pod<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_anti_affinity_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>anti_<wbr>affinity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podantiaffinity">Dict[Pod<wbr>Anti<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#podantiaffinity">Pod<wbr>Anti<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd>
 
@@ -1470,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.{{% /md %}}</dd>
 
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_attributes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.{{% /md %}}</dd>
 
@@ -1886,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -2099,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd>
 
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List[Key<wbr>To<wbr>Path]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd>
 
@@ -2731,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List[Key<wbr>To<wbr>Path]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd>
 
@@ -3494,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">List[Env<wbr>Var]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd>
 
@@ -3504,7 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">List[Env<wbr>From<wbr>Source]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd>
 
@@ -3534,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Dict[Lifecycle]</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated.{{% /md %}}</dd>
 
@@ -3544,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd>
 
@@ -3554,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated.{{% /md %}}</dd>
 
@@ -3564,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd>
 
@@ -3574,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Dict[Resource<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -3584,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Dict[Security<wbr>Context]</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd>
 
@@ -3594,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. This is a beta feature enabled by the StartupProbe feature flag. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd>
 
@@ -3654,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List[Volume<wbr>Device]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd>
 
@@ -3664,7 +3664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List[Volume<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd>
 
@@ -4060,7 +4060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#running_python" style="color: inherit; text-decoration: inherit;">running</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstaterunning">Dict[Container<wbr>State<wbr>Running]</a></span>
+        <span class="property-type"><a href="#containerstaterunning">Container<wbr>State<wbr>Running<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details about a running container{{% /md %}}</dd>
 
@@ -4070,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminated_python" style="color: inherit; text-decoration: inherit;">terminated</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateterminated">Dict[Container<wbr>State<wbr>Terminated]</a></span>
+        <span class="property-type"><a href="#containerstateterminated">Container<wbr>State<wbr>Terminated<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details about a terminated container{{% /md %}}</dd>
 
@@ -4080,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waiting_python" style="color: inherit; text-decoration: inherit;">waiting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstatewaiting">Dict[Container<wbr>State<wbr>Waiting]</a></span>
+        <span class="property-type"><a href="#containerstatewaiting">Container<wbr>State<wbr>Waiting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details about a waiting container{{% /md %}}</dd>
 
@@ -4992,7 +4992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstate">Dict[Container<wbr>State]</a></span>
+        <span class="property-type"><a href="#containerstate">Container<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details about the container's last termination condition.{{% /md %}}</dd>
 
@@ -5012,7 +5012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstate">Dict[Container<wbr>State]</a></span>
+        <span class="property-type"><a href="#containerstate">Container<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details about the container's current condition.{{% /md %}}</dd>
 
@@ -5095,7 +5095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">List[Downward<wbr>APIVolume<wbr>File]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of DownwardAPIVolume file{{% /md %}}</dd>
 
@@ -5278,7 +5278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Dict[Object<wbr>Field<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.{{% /md %}}</dd>
 
@@ -5298,7 +5298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Dict[Resource<wbr>Field<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.{{% /md %}}</dd>
 
@@ -5421,7 +5421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">List[Downward<wbr>APIVolume<wbr>File]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of downward API volume file{{% /md %}}</dd>
 
@@ -5687,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Dict[Config<wbr>Map<wbr>Env<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd>
 
@@ -5707,7 +5707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Dict[Secret<wbr>Env<wbr>Source]</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd>
 
@@ -5870,7 +5870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Dict[Env<wbr>Var<wbr>Source]</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd>
 
@@ -6043,7 +6043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Dict[Config<wbr>Map<wbr>Key<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd>
 
@@ -6053,7 +6053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Dict[Object<wbr>Field<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, metadata.labels, metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd>
 
@@ -6063,7 +6063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Dict[Resource<wbr>Field<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd>
 
@@ -6073,7 +6073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Dict[Secret<wbr>Key<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd>
 
@@ -6846,7 +6846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">List[Env<wbr>Var]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd>
 
@@ -6856,7 +6856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">List[Env<wbr>From<wbr>Source]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd>
 
@@ -6886,7 +6886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Dict[Lifecycle]</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -6896,7 +6896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -6906,7 +6906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -6916,7 +6916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -6926,7 +6926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Dict[Resource<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd>
 
@@ -6936,7 +6936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Dict[Security<wbr>Context]</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -6946,7 +6946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Dict[Probe]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd>
 
@@ -7016,7 +7016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List[Volume<wbr>Device]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd>
 
@@ -7026,7 +7026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List[Volume<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd>
 
@@ -7585,7 +7585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional: Extra command options if any.{{% /md %}}</dd>
 
@@ -7605,7 +7605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd>
 
@@ -8460,7 +8460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">integer | string</span>
+        <span class="property-type">Union[float, str]</span>
     </dt>
     <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd>
 
@@ -8480,7 +8480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">List[HTTPHeader]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd>
 
@@ -8766,7 +8766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Dict[Exec<wbr>Action]</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd>
 
@@ -8776,7 +8776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">Dict[HTTPGet<wbr>Action]</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd>
 
@@ -8786,7 +8786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">Dict[TCPSocket<wbr>Action]</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd>
 
@@ -9515,7 +9515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd>
 
@@ -9791,7 +9791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List[Label<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -9801,7 +9801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_labels_python" style="color: inherit; text-decoration: inherit;">match_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
 
@@ -10077,7 +10077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Dict[Handler]</a></span>
+        <span class="property-type"><a href="#handler">Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd>
 
@@ -10087,7 +10087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Dict[Handler]</a></span>
+        <span class="property-type"><a href="#handler">Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd>
 
@@ -10423,7 +10423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -10729,7 +10729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferredschedulingterm">List[Preferred<wbr>Scheduling<wbr>Term]</a></span>
+        <span class="property-type"><a href="#preferredschedulingterm">Preferred<wbr>Scheduling<wbr>Term<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd>
 
@@ -10739,7 +10739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">Dict[Node<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.{{% /md %}}</dd>
 
@@ -10822,7 +10822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_selector_terms_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector_<wbr>terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">List[Node<wbr>Selector<wbr>Term]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd>
 
@@ -11098,7 +11098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd>
 
@@ -11108,7 +11108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_fields_python" style="color: inherit; text-decoration: inherit;">match_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd>
 
@@ -11812,7 +11812,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -11900,7 +11900,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -11910,7 +11910,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -11942,7 +11942,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -12620,7 +12620,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">List[Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd>
 
@@ -12630,7 +12630,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">List[Pod<wbr>Affinity<wbr>Term]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd>
 
@@ -12783,7 +12783,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd>
 
@@ -12906,7 +12906,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">List[Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd>
 
@@ -12916,7 +12916,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">List[Pod<wbr>Affinity<wbr>Term]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd>
 
@@ -13352,7 +13352,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfigoption">List[Pod<wbr>DNSConfig<wbr>Option]</a></span>
+        <span class="property-type"><a href="#poddnsconfigoption">Pod<wbr>DNSConfig<wbr>Option<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.{{% /md %}}</dd>
 
@@ -14040,7 +14040,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.{{% /md %}}</dd>
 
@@ -14050,7 +14050,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#supplemental_groups_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.{{% /md %}}</dd>
 
@@ -14060,7 +14060,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctl">List[Sysctl]</a></span>
+        <span class="property-type"><a href="#sysctl">Sysctl<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.{{% /md %}}</dd>
 
@@ -14070,7 +14070,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Dict[Windows<wbr>Security<wbr>Context<wbr>Options]</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd>
 
@@ -15143,7 +15143,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">List[Container]</a></span>
+        <span class="property-type"><a href="#container">Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.{{% /md %}}</dd>
 
@@ -15163,7 +15163,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#affinity_python" style="color: inherit; text-decoration: inherit;">affinity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#affinity">Dict[Affinity]</a></span>
+        <span class="property-type"><a href="#affinity">Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's scheduling constraints{{% /md %}}</dd>
 
@@ -15183,7 +15183,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfig">Dict[Pod<wbr>DNSConfig]</a></span>
+        <span class="property-type"><a href="#poddnsconfig">Pod<wbr>DNSConfig<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.{{% /md %}}</dd>
 
@@ -15213,7 +15213,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#ephemeral_containers_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">List[Ephemeral<wbr>Container]</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is alpha-level and is only honored by servers that enable the EphemeralContainers feature.{{% /md %}}</dd>
 
@@ -15223,7 +15223,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostalias">List[Host<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#hostalias">Host<wbr>Alias<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.{{% /md %}}</dd>
 
@@ -15273,7 +15273,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#image_pull_secrets_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">List[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod{{% /md %}}</dd>
 
@@ -15283,7 +15283,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">List[Container]</a></span>
+        <span class="property-type"><a href="#container">Container<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/{{% /md %}}</dd>
 
@@ -15303,7 +15303,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#node_selector_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/{{% /md %}}</dd>
 
@@ -15313,7 +15313,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#overhead_python" style="color: inherit; text-decoration: inherit;">overhead</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd>
 
@@ -15353,7 +15353,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#readiness_gates_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>gates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podreadinessgate">List[Pod<wbr>Readiness<wbr>Gate]</a></span>
+        <span class="property-type"><a href="#podreadinessgate">Pod<wbr>Readiness<wbr>Gate<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd>
 
@@ -15393,7 +15393,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritycontext">Dict[Pod<wbr>Security<wbr>Context]</a></span>
+        <span class="property-type"><a href="#podsecuritycontext">Pod<wbr>Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.{{% /md %}}</dd>
 
@@ -15453,7 +15453,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tolerations_python" style="color: inherit; text-decoration: inherit;">tolerations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toleration">List[Toleration]</a></span>
+        <span class="property-type"><a href="#toleration">Toleration<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's tolerations.{{% /md %}}</dd>
 
@@ -15463,7 +15463,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#topology_spread_constraints_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>spread_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topologyspreadconstraint">List[Topology<wbr>Spread<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#topologyspreadconstraint">Topology<wbr>Spread<wbr>Constraint<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. This field is only honored by clusters that enable the EvenPodsSpread feature. All topologySpreadConstraints are ANDed.{{% /md %}}</dd>
 
@@ -15473,7 +15473,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">List[Volume]</a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes{{% /md %}}</dd>
 
@@ -15928,7 +15928,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podcondition">List[Pod<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#podcondition">Pod<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions{{% /md %}}</dd>
 
@@ -15938,7 +15938,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#container_statuses_python" style="color: inherit; text-decoration: inherit;">container_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstatus">List[Container<wbr>Status]</a></span>
+        <span class="property-type"><a href="#containerstatus">Container<wbr>Status<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The list has one entry per container in the manifest. Each entry is currently the output of `docker inspect`. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status{{% /md %}}</dd>
 
@@ -15948,7 +15948,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#ephemeral_container_statuses_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>container_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstatus">List[Container<wbr>Status]</a></span>
+        <span class="property-type"><a href="#containerstatus">Container<wbr>Status<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Status for any ephemeral containers that have run in this pod. This field is alpha-level and is only populated by servers that enable the EphemeralContainers feature.{{% /md %}}</dd>
 
@@ -15968,7 +15968,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#init_container_statuses_python" style="color: inherit; text-decoration: inherit;">init_<wbr>container_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstatus">List[Container<wbr>Status]</a></span>
+        <span class="property-type"><a href="#containerstatus">Container<wbr>Status<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The list has one entry per init container in the manifest. The most recent successful init container will have ready = true, the most recently started container will have startTime set. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status{{% /md %}}</dd>
 
@@ -16022,7 +16022,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#pod_ips_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podip">List[Pod<wbr>IP]</a></span>
+        <span class="property-type"><a href="#podip">Pod<wbr>IPArgs]]</a></span>
     </dt>
     <dd>{{% md %}}podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This list is empty if no IPs have been allocated yet.{{% /md %}}</dd>
 
@@ -16328,7 +16328,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">Dict[Node<wbr>Selector<wbr>Term]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A node selector term, associated with the corresponding weight.{{% /md %}}</dd>
 
@@ -16631,7 +16631,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Dict[Exec<wbr>Action]</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd>
 
@@ -16651,7 +16651,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">Dict[HTTPGet<wbr>Action]</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd>
 
@@ -16691,7 +16691,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">Dict[TCPSocket<wbr>Action]</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd>
 
@@ -16814,7 +16814,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeprojection">List[Volume<wbr>Projection]</a></span>
+        <span class="property-type"><a href="#volumeprojection">Volume<wbr>Projection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}list of volume projections{{% /md %}}</dd>
 
@@ -17460,7 +17460,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -17746,7 +17746,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -17756,7 +17756,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -18322,7 +18322,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd>
 
@@ -18831,7 +18831,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List[Key<wbr>To<wbr>Path]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd>
 
@@ -19034,7 +19034,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List[Key<wbr>To<wbr>Path]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd>
 
@@ -19417,7 +19417,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Dict[Capabilities]</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd>
 
@@ -19487,7 +19487,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd>
 
@@ -19497,7 +19497,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Dict[Windows<wbr>Security<wbr>Context<wbr>Options]</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd>
 
@@ -19883,7 +19883,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd>
 
@@ -20139,7 +20139,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">integer | string</span>
+        <span class="property-type">Union[float, str]</span>
     </dt>
     <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd>
 
@@ -20595,7 +20595,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.{{% /md %}}</dd>
 
@@ -21528,7 +21528,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#aws_elastic_block_store_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>elastic_<wbr>block_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">Dict[AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd>
 
@@ -21538,7 +21538,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#azure_disk_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">Dict[Azure<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd>
 
@@ -21548,7 +21548,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumesource">Dict[Azure<wbr>File<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#azurefilevolumesource">Azure<wbr>File<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd>
 
@@ -21558,7 +21558,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#cephfs_python" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfsvolumesource">Dict[Ceph<wbr>FSVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#cephfsvolumesource">Ceph<wbr>FSVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd>
 
@@ -21568,7 +21568,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#cinder_python" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cindervolumesource">Dict[Cinder<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#cindervolumesource">Cinder<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd>
 
@@ -21578,7 +21578,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">Dict[Config<wbr>Map<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap represents a configMap that should populate this volume{{% /md %}}</dd>
 
@@ -21588,7 +21588,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#csi_python" style="color: inherit; text-decoration: inherit;">csi</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csivolumesource">Dict[CSIVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#csivolumesource">CSIVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CSI (Container Storage Interface) represents storage that is handled by an external CSI driver (Alpha feature).{{% /md %}}</dd>
 
@@ -21598,7 +21598,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#downward_api_python" style="color: inherit; text-decoration: inherit;">downward_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumesource">Dict[Downward<wbr>APIVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#downwardapivolumesource">Downward<wbr>APIVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DownwardAPI represents downward API about the pod that should populate this volume{{% /md %}}</dd>
 
@@ -21608,7 +21608,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#empty_dir_python" style="color: inherit; text-decoration: inherit;">empty_<wbr>dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptydirvolumesource">Dict[Empty<wbr>Dir<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#emptydirvolumesource">Empty<wbr>Dir<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir{{% /md %}}</dd>
 
@@ -21618,7 +21618,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">Dict[FCVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd>
 
@@ -21628,7 +21628,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#flex_volume_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexvolumesource">Dict[Flex<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#flexvolumesource">Flex<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd>
 
@@ -21638,7 +21638,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#flocker_python" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">Dict[Flocker<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running{{% /md %}}</dd>
 
@@ -21648,7 +21648,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#gce_persistent_disk_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">Dict[GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd>
 
@@ -21658,7 +21658,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumesource">Dict[Git<wbr>Repo<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#gitrepovolumesource">Git<wbr>Repo<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.{{% /md %}}</dd>
 
@@ -21668,7 +21668,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#glusterfs_python" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfsvolumesource">Dict[Glusterfs<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#glusterfsvolumesource">Glusterfs<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd>
 
@@ -21678,7 +21678,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">Dict[Host<wbr>Path<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd>
 
@@ -21688,7 +21688,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#iscsi_python" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsivolumesource">Dict[ISCSIVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#iscsivolumesource">ISCSIVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md{{% /md %}}</dd>
 
@@ -21698,7 +21698,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#nfs_python" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">Dict[NFSVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd>
 
@@ -21708,7 +21708,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#persistent_volume_claim_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claim</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Dict[Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
 
@@ -21718,7 +21718,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#photon_persistent_disk_python" style="color: inherit; text-decoration: inherit;">photon_<wbr>persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Dict[Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -21728,7 +21728,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#portworx_volume_python" style="color: inherit; text-decoration: inherit;">portworx_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">Dict[Portworx<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -21738,7 +21738,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#projected_python" style="color: inherit; text-decoration: inherit;">projected</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectedvolumesource">Dict[Projected<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#projectedvolumesource">Projected<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Items for all in one resources secrets, configmaps, and downward API{{% /md %}}</dd>
 
@@ -21748,7 +21748,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#quobyte_python" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">Dict[Quobyte<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd>
 
@@ -21758,7 +21758,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#rbd_python" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdvolumesource">Dict[RBDVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#rbdvolumesource">RBDVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd>
 
@@ -21768,7 +21768,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#scale_io_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>io</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiovolumesource">Dict[Scale<wbr>IOVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#scaleiovolumesource">Scale<wbr>IOVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd>
 
@@ -21778,7 +21778,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">Dict[Secret<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret{{% /md %}}</dd>
 
@@ -21788,7 +21788,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#storageos_python" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageosvolumesource">Dict[Storage<wbr>OSVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#storageosvolumesource">Storage<wbr>OSVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd>
 
@@ -21798,7 +21798,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#vsphere_volume_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Dict[Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -22377,7 +22377,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapprojection">Dict[Config<wbr>Map<wbr>Projection]</a></span>
+        <span class="property-type"><a href="#configmapprojection">Config<wbr>Map<wbr>Projection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}information about the configMap data to project{{% /md %}}</dd>
 
@@ -22387,7 +22387,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#downward_api_python" style="color: inherit; text-decoration: inherit;">downward_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapiprojection">Dict[Downward<wbr>APIProjection]</a></span>
+        <span class="property-type"><a href="#downwardapiprojection">Downward<wbr>APIProjection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}information about the downwardAPI data to project{{% /md %}}</dd>
 
@@ -22397,7 +22397,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretprojection">Dict[Secret<wbr>Projection]</a></span>
+        <span class="property-type"><a href="#secretprojection">Secret<wbr>Projection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}information about the secret data to project{{% /md %}}</dd>
 
@@ -22407,7 +22407,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#service_account_token_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccounttokenprojection">Dict[Service<wbr>Account<wbr>Token<wbr>Projection]</a></span>
+        <span class="property-type"><a href="#serviceaccounttokenprojection">Service<wbr>Account<wbr>Token<wbr>Projection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}information about the serviceAccountToken data to project{{% /md %}}</dd>
 
@@ -22723,7 +22723,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 <a href="#pod_affinity_term_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>affinity_<wbr>term</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">Dict[Pod<wbr>Affinity<wbr>Term]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A pod affinity term, associated with the corresponding weight.{{% /md %}}</dd>
 

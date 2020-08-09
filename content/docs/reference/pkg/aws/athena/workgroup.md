@@ -139,7 +139,7 @@ const example = new aws.athena.Workgroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/athena/#pulumi_aws.athena.Workgroup">Workgroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configuration=None<span class="p">, </span>description=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/athena/#pulumi_aws.athena.Workgroup">Workgroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[WorkgroupConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -536,7 +536,7 @@ The Workgroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ The Workgroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -738,7 +738,8 @@ Get an existing Workgroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>configuration=None<span class="p">, </span>description=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[WorkgroupConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Workgroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1121,7 +1122,7 @@ The following state arguments are supported:
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -1176,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -1369,8 +1370,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bytesscannedcutoffperquery_python">
-<a href="#bytesscannedcutoffperquery_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+        <span id="bytes_scanned_cutoff_per_query_python">
+<a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1380,8 +1381,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforceworkgroupconfiguration_python">
-<a href="#enforceworkgroupconfiguration_python" style="color: inherit; text-decoration: inherit;">enforce<wbr>Workgroup<wbr>Configuration</a>
+        <span id="enforce_workgroup_configuration_python">
+<a href="#enforce_workgroup_configuration_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>workgroup_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1391,8 +1392,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publishcloudwatchmetricsenabled_python">
-<a href="#publishcloudwatchmetricsenabled_python" style="color: inherit; text-decoration: inherit;">publish<wbr>Cloudwatch<wbr>Metrics<wbr>Enabled</a>
+        <span id="publish_cloudwatch_metrics_enabled_python">
+<a href="#publish_cloudwatch_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>cloudwatch_<wbr>metrics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1402,11 +1403,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resultconfiguration_python">
-<a href="#resultconfiguration_python" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration</a>
+        <span id="result_configuration_python">
+<a href="#result_configuration_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Dict[Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd>
@@ -1529,7 +1530,7 @@ The following state arguments are supported:
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Dict[Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd>
@@ -1659,8 +1660,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptionoption_python">
-<a href="#encryptionoption_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Option</a>
+        <span id="encryption_option_python">
+<a href="#encryption_option_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

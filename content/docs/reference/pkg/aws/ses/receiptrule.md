@@ -165,7 +165,7 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.ReceiptRule">ReceiptRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_header_actions=None<span class="p">, </span>after=None<span class="p">, </span>bounce_actions=None<span class="p">, </span>enabled=None<span class="p">, </span>lambda_actions=None<span class="p">, </span>name=None<span class="p">, </span>recipients=None<span class="p">, </span>rule_set_name=None<span class="p">, </span>s3_actions=None<span class="p">, </span>scan_enabled=None<span class="p">, </span>sns_actions=None<span class="p">, </span>stop_actions=None<span class="p">, </span>tls_policy=None<span class="p">, </span>workmail_actions=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.ReceiptRule">ReceiptRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleAddHeaderActionArgs]]</span> = None<span class="p">, </span><span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleBounceActionArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleLambdaActionArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleS3ActionArgs]]</span> = None<span class="p">, </span><span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleSnsActionArgs]]</span> = None<span class="p">, </span><span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleStopActionArgs]]</span> = None<span class="p">, </span><span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleWorkmailActionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -837,7 +837,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">List[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List[Receipt<wbr>Rule<wbr>Bounce<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">List[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List[Receipt<wbr>Rule<wbr>Lambda<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">List[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List[Receipt<wbr>Rule<wbr>S3Action]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">List[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List[Receipt<wbr>Rule<wbr>Sns<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">List[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -947,7 +947,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List[Receipt<wbr>Rule<wbr>Stop<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">List[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -969,7 +969,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List[Receipt<wbr>Rule<wbr>Workmail<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">List[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1072,7 +1072,8 @@ Get an existing ReceiptRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>add_header_actions=None<span class="p">, </span>after=None<span class="p">, </span>bounce_actions=None<span class="p">, </span>enabled=None<span class="p">, </span>lambda_actions=None<span class="p">, </span>name=None<span class="p">, </span>recipients=None<span class="p">, </span>rule_set_name=None<span class="p">, </span>s3_actions=None<span class="p">, </span>scan_enabled=None<span class="p">, </span>sns_actions=None<span class="p">, </span>stop_actions=None<span class="p">, </span>tls_policy=None<span class="p">, </span>workmail_actions=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleAddHeaderActionArgs]]</span> = None<span class="p">, </span><span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleBounceActionArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleLambdaActionArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleS3ActionArgs]]</span> = None<span class="p">, </span><span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleSnsActionArgs]]</span> = None<span class="p">, </span><span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleStopActionArgs]]</span> = None<span class="p">, </span><span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[List[ReceiptRuleWorkmailActionArgs]]</span> = None<span class="p">) -&gt;</span> ReceiptRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1675,7 +1676,7 @@ The following state arguments are supported:
 <a href="#state_add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">List[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1697,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List[Receipt<wbr>Rule<wbr>Bounce<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">List[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1719,7 +1720,7 @@ The following state arguments are supported:
 <a href="#state_lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List[Receipt<wbr>Rule<wbr>Lambda<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">List[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1763,7 +1764,7 @@ The following state arguments are supported:
 <a href="#state_s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List[Receipt<wbr>Rule<wbr>S3Action]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">List[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1785,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List[Receipt<wbr>Rule<wbr>Sns<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">List[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1796,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List[Receipt<wbr>Rule<wbr>Stop<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">List[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1818,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List[Receipt<wbr>Rule<wbr>Workmail<wbr>Action]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">List[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1978,8 +1979,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1989,8 +1990,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2288,8 +2289,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="smtpreplycode_python">
-<a href="#smtpreplycode_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>Reply<wbr>Code</a>
+        <span id="smtp_reply_code_python">
+<a href="#smtp_reply_code_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>reply_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2521,8 +2522,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invocationtype_python">
-<a href="#invocationtype_python" style="color: inherit; text-decoration: inherit;">invocation<wbr>Type</a>
+        <span id="invocation_type_python">
+<a href="#invocation_type_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2787,8 +2788,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="objectkeyprefix_python">
-<a href="#objectkeyprefix_python" style="color: inherit; text-decoration: inherit;">object<wbr>Key<wbr>Prefix</a>
+        <span id="object_key_prefix_python">
+<a href="#object_key_prefix_python" style="color: inherit; text-decoration: inherit;">object_<wbr>key_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3266,8 +3267,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="organizationarn_python">
-<a href="#organizationarn_python" style="color: inherit; text-decoration: inherit;">organization<wbr>Arn</a>
+        <span id="organization_arn_python">
+<a href="#organization_arn_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

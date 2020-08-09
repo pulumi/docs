@@ -480,7 +480,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.Route">Route</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -855,7 +855,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Dict[Route<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1123,7 +1123,8 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1583,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Dict[Route<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -1594,7 +1595,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1768,11 +1769,11 @@ Routes are matched based on the specified value, where `0` is the highest priori
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httproute_python">
-<a href="#httproute_python" style="color: inherit; text-decoration: inherit;">http<wbr>Route</a>
+        <span id="http_route_python">
+<a href="#http_route_python" style="color: inherit; text-decoration: inherit;">http_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Dict[Route<wbr>Spec<wbr>Http<wbr>Route]</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
@@ -1791,11 +1792,11 @@ Routes are matched based on the specified value, where `0` is the highest priori
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcproute_python">
-<a href="#tcproute_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Route</a>
+        <span id="tcp_route_python">
+<a href="#tcp_route_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route]</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
@@ -1918,7 +1919,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
@@ -1929,7 +1930,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match]</a></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an HTTP request match.
 {{% /md %}}</dd>
@@ -2018,11 +2019,11 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-required"
             title="Required">
-        <span id="weightedtargets_python">
-<a href="#weightedtargets_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -2142,8 +2143,8 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2361,7 +2362,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd>
@@ -2561,7 +2562,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd>
@@ -2809,7 +2810,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
@@ -3055,7 +3056,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
@@ -3144,11 +3145,11 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-required"
             title="Required">
-        <span id="weightedtargets_python">
-<a href="#weightedtargets_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -3268,8 +3269,8 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

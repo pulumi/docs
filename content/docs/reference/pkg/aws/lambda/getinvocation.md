@@ -27,7 +27,7 @@ invocation type.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_invocation(</span>function_name=None<span class="p">, </span>input=None<span class="p">, </span>qualifier=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_invocation(</span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInvocationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -487,7 +487,7 @@ The following output properties are available:
 <a href="#result_map_python" style="color: inherit; text-decoration: inherit;">result_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>

@@ -86,7 +86,7 @@ const cloudhsmV2Cluster = new aws.cloudhsmv2.Cluster("cloudhsm_v2_cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudhsmv2/#pulumi_aws.cloudhsmv2.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hsm_type=None<span class="p">, </span>source_backup_identifier=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudhsmv2/#pulumi_aws.cloudhsmv2.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hsm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_backup_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -450,7 +450,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -793,7 +793,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_certificates=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cluster_state=None<span class="p">, </span>hsm_type=None<span class="p">, </span>security_group_id=None<span class="p">, </span>source_backup_identifier=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClusterCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hsm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_backup_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1246,7 +1247,7 @@ The following state arguments are supported:
 <a href="#state_cluster_certificates_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustercertificate">List[Cluster<wbr>Cluster<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#clusterclustercertificate">List[Cluster<wbr>Cluster<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
@@ -1328,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1550,8 +1551,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awshardwarecertificate_python">
-<a href="#awshardwarecertificate_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Hardware<wbr>Certificate</a>
+        <span id="aws_hardware_certificate_python">
+<a href="#aws_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>hardware_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1560,8 +1561,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustercertificate_python">
-<a href="#clustercertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Certificate</a>
+        <span id="cluster_certificate_python">
+<a href="#cluster_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1570,8 +1571,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustercsr_python">
-<a href="#clustercsr_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Csr</a>
+        <span id="cluster_csr_python">
+<a href="#cluster_csr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>csr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1580,8 +1581,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmcertificate_python">
-<a href="#hsmcertificate_python" style="color: inherit; text-decoration: inherit;">hsm<wbr>Certificate</a>
+        <span id="hsm_certificate_python">
+<a href="#hsm_certificate_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1590,8 +1591,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manufacturerhardwarecertificate_python">
-<a href="#manufacturerhardwarecertificate_python" style="color: inherit; text-decoration: inherit;">manufacturer<wbr>Hardware<wbr>Certificate</a>
+        <span id="manufacturer_hardware_certificate_python">
+<a href="#manufacturer_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">manufacturer_<wbr>hardware_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -216,7 +216,7 @@ const grant = new aws.kms.Grant("a", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kms/#pulumi_aws.kms.Grant">Grant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>constraints=None<span class="p">, </span>grant_creation_tokens=None<span class="p">, </span>grantee_principal=None<span class="p">, </span>key_id=None<span class="p">, </span>name=None<span class="p">, </span>operations=None<span class="p">, </span>retire_on_delete=None<span class="p">, </span>retiring_principal=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kms/#pulumi_aws.kms.Grant">Grant</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[List[GrantConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">grant_creation_tokens</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">grantee_principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">retire_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retiring_principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,7 +715,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grantconstraint">List[Grant<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#grantconstraint">List[Grant<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 {{% /md %}}</dd>
@@ -951,7 +951,8 @@ Get an existing Grant resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>constraints=None<span class="p">, </span>grant_creation_tokens=None<span class="p">, </span>grant_id=None<span class="p">, </span>grant_token=None<span class="p">, </span>grantee_principal=None<span class="p">, </span>key_id=None<span class="p">, </span>name=None<span class="p">, </span>operations=None<span class="p">, </span>retire_on_delete=None<span class="p">, </span>retiring_principal=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[List[GrantConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">grant_creation_tokens</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">grant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grantee_principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">retire_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retiring_principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Grant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1425,7 +1426,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <a href="#state_constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grantconstraint">List[Grant<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#grantconstraint">List[Grant<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 {{% /md %}}</dd>
@@ -1652,22 +1653,22 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptioncontextequals_python">
-<a href="#encryptioncontextequals_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Context<wbr>Equals</a>
+        <span id="encryption_context_equals_python">
+<a href="#encryption_context_equals_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>context_<wbr>equals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptioncontextsubset_python">
-<a href="#encryptioncontextsubset_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Context<wbr>Subset</a>
+        <span id="encryption_context_subset_python">
+<a href="#encryption_context_subset_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>context_<wbr>subset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
 {{% /md %}}</dd>

@@ -133,7 +133,7 @@ const route = new aws.ec2.Route("route", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_route_table(</span>filters=None<span class="p">, </span>gateway_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_table(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetRouteTableFilterArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTableResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -388,7 +388,7 @@ a pair on the desired Route Table.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ a pair on the desired Route Table.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired Route Table.
@@ -886,7 +886,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1151,8 +1151,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="routetableassociationid_python">
-<a href="#routetableassociationid_python" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Association<wbr>Id</a>
+        <span id="route_table_association_id_python">
+<a href="#route_table_association_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>association_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

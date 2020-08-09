@@ -231,7 +231,7 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.ResourceDataSync">ResourceDataSync</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>s3_destination=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.ResourceDataSync">ResourceDataSync</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_destination</span><span class="p">:</span> <span class="nx">Optional[ResourceDataSyncS3DestinationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 <a href="#s3_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcedatasyncs3destination">Dict[Resource<wbr>Data<wbr>Sync<wbr>S3Destination]</a></span>
+        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon S3 configuration details for the sync.
 {{% /md %}}</dd>
@@ -610,7 +610,8 @@ Get an existing ResourceDataSync resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>s3_destination=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_destination</span><span class="p">:</span> <span class="nx">Optional[ResourceDataSyncS3DestinationArgs]</span> = None<span class="p">) -&gt;</span> ResourceDataSync</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -828,7 +829,7 @@ The following state arguments are supported:
 <a href="#state_s3_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcedatasyncs3destination">Dict[Resource<wbr>Data<wbr>Sync<wbr>S3Destination]</a></span>
+        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon S3 configuration details for the sync.
 {{% /md %}}</dd>
@@ -1098,8 +1099,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="syncformat_python">
-<a href="#syncformat_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Format</a>
+        <span id="sync_format_python">
+<a href="#sync_format_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -98,7 +98,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_access_point(</span>access_point_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_point(</span><span class="nx">access_point_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessPointResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -826,11 +826,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="secondarygids_python">
-<a href="#secondarygids_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Gids</a>
+        <span id="secondary_gids_python">
+<a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}Secondary group IDs
 {{% /md %}}</dd>
@@ -961,11 +961,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="creationinfos_python">
-<a href="#creationinfos_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Infos</a>
+        <span id="creation_infos_python">
+<a href="#creation_infos_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccesspointrootdirectorycreationinfo">List[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info]</a></span>
+        <span class="property-type"><a href="#getaccesspointrootdirectorycreationinfo">List[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Single element list containing information on the creation permissions of the directory
 {{% /md %}}</dd>
@@ -1128,8 +1128,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ownergid_python">
-<a href="#ownergid_python" style="color: inherit; text-decoration: inherit;">owner<wbr>Gid</a>
+        <span id="owner_gid_python">
+<a href="#owner_gid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1139,8 +1139,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="owneruid_python">
-<a href="#owneruid_python" style="color: inherit; text-decoration: inherit;">owner<wbr>Uid</a>
+        <span id="owner_uid_python">
+<a href="#owner_uid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

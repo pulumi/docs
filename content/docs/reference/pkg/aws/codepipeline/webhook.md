@@ -406,7 +406,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Webhook">Webhook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication=None<span class="p">, </span>authentication_configuration=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>target_action=None<span class="p">, </span>target_pipeline=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Webhook">Webhook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -847,7 +847,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1049,7 +1049,8 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authentication=None<span class="p">, </span>authentication_configuration=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>target_action=None<span class="p">, </span>target_pipeline=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1465,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
@@ -1476,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
@@ -1498,7 +1499,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1658,8 +1659,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowediprange_python">
-<a href="#allowediprange_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Range</a>
+        <span id="allowed_ip_range_python">
+<a href="#allowed_ip_range_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1669,8 +1670,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secrettoken_python">
-<a href="#secrettoken_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Token</a>
+        <span id="secret_token_python">
+<a href="#secret_token_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1792,8 +1793,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="jsonpath_python">
-<a href="#jsonpath_python" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
+        <span id="json_path_python">
+<a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1803,8 +1804,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchequals_python">
-<a href="#matchequals_python" style="color: inherit; text-decoration: inherit;">match<wbr>Equals</a>
+        <span id="match_equals_python">
+<a href="#match_equals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>equals</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

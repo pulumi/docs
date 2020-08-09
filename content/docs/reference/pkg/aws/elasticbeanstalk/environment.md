@@ -254,7 +254,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.Environment">Environment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application=None<span class="p">, </span>cname_prefix=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>platform_arn=None<span class="p">, </span>poll_interval=None<span class="p">, </span>settings=None<span class="p">, </span>solution_stack_name=None<span class="p">, </span>tags=None<span class="p">, </span>template_name=None<span class="p">, </span>tier=None<span class="p">, </span>version=None<span class="p">, </span>wait_for_ready_timeout=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.Environment">Environment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentSettingArgs]]</span> = None<span class="p">, </span><span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -930,7 +930,7 @@ out.
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -1003,7 +1003,7 @@ use the default behavior, which is an exponential backoff
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1028,7 +1028,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -1625,7 +1625,8 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>all_settings=None<span class="p">, </span>application=None<span class="p">, </span>arn=None<span class="p">, </span>autoscaling_groups=None<span class="p">, </span>cname=None<span class="p">, </span>cname_prefix=None<span class="p">, </span>description=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>instances=None<span class="p">, </span>launch_configurations=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>platform_arn=None<span class="p">, </span>poll_interval=None<span class="p">, </span>queues=None<span class="p">, </span>settings=None<span class="p">, </span>solution_stack_name=None<span class="p">, </span>tags=None<span class="p">, </span>template_name=None<span class="p">, </span>tier=None<span class="p">, </span>triggers=None<span class="p">, </span>version=None<span class="p">, </span>wait_for_ready_timeout=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_settings</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentAllSettingArgs]]</span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">launch_configurations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentSettingArgs]]</span> = None<span class="p">, </span><span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2576,7 +2577,7 @@ out.
 <a href="#state_all_settings_python" style="color: inherit; text-decoration: inherit;">all_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">List[Environment<wbr>All<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#environmentallsetting">List[Environment<wbr>All<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -2589,7 +2590,7 @@ the configuration.
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -2749,7 +2750,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2774,7 +2775,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>

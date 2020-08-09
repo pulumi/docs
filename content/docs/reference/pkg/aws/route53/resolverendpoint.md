@@ -166,7 +166,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/route53/#pulumi_aws.route53.ResolverEndpoint">ResolverEndpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>direction=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>name=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/route53/#pulumi_aws.route53.ResolverEndpoint">ResolverEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[ResolverEndpointIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +552,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -586,7 +586,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -777,7 +777,8 @@ Get an existing ResolverEndpoint resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>direction=None<span class="p">, </span>host_vpc_id=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>name=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[ResolverEndpointIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ResolverEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1193,7 +1194,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -1227,7 +1228,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1406,8 +1407,8 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipid_python">
-<a href="#ipid_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Id</a>
+        <span id="ip_id_python">
+<a href="#ip_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

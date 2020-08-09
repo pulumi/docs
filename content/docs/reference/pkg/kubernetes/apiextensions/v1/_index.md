@@ -36,7 +36,7 @@ Explore the resources and functions of the apiextensions/v1 module in the Kubern
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiextensions/v1/#" title="@pulumi/kubernetes/apiextensions/v1">@pulumi/kubernetes/apiextensions/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiextensions.k8s.io/v1" title="pulumi_kubernetes/apiextensions.k8s.io/v1">pulumi_kubernetes/apiextensions.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiextensions/v1" title="pulumi_kubernetes/apiextensions/v1">pulumi_kubernetes/apiextensions/v1</a></dd>
 
 </dl>
 

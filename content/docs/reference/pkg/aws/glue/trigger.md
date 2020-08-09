@@ -560,7 +560,7 @@ const example = new aws.glue.Trigger("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>predicate=None<span class="p">, </span>schedule=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>workflow_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Trigger">Trigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1056,7 +1056,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action]</a></span>
+        <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
@@ -1111,7 +1111,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#predicate_python" style="color: inherit; text-decoration: inherit;">predicate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1291,7 +1291,8 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>predicate=None<span class="p">, </span>schedule=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>workflow_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1762,7 +1763,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action]</a></span>
+        <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
@@ -1817,7 +1818,7 @@ The following state arguments are supported:
 <a href="#state_predicate_python" style="color: inherit; text-decoration: inherit;">predicate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -1839,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2058,15 +2059,15 @@ The following state arguments are supported:
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crawlername_python">
-<a href="#crawlername_python" style="color: inherit; text-decoration: inherit;">crawler<wbr>Name</a>
+        <span id="crawler_name_python">
+<a href="#crawler_name_python" style="color: inherit; text-decoration: inherit;">crawler_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2076,8 +2077,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jobname_python">
-<a href="#jobname_python" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
+        <span id="job_name_python">
+<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2214,7 +2215,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicatecondition">List[Trigger<wbr>Predicate<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#triggerpredicatecondition">List[Trigger<wbr>Predicate<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. Defined below.
 {{% /md %}}</dd>
@@ -2443,8 +2444,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crawlstate_python">
-<a href="#crawlstate_python" style="color: inherit; text-decoration: inherit;">crawl<wbr>State</a>
+        <span id="crawl_state_python">
+<a href="#crawl_state_python" style="color: inherit; text-decoration: inherit;">crawl_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2454,8 +2455,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crawlername_python">
-<a href="#crawlername_python" style="color: inherit; text-decoration: inherit;">crawler<wbr>Name</a>
+        <span id="crawler_name_python">
+<a href="#crawler_name_python" style="color: inherit; text-decoration: inherit;">crawler_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2465,8 +2466,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jobname_python">
-<a href="#jobname_python" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
+        <span id="job_name_python">
+<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2476,8 +2477,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logicaloperator_python">
-<a href="#logicaloperator_python" style="color: inherit; text-decoration: inherit;">logical<wbr>Operator</a>
+        <span id="logical_operator_python">
+<a href="#logical_operator_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

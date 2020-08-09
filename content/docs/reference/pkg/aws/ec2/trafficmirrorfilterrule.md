@@ -223,7 +223,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>destination_port_range=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>source_cidr_block=None<span class="p">, </span>source_port_range=None<span class="p">, </span>traffic_direction=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -829,7 +829,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Dict[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range]</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
@@ -851,7 +851,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Dict[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range]</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
@@ -954,7 +954,8 @@ Get an existing TrafficMirrorFilterRule resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>destination_port_range=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>source_cidr_block=None<span class="p">, </span>source_port_range=None<span class="p">, </span>traffic_direction=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TrafficMirrorFilterRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1447,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Dict[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range]</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
@@ -1502,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Dict[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range]</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>

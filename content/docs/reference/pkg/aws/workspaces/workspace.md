@@ -26,7 +26,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Workspace">Workspace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bundle_id=None<span class="p">, </span>directory_id=None<span class="p">, </span>root_volume_encryption_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>user_name=None<span class="p">, </span>user_volume_encryption_enabled=None<span class="p">, </span>volume_encryption_key=None<span class="p">, </span>workspace_properties=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Workspace">Workspace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_volume_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_volume_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">volume_encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_properties</span><span class="p">:</span> <span class="nx">Optional[WorkspaceWorkspacePropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -533,7 +533,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags for the WorkSpace.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspace_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceworkspaceproperties">Dict[Workspace<wbr>Workspace<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WorkSpace properties.
 {{% /md %}}</dd>
@@ -801,7 +801,8 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bundle_id=None<span class="p">, </span>computer_name=None<span class="p">, </span>directory_id=None<span class="p">, </span>ip_address=None<span class="p">, </span>root_volume_encryption_enabled=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, </span>user_name=None<span class="p">, </span>user_volume_encryption_enabled=None<span class="p">, </span>volume_encryption_key=None<span class="p">, </span>workspace_properties=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_volume_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_volume_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">volume_encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_properties</span><span class="p">:</span> <span class="nx">Optional[WorkspaceWorkspacePropertiesArgs]</span> = None<span class="p">) -&gt;</span> Workspace</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1371,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags for the WorkSpace.
 {{% /md %}}</dd>
@@ -1415,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_workspace_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceworkspaceproperties">Dict[Workspace<wbr>Workspace<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WorkSpace properties.
 {{% /md %}}</dd>
@@ -1641,8 +1642,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computetypename_python">
-<a href="#computetypename_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type<wbr>Name</a>
+        <span id="compute_type_name_python">
+<a href="#compute_type_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1652,8 +1653,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootvolumesizegib_python">
-<a href="#rootvolumesizegib_python" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size<wbr>Gib</a>
+        <span id="root_volume_size_gib_python">
+<a href="#root_volume_size_gib_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>size_<wbr>gib</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1663,8 +1664,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runningmode_python">
-<a href="#runningmode_python" style="color: inherit; text-decoration: inherit;">running<wbr>Mode</a>
+        <span id="running_mode_python">
+<a href="#running_mode_python" style="color: inherit; text-decoration: inherit;">running_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1674,8 +1675,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runningmodeautostoptimeoutinminutes_python">
-<a href="#runningmodeautostoptimeoutinminutes_python" style="color: inherit; text-decoration: inherit;">running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</a>
+        <span id="running_mode_auto_stop_timeout_in_minutes_python">
+<a href="#running_mode_auto_stop_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">running_<wbr>mode_<wbr>auto_<wbr>stop_<wbr>timeout_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1685,8 +1686,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uservolumesizegib_python">
-<a href="#uservolumesizegib_python" style="color: inherit; text-decoration: inherit;">user<wbr>Volume<wbr>Size<wbr>Gib</a>
+        <span id="user_volume_size_gib_python">
+<a href="#user_volume_size_gib_python" style="color: inherit; text-decoration: inherit;">user_<wbr>volume_<wbr>size_<wbr>gib</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

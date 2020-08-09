@@ -33,7 +33,7 @@ want to wait, you need to use the `retain_on_delete` flag.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.Distribution">Distribution</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aliases=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>enabled=None<span class="p">, </span>http_version=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>tags=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.Distribution">Distribution</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[List[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -934,7 +934,7 @@ region and the credentials configuring this argument must have
 <a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -958,7 +958,7 @@ user requests for content.
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></span>
+        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -970,7 +970,7 @@ distribution (multiples allowed).
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -982,7 +982,7 @@ configuration for this distribution (maximum one).
 <a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1019,7 +1019,7 @@ distribution.
 <a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1079,7 +1079,7 @@ to your distribution (maximum one).
 <a href="#ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1092,7 +1092,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1129,7 +1129,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1564,7 +1564,7 @@ CloudFront system.
 <a href="#active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -1696,7 +1696,8 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active_trusted_signers=None<span class="p">, </span>aliases=None<span class="p">, </span>arn=None<span class="p">, </span>caller_reference=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>domain_name=None<span class="p">, </span>enabled=None<span class="p">, </span>etag=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>http_version=None<span class="p">, </span>in_progress_validation_batches=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>last_modified_time=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[List[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2866,7 +2867,7 @@ region and the credentials configuring this argument must have
 <a href="#state_active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2926,7 +2927,7 @@ distribution.
 <a href="#state_custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -2937,7 +2938,7 @@ distribution.
 <a href="#state_default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -3057,7 +3058,7 @@ currently in progress.
 <a href="#state_logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -3070,7 +3071,7 @@ to your distribution (maximum one).
 <a href="#state_ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -3083,7 +3084,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -3095,7 +3096,7 @@ distribution (multiples allowed).
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></span>
+        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -3119,7 +3120,7 @@ distribution (multiples allowed).
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -3157,7 +3158,7 @@ CloudFront system.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3168,7 +3169,7 @@ CloudFront system.
 <a href="#state_viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3406,8 +3407,8 @@ example, `/custom_404.html`).
 
     <dt class="property-required"
             title="Required">
-        <span id="errorcode_python">
-<a href="#errorcode_python" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3418,8 +3419,8 @@ customize.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcachingminttl_python">
-<a href="#errorcachingminttl_python" style="color: inherit; text-decoration: inherit;">error<wbr>Caching<wbr>Min<wbr>Ttl</a>
+        <span id="error_caching_min_ttl_python">
+<a href="#error_caching_min_ttl_python" style="color: inherit; text-decoration: inherit;">error_<wbr>caching_<wbr>min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3431,8 +3432,8 @@ origin to see whether the object has been updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecode_python">
-<a href="#responsecode_python" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
+        <span id="response_code_python">
+<a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3443,8 +3444,8 @@ to return with the custom error page to the viewer.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsepagepath_python">
-<a href="#responsepagepath_python" style="color: inherit; text-decoration: inherit;">response<wbr>Page<wbr>Path</a>
+        <span id="response_page_path_python">
+<a href="#response_page_path_python" style="color: inherit; text-decoration: inherit;">response_<wbr>page_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3999,8 +4000,8 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4011,8 +4012,8 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span id="cachedmethods_python">
-<a href="#cachedmethods_python" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+        <span id="cached_methods_python">
+<a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4023,11 +4024,11 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_python">
-<a href="#forwardedvalues_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+        <span id="forwarded_values_python">
+<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -4035,8 +4036,8 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span id="targetoriginid_python">
-<a href="#targetoriginid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+        <span id="target_origin_id_python">
+<a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4048,8 +4049,8 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span id="viewerprotocolpolicy_python">
-<a href="#viewerprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+        <span id="viewer_protocol_policy_python">
+<a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4075,8 +4076,8 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultttl_python">
-<a href="#defaultttl_python" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+        <span id="default_ttl_python">
+<a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4089,8 +4090,8 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldlevelencryptionid_python">
-<a href="#fieldlevelencryptionid_python" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+        <span id="field_level_encryption_id_python">
+<a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4100,11 +4101,11 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambdafunctionassociations_python">
-<a href="#lambdafunctionassociations_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+        <span id="lambda_function_associations_python">
+<a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -4112,8 +4113,8 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxttl_python">
-<a href="#maxttl_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+        <span id="max_ttl_python">
+<a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4127,8 +4128,8 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minttl_python">
-<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+        <span id="min_ttl_python">
+<a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4140,8 +4141,8 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smoothstreaming_python">
-<a href="#smoothstreaming_python" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+        <span id="smooth_streaming_python">
+<a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4153,8 +4154,8 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedsigners_python">
-<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+        <span id="trusted_signers_python">
+<a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4368,7 +4369,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4376,8 +4377,8 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4401,8 +4402,8 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystringcachekeys_python">
-<a href="#querystringcachekeys_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+        <span id="query_string_cache_keys_python">
+<a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4556,8 +4557,8 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="whitelistednames_python">
-<a href="#whitelistednames_python" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+        <span id="whitelisted_names_python">
+<a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4720,8 +4721,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4733,8 +4734,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span id="lambdaarn_python">
-<a href="#lambdaarn_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+        <span id="lambda_arn_python">
+<a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4744,8 +4745,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includebody_python">
-<a href="#includebody_python" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+        <span id="include_body_python">
+<a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4921,8 +4922,8 @@ example, `myawslogbucket.s3.amazonaws.com`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includecookies_python">
-<a href="#includecookies_python" style="color: inherit; text-decoration: inherit;">include<wbr>Cookies</a>
+        <span id="include_cookies_python">
+<a href="#include_cookies_python" style="color: inherit; text-decoration: inherit;">include_<wbr>cookies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5525,8 +5526,8 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5537,8 +5538,8 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span id="cachedmethods_python">
-<a href="#cachedmethods_python" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+        <span id="cached_methods_python">
+<a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5549,11 +5550,11 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_python">
-<a href="#forwardedvalues_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+        <span id="forwarded_values_python">
+<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5561,8 +5562,8 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5573,8 +5574,8 @@ specifies which requests you want this cache behavior to apply to.
 
     <dt class="property-required"
             title="Required">
-        <span id="targetoriginid_python">
-<a href="#targetoriginid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+        <span id="target_origin_id_python">
+<a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5586,8 +5587,8 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span id="viewerprotocolpolicy_python">
-<a href="#viewerprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+        <span id="viewer_protocol_policy_python">
+<a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5613,8 +5614,8 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultttl_python">
-<a href="#defaultttl_python" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+        <span id="default_ttl_python">
+<a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5627,8 +5628,8 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldlevelencryptionid_python">
-<a href="#fieldlevelencryptionid_python" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+        <span id="field_level_encryption_id_python">
+<a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5638,11 +5639,11 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambdafunctionassociations_python">
-<a href="#lambdafunctionassociations_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+        <span id="lambda_function_associations_python">
+<a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -5650,8 +5651,8 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxttl_python">
-<a href="#maxttl_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+        <span id="max_ttl_python">
+<a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5665,8 +5666,8 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minttl_python">
-<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+        <span id="min_ttl_python">
+<a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5678,8 +5679,8 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smoothstreaming_python">
-<a href="#smoothstreaming_python" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+        <span id="smooth_streaming_python">
+<a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5691,8 +5692,8 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedsigners_python">
-<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+        <span id="trusted_signers_python">
+<a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5906,7 +5907,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -5914,8 +5915,8 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5939,8 +5940,8 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystringcachekeys_python">
-<a href="#querystringcachekeys_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+        <span id="query_string_cache_keys_python">
+<a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6094,8 +6095,8 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="whitelistednames_python">
-<a href="#whitelistednames_python" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+        <span id="whitelisted_names_python">
+<a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6258,8 +6259,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6271,8 +6272,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span id="lambdaarn_python">
-<a href="#lambdaarn_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+        <span id="lambda_arn_python">
+<a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6282,8 +6283,8 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includebody_python">
-<a href="#includebody_python" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+        <span id="include_body_python">
+<a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6576,8 +6577,8 @@ web site of your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span id="originid_python">
-<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+        <span id="origin_id_python">
+<a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6587,11 +6588,11 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customheaders_python">
-<a href="#customheaders_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
+        <span id="custom_headers_python">
+<a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">List[Distribution<wbr>Origin<wbr>Custom<wbr>Header]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">List[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6600,11 +6601,11 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customoriginconfig_python">
-<a href="#customoriginconfig_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
+        <span id="custom_origin_config_python">
+<a href="#custom_origin_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Dict[Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6613,8 +6614,8 @@ origin is required, use `s3_origin_config` instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originpath_python">
-<a href="#originpath_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
+        <span id="origin_path_python">
+<a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6626,11 +6627,11 @@ custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3originconfig_python">
-<a href="#s3originconfig_python" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
+        <span id="s3_origin_config_python">
+<a href="#s3_origin_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Dict[Distribution<wbr>Origin<wbr>S3Origin<wbr>Config]</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -7018,8 +7019,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpport_python">
-<a href="#httpport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7029,8 +7030,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpsport_python">
-<a href="#httpsport_python" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7040,8 +7041,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="originprotocolpolicy_python">
-<a href="#originprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Protocol<wbr>Policy</a>
+        <span id="origin_protocol_policy_python">
+<a href="#origin_protocol_policy_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>protocol_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7052,8 +7053,8 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 
     <dt class="property-required"
             title="Required">
-        <span id="originsslprotocols_python">
-<a href="#originsslprotocols_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Ssl<wbr>Protocols</a>
+        <span id="origin_ssl_protocols_python">
+<a href="#origin_ssl_protocols_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>ssl_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7065,8 +7066,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originkeepalivetimeout_python">
-<a href="#originkeepalivetimeout_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Keepalive<wbr>Timeout</a>
+        <span id="origin_keepalive_timeout_python">
+<a href="#origin_keepalive_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>keepalive_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7076,8 +7077,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originreadtimeout_python">
-<a href="#originreadtimeout_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Read<wbr>Timeout</a>
+        <span id="origin_read_timeout_python">
+<a href="#origin_read_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>read_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7232,11 +7233,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="failovercriteria_python">
-<a href="#failovercriteria_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
+        <span id="failover_criteria_python">
+<a href="#failover_criteria_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Dict[Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd>
@@ -7247,15 +7248,15 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">List[Distribution<wbr>Origin<wbr>Group<wbr>Member]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">List[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="originid_python">
-<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+        <span id="origin_id_python">
+<a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7344,11 +7345,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="statuscodes_python">
-<a href="#statuscodes_python" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+        <span id="status_codes_python">
+<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -7434,8 +7435,8 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span id="originid_python">
-<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+        <span id="origin_id_python">
+<a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7527,8 +7528,8 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span id="originaccessidentity_python">
-<a href="#originaccessidentity_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Access<wbr>Identity</a>
+        <span id="origin_access_identity_python">
+<a href="#origin_access_identity_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>access_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7615,11 +7616,11 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span id="georestriction_python">
-<a href="#georestriction_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
+        <span id="geo_restriction_python">
+<a href="#geo_restriction_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Dict[Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7749,8 +7750,8 @@ distribute your content (`blacklist`).
 
     <dt class="property-required"
             title="Required">
-        <span id="restrictiontype_python">
-<a href="#restrictiontype_python" style="color: inherit; text-decoration: inherit;">restriction<wbr>Type</a>
+        <span id="restriction_type_python">
+<a href="#restriction_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8031,8 +8032,8 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acmcertificatearn_python">
-<a href="#acmcertificatearn_python" style="color: inherit; text-decoration: inherit;">acm<wbr>Certificate<wbr>Arn</a>
+        <span id="acm_certificate_arn_python">
+<a href="#acm_certificate_arn_python" style="color: inherit; text-decoration: inherit;">acm_<wbr>certificate_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8045,8 +8046,8 @@ certificate must be in  US-EAST-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudfrontdefaultcertificate_python">
-<a href="#cloudfrontdefaultcertificate_python" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Default<wbr>Certificate</a>
+        <span id="cloudfront_default_certificate_python">
+<a href="#cloudfront_default_certificate_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>default_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8058,8 +8059,8 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iamcertificateid_python">
-<a href="#iamcertificateid_python" style="color: inherit; text-decoration: inherit;">iam<wbr>Certificate<wbr>Id</a>
+        <span id="iam_certificate_id_python">
+<a href="#iam_certificate_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8071,8 +8072,8 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumprotocolversion_python">
-<a href="#minimumprotocolversion_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Protocol<wbr>Version</a>
+        <span id="minimum_protocol_version_python">
+<a href="#minimum_protocol_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>protocol_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8091,8 +8092,8 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslsupportmethod_python">
-<a href="#sslsupportmethod_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Support<wbr>Method</a>
+        <span id="ssl_support_method_python">
+<a href="#ssl_support_method_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>support_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

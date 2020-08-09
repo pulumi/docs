@@ -91,7 +91,7 @@ const foo = new aws.iot.ThingType("foo", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.ThingType">ThingType</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>deprecated=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.ThingType">ThingType</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deprecated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ThingTypePropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -411,7 +411,7 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -558,7 +558,8 @@ Get an existing ThingType resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>deprecated=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deprecated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ThingTypePropertiesArgs]</span> = None<span class="p">) -&gt;</span> ThingType</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -864,7 +865,7 @@ The following state arguments are supported:
 <a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -1002,8 +1003,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchableattributes_python">
-<a href="#searchableattributes_python" style="color: inherit; text-decoration: inherit;">searchable<wbr>Attributes</a>
+        <span id="searchable_attributes_python">
+<a href="#searchable_attributes_python" style="color: inherit; text-decoration: inherit;">searchable_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

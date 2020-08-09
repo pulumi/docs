@@ -91,7 +91,7 @@ const current = pulumi.output(aws.getRegions({ async: true }));
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_regions(</span>all_regions=None<span class="p">, </span>filters=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_regions(</span><span class="nx">all_regions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetRegionsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) to use as filters. Detailed below.
 {{% /md %}}</dd>

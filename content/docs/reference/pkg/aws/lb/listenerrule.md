@@ -729,7 +729,7 @@ const admin = new aws.lb.ListenerRule("admin", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lb/#pulumi_aws.lb.ListenerRule">ListenerRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>listener_arn=None<span class="p">, </span>priority=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lb/#pulumi_aws.lb.ListenerRule">ListenerRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1060,7 +1060,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">List[Listener<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#listenerruleaction">List[Listener<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -1071,7 +1071,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">List[Listener<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">List[Listener<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd>
@@ -1240,7 +1240,8 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>arn=None<span class="p">, </span>conditions=None<span class="p">, </span>listener_arn=None<span class="p">, </span>priority=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> ListenerRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1546,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">List[Listener<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#listenerruleaction">List[Listener<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -1568,7 +1569,7 @@ The following state arguments are supported:
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">List[Listener<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">List[Listener<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd>
@@ -1923,33 +1924,33 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticatecognito_python">
-<a href="#authenticatecognito_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognito</a>
+        <span id="authenticate_cognito_python">
+<a href="#authenticate_cognito_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognito</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Dict[Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticateoidc_python">
-<a href="#authenticateoidc_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
+        <span id="authenticate_oidc_python">
+<a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Dict[Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedresponse_python">
-<a href="#fixedresponse_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
+        <span id="fixed_response_python">
+<a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionfixedresponse">Dict[Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response]</a></span>
+        <span class="property-type"><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd>
@@ -1960,7 +1961,7 @@ The following state arguments are supported:
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforward">Dict[Listener<wbr>Rule<wbr>Action<wbr>Forward]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
 {{% /md %}}</dd>
@@ -1981,7 +1982,7 @@ The following state arguments are supported:
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionredirect">Dict[Listener<wbr>Rule<wbr>Action<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd>
@@ -2309,8 +2310,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolarn_python">
-<a href="#userpoolarn_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Arn</a>
+        <span id="user_pool_arn_python">
+<a href="#user_pool_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2320,8 +2321,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolclientid_python">
-<a href="#userpoolclientid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Client<wbr>Id</a>
+        <span id="user_pool_client_id_python">
+<a href="#user_pool_client_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2331,8 +2332,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpooldomain_python">
-<a href="#userpooldomain_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Domain</a>
+        <span id="user_pool_domain_python">
+<a href="#user_pool_domain_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2342,19 +2343,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2375,8 +2376,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2386,8 +2387,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2806,8 +2807,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="authorizationendpoint_python">
-<a href="#authorizationendpoint_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
+        <span id="authorization_endpoint_python">
+<a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2850,8 +2851,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="tokenendpoint_python">
-<a href="#tokenendpoint_python" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
+        <span id="token_endpoint_python">
+<a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2861,8 +2862,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userinfoendpoint_python">
-<a href="#userinfoendpoint_python" style="color: inherit; text-decoration: inherit;">user<wbr>Info<wbr>Endpoint</a>
+        <span id="user_info_endpoint_python">
+<a href="#user_info_endpoint_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2872,19 +2873,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2905,8 +2906,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2916,8 +2917,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3083,8 +3084,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagebody_python">
-<a href="#messagebody_python" style="color: inherit; text-decoration: inherit;">message<wbr>Body</a>
+        <span id="message_body_python">
+<a href="#message_body_python" style="color: inherit; text-decoration: inherit;">message_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3217,11 +3218,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetgroups_python">
-<a href="#targetgroups_python" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+        <span id="target_groups_python">
+<a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">List[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">List[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more target groups block.
 {{% /md %}}</dd>
@@ -3232,7 +3233,7 @@ The following state arguments are supported:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Dict[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target group stickiness for the rule.
 {{% /md %}}</dd>
@@ -4138,66 +4139,66 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostheader_python">
-<a href="#hostheader_python" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+        <span id="host_header_python">
+<a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhostheader">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheader_python">
-<a href="#httpheader_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header</a>
+        <span id="http_header_python">
+<a href="#http_header_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttpheader">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers to match. HTTP Header block fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httprequestmethod_python">
-<a href="#httprequestmethod_python" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Method</a>
+        <span id="http_request_method_python">
+<a href="#http_request_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionpathpattern">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystrings_python">
-<a href="#querystrings_python" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
+        <span id="query_strings_python">
+<a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionquerystring">List[Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionquerystring">List[Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query strings to match. Query String block fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceip_python">
-<a href="#sourceip_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip</a>
+        <span id="source_ip_python">
+<a href="#source_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionsourceip">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd>
@@ -4417,8 +4418,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpheadername_python">
-<a href="#httpheadername_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
+        <span id="http_header_name_python">
+<a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

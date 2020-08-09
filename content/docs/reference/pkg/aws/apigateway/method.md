@@ -312,7 +312,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Method">Method</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_key_required=None<span class="p">, </span>authorization=None<span class="p">, </span>authorization_scopes=None<span class="p">, </span>authorizer_id=None<span class="p">, </span>http_method=None<span class="p">, </span>request_models=None<span class="p">, </span>request_parameters=None<span class="p">, </span>request_validator_id=None<span class="p">, </span>resource_id=None<span class="p">, </span>rest_api=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Method">Method</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, bool]]</span> = None<span class="p">, </span><span class="nx">request_validator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -883,7 +883,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 <a href="#request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
@@ -940,7 +940,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Boolean]</span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -1055,7 +1055,8 @@ Get an existing Method resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_key_required=None<span class="p">, </span>authorization=None<span class="p">, </span>authorization_scopes=None<span class="p">, </span>authorizer_id=None<span class="p">, </span>http_method=None<span class="p">, </span>request_models=None<span class="p">, </span>request_parameters=None<span class="p">, </span>request_validator_id=None<span class="p">, </span>resource_id=None<span class="p">, </span>rest_api=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, bool]]</span> = None<span class="p">, </span><span class="nx">request_validator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Method</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1590,7 +1591,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 <a href="#state_request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
@@ -1603,7 +1604,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Boolean]</span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -1637,7 +1638,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>

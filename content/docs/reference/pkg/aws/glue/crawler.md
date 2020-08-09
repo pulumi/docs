@@ -309,7 +309,7 @@ const example = new aws.glue.Crawler("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Crawler">Crawler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_targets=None<span class="p">, </span>classifiers=None<span class="p">, </span>configuration=None<span class="p">, </span>database_name=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb_targets=None<span class="p">, </span>jdbc_targets=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>s3_targets=None<span class="p">, </span>schedule=None<span class="p">, </span>schema_change_policy=None<span class="p">, </span>security_configuration=None<span class="p">, </span>table_prefix=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Crawler">Crawler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1022,7 +1022,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1065,7 +1065,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See below.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
 {{% /md %}}</dd>
@@ -1098,7 +1098,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></span>
+        <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See below.
 {{% /md %}}</dd>
@@ -1120,7 +1120,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior.
 {{% /md %}}</dd>
@@ -1153,7 +1153,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1300,7 +1300,8 @@ Get an existing Crawler resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>catalog_targets=None<span class="p">, </span>classifiers=None<span class="p">, </span>configuration=None<span class="p">, </span>database_name=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb_targets=None<span class="p">, </span>jdbc_targets=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>s3_targets=None<span class="p">, </span>schedule=None<span class="p">, </span>schema_change_policy=None<span class="p">, </span>security_configuration=None<span class="p">, </span>table_prefix=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[List[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Crawler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1977,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2031,7 +2032,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See below.
 {{% /md %}}</dd>
@@ -2042,7 +2043,7 @@ The following state arguments are supported:
 <a href="#state_jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
 {{% /md %}}</dd>
@@ -2075,7 +2076,7 @@ The following state arguments are supported:
 <a href="#state_s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></span>
+        <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See below.
 {{% /md %}}</dd>
@@ -2097,7 +2098,7 @@ The following state arguments are supported:
 <a href="#state_schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior.
 {{% /md %}}</dd>
@@ -2130,7 +2131,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2514,8 +2515,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionname_python">
-<a href="#connectionname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
+        <span id="connection_name_python">
+<a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2793,8 +2794,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deletebehavior_python">
-<a href="#deletebehavior_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Behavior</a>
+        <span id="delete_behavior_python">
+<a href="#delete_behavior_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2804,8 +2805,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatebehavior_python">
-<a href="#updatebehavior_python" style="color: inherit; text-decoration: inherit;">update<wbr>Behavior</a>
+        <span id="update_behavior_python">
+<a href="#update_behavior_python" style="color: inherit; text-decoration: inherit;">update_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

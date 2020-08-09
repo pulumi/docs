@@ -197,7 +197,7 @@ const example = new aws.cognito.UserPool("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.UserPool">UserPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_create_user_config=None<span class="p">, </span>alias_attributes=None<span class="p">, </span>auto_verified_attributes=None<span class="p">, </span>device_configuration=None<span class="p">, </span>email_configuration=None<span class="p">, </span>email_verification_message=None<span class="p">, </span>email_verification_subject=None<span class="p">, </span>lambda_config=None<span class="p">, </span>mfa_configuration=None<span class="p">, </span>name=None<span class="p">, </span>password_policy=None<span class="p">, </span>schemas=None<span class="p">, </span>sms_authentication_message=None<span class="p">, </span>sms_configuration=None<span class="p">, </span>sms_verification_message=None<span class="p">, </span>software_token_mfa_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>user_pool_add_ons=None<span class="p">, </span>username_attributes=None<span class="p">, </span>username_configuration=None<span class="p">, </span>verification_message_template=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.UserPool">UserPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[List[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1089,7 +1089,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
 {{% /md %}}</dd>
@@ -1122,7 +1122,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">Dict[User<wbr>Pool<wbr>Device<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">Dict[User<wbr>Pool<wbr>Email<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">Dict[User<wbr>Pool<wbr>Lambda<wbr>Config]</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}</dd>
@@ -1199,7 +1199,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">Dict[User<wbr>Pool<wbr>Password<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
 {{% /md %}}</dd>
@@ -1210,7 +1210,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">Dict[User<wbr>Pool<wbr>Sms<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 {{% /md %}}</dd>
@@ -1254,7 +1254,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">Dict[User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd>
@@ -1265,7 +1265,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
@@ -1276,7 +1276,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">Dict[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons]</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
 {{% /md %}}</dd>
@@ -1298,7 +1298,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">Dict[User<wbr>Pool<wbr>Username<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
 {{% /md %}}</dd>
@@ -1309,7 +1309,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">Dict[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template]</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
 {{% /md %}}</dd>
@@ -1588,7 +1588,8 @@ Get an existing UserPool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_create_user_config=None<span class="p">, </span>alias_attributes=None<span class="p">, </span>arn=None<span class="p">, </span>auto_verified_attributes=None<span class="p">, </span>creation_date=None<span class="p">, </span>device_configuration=None<span class="p">, </span>email_configuration=None<span class="p">, </span>email_verification_message=None<span class="p">, </span>email_verification_subject=None<span class="p">, </span>endpoint=None<span class="p">, </span>lambda_config=None<span class="p">, </span>last_modified_date=None<span class="p">, </span>mfa_configuration=None<span class="p">, </span>name=None<span class="p">, </span>password_policy=None<span class="p">, </span>schemas=None<span class="p">, </span>sms_authentication_message=None<span class="p">, </span>sms_configuration=None<span class="p">, </span>sms_verification_message=None<span class="p">, </span>software_token_mfa_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>user_pool_add_ons=None<span class="p">, </span>username_attributes=None<span class="p">, </span>username_configuration=None<span class="p">, </span>verification_message_template=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[List[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">) -&gt;</span> UserPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2554,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
 {{% /md %}}</dd>
@@ -2609,7 +2610,7 @@ The following state arguments are supported:
 <a href="#state_device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">Dict[User<wbr>Pool<wbr>Device<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
 {{% /md %}}</dd>
@@ -2620,7 +2621,7 @@ The following state arguments are supported:
 <a href="#state_email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">Dict[User<wbr>Pool<wbr>Email<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
 {{% /md %}}</dd>
@@ -2664,7 +2665,7 @@ The following state arguments are supported:
 <a href="#state_lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">Dict[User<wbr>Pool<wbr>Lambda<wbr>Config]</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}</dd>
@@ -2708,7 +2709,7 @@ The following state arguments are supported:
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">Dict[User<wbr>Pool<wbr>Password<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
 {{% /md %}}</dd>
@@ -2719,7 +2720,7 @@ The following state arguments are supported:
 <a href="#state_schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
 {{% /md %}}</dd>
@@ -2741,7 +2742,7 @@ The following state arguments are supported:
 <a href="#state_sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">Dict[User<wbr>Pool<wbr>Sms<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 {{% /md %}}</dd>
@@ -2763,7 +2764,7 @@ The following state arguments are supported:
 <a href="#state_software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">Dict[User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd>
@@ -2774,7 +2775,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
@@ -2785,7 +2786,7 @@ The following state arguments are supported:
 <a href="#state_user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">Dict[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons]</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
 {{% /md %}}</dd>
@@ -2807,7 +2808,7 @@ The following state arguments are supported:
 <a href="#state_username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">Dict[User<wbr>Pool<wbr>Username<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
 {{% /md %}}</dd>
@@ -2818,7 +2819,7 @@ The following state arguments are supported:
 <a href="#state_verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">Dict[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template]</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
 {{% /md %}}</dd>
@@ -2978,8 +2979,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowadmincreateuseronly_python">
-<a href="#allowadmincreateuseronly_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</a>
+        <span id="allow_admin_create_user_only_python">
+<a href="#allow_admin_create_user_only_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>admin_<wbr>create_<wbr>user_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2989,19 +2990,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invitemessagetemplate_python">
-<a href="#invitemessagetemplate_python" style="color: inherit; text-decoration: inherit;">invite<wbr>Message<wbr>Template</a>
+        <span id="invite_message_template_python">
+<a href="#invite_message_template_python" style="color: inherit; text-decoration: inherit;">invite_<wbr>message_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The invite message template structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="unusedaccountvaliditydays_python">
-<a href="#unusedaccountvaliditydays_python" style="color: inherit; text-decoration: inherit;">unused<wbr>Account<wbr>Validity<wbr>Days</a>
+        <span id="unused_account_validity_days_python">
+<a href="#unused_account_validity_days_python" style="color: inherit; text-decoration: inherit;">unused_<wbr>account_<wbr>validity_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3156,8 +3157,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailmessage_python">
-<a href="#emailmessage_python" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
+        <span id="email_message_python">
+<a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3167,8 +3168,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3178,8 +3179,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smsmessage_python">
-<a href="#smsmessage_python" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
+        <span id="sms_message_python">
+<a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3301,8 +3302,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="challengerequiredonnewdevice_python">
-<a href="#challengerequiredonnewdevice_python" style="color: inherit; text-decoration: inherit;">challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</a>
+        <span id="challenge_required_on_new_device_python">
+<a href="#challenge_required_on_new_device_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>required_<wbr>on_<wbr>new_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3312,8 +3313,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deviceonlyrememberedonuserprompt_python">
-<a href="#deviceonlyrememberedonuserprompt_python" style="color: inherit; text-decoration: inherit;">device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</a>
+        <span id="device_only_remembered_on_user_prompt_python">
+<a href="#device_only_remembered_on_user_prompt_python" style="color: inherit; text-decoration: inherit;">device_<wbr>only_<wbr>remembered_<wbr>on_<wbr>user_<wbr>prompt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3501,8 +3502,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsendingaccount_python">
-<a href="#emailsendingaccount_python" style="color: inherit; text-decoration: inherit;">email<wbr>Sending<wbr>Account</a>
+        <span id="email_sending_account_python">
+<a href="#email_sending_account_python" style="color: inherit; text-decoration: inherit;">email_<wbr>sending_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3512,8 +3513,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromemailaddress_python">
-<a href="#fromemailaddress_python" style="color: inherit; text-decoration: inherit;">from<wbr>Email<wbr>Address</a>
+        <span id="from_email_address_python">
+<a href="#from_email_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3523,8 +3524,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replytoemailaddress_python">
-<a href="#replytoemailaddress_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Email<wbr>Address</a>
+        <span id="reply_to_email_address_python">
+<a href="#reply_to_email_address_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3921,8 +3922,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createauthchallenge_python">
-<a href="#createauthchallenge_python" style="color: inherit; text-decoration: inherit;">create<wbr>Auth<wbr>Challenge</a>
+        <span id="create_auth_challenge_python">
+<a href="#create_auth_challenge_python" style="color: inherit; text-decoration: inherit;">create_<wbr>auth_<wbr>challenge</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3932,8 +3933,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custommessage_python">
-<a href="#custommessage_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Message</a>
+        <span id="custom_message_python">
+<a href="#custom_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3943,8 +3944,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defineauthchallenge_python">
-<a href="#defineauthchallenge_python" style="color: inherit; text-decoration: inherit;">define<wbr>Auth<wbr>Challenge</a>
+        <span id="define_auth_challenge_python">
+<a href="#define_auth_challenge_python" style="color: inherit; text-decoration: inherit;">define_<wbr>auth_<wbr>challenge</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3954,8 +3955,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postauthentication_python">
-<a href="#postauthentication_python" style="color: inherit; text-decoration: inherit;">post<wbr>Authentication</a>
+        <span id="post_authentication_python">
+<a href="#post_authentication_python" style="color: inherit; text-decoration: inherit;">post_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3965,8 +3966,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postconfirmation_python">
-<a href="#postconfirmation_python" style="color: inherit; text-decoration: inherit;">post<wbr>Confirmation</a>
+        <span id="post_confirmation_python">
+<a href="#post_confirmation_python" style="color: inherit; text-decoration: inherit;">post_<wbr>confirmation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3976,8 +3977,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preauthentication_python">
-<a href="#preauthentication_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Authentication</a>
+        <span id="pre_authentication_python">
+<a href="#pre_authentication_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3987,8 +3988,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="presignup_python">
-<a href="#presignup_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Sign<wbr>Up</a>
+        <span id="pre_sign_up_python">
+<a href="#pre_sign_up_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>sign_<wbr>up</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3998,8 +3999,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pretokengeneration_python">
-<a href="#pretokengeneration_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Token<wbr>Generation</a>
+        <span id="pre_token_generation_python">
+<a href="#pre_token_generation_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>token_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4009,8 +4010,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usermigration_python">
-<a href="#usermigration_python" style="color: inherit; text-decoration: inherit;">user<wbr>Migration</a>
+        <span id="user_migration_python">
+<a href="#user_migration_python" style="color: inherit; text-decoration: inherit;">user_<wbr>migration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4020,8 +4021,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verifyauthchallengeresponse_python">
-<a href="#verifyauthchallengeresponse_python" style="color: inherit; text-decoration: inherit;">verify<wbr>Auth<wbr>Challenge<wbr>Response</a>
+        <span id="verify_auth_challenge_response_python">
+<a href="#verify_auth_challenge_response_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>auth_<wbr>challenge_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4275,8 +4276,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumlength_python">
-<a href="#minimumlength_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Length</a>
+        <span id="minimum_length_python">
+<a href="#minimum_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4286,24 +4287,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirelowercase_python">
-<a href="#requirelowercase_python" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase</a>
+        <span id="require_lowercase_python">
+<a href="#require_lowercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="requireuppercase_python">
-<a href="#requireuppercase_python" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4330,8 +4320,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="temporarypasswordvaliditydays_python">
-<a href="#temporarypasswordvaliditydays_python" style="color: inherit; text-decoration: inherit;">temporary<wbr>Password<wbr>Validity<wbr>Days</a>
+        <span id="require_uppercase_python">
+<a href="#require_uppercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="temporary_password_validity_days_python">
+<a href="#temporary_password_validity_days_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>password_<wbr>validity_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4618,8 +4619,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="attributedatatype_python">
-<a href="#attributedatatype_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Data<wbr>Type</a>
+        <span id="attribute_data_type_python">
+<a href="#attribute_data_type_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>data_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4640,8 +4641,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="developeronlyattribute_python">
-<a href="#developeronlyattribute_python" style="color: inherit; text-decoration: inherit;">developer<wbr>Only<wbr>Attribute</a>
+        <span id="developer_only_attribute_python">
+<a href="#developer_only_attribute_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>only_<wbr>attribute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4662,11 +4663,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberattributeconstraints_python">
-<a href="#numberattributeconstraints_python" style="color: inherit; text-decoration: inherit;">number<wbr>Attribute<wbr>Constraints</a>
+        <span id="number_attribute_constraints_python">
+<a href="#number_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">number_<wbr>attribute_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">Dict[User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints]</a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the constraints for an attribute of the number type.
 {{% /md %}}</dd>
@@ -4684,11 +4685,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stringattributeconstraints_python">
-<a href="#stringattributeconstraints_python" style="color: inherit; text-decoration: inherit;">string<wbr>Attribute<wbr>Constraints</a>
+        <span id="string_attribute_constraints_python">
+<a href="#string_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">string_<wbr>attribute_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">Dict[User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints]</a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-Specifies the constraints for an attribute of the string type.
 {{% /md %}}</dd>
@@ -4807,8 +4808,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxvalue_python">
-<a href="#maxvalue_python" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+        <span id="max_value_python">
+<a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4818,8 +4819,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minvalue_python">
-<a href="#minvalue_python" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+        <span id="min_value_python">
+<a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4941,8 +4942,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxlength_python">
-<a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
+        <span id="max_length_python">
+<a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4952,8 +4953,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minlength_python">
-<a href="#minlength_python" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
+        <span id="min_length_python">
+<a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5075,8 +5076,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="externalid_python">
-<a href="#externalid_python" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+        <span id="external_id_python">
+<a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5086,8 +5087,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="snscallerarn_python">
-<a href="#snscallerarn_python" style="color: inherit; text-decoration: inherit;">sns<wbr>Caller<wbr>Arn</a>
+        <span id="sns_caller_arn_python">
+<a href="#sns_caller_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>caller_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5266,8 +5267,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="advancedsecuritymode_python">
-<a href="#advancedsecuritymode_python" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Mode</a>
+        <span id="advanced_security_mode_python">
+<a href="#advanced_security_mode_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5356,8 +5357,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="casesensitive_python">
-<a href="#casesensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
+        <span id="case_sensitive_python">
+<a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5611,8 +5612,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultemailoption_python">
-<a href="#defaultemailoption_python" style="color: inherit; text-decoration: inherit;">default<wbr>Email<wbr>Option</a>
+        <span id="default_email_option_python">
+<a href="#default_email_option_python" style="color: inherit; text-decoration: inherit;">default_<wbr>email_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5622,8 +5623,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailmessage_python">
-<a href="#emailmessage_python" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
+        <span id="email_message_python">
+<a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5633,8 +5634,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailmessagebylink_python">
-<a href="#emailmessagebylink_python" style="color: inherit; text-decoration: inherit;">email<wbr>Message<wbr>By<wbr>Link</a>
+        <span id="email_message_by_link_python">
+<a href="#email_message_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message_<wbr>by_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5644,8 +5645,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5655,8 +5656,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubjectbylink_python">
-<a href="#emailsubjectbylink_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject<wbr>By<wbr>Link</a>
+        <span id="email_subject_by_link_python">
+<a href="#email_subject_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject_<wbr>by_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5666,8 +5667,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smsmessage_python">
-<a href="#smsmessage_python" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
+        <span id="sms_message_python">
+<a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

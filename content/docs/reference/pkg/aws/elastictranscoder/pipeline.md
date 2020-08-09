@@ -135,7 +135,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Pipeline">Pipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aws_kms_key_arn=None<span class="p">, </span>content_config=None<span class="p">, </span>content_config_permissions=None<span class="p">, </span>input_bucket=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>output_bucket=None<span class="p">, </span>role=None<span class="p">, </span>thumbnail_config=None<span class="p">, </span>thumbnail_config_permissions=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -697,7 +697,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Dict[Pipeline<wbr>Content<wbr>Config]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Dict[Pipeline<wbr>Notifications]</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
@@ -752,7 +752,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Dict[Pipeline<wbr>Thumbnail<wbr>Config]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -906,7 +906,8 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>aws_kms_key_arn=None<span class="p">, </span>content_config=None<span class="p">, </span>content_config_permissions=None<span class="p">, </span>input_bucket=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>output_bucket=None<span class="p">, </span>role=None<span class="p">, </span>thumbnail_config=None<span class="p">, </span>thumbnail_config_permissions=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1428,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Dict[Pipeline<wbr>Content<wbr>Config]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
@@ -1439,7 +1440,7 @@ The following state arguments are supported:
 <a href="#state_content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -1472,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Dict[Pipeline<wbr>Notifications]</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
@@ -1505,7 +1506,7 @@ The following state arguments are supported:
 <a href="#state_thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Dict[Pipeline<wbr>Thumbnail<wbr>Config]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
@@ -1516,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -1832,8 +1833,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="granteetype_python">
-<a href="#granteetype_python" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
+        <span id="grantee_type_python">
+<a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2366,8 +2367,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="granteetype_python">
-<a href="#granteetype_python" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
+        <span id="grantee_type_python">
+<a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

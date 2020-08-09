@@ -207,7 +207,7 @@ const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.AccessPoint">AccessPoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>bucket=None<span class="p">, </span>name=None<span class="p">, </span>policy=None<span class="p">, </span>public_access_block_configuration=None<span class="p">, </span>vpc_configuration=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.AccessPoint">AccessPoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_access_block_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointPublicAccessBlockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpc_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointVpcConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -648,7 +648,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#public_access_block_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>block_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointpublicaccessblockconfiguration">Dict[Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
 {{% /md %}}</dd>
@@ -659,7 +659,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointvpcconfiguration">Dict[Access<wbr>Point<wbr>Vpc<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
 {{% /md %}}</dd>
@@ -942,7 +942,8 @@ Get an existing AccessPoint resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>domain_name=None<span class="p">, </span>has_public_access_policy=None<span class="p">, </span>name=None<span class="p">, </span>network_origin=None<span class="p">, </span>policy=None<span class="p">, </span>public_access_block_configuration=None<span class="p">, </span>vpc_configuration=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_public_access_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_origin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_access_block_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointPublicAccessBlockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpc_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointVpcConfigurationArgs]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1505,7 +1506,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 <a href="#state_public_access_block_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>block_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointpublicaccessblockconfiguration">Dict[Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
 {{% /md %}}</dd>
@@ -1516,7 +1517,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 <a href="#state_vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointvpcconfiguration">Dict[Access<wbr>Point<wbr>Vpc<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
 {{% /md %}}</dd>

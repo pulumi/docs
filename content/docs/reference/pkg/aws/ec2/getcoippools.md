@@ -56,7 +56,7 @@ export const foo = fooCoipPools.ids;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_coip_pools(</span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_coip_pools(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetCoipPoolsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCoipPoolsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -177,7 +177,7 @@ a pair on the desired aws_ec2_coip_pools.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcoippoolsfilter">List[Get<wbr>Coip<wbr>Pools<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getcoippoolsfilter">List[Get<wbr>Coip<wbr>Pools<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ a pair on the desired aws_ec2_coip_pools.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired aws_ec2_coip_pools.
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

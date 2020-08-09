@@ -113,7 +113,7 @@ const example = new aws.glue.Connection("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_id=None<span class="p">, </span>connection_properties=None<span class="p">, </span>connection_type=None<span class="p">, </span>description=None<span class="p">, </span>match_criterias=None<span class="p">, </span>name=None<span class="p">, </span>physical_connection_requirements=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_criterias</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_connection_requirements</span><span class="p">:</span> <span class="nx">Optional[ConnectionPhysicalConnectionRequirementsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -543,7 +543,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#physical_connection_requirements_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>connection_<wbr>requirements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Dict[Connection<wbr>Physical<wbr>Connection<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd>
@@ -756,7 +756,8 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>catalog_id=None<span class="p">, </span>connection_properties=None<span class="p">, </span>connection_type=None<span class="p">, </span>description=None<span class="p">, </span>match_criterias=None<span class="p">, </span>name=None<span class="p">, </span>physical_connection_requirements=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_criterias</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_connection_requirements</span><span class="p">:</span> <span class="nx">Optional[ConnectionPhysicalConnectionRequirementsArgs]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1183,7 +1184,7 @@ The following state arguments are supported:
 <a href="#state_connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -1238,7 +1239,7 @@ The following state arguments are supported:
 <a href="#state_physical_connection_requirements_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>connection_<wbr>requirements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Dict[Connection<wbr>Physical<wbr>Connection<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd>
@@ -1409,8 +1410,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitygroupidlists_python">
-<a href="#securitygroupidlists_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id<wbr>Lists</a>
+        <span id="security_group_id_lists_python">
+<a href="#security_group_id_lists_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

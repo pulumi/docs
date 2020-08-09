@@ -114,7 +114,7 @@ const org = new aws.organizations.Organization("org", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/organizations/#pulumi_aws.organizations.Organization">Organization</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aws_service_access_principals=None<span class="p">, </span>enabled_policy_types=None<span class="p">, </span>feature_set=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/organizations/#pulumi_aws.organizations.Organization">Organization</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -845,7 +845,8 @@ Get an existing Organization resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accounts=None<span class="p">, </span>arn=None<span class="p">, </span>aws_service_access_principals=None<span class="p">, </span>enabled_policy_types=None<span class="p">, </span>feature_set=None<span class="p">, </span>master_account_arn=None<span class="p">, </span>master_account_email=None<span class="p">, </span>master_account_id=None<span class="p">, </span>non_master_accounts=None<span class="p">, </span>roots=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationAccountArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">non_master_accounts</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationNonMasterAccountArgs]]</span> = None<span class="p">, </span><span class="nx">roots</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationRootArgs]]</span> = None<span class="p">) -&gt;</span> Organization</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1316,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">List[Organization<wbr>Account]</a></span>
+        <span class="property-type"><a href="#organizationaccount">List[Organization<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1404,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_non_master_accounts_python" style="color: inherit; text-decoration: inherit;">non_<wbr>master_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">List[Organization<wbr>Non<wbr>Master<wbr>Account]</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">List[Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1415,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_roots_python" style="color: inherit; text-decoration: inherit;">roots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">List[Organization<wbr>Root]</a></span>
+        <span class="property-type"><a href="#organizationroot">List[Organization<wbr>Root<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -2173,11 +2174,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policytypes_python">
-<a href="#policytypes_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Types</a>
+        <span id="policy_types_python">
+<a href="#policy_types_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">List[Organization<wbr>Root<wbr>Policy<wbr>Type]</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">List[Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>

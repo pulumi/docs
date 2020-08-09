@@ -449,7 +449,7 @@ const exampleDomain = new aws.elasticsearch.Domain("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#pulumi_aws.elasticsearch.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>advanced_security_options=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#pulumi_aws.elasticsearch.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1149,7 +1149,7 @@ domain on every apply.
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM policy document specifying the access policies for the domain
 {{% /md %}}</dd>
@@ -1160,7 +1160,7 @@ domain on every apply.
 <a href="#advanced_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -1174,7 +1174,7 @@ domain on every apply.
 <a href="#advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ domain on every apply.
 <a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Dict[Domain<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain, see below.
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ domain on every apply.
 <a href="#cognito_options_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Dict[Domain<wbr>Cognito<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1206,7 +1206,7 @@ domain on every apply.
 <a href="#domain_endpoint_options_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>endpoint_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Dict[Domain<wbr>Domain<wbr>Endpoint<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
 {{% /md %}}</dd>
@@ -1228,7 +1228,7 @@ domain on every apply.
 <a href="#ebs_options_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Dict[Domain<wbr>Ebs<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ domain on every apply.
 <a href="#encrypt_at_rest_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>at_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Dict[Domain<wbr>Encrypt<wbr>At<wbr>Rest]</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
 {{% /md %}}</dd>
@@ -1261,7 +1261,7 @@ domain on every apply.
 <a href="#log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for publishing slow logs to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -1272,7 +1272,7 @@ domain on every apply.
 <a href="#node_to_node_encryption_python" style="color: inherit; text-decoration: inherit;">node_<wbr>to_<wbr>node_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Dict[Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node-to-node encryption options. See below.
 {{% /md %}}</dd>
@@ -1283,7 +1283,7 @@ domain on every apply.
 <a href="#snapshot_options_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Dict[Domain<wbr>Snapshot<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot related options, see below.
 {{% /md %}}</dd>
@@ -1294,7 +1294,7 @@ domain on every apply.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
@@ -1305,7 +1305,7 @@ domain on every apply.
 <a href="#vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Dict[Domain<wbr>Vpc<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
 {{% /md %}}</dd>
@@ -1592,7 +1592,8 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>advanced_security_options=None<span class="p">, </span>arn=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>endpoint=None<span class="p">, </span>kibana_endpoint=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kibana_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2372,7 +2373,7 @@ domain on every apply.
 <a href="#state_access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM policy document specifying the access policies for the domain
 {{% /md %}}</dd>
@@ -2383,7 +2384,7 @@ domain on every apply.
 <a href="#state_advanced_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -2397,7 +2398,7 @@ domain on every apply.
 <a href="#state_advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
 {{% /md %}}</dd>
@@ -2419,7 +2420,7 @@ domain on every apply.
 <a href="#state_cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Dict[Domain<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain, see below.
 {{% /md %}}</dd>
@@ -2430,7 +2431,7 @@ domain on every apply.
 <a href="#state_cognito_options_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Dict[Domain<wbr>Cognito<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2440,7 +2441,7 @@ domain on every apply.
 <a href="#state_domain_endpoint_options_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>endpoint_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Dict[Domain<wbr>Domain<wbr>Endpoint<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
 {{% /md %}}</dd>
@@ -2473,7 +2474,7 @@ domain on every apply.
 <a href="#state_ebs_options_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Dict[Domain<wbr>Ebs<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
 {{% /md %}}</dd>
@@ -2495,7 +2496,7 @@ domain on every apply.
 <a href="#state_encrypt_at_rest_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>at_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Dict[Domain<wbr>Encrypt<wbr>At<wbr>Rest]</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
 {{% /md %}}</dd>
@@ -2530,7 +2531,7 @@ domain on every apply.
 <a href="#state_log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for publishing slow logs to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -2541,7 +2542,7 @@ domain on every apply.
 <a href="#state_node_to_node_encryption_python" style="color: inherit; text-decoration: inherit;">node_<wbr>to_<wbr>node_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Dict[Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node-to-node encryption options. See below.
 {{% /md %}}</dd>
@@ -2552,7 +2553,7 @@ domain on every apply.
 <a href="#state_snapshot_options_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Dict[Domain<wbr>Snapshot<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot related options, see below.
 {{% /md %}}</dd>
@@ -2563,7 +2564,7 @@ domain on every apply.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
@@ -2574,7 +2575,7 @@ domain on every apply.
 <a href="#state_vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Dict[Domain<wbr>Vpc<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
 {{% /md %}}</dd>
@@ -2745,8 +2746,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internaluserdatabaseenabled_python">
-<a href="#internaluserdatabaseenabled_python" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
+        <span id="internal_user_database_enabled_python">
+<a href="#internal_user_database_enabled_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>user_<wbr>database_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2756,11 +2757,11 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masteruseroptions_python">
-<a href="#masteruseroptions_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Options</a>
+        <span id="master_user_options_python">
+<a href="#master_user_options_python" style="color: inherit; text-decoration: inherit;">master_<wbr>user_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Dict[Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options]</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the master user: username and password, or ARN
 {{% /md %}}</dd>
@@ -2912,8 +2913,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masteruserarn_python">
-<a href="#masteruserarn_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Arn</a>
+        <span id="master_user_arn_python">
+<a href="#master_user_arn_python" style="color: inherit; text-decoration: inherit;">master_<wbr>user_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2923,8 +2924,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masterusername_python">
-<a href="#masterusername_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Name</a>
+        <span id="master_user_name_python">
+<a href="#master_user_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2934,8 +2935,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masteruserpassword_python">
-<a href="#masteruserpassword_python" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Password</a>
+        <span id="master_user_password_python">
+<a href="#master_user_password_python" style="color: inherit; text-decoration: inherit;">master_<wbr>user_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3321,8 +3322,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dedicatedmastercount_python">
-<a href="#dedicatedmastercount_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Count</a>
+        <span id="dedicated_master_count_python">
+<a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3332,8 +3333,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dedicatedmasterenabled_python">
-<a href="#dedicatedmasterenabled_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Enabled</a>
+        <span id="dedicated_master_enabled_python">
+<a href="#dedicated_master_enabled_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3343,8 +3344,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dedicatedmastertype_python">
-<a href="#dedicatedmastertype_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Type</a>
+        <span id="dedicated_master_type_python">
+<a href="#dedicated_master_type_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3376,8 +3377,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="warmcount_python">
-<a href="#warmcount_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
+        <span id="warm_count_python">
+<a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3387,8 +3388,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="warmenabled_python">
-<a href="#warmenabled_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
+        <span id="warm_enabled_python">
+<a href="#warm_enabled_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3398,8 +3399,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="warmtype_python">
-<a href="#warmtype_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
+        <span id="warm_type_python">
+<a href="#warm_type_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3409,19 +3410,19 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zoneawarenessconfig_python">
-<a href="#zoneawarenessconfig_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Config</a>
+        <span id="zone_awareness_config_python">
+<a href="#zone_awareness_config_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Dict[Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config]</a></span>
+        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zoneawarenessenabled_python">
-<a href="#zoneawarenessenabled_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Enabled</a>
+        <span id="zone_awareness_enabled_python">
+<a href="#zone_awareness_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3510,8 +3511,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabilityzonecount_python">
-<a href="#availabilityzonecount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Count</a>
+        <span id="availability_zone_count_python">
+<a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3855,8 +3856,8 @@ domain on every apply.
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcehttps_python">
-<a href="#enforcehttps_python" style="color: inherit; text-decoration: inherit;">enforce<wbr>Https</a>
+        <span id="enforce_https_python">
+<a href="#enforce_https_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3866,8 +3867,8 @@ domain on every apply.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlssecuritypolicy_python">
-<a href="#tlssecuritypolicy_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Security<wbr>Policy</a>
+        <span id="tls_security_policy_python">
+<a href="#tls_security_policy_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>security_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4061,8 +4062,8 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
     <dt class="property-required"
             title="Required">
-        <span id="ebsenabled_python">
-<a href="#ebsenabled_python" style="color: inherit; text-decoration: inherit;">ebs<wbr>Enabled</a>
+        <span id="ebs_enabled_python">
+<a href="#ebs_enabled_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4084,17 +4085,6 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
@@ -4103,6 +4093,17 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 **Required** if `ebs_enabled` is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
 
 </dl>
@@ -4397,8 +4398,8 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4591,8 +4592,8 @@ snapshot of the indices in the domain.
 
     <dt class="property-required"
             title="Required">
-        <span id="automatedsnapshotstarthour_python">
-<a href="#automatedsnapshotstarthour_python" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
+        <span id="automated_snapshot_start_hour_python">
+<a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

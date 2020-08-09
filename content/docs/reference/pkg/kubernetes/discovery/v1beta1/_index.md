@@ -36,7 +36,7 @@ Explore the resources and functions of the discovery/v1beta1 module in the Kuber
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/discovery/v1beta1/#" title="@pulumi/kubernetes/discovery/v1beta1">@pulumi/kubernetes/discovery/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/discovery.k8s.io/v1beta1" title="pulumi_kubernetes/discovery.k8s.io/v1beta1">pulumi_kubernetes/discovery.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/discovery/v1beta1" title="pulumi_kubernetes/discovery/v1beta1">pulumi_kubernetes/discovery/v1beta1</a></dd>
 
 </dl>
 

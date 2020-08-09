@@ -213,7 +213,7 @@ const example_filtered = new aws.s3.BucketMetric("example-filtered", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketMetric">BucketMetric</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketMetric">BucketMetric</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BucketMetricFilterArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -522,7 +522,7 @@ The BucketMetric resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketmetricfilter">Dict[Bucket<wbr>Metric<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd>
@@ -636,7 +636,8 @@ Get an existing BucketMetric resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BucketMetricFilterArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BucketMetric</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -887,7 +888,7 @@ The following state arguments are supported:
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketmetricfilter">Dict[Bucket<wbr>Metric<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd>
@@ -1040,7 +1041,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Object tags for filtering (up to 10).
 {{% /md %}}</dd>

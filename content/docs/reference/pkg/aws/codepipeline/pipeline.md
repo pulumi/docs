@@ -575,7 +575,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -939,7 +939,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#artifact_store_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1130,7 +1130,8 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1480,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_artifact_store_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
@@ -1513,7 +1514,7 @@ The following state arguments are supported:
 <a href="#state_stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -1524,7 +1525,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1743,7 +1744,7 @@ The following state arguments are supported:
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Dict[Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd>
@@ -2011,7 +2012,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">List[Pipeline<wbr>Stage<wbr>Action]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">List[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
@@ -2530,15 +2531,15 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A Map of the action declaration's configuration. Find out more about configuring action configurations in the [Reference Pipeline Structure documentation](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputartifacts_python">
-<a href="#inputartifacts_python" style="color: inherit; text-decoration: inherit;">input<wbr>Artifacts</a>
+        <span id="input_artifacts_python">
+<a href="#input_artifacts_python" style="color: inherit; text-decoration: inherit;">input_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2559,8 +2560,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputartifacts_python">
-<a href="#outputartifacts_python" style="color: inherit; text-decoration: inherit;">output<wbr>Artifacts</a>
+        <span id="output_artifacts_python">
+<a href="#output_artifacts_python" style="color: inherit; text-decoration: inherit;">output_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2592,8 +2593,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runorder_python">
-<a href="#runorder_python" style="color: inherit; text-decoration: inherit;">run<wbr>Order</a>
+        <span id="run_order_python">
+<a href="#run_order_python" style="color: inherit; text-decoration: inherit;">run_<wbr>order</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

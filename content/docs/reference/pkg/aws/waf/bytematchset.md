@@ -135,7 +135,7 @@ const byteSet = new aws.waf.ByteMatchSet("byte_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.ByteMatchSet">ByteMatchSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>byte_match_tuples=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.ByteMatchSet">ByteMatchSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">byte_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[ByteMatchSetByteMatchTupleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -406,7 +406,7 @@ the location in requests that you want to search, and other settings.
 <a href="#byte_match_tuples_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuple">List[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuple">List[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the bytes (typically a string that corresponds
 with ASCII characters) that you want to search for in web requests,
@@ -522,7 +522,8 @@ Get an existing ByteMatchSet resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>byte_match_tuples=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">byte_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[ByteMatchSetByteMatchTupleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ByteMatchSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -735,7 +736,7 @@ the location in requests that you want to search, and other settings.
 <a href="#state_byte_match_tuples_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuple">List[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuple">List[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the bytes (typically a string that corresponds
 with ASCII characters) that you want to search for in web requests,
@@ -971,19 +972,19 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatch_python">
-<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+        <span id="field_to_match_python">
+<a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Dict[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="positionalconstraint_python">
-<a href="#positionalconstraint_python" style="color: inherit; text-decoration: inherit;">positional<wbr>Constraint</a>
+        <span id="positional_constraint_python">
+<a href="#positional_constraint_python" style="color: inherit; text-decoration: inherit;">positional_<wbr>constraint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -997,8 +998,8 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span id="texttransformation_python">
-<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+        <span id="text_transformation_python">
+<a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1012,8 +1013,8 @@ for all supported values.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetstring_python">
-<a href="#targetstring_python" style="color: inherit; text-decoration: inherit;">target<wbr>String</a>
+        <span id="target_string_python">
+<a href="#target_string_python" style="color: inherit; text-decoration: inherit;">target_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

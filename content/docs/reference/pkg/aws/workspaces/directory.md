@@ -225,7 +225,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Directory">Directory</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>directory_id=None<span class="p">, </span>self_service_permissions=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Directory">Directory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -567,7 +567,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -1088,7 +1088,8 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alias=None<span class="p">, </span>customer_user_name=None<span class="p">, </span>directory_id=None<span class="p">, </span>directory_name=None<span class="p">, </span>directory_type=None<span class="p">, </span>dns_ip_addresses=None<span class="p">, </span>iam_role_id=None<span class="p">, </span>ip_group_ids=None<span class="p">, </span>registration_code=None<span class="p">, </span>self_service_permissions=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>workspace_security_group_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">iam_role_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">registration_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Directory</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1757,7 +1758,7 @@ The following state arguments are supported:
 <a href="#state_self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -1779,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -2016,8 +2017,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changecomputetype_python">
-<a href="#changecomputetype_python" style="color: inherit; text-decoration: inherit;">change<wbr>Compute<wbr>Type</a>
+        <span id="change_compute_type_python">
+<a href="#change_compute_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2027,8 +2028,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="increasevolumesize_python">
-<a href="#increasevolumesize_python" style="color: inherit; text-decoration: inherit;">increase<wbr>Volume<wbr>Size</a>
+        <span id="increase_volume_size_python">
+<a href="#increase_volume_size_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2038,8 +2039,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rebuildworkspace_python">
-<a href="#rebuildworkspace_python" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Workspace</a>
+        <span id="rebuild_workspace_python">
+<a href="#rebuild_workspace_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2049,8 +2050,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartworkspace_python">
-<a href="#restartworkspace_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Workspace</a>
+        <span id="restart_workspace_python">
+<a href="#restart_workspace_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2060,8 +2061,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="switchrunningmode_python">
-<a href="#switchrunningmode_python" style="color: inherit; text-decoration: inherit;">switch<wbr>Running<wbr>Mode</a>
+        <span id="switch_running_mode_python">
+<a href="#switch_running_mode_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>running_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

@@ -439,7 +439,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#pulumi_aws.lambda.FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#pulumi_aws.lambda.FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEventInvokeConfigDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_event_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -814,7 +814,7 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
 <a href="#destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
@@ -950,7 +950,8 @@ Get an existing FunctionEventInvokeConfig resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEventInvokeConfigDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_event_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionEventInvokeConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1256,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
@@ -1427,24 +1428,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onsuccess_python">
-<a href="#onsuccess_python" style="color: inherit; text-decoration: inherit;">on<wbr>Success</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="on_failure_python">
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_success_python">
+<a href="#on_success_python" style="color: inherit; text-decoration: inherit;">on_<wbr>success</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd>
 
 </dl>

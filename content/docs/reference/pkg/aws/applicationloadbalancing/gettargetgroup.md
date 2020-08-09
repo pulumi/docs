@@ -125,7 +125,7 @@ const test = pulumi.output(aws.lb.getTargetGroup({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_target_group(</span>arn=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_target_group(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTargetGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -297,7 +297,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -861,7 +861,7 @@ The following output properties are available:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettargetgrouphealthcheck">Dict[Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettargetgroupstickiness">Dict[Get<wbr>Target<wbr>Group<wbr>Stickiness]</a></span>
+        <span class="property-type"><a href="#gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -962,7 +962,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1320,8 +1320,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1390,8 +1390,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1536,8 +1536,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cookieduration_python">
-<a href="#cookieduration_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Duration</a>
+        <span id="cookie_duration_python">
+<a href="#cookie_duration_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

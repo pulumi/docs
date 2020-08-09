@@ -36,7 +36,7 @@ Explore the resources and functions of the certificates/v1beta1 module in the Ku
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/certificates/v1beta1/#" title="@pulumi/kubernetes/certificates/v1beta1">@pulumi/kubernetes/certificates/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/certificates.k8s.io/v1beta1" title="pulumi_kubernetes/certificates.k8s.io/v1beta1">pulumi_kubernetes/certificates.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/certificates/v1beta1" title="pulumi_kubernetes/certificates/v1beta1">pulumi_kubernetes/certificates/v1beta1</a></dd>
 
 </dl>
 

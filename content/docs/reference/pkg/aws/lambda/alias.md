@@ -130,7 +130,7 @@ const testLambdaAlias = new aws.lambda.Alias("test_lambda_alias", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#pulumi_aws.lambda.Alias">Alias</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>function_name=None<span class="p">, </span>function_version=None<span class="p">, </span>name=None<span class="p">, </span>routing_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#pulumi_aws.lambda.Alias">Alias</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.AliasRoutingConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -538,7 +538,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -729,7 +729,8 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>function_name=None<span class="p">, </span>function_version=None<span class="p">, </span>invoke_arn=None<span class="p">, </span>name=None<span class="p">, </span>routing_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invoke_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.AliasRoutingConfigArgs]</span> = None<span class="p">) -&gt;</span> Alias</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1167,7 +1168,7 @@ The following state arguments are supported:
 <a href="#state_routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -1261,11 +1262,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalversionweights_python">
-<a href="#additionalversionweights_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Version<wbr>Weights</a>
+        <span id="additional_version_weights_python">
+<a href="#additional_version_weights_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>version_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Number]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a lambda function.
 {{% /md %}}</dd>

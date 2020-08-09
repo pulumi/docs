@@ -198,7 +198,7 @@ const example = pulumi.output(aws.getAmi({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ami(</span>executable_users=None<span class="p">, </span>filters=None<span class="p">, </span>most_recent=None<span class="p">, </span>name_regex=None<span class="p">, </span>owners=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ami(</span><span class="nx">executable_users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAmiFilterArgs]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAmiResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -501,7 +501,7 @@ the image. Valid items are the numeric account ID or `self`.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -541,7 +541,7 @@ options to narrow down the list AWS returns.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -1969,7 +1969,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -1982,7 +1982,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -2229,14 +2229,14 @@ is successfully registered and can be used to launch an instance.
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2245,8 +2245,8 @@ is successfully registered and can be used to launch an instance.
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2491,8 +2491,8 @@ is successfully registered and can be used to launch an instance.
 
     <dt class="property-required"
             title="Required">
-        <span id="productcodeid_python">
-<a href="#productcodeid_python" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Id</a>
+        <span id="product_code_id_python">
+<a href="#product_code_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2501,8 +2501,8 @@ is successfully registered and can be used to launch an instance.
 
     <dt class="property-required"
             title="Required">
-        <span id="productcodetype_python">
-<a href="#productcodetype_python" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Type</a>
+        <span id="product_code_type_python">
+<a href="#product_code_type_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

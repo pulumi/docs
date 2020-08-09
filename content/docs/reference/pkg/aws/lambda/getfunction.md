@@ -105,7 +105,7 @@ const existing = pulumi.output(aws.lambda.getFunction({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_function(</span>function_name=None<span class="p">, </span>qualifier=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_function(</span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ The following output properties are available:
 <a href="#dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctiondeadletterconfig">Dict[Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure the function's *dead letter queue*.
 {{% /md %}}</dd>
@@ -1177,7 +1177,7 @@ The following output properties are available:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctionenvironment">Dict[Get<wbr>Function<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings.
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The following output properties are available:
 <a href="#file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctionfilesystemconfig">List[Get<wbr>Function<wbr>File<wbr>System<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getfunctionfilesystemconfig">Get<wbr>Function<wbr>File<wbr>System<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The connection settings for an Amazon EFS file system.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1373,7 +1373,7 @@ The following output properties are available:
 <a href="#tracing_config_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctiontracingconfig">Dict[Get<wbr>Function<wbr>Tracing<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Tracing settings of the function.
 {{% /md %}}</dd>
@@ -1395,7 +1395,7 @@ The following output properties are available:
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctionvpcconfig">Dict[Get<wbr>Function<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}VPC configuration associated with your Lambda function.
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ The following output properties are available:
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1710,8 +1710,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localmountpath_python">
-<a href="#localmountpath_python" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
+        <span id="local_mount_path_python">
+<a href="#local_mount_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

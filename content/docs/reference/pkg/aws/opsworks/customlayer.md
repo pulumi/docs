@@ -101,7 +101,7 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/opsworks/#pulumi_aws.opsworks.CustomLayer">CustomLayer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_assign_elastic_ips=None<span class="p">, </span>auto_assign_public_ips=None<span class="p">, </span>auto_healing=None<span class="p">, </span>custom_configure_recipes=None<span class="p">, </span>custom_deploy_recipes=None<span class="p">, </span>custom_instance_profile_arn=None<span class="p">, </span>custom_json=None<span class="p">, </span>custom_security_group_ids=None<span class="p">, </span>custom_setup_recipes=None<span class="p">, </span>custom_shutdown_recipes=None<span class="p">, </span>custom_undeploy_recipes=None<span class="p">, </span>drain_elb_on_shutdown=None<span class="p">, </span>ebs_volumes=None<span class="p">, </span>elastic_load_balancer=None<span class="p">, </span>install_updates_on_boot=None<span class="p">, </span>instance_shutdown_timeout=None<span class="p">, </span>name=None<span class="p">, </span>short_name=None<span class="p">, </span>stack_id=None<span class="p">, </span>system_packages=None<span class="p">, </span>tags=None<span class="p">, </span>use_ebs_optimized_instances=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/opsworks/#pulumi_aws.opsworks.CustomLayer">CustomLayer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[List[CustomLayerEbsVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1160,7 +1160,7 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customlayerebsvolume">List[Custom<wbr>Layer<wbr>Ebs<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#customlayerebsvolume">List[Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -1226,7 +1226,7 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1384,7 +1384,8 @@ Get an existing CustomLayer resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>auto_assign_elastic_ips=None<span class="p">, </span>auto_assign_public_ips=None<span class="p">, </span>auto_healing=None<span class="p">, </span>custom_configure_recipes=None<span class="p">, </span>custom_deploy_recipes=None<span class="p">, </span>custom_instance_profile_arn=None<span class="p">, </span>custom_json=None<span class="p">, </span>custom_security_group_ids=None<span class="p">, </span>custom_setup_recipes=None<span class="p">, </span>custom_shutdown_recipes=None<span class="p">, </span>custom_undeploy_recipes=None<span class="p">, </span>drain_elb_on_shutdown=None<span class="p">, </span>ebs_volumes=None<span class="p">, </span>elastic_load_balancer=None<span class="p">, </span>install_updates_on_boot=None<span class="p">, </span>instance_shutdown_timeout=None<span class="p">, </span>name=None<span class="p">, </span>short_name=None<span class="p">, </span>stack_id=None<span class="p">, </span>system_packages=None<span class="p">, </span>tags=None<span class="p">, </span>use_ebs_optimized_instances=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[List[CustomLayerEbsVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> CustomLayer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2407,7 +2408,7 @@ The following state arguments are supported:
 <a href="#state_ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customlayerebsvolume">List[Custom<wbr>Layer<wbr>Ebs<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#customlayerebsvolume">List[Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -2495,7 +2496,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2798,8 +2799,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="mountpoint_python">
-<a href="#mountpoint_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
+        <span id="mount_point_python">
+<a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2809,8 +2810,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofdisks_python">
-<a href="#numberofdisks_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks</a>
+        <span id="number_of_disks_python">
+<a href="#number_of_disks_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2853,8 +2854,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="raidlevel_python">
-<a href="#raidlevel_python" style="color: inherit; text-decoration: inherit;">raid<wbr>Level</a>
+        <span id="raid_level_python">
+<a href="#raid_level_python" style="color: inherit; text-decoration: inherit;">raid_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

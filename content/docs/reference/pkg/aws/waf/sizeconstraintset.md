@@ -131,7 +131,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>size_constraints=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[List[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,7 +407,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -554,7 +554,8 @@ Get an existing SizeConstraintSet resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>size_constraints=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[List[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">) -&gt;</span> SizeConstraintSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -816,7 +817,7 @@ The following state arguments are supported:
 <a href="#state_size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -1046,11 +1047,11 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatch_python">
-<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+        <span id="field_to_match_python">
+<a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Dict[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
 {{% /md %}}</dd>
@@ -1069,8 +1070,8 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
 
     <dt class="property-required"
             title="Required">
-        <span id="texttransformation_python">
-<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+        <span id="text_transformation_python">
+<a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

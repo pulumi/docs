@@ -275,7 +275,7 @@ const main = new aws.ec2.VpnConnection("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpnConnection">VpnConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>customer_gateway_id=None<span class="p">, </span>static_routes_only=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>tunnel1_inside_cidr=None<span class="p">, </span>tunnel1_preshared_key=None<span class="p">, </span>tunnel2_inside_cidr=None<span class="p">, </span>tunnel2_preshared_key=None<span class="p">, </span>type=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpnConnection">VpnConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -837,7 +837,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd>
@@ -1658,7 +1658,8 @@ Get an existing VpnConnection resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>customer_gateway_configuration=None<span class="p">, </span>customer_gateway_id=None<span class="p">, </span>routes=None<span class="p">, </span>static_routes_only=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>tunnel1_address=None<span class="p">, </span>tunnel1_bgp_asn=None<span class="p">, </span>tunnel1_bgp_holdtime=None<span class="p">, </span>tunnel1_cgw_inside_address=None<span class="p">, </span>tunnel1_inside_cidr=None<span class="p">, </span>tunnel1_preshared_key=None<span class="p">, </span>tunnel1_vgw_inside_address=None<span class="p">, </span>tunnel2_address=None<span class="p">, </span>tunnel2_bgp_asn=None<span class="p">, </span>tunnel2_bgp_holdtime=None<span class="p">, </span>tunnel2_cgw_inside_address=None<span class="p">, </span>tunnel2_inside_cidr=None<span class="p">, </span>tunnel2_preshared_key=None<span class="p">, </span>tunnel2_vgw_inside_address=None<span class="p">, </span>type=None<span class="p">, </span>vgw_telemetries=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[List[VpnConnectionRouteArgs]]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tunnel1_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tunnel2_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vgw_telemetries</span><span class="p">:</span> <span class="nx">Optional[List[VpnConnectionVgwTelemetryArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2651,7 +2652,7 @@ The following state arguments are supported:
 <a href="#state_routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionroute">List[Vpn<wbr>Connection<wbr>Route]</a></span>
+        <span class="property-type"><a href="#vpnconnectionroute">List[Vpn<wbr>Connection<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2672,7 +2673,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd>
@@ -2870,7 +2871,7 @@ The following state arguments are supported:
 <a href="#state_vgw_telemetries_python" style="color: inherit; text-decoration: inherit;">vgw_<wbr>telemetries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">List[Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry]</a></span>
+        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">List[Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3257,8 +3258,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acceptedroutecount_python">
-<a href="#acceptedroutecount_python" style="color: inherit; text-decoration: inherit;">accepted<wbr>Route<wbr>Count</a>
+        <span id="accepted_route_count_python">
+<a href="#accepted_route_count_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>route_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3267,8 +3268,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="laststatuschange_python">
-<a href="#laststatuschange_python" style="color: inherit; text-decoration: inherit;">last<wbr>Status<wbr>Change</a>
+        <span id="last_status_change_python">
+<a href="#last_status_change_python" style="color: inherit; text-decoration: inherit;">last_<wbr>status_<wbr>change</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3277,8 +3278,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outsideipaddress_python">
-<a href="#outsideipaddress_python" style="color: inherit; text-decoration: inherit;">outside<wbr>Ip<wbr>Address</a>
+        <span id="outside_ip_address_python">
+<a href="#outside_ip_address_python" style="color: inherit; text-decoration: inherit;">outside_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3297,8 +3298,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statusmessage_python">
-<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

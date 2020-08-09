@@ -23,7 +23,7 @@ Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` reso
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codebuild/#pulumi_aws.codebuild.Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>artifacts=None<span class="p">, </span>badge_enabled=None<span class="p">, </span>build_timeout=None<span class="p">, </span>cache=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>environment=None<span class="p">, </span>logs_config=None<span class="p">, </span>name=None<span class="p">, </span>queued_timeout=None<span class="p">, </span>secondary_artifacts=None<span class="p">, </span>secondary_sources=None<span class="p">, </span>service_role=None<span class="p">, </span>source=None<span class="p">, </span>source_version=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codebuild/#pulumi_aws.codebuild.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -783,7 +783,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Dict[Project<wbr>Artifacts]</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Dict[Project<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Dict[Project<wbr>Source]</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Dict[Project<wbr>Cache]</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logs_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Dict[Project<wbr>Logs<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondary_artifacts_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
 {{% /md %}}</dd>
@@ -926,7 +926,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondary_sources_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Dict[Project<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 {{% /md %}}</dd>
@@ -1150,7 +1150,8 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>artifacts=None<span class="p">, </span>badge_enabled=None<span class="p">, </span>badge_url=None<span class="p">, </span>build_timeout=None<span class="p">, </span>cache=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>environment=None<span class="p">, </span>logs_config=None<span class="p">, </span>name=None<span class="p">, </span>queued_timeout=None<span class="p">, </span>secondary_artifacts=None<span class="p">, </span>secondary_sources=None<span class="p">, </span>service_role=None<span class="p">, </span>source=None<span class="p">, </span>source_version=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1929,7 +1930,7 @@ The following state arguments are supported:
 <a href="#state_artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Dict[Project<wbr>Artifacts]</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
 {{% /md %}}</dd>
@@ -1973,7 +1974,7 @@ The following state arguments are supported:
 <a href="#state_cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Dict[Project<wbr>Cache]</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
 {{% /md %}}</dd>
@@ -2006,7 +2007,7 @@ The following state arguments are supported:
 <a href="#state_environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Dict[Project<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
 {{% /md %}}</dd>
@@ -2017,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_logs_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Dict[Project<wbr>Logs<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
 {{% /md %}}</dd>
@@ -2050,7 +2051,7 @@ The following state arguments are supported:
 <a href="#state_secondary_artifacts_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
 {{% /md %}}</dd>
@@ -2061,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_secondary_sources_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
 {{% /md %}}</dd>
@@ -2083,7 +2084,7 @@ The following state arguments are supported:
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Dict[Project<wbr>Source]</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
 {{% /md %}}</dd>
@@ -2105,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2116,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Dict[Project<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 {{% /md %}}</dd>
@@ -2485,8 +2486,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifactidentifier_python">
-<a href="#artifactidentifier_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Identifier</a>
+        <span id="artifact_identifier_python">
+<a href="#artifact_identifier_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2496,8 +2497,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptiondisabled_python">
-<a href="#encryptiondisabled_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
+        <span id="encryption_disabled_python">
+<a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2529,8 +2530,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namespacetype_python">
-<a href="#namespacetype_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Type</a>
+        <span id="namespace_type_python">
+<a href="#namespace_type_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2540,8 +2541,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideartifactname_python">
-<a href="#overrideartifactname_python" style="color: inherit; text-decoration: inherit;">override<wbr>Artifact<wbr>Name</a>
+        <span id="override_artifact_name_python">
+<a href="#override_artifact_name_python" style="color: inherit; text-decoration: inherit;">override_<wbr>artifact_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3061,8 +3062,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="computetype_python">
-<a href="#computetype_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
+        <span id="compute_type_python">
+<a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3105,19 +3106,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentvariables_python">
-<a href="#environmentvariables_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
+        <span id="environment_variables_python">
+<a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">List[Project<wbr>Environment<wbr>Environment<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">List[Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of environment variables to make available to builds for this build project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagepullcredentialstype_python">
-<a href="#imagepullcredentialstype_python" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Credentials<wbr>Type</a>
+        <span id="image_pull_credentials_type_python">
+<a href="#image_pull_credentials_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>credentials_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3127,8 +3128,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privilegedmode_python">
-<a href="#privilegedmode_python" style="color: inherit; text-decoration: inherit;">privileged<wbr>Mode</a>
+        <span id="privileged_mode_python">
+<a href="#privileged_mode_python" style="color: inherit; text-decoration: inherit;">privileged_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3138,11 +3139,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="registrycredential_python">
-<a href="#registrycredential_python" style="color: inherit; text-decoration: inherit;">registry<wbr>Credential</a>
+        <span id="registry_credential_python">
+<a href="#registry_credential_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Dict[Project<wbr>Environment<wbr>Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
 {{% /md %}}</dd>
@@ -3450,8 +3451,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="credentialprovider_python">
-<a href="#credentialprovider_python" style="color: inherit; text-decoration: inherit;">credential<wbr>Provider</a>
+        <span id="credential_provider_python">
+<a href="#credential_provider_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3573,22 +3574,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudwatchlogs_python">
-<a href="#cloudwatchlogs_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
+        <span id="cloudwatch_logs_python">
+<a href="#cloudwatch_logs_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Dict[Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to store logs to CloudWatch
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3logs_python">
-<a href="#s3logs_python" style="color: inherit; text-decoration: inherit;">s3Logs</a>
+        <span id="s3_logs_python">
+<a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Dict[Project<wbr>Logs<wbr>Config<wbr>S3Logs]</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the builds to store logs to S3.
 {{% /md %}}</dd>
@@ -3762,8 +3763,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="streamname_python">
-<a href="#streamname_python" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+        <span id="stream_name_python">
+<a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3918,8 +3919,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptiondisabled_python">
-<a href="#encryptiondisabled_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
+        <span id="encryption_disabled_python">
+<a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4294,8 +4295,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="artifactidentifier_python">
-<a href="#artifactidentifier_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Identifier</a>
+        <span id="artifact_identifier_python">
+<a href="#artifact_identifier_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4316,8 +4317,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptiondisabled_python">
-<a href="#encryptiondisabled_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
+        <span id="encryption_disabled_python">
+<a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4349,8 +4350,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namespacetype_python">
-<a href="#namespacetype_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Type</a>
+        <span id="namespace_type_python">
+<a href="#namespace_type_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4360,8 +4361,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideartifactname_python">
-<a href="#overrideartifactname_python" style="color: inherit; text-decoration: inherit;">override<wbr>Artifact<wbr>Name</a>
+        <span id="override_artifact_name_python">
+<a href="#override_artifact_name_python" style="color: inherit; text-decoration: inherit;">override_<wbr>artifact_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4736,8 +4737,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceidentifier_python">
-<a href="#sourceidentifier_python" style="color: inherit; text-decoration: inherit;">source<wbr>Identifier</a>
+        <span id="source_identifier_python">
+<a href="#source_identifier_python" style="color: inherit; text-decoration: inherit;">source_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4762,7 +4763,7 @@ The following state arguments are supported:
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">List[Project<wbr>Secondary<wbr>Source<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">List[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
 {{% /md %}}</dd>
@@ -4780,8 +4781,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gitclonedepth_python">
-<a href="#gitclonedepth_python" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Depth</a>
+        <span id="git_clone_depth_python">
+<a href="#git_clone_depth_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>depth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4791,19 +4792,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gitsubmodulesconfig_python">
-<a href="#gitsubmodulesconfig_python" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
+        <span id="git_submodules_config_python">
+<a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Dict[Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="insecuressl_python">
-<a href="#insecuressl_python" style="color: inherit; text-decoration: inherit;">insecure<wbr>Ssl</a>
+        <span id="insecure_ssl_python">
+<a href="#insecure_ssl_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4824,8 +4825,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reportbuildstatus_python">
-<a href="#reportbuildstatus_python" style="color: inherit; text-decoration: inherit;">report<wbr>Build<wbr>Status</a>
+        <span id="report_build_status_python">
+<a href="#report_build_status_python" style="color: inherit; text-decoration: inherit;">report_<wbr>build_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5048,8 +5049,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="fetchsubmodules_python">
-<a href="#fetchsubmodules_python" style="color: inherit; text-decoration: inherit;">fetch<wbr>Submodules</a>
+        <span id="fetch_submodules_python">
+<a href="#fetch_submodules_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>submodules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5384,7 +5385,7 @@ The following state arguments are supported:
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">List[Project<wbr>Source<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#projectsourceauth">List[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
 {{% /md %}}</dd>
@@ -5402,8 +5403,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gitclonedepth_python">
-<a href="#gitclonedepth_python" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Depth</a>
+        <span id="git_clone_depth_python">
+<a href="#git_clone_depth_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>depth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5413,19 +5414,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gitsubmodulesconfig_python">
-<a href="#gitsubmodulesconfig_python" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
+        <span id="git_submodules_config_python">
+<a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Dict[Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config]</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="insecuressl_python">
-<a href="#insecuressl_python" style="color: inherit; text-decoration: inherit;">insecure<wbr>Ssl</a>
+        <span id="insecure_ssl_python">
+<a href="#insecure_ssl_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5446,8 +5447,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reportbuildstatus_python">
-<a href="#reportbuildstatus_python" style="color: inherit; text-decoration: inherit;">report<wbr>Build<wbr>Status</a>
+        <span id="report_build_status_python">
+<a href="#report_build_status_python" style="color: inherit; text-decoration: inherit;">report_<wbr>build_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5670,8 +5671,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="fetchsubmodules_python">
-<a href="#fetchsubmodules_python" style="color: inherit; text-decoration: inherit;">fetch<wbr>Submodules</a>
+        <span id="fetch_submodules_python">
+<a href="#fetch_submodules_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>submodules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

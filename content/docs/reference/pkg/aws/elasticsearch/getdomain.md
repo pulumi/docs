@@ -98,7 +98,7 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domain(</span>domain_name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain(</span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following output properties are available:
 <a href="#advanced_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
@@ -1223,7 +1223,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -1370,8 +1370,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="internaluserdatabaseenabled_python">
-<a href="#internaluserdatabaseenabled_python" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
+        <span id="internal_user_database_enabled_python">
+<a href="#internal_user_database_enabled_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>user_<wbr>database_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1757,8 +1757,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmastercount_python">
-<a href="#dedicatedmastercount_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Count</a>
+        <span id="dedicated_master_count_python">
+<a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1768,8 +1768,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmasterenabled_python">
-<a href="#dedicatedmasterenabled_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Enabled</a>
+        <span id="dedicated_master_enabled_python">
+<a href="#dedicated_master_enabled_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1779,8 +1779,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmastertype_python">
-<a href="#dedicatedmastertype_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Type</a>
+        <span id="dedicated_master_type_python">
+<a href="#dedicated_master_type_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1812,8 +1812,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="warmcount_python">
-<a href="#warmcount_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
+        <span id="warm_count_python">
+<a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1823,8 +1823,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="warmtype_python">
-<a href="#warmtype_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
+        <span id="warm_type_python">
+<a href="#warm_type_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1834,19 +1834,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="zoneawarenessconfigs_python">
-<a href="#zoneawarenessconfigs_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Configs</a>
+        <span id="zone_awareness_configs_python">
+<a href="#zone_awareness_configs_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zoneawarenessenabled_python">
-<a href="#zoneawarenessenabled_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Enabled</a>
+        <span id="zone_awareness_enabled_python">
+<a href="#zone_awareness_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1856,8 +1856,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="warmenabled_python">
-<a href="#warmenabled_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
+        <span id="warm_enabled_python">
+<a href="#warm_enabled_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1946,8 +1946,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="availabilityzonecount_python">
-<a href="#availabilityzonecount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Count</a>
+        <span id="availability_zone_count_python">
+<a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2360,8 +2360,8 @@ attached to data nodes.
 
     <dt class="property-required"
             title="Required">
-        <span id="ebsenabled_python">
-<a href="#ebsenabled_python" style="color: inherit; text-decoration: inherit;">ebs<wbr>Enabled</a>
+        <span id="ebs_enabled_python">
+<a href="#ebs_enabled_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2383,17 +2383,6 @@ attached to data nodes.
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
@@ -2401,6 +2390,17 @@ attached to data nodes.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
 
 </dl>
@@ -2706,8 +2706,8 @@ attached to data nodes.
 
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2889,8 +2889,8 @@ snapshot of the indices in the domain.
 
     <dt class="property-required"
             title="Required">
-        <span id="automatedsnapshotstarthour_python">
-<a href="#automatedsnapshotstarthour_python" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
+        <span id="automated_snapshot_start_hour_python">
+<a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

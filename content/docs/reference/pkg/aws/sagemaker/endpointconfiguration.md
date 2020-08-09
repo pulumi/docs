@@ -136,7 +136,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.EndpointConfiguration">EndpointConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>name=None<span class="p">, </span>production_variants=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.EndpointConfiguration">EndpointConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[List[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -467,7 +467,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -647,7 +647,8 @@ Get an existing EndpointConfiguration resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>name=None<span class="p">, </span>production_variants=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[List[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> EndpointConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -986,7 +987,7 @@ The following state arguments are supported:
 <a href="#state_production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd>
@@ -997,7 +998,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1256,8 +1257,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="initialinstancecount_python">
-<a href="#initialinstancecount_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Instance<wbr>Count</a>
+        <span id="initial_instance_count_python">
+<a href="#initial_instance_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1278,8 +1279,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="modelname_python">
-<a href="#modelname_python" style="color: inherit; text-decoration: inherit;">model<wbr>Name</a>
+        <span id="model_name_python">
+<a href="#model_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1289,8 +1290,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acceleratortype_python">
-<a href="#acceleratortype_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
+        <span id="accelerator_type_python">
+<a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1300,8 +1301,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialvariantweight_python">
-<a href="#initialvariantweight_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Variant<wbr>Weight</a>
+        <span id="initial_variant_weight_python">
+<a href="#initial_variant_weight_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>variant_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1311,8 +1312,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="variantname_python">
-<a href="#variantname_python" style="color: inherit; text-decoration: inherit;">variant<wbr>Name</a>
+        <span id="variant_name_python">
+<a href="#variant_name_python" style="color: inherit; text-decoration: inherit;">variant_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

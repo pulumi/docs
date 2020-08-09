@@ -22,7 +22,7 @@ meta_desc: "Explore the Fleet resource of the worklink module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/worklink/#pulumi_aws.worklink.Fleet">Fleet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/worklink/#pulumi_aws.worklink.Fleet">Fleet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_stream_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_provider</span><span class="p">:</span> <span class="nx">Optional[FleetIdentityProviderArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FleetNetworkArgs]</span> = None<span class="p">, </span><span class="nx">optimize_for_end_user_location</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -485,7 +485,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Dict[Fleet<wbr>Identity<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Dict[Fleet<wbr>Network]</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -797,7 +797,8 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>audit_stream_arn=None<span class="p">, </span>company_code=None<span class="p">, </span>created_time=None<span class="p">, </span>device_ca_certificate=None<span class="p">, </span>display_name=None<span class="p">, </span>identity_provider=None<span class="p">, </span>last_updated_time=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>optimize_for_end_user_location=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">audit_stream_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">company_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_provider</span><span class="p">:</span> <span class="nx">Optional[FleetIdentityProviderArgs]</span> = None<span class="p">, </span><span class="nx">last_updated_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FleetNetworkArgs]</span> = None<span class="p">, </span><span class="nx">optimize_for_end_user_location</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Fleet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1367,7 +1368,7 @@ The following state arguments are supported:
 <a href="#state_identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Dict[Fleet<wbr>Identity<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1400,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Dict[Fleet<wbr>Network]</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1538,8 +1539,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="samlmetadata_python">
-<a href="#samlmetadata_python" style="color: inherit; text-decoration: inherit;">saml<wbr>Metadata</a>
+        <span id="saml_metadata_python">
+<a href="#saml_metadata_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

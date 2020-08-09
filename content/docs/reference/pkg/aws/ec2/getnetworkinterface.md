@@ -99,7 +99,7 @@ const bar = pulumi.output(aws.ec2.getNetworkInterface({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_network_interface(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_interface(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetNetworkInterfaceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkInterfaceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -252,7 +252,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkinterfacefilter">List[Get<wbr>Network<wbr>Interface<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getnetworkinterfacefilter">List[Get<wbr>Network<wbr>Interface<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are several valid keys, for a full reference, check out [describe-network-interfaces](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-network-interfaces.html) in the AWS CLI reference.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the network interface.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the network interface.
 {{% /md %}}</dd>
@@ -1385,8 +1385,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ipownerid_python">
-<a href="#ipownerid_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Owner<wbr>Id</a>
+        <span id="ip_owner_id_python">
+<a href="#ip_owner_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>owner_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1396,8 +1396,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicdnsname_python">
-<a href="#publicdnsname_python" style="color: inherit; text-decoration: inherit;">public<wbr>Dns<wbr>Name</a>
+        <span id="public_dns_name_python">
+<a href="#public_dns_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

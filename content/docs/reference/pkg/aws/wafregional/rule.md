@@ -166,7 +166,7 @@ const wafrule = new aws.wafregional.Rule("wafrule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.Rule">Rule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>predicates=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.Rule">Rule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicates</span><span class="p">:</span> <span class="nx">Optional[List[RulePredicateArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -519,7 +519,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#predicates_python" style="color: inherit; text-decoration: inherit;">predicates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></span>
+        <span class="property-type"><a href="#rulepredicate">List[Rule<wbr>Predicate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -677,7 +677,8 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>predicates=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicates</span><span class="p">:</span> <span class="nx">Optional[List[RulePredicateArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1016,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_predicates_python" style="color: inherit; text-decoration: inherit;">predicates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></span>
+        <span class="property-type"><a href="#rulepredicate">List[Rule<wbr>Predicate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -1027,7 +1028,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1178,8 +1179,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dataid_python">
-<a href="#dataid_python" style="color: inherit; text-decoration: inherit;">data<wbr>Id</a>
+        <span id="data_id_python">
+<a href="#data_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

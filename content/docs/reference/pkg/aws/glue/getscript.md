@@ -908,7 +908,7 @@ export const scalaCode = example.scalaCode;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_script(</span>dag_edges=None<span class="p">, </span>dag_nodes=None<span class="p">, </span>language=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_script(</span><span class="nx">dag_edges</span><span class="p">:</span> <span class="nx">Optional[List[GetScriptDagEdgeArgs]]</span> = None<span class="p">, </span><span class="nx">dag_nodes</span><span class="p">:</span> <span class="nx">Optional[List[GetScriptDagNodeArgs]]</span> = None<span class="p">, </span><span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScriptResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1059,7 +1059,7 @@ The following arguments are supported:
 <a href="#dag_edges_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>edges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge]</a></span>
+        <span class="property-type"><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the edges in the DAG. Defined below.
 {{% /md %}}</dd>
@@ -1070,7 +1070,7 @@ The following arguments are supported:
 <a href="#dag_nodes_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the nodes in the DAG. Defined below.
 {{% /md %}}</dd>
@@ -1554,8 +1554,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetparameter_python">
-<a href="#targetparameter_python" style="color: inherit; text-decoration: inherit;">target<wbr>Parameter</a>
+        <span id="target_parameter_python">
+<a href="#target_parameter_python" style="color: inherit; text-decoration: inherit;">target_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1747,7 +1747,7 @@ The following output properties are available:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscriptdagnodearg">List[Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg]</a></span>
+        <span class="property-type"><a href="#getscriptdagnodearg">List[Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested configuration an argument or property of a node. Defined below.
 {{% /md %}}</dd>
@@ -1776,8 +1776,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linenumber_python">
-<a href="#linenumber_python" style="color: inherit; text-decoration: inherit;">line<wbr>Number</a>
+        <span id="line_number_python">
+<a href="#line_number_python" style="color: inherit; text-decoration: inherit;">line_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

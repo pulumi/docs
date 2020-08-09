@@ -234,7 +234,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/fsx/#pulumi_aws.fsx.WindowsFileSystem">WindowsFileSystem</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_directory_id=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/fsx/#pulumi_aws.fsx.WindowsFileSystem">WindowsFileSystem</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">self_managed_active_directory</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemSelfManagedActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">skip_final_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">weekly_maintenance_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -961,7 +961,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#self_managed_active_directory_python" style="color: inherit; text-decoration: inherit;">self_<wbr>managed_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -1317,7 +1317,8 @@ Get an existing WindowsFileSystem resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active_directory_id=None<span class="p">, </span>arn=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>dns_name=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>network_interface_ids=None<span class="p">, </span>owner_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>vpc_id=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">self_managed_active_directory</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemSelfManagedActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">skip_final_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_maintenance_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WindowsFileSystem</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2162,7 +2163,7 @@ The following state arguments are supported:
 <a href="#state_self_managed_active_directory_python" style="color: inherit; text-decoration: inherit;">self_<wbr>managed_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
 {{% /md %}}</dd>
@@ -2206,7 +2207,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -2542,8 +2543,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystemadministratorsgroup_python">
-<a href="#filesystemadministratorsgroup_python" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Administrators<wbr>Group</a>
+        <span id="file_system_administrators_group_python">
+<a href="#file_system_administrators_group_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>administrators_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2553,8 +2554,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationalunitdistinguishedname_python">
-<a href="#organizationalunitdistinguishedname_python" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit<wbr>Distinguished<wbr>Name</a>
+        <span id="organizational_unit_distinguished_name_python">
+<a href="#organizational_unit_distinguished_name_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit_<wbr>distinguished_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

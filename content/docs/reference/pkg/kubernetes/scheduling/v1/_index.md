@@ -36,7 +36,7 @@ Explore the resources and functions of the scheduling/v1 module in the Kubernete
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/scheduling/v1/#" title="@pulumi/kubernetes/scheduling/v1">@pulumi/kubernetes/scheduling/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling.k8s.io/v1" title="pulumi_kubernetes/scheduling.k8s.io/v1">pulumi_kubernetes/scheduling.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling/v1" title="pulumi_kubernetes/scheduling/v1">pulumi_kubernetes/scheduling/v1</a></dd>
 
 </dl>
 

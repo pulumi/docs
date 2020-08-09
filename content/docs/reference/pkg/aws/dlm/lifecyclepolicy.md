@@ -350,7 +350,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dlm/#pulumi_aws.dlm.LifecyclePolicy">LifecyclePolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>policy_details=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dlm/#pulumi_aws.dlm.LifecyclePolicy">LifecyclePolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_details</span><span class="p">:</span> <span class="nx">Optional[LifecyclePolicyPolicyDetailsArgs]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -736,7 +736,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#policy_details_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -905,7 +905,8 @@ Get an existing LifecyclePolicy resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>policy_details=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_details</span><span class="p">:</span> <span class="nx">Optional[LifecyclePolicyPolicyDetailsArgs]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> LifecyclePolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1277,7 +1278,7 @@ The following state arguments are supported:
 <a href="#state_policy_details_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd>
@@ -1299,7 +1300,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -1459,8 +1460,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcetypes_python">
-<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+        <span id="resource_types_python">
+<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1474,18 +1475,18 @@ The following state arguments are supported:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targettags_python">
-<a href="#targettags_python" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
+        <span id="target_tags_python">
+<a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
@@ -1703,11 +1704,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="createrule_python">
-<a href="#createrule_python" style="color: inherit; text-decoration: inherit;">create<wbr>Rule</a>
+        <span id="create_rule_python">
+<a href="#create_rule_python" style="color: inherit; text-decoration: inherit;">create_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `create_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd>
@@ -1725,19 +1726,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="retainrule_python">
-<a href="#retainrule_python" style="color: inherit; text-decoration: inherit;">retain<wbr>Rule</a>
+        <span id="retain_rule_python">
+<a href="#retain_rule_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `retain_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copytags_python">
-<a href="#copytags_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags</a>
+        <span id="copy_tags_python">
+<a href="#copy_tags_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1747,11 +1748,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagstoadd_python">
-<a href="#tagstoadd_python" style="color: inherit; text-decoration: inherit;">tags<wbr>To<wbr>Add</a>
+        <span id="tags_to_add_python">
+<a href="#tags_to_add_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>to_<wbr>add</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
@@ -1914,8 +1915,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="intervalunit_python">
-<a href="#intervalunit_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Unit</a>
+        <span id="interval_unit_python">
+<a href="#interval_unit_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

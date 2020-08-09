@@ -169,7 +169,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/budgets/#pulumi_aws.budgets.Budget">Budget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/budgets/#pulumi_aws.budgets.Budget">Budget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -830,7 +830,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Dict[Budget<wbr>Cost<wbr>Types]</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
@@ -988,7 +988,8 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1547,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1558,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Dict[Budget<wbr>Cost<wbr>Types]</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
@@ -1613,7 +1614,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
@@ -2070,8 +2071,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includecredit_python">
-<a href="#includecredit_python" style="color: inherit; text-decoration: inherit;">include<wbr>Credit</a>
+        <span id="include_credit_python">
+<a href="#include_credit_python" style="color: inherit; text-decoration: inherit;">include_<wbr>credit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2081,8 +2082,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includediscount_python">
-<a href="#includediscount_python" style="color: inherit; text-decoration: inherit;">include<wbr>Discount</a>
+        <span id="include_discount_python">
+<a href="#include_discount_python" style="color: inherit; text-decoration: inherit;">include_<wbr>discount</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2092,8 +2093,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeothersubscription_python">
-<a href="#includeothersubscription_python" style="color: inherit; text-decoration: inherit;">include<wbr>Other<wbr>Subscription</a>
+        <span id="include_other_subscription_python">
+<a href="#include_other_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>other_<wbr>subscription</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2103,8 +2104,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includerecurring_python">
-<a href="#includerecurring_python" style="color: inherit; text-decoration: inherit;">include<wbr>Recurring</a>
+        <span id="include_recurring_python">
+<a href="#include_recurring_python" style="color: inherit; text-decoration: inherit;">include_<wbr>recurring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2114,8 +2115,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includerefund_python">
-<a href="#includerefund_python" style="color: inherit; text-decoration: inherit;">include<wbr>Refund</a>
+        <span id="include_refund_python">
+<a href="#include_refund_python" style="color: inherit; text-decoration: inherit;">include_<wbr>refund</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2125,8 +2126,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includesubscription_python">
-<a href="#includesubscription_python" style="color: inherit; text-decoration: inherit;">include<wbr>Subscription</a>
+        <span id="include_subscription_python">
+<a href="#include_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subscription</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2136,8 +2137,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includesupport_python">
-<a href="#includesupport_python" style="color: inherit; text-decoration: inherit;">include<wbr>Support</a>
+        <span id="include_support_python">
+<a href="#include_support_python" style="color: inherit; text-decoration: inherit;">include_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2147,8 +2148,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includetax_python">
-<a href="#includetax_python" style="color: inherit; text-decoration: inherit;">include<wbr>Tax</a>
+        <span id="include_tax_python">
+<a href="#include_tax_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tax</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2158,8 +2159,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeupfront_python">
-<a href="#includeupfront_python" style="color: inherit; text-decoration: inherit;">include<wbr>Upfront</a>
+        <span id="include_upfront_python">
+<a href="#include_upfront_python" style="color: inherit; text-decoration: inherit;">include_<wbr>upfront</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2169,8 +2170,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useamortized_python">
-<a href="#useamortized_python" style="color: inherit; text-decoration: inherit;">use<wbr>Amortized</a>
+        <span id="use_amortized_python">
+<a href="#use_amortized_python" style="color: inherit; text-decoration: inherit;">use_<wbr>amortized</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2180,8 +2181,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useblended_python">
-<a href="#useblended_python" style="color: inherit; text-decoration: inherit;">use<wbr>Blended</a>
+        <span id="use_blended_python">
+<a href="#use_blended_python" style="color: inherit; text-decoration: inherit;">use_<wbr>blended</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2468,8 +2469,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdtype_python">
-<a href="#thresholdtype_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2479,8 +2480,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subscriberemailaddresses_python">
-<a href="#subscriberemailaddresses_python" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Email<wbr>Addresses</a>
+        <span id="subscriber_email_addresses_python">
+<a href="#subscriber_email_addresses_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>email_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2490,8 +2491,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subscribersnstopicarns_python">
-<a href="#subscribersnstopicarns_python" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Sns<wbr>Topic<wbr>Arns</a>
+        <span id="subscriber_sns_topic_arns_python">
+<a href="#subscriber_sns_topic_arns_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>sns_<wbr>topic_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

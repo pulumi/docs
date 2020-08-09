@@ -190,7 +190,7 @@ const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_peering_attachment(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_peering_attachment(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetPeeringAttachmentFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPeeringAttachmentResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -346,7 +346,7 @@ a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpeeringattachmentfilter">List[Get<wbr>Peering<wbr>Attachment<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getpeeringattachmentfilter">List[Get<wbr>Peering<wbr>Attachment<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
@@ -676,7 +676,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

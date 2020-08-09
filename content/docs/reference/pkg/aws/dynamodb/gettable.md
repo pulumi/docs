@@ -98,7 +98,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_table(</span>name=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_table(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[GetTableServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTableResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -256,7 +256,7 @@ The following arguments are supported:
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableserversideencryption">Dict[Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -266,7 +266,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1001,7 +1001,7 @@ The following output properties are available:
 <a href="#point_in_time_recovery_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablepointintimerecovery">Dict[Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery]</a></span>
+        <span class="property-type"><a href="#gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1041,7 +1041,7 @@ The following output properties are available:
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableserversideencryption">Dict[Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1091,7 +1091,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1101,7 +1101,7 @@ The following output properties are available:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablettl">Dict[Get<wbr>Table<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#gettablettl">Get<wbr>Table<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1533,8 +1533,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nonkeyattributes_python">
-<a href="#nonkeyattributes_python" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
+        <span id="non_key_attributes_python">
+<a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1543,8 +1543,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="projectiontype_python">
-<a href="#projectiontype_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
+        <span id="projection_type_python">
+<a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1763,8 +1763,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nonkeyattributes_python">
-<a href="#nonkeyattributes_python" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
+        <span id="non_key_attributes_python">
+<a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1773,8 +1773,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="projectiontype_python">
-<a href="#projectiontype_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
+        <span id="projection_type_python">
+<a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1955,8 +1955,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionname_python">
-<a href="#regionname_python" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+        <span id="region_name_python">
+<a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2197,8 +2197,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

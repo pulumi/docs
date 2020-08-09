@@ -123,7 +123,7 @@ const sqlInjectionMatchSet = new aws.wafregional.SqlInjectionMatchSet("sql_injec
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.SqlInjectionMatchSet">SqlInjectionMatchSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>sql_injection_match_tuples=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.SqlInjectionMatchSet">SqlInjectionMatchSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_injection_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[SqlInjectionMatchSetSqlInjectionMatchTupleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,7 +399,7 @@ The SqlInjectionMatchSet resource accepts the following [input]({{< relref "/doc
 <a href="#sql_injection_match_tuples_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 {{% /md %}}</dd>
@@ -502,7 +502,8 @@ Get an existing SqlInjectionMatchSet resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>sql_injection_match_tuples=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_injection_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[SqlInjectionMatchSetSqlInjectionMatchTupleArgs]]</span> = None<span class="p">) -&gt;</span> SqlInjectionMatchSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -720,7 +721,7 @@ The following state arguments are supported:
 <a href="#state_sql_injection_match_tuples_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 {{% /md %}}</dd>
@@ -859,19 +860,19 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatch_python">
-<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+        <span id="field_to_match_python">
+<a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Dict[Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for snippets of malicious SQL code.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="texttransformation_python">
-<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+        <span id="text_transformation_python">
+<a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

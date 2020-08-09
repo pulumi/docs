@@ -211,7 +211,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/transfer/#pulumi_aws.transfer.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint_details=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>host_key=None<span class="p">, </span>identity_provider_type=None<span class="p">, </span>invocation_role=None<span class="p">, </span>logging_role=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/transfer/#pulumi_aws.transfer.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_provider_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invocation_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -707,7 +707,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpoint_details_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1030,7 +1030,8 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>endpoint=None<span class="p">, </span>endpoint_details=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>host_key=None<span class="p">, </span>host_key_fingerprint=None<span class="p">, </span>identity_provider_type=None<span class="p">, </span>invocation_role=None<span class="p">, </span>logging_role=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_provider_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invocation_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1589,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_details_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -1677,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>

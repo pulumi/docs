@@ -23,7 +23,7 @@ Node is a worker node in Kubernetes. Each node will have a unique identifier in 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Node">Node</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metadata=None<span class="p">, </span>spec=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.Node">Node</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.NodeSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +282,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -292,7 +292,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodespec">Dict[Node<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#nodespec">Node<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -411,7 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatus">Dict[Node<wbr>Status]</a></span>
+        <span class="property-type"><a href="#nodestatus">Node<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1764,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapnodeconfigsource">Dict[Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap is a reference to a Node's ConfigMap{{% /md %}}</dd>
 
@@ -1937,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.{{% /md %}}</dd>
 
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_python" style="color: inherit; text-decoration: inherit;">assigned</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Assigned reports the checkpointed config the node will try to use. When Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to local disk, along with a record indicating intended config. The node refers to this record to choose its config checkpoint, and reports this record in Assigned. Assigned only updates in the status after the record has been checkpointed to disk. When the Kubelet is restarted, it tries to make the Assigned config the Active config by loading and validating the checkpointed payload identified by Assigned.{{% /md %}}</dd>
 
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_known_good_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>good</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.{{% /md %}}</dd>
 
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubelet_endpoint_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonendpoint">Dict[Daemon<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which Kubelet is listening.{{% /md %}}</dd>
 
@@ -2313,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_source_python" style="color: inherit; text-decoration: inherit;">config_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the source to get node configuration from The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field{{% /md %}}</dd>
 
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taint">List[Taint]</a></span>
+        <span class="property-type"><a href="#taint">Taint<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the node's taints.{{% /md %}}</dd>
 
@@ -2756,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaddress">List[Node<wbr>Address]</a></span>
+        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.{{% /md %}}</dd>
 
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatable_python" style="color: inherit; text-decoration: inherit;">allocatable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.{{% /md %}}</dd>
 
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity{{% /md %}}</dd>
 
@@ -2786,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodecondition">List[Node<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition{{% /md %}}</dd>
 
@@ -2796,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigstatus">Dict[Node<wbr>Config<wbr>Status]</a></span>
+        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the config assigned to the node via the dynamic Kubelet config feature.{{% /md %}}</dd>
 
@@ -2806,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daemon_endpoints_python" style="color: inherit; text-decoration: inherit;">daemon_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodedaemonendpoints">Dict[Node<wbr>Daemon<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Endpoints of daemons running on the Node.{{% /md %}}</dd>
 
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">List[Container<wbr>Image]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of container images on this node{{% /md %}}</dd>
 
@@ -2826,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_info_python" style="color: inherit; text-decoration: inherit;">node_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesysteminfo">Dict[Node<wbr>System<wbr>Info]</a></span>
+        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info{{% /md %}}</dd>
 
@@ -2846,7 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_attached_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>attached</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachedvolume">List[Attached<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that are attached to the node.{{% /md %}}</dd>
 
@@ -3880,7 +3880,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -3968,7 +3968,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -3978,7 +3978,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -4010,7 +4010,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 

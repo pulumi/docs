@@ -96,7 +96,7 @@ const test = new aws.efs.AccessPoint("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/efs/#pulumi_aws.efs.AccessPoint">AccessPoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>file_system_id=None<span class="p">, </span>posix_user=None<span class="p">, </span>root_directory=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/efs/#pulumi_aws.efs.AccessPoint">AccessPoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">, </span><span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -438,7 +438,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#posix_user_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Dict[Access<wbr>Point<wbr>Posix<wbr>User]</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Dict[Access<wbr>Point<wbr>Root<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -691,7 +691,8 @@ Get an existing AccessPoint resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>file_system_arn=None<span class="p">, </span>file_system_id=None<span class="p">, </span>owner_id=None<span class="p">, </span>posix_user=None<span class="p">, </span>root_directory=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">, </span><span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1103,7 +1104,7 @@ The following state arguments are supported:
 <a href="#state_posix_user_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Dict[Access<wbr>Point<wbr>Posix<wbr>User]</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd>
@@ -1114,7 +1115,7 @@ The following state arguments are supported:
 <a href="#state_root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Dict[Access<wbr>Point<wbr>Root<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd>
@@ -1125,7 +1126,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1307,11 +1308,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarygids_python">
-<a href="#secondarygids_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Gids</a>
+        <span id="secondary_gids_python">
+<a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}Secondary POSIX group IDs used for all file system operations using this access point.
 {{% /md %}}</dd>
@@ -1430,11 +1431,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationinfo_python">
-<a href="#creationinfo_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Info</a>
+        <span id="creation_info_python">
+<a href="#creation_info_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Dict[Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info]</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd>
@@ -1597,8 +1598,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ownergid_python">
-<a href="#ownergid_python" style="color: inherit; text-decoration: inherit;">owner<wbr>Gid</a>
+        <span id="owner_gid_python">
+<a href="#owner_gid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1608,8 +1609,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="owneruid_python">
-<a href="#owneruid_python" style="color: inherit; text-decoration: inherit;">owner<wbr>Uid</a>
+        <span id="owner_uid_python">
+<a href="#owner_uid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

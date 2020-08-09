@@ -23,7 +23,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/policy/v1beta1/#pulumi_kubernetes.policy/v1beta1.PodSecurityPolicyList">PodSecurityPolicyList</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>items=None<span class="p">, </span>metadata=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/policy/v1beta1/#pulumi_kubernetes.policy/v1beta1.PodSecurityPolicyList">PodSecurityPolicyList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[List[_policy_v1beta1.PodSecurityPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +282,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicy">List[Pod<wbr>Security<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicy">Pod<wbr>Security<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd>
 
@@ -292,7 +292,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -790,7 +790,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">List[IDRange]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd>
 
@@ -1510,7 +1510,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2121,7 +2121,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -2209,7 +2209,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -2219,7 +2219,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2251,7 +2251,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2683,7 +2683,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -2693,7 +2693,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicyspec">Dict[Pod<wbr>Security<wbr>Policy<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}spec defines the policy enforced.{{% /md %}}</dd>
 
@@ -3478,7 +3478,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#fs_group_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fsgroupstrategyoptions">Dict[FSGroup<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.{{% /md %}}</dd>
 
@@ -3488,7 +3488,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasuserstrategyoptions">Dict[Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd>
 
@@ -3498,7 +3498,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#se_linux_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxstrategyoptions">Dict[SELinux<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}seLinux is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd>
 
@@ -3508,7 +3508,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#supplemental_groups_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Dict[Supplemental<wbr>Groups<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.{{% /md %}}</dd>
 
@@ -3538,7 +3538,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_csi_drivers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>csi_<wbr>drivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedcsidriver">List[Allowed<wbr>CSIDriver]</a></span>
+        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is an alpha field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd>
 
@@ -3548,7 +3548,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_flex_volumes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>flex_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedflexvolume">List[Allowed<wbr>Flex<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.{{% /md %}}</dd>
 
@@ -3558,7 +3558,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_host_paths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>host_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedhostpath">List[Allowed<wbr>Host<wbr>Path]</a></span>
+        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}allowedHostPaths is a white list of allowed host paths. Empty indicates that all host paths may be used.{{% /md %}}</dd>
 
@@ -3652,7 +3652,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#host_ports_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportrange">List[Host<wbr>Port<wbr>Range]</a></span>
+        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}hostPorts determines which host port ranges are allowed to be exposed.{{% /md %}}</dd>
 
@@ -3692,7 +3692,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasgroupstrategyoptions">Dict[Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.{{% /md %}}</dd>
 
@@ -3702,7 +3702,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runtime_class_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>class</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassstrategyoptions">Dict[Runtime<wbr>Class<wbr>Strategy<wbr>Options]</a></span>
+        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.{{% /md %}}</dd>
 
@@ -3835,7 +3835,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">List[IDRange]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd>
 
@@ -3958,7 +3958,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">List[IDRange]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd>
 
@@ -4407,7 +4407,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd>
 
@@ -4520,7 +4520,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">List[IDRange]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd>
 

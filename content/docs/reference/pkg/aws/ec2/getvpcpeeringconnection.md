@@ -149,7 +149,7 @@ const route = new aws.ec2.Route("r", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_peering_connection(</span>cidr_block=None<span class="p">, </span>filters=None<span class="p">, </span>id=None<span class="p">, </span>owner_id=None<span class="p">, </span>peer_cidr_block=None<span class="p">, </span>peer_owner_id=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc_id=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_peering_connection(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpcPeeringConnectionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcPeeringConnectionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -613,7 +613,7 @@ a pair on the desired VPC Peering Connection.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ a pair on the desired VPC Peering Connection.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
@@ -1208,7 +1208,7 @@ The following output properties are available:
 <a href="#accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Boolean]</span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
@@ -1300,7 +1300,7 @@ The following output properties are available:
 <a href="#requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Boolean]</span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
@@ -1322,7 +1322,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
