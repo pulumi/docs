@@ -52,7 +52,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := secretsmanager.NewSecretVersion(ctx, "example", &secretsmanager.SecretVersionArgs{
-			SecretId:     pulumi.String(aws_secretsmanager_secret.Example.Id),
+			SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
 			SecretString: pulumi.String("example-string-to-protect"),
 		})
 		if err != nil {

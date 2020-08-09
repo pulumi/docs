@@ -62,7 +62,7 @@ func main() {
 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
 			AcceptanceRequired: pulumi.Bool(false),
 			NetworkLoadBalancerArns: pulumi.StringArray{
-				pulumi.String(aws_lb.Example.Arn),
+				pulumi.Any(aws_lb.Example.Arn),
 			},
 		})
 		if err != nil {
@@ -144,7 +144,7 @@ func main() {
 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
 			AcceptanceRequired: pulumi.Bool(false),
 			NetworkLoadBalancerArns: pulumi.StringArray{
-				pulumi.String(aws_lb.Example.Arn),
+				pulumi.Any(aws_lb.Example.Arn),
 			},
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("test"),

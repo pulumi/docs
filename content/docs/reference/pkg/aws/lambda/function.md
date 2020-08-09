@@ -263,7 +263,7 @@ func main() {
 		}
 		_, err = iam.NewRolePolicyAttachment(ctx, "lambdaLogs", &iam.RolePolicyAttachmentArgs{
 			PolicyArn: lambdaLogging.Arn,
-			Role:      pulumi.String(aws_iam_role.Iam_for_lambda.Name),
+			Role:      pulumi.Any(aws_iam_role.Iam_for_lambda.Name),
 		})
 		if err != nil {
 			return err

@@ -274,7 +274,7 @@ aws_glue_catalog_table = aws.glue.CatalogTable("awsGlueCatalogTable",
         "serDeInfo": {
             "name": "my-stream",
             "parameters": {
-                "serialization.format": 1,
+                "serialization.format": "1",
             },
             "serializationLibrary": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
         },

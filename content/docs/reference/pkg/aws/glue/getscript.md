@@ -301,7 +301,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "datasource0",
-            "node_type": "DataSource",
+            "nodeType": "DataSource",
         },
         {
             "args": [{
@@ -309,7 +309,7 @@ example = aws.glue.get_script(dag_edges=[
                 "value": "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
             "id": "applymapping1",
-            "node_type": "ApplyMapping",
+            "nodeType": "ApplyMapping",
         },
         {
             "args": [{
@@ -317,7 +317,7 @@ example = aws.glue.get_script(dag_edges=[
                 "value": "[\"column1\"]",
             }],
             "id": "selectfields2",
-            "node_type": "SelectFields",
+            "nodeType": "SelectFields",
         },
         {
             "args": [
@@ -335,7 +335,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "resolvechoice3",
-            "node_type": "ResolveChoice",
+            "nodeType": "ResolveChoice",
         },
         {
             "args": [
@@ -349,7 +349,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "datasink4",
-            "node_type": "DataSink",
+            "nodeType": "DataSink",
         },
     ],
     language="PYTHON")
@@ -740,7 +740,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "datasource0",
-            "node_type": "DataSource",
+            "nodeType": "DataSource",
         },
         {
             "args": [{
@@ -748,7 +748,7 @@ example = aws.glue.get_script(dag_edges=[
                 "value": "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
             "id": "applymapping1",
-            "node_type": "ApplyMapping",
+            "nodeType": "ApplyMapping",
         },
         {
             "args": [{
@@ -756,7 +756,7 @@ example = aws.glue.get_script(dag_edges=[
                 "value": "[\"column1\"]",
             }],
             "id": "selectfields2",
-            "node_type": "SelectFields",
+            "nodeType": "SelectFields",
         },
         {
             "args": [
@@ -774,7 +774,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "resolvechoice3",
-            "node_type": "ResolveChoice",
+            "nodeType": "ResolveChoice",
         },
         {
             "args": [
@@ -788,7 +788,7 @@ example = aws.glue.get_script(dag_edges=[
                 },
             ],
             "id": "datasink4",
-            "node_type": "DataSink",
+            "nodeType": "DataSink",
         },
     ],
     language="SCALA")

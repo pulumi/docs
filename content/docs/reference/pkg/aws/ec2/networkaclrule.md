@@ -66,7 +66,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		barNetworkAcl, err := ec2.NewNetworkAcl(ctx, "barNetworkAcl", &ec2.NetworkAclArgs{
-			VpcId: pulumi.String(aws_vpc.Foo.Id),
+			VpcId: pulumi.Any(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err
@@ -77,7 +77,7 @@ func main() {
 			Egress:       pulumi.Bool(false),
 			Protocol:     pulumi.String("tcp"),
 			RuleAction:   pulumi.String("allow"),
-			CidrBlock:    pulumi.String(aws_vpc.Foo.Cidr_block),
+			CidrBlock:    pulumi.Any(aws_vpc.Foo.Cidr_block),
 			FromPort:     pulumi.Int(22),
 			ToPort:       pulumi.Int(22),
 		})

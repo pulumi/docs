@@ -105,7 +105,7 @@ func main() {
 			},
 			Ttl:    pulumi.Int(600),
 			Type:   pulumi.String("MX"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Id),
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -117,7 +117,7 @@ func main() {
 			},
 			Ttl:    pulumi.Int(600),
 			Type:   pulumi.String("TXT"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Id),
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -143,14 +143,14 @@ example_mail_from = aws.ses.MailFrom("exampleMailFrom",
 example_ses_domain_mail_from_mx = aws.route53.Record("exampleSesDomainMailFromMx",
     name=example_mail_from.mail_from_domain,
     records=["10 feedback-smtp.us-east-1.amazonses.com"],
-    ttl="600",
+    ttl=600,
     type="MX",
     zone_id=aws_route53_zone["example"]["id"])
 # Example Route53 TXT record for SPF
 example_ses_domain_mail_from_txt = aws.route53.Record("exampleSesDomainMailFromTxt",
     name=example_mail_from.mail_from_domain,
     records=["v=spf1 include:amazonses.com -all"],
-    ttl="600",
+    ttl=600,
     type="TXT",
     zone_id=aws_route53_zone["example"]["id"])
 ```

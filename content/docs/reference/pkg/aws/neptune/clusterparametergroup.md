@@ -87,7 +87,7 @@ example = aws.neptune.ClusterParameterGroup("example",
     family="neptune1",
     parameters=[{
         "name": "neptune_enable_audit_log",
-        "value": 1,
+        "value": "1",
     }])
 ```
 

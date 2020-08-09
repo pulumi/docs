@@ -272,7 +272,7 @@ func main() {
 		_, err = lb.NewListenerRule(ctx, "static", &lb.ListenerRuleArgs{
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 					Type:           pulumi.String("forward"),
 				},
 			},
@@ -308,11 +308,11 @@ func main() {
 						},
 						TargetGroup: pulumi.MapArray{
 							pulumi.Map{
-								"arn":    pulumi.String(aws_lb_target_group.Main.Arn),
+								"arn":    pulumi.Any(aws_lb_target_group.Main.Arn),
 								"weight": pulumi.Float64(80),
 							},
 							pulumi.Map{
-								"arn":    pulumi.String(aws_lb_target_group.Canary.Arn),
+								"arn":    pulumi.Any(aws_lb_target_group.Canary.Arn),
 								"weight": pulumi.Float64(20),
 							},
 						},
@@ -338,7 +338,7 @@ func main() {
 		_, err = lb.NewListenerRule(ctx, "hostBasedWeightedRouting", &lb.ListenerRuleArgs{
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 					Type:           pulumi.String("forward"),
 				},
 			},
@@ -438,7 +438,7 @@ func main() {
 					Type: pulumi.String("authenticate-oidc"),
 				},
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 					Type:           pulumi.String("forward"),
 				},
 			},

@@ -309,7 +309,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleLaunchTemplate, err := ec2.NewLaunchTemplate(ctx, "exampleLaunchTemplate", &ec2.LaunchTemplateArgs{
-			ImageId:      pulumi.String(data.Aws_ami.Example.Id),
+			ImageId:      pulumi.Any(data.Aws_ami.Example.Id),
 			InstanceType: pulumi.String("c5.large"),
 			NamePrefix:   pulumi.String("example"),
 		})

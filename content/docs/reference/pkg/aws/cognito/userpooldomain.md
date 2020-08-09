@@ -160,7 +160,7 @@ func main() {
 			return err
 		}
 		main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
-			CertificateArn: pulumi.String(aws_acm_certificate.Cert.Arn),
+			CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
 			Domain:         pulumi.String("example-domain.example.com"),
 			UserPoolId:     exampleUserPool.ID(),
 		})

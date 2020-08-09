@@ -113,7 +113,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         "type": "forward",
     }],
     load_balancer_arn=front_end_load_balancer.arn,
-    port="443",
+    port=443,
     protocol="HTTPS",
     ssl_policy="ELBSecurityPolicy-2016-08")
 ```
@@ -238,7 +238,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         "type": "redirect",
     }],
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP")
 ```
 
@@ -363,7 +363,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         "type": "fixed-response",
     }],
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP")
 ```
 
@@ -536,7 +536,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         },
     ],
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP")
 ```
 
@@ -703,7 +703,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         },
     ],
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP")
 ```
 

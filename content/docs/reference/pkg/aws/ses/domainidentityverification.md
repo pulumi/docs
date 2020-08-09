@@ -93,7 +93,7 @@ func main() {
 			},
 			Ttl:    pulumi.Int(600),
 			Type:   pulumi.String("TXT"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Zone_id),
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Zone_id),
 		})
 		if err != nil {
 			return err
@@ -122,7 +122,7 @@ example = aws.ses.DomainIdentity("example", domain="example.com")
 example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVerificationRecord",
     name=example.id.apply(lambda id: f"_amazonses.{id}"),
     records=[example.verification_token],
-    ttl="600",
+    ttl=600,
     type="TXT",
     zone_id=aws_route53_zone["example"]["zone_id"])
 example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id,

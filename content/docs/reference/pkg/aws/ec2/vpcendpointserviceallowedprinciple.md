@@ -63,7 +63,7 @@ func main() {
 		}
 		_, err = ec2.NewVpcEndpointServiceAllowedPrinciple(ctx, "allowMeToFoo", &ec2.VpcEndpointServiceAllowedPrincipleArgs{
 			PrincipalArn:         pulumi.String(current.Arn),
-			VpcEndpointServiceId: pulumi.String(aws_vpc_endpoint_service.Foo.Id),
+			VpcEndpointServiceId: pulumi.Any(aws_vpc_endpoint_service.Foo.Id),
 		})
 		if err != nil {
 			return err

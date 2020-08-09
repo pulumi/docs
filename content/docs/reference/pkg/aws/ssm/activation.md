@@ -128,7 +128,7 @@ test_attach = aws.iam.RolePolicyAttachment("testAttach",
 foo = aws.ssm.Activation("foo",
     description="Test",
     iam_role=test_role.id,
-    registration_limit="5",
+    registration_limit=5,
     opts=ResourceOptions(depends_on=["aws_iam_role_policy_attachment.test_attach"]))
 ```
 

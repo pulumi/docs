@@ -136,7 +136,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
 			DomainName:         pulumi.String("example.com"),
-			ResolverEndpointId: pulumi.String(aws_route53_resolver_endpoint.Foo.Id),
+			ResolverEndpointId: pulumi.Any(aws_route53_resolver_endpoint.Foo.Id),
 			RuleType:           pulumi.String("FORWARD"),
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("Prod"),

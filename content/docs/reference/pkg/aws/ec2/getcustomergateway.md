@@ -85,7 +85,7 @@ func main() {
 		}
 		main, err := ec2.NewVpnGateway(ctx, "main", &ec2.VpnGatewayArgs{
 			AmazonSideAsn: pulumi.String("7224"),
-			VpcId:         pulumi.String(aws_vpc.Main.Id),
+			VpcId:         pulumi.Any(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err
@@ -116,7 +116,7 @@ foo = aws.ec2.get_customer_gateway(filters=[{
     "values": ["foo-prod"],
 }])
 main = aws.ec2.VpnGateway("main",
-    amazon_side_asn=7224,
+    amazon_side_asn="7224",
     vpc_id=aws_vpc["main"]["id"])
 transit = aws.ec2.VpnConnection("transit",
     customer_gateway_id=foo.id,

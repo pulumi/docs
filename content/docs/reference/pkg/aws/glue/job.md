@@ -60,7 +60,7 @@ func main() {
 			Command: &glue.JobCommandArgs{
 				ScriptLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/example.py")),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -151,7 +151,7 @@ func main() {
 			DefaultArguments: pulumi.StringMap{
 				"--job-language": pulumi.String("scala"),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err

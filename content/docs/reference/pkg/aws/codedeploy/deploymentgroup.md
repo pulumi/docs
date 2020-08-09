@@ -425,11 +425,11 @@ func main() {
 			LoadBalancerInfo: &codedeploy.DeploymentGroupLoadBalancerInfoArgs{
 				ElbInfos: codedeploy.DeploymentGroupLoadBalancerInfoElbInfoArray{
 					&codedeploy.DeploymentGroupLoadBalancerInfoElbInfoArgs{
-						Name: pulumi.String(aws_elb.Example.Name),
+						Name: pulumi.Any(aws_elb.Example.Name),
 					},
 				},
 			},
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err

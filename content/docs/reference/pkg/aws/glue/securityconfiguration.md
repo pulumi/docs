@@ -72,7 +72,7 @@ func main() {
 					JobBookmarksEncryptionMode: pulumi.String("DISABLED"),
 				},
 				S3Encryption: &glue.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs{
-					KmsKeyArn:        pulumi.String(data.Aws_kms_key.Example.Arn),
+					KmsKeyArn:        pulumi.Any(data.Aws_kms_key.Example.Arn),
 					S3EncryptionMode: pulumi.String("SSE-KMS"),
 				},
 			},

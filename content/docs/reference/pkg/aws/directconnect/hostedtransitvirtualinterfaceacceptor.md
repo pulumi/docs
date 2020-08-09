@@ -148,7 +148,7 @@ creator = aws.directconnect.HostedTransitVirtualInterface("creator",
     vlan=4094,
     opts=ResourceOptions(depends_on=["aws_dx_gateway.example"]))
 # Accepter's side of the VIF.
-example = aws.directconnect.Gateway("example", amazon_side_asn=64512,
+example = aws.directconnect.Gateway("example", amazon_side_asn="64512",
 opts=ResourceOptions(provider="aws.accepter"))
 accepter_hosted_transit_virtual_interface_acceptor = aws.directconnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor",
     dx_gateway_id=example.id,

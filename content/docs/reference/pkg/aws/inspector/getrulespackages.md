@@ -117,7 +117,7 @@ group = aws.inspector.ResourceGroup("group", tags={
 })
 assessment_assessment_target = aws.inspector.AssessmentTarget("assessmentAssessmentTarget", resource_group_arn=group.arn)
 assessment_assessment_template = aws.inspector.AssessmentTemplate("assessmentAssessmentTemplate",
-    duration="60",
+    duration=60,
     rules_package_arns=rules.arns,
     target_arn=assessment_assessment_target.arn)
 ```

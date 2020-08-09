@@ -857,8 +857,8 @@ func main() {
 			},
 			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
 				SubnetId:                      mainSubnet.ID(),
-				EmrManagedMasterSecurityGroup: pulumi.String(aws_security_group.Allow_all.Id),
-				EmrManagedSlaveSecurityGroup:  pulumi.String(aws_security_group.Allow_all.Id),
+				EmrManagedMasterSecurityGroup: pulumi.Any(aws_security_group.Allow_all.Id),
+				EmrManagedSlaveSecurityGroup:  pulumi.Any(aws_security_group.Allow_all.Id),
 				InstanceProfile:               emrProfile.Arn,
 			},
 			MasterInstanceType: pulumi.String("m5.xlarge"),
@@ -1150,17 +1150,17 @@ func main() {
 			},
 			EbsRootVolumeSize: pulumi.Int(100),
 			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
-				EmrManagedMasterSecurityGroup: pulumi.String(aws_security_group.Sg.Id),
-				EmrManagedSlaveSecurityGroup:  pulumi.String(aws_security_group.Sg.Id),
-				InstanceProfile:               pulumi.String(aws_iam_instance_profile.Emr_profile.Arn),
-				SubnetId:                      pulumi.String(aws_subnet.Main.Id),
+				EmrManagedMasterSecurityGroup: pulumi.Any(aws_security_group.Sg.Id),
+				EmrManagedSlaveSecurityGroup:  pulumi.Any(aws_security_group.Sg.Id),
+				InstanceProfile:               pulumi.Any(aws_iam_instance_profile.Emr_profile.Arn),
+				SubnetId:                      pulumi.Any(aws_subnet.Main.Id),
 			},
 			KeepJobFlowAliveWhenNoSteps: pulumi.Bool(true),
 			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
 				InstanceType: pulumi.String("m4.large"),
 			},
 			ReleaseLabel: pulumi.String("emr-4.6.0"),
-			ServiceRole:  pulumi.String(aws_iam_role.Iam_emr_service_role.Arn),
+			ServiceRole:  pulumi.Any(aws_iam_role.Iam_emr_service_role.Arn),
 			Tags: pulumi.StringMap{
 				"env":  pulumi.String("env"),
 				"role": pulumi.String("rolename"),
@@ -1418,27 +1418,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.emr.Cluster("example",
-    lifecycle={
-        "ignoreChanges": [
-            "stepConcurrencyLevel",
-            "steps",
-        ],
-    },
-    steps=[{
-        "actionOnFailure": "TERMINATE_CLUSTER",
-        "hadoopJarStep": {
-            "args": ["state-pusher-script"],
-            "jar": "command-runner.jar",
-        },
-        "name": "Setup Hadoop Debugging",
-    }])
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

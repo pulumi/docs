@@ -69,13 +69,13 @@ func main() {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example1.Name),
+					JobName: pulumi.Any(aws_glue_job.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
-						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						JobName: pulumi.Any(aws_glue_job.Example2.Name),
 						State:   pulumi.String("SUCCEEDED"),
 					},
 				},
@@ -176,7 +176,7 @@ func main() {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example.Name),
+					JobName: pulumi.Any(aws_glue_job.Example.Name),
 				},
 			},
 			Type: pulumi.String("ON_DEMAND"),
@@ -264,7 +264,7 @@ func main() {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example.Name),
+					JobName: pulumi.Any(aws_glue_job.Example.Name),
 				},
 			},
 			Schedule: pulumi.String("cron(15 12 * * ? *)"),
@@ -365,13 +365,13 @@ func main() {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					CrawlerName: pulumi.String(aws_glue_crawler.Example1.Name),
+					CrawlerName: pulumi.Any(aws_glue_crawler.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
-						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						JobName: pulumi.Any(aws_glue_job.Example2.Name),
 						State:   pulumi.String("SUCCEEDED"),
 					},
 				},
@@ -483,14 +483,14 @@ func main() {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example1.Name),
+					JobName: pulumi.Any(aws_glue_job.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
 						CrawlState:  pulumi.String("SUCCEEDED"),
-						CrawlerName: pulumi.String(aws_glue_crawler.Example2.Name),
+						CrawlerName: pulumi.Any(aws_glue_crawler.Example2.Name),
 					},
 				},
 			},

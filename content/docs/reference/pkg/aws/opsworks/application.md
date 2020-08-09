@@ -91,7 +91,7 @@ foo_app = aws.opsworks.Application("foo-app",
         "type": "git",
         "url": "https://github.com/example.git",
     }],
-    auto_bundle_on_deploy=True,
+    auto_bundle_on_deploy="true",
     description="This is a Rails application",
     document_root="public",
     domains=[

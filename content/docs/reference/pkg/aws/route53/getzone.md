@@ -102,7 +102,7 @@ selected = aws.route53.get_zone(name="test.com.",
 www = aws.route53.Record("www",
     name=f"www.{selected.name}",
     records=["10.0.0.1"],
-    ttl="300",
+    ttl=300,
     type="A",
     zone_id=selected.zone_id)
 ```

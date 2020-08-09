@@ -102,7 +102,7 @@ func main() {
 			Inputs: &kinesis.AnalyticsApplicationInputsArgs{
 				KinesisStream: &kinesis.AnalyticsApplicationInputsKinesisStreamArgs{
 					ResourceArn: testStream.Arn,
-					RoleArn:     pulumi.String(aws_iam_role.Test.Arn),
+					RoleArn:     pulumi.Any(aws_iam_role.Test.Arn),
 				},
 				NamePrefix: pulumi.String("test_prefix"),
 				Parallelism: &kinesis.AnalyticsApplicationInputsParallelismArgs{

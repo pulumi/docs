@@ -95,7 +95,7 @@ func main() {
 					Weight: pulumi.Int(10),
 				},
 			},
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 		})
 		if err != nil {
 			return err
@@ -113,7 +113,7 @@ func main() {
 					Weight: pulumi.Int(90),
 				},
 			},
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 		})
 		if err != nil {
 			return err
@@ -134,7 +134,7 @@ www_dev = aws.route53.Record("www-dev",
     name="www",
     records=["dev.example.com"],
     set_identifier="dev",
-    ttl="5",
+    ttl=5,
     type="CNAME",
     weighted_routing_policies=[{
         "weight": 10,
@@ -144,7 +144,7 @@ www_live = aws.route53.Record("www-live",
     name="www",
     records=["live.example.com"],
     set_identifier="live",
-    ttl="5",
+    ttl=5,
     type="CNAME",
     weighted_routing_policies=[{
         "weight": 90,
@@ -273,7 +273,7 @@ func main() {
 			},
 			Name:   pulumi.String("example.com"),
 			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 		})
 		if err != nil {
 			return err

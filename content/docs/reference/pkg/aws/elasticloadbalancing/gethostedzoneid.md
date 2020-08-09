@@ -70,13 +70,13 @@ func main() {
 			Aliases: route53.RecordAliasArray{
 				&route53.RecordAliasArgs{
 					EvaluateTargetHealth: pulumi.Bool(true),
-					Name:                 pulumi.String(aws_elb.Main.Dns_name),
+					Name:                 pulumi.Any(aws_elb.Main.Dns_name),
 					ZoneId:               pulumi.String(main.Id),
 				},
 			},
 			Name:   pulumi.String("example.com"),
 			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 		})
 		if err != nil {
 			return err

@@ -414,7 +414,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := rds.NewCluster(ctx, "example", &rds.ClusterArgs{
 			ClusterIdentifier: pulumi.String("example"),
-			DbSubnetGroupName: pulumi.String(aws_db_subnet_group.Example.Name),
+			DbSubnetGroupName: pulumi.Any(aws_db_subnet_group.Example.Name),
 			EngineMode:        pulumi.String("multimaster"),
 			MasterPassword:    pulumi.String("barbarbarbar"),
 			MasterUsername:    pulumi.String("foo"),

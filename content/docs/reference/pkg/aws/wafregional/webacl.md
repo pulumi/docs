@@ -270,7 +270,7 @@ func main() {
 						Type: pulumi.String("NONE"),
 					},
 					Priority: pulumi.Int(1),
-					RuleId:   pulumi.String(aws_wafregional_rule_group.Example.Id),
+					RuleId:   pulumi.Any(aws_wafregional_rule_group.Example.Id),
 					Type:     pulumi.String("GROUP"),
 				},
 			},
@@ -383,7 +383,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
 			LoggingConfiguration: &wafregional.WebAclLoggingConfigurationArgs{
-				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
+				LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &wafregional.WebAclLoggingConfigurationRedactedFieldsArgs{
 					FieldToMatch: pulumi.Array{
 						pulumi.StringMap{

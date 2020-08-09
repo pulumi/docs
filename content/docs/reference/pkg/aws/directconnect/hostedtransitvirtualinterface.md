@@ -56,7 +56,7 @@ func main() {
 		_, err := directconnect.NewHostedTransitVirtualInterface(ctx, "example", &directconnect.HostedTransitVirtualInterfaceArgs{
 			AddressFamily: pulumi.String("ipv4"),
 			BgpAsn:        pulumi.Int(65352),
-			ConnectionId:  pulumi.String(aws_dx_connection.Example.Id),
+			ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
 			Vlan:          pulumi.Int(4094),
 		})
 		if err != nil {

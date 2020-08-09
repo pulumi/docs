@@ -65,15 +65,15 @@ func main() {
 		_, err := dms.NewReplicationTask(ctx, "test", &dms.ReplicationTaskArgs{
 			CdcStartTime:            pulumi.String("1484346880"),
 			MigrationType:           pulumi.String("full-load"),
-			ReplicationInstanceArn:  pulumi.String(aws_dms_replication_instance.Test - dms - replication - instance - tf.Replication_instance_arn),
+			ReplicationInstanceArn:  pulumi.Any(aws_dms_replication_instance.Test - dms - replication - instance - tf.Replication_instance_arn),
 			ReplicationTaskId:       pulumi.String("test-dms-replication-task-tf"),
 			ReplicationTaskSettings: pulumi.String("..."),
-			SourceEndpointArn:       pulumi.String(aws_dms_endpoint.Test - dms - source - endpoint - tf.Endpoint_arn),
+			SourceEndpointArn:       pulumi.Any(aws_dms_endpoint.Test - dms - source - endpoint - tf.Endpoint_arn),
 			TableMappings:           pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"", "%", "\",\"table-name\":\"", "%", "\"},\"rule-action\":\"include\"}]}")),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("test"),
 			},
-			TargetEndpointArn: pulumi.String(aws_dms_endpoint.Test - dms - target - endpoint - tf.Endpoint_arn),
+			TargetEndpointArn: pulumi.Any(aws_dms_endpoint.Test - dms - target - endpoint - tf.Endpoint_arn),
 		})
 		if err != nil {
 			return err
@@ -92,7 +92,7 @@ import pulumi_aws as aws
 
 # Create a new replication task
 test = aws.dms.ReplicationTask("test",
-    cdc_start_time=1484346880,
+    cdc_start_time="1484346880",
     migration_type="full-load",
     replication_instance_arn=aws_dms_replication_instance["test-dms-replication-instance-tf"]["replication_instance_arn"],
     replication_task_id="test-dms-replication-task-tf",

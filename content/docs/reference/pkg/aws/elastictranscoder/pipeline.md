@@ -61,13 +61,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := elastictranscoder.NewPipeline(ctx, "bar", &elastictranscoder.PipelineArgs{
 			ContentConfig: &elastictranscoder.PipelineContentConfigArgs{
-				Bucket:       pulumi.String(aws_s3_bucket.Content_bucket.Bucket),
+				Bucket:       pulumi.Any(aws_s3_bucket.Content_bucket.Bucket),
 				StorageClass: pulumi.String("Standard"),
 			},
-			InputBucket: pulumi.String(aws_s3_bucket.Input_bucket.Bucket),
-			Role:        pulumi.String(aws_iam_role.Test_role.Arn),
+			InputBucket: pulumi.Any(aws_s3_bucket.Input_bucket.Bucket),
+			Role:        pulumi.Any(aws_iam_role.Test_role.Arn),
 			ThumbnailConfig: &elastictranscoder.PipelineThumbnailConfigArgs{
-				Bucket:       pulumi.String(aws_s3_bucket.Thumb_bucket.Bucket),
+				Bucket:       pulumi.Any(aws_s3_bucket.Thumb_bucket.Bucket),
 				StorageClass: pulumi.String("Standard"),
 			},
 		})

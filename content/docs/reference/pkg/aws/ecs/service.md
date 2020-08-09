@@ -87,10 +87,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.NewService(ctx, "mongo", &ecs.ServiceArgs{
-			Cluster:        pulumi.String(aws_ecs_cluster.Foo.Id),
-			TaskDefinition: pulumi.String(aws_ecs_task_definition.Mongo.Arn),
+			Cluster:        pulumi.Any(aws_ecs_cluster.Foo.Id),
+			TaskDefinition: pulumi.Any(aws_ecs_task_definition.Mongo.Arn),
 			DesiredCount:   pulumi.Int(3),
-			IamRole:        pulumi.String(aws_iam_role.Foo.Arn),
+			IamRole:        pulumi.Any(aws_iam_role.Foo.Arn),
 			OrderedPlacementStrategies: ecs.ServiceOrderedPlacementStrategyArray{
 				&ecs.ServiceOrderedPlacementStrategyArgs{
 					Type:  pulumi.String("binpack"),
@@ -99,7 +99,7 @@ func main() {
 			},
 			LoadBalancers: ecs.ServiceLoadBalancerArray{
 				&ecs.ServiceLoadBalancerArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Foo.Arn),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Foo.Arn),
 					ContainerName:  pulumi.String("mongo"),
 					ContainerPort:  pulumi.Int(8080),
 				},
@@ -192,17 +192,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ecs.Service("example",
-    desired_count=2,
-    lifecycle={
-        "ignoreChanges": ["desiredCount"],
-    })
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -254,9 +244,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.NewService(ctx, "bar", &ecs.ServiceArgs{
-			Cluster:            pulumi.String(aws_ecs_cluster.Foo.Id),
+			Cluster:            pulumi.Any(aws_ecs_cluster.Foo.Id),
 			SchedulingStrategy: pulumi.String("DAEMON"),
-			TaskDefinition:     pulumi.String(aws_ecs_task_definition.Bar.Arn),
+			TaskDefinition:     pulumi.Any(aws_ecs_task_definition.Bar.Arn),
 		})
 		if err != nil {
 			return err
@@ -333,7 +323,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.NewService(ctx, "example", &ecs.ServiceArgs{
-			Cluster: pulumi.String(aws_ecs_cluster.Example.Id),
+			Cluster: pulumi.Any(aws_ecs_cluster.Example.Id),
 			DeploymentController: &ecs.ServiceDeploymentControllerArgs{
 				Type: pulumi.String("EXTERNAL"),
 			},

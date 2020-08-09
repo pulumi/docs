@@ -92,7 +92,7 @@ size_constraint_set = aws.wafregional.SizeConstraintSet("sizeConstraintSet", siz
     "fieldToMatch": {
         "type": "BODY",
     },
-    "size": "4096",
+    "size": 4096,
     "textTransformation": "NONE",
 }])
 ```

@@ -273,20 +273,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-config = pulumi.Config()
-stage_name = config.get("stageName")
-if stage_name is None:
-    stage_name = "example"
-example_rest_api = aws.apigateway.RestApi("exampleRestApi")
-example_stage = aws.apigateway.Stage("exampleStage", name=stage_name,
-opts=ResourceOptions(depends_on=["aws_cloudwatch_log_group.example"]))
-example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

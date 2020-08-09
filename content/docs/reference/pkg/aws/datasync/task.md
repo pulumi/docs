@@ -54,11 +54,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
-			DestinationLocationArn: pulumi.String(aws_datasync_location_s3.Destination.Arn),
+			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
 			Options: &datasync.TaskOptionsArgs{
 				BytesPerSecond: pulumi.Int(-1),
 			},
-			SourceLocationArn: pulumi.String(aws_datasync_location_nfs.Source.Arn),
+			SourceLocationArn: pulumi.Any(aws_datasync_location_nfs.Source.Arn),
 		})
 		if err != nil {
 			return err

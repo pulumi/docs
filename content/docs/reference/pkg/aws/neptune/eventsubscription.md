@@ -164,15 +164,15 @@ import pulumi
 import pulumi_aws as aws
 
 default_cluster = aws.neptune.Cluster("defaultCluster",
-    apply_immediately="true",
+    apply_immediately=True,
     backup_retention_period=5,
     cluster_identifier="neptune-cluster-demo",
     engine="neptune",
-    iam_database_authentication_enabled="true",
+    iam_database_authentication_enabled=True,
     preferred_backup_window="07:00-09:00",
     skip_final_snapshot=True)
 example = aws.neptune.ClusterInstance("example",
-    apply_immediately="true",
+    apply_immediately=True,
     cluster_identifier=default_cluster.id,
     engine="neptune",
     instance_class="db.r4.large")

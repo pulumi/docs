@@ -75,7 +75,7 @@ func main() {
 			return err
 		}
 		_, err = efs.NewMountTarget(ctx, "alphaMountTarget", &efs.MountTargetArgs{
-			FileSystemId: pulumi.String(aws_efs_file_system.Foo.Id),
+			FileSystemId: pulumi.Any(aws_efs_file_system.Foo.Id),
 			SubnetId:     alphaSubnet.ID(),
 		})
 		if err != nil {

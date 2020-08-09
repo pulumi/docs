@@ -52,8 +52,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewNetworkInterfaceAttachment(ctx, "test", &ec2.NetworkInterfaceAttachmentArgs{
 			DeviceIndex:        pulumi.Int(0),
-			InstanceId:         pulumi.String(aws_instance.Test.Id),
-			NetworkInterfaceId: pulumi.String(aws_network_interface.Test.Id),
+			InstanceId:         pulumi.Any(aws_instance.Test.Id),
+			NetworkInterfaceId: pulumi.Any(aws_network_interface.Test.Id),
 		})
 		if err != nil {
 			return err

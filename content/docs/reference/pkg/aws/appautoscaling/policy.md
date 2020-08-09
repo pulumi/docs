@@ -319,19 +319,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-ecs_service = aws.ecs.Service("ecsService",
-    cluster="clusterName",
-    desired_count=2,
-    lifecycle={
-        "ignoreChanges": ["desiredCount"],
-    },
-    task_definition="taskDefinitionFamily:1")
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

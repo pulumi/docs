@@ -190,7 +190,7 @@ dev_ns = aws.route53.Record("dev-ns",
         dev.name_servers[2],
         dev.name_servers[3],
     ],
-    ttl="30",
+    ttl=30,
     type="NS",
     zone_id=main.zone_id)
 ```
@@ -266,7 +266,7 @@ func main() {
 		_, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
 			Vpcs: route53.ZoneVpcArray{
 				&route53.ZoneVpcArgs{
-					VpcId: pulumi.String(aws_vpc.Example.Id),
+					VpcId: pulumi.Any(aws_vpc.Example.Id),
 				},
 			},
 		})

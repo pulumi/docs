@@ -104,7 +104,7 @@ func main() {
 					OptionSettings: rds.OptionGroupOptionOptionSettingArray{
 						&rds.OptionGroupOptionOptionSettingArgs{
 							Name:  pulumi.String("IAM_ROLE_ARN"),
-							Value: pulumi.String(aws_iam_role.Example.Arn),
+							Value: pulumi.Any(aws_iam_role.Example.Arn),
 						},
 					},
 				},

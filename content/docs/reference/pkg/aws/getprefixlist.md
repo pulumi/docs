@@ -77,13 +77,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		privateS3VpcEndpoint, err := ec2.NewVpcEndpoint(ctx, "privateS3VpcEndpoint", &ec2.VpcEndpointArgs{
 			ServiceName: pulumi.String("com.amazonaws.us-west-2.s3"),
-			VpcId:       pulumi.String(aws_vpc.Foo.Id),
+			VpcId:       pulumi.Any(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err
 		}
 		bar, err := ec2.NewNetworkAcl(ctx, "bar", &ec2.NetworkAclArgs{
-			VpcId: pulumi.String(aws_vpc.Foo.Id),
+			VpcId: pulumi.Any(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err

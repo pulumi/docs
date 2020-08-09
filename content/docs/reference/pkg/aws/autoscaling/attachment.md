@@ -58,8 +58,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := autoscaling.NewAttachment(ctx, "asgAttachmentBar", &autoscaling.AttachmentArgs{
-			AutoscalingGroupName: pulumi.String(aws_autoscaling_group.Asg.Id),
-			Elb:                  pulumi.String(aws_elb.Bar.Id),
+			AutoscalingGroupName: pulumi.Any(aws_autoscaling_group.Asg.Id),
+			Elb:                  pulumi.Any(aws_elb.Bar.Id),
 		})
 		if err != nil {
 			return err

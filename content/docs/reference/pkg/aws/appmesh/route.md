@@ -76,17 +76,17 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
 						WeightedTarget: pulumi.MapArray{
 							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
+								"virtualNode": pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
 								"weight":      pulumi.Float64(90),
 							},
 							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb2.Name),
+								"virtualNode": pulumi.Any(aws_appmesh_virtual_node.Serviceb2.Name),
 								"weight":      pulumi.Float64(10),
 							},
 						},
@@ -96,7 +96,7 @@ func main() {
 					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err
@@ -240,13 +240,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
 						WeightedTarget: pulumi.MapArray{
 							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb.Name),
+								"virtualNode": pulumi.Any(aws_appmesh_virtual_node.Serviceb.Name),
 								"weight":      pulumi.Float64(100),
 							},
 						},
@@ -266,7 +266,7 @@ func main() {
 					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err
@@ -397,20 +397,20 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				TcpRoute: &appmesh.RouteSpecTcpRouteArgs{
 					Action: &appmesh.RouteSpecTcpRouteActionArgs{
 						WeightedTarget: pulumi.MapArray{
 							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
+								"virtualNode": pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
 								"weight":      pulumi.Float64(100),
 							},
 						},
 					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err

@@ -58,7 +58,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewVpcEndpoint(ctx, "s3", &ec2.VpcEndpointArgs{
 			ServiceName: pulumi.String("com.amazonaws.us-west-2.s3"),
-			VpcId:       pulumi.String(aws_vpc.Main.Id),
+			VpcId:       pulumi.Any(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err
@@ -138,7 +138,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("test"),
 			},
-			VpcId: pulumi.String(aws_vpc.Main.Id),
+			VpcId: pulumi.Any(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err

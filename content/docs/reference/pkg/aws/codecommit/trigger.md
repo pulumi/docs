@@ -74,7 +74,7 @@ func main() {
 			RepositoryName: testRepository.RepositoryName,
 			Triggers: codecommit.TriggerTriggerArray{
 				&codecommit.TriggerTriggerArgs{
-					DestinationArn: pulumi.String(aws_sns_topic.Test.Arn),
+					DestinationArn: pulumi.Any(aws_sns_topic.Test.Arn),
 					Events: pulumi.StringArray{
 						pulumi.String("all"),
 					},

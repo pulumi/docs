@@ -151,13 +151,13 @@ func main() {
 		barPipeline, err := codepipeline.NewPipeline(ctx, "barPipeline", &codepipeline.PipelineArgs{
 			ArtifactStore: &codepipeline.PipelineArtifactStoreArgs{
 				EncryptionKey: &codepipeline.PipelineArtifactStoreEncryptionKeyArgs{
-					Id:   pulumi.String(data.Aws_kms_alias.S3kmskey.Arn),
+					Id:   pulumi.Any(data.Aws_kms_alias.S3kmskey.Arn),
 					Type: pulumi.String("KMS"),
 				},
-				Location: pulumi.String(aws_s3_bucket.Bar.Bucket),
+				Location: pulumi.Any(aws_s3_bucket.Bar.Bucket),
 				Type:     pulumi.String("S3"),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Bar.Arn),
+			RoleArn: pulumi.Any(aws_iam_role.Bar.Arn),
 			Stages: codepipeline.PipelineStageArray{
 				&codepipeline.PipelineStageArgs{
 					Actions: codepipeline.PipelineStageActionArray{
@@ -230,7 +230,7 @@ func main() {
 			Events: pulumi.StringArray{
 				pulumi.String("push"),
 			},
-			Repository: pulumi.String(github_repository.Repo.Name),
+			Repository: pulumi.Any(github_repository.Repo.Name),
 		})
 		if err != nil {
 			return err

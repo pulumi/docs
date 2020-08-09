@@ -111,10 +111,10 @@ func main() {
 		_, err := opsworks.NewInstance(ctx, "my_instance", &opsworks.InstanceArgs{
 			InstanceType: pulumi.String("t2.micro"),
 			LayerIds: pulumi.StringArray{
-				pulumi.String(aws_opsworks_custom_layer.My - layer.Id),
+				pulumi.Any(aws_opsworks_custom_layer.My - layer.Id),
 			},
 			Os:      pulumi.String("Amazon Linux 2015.09"),
-			StackId: pulumi.String(aws_opsworks_stack.Main.Id),
+			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
 			State:   pulumi.String("stopped"),
 		})
 		if err != nil {

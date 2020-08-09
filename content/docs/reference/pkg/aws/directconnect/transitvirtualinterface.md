@@ -66,7 +66,7 @@ func main() {
 		_, err = directconnect.NewTransitVirtualInterface(ctx, "exampleTransitVirtualInterface", &directconnect.TransitVirtualInterfaceArgs{
 			AddressFamily: pulumi.String("ipv4"),
 			BgpAsn:        pulumi.Int(65352),
-			ConnectionId:  pulumi.String(aws_dx_connection.Example.Id),
+			ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
 			DxGatewayId:   exampleGateway.ID(),
 			Vlan:          pulumi.Int(4094),
 		})
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn=64512)
+example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn="64512")
 example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("exampleTransitVirtualInterface",
     address_family="ipv4",
     bgp_asn=65352,

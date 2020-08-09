@@ -89,12 +89,12 @@ func main() {
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 			Targets: ssm.MaintenanceWindowTaskTargetArray{
 				&ssm.MaintenanceWindowTaskTargetArgs{
 					Key: pulumi.String("InstanceIds"),
 					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
+						pulumi.Any(aws_instance.Example.Id),
 					},
 				},
 			},
@@ -105,15 +105,15 @@ func main() {
 					Parameter: pulumi.MapArray{
 						pulumi.Map{
 							"name": pulumi.String("InstanceId"),
-							"values": pulumi.StringArray{
-								pulumi.String(aws_instance.Example.Id),
+							"values": pulumi.AnyArray{
+								pulumi.Any(aws_instance.Example.Id),
 							},
 						},
 					},
 				},
 			},
 			TaskType: pulumi.String("AUTOMATION"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
+			WindowId: pulumi.Any(aws_ssm_maintenance_window.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -131,8 +131,8 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ssm.MaintenanceWindowTask("example",
-    max_concurrency=2,
-    max_errors=1,
+    max_concurrency="2",
+    max_errors="1",
     priority=1,
     service_role_arn=aws_iam_role["example"]["arn"],
     targets=[{
@@ -312,12 +312,12 @@ func main() {
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 			Targets: ssm.MaintenanceWindowTaskTargetArray{
 				&ssm.MaintenanceWindowTaskTargetArgs{
 					Key: pulumi.String("InstanceIds"),
 					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
+						pulumi.Any(aws_instance.Example.Id),
 					},
 				},
 			},
@@ -325,13 +325,13 @@ func main() {
 			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
 				RunCommandParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs{
 					NotificationConfig: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs{
-						NotificationArn: pulumi.String(aws_sns_topic.Example.Arn),
+						NotificationArn: pulumi.Any(aws_sns_topic.Example.Arn),
 						NotificationEvents: pulumi.StringArray{
 							pulumi.String("All"),
 						},
 						NotificationType: pulumi.String("Command"),
 					},
-					OutputS3Bucket:    pulumi.String(aws_s3_bucket.Example.Bucket),
+					OutputS3Bucket:    pulumi.Any(aws_s3_bucket.Example.Bucket),
 					OutputS3KeyPrefix: pulumi.String("output"),
 					Parameter: pulumi.MapArray{
 						pulumi.Map{
@@ -341,12 +341,12 @@ func main() {
 							},
 						},
 					},
-					ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+					ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 					TimeoutSeconds: pulumi.Int(600),
 				},
 			},
 			TaskType: pulumi.String("RUN_COMMAND"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
+			WindowId: pulumi.Any(aws_ssm_maintenance_window.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -364,8 +364,8 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ssm.MaintenanceWindowTask("example",
-    max_concurrency=2,
-    max_errors=1,
+    max_concurrency="2",
+    max_errors="1",
     priority=1,
     service_role_arn=aws_iam_role["example"]["arn"],
     targets=[{
@@ -497,16 +497,16 @@ func main() {
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 			Targets: ssm.MaintenanceWindowTaskTargetArray{
 				&ssm.MaintenanceWindowTaskTargetArgs{
 					Key: pulumi.String("InstanceIds"),
 					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
+						pulumi.Any(aws_instance.Example.Id),
 					},
 				},
 			},
-			TaskArn: pulumi.String(aws_sfn_activity.Example.Id),
+			TaskArn: pulumi.Any(aws_sfn_activity.Example.Id),
 			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
 				StepFunctionsParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs{
 					Input: pulumi.String("{\"key1\":\"value1\"}"),
@@ -514,7 +514,7 @@ func main() {
 				},
 			},
 			TaskType: pulumi.String("STEP_FUNCTIONS"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
+			WindowId: pulumi.Any(aws_ssm_maintenance_window.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -532,8 +532,8 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ssm.MaintenanceWindowTask("example",
-    max_concurrency=2,
-    max_errors=1,
+    max_concurrency="2",
+    max_errors="1",
     priority=1,
     service_role_arn=aws_iam_role["example"]["arn"],
     targets=[{

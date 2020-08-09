@@ -75,7 +75,7 @@ func main() {
 			ApiStages: apigateway.UsagePlanApiStageArray{
 				&apigateway.UsagePlanApiStageArgs{
 					ApiId: test.ID(),
-					Stage: pulumi.String(aws_api_gateway_deployment.Foo.Stage_name),
+					Stage: pulumi.Any(aws_api_gateway_deployment.Foo.Stage_name),
 				},
 			},
 		})

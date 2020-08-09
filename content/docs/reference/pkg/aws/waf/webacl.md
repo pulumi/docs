@@ -285,7 +285,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
 			LoggingConfiguration: &waf.WebAclLoggingConfigurationArgs{
-				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
+				LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &waf.WebAclLoggingConfigurationRedactedFieldsArgs{
 					FieldToMatch: pulumi.Array{
 						pulumi.StringMap{

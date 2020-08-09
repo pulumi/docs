@@ -79,7 +79,7 @@ default = aws.ec2.DefaultSecurityGroup("default",
     }],
     ingress=[{
         "from_port": 0,
-        "protocol": -1,
+        "protocol": "-1",
         "self": True,
         "to_port": 0,
     }],
@@ -203,7 +203,7 @@ mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultSecurityGroup("default",
     ingress=[{
         "from_port": 0,
-        "protocol": -1,
+        "protocol": "-1",
         "self": True,
         "to_port": 0,
     }],

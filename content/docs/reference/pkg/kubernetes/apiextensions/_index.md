@@ -15,11 +15,6 @@ meta_desc: ""
     <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
-<h2 id="resources">Resources</h2>
-<ul class="api">
-    <li><a href="customresource" title="CustomResource"><span class="symbol resource"></span>CustomResource</a></li>
-</ul>
-
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -27,7 +22,7 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

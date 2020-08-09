@@ -132,7 +132,7 @@ func main() {
 			Condition: &cloudwatch.EventPermissionConditionArgs{
 				Key:   pulumi.String("aws:PrincipalOrgID"),
 				Type:  pulumi.String("StringEquals"),
-				Value: pulumi.String(aws_organizations_organization.Example.Id),
+				Value: pulumi.Any(aws_organizations_organization.Example.Id),
 			},
 			Principal:   pulumi.String("*"),
 			StatementId: pulumi.String("OrganizationAccess"),

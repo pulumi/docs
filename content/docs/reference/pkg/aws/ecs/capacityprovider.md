@@ -61,7 +61,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.NewCapacityProvider(ctx, "test", &ecs.CapacityProviderArgs{
 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
-				AutoScalingGroupArn:          pulumi.String(aws_autoscaling_group.Test.Arn),
+				AutoScalingGroupArn:          pulumi.Any(aws_autoscaling_group.Test.Arn),
 				ManagedTerminationProtection: pulumi.String("ENABLED"),
 				ManagedScaling: &ecs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs{
 					MaximumScalingStepSize: pulumi.Int(1000),

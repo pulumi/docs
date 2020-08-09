@@ -107,7 +107,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("main"),
 			},
-			VpcId: pulumi.String(aws_vpc.Main.Id),
+			VpcId: pulumi.Any(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err
