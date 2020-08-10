@@ -195,11 +195,11 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
-[apiextensions package]: {{< ref "/docs/reference/pkg/kubernetes/apiextensions" >}}
+[apiextensions package]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions" >}}
 [crd2pulumi]: https://github.com/pulumi/pulumi-kubernetes/tree/master/provider/cmd/crd2pulumi
 [cert-manager]: https://github.com/jetstack/cert-manager/tree/master/deploy/crds
 [CronTab CRD]: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#create-a-customresourcedefinition
-[CustomResource]: {{< ref "/docs/reference/pkg/kubernetes/apiextensions/customresource" >}}
-[CustomResourceDefinition]: {{< ref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
+[CustomResource]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions/customresource" >}}
+[CustomResourceDefinition]: {{< relref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
 <!-- markdownlint-enable url -->
