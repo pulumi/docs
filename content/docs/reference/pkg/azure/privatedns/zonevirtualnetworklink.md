@@ -321,7 +321,7 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -394,7 +394,7 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -467,7 +467,7 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -540,7 +540,7 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -840,7 +840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,7 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -986,7 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

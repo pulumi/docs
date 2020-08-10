@@ -155,7 +155,7 @@ const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_batched_operations=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>forward_dead_lettered_messages_to=None<span class="p">, </span>forward_to=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,8 +335,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -347,8 +346,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,8 +357,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,8 +379,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,8 +390,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablebatchedoperations_csharp">
+<a href="#enablebatchedoperations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,10 +412,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -420,10 +423,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarddeadletteredmessagesto_csharp">
+<a href="#forwarddeadletteredmessagesto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardto_csharp">
+<a href="#forwardto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,7 +456,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,7 +467,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,9 +478,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,8 +489,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,9 +500,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -494,10 +511,18 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -515,8 +540,7 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -527,8 +551,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -539,8 +562,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -562,8 +584,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,8 +595,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablebatchedoperations_go">
+<a href="#enablebatchedoperations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,10 +617,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,10 +628,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarddeadletteredmessagesto_go">
+<a href="#forwarddeadletteredmessagesto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardto_go">
+<a href="#forwardto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -614,7 +661,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -625,7 +672,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -636,9 +683,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -649,8 +694,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -661,9 +705,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,10 +716,18 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -695,8 +745,7 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -707,8 +756,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -719,8 +767,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,8 +789,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -754,8 +800,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablebatchedoperations_nodejs">
+<a href="#enablebatchedoperations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,10 +822,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,10 +833,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarddeadletteredmessagesto_nodejs">
+<a href="#forwarddeadletteredmessagesto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardto_nodejs">
+<a href="#forwardto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -794,7 +866,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,7 +877,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -816,9 +888,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,8 +899,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -841,9 +910,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -854,10 +921,18 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -875,8 +950,7 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -887,8 +961,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,8 +972,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,8 +994,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,8 +1005,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_batched_operations_python">
+<a href="#enable_batched_operations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batched_<wbr>operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,10 +1027,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,10 +1038,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forward_dead_lettered_messages_to_python">
+<a href="#forward_dead_lettered_messages_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dead_<wbr>lettered_<wbr>messages_<wbr>to</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forward_to_python">
+<a href="#forward_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>to</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1071,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +1082,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -996,9 +1093,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1009,8 +1104,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1021,9 +1115,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1034,10 +1126,18 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1138,7 +1238,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_batched_operations=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>forward_dead_lettered_messages_to=None<span class="p">, </span>forward_to=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>status=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1260,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,8 +1382,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1295,8 +1393,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablebatchedoperations_csharp">
+<a href="#state_enablebatchedoperations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1307,10 +1415,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1321,10 +1426,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwarddeadletteredmessagesto_csharp">
+<a href="#state_forwarddeadletteredmessagesto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwardto_csharp">
+<a href="#state_forwardto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,7 +1459,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,7 +1470,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1357,9 +1481,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1370,8 +1492,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1382,8 +1503,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1394,9 +1514,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1407,10 +1525,7 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1421,8 +1536,18 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1440,8 +1565,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1463,8 +1587,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1475,8 +1598,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablebatchedoperations_go">
+<a href="#state_enablebatchedoperations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,10 +1620,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1501,10 +1631,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwarddeadletteredmessagesto_go">
+<a href="#state_forwarddeadletteredmessagesto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwardto_go">
+<a href="#state_forwardto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1515,7 +1664,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1526,7 +1675,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,9 +1686,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1550,8 +1697,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1562,8 +1708,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1574,9 +1719,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1587,10 +1730,7 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1601,8 +1741,18 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1620,8 +1770,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1643,8 +1792,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1655,8 +1803,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablebatchedoperations_nodejs">
+<a href="#state_enablebatchedoperations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Batched<wbr>Operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1667,10 +1825,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1681,10 +1836,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwarddeadletteredmessagesto_nodejs">
+<a href="#state_forwarddeadletteredmessagesto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forwardto_nodejs">
+<a href="#state_forwardto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>To</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1695,7 +1869,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1706,7 +1880,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1717,9 +1891,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1730,8 +1902,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1742,8 +1913,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1754,9 +1924,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,10 +1935,7 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1781,8 +1946,18 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1800,8 +1975,7 @@ create the namespace. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1823,8 +1997,7 @@ Queue is automatically deleted, minimum of 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this
-queue. This is the default value used when TTL is not set on message itself.
+    <dd>{{% md %}}The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,8 +2008,18 @@ queue. This is the default value used when TTL is not set on message itself.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which
-duplicates can be detected. Default value is 10 minutes. (`PT10M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_batched_operations_python">
+<a href="#state_enable_batched_operations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batched_<wbr>operations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1847,10 +2030,7 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether Express Entities
-are enabled. An express queue holds a message in memory temporarily before writing
-it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1861,10 +2041,29 @@ be set to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether to enable
-the queue to be partitioned across multiple message brokers. Changing this forces
-a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST
-be set to `true`.
+    <dd>{{% md %}}Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forward_dead_lettered_messages_to_python">
+<a href="#state_forward_dead_lettered_messages_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dead_<wbr>lettered_<wbr>messages_<wbr>to</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward dead lettered messages to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forward_to_python">
+<a href="#state_forward_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>to</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1875,7 +2074,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
+    <dd>{{% md %}}The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1886,7 +2085,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
+    <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1897,9 +2096,7 @@ be set to `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Integer value which controls the size of
-memory allocated for the queue. For supported values see the "Queue/topic size"
-section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
+    <dd>{{% md %}}Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1910,8 +2107,7 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a
-new resource to be created.
+    <dd>{{% md %}}Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1922,8 +2118,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the ServiceBus Namespace to create
-this queue in. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1934,9 +2129,7 @@ this queue in. Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether
-the Queue requires duplicate detection. Changing this forces
-a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1947,10 +2140,7 @@ a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions.
-This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
-a queue can guarantee first-in-first-out delivery of messages.
-Changing this forces a new resource to be created. Defaults to `false`.
+    <dd>{{% md %}}Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1961,8 +2151,18 @@ Changing this forces a new resource to be created. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 {{% /md %}}</dd>
 
 </dl>
