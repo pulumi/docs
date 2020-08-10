@@ -73,7 +73,7 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 
 #### Extension Packages
 
-- [`pulumi/kx`](https://github.com/pulumi/eks) - Kubernetes Workload Extensions
+- [`pulumi/kx`](https://github.com/pulumi/pulumi-kubernetesx) - Kubernetes Workload Extensions
 
 [k8s]: https://kubernetes.io
 
