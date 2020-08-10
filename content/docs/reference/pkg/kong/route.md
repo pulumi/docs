@@ -22,7 +22,7 @@ meta_desc: "Explore the Route resource of the Kong package, including examples, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kong/#Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -793,7 +793,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

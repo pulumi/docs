@@ -22,7 +22,7 @@ meta_desc: "Explore the Plugin resource of the Kong package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kong/#Plugin">Plugin</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_json=None<span class="p">, </span>consumer_id=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>route_id=None<span class="p">, </span>service_id=None<span class="p">, </span>strict_match=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Plugin">Plugin</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_json=None<span class="p">, </span>consumer_id=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>route_id=None<span class="p">, </span>service_id=None<span class="p">, </span>strict_match=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -637,7 +637,7 @@ Get an existing Plugin resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>computed_config=None<span class="p">, </span>config_json=None<span class="p">, </span>consumer_id=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>route_id=None<span class="p">, </span>service_id=None<span class="p">, </span>strict_match=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>computed_config=None<span class="p">, </span>config_json=None<span class="p">, </span>consumer_id=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>route_id=None<span class="p">, </span>service_id=None<span class="p">, </span>strict_match=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
