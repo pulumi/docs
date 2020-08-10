@@ -53,7 +53,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project1, err := identity.NewProject(ctx, "project1", nil)
+		if err != nil {
+			return err
+		}
+		_, err = blockstorage.NewQuoteSetV2(ctx, "quotaset1", &blockstorage.QuoteSetV2Args{
+			ProjectId:          project1.ID(),
+			Volumes:            pulumi.Int(10),
+			Snapshots:          pulumi.Int(4),
+			Gigabytes:          pulumi.Int(100),
+			PerVolumeGigabytes: pulumi.Int(10),
+			Backups:            pulumi.Int(4),
+			BackupGigabytes:    pulumi.Int(10),
+			Groups:             pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,7 +140,7 @@ const quotaset1 = new openstack.blockstorage.QuoteSetV2("quotaset1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#QuoteSetV2">QuoteSetV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#pulumi_openstack.blockstorage.QuoteSetV2">QuoteSetV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +867,7 @@ Get an existing QuoteSetV2 resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

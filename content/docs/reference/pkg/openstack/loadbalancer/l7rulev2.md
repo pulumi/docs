@@ -75,7 +75,77 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		subnet1, err := networking.NewSubnet(ctx, "subnet1", &networking.SubnetArgs{
+			Cidr:      pulumi.String("192.168.199.0/24"),
+			IpVersion: pulumi.Int(4),
+			NetworkId: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		loadbalancer1, err := loadbalancer.NewLoadBalancer(ctx, "loadbalancer1", &loadbalancer.LoadBalancerArgs{
+			VipSubnetId: subnet1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		listener1, err := loadbalancer.NewListener(ctx, "listener1", &loadbalancer.ListenerArgs{
+			LoadbalancerId: loadbalancer1.ID(),
+			Protocol:       pulumi.String("HTTP"),
+			ProtocolPort:   pulumi.Int(8080),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = loadbalancer.NewPool(ctx, "pool1", &loadbalancer.PoolArgs{
+			LbMethod:       pulumi.String("ROUND_ROBIN"),
+			LoadbalancerId: loadbalancer1.ID(),
+			Protocol:       pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		l7policy1, err := loadbalancer.NewL7PolicyV2(ctx, "l7policy1", &loadbalancer.L7PolicyV2Args{
+			Action:      pulumi.String("REDIRECT_TO_URL"),
+			Description: pulumi.String("test description"),
+			ListenerId:  listener1.ID(),
+			Position:    pulumi.Int(1),
+			RedirectUrl: pulumi.String("http://www.example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = loadbalancer.NewL7RuleV2(ctx, "l7rule1", &loadbalancer.L7RuleV2Args{
+			CompareType: pulumi.String("EQUAL_TO"),
+			L7policyId:  l7policy1.ID(),
+			Type:        pulumi.String("PATH"),
+			Value:       pulumi.String("/api"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -168,7 +238,7 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#L7RuleV2">L7RuleV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.L7RuleV2">L7RuleV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -947,7 +1017,7 @@ Get an existing L7RuleV2 resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

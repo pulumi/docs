@@ -41,7 +41,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := networking.NewFloatingIp(ctx, "floatip1", &networking.FloatingIpArgs{
+			Pool: pulumi.String("public"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,7 +99,7 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#FloatingIp">FloatingIp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.FloatingIp">FloatingIp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1026,7 +1046,7 @@ Get an existing FloatingIp resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>all_tags=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>all_tags=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

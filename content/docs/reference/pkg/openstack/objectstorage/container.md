@@ -48,7 +48,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContentType: pulumi.String("application/json"),
+			Metadata: pulumi.StringMap{
+				"test": pulumi.String("true"),
+			},
+			Region: pulumi.String("RegionOne"),
+			Versioning: &objectstorage.ContainerVersioningArgs{
+				Location: pulumi.String("tf-test-container-versions"),
+				Type:     pulumi.String("versions"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,7 +142,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContainerRead: pulumi.String(".r:*"),
+			Region:        pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -166,7 +215,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContainerRead: pulumi.String(".r:*,.rlistings"),
+			Region:        pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -223,7 +293,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := identity.GetAuthScope(ctx, &identity.GetAuthScopeArgs{
+			Name: "current",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
+			ContainerRead:  pulumi.String(fmt.Sprintf("%v%v", ".r:-", _var.Username)),
+			ContainerWrite: pulumi.String(fmt.Sprintf("%v%v%v", current.ProjectId, ":", _var.Username)),
+			Region:         pulumi.String("RegionOne"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -270,7 +371,7 @@ const container1 = new openstack.objectstorage.Container("container_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_read=None<span class="p">, </span>container_sync_key=None<span class="p">, </span>container_sync_to=None<span class="p">, </span>container_write=None<span class="p">, </span>content_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage/#pulumi_openstack.objectstorage.Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_read=None<span class="p">, </span>container_sync_key=None<span class="p">, </span>container_sync_to=None<span class="p">, </span>container_write=None<span class="p">, </span>content_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1045,7 +1146,7 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_read=None<span class="p">, </span>container_sync_key=None<span class="p">, </span>container_sync_to=None<span class="p">, </span>container_write=None<span class="p">, </span>content_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_read=None<span class="p">, </span>container_sync_key=None<span class="p">, </span>container_sync_to=None<span class="p">, </span>container_write=None<span class="p">, </span>content_type=None<span class="p">, </span>force_destroy=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

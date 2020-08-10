@@ -12,6 +12,48 @@ meta_desc: "Explore the User resource of the database module, including examples
 
 Manages a V1 DB user resource within OpenStack.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### User
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+basic = openstack.database.User("basic",
+    databases=["testdb"],
+    instance=openstack_db_instance_v1["basic"]["id"],
+    password="password")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const basic = new openstack.database.User("basic", {
+    databases: ["testdb"],
+    instance: openstack_db_instance_v1_basic.id,
+    password: "password",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}
@@ -23,7 +65,7 @@ Manages a V1 DB user resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>databases=None<span class="p">, </span>host=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>databases=None<span class="p">, </span>host=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +612,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>databases=None<span class="p">, </span>host=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>databases=None<span class="p">, </span>host=None<span class="p">, </span>instance_id=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -244,7 +244,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keymanager.NewContainerV1(ctx, "tls1", &keymanager.ContainerV1Args{
+			Acl: &keymanager.ContainerV1AclArgs{
+				Read: &keymanager.ContainerV1AclReadArgs{
+					ProjectAccess: pulumi.Bool(false),
+					Users: pulumi.StringArray{
+						pulumi.String("userid1"),
+						pulumi.String("userid2"),
+					},
+				},
+			},
+			SecretRefs: keymanager.ContainerV1SecretRefArray{
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("certificate"),
+					SecretRef: pulumi.Any(openstack_keymanager_secret_v1.Certificate_1.Secret_ref),
+				},
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("private_key"),
+					SecretRef: pulumi.Any(openstack_keymanager_secret_v1.Private_key_1.Secret_ref),
+				},
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("intermediates"),
+					SecretRef: pulumi.Any(openstack_keymanager_secret_v1.Intermediate_1.Secret_ref),
+				},
+			},
+			Type: pulumi.String("certificate"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -329,7 +372,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#ContainerV1">ContainerV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.ContainerV1">ContainerV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1128,7 +1171,7 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>consumers=None<span class="p">, </span>container_ref=None<span class="p">, </span>created_at=None<span class="p">, </span>creator_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>consumers=None<span class="p">, </span>container_ref=None<span class="p">, </span>created_at=None<span class="p">, </span>creator_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

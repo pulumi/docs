@@ -51,7 +51,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := database.NewConfiguration(ctx, "test", &database.ConfigurationArgs{
+			Configurations: database.ConfigurationConfigurationArray{
+				&database.ConfigurationConfigurationArgs{
+					Name:  pulumi.String("max_connections"),
+					Value: pulumi.String("200"),
+				},
+			},
+			Datastore: &database.ConfigurationDatastoreArgs{
+				Type:    pulumi.String("mysql"),
+				Version: pulumi.String("mysql-5.7"),
+			},
+			Description: pulumi.String("description"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,7 +136,7 @@ const test = new openstack.database.Configuration("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#Configuration">Configuration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Configuration">Configuration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -625,7 +655,7 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

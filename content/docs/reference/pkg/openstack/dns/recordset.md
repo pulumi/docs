@@ -52,7 +52,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			Description: pulumi.String("a zone"),
+			Email:       pulumi.String("email2@example.com"),
+			Ttl:         pulumi.Int(6000),
+			Type:        pulumi.String("PRIMARY"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewRecordSet(ctx, "rsExampleCom", &dns.RecordSetArgs{
+			Description: pulumi.String("An example record set"),
+			Records: pulumi.StringArray{
+				pulumi.String("10.0.0.1"),
+			},
+			Ttl:    pulumi.Int(3000),
+			Type:   pulumi.String("A"),
+			ZoneId: exampleZone.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -110,7 +145,7 @@ const rsExampleCom = new openstack.dns.RecordSet("rs_example_com", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/dns/#RecordSet">RecordSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/dns/#pulumi_openstack.dns.RecordSet">RecordSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -785,7 +820,7 @@ Get an existing RecordSet resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

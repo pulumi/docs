@@ -37,7 +37,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vpnaas.NewIpSecPolicy(ctx, "policy1", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,7 +91,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#IpSecPolicy">IpSecPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#pulumi_openstack.vpnaas.IpSecPolicy">IpSecPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,10 +320,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,10 +459,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">[]Ip<wbr>Sec<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,10 +598,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -731,10 +737,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,7 +910,7 @@ Get an existing IpSecPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1079,10 +1081,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1222,10 +1220,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">[]Ip<wbr>Sec<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1365,10 +1359,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1508,10 +1498,6 @@ The default value is aes-128. Changing this updates the existing policy.
         <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1638,7 +1624,9 @@ Changing this updates the existing policy. Default is ESP.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
+Default is 3600.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1665,7 +1653,9 @@ Changing this updates the existing policy. Default is ESP.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
+Default is 3600.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1692,7 +1682,9 @@ Changing this updates the existing policy. Default is ESP.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
+Default is 3600.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1719,7 +1711,9 @@ Changing this updates the existing policy. Default is ESP.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
+Default is 3600.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

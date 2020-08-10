@@ -53,7 +53,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project1, err := identity.NewProject(ctx, "project1", nil)
+		if err != nil {
+			return err
+		}
+		user1, err := identity.NewUser(ctx, "user1", &identity.UserArgs{
+			DefaultProjectId: project1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		role1, err := identity.NewRole(ctx, "role1", nil)
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewRoleAssignment(ctx, "roleAssignment1", &identity.RoleAssignmentArgs{
+			ProjectId: project1.ID(),
+			RoleId:    role1.ID(),
+			UserId:    user1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,7 +140,7 @@ const roleAssignment1 = new openstack.identity.RoleAssignment("role_assignment_1
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#RoleAssignment">RoleAssignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_id=None<span class="p">, </span>group_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>role_id=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#pulumi_openstack.identity.RoleAssignment">RoleAssignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_id=None<span class="p">, </span>group_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>role_id=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -655,7 +691,7 @@ Get an existing RoleAssignment resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain_id=None<span class="p">, </span>group_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>role_id=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain_id=None<span class="p">, </span>group_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>role_id=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

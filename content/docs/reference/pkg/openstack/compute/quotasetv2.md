@@ -52,7 +52,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project1, err := identity.NewProject(ctx, "project1", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewQuotaSetV2(ctx, "quotaset1", &compute.QuotaSetV2Args{
+			ProjectId:          project1.ID(),
+			KeyPairs:           pulumi.Int(10),
+			Ram:                pulumi.Int(40960),
+			Cores:              pulumi.Int(32),
+			Instances:          pulumi.Int(20),
+			ServerGroups:       pulumi.Int(4),
+			ServerGroupMembers: pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,7 +136,7 @@ const quotaset1 = new openstack.compute.QuotaSetV2("quotaset1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#QuotaSetV2">QuotaSetV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cores=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>floating_ips=None<span class="p">, </span>injected_file_content_bytes=None<span class="p">, </span>injected_file_path_bytes=None<span class="p">, </span>injected_files=None<span class="p">, </span>instances=None<span class="p">, </span>key_pairs=None<span class="p">, </span>metadata_items=None<span class="p">, </span>project_id=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>security_group_rules=None<span class="p">, </span>security_groups=None<span class="p">, </span>server_group_members=None<span class="p">, </span>server_groups=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.QuotaSetV2">QuotaSetV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cores=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>floating_ips=None<span class="p">, </span>injected_file_content_bytes=None<span class="p">, </span>injected_file_path_bytes=None<span class="p">, </span>injected_files=None<span class="p">, </span>instances=None<span class="p">, </span>key_pairs=None<span class="p">, </span>metadata_items=None<span class="p">, </span>project_id=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>security_group_rules=None<span class="p">, </span>security_groups=None<span class="p">, </span>server_group_members=None<span class="p">, </span>server_groups=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1168,7 +1199,7 @@ Get an existing QuotaSetV2 resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cores=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>floating_ips=None<span class="p">, </span>injected_file_content_bytes=None<span class="p">, </span>injected_file_path_bytes=None<span class="p">, </span>injected_files=None<span class="p">, </span>instances=None<span class="p">, </span>key_pairs=None<span class="p">, </span>metadata_items=None<span class="p">, </span>project_id=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>security_group_rules=None<span class="p">, </span>security_groups=None<span class="p">, </span>server_group_members=None<span class="p">, </span>server_groups=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cores=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>floating_ips=None<span class="p">, </span>injected_file_content_bytes=None<span class="p">, </span>injected_file_path_bytes=None<span class="p">, </span>injected_files=None<span class="p">, </span>instances=None<span class="p">, </span>key_pairs=None<span class="p">, </span>metadata_items=None<span class="p">, </span>project_id=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>security_group_rules=None<span class="p">, </span>security_groups=None<span class="p">, </span>server_group_members=None<span class="p">, </span>server_groups=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
