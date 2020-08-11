@@ -27,7 +27,7 @@ lets you use IDE type checking and autocomplete features!
 
 ## Getting Started with crd2pulumi
 
-Let's test crd2pulumi on the example [CronTab CRD] specified in the Kubernetes Documentation.
+Let's test `crd2pulumi` on the example [CronTab CRD] specified in the Kubernetes Documentation.
 
 ```yaml
 apiVersion: apiextensions.k8s.io/v1
