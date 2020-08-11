@@ -11,8 +11,8 @@ tags:
     - Kubernetes
 ---
 
-[CustomResource]s in Kubernetes allow users to extend the API with their own types. These types are defined using
-[CustomResourceDefinition]s (CRDs), which include an OpenAPI schema. This extensibility is very useful, but comes at the
+[CustomResource]s in Kubernetes allow users to extend the API with their types. These types are defined using
+[CustomResourceDefinition]s (CRDs), which include an OpenAPI schema. This extensibility is very useful but comes at the
 cost of very complex YAML definitions. Our new [crd2pulumi] tool takes the pain out of managing CustomResources by
 generating types in the Pulumi-supported language of your choice!
 
@@ -20,7 +20,7 @@ generating types in the Pulumi-supported language of your choice!
 
 Pulumi already supports the management of CRDs and their associated CustomResources using the [apiextensions package].
 However, these SDK resources are untyped since every schema is, well, custom. While this is fine for simple CRDs, it
-gets complicated fast for many real-world CRDs like [cert-manager] or [Istio]. These CRDs contain thousands of lines of
+quickly becomes complicated for real-world CRDs like [cert-manager] or [Istio]. These CRDs contain thousands of lines of
 complex YAML schemas, making it difficult to write CustomResources that adhere to those specs. Programming languages
 offer a better path forward. Instead of wrangling error-prone YAML definitions, using types in a programming language
 lets you use IDE type checking and autocomplete features!
