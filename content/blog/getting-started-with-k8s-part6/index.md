@@ -20,7 +20,7 @@ Although this subject is much deeper than we can cover in a single article, letâ
 
 ## Managing secrets
 
-In addition to managing users and groups, managing secrets such as credentials is an important task. The Pulumi CLI lets you rotate secrets providers for a stack. This particularly important when people leave an organization or if you want to change to a different secrets provider, e.g., from Vault to AWS KMS. Also, we can copy secrets from one stack to another. A frequent use of this capability is to copy database account credentials from one stack to another. You can read more about [managing secrets]({{< relref "/blog/managing-secrets-with-pulumi" >}}) and the using the [CLI]({{< relref "blog/rotating-secret-providers" >}}) to rotate providers on the Pulumi blog.
+In addition to managing users and groups, managing secrets such as credentials is an important task. The Pulumi CLI lets you rotate the secrets provider for a stack. This is particularly important when people leave an organization or if you want to change to a different secrets provider, e.g., from Vault to AWS KMS. Also, we can copy secrets from one stack to another. A frequent use of this capability is to copy database account credentials from one stack to another. You can read more about [managing secrets]({{< relref "/blog/managing-secrets-with-pulumi" >}}) and the using the [CLI]({{< relref "blog/rotating-secret-providers" >}}) to rotate providers on the Pulumi blog.
 
 ## Updating clusters
 
