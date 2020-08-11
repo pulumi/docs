@@ -116,13 +116,17 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 
 {{% choosable language python %}}
 
-*Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!*
+{{% notes type="info" %}}
+Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!
+{{% /notes %}}
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-*Coming soon!*
+{{% notes type="info" %}}
+Coming soon!
+{{% /notes %}}
 
 {{% /choosable %}}
 
@@ -147,7 +151,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 
 		// Register the CronTab CRD.
-		_, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
+        _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
 			&yaml.ConfigFileArgs{
 				File: "crontab.yaml",
 			},
@@ -157,7 +161,7 @@ func main() {
 		}
 
 		// Instantiate a CronTab resource.
-		_, err = crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
+        _, err = crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
 			Metadata: &v1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
 			},
@@ -226,13 +230,17 @@ new certificates.v1beta1.Certificate("example-cert", {
 
 {{% choosable language python %}}
 
-*Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!*
+{{% notes type="info" %}}
+Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!
+{{% /notes %}}
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-*Coming soon!*
+{{% notes type="info" %}}
+Coming soon!
+{{% /notes %}}
 
 {{% /choosable %}}
 
@@ -253,7 +261,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 
 		// Register the Certificate CRD.
-		_, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
+        _, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
 			&yaml.ConfigFileArgs{
 				File: "certificate.yaml",
 			},
@@ -263,7 +271,7 @@ func main() {
 		}
 
 		// Instantiate a Certificate resource.
-		_, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
+        _, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("example-com"),
 			},
