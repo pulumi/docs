@@ -142,7 +142,74 @@ my_stack = apiextensions.CustomResource("my-stack",
 {{% choosable language csharp %}}
 
 ```csharp
-Coming Soon
+using Pulumi;
+using Pulumi.Kubernetes.ApiExtensions;
+using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+
+class StackArgs : CustomResourceArgs
+{
+    [Input("spec")]
+    public Input<StackSpecArgs>? Spec { get; set; }
+
+    public StackArgs() : base("pulumi.com/v1alpha1", "Stack")
+    {
+    }
+}
+
+class StackSpecArgs : ResourceArgs
+{
+    [Input("accessTokenSecret")]
+    public Input<string>? AccessTokenSecret { get; set; }
+
+    [Input("stack")]
+    public Input<string>? Stack { get; set; }
+
+    [Input("initOnCreate")]
+    public Input<bool>? InitOnCreate { get; set; }
+
+    [Input("projectRepo")]
+    public Input<string>? ProjectRepo { get; set; }
+
+    [Input("commit")]
+    public Input<string>? Commit { get; set; }
+
+    [Input("destroyOnFinalize")]
+    public Input<bool>? DestroyOnFinalize { get; set; }
+}
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Get the Pulumi API token.
+        var config = new Config();
+        var pulumiAccessToken = config.RequireSecret("pulumiAccessToken");
+
+        // Create the API token as a Kubernetes Secret.
+        var accessToken = new Secret("accesstoken", new SecretArgs
+        {
+            StringData =
+            {
+                {"accessToken", pulumiAccessToken}
+            }
+        });
+
+        // Create an NGINX deployment in-cluster.
+        var myStack = new Pulumi.Kubernetes.ApiExtensions.CustomResource("nginx", new StackArgs
+        {
+            Spec = new StackSpecArgs
+            {
+                AccessTokenSecret = accessToken.Metadata.Apply(m => m.Name),
+                Stack = "<YOUR_ORG>/nginx/dev",
+                InitOnCreate = true,
+                ProjectRepo = "https://github.com/metral/pulumi-nginx",
+                Commit = "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                DestroyOnFinalize = true,
+            }
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -150,7 +217,49 @@ Coming Soon
 {{% choosable language go %}}
 
 ```go
-Coming Soon
+package main
+
+import (
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+    apiextensions "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Get the Pulumi API token.
+        c := config.New(ctx, "")
+        pulumiAccessToken := c.Require("pulumiAccessToken")
+
+        // Create the API token as a Kubernetes Secret.
+        accessToken, err := corev1.NewSecret(ctx, "accesstoken", &corev1.SecretArgs{
+            StringData: pulumi.StringMap{"accessToken": pulumi.String(pulumiAccessToken)},
+        })
+        if err != nil {
+            return err
+        }
+
+        // Create an NGINX deployment in-cluster.
+        _, err = apiextensions.NewCustomResource(ctx, "my-stack", &apiextensions.CustomResourceArgs{
+            ApiVersion: pulumi.String("pulumi.com/v1alpha1"),
+            Kind:       pulumi.String("Stack"),
+            OtherFields: kubernetes.UntypedArgs{
+                "spec": map[string]interface{}{
+                    "accessTokenSecret": accessToken.Metadata.Name(),
+                    "stack":             "<YOUR_ORG>/nginx/dev",
+                    "initOnCreate":      true,
+                    "projectRepo":       "https://github.com/metral/pulumi-nginx",
+                    "commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                    "destroyOnFinalize": true,
+                },
+            },
+        }, pulumi.DependsOn([]pulumi.Resource{accessToken}))
+        return err
+    })
+}
 ```
 
 {{% /choosable %}}
