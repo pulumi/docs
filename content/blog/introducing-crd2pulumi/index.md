@@ -115,7 +115,7 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 
 {{% choosable language python %}}
 
-*Coming soon!*
+*Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!*
 
 {{% /choosable %}}
 
@@ -221,7 +221,7 @@ new certificates.v1beta1.Certificate("example-cert", {
 
 {{% choosable language python %}}
 
-*Coming soon!*
+*Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!*
 
 {{% /choosable %}}
 
