@@ -104,6 +104,7 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 	spec: {
     	cronSpec: "* * * * */5",
     	image: "my-awesome-cron-image",
+        replicas: 3,
 	}
 })
 ```
@@ -154,6 +155,7 @@ func main() {
 			Spec: CronTabSpecArgs{
 				CronSpec: pulumi.String("* * * * */5"),
 				Image:    pulumi.String("my-awesome-cron-image"),
+                Replicas: pulumi.IntPtr(3),
 			},
 		})
 		if err != nil {
@@ -168,10 +170,10 @@ func main() {
 
 {{< /chooser >}}
 
-As you can see, the `v1.CronTab` object is strongly-typed. So if you try to set `cronSpec` to an integer or add an
+As you can see, the `v1.CronTab` object is strongly-typed. So if you try to set replicas to a string or add an
 unsupported argument, your IDE will immediately warn you!
 
-TODO: Add GIF to show this in action.
+![IDE Usage](ide.gif)
 
 ## Cert Manager Example
 
