@@ -72,10 +72,11 @@ spec:
     - ct
 ```
 
-Create a file called `crd.yaml` with this definition and then run `crd2pulumi` for your language of choice.
+Copy this definition into a file called `crontab.yaml` and then run `crd2pulumi` to generate types for your language of
+choice.
 
 {{% notes type="info" %}}
-crd2pulumi supports TypeScript and Go today, and Python and .NET is coming soon.
+crd2pulumi supports TypeScript and Go today, and Python and .NET are coming soon.
 {{% /notes %}}
 
 By default, this creates the folder `crontabs/` in the same directory as the YAML file. Now you can instantiate a
@@ -87,7 +88,7 @@ CustomResource.
 {{% choosable language typescript %}}
 
 ```sh
-$ crd2pulumi nodejs crd.yaml
+$ crd2pulumi nodejs crontab.yaml
 ```
 
 ```typescript
@@ -128,13 +129,15 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 {{% choosable language go %}}
 
 ```sh
-$ crd2pulumi go crd.yaml
+$ crd2pulumi go crontab.yaml
 ```
 
 ```go
 package main
 
 import (
+	crontabsv1 "goexample/crontabs/v1"
+
 	v1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -146,7 +149,7 @@ func main() {
 		// Register the CronTab CRD.
 		_, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
 			&yaml.ConfigFileArgs{
-				File: "crontabdefinition.yaml",
+				File: "crontab.yaml",
 			},
 		)
 		if err != nil {
@@ -154,11 +157,11 @@ func main() {
 		}
 
 		// Instantiate a CronTab resource.
-		_, err = NewCronTab(ctx, "my-new-cron-object", &CronTabArgs{
+		_, err = crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
 			Metadata: &v1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
 			},
-			Spec: CronTabSpecArgs{
+			Spec: crontabsv1.CronTabSpecArgs{
 				CronSpec: pulumi.String("* * * * */5"),
 				Image:    pulumi.String("my-awesome-cron-image"),
 				Replicas: pulumi.IntPtr(3),
@@ -239,6 +242,8 @@ new certificates.v1beta1.Certificate("example-cert", {
 package main
 
 import (
+	certv1b1 "goexample/certificates/v1beta1"
+
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -258,11 +263,11 @@ func main() {
 		}
 
 		// Instantiate a Certificate resource.
-		_, err = NewCertificate(ctx, "example-cert", &CertificateArgs{
+		_, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("example-com"),
 			},
-			Spec: CertificateSpecArgs{
+			Spec: certv1b1.CertificateSpecArgs{
 				SecretName:  pulumi.String("example-com-tls"),
 				Duration:    pulumi.String("2160h"),
 				RenewBefore: pulumi.String("360h"),
@@ -271,7 +276,7 @@ func main() {
 					pulumi.String("example.com"),
 					pulumi.String("www.example.com"),
 				},
-				IssuerRef: CertificateSpecIssuerRefArgs{
+				IssuerRef: certv1b1.CertificateSpecIssuerRefArgs{
 					Name: pulumi.String("ca-issuer"),
 					Kind: pulumi.String("Issuer"),
 				},
