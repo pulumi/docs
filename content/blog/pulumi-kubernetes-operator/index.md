@@ -625,9 +625,7 @@ new version in a clean cut-over with no dropped packets.
 Check out the [full walkthrough][blue-green-walkthrough] for a tutorial, and
 the video clip below for a demo.
 
-TODO: upload video demo to YouTube
-
-[Temp GDrive link](https://drive.google.com/drive/u/1/folders/156HJjYlQudFOdrPRrVHokJhPlZnoiRFU)
+{{< youtube "nQZr3uquc-c" >}}
 
 [blue-green-example]: https://github.com/metral/pulumi-blue-green/blob/master/index.ts
 [k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment
