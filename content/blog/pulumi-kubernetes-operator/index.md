@@ -52,7 +52,33 @@ and `pulumi stack rm`.
 
 ![Kubernetes Reconciliation Loop](operator-loop.png "Kubernetes Reconciliation Loop")
 
-Read more about how [Kubernetes Controllers][k8s-cntlrs] work.
+[Stacks][stack] can be written in Typescript, Python, .NET, and
+Go, and span cloud providers such as Amazon AWS, Google GCP, and Microsoft Azure, as
+well as many [cloud native services][pulumi-providers]!
+
+The following example showcases a typical Pulumi program in Typescript, that can be
+instantiated as a Stack.
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Create an AWS resource (S3 Bucket)
+const names = [];
+for (let i = 0; i < 2; i++) {
+    const bucket = new aws.s3.Bucket(`my-bucket-${i}`, {
+        acl: "public-read",
+    });
+    names.push(bucket.id);
+}
+
+// Export the name of the buckets
+export const bucketNames = names;
+```
+
+You can find [more examples][p-examples] on GitHub of the types of
+infrastructure you can manage with Pulumi.
+
+Check out [Kubernetes Controllers][k8s-cntlrs] work if you'd like to learn more.
 
 [k8s-crs]: https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/
 [k8s-cntlrs]: https://kubernetes.io/docs/concepts/architecture/controller/
@@ -216,7 +242,49 @@ class MyStack : Stack
 {{% choosable language go %}}
 
 ```go
-Coming Soon
+package main
+
+import (
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+    apiextensions "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Get the Pulumi API token.
+        c := config.New(ctx, "")
+        pulumiAccessToken := c.Require("pulumiAccessToken")
+
+        // Create the API token as a Kubernetes Secret.
+        accessToken, err := corev1.NewSecret(ctx, "accesstoken", &corev1.SecretArgs{
+            StringData: pulumi.StringMap{"accessToken": pulumi.String(pulumiAccessToken)},
+        })
+        if err != nil {
+            return err
+        }
+
+        // Create an NGINX deployment in-cluster.
+        _, err = apiextensions.NewCustomResource(ctx, "my-stack", &apiextensions.CustomResourceArgs{
+            ApiVersion: pulumi.String("pulumi.com/v1alpha1"),
+            Kind:       pulumi.String("Stack"),
+            OtherFields: kubernetes.UntypedArgs{
+                "spec": map[string]interface{}{
+                    "accessTokenSecret": accessToken.Metadata.Name(),
+                    "stack":             "<YOUR_ORG>/nginx/dev",
+                    "initOnCreate":      true,
+                    "projectRepo":       "https://github.com/metral/pulumi-nginx",
+                    "commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                    "destroyOnFinalize": true,
+                },
+            },
+        }, pulumi.DependsOn([]pulumi.Resource{accessToken}))
+        return err
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -417,7 +485,68 @@ class MyStack : Stack
 {{% choosable language go %}}
 
 ```go
-Coming Soon
+package main
+
+import (
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+    apiextensions "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Get the Pulumi API token and AWS creds.
+        config := config.New(ctx, "")
+        pulumiAccessToken := config.Require("pulumiAccessToken")
+        awsAccessKeyID := config.Require("awsAccessKeyId")
+        awsSecretAccessKey := config.Require("awsSecretAccessKey")
+        awsSessionToken := config.Require("awsSessionToken")
+
+        // Create the creds as Kubernetes Secrets.
+        accessToken, err := corev1.NewSecret(ctx, "accesstoken", &corev1.SecretArgs{
+            StringData: pulumi.StringMap{"accessToken": pulumi.String(pulumiAccessToken)},
+        })
+        if err != nil {
+            return err
+        }
+        awsCreds, err := corev1.NewSecret(ctx, "aws-creds", &corev1.SecretArgs{
+            StringData: pulumi.StringMap{
+                "AWS_ACCESS_KEY_ID":     pulumi.String(awsAccessKeyID),
+                "AWS_SECRET_ACCESS_KEY": pulumi.String(awsSecretAccessKey),
+                "AWS_SESSION_TOKEN":     pulumi.String(awsSessionToken),
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        // Create an Kubernetes cluster on AWS EKS.
+        _, err = apiextensions.NewCustomResource(ctx, "my-stack",
+            &apiextensions.CustomResourceArgs{
+                ApiVersion: pulumi.String("pulumi.com/v1alpha1"),
+                Kind:       pulumi.String("Stack"),
+                OtherFields: kubernetes.UntypedArgs{
+                    "spec": map[string]interface{}{
+                        "stack":             "<YOUR_ORG>/s3-op-project/dev",
+                        "projectRepo":       "https://github.com/metral/pulumi-aws-eks",
+                        "commit":            "fc4ab1a3e49d48cf5c764cd8cd626879a90bcc45",
+                        "accessTokenSecret": accessToken.Metadata.Name(),
+                        "config": map[string]string{
+                            "aws:region": "us-west-2",
+                        },
+                        "envSecrets":        []interface{}{awsCreds.Metadata.Name()},
+                        "initOnCreate":      true,
+                        "destroyOnFinalize": true,
+                    },
+                },
+            }, pulumi.DependsOn([]pulumi.Resource{accessToken, awsCreds}))
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -496,7 +625,9 @@ new version in a clean cut-over with no dropped packets.
 Check out the [full walkthrough][blue-green-walkthrough] for a tutorial, and
 the video clip below for a demo.
 
-TODO: add video-clip blue/green stack demo.
+TODO: upload video demo to YouTube
+
+[Temp GDrive link](https://drive.google.com/drive/u/1/folders/156HJjYlQudFOdrPRrVHokJhPlZnoiRFU)
 
 [blue-green-example]: https://github.com/metral/pulumi-blue-green/blob/master/index.ts
 [k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment
@@ -516,14 +647,24 @@ abstracted for deployment strategies like Blue/Green.
 There are [many more][p-examples] examples of deploying infrastructure,
 containers, serverless, and Kubernetes across cloud providers and cloud native services.
 
-[p-examples]: https://github.com/pulumi/examples
-
 ## Next Steps
 
-TODO
+Check out the [GitHub repo][pulumi-k8s-op] to experiment deploying the operator
+and some test Stacks.
+
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're new.
+
+You can help to shape this experience directly by
+providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
+
+You can explore more content by checking out [PulumiTV on YouTube](http://youtube.com/pulumitv), work through
+Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
+with users and the Pulumi team.
 
 [pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator
 [pulumi-k8s-nginx]: https://github.com/metral/pulumi-nginx
 [pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks
+[p-examples]: https://github.com/pulumi/examples
 [stack]:({{< relref "/docs/intro/concepts/stack" >}})
 [pulumi-config]:({{< relref "/docs/intro/concepts/config" >}})
+[pulumi-providers]:({{< relref "/docs/intro/cloud-providers" >}})
