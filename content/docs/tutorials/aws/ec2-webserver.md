@@ -97,7 +97,7 @@ let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
 
 let server = new aws.ec2.Instance("webserver-www", {
     instanceType: size,
-    securityGroups: [ group.name ], // reference the security group resource above
+    vpcSecurityGroupIds: [ group.id ], // reference the security group resource above
     ami: ami.id,
 });
 
@@ -129,7 +129,7 @@ const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
 
 const server = new aws.ec2.Instance("webserver-www", {
     instanceType: size,
-    securityGroups: [ group.name ], // reference the security group resource above
+    vpcSecurityGroupIds: [ group.id ], // reference the security group resource above
     ami: ami.id,
 });
 
@@ -157,7 +157,7 @@ group = aws.ec2.SecurityGroup('webserver-secgrp',
 
 server = aws.ec2.Instance('webserver-www',
     instance_type=size,
-    security_groups=[group.name], # reference security group from above
+    vpc_security_group_ids=[group.id], # reference security group from above
     ami=ami.id)
 
 pulumi.export('publicIp', server.public_ip)
@@ -212,7 +212,7 @@ class MyStack : Stack
         var server = new Instance("webserver-www", new InstanceArgs
         {
             InstanceType = Size,
-            VpcSecurityGroupIds = { group.Name }, // reference the security group resource above
+            VpcSecurityGroupIds = { group.Id }, // reference the security group resource above
             UserData = userData,
             Ami = ami.Apply(x => x.Id),
         }); ;
@@ -343,7 +343,7 @@ nohup python -m SimpleHTTPServer 80 &`;
 
 let server = new aws.ec2.Instance("web-server-www", {
     instanceType: size,
-    securityGroups: [ group.name ], // reference the group object above
+    vpcSecurityGroupIds: [ group.id ], // reference the group object above
     ami: ami.id,
     userData: userData,             // <-- ADD THIS LINE
 });
@@ -372,7 +372,7 @@ nohup python -m SimpleHTTPServer 80 &`;
 
 const server = new aws.ec2.Instance("webserver-www", {
     instanceType: size,
-    securityGroups: [ group.name ], // reference the security group resource above
+    vpcSecurityGroupIds: [ group.id ], // reference the security group resource above
     ami: ami.id,
     userData: userData,             // <-- ADD THIS LINE
 });
@@ -403,7 +403,7 @@ nohup python -m SimpleHTTPServer 80 &
 
 server = ec2.Instance('webserver-www',
     instance_type=size,
-    security_groups=[group.name], # reference security group from above
+    vpc_security_group_ids=[group.id], # reference security group from above
     user_data=user_data, # <-- ADD THIS LINE
     ami=ami.id)
 
@@ -445,7 +445,7 @@ nohup python -m SimpleHTTPServer 80 &";
 var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
 {
     InstanceType = size,
-    SecurityGroups = { group.Name }, // reference the security group resource above
+    VpcSecurityGroupIds = { group.Id }, // reference the security group resource above
     Ami = Ami.Id,
     UserData = userData,             // <-- ADD THIS LINE
 });
