@@ -28,7 +28,7 @@ When you first deploy an application in production, you make assumptions about t
 
 In addition to zero downtime cluster migrations, we can also control scaling. The following tutorial shows how to stage an application rollout from dev to testing controlled by performance collecting metrics. In this [tutorial]({{< relref "/docs/tutorials/kubernetes/p8s-rollout" >}}), we move a three replica canary to a ten replica staging deployment. Replicas are added based on a P90 response time, i.e., 90% of requests are processed within 2.75 seconds. The example uses [Prometheus](https://prometheus.io/) to collect the response times and a [utility class](https://github.com/pulumi/examples/blob/master/kubernetes-ts-staged-rollout-with-prometheus/util.ts) to perform the health check. Check out the complete [code on Github](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus).
 
-Pulumi also lets you update your Kubernetes resources in real-time with Pulumi watch. You can add more replicas to deployment by saving changes to the stack. Adding a Service to make an application available outside the cluster with a load balancer is instantaneous. Watch how you can update your application.
+Pulumi also lets you keep an eye on your Kubernetes resources in real-time with Pulumi watch. Results are updated live as you make changes like adding replicas or exposing an application with a load balancer.
 
 {{< youtube "X96EMLi8uJY?rel=0" >}}
 
