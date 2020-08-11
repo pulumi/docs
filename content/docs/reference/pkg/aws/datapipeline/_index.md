@@ -23,7 +23,7 @@ Explore the resources and functions of the datapipeline module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the datapipeline module in the AWS packag
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataPipeline.html" title="Pulumi.Aws.DataPipeline">Pulumi.Aws.DataPipeline</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datapipeline?tab=doc#" title="aws/datapipeline">aws/datapipeline</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/datapipeline?tab=doc#" title="aws/datapipeline">aws/datapipeline</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/datapipeline/#" title="@pulumi/aws/datapipeline">@pulumi/aws/datapipeline</a></dd>

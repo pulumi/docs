@@ -45,7 +45,6 @@ class MyStack : Stack
         }}
     }}]
 }}
-
 "),
         });
         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
@@ -55,12 +54,12 @@ class MyStack : Stack
             {
                 new Aws.S3.Inputs.BucketNotificationTopicArgs
                 {
+                    TopicArn = topic.Arn,
                     Events = 
                     {
                         "s3:ObjectCreated:*",
                     },
                     FilterSuffix = ".log",
-                    TopicArn = topic.Arn,
                 },
             },
         });
@@ -78,8 +77,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +90,7 @@ func main() {
 		}
 		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\"AWS\":\"*\"},\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n", "\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\"AWS\":\"*\"},\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -101,11 +100,11 @@ func main() {
 			Bucket: bucket.ID(),
 			Topics: s3.BucketNotificationTopicArray{
 				&s3.BucketNotificationTopicArgs{
+					TopicArn: topic.Arn,
 					Events: pulumi.StringArray{
 						pulumi.String("s3:ObjectCreated:*"),
 					},
 					FilterSuffix: pulumi.String(".log"),
-					TopicArn:     topic.Arn,
 				},
 			},
 		})
@@ -137,14 +136,13 @@ topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
         }}
     }}]
 }}
-
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     topics=[{
+        "topic_arn": topic.arn,
         "events": ["s3:ObjectCreated:*"],
         "filterSuffix": ".log",
-        "topic_arn": topic.arn,
     }])
 ```
 
@@ -157,8 +155,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
-const topic = new aws.sns.Topic("topic", {
-    policy: pulumi.interpolate`{
+const topic = new aws.sns.Topic("topic", {policy: pulumi.interpolate`{
     "Version":"2012-10-17",
     "Statement":[{
         "Effect": "Allow",
@@ -170,14 +167,13 @@ const topic = new aws.sns.Topic("topic", {
         }
     }]
 }
-`,
-});
-const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+`});
+const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
     bucket: bucket.id,
     topics: [{
+        topicArn: topic.arn,
         events: ["s3:ObjectCreated:*"],
         filterSuffix: ".log",
-        topicArn: topic.arn,
     }],
 });
 ```
@@ -213,7 +209,6 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
         });
         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
@@ -223,12 +218,12 @@ class MyStack : Stack
             {
                 new Aws.S3.Inputs.BucketNotificationQueueArgs
                 {
+                    QueueArn = queue.Arn,
                     Events = 
                     {
                         "s3:ObjectCreated:*",
                     },
                     FilterSuffix = ".log",
-                    QueueArn = queue.Arn,
                 },
             },
         });
@@ -246,8 +241,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sqs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sqs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -259,7 +254,7 @@ func main() {
 		}
 		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -269,11 +264,11 @@ func main() {
 			Bucket: bucket.ID(),
 			Queues: s3.BucketNotificationQueueArray{
 				&s3.BucketNotificationQueueArgs{
+					QueueArn: queue.Arn,
 					Events: pulumi.StringArray{
 						pulumi.String("s3:ObjectCreated:*"),
 					},
 					FilterSuffix: pulumi.String(".log"),
-					QueueArn:     queue.Arn,
 				},
 			},
 		})
@@ -307,14 +302,13 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
     }}
   ]
 }}
-
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     queues=[{
+        "queueArn": queue.arn,
         "events": ["s3:ObjectCreated:*"],
         "filterSuffix": ".log",
-        "queueArn": queue.arn,
     }])
 ```
 
@@ -327,8 +321,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
-const queue = new aws.sqs.Queue("queue", {
-    policy: pulumi.interpolate`{
+const queue = new aws.sqs.Queue("queue", {policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -342,14 +335,13 @@ const queue = new aws.sqs.Queue("queue", {
     }
   ]
 }
-`,
-});
-const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+`});
+const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
     bucket: bucket.id,
     queues: [{
+        queueArn: queue.arn,
         events: ["s3:ObjectCreated:*"],
         filterSuffix: ".log",
-        queueArn: queue.arn,
     }],
 });
 ```
@@ -783,7 +775,6 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
         });
         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
@@ -793,23 +784,23 @@ class MyStack : Stack
             {
                 new Aws.S3.Inputs.BucketNotificationQueueArgs
                 {
+                    Id = "image-upload-event",
+                    QueueArn = queue.Arn,
                     Events = 
                     {
                         "s3:ObjectCreated:*",
                     },
                     FilterPrefix = "images/",
-                    Id = "image-upload-event",
-                    QueueArn = queue.Arn,
                 },
                 new Aws.S3.Inputs.BucketNotificationQueueArgs
                 {
+                    Id = "video-upload-event",
+                    QueueArn = queue.Arn,
                     Events = 
                     {
                         "s3:ObjectCreated:*",
                     },
                     FilterPrefix = "videos/",
-                    Id = "video-upload-event",
-                    QueueArn = queue.Arn,
                 },
             },
         });
@@ -827,8 +818,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sqs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sqs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -840,7 +831,7 @@ func main() {
 		}
 		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -850,20 +841,20 @@ func main() {
 			Bucket: bucket.ID(),
 			Queues: s3.BucketNotificationQueueArray{
 				&s3.BucketNotificationQueueArgs{
+					Id:       pulumi.String("image-upload-event"),
+					QueueArn: queue.Arn,
 					Events: pulumi.StringArray{
 						pulumi.String("s3:ObjectCreated:*"),
 					},
 					FilterPrefix: pulumi.String("images/"),
-					Id:           pulumi.String("image-upload-event"),
-					QueueArn:     queue.Arn,
 				},
 				&s3.BucketNotificationQueueArgs{
+					Id:       pulumi.String("video-upload-event"),
+					QueueArn: queue.Arn,
 					Events: pulumi.StringArray{
 						pulumi.String("s3:ObjectCreated:*"),
 					},
 					FilterPrefix: pulumi.String("videos/"),
-					Id:           pulumi.String("video-upload-event"),
-					QueueArn:     queue.Arn,
 				},
 			},
 		})
@@ -897,22 +888,21 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
     }}
   ]
 }}
-
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     queues=[
         {
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "images/",
             "id": "image-upload-event",
             "queueArn": queue.arn,
+            "events": ["s3:ObjectCreated:*"],
+            "filterPrefix": "images/",
         },
         {
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "videos/",
             "id": "video-upload-event",
             "queueArn": queue.arn,
+            "events": ["s3:ObjectCreated:*"],
+            "filterPrefix": "videos/",
         },
     ])
 ```
@@ -926,8 +916,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
-const queue = new aws.sqs.Queue("queue", {
-    policy: pulumi.interpolate`{
+const queue = new aws.sqs.Queue("queue", {policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -941,22 +930,21 @@ const queue = new aws.sqs.Queue("queue", {
     }
   ]
 }
-`,
-});
-const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
+`});
+const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
     bucket: bucket.id,
     queues: [
         {
-            events: ["s3:ObjectCreated:*"],
-            filterPrefix: "images/",
             id: "image-upload-event",
             queueArn: queue.arn,
+            events: ["s3:ObjectCreated:*"],
+            filterPrefix: "images/",
         },
         {
-            events: ["s3:ObjectCreated:*"],
-            filterPrefix: "videos/",
             id: "video-upload-event",
             queueArn: queue.arn,
+            events: ["s3:ObjectCreated:*"],
+            filterPrefix: "videos/",
         },
     ],
 });
@@ -980,7 +968,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotification">NewBucketNotification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">NewBucketNotification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1054,7 +1042,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1074,7 +1062,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1084,7 +1072,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1447,7 +1435,7 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationState">BucketNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationState">BucketNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1775,7 +1763,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationLambdaFunctionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationLambdaFunction.html">output</a> API doc for this type.
@@ -2041,7 +2029,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationQueueArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationQueueOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationQueueArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationQueueOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationQueueArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationQueue.html">output</a> API doc for this type.
@@ -2307,7 +2295,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationTopicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketNotificationTopicOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationTopicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationTopicOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationTopicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationTopic.html">output</a> API doc for this type.

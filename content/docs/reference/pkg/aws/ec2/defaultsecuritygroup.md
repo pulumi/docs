@@ -46,23 +46,21 @@ any ingress or egress rules added or changed will be detected as drift.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const mainvpc = new aws.ec2.Vpc("mainvpc", {
-    cidrBlock: "10.1.0.0/16",
-});
-const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", {
-    egress: [{
-        cidrBlocks: ["0.0.0.0/0"],
-        fromPort: 0,
-        protocol: "-1",
-        toPort: 0,
-    }],
-    ingress: [{
-        fromPort: 0,
-        protocol: "-1",
-        self: true,
-        toPort: 0,
-    }],
+const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+const _default = new aws.ec2.DefaultSecurityGroup("default", {
     vpcId: mainvpc.id,
+    ingress: [{
+        protocol: -1,
+        self: true,
+        fromPort: 0,
+        toPort: 0,
+    }],
+    egress: [{
+        fromPort: 0,
+        toPort: 0,
+        protocol: "-1",
+        cidrBlocks: ["0.0.0.0/0"],
+    }],
 });
 ```
 ```python
@@ -71,19 +69,19 @@ import pulumi_aws as aws
 
 mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultSecurityGroup("default",
-    egress=[{
-        "cidr_blocks": ["0.0.0.0/0"],
-        "from_port": 0,
-        "protocol": "-1",
-        "to_port": 0,
-    }],
+    vpc_id=mainvpc.id,
     ingress=[{
-        "from_port": 0,
         "protocol": -1,
         "self": True,
+        "from_port": 0,
         "to_port": 0,
     }],
-    vpc_id=mainvpc.id)
+    egress=[{
+        "from_port": 0,
+        "to_port": 0,
+        "protocol": "-1",
+        "cidr_blocks": ["0.0.0.0/0"],
+    }])
 ```
 ```csharp
 using Pulumi;
@@ -99,30 +97,30 @@ class MyStack : Stack
         });
         var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
         {
-            Egress = 
-            {
-                new Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs
-                {
-                    CidrBlocks = 
-                    {
-                        "0.0.0.0/0",
-                    },
-                    FromPort = 0,
-                    Protocol = "-1",
-                    ToPort = 0,
-                },
-            },
+            VpcId = mainvpc.Id,
             Ingress = 
             {
                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
                 {
-                    FromPort = 0,
                     Protocol = "-1",
                     Self = true,
+                    FromPort = 0,
                     ToPort = 0,
                 },
             },
-            VpcId = mainvpc.Id,
+            Egress = 
+            {
+                new Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs
+                {
+                    FromPort = 0,
+                    ToPort = 0,
+                    Protocol = "-1",
+                    CidrBlocks = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                },
+            },
         });
     }
 
@@ -132,7 +130,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -145,25 +143,25 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewDefaultSecurityGroup(ctx, "_default", &ec2.DefaultSecurityGroupArgs{
+			VpcId: mainvpc.ID(),
+			Ingress: ec2.DefaultSecurityGroupIngressArray{
+				&ec2.DefaultSecurityGroupIngressArgs{
+					Protocol: pulumi.String("-1"),
+					Self:     pulumi.Bool(true),
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+				},
+			},
 			Egress: ec2.DefaultSecurityGroupEgressArray{
 				&ec2.DefaultSecurityGroupEgressArgs{
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+					Protocol: pulumi.String("-1"),
 					CidrBlocks: pulumi.StringArray{
 						pulumi.String("0.0.0.0/0"),
 					},
-					FromPort: pulumi.Int(0),
-					Protocol: pulumi.String("-1"),
-					ToPort:   pulumi.Int(0),
 				},
 			},
-			Ingress: ec2.DefaultSecurityGroupIngressArray{
-				&ec2.DefaultSecurityGroupIngressArgs{
-					FromPort: pulumi.Int(0),
-					Protocol: pulumi.String("-1"),
-					Self:     pulumi.Bool(true),
-					ToPort:   pulumi.Int(0),
-				},
-			},
-			VpcId: mainvpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -182,17 +180,15 @@ including the default `ingress` rule to allow all traffic.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const mainvpc = new aws.ec2.Vpc("mainvpc", {
-    cidrBlock: "10.1.0.0/16",
-});
-const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", {
+const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+const _default = new aws.ec2.DefaultSecurityGroup("default", {
+    vpcId: mainvpc.id,
     ingress: [{
-        fromPort: 0,
-        protocol: "-1",
+        protocol: -1,
         self: true,
+        fromPort: 0,
         toPort: 0,
     }],
-    vpcId: mainvpc.id,
 });
 ```
 ```python
@@ -201,13 +197,13 @@ import pulumi_aws as aws
 
 mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultSecurityGroup("default",
+    vpc_id=mainvpc.id,
     ingress=[{
-        "from_port": 0,
         "protocol": -1,
         "self": True,
+        "from_port": 0,
         "to_port": 0,
-    }],
-    vpc_id=mainvpc.id)
+    }])
 ```
 ```csharp
 using Pulumi;
@@ -223,17 +219,17 @@ class MyStack : Stack
         });
         var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
         {
+            VpcId = mainvpc.Id,
             Ingress = 
             {
                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
                 {
-                    FromPort = 0,
                     Protocol = "-1",
                     Self = true,
+                    FromPort = 0,
                     ToPort = 0,
                 },
             },
-            VpcId = mainvpc.Id,
         });
     }
 
@@ -243,7 +239,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,15 +252,15 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewDefaultSecurityGroup(ctx, "_default", &ec2.DefaultSecurityGroupArgs{
+			VpcId: mainvpc.ID(),
 			Ingress: ec2.DefaultSecurityGroupIngressArray{
 				&ec2.DefaultSecurityGroupIngressArgs{
-					FromPort: pulumi.Int(0),
 					Protocol: pulumi.String("-1"),
 					Self:     pulumi.Bool(true),
+					FromPort: pulumi.Int(0),
 					ToPort:   pulumi.Int(0),
 				},
 			},
-			VpcId: mainvpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -304,7 +300,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroup">NewDefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroup">NewDefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -378,7 +374,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -398,7 +394,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -408,7 +404,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -999,7 +995,7 @@ Get an existing DefaultSecurityGroup resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupState">DefaultSecurityGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupState">DefaultSecurityGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1555,7 +1551,7 @@ modified, added, or removed.** It will be left in its current state
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupEgress.html">output</a> API doc for this type.
@@ -1965,7 +1961,7 @@ modified, added, or removed.** It will be left in its current state
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupIngress.html">output</a> API doc for this type.

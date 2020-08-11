@@ -40,7 +40,6 @@ class MyStack : Stack
         ""Resource"": ""arn:aws:sns:*:*:vpce-notification-topic""
     }]
 }
-
 ",
         });
         var fooVpcEndpointService = new Aws.Ec2.VpcEndpointService("fooVpcEndpointService", new Aws.Ec2.VpcEndpointServiceArgs
@@ -53,13 +52,13 @@ class MyStack : Stack
         });
         var fooVpcEndpointConnectionNotification = new Aws.Ec2.VpcEndpointConnectionNotification("fooVpcEndpointConnectionNotification", new Aws.Ec2.VpcEndpointConnectionNotificationArgs
         {
+            VpcEndpointServiceId = fooVpcEndpointService.Id,
+            ConnectionNotificationArn = topic.Arn,
             ConnectionEvents = 
             {
                 "Accept",
                 "Reject",
             },
-            ConnectionNotificationArn = topic.Arn,
-            VpcEndpointServiceId = fooVpcEndpointService.Id,
         });
     }
 
@@ -75,15 +74,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\n", "            \"Service\": \"vpce.amazonaws.com\"\n", "        },\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:vpce-notification-topic\"\n", "    }]\n", "}\n", "\n")),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\n", "            \"Service\": \"vpce.amazonaws.com\"\n", "        },\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:vpce-notification-topic\"\n", "    }]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -91,19 +90,19 @@ func main() {
 		fooVpcEndpointService, err := ec2.NewVpcEndpointService(ctx, "fooVpcEndpointService", &ec2.VpcEndpointServiceArgs{
 			AcceptanceRequired: pulumi.Bool(false),
 			NetworkLoadBalancerArns: pulumi.StringArray{
-				pulumi.String(aws_lb.Test.Arn),
+				pulumi.Any(aws_lb.Test.Arn),
 			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewVpcEndpointConnectionNotification(ctx, "fooVpcEndpointConnectionNotification", &ec2.VpcEndpointConnectionNotificationArgs{
+			VpcEndpointServiceId:      fooVpcEndpointService.ID(),
+			ConnectionNotificationArn: topic.Arn,
 			ConnectionEvents: pulumi.StringArray{
 				pulumi.String("Accept"),
 				pulumi.String("Reject"),
 			},
-			ConnectionNotificationArn: topic.Arn,
-			VpcEndpointServiceId:      fooVpcEndpointService.ID(),
 		})
 		if err != nil {
 			return err
@@ -131,18 +130,17 @@ topic = aws.sns.Topic("topic", policy="""{
         "Resource": "arn:aws:sns:*:*:vpce-notification-topic"
     }]
 }
-
 """)
 foo_vpc_endpoint_service = aws.ec2.VpcEndpointService("fooVpcEndpointService",
     acceptance_required=False,
     network_load_balancer_arns=[aws_lb["test"]["arn"]])
 foo_vpc_endpoint_connection_notification = aws.ec2.VpcEndpointConnectionNotification("fooVpcEndpointConnectionNotification",
+    vpc_endpoint_service_id=foo_vpc_endpoint_service.id,
+    connection_notification_arn=topic.arn,
     connection_events=[
         "Accept",
         "Reject",
-    ],
-    connection_notification_arn=topic.arn,
-    vpc_endpoint_service_id=foo_vpc_endpoint_service.id)
+    ])
 ```
 
 {{% /example %}}
@@ -153,8 +151,7 @@ foo_vpc_endpoint_connection_notification = aws.ec2.VpcEndpointConnectionNotifica
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const topic = new aws.sns.Topic("topic", {
-    policy: `{
+const topic = new aws.sns.Topic("topic", {policy: `{
     "Version":"2012-10-17",
     "Statement":[{
         "Effect": "Allow",
@@ -165,19 +162,18 @@ const topic = new aws.sns.Topic("topic", {
         "Resource": "arn:aws:sns:*:*:vpce-notification-topic"
     }]
 }
-`,
-});
-const fooVpcEndpointService = new aws.ec2.VpcEndpointService("foo", {
+`});
+const fooVpcEndpointService = new aws.ec2.VpcEndpointService("fooVpcEndpointService", {
     acceptanceRequired: false,
-    networkLoadBalancerArns: [aws_lb_test.arn],
+    networkLoadBalancerArns: [aws_lb.test.arn],
 });
-const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNotification("foo", {
+const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNotification("fooVpcEndpointConnectionNotification", {
+    vpcEndpointServiceId: fooVpcEndpointService.id,
+    connectionNotificationArn: topic.arn,
     connectionEvents: [
         "Accept",
         "Reject",
     ],
-    connectionNotificationArn: topic.arn,
-    vpcEndpointServiceId: fooVpcEndpointService.id,
 });
 ```
 
@@ -199,7 +195,7 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">NewVpcEndpointConnectionNotification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationArgs">VpcEndpointConnectionNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">NewVpcEndpointConnectionNotification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationArgs">VpcEndpointConnectionNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -273,7 +269,7 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -293,7 +289,7 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationArgs">VpcEndpointConnectionNotificationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationArgs">VpcEndpointConnectionNotificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -303,7 +299,7 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -754,7 +750,7 @@ Get an existing VpcEndpointConnectionNotification resource's state with the give
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointConnectionNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationState">VpcEndpointConnectionNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointConnectionNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotificationState">VpcEndpointConnectionNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

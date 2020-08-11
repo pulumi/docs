@@ -36,15 +36,15 @@ class MyStack : Stack
         });
         var dynamodbScheduledAction = new Aws.AppAutoScaling.ScheduledAction("dynamodbScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
         {
+            ServiceNamespace = dynamodbTarget.ServiceNamespace,
             ResourceId = dynamodbTarget.ResourceId,
             ScalableDimension = dynamodbTarget.ScalableDimension,
+            Schedule = "at(2006-01-02T15:04:05)",
             ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
             {
-                MaxCapacity = 200,
                 MinCapacity = 1,
+                MaxCapacity = 200,
             },
-            Schedule = "at(2006-01-02T15:04:05)",
-            ServiceNamespace = dynamodbTarget.ServiceNamespace,
         });
     }
 
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,14 +75,14 @@ func main() {
 			return err
 		}
 		_, err = appautoscaling.NewScheduledAction(ctx, "dynamodbScheduledAction", &appautoscaling.ScheduledActionArgs{
+			ServiceNamespace:  dynamodbTarget.ServiceNamespace,
 			ResourceId:        dynamodbTarget.ResourceId,
 			ScalableDimension: dynamodbTarget.ScalableDimension,
+			Schedule:          pulumi.String("at(2006-01-02T15:04:05)"),
 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{
-				MaxCapacity: pulumi.Int(200),
 				MinCapacity: pulumi.Int(1),
+				MaxCapacity: pulumi.Int(200),
 			},
-			Schedule:         pulumi.String("at(2006-01-02T15:04:05)"),
-			ServiceNamespace: dynamodbTarget.ServiceNamespace,
 		})
 		if err != nil {
 			return err
@@ -106,14 +106,14 @@ dynamodb_target = aws.appautoscaling.Target("dynamodbTarget",
     scalable_dimension="dynamodb:table:ReadCapacityUnits",
     service_namespace="dynamodb")
 dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbScheduledAction",
+    service_namespace=dynamodb_target.service_namespace,
     resource_id=dynamodb_target.resource_id,
     scalable_dimension=dynamodb_target.scalable_dimension,
-    scalable_target_action={
-        "max_capacity": 200,
-        "min_capacity": 1,
-    },
     schedule="at(2006-01-02T15:04:05)",
-    service_namespace=dynamodb_target.service_namespace)
+    scalable_target_action={
+        "min_capacity": 1,
+        "max_capacity": 200,
+    })
 ```
 
 {{% /example %}}
@@ -124,22 +124,22 @@ dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbSchedule
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dynamodbTarget = new aws.appautoscaling.Target("dynamodb", {
+const dynamodbTarget = new aws.appautoscaling.Target("dynamodbTarget", {
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
-const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodb", {
+const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodbScheduledAction", {
+    serviceNamespace: dynamodbTarget.serviceNamespace,
     resourceId: dynamodbTarget.resourceId,
     scalableDimension: dynamodbTarget.scalableDimension,
-    scalableTargetAction: {
-        maxCapacity: 200,
-        minCapacity: 1,
-    },
     schedule: "at(2006-01-02T15:04:05)",
-    serviceNamespace: dynamodbTarget.serviceNamespace,
+    scalableTargetAction: {
+        minCapacity: 1,
+        maxCapacity: 200,
+    },
 });
 ```
 
@@ -165,15 +165,15 @@ class MyStack : Stack
         });
         var ecsScheduledAction = new Aws.AppAutoScaling.ScheduledAction("ecsScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
         {
+            ServiceNamespace = ecsTarget.ServiceNamespace,
             ResourceId = ecsTarget.ResourceId,
             ScalableDimension = ecsTarget.ScalableDimension,
+            Schedule = "at(2006-01-02T15:04:05)",
             ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
             {
-                MaxCapacity = 10,
                 MinCapacity = 1,
+                MaxCapacity = 10,
             },
-            Schedule = "at(2006-01-02T15:04:05)",
-            ServiceNamespace = ecsTarget.ServiceNamespace,
         });
     }
 
@@ -187,7 +187,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -204,14 +204,14 @@ func main() {
 			return err
 		}
 		_, err = appautoscaling.NewScheduledAction(ctx, "ecsScheduledAction", &appautoscaling.ScheduledActionArgs{
+			ServiceNamespace:  ecsTarget.ServiceNamespace,
 			ResourceId:        ecsTarget.ResourceId,
 			ScalableDimension: ecsTarget.ScalableDimension,
+			Schedule:          pulumi.String("at(2006-01-02T15:04:05)"),
 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{
-				MaxCapacity: pulumi.Int(10),
 				MinCapacity: pulumi.Int(1),
+				MaxCapacity: pulumi.Int(10),
 			},
-			Schedule:         pulumi.String("at(2006-01-02T15:04:05)"),
-			ServiceNamespace: ecsTarget.ServiceNamespace,
 		})
 		if err != nil {
 			return err
@@ -235,14 +235,14 @@ ecs_target = aws.appautoscaling.Target("ecsTarget",
     scalable_dimension="ecs:service:DesiredCount",
     service_namespace="ecs")
 ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
+    service_namespace=ecs_target.service_namespace,
     resource_id=ecs_target.resource_id,
     scalable_dimension=ecs_target.scalable_dimension,
-    scalable_target_action={
-        "max_capacity": 10,
-        "min_capacity": 1,
-    },
     schedule="at(2006-01-02T15:04:05)",
-    service_namespace=ecs_target.service_namespace)
+    scalable_target_action={
+        "min_capacity": 1,
+        "max_capacity": 10,
+    })
 ```
 
 {{% /example %}}
@@ -253,22 +253,22 @@ ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ecsTarget = new aws.appautoscaling.Target("ecs", {
+const ecsTarget = new aws.appautoscaling.Target("ecsTarget", {
     maxCapacity: 4,
     minCapacity: 1,
     resourceId: "service/clusterName/serviceName",
     scalableDimension: "ecs:service:DesiredCount",
     serviceNamespace: "ecs",
 });
-const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
+const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecsScheduledAction", {
+    serviceNamespace: ecsTarget.serviceNamespace,
     resourceId: ecsTarget.resourceId,
     scalableDimension: ecsTarget.scalableDimension,
-    scalableTargetAction: {
-        maxCapacity: 10,
-        minCapacity: 1,
-    },
     schedule: "at(2006-01-02T15:04:05)",
-    serviceNamespace: ecsTarget.serviceNamespace,
+    scalableTargetAction: {
+        minCapacity: 1,
+        maxCapacity: 10,
+    },
 });
 ```
 
@@ -290,7 +290,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledAction">NewScheduledAction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionArgs">ScheduledActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledAction">ScheduledAction</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledAction">NewScheduledAction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledActionArgs">ScheduledActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledAction">ScheduledAction</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -364,7 +364,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -384,7 +384,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionArgs">ScheduledActionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledActionArgs">ScheduledActionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -394,7 +394,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -977,7 +977,7 @@ Get an existing ScheduledAction resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScheduledAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionState">ScheduledActionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledAction">ScheduledAction</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScheduledAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledActionState">ScheduledActionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledAction">ScheduledAction</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1525,7 +1525,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.ScheduledActionScalableTargetAction.html">output</a> API doc for this type.

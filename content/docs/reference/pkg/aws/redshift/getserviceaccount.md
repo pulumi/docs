@@ -39,23 +39,23 @@ class MyStack : Stack
 	""Version"": ""2008-10-17"",
 	""Statement"": [
 		{{
-        			""Sid"": ""Put bucket policy needed for audit logging"",
-        			""Effect"": ""Allow"",
-        			""Principal"": {{
-						""AWS"": ""{main.Arn}""
-        			}},
-        			""Action"": ""s3:PutObject"",
-        			""Resource"": ""arn:aws:s3:::tf-redshift-logging-test-bucket/*""
-        		}},
-        		{{
-        			""Sid"": ""Get bucket policy needed for audit logging "",
-        			""Effect"": ""Allow"",
-        			""Principal"": {{
-						""AWS"": ""{main1.Arn}""
-        			}},
-        			""Action"": ""s3:GetBucketAcl"",
-        			""Resource"": ""arn:aws:s3:::tf-redshift-logging-test-bucket""
-        		}}
+            ""Sid"": ""Put bucket policy needed for audit logging"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {{
+		        ""AWS"": ""{main.Arn}""
+            }},
+            ""Action"": ""s3:PutObject"",
+            ""Resource"": ""arn:aws:s3:::tf-redshift-logging-test-bucket/*""
+        }},
+        {{
+            ""Sid"": ""Get bucket policy needed for audit logging "",
+            ""Effect"": ""Allow"",
+            ""Principal"": {{
+		        ""AWS"": ""{main1.Arn}""
+            }},
+            ""Action"": ""s3:GetBucketAcl"",
+            ""Resource"": ""arn:aws:s3:::tf-redshift-logging-test-bucket""
+        }}
 	]
 }}
 
@@ -76,8 +76,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 		}
 		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			ForceDestroy: pulumi.Bool(true),
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2008-10-17\",\n", "	\"Statement\": [\n", "		{\n", "        			\"Sid\": \"Put bucket policy needed for audit logging\",\n", "        			\"Effect\": \"Allow\",\n", "        			\"Principal\": {\n", "						\"AWS\": \"", main.Arn, "\"\n", "        			},\n", "        			\"Action\": \"s3:PutObject\",\n", "        			\"Resource\": \"arn:aws:s3:::tf-redshift-logging-test-bucket/*\"\n", "        		},\n", "        		{\n", "        			\"Sid\": \"Get bucket policy needed for audit logging \",\n", "        			\"Effect\": \"Allow\",\n", "        			\"Principal\": {\n", "						\"AWS\": \"", main.Arn, "\"\n", "        			},\n", "        			\"Action\": \"s3:GetBucketAcl\",\n", "        			\"Resource\": \"arn:aws:s3:::tf-redshift-logging-test-bucket\"\n", "        		}\n", "	]\n", "}\n", "\n")),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2008-10-17\",\n", "	\"Statement\": [\n", "		{\n", "            \"Sid\": \"Put bucket policy needed for audit logging\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "		        \"AWS\": \"", main.Arn, "\"\n", "            },\n", "            \"Action\": \"s3:PutObject\",\n", "            \"Resource\": \"arn:aws:s3:::tf-redshift-logging-test-bucket/*\"\n", "        },\n", "        {\n", "            \"Sid\": \"Get bucket policy needed for audit logging \",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "		        \"AWS\": \"", main.Arn, "\"\n", "            },\n", "            \"Action\": \"s3:GetBucketAcl\",\n", "            \"Resource\": \"arn:aws:s3:::tf-redshift-logging-test-bucket\"\n", "        }\n", "	]\n", "}\n", "\n")),
 		})
 		if err != nil {
 			return err
@@ -113,23 +113,23 @@ bucket = aws.s3.Bucket("bucket",
 	"Version": "2008-10-17",
 	"Statement": [
 		{{
-        			"Sid": "Put bucket policy needed for audit logging",
-        			"Effect": "Allow",
-        			"Principal": {{
-						"AWS": "{main.arn}"
-        			}},
-        			"Action": "s3:PutObject",
-        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket/*"
-        		}},
-        		{{
-        			"Sid": "Get bucket policy needed for audit logging ",
-        			"Effect": "Allow",
-        			"Principal": {{
-						"AWS": "{main.arn}"
-        			}},
-        			"Action": "s3:GetBucketAcl",
-        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket"
-        		}}
+            "Sid": "Put bucket policy needed for audit logging",
+            "Effect": "Allow",
+            "Principal": {{
+		        "AWS": "{main.arn}"
+            }},
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket/*"
+        }},
+        {{
+            "Sid": "Get bucket policy needed for audit logging ",
+            "Effect": "Allow",
+            "Principal": {{
+		        "AWS": "{main.arn}"
+            }},
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket"
+        }}
 	]
 }}
 
@@ -151,23 +151,23 @@ const bucket = new aws.s3.Bucket("bucket", {
 	"Version": "2008-10-17",
 	"Statement": [
 		{
-        			"Sid": "Put bucket policy needed for audit logging",
-        			"Effect": "Allow",
-        			"Principal": {
-						"AWS": "${main.arn}"
-        			},
-        			"Action": "s3:PutObject",
-        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket/*"
-        		},
-        		{
-        			"Sid": "Get bucket policy needed for audit logging ",
-        			"Effect": "Allow",
-        			"Principal": {
-						"AWS": "${main.arn}"
-        			},
-        			"Action": "s3:GetBucketAcl",
-        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket"
-        		}
+            "Sid": "Put bucket policy needed for audit logging",
+            "Effect": "Allow",
+            "Principal": {
+		        "AWS": "${main.arn}"
+            },
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket/*"
+        },
+        {
+            "Sid": "Get bucket policy needed for audit logging ",
+            "Effect": "Allow",
+            "Principal": {
+		        "AWS": "${main.arn}"
+            },
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket"
+        }
 	]
 }
 `,
@@ -195,7 +195,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#GetServiceAccountArgs">GetServiceAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#GetServiceAccountResult">GetServiceAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#GetServiceAccountArgs">GetServiceAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#GetServiceAccountResult">GetServiceAccountResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

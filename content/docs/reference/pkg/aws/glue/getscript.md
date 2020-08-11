@@ -28,6 +28,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.Glue.GetScript.InvokeAsync(new Aws.Glue.GetScriptArgs
         {
+            Language = "PYTHON",
             DagEdges = 
             {
                 new Aws.Glue.Inputs.GetScriptDagEdgeArgs
@@ -55,6 +56,8 @@ class MyStack : Stack
             {
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "datasource0",
+                    NodeType = "DataSource",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -68,11 +71,11 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Source.Name}\"",
                         },
                     },
-                    Id = "datasource0",
-                    NodeType = "DataSource",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "applymapping1",
+                    NodeType = "ApplyMapping",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -81,11 +84,11 @@ class MyStack : Stack
                             Value = "[(\"column1\", \"string\", \"column1\", \"string\")]",
                         },
                     },
-                    Id = "applymapping1",
-                    NodeType = "ApplyMapping",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "selectfields2",
+                    NodeType = "SelectFields",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -94,11 +97,11 @@ class MyStack : Stack
                             Value = "[\"column1\"]",
                         },
                     },
-                    Id = "selectfields2",
-                    NodeType = "SelectFields",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "resolvechoice3",
+                    NodeType = "ResolveChoice",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -117,11 +120,11 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Destination.Name}\"",
                         },
                     },
-                    Id = "resolvechoice3",
-                    NodeType = "ResolveChoice",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "datasink4",
+                    NodeType = "DataSink",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -135,11 +138,8 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Destination.Name}\"",
                         },
                     },
-                    Id = "datasink4",
-                    NodeType = "DataSink",
                 },
             },
-            Language = "PYTHON",
         }));
         this.PythonScript = example.Apply(example => example.PythonScript);
     }
@@ -158,7 +158,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,6 +166,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "PYTHON"
 		example, err := glue.GetScript(ctx, &glue.GetScriptArgs{
+			Language: &opt0,
 			DagEdges: []glue.GetScriptDagEdge{
 				glue.GetScriptDagEdge{
 					Source: "datasource0",
@@ -186,6 +187,8 @@ func main() {
 			},
 			DagNodes: []glue.GetScriptDagNode{
 				glue.GetScriptDagNode{
+					Id:       "datasource0",
+					NodeType: "DataSource",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "database",
@@ -196,30 +199,30 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Source.Name, "\""),
 						},
 					},
-					Id:       "datasource0",
-					NodeType: "DataSource",
 				},
 				glue.GetScriptDagNode{
+					Id:       "applymapping1",
+					NodeType: "ApplyMapping",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "mapping",
 							Value: "[(\"column1\", \"string\", \"column1\", \"string\")]",
 						},
 					},
-					Id:       "applymapping1",
-					NodeType: "ApplyMapping",
 				},
 				glue.GetScriptDagNode{
+					Id:       "selectfields2",
+					NodeType: "SelectFields",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "paths",
 							Value: "[\"column1\"]",
 						},
 					},
-					Id:       "selectfields2",
-					NodeType: "SelectFields",
 				},
 				glue.GetScriptDagNode{
+					Id:       "resolvechoice3",
+					NodeType: "ResolveChoice",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "choice",
@@ -234,10 +237,10 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Destination.Name, "\""),
 						},
 					},
-					Id:       "resolvechoice3",
-					NodeType: "ResolveChoice",
 				},
 				glue.GetScriptDagNode{
+					Id:       "datasink4",
+					NodeType: "DataSink",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "database",
@@ -248,11 +251,8 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Destination.Name, "\""),
 						},
 					},
-					Id:       "datasink4",
-					NodeType: "DataSink",
 				},
 			},
-			Language: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -270,7 +270,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.get_script(dag_edges=[
+example = aws.glue.get_script(language="PYTHON",
+    dag_edges=[
         {
             "source": "datasource0",
             "target": "applymapping1",
@@ -290,6 +291,8 @@ example = aws.glue.get_script(dag_edges=[
     ],
     dag_nodes=[
         {
+            "id": "datasource0",
+            "node_type": "DataSource",
             "args": [
                 {
                     "name": "database",
@@ -300,26 +303,26 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['source']['name']}\"",
                 },
             ],
-            "id": "datasource0",
-            "node_type": "DataSource",
         },
         {
+            "id": "applymapping1",
+            "node_type": "ApplyMapping",
             "args": [{
                 "name": "mapping",
                 "value": "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
-            "id": "applymapping1",
-            "node_type": "ApplyMapping",
         },
         {
+            "id": "selectfields2",
+            "node_type": "SelectFields",
             "args": [{
                 "name": "paths",
                 "value": "[\"column1\"]",
             }],
-            "id": "selectfields2",
-            "node_type": "SelectFields",
         },
         {
+            "id": "resolvechoice3",
+            "node_type": "ResolveChoice",
             "args": [
                 {
                     "name": "choice",
@@ -334,10 +337,10 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['destination']['name']}\"",
                 },
             ],
-            "id": "resolvechoice3",
-            "node_type": "ResolveChoice",
         },
         {
+            "id": "datasink4",
+            "node_type": "DataSink",
             "args": [
                 {
                     "name": "database",
@@ -348,11 +351,8 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['destination']['name']}\"",
                 },
             ],
-            "id": "datasink4",
-            "node_type": "DataSink",
         },
-    ],
-    language="PYTHON")
+    ])
 pulumi.export("pythonScript", example.python_script)
 ```
 
@@ -364,7 +364,8 @@ pulumi.export("pythonScript", example.python_script)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_catalog_table_source.name, aws_glue_catalog_database_destination.name, aws_glue_catalog_table_destination.name, aws_glue_catalog_database_destination.name, aws_glue_catalog_table_destination.name]).apply(([aws_glue_catalog_database_sourceName, aws_glue_catalog_table_sourceName, aws_glue_catalog_database_destinationName, aws_glue_catalog_table_destinationName, aws_glue_catalog_database_destinationName1, aws_glue_catalog_table_destinationName1]) => aws.glue.getScript({
+const example = aws.glue.getScript({
+    language: "PYTHON",
     dagEdges: [
         {
             source: "datasource0",
@@ -385,36 +386,38 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
     ],
     dagNodes: [
         {
+            id: "datasource0",
+            nodeType: "DataSource",
             args: [
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_sourceName}"`,
+                    value: `"${aws_glue_catalog_database.source.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_sourceName}"`,
+                    value: `"${aws_glue_catalog_table.source.name}"`,
                 },
             ],
-            id: "datasource0",
-            nodeType: "DataSource",
         },
         {
+            id: "applymapping1",
+            nodeType: "ApplyMapping",
             args: [{
                 name: "mapping",
                 value: "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
-            id: "applymapping1",
-            nodeType: "ApplyMapping",
         },
         {
+            id: "selectfields2",
+            nodeType: "SelectFields",
             args: [{
                 name: "paths",
                 value: "[\"column1\"]",
             }],
-            id: "selectfields2",
-            nodeType: "SelectFields",
         },
         {
+            id: "resolvechoice3",
+            nodeType: "ResolveChoice",
             args: [
                 {
                     name: "choice",
@@ -422,35 +425,31 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
                 },
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_destinationName}"`,
+                    value: `"${aws_glue_catalog_database.destination.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_destinationName}"`,
+                    value: `"${aws_glue_catalog_table.destination.name}"`,
                 },
             ],
-            id: "resolvechoice3",
-            nodeType: "ResolveChoice",
         },
         {
+            id: "datasink4",
+            nodeType: "DataSink",
             args: [
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_destinationName1}"`,
+                    value: `"${aws_glue_catalog_database.destination.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_destinationName1}"`,
+                    value: `"${aws_glue_catalog_table.destination.name}"`,
                 },
             ],
-            id: "datasink4",
-            nodeType: "DataSink",
         },
     ],
-    language: "PYTHON",
-}, { async: true }));
-
-export const pythonScript = example.pythonScript;
+});
+export const pythonScript = example.then(example => example.pythonScript);
 ```
 
 {{% /example %}}
@@ -467,6 +466,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.Glue.GetScript.InvokeAsync(new Aws.Glue.GetScriptArgs
         {
+            Language = "SCALA",
             DagEdges = 
             {
                 new Aws.Glue.Inputs.GetScriptDagEdgeArgs
@@ -494,6 +494,8 @@ class MyStack : Stack
             {
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "datasource0",
+                    NodeType = "DataSource",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -507,11 +509,11 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Source.Name}\"",
                         },
                     },
-                    Id = "datasource0",
-                    NodeType = "DataSource",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "applymapping1",
+                    NodeType = "ApplyMapping",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -520,11 +522,11 @@ class MyStack : Stack
                             Value = "[(\"column1\", \"string\", \"column1\", \"string\")]",
                         },
                     },
-                    Id = "applymapping1",
-                    NodeType = "ApplyMapping",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "selectfields2",
+                    NodeType = "SelectFields",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -533,11 +535,11 @@ class MyStack : Stack
                             Value = "[\"column1\"]",
                         },
                     },
-                    Id = "selectfields2",
-                    NodeType = "SelectFields",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "resolvechoice3",
+                    NodeType = "ResolveChoice",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -556,11 +558,11 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Destination.Name}\"",
                         },
                     },
-                    Id = "resolvechoice3",
-                    NodeType = "ResolveChoice",
                 },
                 new Aws.Glue.Inputs.GetScriptDagNodeArgs
                 {
+                    Id = "datasink4",
+                    NodeType = "DataSink",
                     Args = 
                     {
                         new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
@@ -574,11 +576,8 @@ class MyStack : Stack
                             Value = $"\"{aws_glue_catalog_table.Destination.Name}\"",
                         },
                     },
-                    Id = "datasink4",
-                    NodeType = "DataSink",
                 },
             },
-            Language = "SCALA",
         }));
         this.ScalaCode = example.Apply(example => example.ScalaCode);
     }
@@ -597,7 +596,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -605,6 +604,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "SCALA"
 		example, err := glue.GetScript(ctx, &glue.GetScriptArgs{
+			Language: &opt0,
 			DagEdges: []glue.GetScriptDagEdge{
 				glue.GetScriptDagEdge{
 					Source: "datasource0",
@@ -625,6 +625,8 @@ func main() {
 			},
 			DagNodes: []glue.GetScriptDagNode{
 				glue.GetScriptDagNode{
+					Id:       "datasource0",
+					NodeType: "DataSource",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "database",
@@ -635,30 +637,30 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Source.Name, "\""),
 						},
 					},
-					Id:       "datasource0",
-					NodeType: "DataSource",
 				},
 				glue.GetScriptDagNode{
+					Id:       "applymapping1",
+					NodeType: "ApplyMapping",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "mappings",
 							Value: "[(\"column1\", \"string\", \"column1\", \"string\")]",
 						},
 					},
-					Id:       "applymapping1",
-					NodeType: "ApplyMapping",
 				},
 				glue.GetScriptDagNode{
+					Id:       "selectfields2",
+					NodeType: "SelectFields",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "paths",
 							Value: "[\"column1\"]",
 						},
 					},
-					Id:       "selectfields2",
-					NodeType: "SelectFields",
 				},
 				glue.GetScriptDagNode{
+					Id:       "resolvechoice3",
+					NodeType: "ResolveChoice",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "choice",
@@ -673,10 +675,10 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Destination.Name, "\""),
 						},
 					},
-					Id:       "resolvechoice3",
-					NodeType: "ResolveChoice",
 				},
 				glue.GetScriptDagNode{
+					Id:       "datasink4",
+					NodeType: "DataSink",
 					Args: []glue.GetScriptDagNodeArg{
 						glue.GetScriptDagNodeArg{
 							Name:  "database",
@@ -687,11 +689,8 @@ func main() {
 							Value: fmt.Sprintf("%v%v%v", "\"", aws_glue_catalog_table.Destination.Name, "\""),
 						},
 					},
-					Id:       "datasink4",
-					NodeType: "DataSink",
 				},
 			},
-			Language: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -709,7 +708,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.get_script(dag_edges=[
+example = aws.glue.get_script(language="SCALA",
+    dag_edges=[
         {
             "source": "datasource0",
             "target": "applymapping1",
@@ -729,6 +729,8 @@ example = aws.glue.get_script(dag_edges=[
     ],
     dag_nodes=[
         {
+            "id": "datasource0",
+            "node_type": "DataSource",
             "args": [
                 {
                     "name": "database",
@@ -739,26 +741,26 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['source']['name']}\"",
                 },
             ],
-            "id": "datasource0",
-            "node_type": "DataSource",
         },
         {
+            "id": "applymapping1",
+            "node_type": "ApplyMapping",
             "args": [{
                 "name": "mappings",
                 "value": "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
-            "id": "applymapping1",
-            "node_type": "ApplyMapping",
         },
         {
+            "id": "selectfields2",
+            "node_type": "SelectFields",
             "args": [{
                 "name": "paths",
                 "value": "[\"column1\"]",
             }],
-            "id": "selectfields2",
-            "node_type": "SelectFields",
         },
         {
+            "id": "resolvechoice3",
+            "node_type": "ResolveChoice",
             "args": [
                 {
                     "name": "choice",
@@ -773,10 +775,10 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['destination']['name']}\"",
                 },
             ],
-            "id": "resolvechoice3",
-            "node_type": "ResolveChoice",
         },
         {
+            "id": "datasink4",
+            "node_type": "DataSink",
             "args": [
                 {
                     "name": "database",
@@ -787,11 +789,8 @@ example = aws.glue.get_script(dag_edges=[
                     "value": f"\"{aws_glue_catalog_table['destination']['name']}\"",
                 },
             ],
-            "id": "datasink4",
-            "node_type": "DataSink",
         },
-    ],
-    language="SCALA")
+    ])
 pulumi.export("scalaCode", example.scala_code)
 ```
 
@@ -803,7 +802,8 @@ pulumi.export("scalaCode", example.scala_code)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_catalog_table_source.name, aws_glue_catalog_database_destination.name, aws_glue_catalog_table_destination.name, aws_glue_catalog_database_destination.name, aws_glue_catalog_table_destination.name]).apply(([aws_glue_catalog_database_sourceName, aws_glue_catalog_table_sourceName, aws_glue_catalog_database_destinationName, aws_glue_catalog_table_destinationName, aws_glue_catalog_database_destinationName1, aws_glue_catalog_table_destinationName1]) => aws.glue.getScript({
+const example = aws.glue.getScript({
+    language: "SCALA",
     dagEdges: [
         {
             source: "datasource0",
@@ -824,36 +824,38 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
     ],
     dagNodes: [
         {
+            id: "datasource0",
+            nodeType: "DataSource",
             args: [
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_sourceName}"`,
+                    value: `"${aws_glue_catalog_database.source.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_sourceName}"`,
+                    value: `"${aws_glue_catalog_table.source.name}"`,
                 },
             ],
-            id: "datasource0",
-            nodeType: "DataSource",
         },
         {
+            id: "applymapping1",
+            nodeType: "ApplyMapping",
             args: [{
                 name: "mappings",
                 value: "[(\"column1\", \"string\", \"column1\", \"string\")]",
             }],
-            id: "applymapping1",
-            nodeType: "ApplyMapping",
         },
         {
+            id: "selectfields2",
+            nodeType: "SelectFields",
             args: [{
                 name: "paths",
                 value: "[\"column1\"]",
             }],
-            id: "selectfields2",
-            nodeType: "SelectFields",
         },
         {
+            id: "resolvechoice3",
+            nodeType: "ResolveChoice",
             args: [
                 {
                     name: "choice",
@@ -861,35 +863,31 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
                 },
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_destinationName}"`,
+                    value: `"${aws_glue_catalog_database.destination.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_destinationName}"`,
+                    value: `"${aws_glue_catalog_table.destination.name}"`,
                 },
             ],
-            id: "resolvechoice3",
-            nodeType: "ResolveChoice",
         },
         {
+            id: "datasink4",
+            nodeType: "DataSink",
             args: [
                 {
                     name: "database",
-                    value: `"${aws_glue_catalog_database_destinationName1}"`,
+                    value: `"${aws_glue_catalog_database.destination.name}"`,
                 },
                 {
                     name: "table_name",
-                    value: `"${aws_glue_catalog_table_destinationName1}"`,
+                    value: `"${aws_glue_catalog_table.destination.name}"`,
                 },
             ],
-            id: "datasink4",
-            nodeType: "DataSink",
         },
     ],
-    language: "SCALA",
-}, { async: true }));
-
-export const scalaCode = example.scalaCode;
+});
+export const scalaCode = example.then(example => example.scalaCode);
 ```
 
 {{% /example %}}
@@ -913,7 +911,7 @@ export const scalaCode = example.scalaCode;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScript<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptArgs">GetScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptResult">GetScriptResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScript<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptArgs">GetScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptResult">GetScriptResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -1398,7 +1396,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagEdgeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagEdge">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagEdgeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagEdge">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.GetScriptDagEdgeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.GetScriptDagEdge.html">output</a> API doc for this type.
@@ -1576,7 +1574,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagNode">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagNode">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.GetScriptDagNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.GetScriptDagNode.html">output</a> API doc for this type.
@@ -1798,7 +1796,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagNodeArgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#GetScriptDagNodeArg">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagNodeArgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#GetScriptDagNodeArg">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.GetScriptDagNodeArgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.GetScriptDagNodeArg.html">output</a> API doc for this type.

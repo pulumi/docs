@@ -35,20 +35,20 @@ class MyStack : Stack
         });
         var exampleProvider = new Aws.Cognito.IdentityProvider("exampleProvider", new Aws.Cognito.IdentityProviderArgs
         {
-            AttributeMapping = 
-            {
-                { "email", "email" },
-                { "username", "sub" },
-            },
+            UserPoolId = example.Id,
+            ProviderName = "Google",
+            ProviderType = "Google",
             ProviderDetails = 
             {
                 { "authorize_scopes", "email" },
                 { "client_id", "your client_id" },
                 { "client_secret", "your client_secret" },
             },
-            ProviderName = "Google",
-            ProviderType = "Google",
-            UserPoolId = example.Id,
+            AttributeMapping = 
+            {
+                { "email", "email" },
+                { "username", "sub" },
+            },
         });
     }
 
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,18 +77,18 @@ func main() {
 			return err
 		}
 		_, err = cognito.NewIdentityProvider(ctx, "exampleProvider", &cognito.IdentityProviderArgs{
-			AttributeMapping: pulumi.StringMap{
-				"email":    pulumi.String("email"),
-				"username": pulumi.String("sub"),
-			},
+			UserPoolId:   example.ID(),
+			ProviderName: pulumi.String("Google"),
+			ProviderType: pulumi.String("Google"),
 			ProviderDetails: pulumi.StringMap{
 				"authorize_scopes": pulumi.String("email"),
 				"client_id":        pulumi.String("your client_id"),
 				"client_secret":    pulumi.String("your client_secret"),
 			},
-			ProviderName: pulumi.String("Google"),
-			ProviderType: pulumi.String("Google"),
-			UserPoolId:   example.ID(),
+			AttributeMapping: pulumi.StringMap{
+				"email":    pulumi.String("email"),
+				"username": pulumi.String("sub"),
+			},
 		})
 		if err != nil {
 			return err
@@ -107,18 +107,18 @@ import pulumi_aws as aws
 
 example = aws.cognito.UserPool("example", auto_verified_attributes=["email"])
 example_provider = aws.cognito.IdentityProvider("exampleProvider",
-    attribute_mapping={
-        "email": "email",
-        "username": "sub",
-    },
+    user_pool_id=example.id,
+    provider_name="Google",
+    provider_type="Google",
     provider_details={
         "authorize_scopes": "email",
         "client_id": "your client_id",
         "client_secret": "your client_secret",
     },
-    provider_name="Google",
-    provider_type="Google",
-    user_pool_id=example.id)
+    attribute_mapping={
+        "email": "email",
+        "username": "sub",
+    })
 ```
 
 {{% /example %}}
@@ -129,22 +129,20 @@ example_provider = aws.cognito.IdentityProvider("exampleProvider",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.cognito.UserPool("example", {
-    autoVerifiedAttributes: ["email"],
-});
-const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
-    attributeMapping: {
-        email: "email",
-        username: "sub",
-    },
+const example = new aws.cognito.UserPool("example", {autoVerifiedAttributes: ["email"]});
+const exampleProvider = new aws.cognito.IdentityProvider("exampleProvider", {
+    userPoolId: example.id,
+    providerName: "Google",
+    providerType: "Google",
     providerDetails: {
         authorize_scopes: "email",
         client_id: "your client_id",
         client_secret: "your client_secret",
     },
-    providerName: "Google",
-    providerType: "Google",
-    userPoolId: example.id,
+    attributeMapping: {
+        email: "email",
+        username: "sub",
+    },
 });
 ```
 
@@ -166,7 +164,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProvider">NewIdentityProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProvider">NewIdentityProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -240,7 +238,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -260,7 +258,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +268,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -721,7 +719,7 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProviderState">IdentityProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProviderState">IdentityProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

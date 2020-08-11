@@ -38,33 +38,33 @@ class MyStack : Stack
         var ruleout = new Aws.Ec2.TrafficMirrorFilterRule("ruleout", new Aws.Ec2.TrafficMirrorFilterRuleArgs
         {
             Description = "test rule",
-            DestinationCidrBlock = "10.0.0.0/8",
-            RuleAction = "accept",
-            RuleNumber = 1,
-            SourceCidrBlock = "10.0.0.0/8",
-            TrafficDirection = "egress",
             TrafficMirrorFilterId = filter.Id,
+            DestinationCidrBlock = "10.0.0.0/8",
+            SourceCidrBlock = "10.0.0.0/8",
+            RuleNumber = 1,
+            RuleAction = "accept",
+            TrafficDirection = "egress",
         });
         var rulein = new Aws.Ec2.TrafficMirrorFilterRule("rulein", new Aws.Ec2.TrafficMirrorFilterRuleArgs
         {
             Description = "test rule",
+            TrafficMirrorFilterId = filter.Id,
             DestinationCidrBlock = "10.0.0.0/8",
+            SourceCidrBlock = "10.0.0.0/8",
+            RuleNumber = 1,
+            RuleAction = "accept",
+            TrafficDirection = "ingress",
+            Protocol = 6,
             DestinationPortRange = new Aws.Ec2.Inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs
             {
                 FromPort = 22,
                 ToPort = 53,
             },
-            Protocol = 6,
-            RuleAction = "accept",
-            RuleNumber = 1,
-            SourceCidrBlock = "10.0.0.0/8",
             SourcePortRange = new Aws.Ec2.Inputs.TrafficMirrorFilterRuleSourcePortRangeArgs
             {
                 FromPort = 0,
                 ToPort = 10,
             },
-            TrafficDirection = "ingress",
-            TrafficMirrorFilterId = filter.Id,
         });
     }
 
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,33 +95,33 @@ func main() {
 		}
 		_, err = ec2.NewTrafficMirrorFilterRule(ctx, "ruleout", &ec2.TrafficMirrorFilterRuleArgs{
 			Description:           pulumi.String("test rule"),
-			DestinationCidrBlock:  pulumi.String("10.0.0.0/8"),
-			RuleAction:            pulumi.String("accept"),
-			RuleNumber:            pulumi.Int(1),
-			SourceCidrBlock:       pulumi.String("10.0.0.0/8"),
-			TrafficDirection:      pulumi.String("egress"),
 			TrafficMirrorFilterId: filter.ID(),
+			DestinationCidrBlock:  pulumi.String("10.0.0.0/8"),
+			SourceCidrBlock:       pulumi.String("10.0.0.0/8"),
+			RuleNumber:            pulumi.Int(1),
+			RuleAction:            pulumi.String("accept"),
+			TrafficDirection:      pulumi.String("egress"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewTrafficMirrorFilterRule(ctx, "rulein", &ec2.TrafficMirrorFilterRuleArgs{
-			Description:          pulumi.String("test rule"),
-			DestinationCidrBlock: pulumi.String("10.0.0.0/8"),
+			Description:           pulumi.String("test rule"),
+			TrafficMirrorFilterId: filter.ID(),
+			DestinationCidrBlock:  pulumi.String("10.0.0.0/8"),
+			SourceCidrBlock:       pulumi.String("10.0.0.0/8"),
+			RuleNumber:            pulumi.Int(1),
+			RuleAction:            pulumi.String("accept"),
+			TrafficDirection:      pulumi.String("ingress"),
+			Protocol:              pulumi.Int(6),
 			DestinationPortRange: &ec2.TrafficMirrorFilterRuleDestinationPortRangeArgs{
 				FromPort: pulumi.Int(22),
 				ToPort:   pulumi.Int(53),
 			},
-			Protocol:        pulumi.Int(6),
-			RuleAction:      pulumi.String("accept"),
-			RuleNumber:      pulumi.Int(1),
-			SourceCidrBlock: pulumi.String("10.0.0.0/8"),
 			SourcePortRange: &ec2.TrafficMirrorFilterRuleSourcePortRangeArgs{
 				FromPort: pulumi.Int(0),
 				ToPort:   pulumi.Int(10),
 			},
-			TrafficDirection:      pulumi.String("ingress"),
-			TrafficMirrorFilterId: filter.ID(),
 		})
 		if err != nil {
 			return err
@@ -143,29 +143,29 @@ filter = aws.ec2.TrafficMirrorFilter("filter",
     network_services=["amazon-dns"])
 ruleout = aws.ec2.TrafficMirrorFilterRule("ruleout",
     description="test rule",
+    traffic_mirror_filter_id=filter.id,
     destination_cidr_block="10.0.0.0/8",
-    rule_action="accept",
-    rule_number=1,
     source_cidr_block="10.0.0.0/8",
-    traffic_direction="egress",
-    traffic_mirror_filter_id=filter.id)
+    rule_number=1,
+    rule_action="accept",
+    traffic_direction="egress")
 rulein = aws.ec2.TrafficMirrorFilterRule("rulein",
     description="test rule",
+    traffic_mirror_filter_id=filter.id,
     destination_cidr_block="10.0.0.0/8",
+    source_cidr_block="10.0.0.0/8",
+    rule_number=1,
+    rule_action="accept",
+    traffic_direction="ingress",
+    protocol=6,
     destination_port_range={
         "from_port": 22,
         "to_port": 53,
     },
-    protocol=6,
-    rule_action="accept",
-    rule_number=1,
-    source_cidr_block="10.0.0.0/8",
     source_port_range={
         "from_port": 0,
         "to_port": 10,
-    },
-    traffic_direction="ingress",
-    traffic_mirror_filter_id=filter.id)
+    })
 ```
 
 {{% /example %}}
@@ -182,30 +182,30 @@ const filter = new aws.ec2.TrafficMirrorFilter("filter", {
 });
 const ruleout = new aws.ec2.TrafficMirrorFilterRule("ruleout", {
     description: "test rule",
-    destinationCidrBlock: "10.0.0.0/8",
-    ruleAction: "accept",
-    ruleNumber: 1,
-    sourceCidrBlock: "10.0.0.0/8",
-    trafficDirection: "egress",
     trafficMirrorFilterId: filter.id,
+    destinationCidrBlock: "10.0.0.0/8",
+    sourceCidrBlock: "10.0.0.0/8",
+    ruleNumber: 1,
+    ruleAction: "accept",
+    trafficDirection: "egress",
 });
 const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
     description: "test rule",
+    trafficMirrorFilterId: filter.id,
     destinationCidrBlock: "10.0.0.0/8",
+    sourceCidrBlock: "10.0.0.0/8",
+    ruleNumber: 1,
+    ruleAction: "accept",
+    trafficDirection: "ingress",
+    protocol: 6,
     destinationPortRange: {
         fromPort: 22,
         toPort: 53,
     },
-    protocol: 6,
-    ruleAction: "accept",
-    ruleNumber: 1,
-    sourceCidrBlock: "10.0.0.0/8",
     sourcePortRange: {
         fromPort: 0,
         toPort: 10,
     },
-    trafficDirection: "ingress",
-    trafficMirrorFilterId: filter.id,
 });
 ```
 
@@ -227,7 +227,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">NewTrafficMirrorFilterRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleArgs">TrafficMirrorFilterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">NewTrafficMirrorFilterRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleArgs">TrafficMirrorFilterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -301,7 +301,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +321,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleArgs">TrafficMirrorFilterRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleArgs">TrafficMirrorFilterRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +331,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -958,7 +958,7 @@ Get an existing TrafficMirrorFilterRule resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficMirrorFilterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleState">TrafficMirrorFilterRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficMirrorFilterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleState">TrafficMirrorFilterRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRule">TrafficMirrorFilterRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.TrafficMirrorFilterRuleDestinationPortRange.html">output</a> API doc for this type.
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.TrafficMirrorFilterRuleSourcePortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.TrafficMirrorFilterRuleSourcePortRange.html">output</a> API doc for this type.

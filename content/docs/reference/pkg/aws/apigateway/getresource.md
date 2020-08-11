@@ -33,8 +33,8 @@ class MyStack : Stack
         }));
         var myResource = myRestApi.Apply(myRestApi => Output.Create(Aws.ApiGateway.GetResource.InvokeAsync(new Aws.ApiGateway.GetResourceArgs
         {
-            Path = "/endpoint/path",
             RestApiId = myRestApi.Id,
+            Path = "/endpoint/path",
         })));
     }
 
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -61,8 +61,8 @@ func main() {
 			return err
 		}
 		_, err = apigateway.LookupResource(ctx, &apigateway.LookupResourceArgs{
-			Path:      "/endpoint/path",
 			RestApiId: myRestApi.Id,
+			Path:      "/endpoint/path",
 		}, nil)
 		if err != nil {
 			return err
@@ -80,8 +80,8 @@ import pulumi
 import pulumi_aws as aws
 
 my_rest_api = aws.apigateway.get_rest_api(name="my-rest-api")
-my_resource = aws.apigateway.get_resource(path="/endpoint/path",
-    rest_api_id=my_rest_api.id)
+my_resource = aws.apigateway.get_resource(rest_api_id=my_rest_api.id,
+    path="/endpoint/path")
 ```
 
 {{% /example %}}
@@ -92,13 +92,13 @@ my_resource = aws.apigateway.get_resource(path="/endpoint/path",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = pulumi.output(aws.apigateway.getRestApi({
+const myRestApi = aws.apigateway.getRestApi({
     name: "my-rest-api",
-}, { async: true }));
-const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
-    path: "/endpoint/path",
+});
+const myResource = myRestApi.then(myRestApi => aws.apigateway.getResource({
     restApiId: myRestApi.id,
-}, { async: true }));
+    path: "/endpoint/path",
+}));
 ```
 
 {{% /example %}}
@@ -122,7 +122,7 @@ const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#LookupResourceArgs">LookupResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#LookupResourceResult">LookupResourceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#LookupResourceArgs">LookupResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#LookupResourceResult">LookupResourceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupResource` in the Go SDK.
 

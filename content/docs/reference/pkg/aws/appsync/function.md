@@ -30,33 +30,32 @@ class MyStack : Stack
         {
             AuthenticationType = "API_KEY",
             Schema = @"type Mutation {
-    putPost(id: ID!, title: String!): Post
+  putPost(id: ID!, title: String!): Post
 }
 
 type Post {
-    id: ID!
-    title: String!
+  id: ID!
+  title: String!
 }
 
 type Query {
-    singlePost(id: ID!): Post
+  singlePost(id: ID!): Post
 }
 
 schema {
-    query: Query
-    mutation: Mutation
+  query: Query
+  mutation: Mutation
 }
-
 ",
         });
         var testDataSource = new Aws.AppSync.DataSource("testDataSource", new Aws.AppSync.DataSourceArgs
         {
             ApiId = testGraphQLApi.Id,
+            Type = "HTTP",
             HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
             {
                 Endpoint = "http://example.com",
             },
-            Type = "HTTP",
         });
         var testFunction = new Aws.AppSync.Function("testFunction", new Aws.AppSync.FunctionArgs
         {
@@ -71,14 +70,12 @@ schema {
         ""headers"": $utils.http.copyheaders($ctx.request.headers)
     }
 }
-
 ",
             ResponseMappingTemplate = @"#if($ctx.result.statusCode == 200)
     $ctx.result.body
 #else
     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
 #end
-
 ",
         });
     }
@@ -95,7 +92,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,17 +100,17 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testGraphQLApi, err := appsync.NewGraphQLApi(ctx, "testGraphQLApi", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("API_KEY"),
-			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "type Mutation {\n", "    putPost(id: ID!, title: String!): Post\n", "}\n", "\n", "type Post {\n", "    id: ID!\n", "    title: String!\n", "}\n", "\n", "type Query {\n", "    singlePost(id: ID!): Post\n", "}\n", "\n", "schema {\n", "    query: Query\n", "    mutation: Mutation\n", "}\n", "\n")),
+			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "type Mutation {\n", "  putPost(id: ID!, title: String!): Post\n", "}\n", "\n", "type Post {\n", "  id: ID!\n", "  title: String!\n", "}\n", "\n", "type Query {\n", "  singlePost(id: ID!): Post\n", "}\n", "\n", "schema {\n", "  query: Query\n", "  mutation: Mutation\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		testDataSource, err := appsync.NewDataSource(ctx, "testDataSource", &appsync.DataSourceArgs{
 			ApiId: testGraphQLApi.ID(),
+			Type:  pulumi.String("HTTP"),
 			HttpConfig: &appsync.DataSourceHttpConfigArgs{
 				Endpoint: pulumi.String("http://example.com"),
 			},
-			Type: pulumi.String("HTTP"),
 		})
 		if err != nil {
 			return err
@@ -122,8 +119,8 @@ func main() {
 			ApiId:                   testGraphQLApi.ID(),
 			DataSource:              testDataSource.Name,
 			Name:                    pulumi.String("tf_example"),
-			RequestMappingTemplate:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"version\": \"2018-05-29\",\n", "    \"method\": \"GET\",\n", "    \"resourcePath\": \"/\",\n", "    \"params\":{\n", "        \"headers\": ", "$", "utils.http.copyheaders(", "$", "ctx.request.headers)\n", "    }\n", "}\n", "\n")),
-			ResponseMappingTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#if(", "$", "ctx.result.statusCode == 200)\n", "    ", "$", "ctx.result.body\n", "#else\n", "    ", "$", "utils.appendError(", "$", "ctx.result.body, ", "$", "ctx.result.statusCode)\n", "#end\n", "\n")),
+			RequestMappingTemplate:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"version\": \"2018-05-29\",\n", "    \"method\": \"GET\",\n", "    \"resourcePath\": \"/\",\n", "    \"params\":{\n", "        \"headers\": ", "$", "utils.http.copyheaders(", "$", "ctx.request.headers)\n", "    }\n", "}\n")),
+			ResponseMappingTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#if(", "$", "ctx.result.statusCode == 200)\n", "    ", "$", "ctx.result.body\n", "#else\n", "    ", "$", "utils.appendError(", "$", "ctx.result.body, ", "$", "ctx.result.statusCode)\n", "#end\n")),
 		})
 		if err != nil {
 			return err
@@ -143,30 +140,29 @@ import pulumi_aws as aws
 test_graph_ql_api = aws.appsync.GraphQLApi("testGraphQLApi",
     authentication_type="API_KEY",
     schema="""type Mutation {
-    putPost(id: ID!, title: String!): Post
+  putPost(id: ID!, title: String!): Post
 }
 
 type Post {
-    id: ID!
-    title: String!
+  id: ID!
+  title: String!
 }
 
 type Query {
-    singlePost(id: ID!): Post
+  singlePost(id: ID!): Post
 }
 
 schema {
-    query: Query
-    mutation: Mutation
+  query: Query
+  mutation: Mutation
 }
-
 """)
 test_data_source = aws.appsync.DataSource("testDataSource",
     api_id=test_graph_ql_api.id,
+    type="HTTP",
     http_config={
         "endpoint": "http://example.com",
-    },
-    type="HTTP")
+    })
 test_function = aws.appsync.Function("testFunction",
     api_id=test_graph_ql_api.id,
     data_source=test_data_source.name,
@@ -179,14 +175,12 @@ test_function = aws.appsync.Function("testFunction",
         "headers": $utils.http.copyheaders($ctx.request.headers)
     }
 }
-
 """,
     response_mapping_template="""#if($ctx.result.statusCode == 200)
     $ctx.result.body
 #else
     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
 #end
-
 """)
 ```
 
@@ -198,35 +192,35 @@ test_function = aws.appsync.Function("testFunction",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testGraphQLApi = new aws.appsync.GraphQLApi("test", {
+const testGraphQLApi = new aws.appsync.GraphQLApi("testGraphQLApi", {
     authenticationType: "API_KEY",
     schema: `type Mutation {
-    putPost(id: ID!, title: String!): Post
+  putPost(id: ID!, title: String!): Post
 }
 
 type Post {
-    id: ID!
-    title: String!
+  id: ID!
+  title: String!
 }
 
 type Query {
-    singlePost(id: ID!): Post
+  singlePost(id: ID!): Post
 }
 
 schema {
-    query: Query
-    mutation: Mutation
+  query: Query
+  mutation: Mutation
 }
 `,
 });
-const testDataSource = new aws.appsync.DataSource("test", {
+const testDataSource = new aws.appsync.DataSource("testDataSource", {
     apiId: testGraphQLApi.id,
+    type: "HTTP",
     httpConfig: {
         endpoint: "http://example.com",
     },
-    type: "HTTP",
 });
-const testFunction = new aws.appsync.Function("test", {
+const testFunction = new aws.appsync.Function("testFunction", {
     apiId: testGraphQLApi.id,
     dataSource: testDataSource.name,
     name: "tf_example",
@@ -266,7 +260,7 @@ const testFunction = new aws.appsync.Function("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#Function">NewFunction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#Function">NewFunction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -340,7 +334,7 @@ const testFunction = new aws.appsync.Function("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -360,7 +354,7 @@ const testFunction = new aws.appsync.Function("test", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -370,7 +364,7 @@ const testFunction = new aws.appsync.Function("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -953,7 +947,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

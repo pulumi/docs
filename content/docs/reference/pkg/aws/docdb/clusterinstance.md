@@ -36,15 +36,15 @@ class MyStack : Stack
     {
         var @default = new Aws.DocDB.Cluster("default", new Aws.DocDB.ClusterArgs
         {
+            ClusterIdentifier = "docdb-cluster-demo",
             AvailabilityZones = 
             {
                 "us-west-2a",
                 "us-west-2b",
                 "us-west-2c",
             },
-            ClusterIdentifier = "docdb-cluster-demo",
-            MasterPassword = "barbut8chars",
             MasterUsername = "foo",
+            MasterPassword = "barbut8chars",
         });
         var clusterInstances = new List<Aws.DocDB.ClusterInstance>();
         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
@@ -52,8 +52,8 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             clusterInstances.Add(new Aws.DocDB.ClusterInstance($"clusterInstances-{range.Value}", new Aws.DocDB.ClusterInstanceArgs
             {
-                ClusterIdentifier = @default.Id,
                 Identifier = $"docdb-cluster-demo-{range.Value}",
+                ClusterIdentifier = @default.Id,
                 InstanceClass = "db.r5.large",
             }));
         }
@@ -71,21 +71,21 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := docdb.NewCluster(ctx, "_default", &docdb.ClusterArgs{
+			ClusterIdentifier: pulumi.String("docdb-cluster-demo"),
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-west-2a"),
 				pulumi.String("us-west-2b"),
 				pulumi.String("us-west-2c"),
 			},
-			ClusterIdentifier: pulumi.String("docdb-cluster-demo"),
-			MasterPassword:    pulumi.String("barbut8chars"),
-			MasterUsername:    pulumi.String("foo"),
+			MasterUsername: pulumi.String("foo"),
+			MasterPassword: pulumi.String("barbut8chars"),
 		})
 		if err != nil {
 			return err
@@ -93,8 +93,8 @@ func main() {
 		var clusterInstances []*docdb.ClusterInstance
 		for key0, val0 := range 2 {
 			__res, err := docdb.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &docdb.ClusterInstanceArgs{
-				ClusterIdentifier: _default.ID(),
 				Identifier:        pulumi.String(fmt.Sprintf("%v%v", "docdb-cluster-demo-", val0)),
+				ClusterIdentifier: _default.ID(),
 				InstanceClass:     pulumi.String("db.r5.large"),
 			})
 			if err != nil {
@@ -115,19 +115,19 @@ import pulumi
 import pulumi_aws as aws
 
 default = aws.docdb.Cluster("default",
+    cluster_identifier="docdb-cluster-demo",
     availability_zones=[
         "us-west-2a",
         "us-west-2b",
         "us-west-2c",
     ],
-    cluster_identifier="docdb-cluster-demo",
-    master_password="barbut8chars",
-    master_username="foo")
+    master_username="foo",
+    master_password="barbut8chars")
 cluster_instances = []
 for range in [{"value": i} for i in range(0, 2)]:
     cluster_instances.append(aws.docdb.ClusterInstance(f"clusterInstances-{range['value']}",
-        cluster_identifier=default.id,
         identifier=f"docdb-cluster-demo-{range['value']}",
+        cluster_identifier=default.id,
         instance_class="db.r5.large"))
 ```
 
@@ -139,21 +139,21 @@ for range in [{"value": i} for i in range(0, 2)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.docdb.Cluster("default", {
+const _default = new aws.docdb.Cluster("default", {
+    clusterIdentifier: "docdb-cluster-demo",
     availabilityZones: [
         "us-west-2a",
         "us-west-2b",
         "us-west-2c",
     ],
-    clusterIdentifier: "docdb-cluster-demo",
-    masterPassword: "barbut8chars",
     masterUsername: "foo",
+    masterPassword: "barbut8chars",
 });
-const clusterInstances: aws.docdb.ClusterInstance[] = [];
-for (let i = 0; i < 2; i++) {
-    clusterInstances.push(new aws.docdb.ClusterInstance(`cluster_instances-${i}`, {
-        clusterIdentifier: defaultCluster.id,
-        identifier: `docdb-cluster-demo-${i}`,
+const clusterInstances: aws.docdb.ClusterInstance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    clusterInstances.push(new aws.docdb.ClusterInstance(`clusterInstances-${range.value}`, {
+        identifier: `docdb-cluster-demo-${range.value}`,
+        clusterIdentifier: _default.id,
         instanceClass: "db.r5.large",
     }));
 }
@@ -177,7 +177,7 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstance">NewClusterInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstance">NewClusterInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -251,7 +251,7 @@ for (let i = 0; i < 2; i++) {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -271,7 +271,7 @@ for (let i = 0; i < 2; i++) {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ for (let i = 0; i < 2; i++) {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1512,7 +1512,7 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

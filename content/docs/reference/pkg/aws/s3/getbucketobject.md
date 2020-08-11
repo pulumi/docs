@@ -36,8 +36,8 @@ class MyStack : Stack
         }));
         var example = new Aws.Ec2.Instance("example", new Aws.Ec2.InstanceArgs
         {
-            Ami = "ami-2757f631",
             InstanceType = "t2.micro",
+            Ami = "ami-2757f631",
             UserData = bootstrapScript.Apply(bootstrapScript => bootstrapScript.Body),
         });
     }
@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,8 +67,8 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewInstance(ctx, "example", &ec2.InstanceArgs{
-			Ami:          pulumi.String("ami-2757f631"),
 			InstanceType: pulumi.String("t2.micro"),
+			Ami:          pulumi.String("ami-2757f631"),
 			UserData:     pulumi.String(bootstrapScript.Body),
 		})
 		if err != nil {
@@ -89,8 +89,8 @@ import pulumi_aws as aws
 bootstrap_script = aws.s3.get_bucket_object(bucket="ourcorp-deploy-config",
     key="ec2-bootstrap-script.sh")
 example = aws.ec2.Instance("example",
-    ami="ami-2757f631",
     instance_type="t2.micro",
+    ami="ami-2757f631",
     user_data=bootstrap_script.body)
 ```
 
@@ -102,14 +102,14 @@ example = aws.ec2.Instance("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
+const bootstrapScript = aws.s3.getBucketObject({
     bucket: "ourcorp-deploy-config",
     key: "ec2-bootstrap-script.sh",
-}, { async: true }));
+});
 const example = new aws.ec2.Instance("example", {
-    ami: "ami-2757f631",
     instanceType: "t2.micro",
-    userData: bootstrapScript.body,
+    ami: "ami-2757f631",
+    userData: bootstrapScript.then(bootstrapScript => bootstrapScript.body),
 });
 ```
 
@@ -134,7 +134,7 @@ const example = new aws.ec2.Instance("example", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBucketObject` in the Go SDK.
 

@@ -41,6 +41,10 @@ class MyStack : Stack
     {
         var testInstances = await Aws.Ec2.GetInstances.InvokeAsync(new Aws.Ec2.GetInstancesArgs
         {
+            InstanceTags = 
+            {
+                { "Role", "HardWorker" },
+            },
             Filters = 
             {
                 new Aws.Ec2.Inputs.GetInstancesFilterArgs
@@ -56,10 +60,6 @@ class MyStack : Stack
             {
                 "running",
                 "stopped",
-            },
-            InstanceTags = 
-            {
-                { "Role", "HardWorker" },
             },
         });
         var testEip = new List<Aws.Ec2.Eip>();
@@ -91,17 +91,17 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-test_instances = aws.ec2.get_instances(filters=[{
+test_instances = aws.ec2.get_instances(instance_tags={
+        "Role": "HardWorker",
+    },
+    filters=[{
         "name": "instance.group-id",
         "values": ["sg-12345678"],
     }],
     instance_state_names=[
         "running",
         "stopped",
-    ],
-    instance_tags={
-        "Role": "HardWorker",
-    })
+    ])
 test_eip = []
 for range in [{"value": i} for i in range(0, len(test_instances.ids))]:
     test_eip.append(aws.ec2.Eip(f"testEip-{range['value']}", instance=test_instances.ids[range["value"]]))
@@ -115,24 +115,24 @@ for range in [{"value": i} for i in range(0, len(test_instances.ids))]:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testInstances = pulumi.output(aws.ec2.getInstances({
-    filters: [{
-        name: "instance.group-id",
-        values: ["sg-12345678"],
-    }],
-    instanceStateNames: [
-        "running",
-        "stopped",
-    ],
-    instanceTags: {
-        Role: "HardWorker",
-    },
-}, { async: true }));
-const testEip: aws.ec2.Eip[] = [];
-for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.length); i++) {
-    testEip.push(new aws.ec2.Eip(`test-${i}`, {
-        instance: testInstances.apply(testInstances => testInstances.ids[i]),
-    }));
+export = async () => {
+    const testInstances = await aws.ec2.getInstances({
+        instanceTags: {
+            Role: "HardWorker",
+        },
+        filters: [{
+            name: "instance.group-id",
+            values: ["sg-12345678"],
+        }],
+        instanceStateNames: [
+            "running",
+            "stopped",
+        ],
+    });
+    const testEip: aws.ec2.Eip[];
+    for (const range = {value: 0}; range.value < testInstances.ids.length; range.value++) {
+        testEip.push(new aws.ec2.Eip(`testEip-${range.value}`, {instance: testInstances.ids[range.value]}));
+    }
 }
 ```
 
@@ -157,7 +157,7 @@ for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.lengt
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstancesArgs">GetInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstancesResult">GetInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstancesArgs">GetInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstancesResult">GetInstancesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -698,7 +698,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstancesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstancesFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstancesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstancesFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetInstancesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstancesFilter.html">output</a> API doc for this type.

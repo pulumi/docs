@@ -46,13 +46,12 @@ class MyStack : Stack
 	}
     ]
 }
-
 ",
         });
         var ecsInstanceRoleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("ecsInstanceRoleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
         {
-            PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
             Role = ecsInstanceRoleRole.Name,
+            PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
         });
         var ecsInstanceRoleInstanceProfile = new Aws.Iam.InstanceProfile("ecsInstanceRoleInstanceProfile", new Aws.Iam.InstanceProfileArgs
         {
@@ -72,13 +71,12 @@ class MyStack : Stack
 	}
     ]
 }
-
 ",
         });
         var awsBatchServiceRoleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("awsBatchServiceRoleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
         {
-            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
             Role = awsBatchServiceRoleRole.Name,
+            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
         });
         var sampleSecurityGroup = new Aws.Ec2.SecurityGroup("sampleSecurityGroup", new Aws.Ec2.SecurityGroupArgs
         {
@@ -86,13 +84,13 @@ class MyStack : Stack
             {
                 new Aws.Ec2.Inputs.SecurityGroupEgressArgs
                 {
+                    FromPort = 0,
+                    ToPort = 0,
+                    Protocol = "-1",
                     CidrBlocks = 
                     {
                         "0.0.0.0/0",
                     },
-                    FromPort = 0,
-                    Protocol = "-1",
-                    ToPort = 0,
                 },
             },
         });
@@ -102,8 +100,8 @@ class MyStack : Stack
         });
         var sampleSubnet = new Aws.Ec2.Subnet("sampleSubnet", new Aws.Ec2.SubnetArgs
         {
-            CidrBlock = "10.1.1.0/24",
             VpcId = sampleVpc.Id,
+            CidrBlock = "10.1.1.0/24",
         });
         var sampleComputeEnvironment = new Aws.Batch.ComputeEnvironment("sampleComputeEnvironment", new Aws.Batch.ComputeEnvironmentArgs
         {
@@ -133,7 +131,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_iam_role_policy_attachment.aws_batch_service_role",
+                awsBatchServiceRoleRolePolicyAttachment,
             },
         });
     }
@@ -150,23 +148,23 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		ecsInstanceRoleRole, err := iam.NewRole(ctx, "ecsInstanceRoleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicyAttachment(ctx, "ecsInstanceRoleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
-			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"),
 			Role:      ecsInstanceRoleRole.Name,
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"),
 		})
 		if err != nil {
 			return err
@@ -178,14 +176,14 @@ func main() {
 			return err
 		}
 		awsBatchServiceRoleRole, err := iam.NewRole(ctx, "awsBatchServiceRoleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"batch.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"batch.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "awsBatchServiceRoleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
-			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole"),
+		awsBatchServiceRoleRolePolicyAttachment, err := iam.NewRolePolicyAttachment(ctx, "awsBatchServiceRoleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
 			Role:      awsBatchServiceRoleRole.Name,
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole"),
 		})
 		if err != nil {
 			return err
@@ -193,12 +191,12 @@ func main() {
 		sampleSecurityGroup, err := ec2.NewSecurityGroup(ctx, "sampleSecurityGroup", &ec2.SecurityGroupArgs{
 			Egress: ec2.SecurityGroupEgressArray{
 				&ec2.SecurityGroupEgressArgs{
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+					Protocol: pulumi.String("-1"),
 					CidrBlocks: pulumi.StringArray{
 						pulumi.String("0.0.0.0/0"),
 					},
-					FromPort: pulumi.Int(0),
-					Protocol: pulumi.String("-1"),
-					ToPort:   pulumi.Int(0),
 				},
 			},
 		})
@@ -212,8 +210,8 @@ func main() {
 			return err
 		}
 		sampleSubnet, err := ec2.NewSubnet(ctx, "sampleSubnet", &ec2.SubnetArgs{
-			CidrBlock: pulumi.String("10.1.1.0/24"),
 			VpcId:     sampleVpc.ID(),
+			CidrBlock: pulumi.String("10.1.1.0/24"),
 		})
 		if err != nil {
 			return err
@@ -238,7 +236,7 @@ func main() {
 			ServiceRole: awsBatchServiceRoleRole.Arn,
 			Type:        pulumi.String("MANAGED"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_iam_role_policy_attachment.aws_batch_service_role",
+			awsBatchServiceRoleRolePolicyAttachment,
 		}))
 		if err != nil {
 			return err
@@ -267,11 +265,10 @@ ecs_instance_role_role = aws.iam.Role("ecsInstanceRoleRole", assume_role_policy=
 	}
     ]
 }
-
 """)
 ecs_instance_role_role_policy_attachment = aws.iam.RolePolicyAttachment("ecsInstanceRoleRolePolicyAttachment",
-    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
-    role=ecs_instance_role_role.name)
+    role=ecs_instance_role_role.name,
+    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role")
 ecs_instance_role_instance_profile = aws.iam.InstanceProfile("ecsInstanceRoleInstanceProfile", role=ecs_instance_role_role.name)
 aws_batch_service_role_role = aws.iam.Role("awsBatchServiceRoleRole", assume_role_policy="""{
     "Version": "2012-10-17",
@@ -285,21 +282,20 @@ aws_batch_service_role_role = aws.iam.Role("awsBatchServiceRoleRole", assume_rol
 	}
     ]
 }
-
 """)
 aws_batch_service_role_role_policy_attachment = aws.iam.RolePolicyAttachment("awsBatchServiceRoleRolePolicyAttachment",
-    policy_arn="arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
-    role=aws_batch_service_role_role.name)
+    role=aws_batch_service_role_role.name,
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole")
 sample_security_group = aws.ec2.SecurityGroup("sampleSecurityGroup", egress=[{
-    "cidr_blocks": ["0.0.0.0/0"],
     "from_port": 0,
-    "protocol": "-1",
     "to_port": 0,
+    "protocol": "-1",
+    "cidr_blocks": ["0.0.0.0/0"],
 }])
 sample_vpc = aws.ec2.Vpc("sampleVpc", cidr_block="10.1.0.0/16")
 sample_subnet = aws.ec2.Subnet("sampleSubnet",
-    cidr_block="10.1.1.0/24",
-    vpc_id=sample_vpc.id)
+    vpc_id=sample_vpc.id,
+    cidr_block="10.1.1.0/24")
 sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironment",
     compute_environment_name="sample",
     compute_resources={
@@ -313,7 +309,7 @@ sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironm
     },
     service_role=aws_batch_service_role_role.arn,
     type="MANAGED",
-    opts=ResourceOptions(depends_on=["aws_iam_role_policy_attachment.aws_batch_service_role"]))
+    opts=ResourceOptions(depends_on=[aws_batch_service_role_role_policy_attachment]))
 ```
 
 {{% /example %}}
@@ -324,8 +320,7 @@ sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironm
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ecsInstanceRoleRole = new aws.iam.Role("ecs_instance_role", {
-    assumeRolePolicy: `{
+const ecsInstanceRoleRole = new aws.iam.Role("ecsInstanceRoleRole", {assumeRolePolicy: `{
     "Version": "2012-10-17",
     "Statement": [
 	{
@@ -337,17 +332,13 @@ const ecsInstanceRoleRole = new aws.iam.Role("ecs_instance_role", {
 	}
     ]
 }
-`,
-});
-const ecsInstanceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("ecs_instance_role", {
+`});
+const ecsInstanceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("ecsInstanceRoleRolePolicyAttachment", {
+    role: ecsInstanceRoleRole.name,
     policyArn: "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
-    role: ecsInstanceRoleRole.name,
 });
-const ecsInstanceRoleInstanceProfile = new aws.iam.InstanceProfile("ecs_instance_role", {
-    role: ecsInstanceRoleRole.name,
-});
-const awsBatchServiceRoleRole = new aws.iam.Role("aws_batch_service_role", {
-    assumeRolePolicy: `{
+const ecsInstanceRoleInstanceProfile = new aws.iam.InstanceProfile("ecsInstanceRoleInstanceProfile", {role: ecsInstanceRoleRole.name});
+const awsBatchServiceRoleRole = new aws.iam.Role("awsBatchServiceRoleRole", {assumeRolePolicy: `{
     "Version": "2012-10-17",
     "Statement": [
 	{
@@ -359,28 +350,23 @@ const awsBatchServiceRoleRole = new aws.iam.Role("aws_batch_service_role", {
 	}
     ]
 }
-`,
-});
-const awsBatchServiceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("aws_batch_service_role", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
+`});
+const awsBatchServiceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("awsBatchServiceRoleRolePolicyAttachment", {
     role: awsBatchServiceRoleRole.name,
+    policyArn: "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
 });
-const sampleSecurityGroup = new aws.ec2.SecurityGroup("sample", {
-    egress: [{
-        cidrBlocks: ["0.0.0.0/0"],
-        fromPort: 0,
-        protocol: "-1",
-        toPort: 0,
-    }],
-});
-const sampleVpc = new aws.ec2.Vpc("sample", {
-    cidrBlock: "10.1.0.0/16",
-});
-const sampleSubnet = new aws.ec2.Subnet("sample", {
-    cidrBlock: "10.1.1.0/24",
+const sampleSecurityGroup = new aws.ec2.SecurityGroup("sampleSecurityGroup", {egress: [{
+    fromPort: 0,
+    toPort: 0,
+    protocol: "-1",
+    cidrBlocks: ["0.0.0.0/0"],
+}]});
+const sampleVpc = new aws.ec2.Vpc("sampleVpc", {cidrBlock: "10.1.0.0/16"});
+const sampleSubnet = new aws.ec2.Subnet("sampleSubnet", {
     vpcId: sampleVpc.id,
+    cidrBlock: "10.1.1.0/24",
 });
-const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
+const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleComputeEnvironment", {
     computeEnvironmentName: "sample",
     computeResources: {
         instanceRole: ecsInstanceRoleInstanceProfile.arn,
@@ -393,7 +379,9 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
     },
     serviceRole: awsBatchServiceRoleRole.arn,
     type: "MANAGED",
-}, { dependsOn: [awsBatchServiceRoleRolePolicyAttachment] });
+}, {
+    dependsOn: [awsBatchServiceRoleRolePolicyAttachment],
+});
 ```
 
 {{% /example %}}
@@ -414,7 +402,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironment">NewComputeEnvironment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironment">NewComputeEnvironment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -488,7 +476,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -508,7 +496,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -518,7 +506,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1145,7 +1133,7 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentState">ComputeEnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentState">ComputeEnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1737,7 +1725,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.html">output</a> API doc for this type.
@@ -2443,7 +2431,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResourcesLaunchTemplate.html">output</a> API doc for this type.

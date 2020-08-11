@@ -42,10 +42,10 @@ class MyStack : Stack
         });
         var main = new Aws.Ec2.VpnConnection("main", new Aws.Ec2.VpnConnectionArgs
         {
-            CustomerGatewayId = customerGateway.Id,
-            StaticRoutesOnly = true,
-            Type = "ipsec.1",
             VpnGatewayId = vpnGateway.Id,
+            CustomerGatewayId = customerGateway.Id,
+            Type = "ipsec.1",
+            StaticRoutesOnly = true,
         });
         var office = new Aws.Ec2.VpnConnectionRoute("office", new Aws.Ec2.VpnConnectionRouteArgs
         {
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,10 +91,10 @@ func main() {
 			return err
 		}
 		main, err := ec2.NewVpnConnection(ctx, "main", &ec2.VpnConnectionArgs{
-			CustomerGatewayId: customerGateway.ID(),
-			StaticRoutesOnly:  pulumi.Bool(true),
-			Type:              pulumi.String("ipsec.1"),
 			VpnGatewayId:      vpnGateway.ID(),
+			CustomerGatewayId: customerGateway.ID(),
+			Type:              pulumi.String("ipsec.1"),
+			StaticRoutesOnly:  pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -125,10 +125,10 @@ customer_gateway = aws.ec2.CustomerGateway("customerGateway",
     ip_address="172.0.0.1",
     type="ipsec.1")
 main = aws.ec2.VpnConnection("main",
+    vpn_gateway_id=vpn_gateway.id,
     customer_gateway_id=customer_gateway.id,
-    static_routes_only=True,
     type="ipsec.1",
-    vpn_gateway_id=vpn_gateway.id)
+    static_routes_only=True)
 office = aws.ec2.VpnConnectionRoute("office",
     destination_cidr_block="192.168.10.0/24",
     vpn_connection_id=main.id)
@@ -142,22 +142,18 @@ office = aws.ec2.VpnConnectionRoute("office",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const vpc = new aws.ec2.Vpc("vpc", {
-    cidrBlock: "10.0.0.0/16",
-});
-const vpnGateway = new aws.ec2.VpnGateway("vpn_gateway", {
-    vpcId: vpc.id,
-});
-const customerGateway = new aws.ec2.CustomerGateway("customer_gateway", {
-    bgpAsn: "65000",
+const vpc = new aws.ec2.Vpc("vpc", {cidrBlock: "10.0.0.0/16"});
+const vpnGateway = new aws.ec2.VpnGateway("vpnGateway", {vpcId: vpc.id});
+const customerGateway = new aws.ec2.CustomerGateway("customerGateway", {
+    bgpAsn: 65000,
     ipAddress: "172.0.0.1",
     type: "ipsec.1",
 });
 const main = new aws.ec2.VpnConnection("main", {
-    customerGatewayId: customerGateway.id,
-    staticRoutesOnly: true,
-    type: "ipsec.1",
     vpnGatewayId: vpnGateway.id,
+    customerGatewayId: customerGateway.id,
+    type: "ipsec.1",
+    staticRoutesOnly: true,
 });
 const office = new aws.ec2.VpnConnectionRoute("office", {
     destinationCidrBlock: "192.168.10.0/24",
@@ -183,7 +179,7 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRoute">NewVpnConnectionRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRouteArgs">VpnConnectionRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRoute">VpnConnectionRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRoute">NewVpnConnectionRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRouteArgs">VpnConnectionRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRoute">VpnConnectionRoute</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -257,7 +253,7 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -277,7 +273,7 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRouteArgs">VpnConnectionRouteArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRouteArgs">VpnConnectionRouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +283,7 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -562,7 +558,7 @@ Get an existing VpnConnectionRoute resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnectionRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRouteState">VpnConnectionRouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRoute">VpnConnectionRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnectionRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRouteState">VpnConnectionRouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRoute">VpnConnectionRoute</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

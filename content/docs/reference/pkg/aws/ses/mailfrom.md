@@ -41,26 +41,27 @@ class MyStack : Stack
         // Example Route53 MX record
         var exampleSesDomainMailFromMx = new Aws.Route53.Record("exampleSesDomainMailFromMx", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Example.Id,
             Name = exampleMailFrom.MailFromDomain,
+            Type = "MX",
+            Ttl = 600,
             Records = 
             {
                 "10 feedback-smtp.us-east-1.amazonses.com",
             },
-            Ttl = 600,
-            Type = "MX",
-            ZoneId = aws_route53_zone.Example.Id,
         });
+        // Change to the region in which `aws_ses_domain_identity.example` is created
         // Example Route53 TXT record for SPF
         var exampleSesDomainMailFromTxt = new Aws.Route53.Record("exampleSesDomainMailFromTxt", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Example.Id,
             Name = exampleMailFrom.MailFromDomain,
+            Type = "TXT",
+            Ttl = 600,
             Records = 
             {
                 "v=spf1 include:amazonses.com -all",
             },
-            Ttl = 600,
-            Type = "TXT",
-            ZoneId = aws_route53_zone.Example.Id,
         });
     }
 
@@ -76,8 +77,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,25 +100,25 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "exampleSesDomainMailFromMx", &route53.RecordArgs{
-			Name: exampleMailFrom.MailFromDomain,
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
+			Name:   exampleMailFrom.MailFromDomain,
+			Type:   pulumi.String("MX"),
+			Ttl:    pulumi.Int(600),
 			Records: pulumi.StringArray{
 				pulumi.String("10 feedback-smtp.us-east-1.amazonses.com"),
 			},
-			Ttl:    pulumi.Int(600),
-			Type:   pulumi.String("MX"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "exampleSesDomainMailFromTxt", &route53.RecordArgs{
-			Name: exampleMailFrom.MailFromDomain,
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
+			Name:   exampleMailFrom.MailFromDomain,
+			Type:   pulumi.String("TXT"),
+			Ttl:    pulumi.Int(600),
 			Records: pulumi.StringArray{
 				pulumi.String("v=spf1 include:amazonses.com -all"),
 			},
-			Ttl:    pulumi.Int(600),
-			Type:   pulumi.String("TXT"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -141,18 +142,19 @@ example_mail_from = aws.ses.MailFrom("exampleMailFrom",
     mail_from_domain=example_domain_identity.domain.apply(lambda domain: f"bounce.{domain}"))
 # Example Route53 MX record
 example_ses_domain_mail_from_mx = aws.route53.Record("exampleSesDomainMailFromMx",
+    zone_id=aws_route53_zone["example"]["id"],
     name=example_mail_from.mail_from_domain,
-    records=["10 feedback-smtp.us-east-1.amazonses.com"],
-    ttl="600",
     type="MX",
-    zone_id=aws_route53_zone["example"]["id"])
+    ttl="600",
+    records=["10 feedback-smtp.us-east-1.amazonses.com"])
+# Change to the region in which `aws_ses_domain_identity.example` is created
 # Example Route53 TXT record for SPF
 example_ses_domain_mail_from_txt = aws.route53.Record("exampleSesDomainMailFromTxt",
+    zone_id=aws_route53_zone["example"]["id"],
     name=example_mail_from.mail_from_domain,
-    records=["v=spf1 include:amazonses.com -all"],
-    ttl="600",
     type="TXT",
-    zone_id=aws_route53_zone["example"]["id"])
+    ttl="600",
+    records=["v=spf1 include:amazonses.com -all"])
 ```
 
 {{% /example %}}
@@ -164,28 +166,27 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Example SES Domain Identity
-const exampleDomainIdentity = new aws.ses.DomainIdentity("example", {
-    domain: "example.com",
-});
-const exampleMailFrom = new aws.ses.MailFrom("example", {
+const exampleDomainIdentity = new aws.ses.DomainIdentity("exampleDomainIdentity", {domain: "example.com"});
+const exampleMailFrom = new aws.ses.MailFrom("exampleMailFrom", {
     domain: exampleDomainIdentity.domain,
     mailFromDomain: pulumi.interpolate`bounce.${exampleDomainIdentity.domain}`,
 });
 // Example Route53 MX record
-const exampleSesDomainMailFromMx = new aws.route53.Record("example_ses_domain_mail_from_mx", {
+const exampleSesDomainMailFromMx = new aws.route53.Record("exampleSesDomainMailFromMx", {
+    zoneId: aws_route53_zone.example.id,
     name: exampleMailFrom.mailFromDomain,
-    records: ["10 feedback-smtp.us-east-1.amazonses.com"], // Change to the region in which `aws_ses_domain_identity.example` is created
-    ttl: 600,
     type: "MX",
-    zoneId: aws_route53_zone_example.id,
+    ttl: "600",
+    records: ["10 feedback-smtp.us-east-1.amazonses.com"],
 });
+// Change to the region in which `aws_ses_domain_identity.example` is created
 // Example Route53 TXT record for SPF
-const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_mail_from_txt", {
+const exampleSesDomainMailFromTxt = new aws.route53.Record("exampleSesDomainMailFromTxt", {
+    zoneId: aws_route53_zone.example.id,
     name: exampleMailFrom.mailFromDomain,
-    records: ["v=spf1 include:amazonses.com -all"],
-    ttl: 600,
     type: "TXT",
-    zoneId: aws_route53_zone_example.id,
+    ttl: "600",
+    records: ["v=spf1 include:amazonses.com -all"],
 });
 ```
 
@@ -207,7 +208,7 @@ const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_m
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFrom">NewMailFrom</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFromArgs">MailFromArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFrom">MailFrom</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFrom">NewMailFrom</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFromArgs">MailFromArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFrom">MailFrom</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -281,7 +282,7 @@ const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_m
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -301,7 +302,7 @@ const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_m
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFromArgs">MailFromArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFromArgs">MailFromArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -311,7 +312,7 @@ const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_m
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -630,7 +631,7 @@ Get an existing MailFrom resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMailFrom<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFromState">MailFromState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#MailFrom">MailFrom</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMailFrom<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFromState">MailFromState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#MailFrom">MailFrom</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

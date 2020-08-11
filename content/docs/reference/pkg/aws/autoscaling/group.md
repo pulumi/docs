@@ -13,38 +13,6 @@ meta_desc: "Explore the Group resource of the autoscaling module, including exam
 Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-## Interpolated tags
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const extraTags = config.get("extraTags") || [
-    {
-        key: "Foo",
-        propagateAtLaunch: true,
-        value: "Bar",
-    },
-    {
-        key: "Baz",
-        propagateAtLaunch: true,
-        value: "Bam",
-    },
-];
-
-const bar = new aws.autoscaling.Group("bar", {
-    launchConfiguration: aws_launch_configuration_foobar.name,
-    maxSize: 5,
-    minSize: 2,
-    tagsCollection: [{"key": "interpolation1", "value": "value3", "propagate_at_launch": true}, {"key": "interpolation2", "value": "value4", "propagate_at_launch": true}].concat(extraTags),
-    vpcZoneIdentifiers: [
-        aws_subnet_example1.id,
-        aws_subnet_example2.id,
-    ],
-});
-```
-
 ## Waiting for Capacity
 
 A newly-created ASG is initially empty and begins to scale to `min_size` (or
@@ -123,9 +91,9 @@ class MyStack : Stack
     {
         var foobar = new Aws.Ec2.LaunchTemplate("foobar", new Aws.Ec2.LaunchTemplateArgs
         {
+            NamePrefix = "foobar",
             ImageId = "ami-1a2b3c",
             InstanceType = "t2.micro",
-            NamePrefix = "foobar",
         });
         var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
         {
@@ -134,13 +102,13 @@ class MyStack : Stack
                 "us-east-1a",
             },
             DesiredCapacity = 1,
+            MaxSize = 1,
+            MinSize = 1,
             LaunchTemplate = new Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs
             {
                 Id = foobar.Id,
                 Version = "$Latest",
             },
-            MaxSize = 1,
-            MinSize = 1,
         });
     }
 
@@ -156,17 +124,17 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foobar, err := ec2.NewLaunchTemplate(ctx, "foobar", &ec2.LaunchTemplateArgs{
+			NamePrefix:   pulumi.String("foobar"),
 			ImageId:      pulumi.String("ami-1a2b3c"),
 			InstanceType: pulumi.String("t2.micro"),
-			NamePrefix:   pulumi.String("foobar"),
 		})
 		if err != nil {
 			return err
@@ -176,12 +144,12 @@ func main() {
 				pulumi.String("us-east-1a"),
 			},
 			DesiredCapacity: pulumi.Int(1),
+			MaxSize:         pulumi.Int(1),
+			MinSize:         pulumi.Int(1),
 			LaunchTemplate: &autoscaling.GroupLaunchTemplateArgs{
 				Id:      foobar.ID(),
 				Version: pulumi.String(fmt.Sprintf("%v%v", "$", "Latest")),
 			},
-			MaxSize: pulumi.Int(1),
-			MinSize: pulumi.Int(1),
 		})
 		if err != nil {
 			return err
@@ -199,18 +167,18 @@ import pulumi
 import pulumi_aws as aws
 
 foobar = aws.ec2.LaunchTemplate("foobar",
+    name_prefix="foobar",
     image_id="ami-1a2b3c",
-    instance_type="t2.micro",
-    name_prefix="foobar")
+    instance_type="t2.micro")
 bar = aws.autoscaling.Group("bar",
     availability_zones=["us-east-1a"],
     desired_capacity=1,
+    max_size=1,
+    min_size=1,
     launch_template={
         "id": foobar.id,
         "version": "$Latest",
-    },
-    max_size=1,
-    min_size=1)
+    })
 ```
 
 {{% /example %}}
@@ -222,19 +190,19 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const foobar = new aws.ec2.LaunchTemplate("foobar", {
+    namePrefix: "foobar",
     imageId: "ami-1a2b3c",
     instanceType: "t2.micro",
-    namePrefix: "foobar",
 });
 const bar = new aws.autoscaling.Group("bar", {
     availabilityZones: ["us-east-1a"],
     desiredCapacity: 1,
-    launchTemplate: {
-        id: foobar.id,
-        version: "$Latest",
-    },
     maxSize: 1,
     minSize: 1,
+    launchTemplate: {
+        id: foobar.id,
+        version: `$Latest`,
+    },
 });
 ```
 
@@ -252,9 +220,9 @@ class MyStack : Stack
     {
         var exampleLaunchTemplate = new Aws.Ec2.LaunchTemplate("exampleLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
         {
+            NamePrefix = "example",
             ImageId = data.Aws_ami.Example.Id,
             InstanceType = "c5.large",
-            NamePrefix = "example",
         });
         var exampleGroup = new Aws.AutoScaling.Group("exampleGroup", new Aws.AutoScaling.GroupArgs
         {
@@ -273,17 +241,17 @@ class MyStack : Stack
                     {
                         LaunchTemplateId = exampleLaunchTemplate.Id,
                     },
-                    Override = 
+                    Overrides = 
                     {
-                        
+                        new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs
                         {
-                            { "instanceType", "c4.large" },
-                            { "weightedCapacity", "3" },
+                            InstanceType = "c4.large",
+                            WeightedCapacity = "3",
                         },
-                        
+                        new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs
                         {
-                            { "instanceType", "c3.large" },
-                            { "weightedCapacity", "2" },
+                            InstanceType = "c3.large",
+                            WeightedCapacity = "2",
                         },
                     },
                 },
@@ -301,17 +269,17 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleLaunchTemplate, err := ec2.NewLaunchTemplate(ctx, "exampleLaunchTemplate", &ec2.LaunchTemplateArgs{
-			ImageId:      pulumi.String(data.Aws_ami.Example.Id),
-			InstanceType: pulumi.String("c5.large"),
 			NamePrefix:   pulumi.String("example"),
+			ImageId:      pulumi.Any(data.Aws_ami.Example.Id),
+			InstanceType: pulumi.String("c5.large"),
 		})
 		if err != nil {
 			return err
@@ -328,14 +296,14 @@ func main() {
 					LaunchTemplateSpecification: &autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs{
 						LaunchTemplateId: exampleLaunchTemplate.ID(),
 					},
-					Override: pulumi.StringMapArray{
-						pulumi.StringMap{
-							"instanceType":     pulumi.String("c4.large"),
-							"weightedCapacity": pulumi.String("3"),
+					Overrides: autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArray{
+						&autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs{
+							InstanceType:     pulumi.String("c4.large"),
+							WeightedCapacity: pulumi.String("3"),
 						},
-						pulumi.StringMap{
-							"instanceType":     pulumi.String("c3.large"),
-							"weightedCapacity": pulumi.String("2"),
+						&autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs{
+							InstanceType:     pulumi.String("c3.large"),
+							WeightedCapacity: pulumi.String("2"),
 						},
 					},
 				},
@@ -357,9 +325,9 @@ import pulumi
 import pulumi_aws as aws
 
 example_launch_template = aws.ec2.LaunchTemplate("exampleLaunchTemplate",
+    name_prefix="example",
     image_id=data["aws_ami"]["example"]["id"],
-    instance_type="c5.large",
-    name_prefix="example")
+    instance_type="c5.large")
 example_group = aws.autoscaling.Group("exampleGroup",
     availability_zones=["us-east-1a"],
     desired_capacity=1,
@@ -370,7 +338,7 @@ example_group = aws.autoscaling.Group("exampleGroup",
             "launchTemplateSpecification": {
                 "launchTemplateId": example_launch_template.id,
             },
-            "override": [
+            "overrides": [
                 {
                     "instance_type": "c4.large",
                     "weightedCapacity": "3",
@@ -392,12 +360,12 @@ example_group = aws.autoscaling.Group("exampleGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
-    imageId: aws_ami_example.id,
-    instanceType: "c5.large",
+const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("exampleLaunchTemplate", {
     namePrefix: "example",
+    imageId: data.aws_ami.example.id,
+    instanceType: "c5.large",
 });
-const exampleGroup = new aws.autoscaling.Group("example", {
+const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
     availabilityZones: ["us-east-1a"],
     desiredCapacity: 1,
     maxSize: 1,
@@ -440,7 +408,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Group">NewGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupArgs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Group">NewGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupArgs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -514,7 +482,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -534,7 +502,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupArgs">GroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupArgs">GroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -544,7 +512,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -639,7 +607,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,7 +902,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,7 +973,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1300,7 +1268,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1371,7 +1339,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1666,7 +1634,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1737,7 +1705,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2032,7 +2000,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2211,7 +2179,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2340,7 +2308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2658,7 +2626,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2717,7 +2685,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3035,7 +3003,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3094,7 +3062,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3412,7 +3380,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3471,7 +3439,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
+    <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3789,7 +3757,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs to launch resources in.
+    <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3843,7 +3811,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupInitialLifecycleHook.html">output</a> API doc for this type.
@@ -4173,7 +4141,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupLaunchTemplate.html">output</a> API doc for this type.
@@ -4351,7 +4319,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicy.html">output</a> API doc for this type.
@@ -4485,7 +4453,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyInstancesDistributionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.html">output</a> API doc for this type.
@@ -4795,7 +4763,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplate.html">output</a> API doc for this type.
@@ -4929,7 +4897,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.html">output</a> API doc for this type.
@@ -5107,7 +5075,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateOverride.html">output</a> API doc for this type.
@@ -5241,7 +5209,7 @@ precedence over `min_elb_capacity` behavior.)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupTagOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupTag.html">output</a> API doc for this type.

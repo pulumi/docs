@@ -29,23 +29,23 @@ class MyStack : Stack
     {
         var example = new Aws.Ec2ClientVpn.Endpoint("example", new Aws.Ec2ClientVpn.EndpointArgs
         {
+            Description = "clientvpn-example",
+            ServerCertificateArn = aws_acm_certificate.Cert.Arn,
+            ClientCidrBlock = "10.0.0.0/16",
             AuthenticationOptions = 
             {
                 new Aws.Ec2ClientVpn.Inputs.EndpointAuthenticationOptionArgs
                 {
-                    RootCertificateChainArn = aws_acm_certificate.Root_cert.Arn,
                     Type = "certificate-authentication",
+                    RootCertificateChainArn = aws_acm_certificate.Root_cert.Arn,
                 },
             },
-            ClientCidrBlock = "10.0.0.0/16",
             ConnectionLogOptions = new Aws.Ec2ClientVpn.Inputs.EndpointConnectionLogOptionsArgs
             {
+                Enabled = true,
                 CloudwatchLogGroup = aws_cloudwatch_log_group.Lg.Name,
                 CloudwatchLogStream = aws_cloudwatch_log_stream.Ls.Name,
-                Enabled = true,
             },
-            Description = "clientvpn-example",
-            ServerCertificateArn = aws_acm_certificate.Cert.Arn,
         });
     }
 
@@ -59,27 +59,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2clientvpn.NewEndpoint(ctx, "example", &ec2clientvpn.EndpointArgs{
+			Description:          pulumi.String("clientvpn-example"),
+			ServerCertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
+			ClientCidrBlock:      pulumi.String("10.0.0.0/16"),
 			AuthenticationOptions: ec2clientvpn.EndpointAuthenticationOptionArray{
 				&ec2clientvpn.EndpointAuthenticationOptionArgs{
-					RootCertificateChainArn: pulumi.String(aws_acm_certificate.Root_cert.Arn),
 					Type:                    pulumi.String("certificate-authentication"),
+					RootCertificateChainArn: pulumi.Any(aws_acm_certificate.Root_cert.Arn),
 				},
 			},
-			ClientCidrBlock: pulumi.String("10.0.0.0/16"),
 			ConnectionLogOptions: &ec2clientvpn.EndpointConnectionLogOptionsArgs{
-				CloudwatchLogGroup:  pulumi.String(aws_cloudwatch_log_group.Lg.Name),
-				CloudwatchLogStream: pulumi.String(aws_cloudwatch_log_stream.Ls.Name),
 				Enabled:             pulumi.Bool(true),
+				CloudwatchLogGroup:  pulumi.Any(aws_cloudwatch_log_group.Lg.Name),
+				CloudwatchLogStream: pulumi.Any(aws_cloudwatch_log_stream.Ls.Name),
 			},
-			Description:          pulumi.String("clientvpn-example"),
-			ServerCertificateArn: pulumi.String(aws_acm_certificate.Cert.Arn),
 		})
 		if err != nil {
 			return err
@@ -97,18 +97,18 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ec2clientvpn.Endpoint("example",
-    authentication_options=[{
-        "rootCertificateChainArn": aws_acm_certificate["root_cert"]["arn"],
-        "type": "certificate-authentication",
-    }],
+    description="clientvpn-example",
+    server_certificate_arn=aws_acm_certificate["cert"]["arn"],
     client_cidr_block="10.0.0.0/16",
+    authentication_options=[{
+        "type": "certificate-authentication",
+        "rootCertificateChainArn": aws_acm_certificate["root_cert"]["arn"],
+    }],
     connection_log_options={
+        "enabled": True,
         "cloudwatchLogGroup": aws_cloudwatch_log_group["lg"]["name"],
         "cloudwatchLogStream": aws_cloudwatch_log_stream["ls"]["name"],
-        "enabled": True,
-    },
-    description="clientvpn-example",
-    server_certificate_arn=aws_acm_certificate["cert"]["arn"])
+    })
 ```
 
 {{% /example %}}
@@ -120,18 +120,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ec2clientvpn.Endpoint("example", {
-    authenticationOptions: [{
-        rootCertificateChainArn: aws_acm_certificate_root_cert.arn,
-        type: "certificate-authentication",
-    }],
-    clientCidrBlock: "10.0.0.0/16",
-    connectionLogOptions: {
-        cloudwatchLogGroup: aws_cloudwatch_log_group_lg.name,
-        cloudwatchLogStream: aws_cloudwatch_log_stream_ls.name,
-        enabled: true,
-    },
     description: "clientvpn-example",
-    serverCertificateArn: aws_acm_certificate_cert.arn,
+    serverCertificateArn: aws_acm_certificate.cert.arn,
+    clientCidrBlock: "10.0.0.0/16",
+    authenticationOptions: [{
+        type: "certificate-authentication",
+        rootCertificateChainArn: aws_acm_certificate.root_cert.arn,
+    }],
+    connectionLogOptions: {
+        enabled: true,
+        cloudwatchLogGroup: aws_cloudwatch_log_group.lg.name,
+        cloudwatchLogStream: aws_cloudwatch_log_stream.ls.name,
+    },
 });
 ```
 
@@ -153,7 +153,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#Endpoint">NewEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#Endpoint">NewEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -227,7 +227,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -247,7 +247,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointArgs">EndpointArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointArgs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -972,7 +972,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointState">EndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointState">EndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1652,7 +1652,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointAuthenticationOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointAuthenticationOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointAuthenticationOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointAuthenticationOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Inputs.EndpointAuthenticationOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointAuthenticationOption.html">output</a> API doc for this type.
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointConnectionLogOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn?tab=doc#EndpointConnectionLogOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointConnectionLogOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2clientvpn?tab=doc#EndpointConnectionLogOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Inputs.EndpointConnectionLogOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointConnectionLogOptions.html">output</a> API doc for this type.

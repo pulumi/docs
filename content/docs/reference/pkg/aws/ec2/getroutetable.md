@@ -38,8 +38,8 @@ class MyStack : Stack
         }));
         var route = new Aws.Ec2.Route("route", new Aws.Ec2.RouteArgs
         {
-            DestinationCidrBlock = "10.0.1.0/22",
             RouteTableId = selected.Apply(selected => selected.Id),
+            DestinationCidrBlock = "10.0.1.0/22",
             VpcPeeringConnectionId = "pcx-45ff3dc1",
         });
     }
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -68,8 +68,8 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
-			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
 			RouteTableId:           pulumi.String(selected.Id),
+			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
 			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),
 		})
 		if err != nil {
@@ -91,8 +91,8 @@ config = pulumi.Config()
 subnet_id = config.require_object("subnetId")
 selected = aws.ec2.get_route_table(subnet_id=subnet_id)
 route = aws.ec2.Route("route",
-    destination_cidr_block="10.0.1.0/22",
     route_table_id=selected.id,
+    destination_cidr_block="10.0.1.0/22",
     vpc_peering_connection_id="pcx-45ff3dc1")
 ```
 
@@ -105,14 +105,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const subnetId = config.require("subnetId");
-
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const subnetId = config.requireObject("subnetId");
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}, { async: true }));
+});
 const route = new aws.ec2.Route("route", {
+    routeTableId: selected.then(selected => selected.id),
     destinationCidrBlock: "10.0.1.0/22",
-    routeTableId: selected.id,
     vpcPeeringConnectionId: "pcx-45ff3dc1",
 });
 ```
@@ -138,7 +137,7 @@ const route = new aws.ec2.Route("route", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouteTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupRouteTableArgs">LookupRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupRouteTableResult">LookupRouteTableResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouteTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupRouteTableArgs">LookupRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupRouteTableResult">LookupRouteTableResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRouteTable` in the Go SDK.
 
@@ -929,7 +928,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableAssociationType">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTableAssociationType">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableAssociation.html">output</a> API doc for this type.
@@ -1195,7 +1194,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTableFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTableFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetRouteTableFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableFilter.html">output</a> API doc for this type.
@@ -1337,7 +1336,7 @@ A Route Table will be selected if any one of the given values matches.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableRoute">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTableRoute">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableRoute.html">output</a> API doc for this type.

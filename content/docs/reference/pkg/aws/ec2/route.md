@@ -24,16 +24,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const vpc = new aws.ec2.Vpc("vpc", {
-    assignGeneratedIpv6CidrBlock: true,
     cidrBlock: "10.1.0.0/16",
+    assignGeneratedIpv6CidrBlock: true,
 });
-const egress = new aws.ec2.EgressOnlyInternetGateway("egress", {
-    vpcId: vpc.id,
-});
-const route = new aws.ec2.Route("r", {
+const egress = new aws.ec2.EgressOnlyInternetGateway("egress", {vpcId: vpc.id});
+const route = new aws.ec2.Route("route", {
+    routeTableId: "rtb-4fbb3ac4",
     destinationIpv6CidrBlock: "::/0",
     egressOnlyGatewayId: egress.id,
-    routeTableId: "rtb-4fbb3ac4",
 });
 ```
 ```python
@@ -41,13 +39,13 @@ import pulumi
 import pulumi_aws as aws
 
 vpc = aws.ec2.Vpc("vpc",
-    assign_generated_ipv6_cidr_block=True,
-    cidr_block="10.1.0.0/16")
+    cidr_block="10.1.0.0/16",
+    assign_generated_ipv6_cidr_block=True)
 egress = aws.ec2.EgressOnlyInternetGateway("egress", vpc_id=vpc.id)
 route = aws.ec2.Route("route",
+    route_table_id="rtb-4fbb3ac4",
     destination_ipv6_cidr_block="::/0",
-    egress_only_gateway_id=egress.id,
-    route_table_id="rtb-4fbb3ac4")
+    egress_only_gateway_id=egress.id)
 ```
 ```csharp
 using Pulumi;
@@ -59,8 +57,8 @@ class MyStack : Stack
     {
         var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs
         {
-            AssignGeneratedIpv6CidrBlock = true,
             CidrBlock = "10.1.0.0/16",
+            AssignGeneratedIpv6CidrBlock = true,
         });
         var egress = new Aws.Ec2.EgressOnlyInternetGateway("egress", new Aws.Ec2.EgressOnlyInternetGatewayArgs
         {
@@ -68,9 +66,9 @@ class MyStack : Stack
         });
         var route = new Aws.Ec2.Route("route", new Aws.Ec2.RouteArgs
         {
+            RouteTableId = "rtb-4fbb3ac4",
             DestinationIpv6CidrBlock = "::/0",
             EgressOnlyGatewayId = egress.Id,
-            RouteTableId = "rtb-4fbb3ac4",
         });
     }
 
@@ -80,15 +78,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
-			AssignGeneratedIpv6CidrBlock: pulumi.Bool(true),
 			CidrBlock:                    pulumi.String("10.1.0.0/16"),
+			AssignGeneratedIpv6CidrBlock: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -100,9 +98,9 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+			RouteTableId:             pulumi.String("rtb-4fbb3ac4"),
 			DestinationIpv6CidrBlock: pulumi.String("::/0"),
 			EgressOnlyGatewayId:      egress.ID(),
-			RouteTableId:             pulumi.String("rtb-4fbb3ac4"),
 		})
 		if err != nil {
 			return err
@@ -135,7 +133,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_route_table.testing",
+                aws_route_table.Testing,
             },
         });
     }
@@ -150,7 +148,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -161,7 +159,7 @@ func main() {
 			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
 			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_route_table.testing",
+			aws_route_table.Testing,
 		}))
 		if err != nil {
 			return err
@@ -182,7 +180,7 @@ route = aws.ec2.Route("route",
     route_table_id="rtb-4fbb3ac4",
     destination_cidr_block="10.0.1.0/22",
     vpc_peering_connection_id="pcx-45ff3dc1",
-    opts=ResourceOptions(depends_on=["aws_route_table.testing"]))
+    opts=ResourceOptions(depends_on=[aws_route_table["testing"]]))
 ```
 
 {{% /example %}}
@@ -198,7 +196,7 @@ const route = new aws.ec2.Route("route", {
     destinationCidrBlock: "10.0.1.0/22",
     vpcPeeringConnectionId: "pcx-45ff3dc1",
 }, {
-    dependsOn: ["aws_route_table.testing"],
+    dependsOn: [aws_route_table.testing],
 });
 ```
 
@@ -220,7 +218,7 @@ const route = new aws.ec2.Route("route", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -294,7 +292,7 @@ const route = new aws.ec2.Route("route", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -314,7 +312,7 @@ const route = new aws.ec2.Route("route", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -324,7 +322,7 @@ const route = new aws.ec2.Route("route", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1111,7 +1109,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

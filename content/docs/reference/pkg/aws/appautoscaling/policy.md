@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,14 +131,14 @@ dynamodb_table_read_policy = aws.appautoscaling.Policy("dynamodbTableReadPolicy"
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_read_target", {
+const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodbTableReadTarget", {
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
-const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_read_policy", {
+const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodbTableReadPolicy", {
     policyType: "TargetTrackingScaling",
     resourceId: dynamodbTableReadTarget.resourceId,
     scalableDimension: dynamodbTableReadTarget.scalableDimension,
@@ -205,7 +205,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -283,14 +283,14 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
+const ecsTarget = new aws.appautoscaling.Target("ecsTarget", {
     maxCapacity: 4,
     minCapacity: 1,
     resourceId: "service/clusterName/serviceName",
     scalableDimension: "ecs:service:DesiredCount",
     serviceNamespace: "ecs",
 });
-const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
+const ecsPolicy = new aws.appautoscaling.Policy("ecsPolicy", {
     policyType: "StepScaling",
     resourceId: ecsTarget.resourceId,
     scalableDimension: ecsTarget.scalableDimension,
@@ -300,7 +300,7 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
         cooldown: 60,
         metricAggregationType: "Maximum",
         stepAdjustments: [{
-            metricIntervalUpperBound: "0",
+            metricIntervalUpperBound: 0,
             scalingAdjustment: -1,
         }],
     },
@@ -311,11 +311,51 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
 
 ### Preserve desired count when updating an autoscaled ECS Service
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecsService = new Aws.Ecs.Service("ecsService", new Aws.Ecs.ServiceArgs
+        {
+            Cluster = "clusterName",
+            TaskDefinition = "taskDefinitionFamily:1",
+            DesiredCount = 2,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.NewService(ctx, "ecsService", &ecs.ServiceArgs{
+			Cluster:        pulumi.String("clusterName"),
+			TaskDefinition: pulumi.String("taskDefinitionFamily:1"),
+			DesiredCount:   pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -325,11 +365,8 @@ import pulumi_aws as aws
 
 ecs_service = aws.ecs.Service("ecsService",
     cluster="clusterName",
-    desired_count=2,
-    lifecycle={
-        "ignoreChanges": ["desiredCount"],
-    },
-    task_definition="taskDefinitionFamily:1")
+    task_definition="taskDefinitionFamily:1",
+    desired_count=2)
 ```
 
 {{% /example %}}
@@ -340,11 +377,11 @@ ecs_service = aws.ecs.Service("ecsService",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ecsService = new aws.ecs.Service("ecs_service", {
+const ecsService = new aws.ecs.Service("ecsService", {
     cluster: "clusterName",
-    desiredCount: 2,
     taskDefinition: "taskDefinitionFamily:1",
-}, { ignoreChanges: ["desiredCount"] });
+    desiredCount: 2,
+});
 ```
 
 {{% /example %}}
@@ -361,27 +398,27 @@ class MyStack : Stack
     {
         var replicasTarget = new Aws.AppAutoScaling.Target("replicasTarget", new Aws.AppAutoScaling.TargetArgs
         {
-            MaxCapacity = 15,
-            MinCapacity = 1,
-            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
-            ScalableDimension = "rds:cluster:ReadReplicaCount",
             ServiceNamespace = "rds",
+            ScalableDimension = "rds:cluster:ReadReplicaCount",
+            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
+            MinCapacity = 1,
+            MaxCapacity = 15,
         });
         var replicasPolicy = new Aws.AppAutoScaling.Policy("replicasPolicy", new Aws.AppAutoScaling.PolicyArgs
         {
-            PolicyType = "TargetTrackingScaling",
-            ResourceId = replicasTarget.ResourceId,
-            ScalableDimension = replicasTarget.ScalableDimension,
             ServiceNamespace = replicasTarget.ServiceNamespace,
+            ScalableDimension = replicasTarget.ScalableDimension,
+            ResourceId = replicasTarget.ResourceId,
+            PolicyType = "TargetTrackingScaling",
             TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
             {
                 PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
                 {
                     PredefinedMetricType = "RDSReaderAverageCPUUtilization",
                 },
+                TargetValue = 75,
                 ScaleInCooldown = 300,
                 ScaleOutCooldown = 300,
-                TargetValue = 75,
             },
         });
     }
@@ -398,34 +435,34 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		replicasTarget, err := appautoscaling.NewTarget(ctx, "replicasTarget", &appautoscaling.TargetArgs{
-			MaxCapacity:       pulumi.Int(15),
-			MinCapacity:       pulumi.Int(1),
-			ResourceId:        pulumi.String(fmt.Sprintf("%v%v", "cluster:", aws_rds_cluster.Example.Id)),
-			ScalableDimension: pulumi.String("rds:cluster:ReadReplicaCount"),
 			ServiceNamespace:  pulumi.String("rds"),
+			ScalableDimension: pulumi.String("rds:cluster:ReadReplicaCount"),
+			ResourceId:        pulumi.String(fmt.Sprintf("%v%v", "cluster:", aws_rds_cluster.Example.Id)),
+			MinCapacity:       pulumi.Int(1),
+			MaxCapacity:       pulumi.Int(15),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = appautoscaling.NewPolicy(ctx, "replicasPolicy", &appautoscaling.PolicyArgs{
-			PolicyType:        pulumi.String("TargetTrackingScaling"),
-			ResourceId:        replicasTarget.ResourceId,
-			ScalableDimension: replicasTarget.ScalableDimension,
 			ServiceNamespace:  replicasTarget.ServiceNamespace,
+			ScalableDimension: replicasTarget.ScalableDimension,
+			ResourceId:        replicasTarget.ResourceId,
+			PolicyType:        pulumi.String("TargetTrackingScaling"),
 			TargetTrackingScalingPolicyConfiguration: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs{
 				PredefinedMetricSpecification: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs{
 					PredefinedMetricType: pulumi.String("RDSReaderAverageCPUUtilization"),
 				},
+				TargetValue:      pulumi.Float64(75),
 				ScaleInCooldown:  pulumi.Int(300),
 				ScaleOutCooldown: pulumi.Int(300),
-				TargetValue:      pulumi.Float64(75),
 			},
 		})
 		if err != nil {
@@ -444,23 +481,23 @@ import pulumi
 import pulumi_aws as aws
 
 replicas_target = aws.appautoscaling.Target("replicasTarget",
-    max_capacity=15,
-    min_capacity=1,
-    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    service_namespace="rds",
     scalable_dimension="rds:cluster:ReadReplicaCount",
-    service_namespace="rds")
+    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    min_capacity=1,
+    max_capacity=15)
 replicas_policy = aws.appautoscaling.Policy("replicasPolicy",
-    policy_type="TargetTrackingScaling",
-    resource_id=replicas_target.resource_id,
-    scalable_dimension=replicas_target.scalable_dimension,
     service_namespace=replicas_target.service_namespace,
+    scalable_dimension=replicas_target.scalable_dimension,
+    resource_id=replicas_target.resource_id,
+    policy_type="TargetTrackingScaling",
     target_tracking_scaling_policy_configuration={
         "predefinedMetricSpecification": {
             "predefinedMetricType": "RDSReaderAverageCPUUtilization",
         },
+        "targetValue": 75,
         "scaleInCooldown": 300,
         "scaleOutCooldown": 300,
-        "targetValue": 75,
     })
 ```
 
@@ -472,25 +509,25 @@ replicas_policy = aws.appautoscaling.Policy("replicasPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const replicasTarget = new aws.appautoscaling.Target("replicas", {
-    maxCapacity: 15,
-    minCapacity: 1,
-    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
-    scalableDimension: "rds:cluster:ReadReplicaCount",
+const replicasTarget = new aws.appautoscaling.Target("replicasTarget", {
     serviceNamespace: "rds",
+    scalableDimension: "rds:cluster:ReadReplicaCount",
+    resourceId: `cluster:${aws_rds_cluster.example.id}`,
+    minCapacity: 1,
+    maxCapacity: 15,
 });
-const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
-    policyType: "TargetTrackingScaling",
-    resourceId: replicasTarget.resourceId,
-    scalableDimension: replicasTarget.scalableDimension,
+const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
     serviceNamespace: replicasTarget.serviceNamespace,
+    scalableDimension: replicasTarget.scalableDimension,
+    resourceId: replicasTarget.resourceId,
+    policyType: "TargetTrackingScaling",
     targetTrackingScalingPolicyConfiguration: {
         predefinedMetricSpecification: {
             predefinedMetricType: "RDSReaderAverageCPUUtilization",
         },
+        targetValue: 75,
         scaleInCooldown: 300,
         scaleOutCooldown: 300,
-        targetValue: 75,
     },
 });
 ```
@@ -513,7 +550,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -587,7 +624,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -607,7 +644,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -617,7 +654,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1156,7 +1193,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1660,7 +1697,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">output</a> API doc for this type.
@@ -1926,7 +1963,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfigurationStepAdjustment.html">output</a> API doc for this type.
@@ -2104,7 +2141,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">output</a> API doc for this type.
@@ -2414,7 +2451,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
@@ -2680,7 +2717,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension.html">output</a> API doc for this type.
@@ -2814,7 +2851,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.

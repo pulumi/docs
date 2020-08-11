@@ -34,26 +34,32 @@ class MyStack : Stack
     {
         var defaultCluster = new Aws.Neptune.Cluster("defaultCluster", new Aws.Neptune.ClusterArgs
         {
-            ApplyImmediately = true,
-            BackupRetentionPeriod = 5,
             ClusterIdentifier = "neptune-cluster-demo",
             Engine = "neptune",
-            IamDatabaseAuthenticationEnabled = true,
+            BackupRetentionPeriod = 5,
             PreferredBackupWindow = "07:00-09:00",
             SkipFinalSnapshot = true,
+            IamDatabaseAuthenticationEnabled = true,
+            ApplyImmediately = true,
         });
         var example = new Aws.Neptune.ClusterInstance("example", new Aws.Neptune.ClusterInstanceArgs
         {
-            ApplyImmediately = true,
             ClusterIdentifier = defaultCluster.Id,
             Engine = "neptune",
             InstanceClass = "db.r4.large",
+            ApplyImmediately = true,
         });
         var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
         {
         });
         var defaultEventSubscription = new Aws.Neptune.EventSubscription("defaultEventSubscription", new Aws.Neptune.EventSubscriptionArgs
         {
+            SnsTopicArn = defaultTopic.Arn,
+            SourceType = "db-instance",
+            SourceIds = 
+            {
+                example.Id,
+            },
             EventCategories = 
             {
                 "maintenance",
@@ -69,12 +75,6 @@ class MyStack : Stack
                 "configuration change",
                 "read replica",
             },
-            SnsTopicArn = defaultTopic.Arn,
-            SourceIds = 
-            {
-                example.Id,
-            },
-            SourceType = "db-instance",
             Tags = 
             {
                 { "env", "test" },
@@ -92,30 +92,30 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultCluster, err := neptune.NewCluster(ctx, "defaultCluster", &neptune.ClusterArgs{
-			ApplyImmediately:                 pulumi.Bool(true),
-			BackupRetentionPeriod:            pulumi.Int(5),
 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
 			Engine:                           pulumi.String("neptune"),
-			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+			BackupRetentionPeriod:            pulumi.Int(5),
 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
 			SkipFinalSnapshot:                pulumi.Bool(true),
+			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+			ApplyImmediately:                 pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		example, err := neptune.NewClusterInstance(ctx, "example", &neptune.ClusterInstanceArgs{
-			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: defaultCluster.ID(),
 			Engine:            pulumi.String("neptune"),
 			InstanceClass:     pulumi.String("db.r4.large"),
+			ApplyImmediately:  pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -125,6 +125,11 @@ func main() {
 			return err
 		}
 		_, err = neptune.NewEventSubscription(ctx, "defaultEventSubscription", &neptune.EventSubscriptionArgs{
+			SnsTopicArn: defaultTopic.Arn,
+			SourceType:  pulumi.String("db-instance"),
+			SourceIds: pulumi.StringArray{
+				example.ID(),
+			},
 			EventCategories: pulumi.StringArray{
 				pulumi.String("maintenance"),
 				pulumi.String("availability"),
@@ -139,11 +144,6 @@ func main() {
 				pulumi.String("configuration change"),
 				pulumi.String("read replica"),
 			},
-			SnsTopicArn: defaultTopic.Arn,
-			SourceIds: pulumi.StringArray{
-				example.ID(),
-			},
-			SourceType: pulumi.String("db-instance"),
 			Tags: pulumi.StringMap{
 				"env": pulumi.String("test"),
 			},
@@ -164,20 +164,23 @@ import pulumi
 import pulumi_aws as aws
 
 default_cluster = aws.neptune.Cluster("defaultCluster",
-    apply_immediately="true",
-    backup_retention_period=5,
     cluster_identifier="neptune-cluster-demo",
     engine="neptune",
-    iam_database_authentication_enabled="true",
+    backup_retention_period=5,
     preferred_backup_window="07:00-09:00",
-    skip_final_snapshot=True)
+    skip_final_snapshot=True,
+    iam_database_authentication_enabled="true",
+    apply_immediately="true")
 example = aws.neptune.ClusterInstance("example",
-    apply_immediately="true",
     cluster_identifier=default_cluster.id,
     engine="neptune",
-    instance_class="db.r4.large")
+    instance_class="db.r4.large",
+    apply_immediately="true")
 default_topic = aws.sns.Topic("defaultTopic")
 default_event_subscription = aws.neptune.EventSubscription("defaultEventSubscription",
+    sns_topic_arn=default_topic.arn,
+    source_type="db-instance",
+    source_ids=[example.id],
     event_categories=[
         "maintenance",
         "availability",
@@ -192,9 +195,6 @@ default_event_subscription = aws.neptune.EventSubscription("defaultEventSubscrip
         "configuration change",
         "read replica",
     ],
-    sns_topic_arn=default_topic.arn,
-    source_ids=[example.id],
-    source_type="db-instance",
     tags={
         "env": "test",
     })
@@ -208,23 +208,26 @@ default_event_subscription = aws.neptune.EventSubscription("defaultEventSubscrip
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.neptune.Cluster("default", {
-    applyImmediately: true,
-    backupRetentionPeriod: 5,
+const defaultCluster = new aws.neptune.Cluster("defaultCluster", {
     clusterIdentifier: "neptune-cluster-demo",
     engine: "neptune",
-    iamDatabaseAuthenticationEnabled: true,
+    backupRetentionPeriod: 5,
     preferredBackupWindow: "07:00-09:00",
     skipFinalSnapshot: true,
+    iamDatabaseAuthenticationEnabled: "true",
+    applyImmediately: "true",
 });
 const example = new aws.neptune.ClusterInstance("example", {
-    applyImmediately: true,
     clusterIdentifier: defaultCluster.id,
     engine: "neptune",
     instanceClass: "db.r4.large",
+    applyImmediately: "true",
 });
-const defaultTopic = new aws.sns.Topic("default", {});
-const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
+const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+const defaultEventSubscription = new aws.neptune.EventSubscription("defaultEventSubscription", {
+    snsTopicArn: defaultTopic.arn,
+    sourceType: "db-instance",
+    sourceIds: [example.id],
     eventCategories: [
         "maintenance",
         "availability",
@@ -239,9 +242,6 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
         "configuration change",
         "read replica",
     ],
-    snsTopicArn: defaultTopic.arn,
-    sourceIds: [example.id],
-    sourceType: "db-instance",
     tags: {
         env: "test",
     },
@@ -266,7 +266,7 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -340,7 +340,7 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -360,7 +360,7 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -370,7 +370,7 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -989,7 +989,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

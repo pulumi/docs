@@ -32,23 +32,23 @@ class MyStack : Stack
         });
         var fooSubnet = new Aws.Ec2.Subnet("fooSubnet", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = "us-west-2a",
             CidrBlock = "10.1.1.0/24",
+            AvailabilityZone = "us-west-2a",
+            VpcId = fooVpc.Id,
             Tags = 
             {
                 { "Name", "tf-dbsubnet-test-1" },
             },
-            VpcId = fooVpc.Id,
         });
         var bar = new Aws.Ec2.Subnet("bar", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = "us-west-2b",
             CidrBlock = "10.1.2.0/24",
+            AvailabilityZone = "us-west-2b",
+            VpcId = fooVpc.Id,
             Tags = 
             {
                 { "Name", "tf-dbsubnet-test-2" },
             },
-            VpcId = fooVpc.Id,
         });
         var fooSubnetGroup = new Aws.RedShift.SubnetGroup("fooSubnetGroup", new Aws.RedShift.SubnetGroupArgs
         {
@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,23 +88,23 @@ func main() {
 			return err
 		}
 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
-			AvailabilityZone: pulumi.String("us-west-2a"),
 			CidrBlock:        pulumi.String("10.1.1.0/24"),
+			AvailabilityZone: pulumi.String("us-west-2a"),
+			VpcId:            fooVpc.ID(),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("tf-dbsubnet-test-1"),
 			},
-			VpcId: fooVpc.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
-			AvailabilityZone: pulumi.String("us-west-2b"),
 			CidrBlock:        pulumi.String("10.1.2.0/24"),
+			AvailabilityZone: pulumi.String("us-west-2b"),
+			VpcId:            fooVpc.ID(),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("tf-dbsubnet-test-2"),
 			},
-			VpcId: fooVpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -135,19 +135,19 @@ import pulumi_aws as aws
 
 foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
 foo_subnet = aws.ec2.Subnet("fooSubnet",
-    availability_zone="us-west-2a",
     cidr_block="10.1.1.0/24",
+    availability_zone="us-west-2a",
+    vpc_id=foo_vpc.id,
     tags={
         "Name": "tf-dbsubnet-test-1",
-    },
-    vpc_id=foo_vpc.id)
+    })
 bar = aws.ec2.Subnet("bar",
-    availability_zone="us-west-2b",
     cidr_block="10.1.2.0/24",
+    availability_zone="us-west-2b",
+    vpc_id=foo_vpc.id,
     tags={
         "Name": "tf-dbsubnet-test-2",
-    },
-    vpc_id=foo_vpc.id)
+    })
 foo_subnet_group = aws.redshift.SubnetGroup("fooSubnetGroup",
     subnet_ids=[
         foo_subnet.id,
@@ -166,26 +166,24 @@ foo_subnet_group = aws.redshift.SubnetGroup("fooSubnetGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpc = new aws.ec2.Vpc("foo", {
-    cidrBlock: "10.1.0.0/16",
-});
-const fooSubnet = new aws.ec2.Subnet("foo", {
-    availabilityZone: "us-west-2a",
+const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"});
+const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
     cidrBlock: "10.1.1.0/24",
+    availabilityZone: "us-west-2a",
+    vpcId: fooVpc.id,
     tags: {
         Name: "tf-dbsubnet-test-1",
     },
-    vpcId: fooVpc.id,
 });
 const bar = new aws.ec2.Subnet("bar", {
-    availabilityZone: "us-west-2b",
     cidrBlock: "10.1.2.0/24",
+    availabilityZone: "us-west-2b",
+    vpcId: fooVpc.id,
     tags: {
         Name: "tf-dbsubnet-test-2",
     },
-    vpcId: fooVpc.id,
 });
-const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
+const fooSubnetGroup = new aws.redshift.SubnetGroup("fooSubnetGroup", {
     subnetIds: [
         fooSubnet.id,
         bar.id,
@@ -214,7 +212,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroup">NewSubnetGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroup">NewSubnetGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -288,7 +286,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -308,7 +306,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +316,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -725,7 +723,7 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroupState">SubnetGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroupState">SubnetGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

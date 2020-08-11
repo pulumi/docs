@@ -33,11 +33,11 @@ class MyStack : Stack
         });
         var exampleTransitVirtualInterface = new Aws.DirectConnect.TransitVirtualInterface("exampleTransitVirtualInterface", new Aws.DirectConnect.TransitVirtualInterfaceArgs
         {
-            AddressFamily = "ipv4",
-            BgpAsn = 65352,
             ConnectionId = aws_dx_connection.Example.Id,
             DxGatewayId = exampleGateway.Id,
             Vlan = 4094,
+            AddressFamily = "ipv4",
+            BgpAsn = 65352,
         });
     }
 
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -64,11 +64,11 @@ func main() {
 			return err
 		}
 		_, err = directconnect.NewTransitVirtualInterface(ctx, "exampleTransitVirtualInterface", &directconnect.TransitVirtualInterfaceArgs{
-			AddressFamily: pulumi.String("ipv4"),
-			BgpAsn:        pulumi.Int(65352),
-			ConnectionId:  pulumi.String(aws_dx_connection.Example.Id),
+			ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
 			DxGatewayId:   exampleGateway.ID(),
 			Vlan:          pulumi.Int(4094),
+			AddressFamily: pulumi.String("ipv4"),
+			BgpAsn:        pulumi.Int(65352),
 		})
 		if err != nil {
 			return err
@@ -87,11 +87,11 @@ import pulumi_aws as aws
 
 example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn=64512)
 example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("exampleTransitVirtualInterface",
-    address_family="ipv4",
-    bgp_asn=65352,
     connection_id=aws_dx_connection["example"]["id"],
     dx_gateway_id=example_gateway.id,
-    vlan=4094)
+    vlan=4094,
+    address_family="ipv4",
+    bgp_asn=65352)
 ```
 
 {{% /example %}}
@@ -102,15 +102,13 @@ example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("e
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleGateway = new aws.directconnect.Gateway("example", {
-    amazonSideAsn: "64512",
-});
-const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInterface("example", {
-    addressFamily: "ipv4",
-    bgpAsn: 65352,
-    connectionId: aws_dx_connection_example.id,
+const exampleGateway = new aws.directconnect.Gateway("exampleGateway", {amazonSideAsn: 64512});
+const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInterface("exampleTransitVirtualInterface", {
+    connectionId: aws_dx_connection.example.id,
     dxGatewayId: exampleGateway.id,
     vlan: 4094,
+    addressFamily: "ipv4",
+    bgpAsn: 65352,
 });
 ```
 
@@ -132,7 +130,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterface">NewTransitVirtualInterface</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterface">NewTransitVirtualInterface</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -206,7 +204,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -226,7 +224,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +234,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1083,7 +1081,7 @@ Get an existing TransitVirtualInterface resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterfaceState">TransitVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterfaceState">TransitVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

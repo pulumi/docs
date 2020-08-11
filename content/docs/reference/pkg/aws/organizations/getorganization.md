@@ -43,7 +43,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,6 +112,7 @@ class MyStack : Stack
                 {
                     new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                     {
+                        Effect = "Allow",
                         Actions = 
                         {
                             "SNS:Subscribe",
@@ -122,23 +123,22 @@ class MyStack : Stack
                             new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                             {
                                 Test = "StringEquals",
+                                Variable = "aws:PrincipalOrgID",
                                 Values = 
                                 {
                                     example.Id,
                                 },
-                                Variable = "aws:PrincipalOrgID",
                             },
                         },
-                        Effect = "Allow",
                         Principals = 
                         {
                             new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
                             {
+                                Type = "AWS",
                                 Identifiers = 
                                 {
                                     "*",
                                 },
-                                Type = "AWS",
                             },
                         },
                         Resources = 
@@ -166,9 +166,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -204,19 +204,19 @@ import pulumi_aws as aws
 example = aws.organizations.get_organization()
 sns_topic = aws.sns.Topic("snsTopic")
 sns_topic_policy_policy_document = sns_topic.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
+    "effect": "Allow",
     "actions": [
         "SNS:Subscribe",
         "SNS:Publish",
     ],
     "conditions": [{
         "test": "StringEquals",
-        "values": [example.id],
         "variable": "aws:PrincipalOrgID",
+        "values": [example.id],
     }],
-    "effect": "Allow",
     "principals": [{
-        "identifiers": ["*"],
         "type": "AWS",
+        "identifiers": ["*"],
     }],
     "resources": [arn],
 }]))
@@ -233,28 +233,28 @@ sns_topic_policy_topic_policy = aws.sns.TopicPolicy("snsTopicPolicyTopicPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.organizations.getOrganization({ async: true }));
-const snsTopic = new aws.sns.Topic("sns_topic", {});
+const example = aws.organizations.getOrganization({});
+const snsTopic = new aws.sns.Topic("snsTopic", {});
 const snsTopicPolicyPolicyDocument = pulumi.all([example, snsTopic.arn]).apply(([example, arn]) => aws.iam.getPolicyDocument({
     statements: [{
+        effect: "Allow",
         actions: [
             "SNS:Subscribe",
             "SNS:Publish",
         ],
         conditions: [{
             test: "StringEquals",
-            values: [example.id],
             variable: "aws:PrincipalOrgID",
+            values: [example.id],
         }],
-        effect: "Allow",
         principals: [{
-            identifiers: ["*"],
             type: "AWS",
+            identifiers: ["*"],
         }],
         resources: [arn],
     }],
-}, { async: true }));
-const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
+}));
+const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("snsTopicPolicyTopicPolicy", {
     arn: snsTopic.arn,
     policy: snsTopicPolicyPolicyDocument.json,
 });
@@ -281,7 +281,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganization<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#LookupOrganizationResult">LookupOrganizationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganization<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#LookupOrganizationResult">LookupOrganizationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOrganization` in the Go SDK.
 
@@ -831,7 +831,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationAccount">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#GetOrganizationAccount">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationAccount.html">output</a> API doc for this type.
@@ -1097,7 +1097,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationNonMasterAccount">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#GetOrganizationNonMasterAccount">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationNonMasterAccount.html">output</a> API doc for this type.
@@ -1363,7 +1363,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRoot">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#GetOrganizationRoot">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRoot.html">output</a> API doc for this type.
@@ -1585,7 +1585,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRootPolicyType">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#GetOrganizationRootPolicyType">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRootPolicyType.html">output</a> API doc for this type.

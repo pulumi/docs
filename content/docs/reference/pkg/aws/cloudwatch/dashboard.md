@@ -28,42 +28,42 @@ class MyStack : Stack
     {
         var main = new Aws.CloudWatch.Dashboard("main", new Aws.CloudWatch.DashboardArgs
         {
-            DashboardBody = @" {
-   ""widgets"": [
-       {
-          ""type"":""metric"",
-          ""x"":0,
-          ""y"":0,
-          ""width"":12,
-          ""height"":6,
-          ""properties"":{
-             ""metrics"":[
-                [
-                   ""AWS/EC2"",
-                   ""CPUUtilization"",
-                   ""InstanceId"",
-                   ""i-012345""
-                ]
-             ],
-             ""period"":300,
-             ""stat"":""Average"",
-             ""region"":""us-east-1"",
-             ""title"":""EC2 Instance CPU""
-          }
-       },
-       {
-          ""type"":""text"",
-          ""x"":0,
-          ""y"":7,
-          ""width"":3,
-          ""height"":3,
-          ""properties"":{
-             ""markdown"":""Hello world""
-          }
-       }
-   ]
- }
- 
+            DashboardBody = @"{
+  ""widgets"": [
+    {
+      ""type"": ""metric"",
+      ""x"": 0,
+      ""y"": 0,
+      ""width"": 12,
+      ""height"": 6,
+      ""properties"": {
+        ""metrics"": [
+          [
+            ""AWS/EC2"",
+            ""CPUUtilization"",
+            ""InstanceId"",
+            ""i-012345""
+          ]
+        ],
+        ""period"": 300,
+        ""stat"": ""Average"",
+        ""region"": ""us-east-1"",
+        ""title"": ""EC2 Instance CPU""
+      }
+    },
+    {
+      ""type"": ""text"",
+      ""x"": 0,
+      ""y"": 7,
+      ""width"": 3,
+      ""height"": 3,
+      ""properties"": {
+        ""markdown"": ""Hello world""
+      }
+    }
+  ]
+}
+
 ",
             DashboardName = "my-dashboard",
         });
@@ -81,14 +81,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudwatch.NewDashboard(ctx, "main", &cloudwatch.DashboardArgs{
-			DashboardBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", " {\n", "   \"widgets\": [\n", "       {\n", "          \"type\":\"metric\",\n", "          \"x\":0,\n", "          \"y\":0,\n", "          \"width\":12,\n", "          \"height\":6,\n", "          \"properties\":{\n", "             \"metrics\":[\n", "                [\n", "                   \"AWS/EC2\",\n", "                   \"CPUUtilization\",\n", "                   \"InstanceId\",\n", "                   \"i-012345\"\n", "                ]\n", "             ],\n", "             \"period\":300,\n", "             \"stat\":\"Average\",\n", "             \"region\":\"us-east-1\",\n", "             \"title\":\"EC2 Instance CPU\"\n", "          }\n", "       },\n", "       {\n", "          \"type\":\"text\",\n", "          \"x\":0,\n", "          \"y\":7,\n", "          \"width\":3,\n", "          \"height\":3,\n", "          \"properties\":{\n", "             \"markdown\":\"Hello world\"\n", "          }\n", "       }\n", "   ]\n", " }\n", " \n")),
+			DashboardBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"widgets\": [\n", "    {\n", "      \"type\": \"metric\",\n", "      \"x\": 0,\n", "      \"y\": 0,\n", "      \"width\": 12,\n", "      \"height\": 6,\n", "      \"properties\": {\n", "        \"metrics\": [\n", "          [\n", "            \"AWS/EC2\",\n", "            \"CPUUtilization\",\n", "            \"InstanceId\",\n", "            \"i-012345\"\n", "          ]\n", "        ],\n", "        \"period\": 300,\n", "        \"stat\": \"Average\",\n", "        \"region\": \"us-east-1\",\n", "        \"title\": \"EC2 Instance CPU\"\n", "      }\n", "    },\n", "    {\n", "      \"type\": \"text\",\n", "      \"x\": 0,\n", "      \"y\": 7,\n", "      \"width\": 3,\n", "      \"height\": 3,\n", "      \"properties\": {\n", "        \"markdown\": \"Hello world\"\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
 			DashboardName: pulumi.String("my-dashboard"),
 		})
 		if err != nil {
@@ -107,42 +107,42 @@ import pulumi
 import pulumi_aws as aws
 
 main = aws.cloudwatch.Dashboard("main",
-    dashboard_body=""" {
-   "widgets": [
-       {
-          "type":"metric",
-          "x":0,
-          "y":0,
-          "width":12,
-          "height":6,
-          "properties":{
-             "metrics":[
-                [
-                   "AWS/EC2",
-                   "CPUUtilization",
-                   "InstanceId",
-                   "i-012345"
-                ]
-             ],
-             "period":300,
-             "stat":"Average",
-             "region":"us-east-1",
-             "title":"EC2 Instance CPU"
-          }
-       },
-       {
-          "type":"text",
-          "x":0,
-          "y":7,
-          "width":3,
-          "height":3,
-          "properties":{
-             "markdown":"Hello world"
-          }
-       }
-   ]
- }
- 
+    dashboard_body="""{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [
+            "AWS/EC2",
+            "CPUUtilization",
+            "InstanceId",
+            "i-012345"
+          ]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "us-east-1",
+        "title": "EC2 Instance CPU"
+      }
+    },
+    {
+      "type": "text",
+      "x": 0,
+      "y": 7,
+      "width": 3,
+      "height": 3,
+      "properties": {
+        "markdown": "Hello world"
+      }
+    }
+  ]
+}
+
 """,
     dashboard_name="my-dashboard")
 ```
@@ -156,42 +156,42 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const main = new aws.cloudwatch.Dashboard("main", {
-    dashboardBody: ` {
-   "widgets": [
-       {
-          "type":"metric",
-          "x":0,
-          "y":0,
-          "width":12,
-          "height":6,
-          "properties":{
-             "metrics":[
-                [
-                   "AWS/EC2",
-                   "CPUUtilization",
-                   "InstanceId",
-                   "i-012345"
-                ]
-             ],
-             "period":300,
-             "stat":"Average",
-             "region":"us-east-1",
-             "title":"EC2 Instance CPU"
-          }
-       },
-       {
-          "type":"text",
-          "x":0,
-          "y":7,
-          "width":3,
-          "height":3,
-          "properties":{
-             "markdown":"Hello world"
-          }
-       }
-   ]
- }
- `,
+    dashboardBody: `{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [
+            "AWS/EC2",
+            "CPUUtilization",
+            "InstanceId",
+            "i-012345"
+          ]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "us-east-1",
+        "title": "EC2 Instance CPU"
+      }
+    },
+    {
+      "type": "text",
+      "x": 0,
+      "y": 7,
+      "width": 3,
+      "height": 3,
+      "properties": {
+        "markdown": "Hello world"
+      }
+    }
+  ]
+}
+`,
     dashboardName: "my-dashboard",
 });
 ```
@@ -214,7 +214,7 @@ const main = new aws.cloudwatch.Dashboard("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#Dashboard">NewDashboard</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#Dashboard">NewDashboard</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -288,7 +288,7 @@ const main = new aws.cloudwatch.Dashboard("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -308,7 +308,7 @@ const main = new aws.cloudwatch.Dashboard("main", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#DashboardArgs">DashboardArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#DashboardArgs">DashboardArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +318,7 @@ const main = new aws.cloudwatch.Dashboard("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -637,7 +637,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

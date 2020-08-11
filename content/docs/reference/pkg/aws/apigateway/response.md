@@ -31,17 +31,17 @@ class MyStack : Stack
         });
         var test = new Aws.ApiGateway.Response("test", new Aws.ApiGateway.ResponseArgs
         {
-            ResponseParameters = 
-            {
-                { "gatewayresponse.header.Authorization", "'Basic'" },
-            },
+            RestApiId = main.Id,
+            StatusCode = "401",
+            ResponseType = "UNAUTHORIZED",
             ResponseTemplates = 
             {
                 { "application/json", "{'message':$context.error.messageString}" },
             },
-            ResponseType = "UNAUTHORIZED",
-            RestApiId = main.Id,
-            StatusCode = "401",
+            ResponseParameters = 
+            {
+                { "gatewayresponse.header.Authorization", "'Basic'" },
+            },
         });
     }
 
@@ -57,7 +57,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -68,15 +68,15 @@ func main() {
 			return err
 		}
 		_, err = apigateway.NewResponse(ctx, "test", &apigateway.ResponseArgs{
-			ResponseParameters: pulumi.StringMap{
-				"gatewayresponse.header.Authorization": pulumi.String("'Basic'"),
-			},
+			RestApiId:    main.ID(),
+			StatusCode:   pulumi.String("401"),
+			ResponseType: pulumi.String("UNAUTHORIZED"),
 			ResponseTemplates: pulumi.StringMap{
 				"application/json": pulumi.String(fmt.Sprintf("%v%v%v", "{'message':", "$", "context.error.messageString}")),
 			},
-			ResponseType: pulumi.String("UNAUTHORIZED"),
-			RestApiId:    main.ID(),
-			StatusCode:   pulumi.String("401"),
+			ResponseParameters: pulumi.StringMap{
+				"gatewayresponse.header.Authorization": pulumi.String("'Basic'"),
+			},
 		})
 		if err != nil {
 			return err
@@ -95,15 +95,15 @@ import pulumi_aws as aws
 
 main = aws.apigateway.RestApi("main")
 test = aws.apigateway.Response("test",
-    response_parameters={
-        "gatewayresponse.header.Authorization": "'Basic'",
-    },
+    rest_api_id=main.id,
+    status_code="401",
+    response_type="UNAUTHORIZED",
     response_templates={
         "application/json": "{'message':$context.error.messageString}",
     },
-    response_type="UNAUTHORIZED",
-    rest_api_id=main.id,
-    status_code="401")
+    response_parameters={
+        "gatewayresponse.header.Authorization": "'Basic'",
+    })
 ```
 
 {{% /example %}}
@@ -116,15 +116,15 @@ import * as aws from "@pulumi/aws";
 
 const main = new aws.apigateway.RestApi("main", {});
 const test = new aws.apigateway.Response("test", {
+    restApiId: main.id,
+    statusCode: "401",
+    responseType: "UNAUTHORIZED",
+    responseTemplates: {
+        "application/json": `{'message':$context.error.messageString}`,
+    },
     responseParameters: {
         "gatewayresponse.header.Authorization": "'Basic'",
     },
-    responseTemplates: {
-        "application/json": "{'message':$context.error.messageString}",
-    },
-    responseType: "UNAUTHORIZED",
-    restApiId: main.id,
-    statusCode: "401",
 });
 ```
 
@@ -146,7 +146,7 @@ const test = new aws.apigateway.Response("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Response">NewResponse</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#ResponseArgs">ResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Response">Response</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Response">NewResponse</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#ResponseArgs">ResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Response">Response</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -220,7 +220,7 @@ const test = new aws.apigateway.Response("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -240,7 +240,7 @@ const test = new aws.apigateway.Response("test", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#ResponseArgs">ResponseArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#ResponseArgs">ResponseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -250,7 +250,7 @@ const test = new aws.apigateway.Response("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -657,7 +657,7 @@ Get an existing Response resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResponse<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#ResponseState">ResponseState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Response">Response</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResponse<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#ResponseState">ResponseState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Response">Response</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

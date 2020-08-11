@@ -20,41 +20,41 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const examplePolicyDocument = aws.iam.getPolicyDocument({
     statements: [
         {
+            sid: "1",
             actions: [
                 "s3:ListAllMyBuckets",
                 "s3:GetBucketLocation",
             ],
             resources: ["arn:aws:s3:::*"],
-            sid: "1",
         },
         {
             actions: ["s3:ListBucket"],
+            resources: [`arn:aws:s3:::${_var.s3_bucket_name}`],
             conditions: [{
                 test: "StringLike",
+                variable: "s3:prefix",
                 values: [
                     "",
                     "home/",
                     "home/&{aws:username}/",
                 ],
-                variable: "s3:prefix",
             }],
-            resources: [`arn:aws:s3:::${var_s3_bucket_name}`],
         },
         {
             actions: ["s3:*"],
             resources: [
-                `arn:aws:s3:::${var_s3_bucket_name}/home/&{aws:username}`,
-                `arn:aws:s3:::${var_s3_bucket_name}/home/&{aws:username}/*`,
+                `arn:aws:s3:::${_var.s3_bucket_name}/home/&{aws:username}`,
+                `arn:aws:s3:::${_var.s3_bucket_name}/home/&{aws:username}/*`,
             ],
         },
     ],
-}, { async: true }));
-const examplePolicy = new aws.iam.Policy("example", {
+});
+const examplePolicy = new aws.iam.Policy("examplePolicy", {
     path: "/",
-    policy: examplePolicyDocument.json,
+    policy: examplePolicyDocument.then(examplePolicyDocument => examplePolicyDocument.json),
 });
 ```
 ```python
@@ -63,25 +63,25 @@ import pulumi_aws as aws
 
 example_policy_document = aws.iam.get_policy_document(statements=[
     {
+        "sid": "1",
         "actions": [
             "s3:ListAllMyBuckets",
             "s3:GetBucketLocation",
         ],
         "resources": ["arn:aws:s3:::*"],
-        "sid": "1",
     },
     {
         "actions": ["s3:ListBucket"],
+        "resources": [f"arn:aws:s3:::{var['s3_bucket_name']}"],
         "conditions": [{
             "test": "StringLike",
+            "variable": "s3:prefix",
             "values": [
                 "",
                 "home/",
                 "home/&{aws:username}/",
             ],
-            "variable": "s3:prefix",
         }],
-        "resources": [f"arn:aws:s3:::{var['s3_bucket_name']}"],
     },
     {
         "actions": ["s3:*"],
@@ -109,6 +109,7 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "1",
                     Actions = 
                     {
                         "s3:ListAllMyBuckets",
@@ -118,7 +119,6 @@ class MyStack : Stack
                     {
                         "arn:aws:s3:::*",
                     },
-                    Sid = "1",
                 },
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
@@ -126,23 +126,23 @@ class MyStack : Stack
                     {
                         "s3:ListBucket",
                     },
+                    Resources = 
+                    {
+                        $"arn:aws:s3:::{@var.S3_bucket_name}",
+                    },
                     Conditions = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
                             Test = "StringLike",
+                            Variable = "s3:prefix",
                             Values = 
                             {
                                 "",
                                 "home/",
                                 "home/&{aws:username}/",
                             },
-                            Variable = "s3:prefix",
                         },
-                    },
-                    Resources = 
-                    {
-                        $"arn:aws:s3:::{@var.S3_bucket_name}",
                     },
                 },
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
@@ -174,7 +174,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -183,6 +183,7 @@ func main() {
 		examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
+					Sid: "1",
 					Actions: []string{
 						"s3:ListAllMyBuckets",
 						"s3:GetBucketLocation",
@@ -190,25 +191,24 @@ func main() {
 					Resources: []string{
 						"arn:aws:s3:::*",
 					},
-					Sid: "1",
 				},
 				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:ListBucket",
 					},
+					Resources: []string{
+						fmt.Sprintf("%v%v", "arn:aws:s3:::", _var.S3_bucket_name),
+					},
 					Conditions: []iam.GetPolicyDocumentStatementCondition{
 						iam.GetPolicyDocumentStatementCondition{
-							Test: "StringLike",
+							Test:     "StringLike",
+							Variable: "s3:prefix",
 							Values: []string{
 								"",
 								"home/",
 								"home/&{aws:username}/",
 							},
-							Variable: "s3:prefix",
 						},
-					},
-					Resources: []string{
-						fmt.Sprintf("%v%v", "arn:aws:s3:::", _var.S3_bucket_name),
 					},
 				},
 				iam.GetPolicyDocumentStatement{
@@ -267,38 +267,38 @@ Showing how you can use `source_json` and `override_json`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = pulumi.output(aws.iam.getPolicyDocument({
+const source = aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
             resources: ["*"],
         },
         {
+            sid: "SidToOverwrite",
             actions: ["s3:*"],
             resources: ["*"],
-            sid: "SidToOverwrite",
         },
     ],
-}, { async: true }));
-const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
+});
+const sourceJsonExample = source.then(source => aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
+        sid: "SidToOverwrite",
         actions: ["s3:*"],
         resources: [
             "arn:aws:s3:::somebucket",
             "arn:aws:s3:::somebucket/*",
         ],
-        sid: "SidToOverwrite",
     }],
-}, { async: true }));
-const override = pulumi.output(aws.iam.getPolicyDocument({
+}));
+const override = aws.iam.getPolicyDocument({
     statements: [{
+        sid: "SidToOverwrite",
         actions: ["s3:*"],
         resources: ["*"],
-        sid: "SidToOverwrite",
     }],
-}, { async: true }));
-const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
+});
+const overrideJsonExample = override.then(override => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -306,15 +306,15 @@ const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument
             resources: ["*"],
         },
         {
+            sid: "SidToOverwrite",
             actions: ["s3:*"],
             resources: [
                 "arn:aws:s3:::somebucket",
                 "arn:aws:s3:::somebucket/*",
             ],
-            sid: "SidToOverwrite",
         },
     ],
-}, { async: true }));
+}));
 ```
 ```python
 import pulumi
@@ -326,24 +326,24 @@ source = aws.iam.get_policy_document(statements=[
         "resources": ["*"],
     },
     {
+        "sid": "SidToOverwrite",
         "actions": ["s3:*"],
         "resources": ["*"],
-        "sid": "SidToOverwrite",
     },
 ])
 source_json_example = aws.iam.get_policy_document(source_json=source.json,
     statements=[{
+        "sid": "SidToOverwrite",
         "actions": ["s3:*"],
         "resources": [
             "arn:aws:s3:::somebucket",
             "arn:aws:s3:::somebucket/*",
         ],
-        "sid": "SidToOverwrite",
     }])
 override = aws.iam.get_policy_document(statements=[{
+    "sid": "SidToOverwrite",
     "actions": ["s3:*"],
     "resources": ["*"],
-    "sid": "SidToOverwrite",
 }])
 override_json_example = aws.iam.get_policy_document(override_json=override.json,
     statements=[
@@ -352,12 +352,12 @@ override_json_example = aws.iam.get_policy_document(override_json=override.json,
             "resources": ["*"],
         },
         {
+            "sid": "SidToOverwrite",
             "actions": ["s3:*"],
             "resources": [
                 "arn:aws:s3:::somebucket",
                 "arn:aws:s3:::somebucket/*",
             ],
-            "sid": "SidToOverwrite",
         },
     ])
 ```
@@ -386,6 +386,7 @@ class MyStack : Stack
                 },
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "SidToOverwrite",
                     Actions = 
                     {
                         "s3:*",
@@ -394,7 +395,6 @@ class MyStack : Stack
                     {
                         "*",
                     },
-                    Sid = "SidToOverwrite",
                 },
             },
         }));
@@ -405,6 +405,7 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "SidToOverwrite",
                     Actions = 
                     {
                         "s3:*",
@@ -414,7 +415,6 @@ class MyStack : Stack
                         "arn:aws:s3:::somebucket",
                         "arn:aws:s3:::somebucket/*",
                     },
-                    Sid = "SidToOverwrite",
                 },
             },
         })));
@@ -424,6 +424,7 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "SidToOverwrite",
                     Actions = 
                     {
                         "s3:*",
@@ -432,7 +433,6 @@ class MyStack : Stack
                     {
                         "*",
                     },
-                    Sid = "SidToOverwrite",
                 },
             },
         }));
@@ -454,6 +454,7 @@ class MyStack : Stack
                 },
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "SidToOverwrite",
                     Actions = 
                     {
                         "s3:*",
@@ -463,7 +464,6 @@ class MyStack : Stack
                         "arn:aws:s3:::somebucket",
                         "arn:aws:s3:::somebucket/*",
                     },
-                    Sid = "SidToOverwrite",
                 },
             },
         })));
@@ -475,7 +475,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -492,13 +492,13 @@ func main() {
 					},
 				},
 				iam.GetPolicyDocumentStatement{
+					Sid: "SidToOverwrite",
 					Actions: []string{
 						"s3:*",
 					},
 					Resources: []string{
 						"*",
 					},
-					Sid: "SidToOverwrite",
 				},
 			},
 		}, nil)
@@ -510,6 +510,7 @@ func main() {
 			SourceJson: &opt0,
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
+					Sid: "SidToOverwrite",
 					Actions: []string{
 						"s3:*",
 					},
@@ -517,7 +518,6 @@ func main() {
 						"arn:aws:s3:::somebucket",
 						"arn:aws:s3:::somebucket/*",
 					},
-					Sid: "SidToOverwrite",
 				},
 			},
 		}, nil)
@@ -527,13 +527,13 @@ func main() {
 		override, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
+					Sid: "SidToOverwrite",
 					Actions: []string{
 						"s3:*",
 					},
 					Resources: []string{
 						"*",
 					},
-					Sid: "SidToOverwrite",
 				},
 			},
 		}, nil)
@@ -553,6 +553,7 @@ func main() {
 					},
 				},
 				iam.GetPolicyDocumentStatement{
+					Sid: "SidToOverwrite",
 					Actions: []string{
 						"s3:*",
 					},
@@ -560,7 +561,6 @@ func main() {
 						"arn:aws:s3:::somebucket",
 						"arn:aws:s3:::somebucket/*",
 					},
-					Sid: "SidToOverwrite",
 				},
 			},
 		}, nil)
@@ -648,41 +648,41 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = pulumi.output(aws.iam.getPolicyDocument({
+const source = aws.iam.getPolicyDocument({
     statements: [{
+        sid: "OverridePlaceholder",
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
-        sid: "OverridePlaceholder",
     }],
-}, { async: true }));
-const override = pulumi.output(aws.iam.getPolicyDocument({
+});
+const override = aws.iam.getPolicyDocument({
     statements: [{
+        sid: "OverridePlaceholder",
         actions: ["s3:GetObject"],
         resources: ["*"],
-        sid: "OverridePlaceholder",
     }],
-}, { async: true }));
-const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
-    overrideJson: override.json,
+});
+const politik = Promise.all([source, override]).then(([source, override]) => aws.iam.getPolicyDocument({
     sourceJson: source.json,
-}, { async: true }));
+    overrideJson: override.json,
+}));
 ```
 ```python
 import pulumi
 import pulumi_aws as aws
 
 source = aws.iam.get_policy_document(statements=[{
+    "sid": "OverridePlaceholder",
     "actions": ["ec2:DescribeAccountAttributes"],
     "resources": ["*"],
-    "sid": "OverridePlaceholder",
 }])
 override = aws.iam.get_policy_document(statements=[{
+    "sid": "OverridePlaceholder",
     "actions": ["s3:GetObject"],
     "resources": ["*"],
-    "sid": "OverridePlaceholder",
 }])
-politik = aws.iam.get_policy_document(override_json=override.json,
-    source_json=source.json)
+politik = aws.iam.get_policy_document(source_json=source.json,
+    override_json=override.json)
 ```
 ```csharp
 using Pulumi;
@@ -698,6 +698,7 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "OverridePlaceholder",
                     Actions = 
                     {
                         "ec2:DescribeAccountAttributes",
@@ -706,7 +707,6 @@ class MyStack : Stack
                     {
                         "*",
                     },
-                    Sid = "OverridePlaceholder",
                 },
             },
         }));
@@ -716,6 +716,7 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Sid = "OverridePlaceholder",
                     Actions = 
                     {
                         "s3:GetObject",
@@ -724,18 +725,17 @@ class MyStack : Stack
                     {
                         "*",
                     },
-                    Sid = "OverridePlaceholder",
                 },
             },
         }));
-        var politik = Output.Tuple(@override, source).Apply(values =>
+        var politik = Output.Tuple(source, @override).Apply(values =>
         {
-            var @override = values.Item1;
-            var source = values.Item2;
+            var source = values.Item1;
+            var @override = values.Item2;
             return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
             {
-                OverrideJson = @override.Json,
                 SourceJson = source.Json,
+                OverrideJson = @override.Json,
             }));
         });
     }
@@ -746,7 +746,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -755,13 +755,13 @@ func main() {
 		source, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
+					Sid: "OverridePlaceholder",
 					Actions: []string{
 						"ec2:DescribeAccountAttributes",
 					},
 					Resources: []string{
 						"*",
 					},
-					Sid: "OverridePlaceholder",
 				},
 			},
 		}, nil)
@@ -771,24 +771,24 @@ func main() {
 		override, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
+					Sid: "OverridePlaceholder",
 					Actions: []string{
 						"s3:GetObject",
 					},
 					Resources: []string{
 						"*",
 					},
-					Sid: "OverridePlaceholder",
 				},
 			},
 		}, nil)
 		if err != nil {
 			return err
 		}
-		opt0 := override.Json
-		opt1 := source.Json
+		opt0 := source.Json
+		opt1 := override.Json
 		_, err = iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-			OverrideJson: &opt0,
-			SourceJson:   &opt1,
+			SourceJson:   &opt0,
+			OverrideJson: &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -849,7 +849,7 @@ func main() {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -1486,7 +1486,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatement">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatement">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatement.html">output</a> API doc for this type.
@@ -1972,7 +1972,7 @@ to. This is required by AWS if used for an IAM policy.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementCondition.html">output</a> API doc for this type.
@@ -2182,7 +2182,7 @@ the service name.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementNotPrincipal.html">output</a> API doc for this type.
@@ -2320,7 +2320,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementPrincipal.html">output</a> API doc for this type.

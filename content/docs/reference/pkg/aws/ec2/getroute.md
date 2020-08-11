@@ -38,13 +38,13 @@ class MyStack : Stack
         }));
         var route = Output.Create(Aws.Ec2.GetRoute.InvokeAsync(new Aws.Ec2.GetRouteArgs
         {
-            DestinationCidrBlock = "10.0.1.0/24",
             RouteTableId = aws_route_table.Selected.Id,
+            DestinationCidrBlock = "10.0.1.0/24",
         }));
-        var @interface = Output.Create(Aws.Ec2.GetNetworkInterface.InvokeAsync(new Aws.Ec2.GetNetworkInterfaceArgs
+        var @interface = route.Apply(route => Output.Create(Aws.Ec2.GetNetworkInterface.InvokeAsync(new Aws.Ec2.GetNetworkInterfaceArgs
         {
-            NetworkInterfaceId = route.Apply(route => route.NetworkInterfaceId),
-        }));
+            Id = route.NetworkInterfaceId,
+        })));
     }
 
 }
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -72,14 +72,15 @@ func main() {
 		}
 		opt1 := "10.0.1.0/24"
 		route, err := ec2.LookupRoute(ctx, &ec2.LookupRouteArgs{
-			DestinationCidrBlock: &opt1,
 			RouteTableId:         aws_route_table.Selected.Id,
+			DestinationCidrBlock: &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
+		opt2 := route.NetworkInterfaceId
 		_, err = ec2.LookupNetworkInterface(ctx, &ec2.LookupNetworkInterfaceArgs{
-			NetworkInterfaceId: route.NetworkInterfaceId,
+			Id: &opt2,
 		}, nil)
 		if err != nil {
 			return err
@@ -99,9 +100,9 @@ import pulumi_aws as aws
 config = pulumi.Config()
 subnet_id = config.require_object("subnetId")
 selected = aws.ec2.get_route_table(subnet_id=subnet_id)
-route = aws.ec2.get_route(destination_cidr_block="10.0.1.0/24",
-    route_table_id=aws_route_table["selected"]["id"])
-interface = aws.ec2.get_network_interface(network_interface_id=route.network_interface_id)
+route = aws.ec2.get_route(route_table_id=aws_route_table["selected"]["id"],
+    destination_cidr_block="10.0.1.0/24")
+interface = aws.ec2.get_network_interface(id=route.network_interface_id)
 ```
 
 {{% /example %}}
@@ -113,18 +114,17 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const subnetId = config.require("subnetId");
-
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const subnetId = config.requireObject("subnetId");
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}, { async: true }));
-const route = aws_route_table_selected.id.apply(id => aws.ec2.getRoute({
+});
+const route = aws.ec2.getRoute({
+    routeTableId: aws_route_table.selected.id,
     destinationCidrBlock: "10.0.1.0/24",
-    routeTableId: id,
-}, { async: true }));
-const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterface({
-    networkInterfaceId: route.networkInterfaceId!,
-}, { async: true }));
+});
+const interface = route.then(route => aws.ec2.getNetworkInterface({
+    id: route.networkInterfaceId,
+}));
 ```
 
 {{% /example %}}
@@ -148,7 +148,7 @@ const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterfa
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupRouteArgs">LookupRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupRouteResult">LookupRouteResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupRouteArgs">LookupRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupRouteResult">LookupRouteResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRoute` in the Go SDK.
 

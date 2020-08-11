@@ -34,8 +34,8 @@ class MyStack : Stack
     {
         var privateS3VpcEndpoint = new Aws.Ec2.VpcEndpoint("privateS3VpcEndpoint", new Aws.Ec2.VpcEndpointArgs
         {
-            ServiceName = "com.amazonaws.us-west-2.s3",
             VpcId = aws_vpc.Foo.Id,
+            ServiceName = "com.amazonaws.us-west-2.s3",
         });
         var privateS3PrefixList = privateS3VpcEndpoint.PrefixListId.Apply(prefixListId => Aws.GetPrefixList.InvokeAsync(new Aws.GetPrefixListArgs
         {
@@ -47,13 +47,13 @@ class MyStack : Stack
         });
         var privateS3NetworkAclRule = new Aws.Ec2.NetworkAclRule("privateS3NetworkAclRule", new Aws.Ec2.NetworkAclRuleArgs
         {
-            CidrBlock = privateS3PrefixList.Apply(privateS3PrefixList => privateS3PrefixList.CidrBlocks[0]),
-            Egress = false,
-            FromPort = 443,
             NetworkAclId = bar.Id,
+            RuleNumber = 200,
+            Egress = false,
             Protocol = "tcp",
             RuleAction = "allow",
-            RuleNumber = 200,
+            CidrBlock = privateS3PrefixList.Apply(privateS3PrefixList => privateS3PrefixList.CidrBlocks[0]),
+            FromPort = 443,
             ToPort = 443,
         });
     }
@@ -68,37 +68,37 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		privateS3VpcEndpoint, err := ec2.NewVpcEndpoint(ctx, "privateS3VpcEndpoint", &ec2.VpcEndpointArgs{
+			VpcId:       pulumi.Any(aws_vpc.Foo.Id),
 			ServiceName: pulumi.String("com.amazonaws.us-west-2.s3"),
-			VpcId:       pulumi.String(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err
 		}
 		bar, err := ec2.NewNetworkAcl(ctx, "bar", &ec2.NetworkAclArgs{
-			VpcId: pulumi.String(aws_vpc.Foo.Id),
+			VpcId: pulumi.Any(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewNetworkAclRule(ctx, "privateS3NetworkAclRule", &ec2.NetworkAclRuleArgs{
+			NetworkAclId: bar.ID(),
+			RuleNumber:   pulumi.Int(200),
+			Egress:       pulumi.Bool(false),
+			Protocol:     pulumi.String("tcp"),
+			RuleAction:   pulumi.String("allow"),
 			CidrBlock: privateS3PrefixList.ApplyT(func(privateS3PrefixList aws.GetPrefixListResult) (string, error) {
 				return privateS3PrefixList.CidrBlocks[0], nil
 			}).(pulumi.StringOutput),
-			Egress:       pulumi.Bool(false),
-			FromPort:     pulumi.Int(443),
-			NetworkAclId: bar.ID(),
-			Protocol:     pulumi.String("tcp"),
-			RuleAction:   pulumi.String("allow"),
-			RuleNumber:   pulumi.Int(200),
-			ToPort:       pulumi.Int(443),
+			FromPort: pulumi.Int(443),
+			ToPort:   pulumi.Int(443),
 		})
 		if err != nil {
 			return err
@@ -116,18 +116,18 @@ import pulumi
 import pulumi_aws as aws
 
 private_s3_vpc_endpoint = aws.ec2.VpcEndpoint("privateS3VpcEndpoint",
-    service_name="com.amazonaws.us-west-2.s3",
-    vpc_id=aws_vpc["foo"]["id"])
+    vpc_id=aws_vpc["foo"]["id"],
+    service_name="com.amazonaws.us-west-2.s3")
 private_s3_prefix_list = private_s3_vpc_endpoint.prefix_list_id.apply(lambda prefix_list_id: aws.get_prefix_list(prefix_list_id=prefix_list_id))
 bar = aws.ec2.NetworkAcl("bar", vpc_id=aws_vpc["foo"]["id"])
 private_s3_network_acl_rule = aws.ec2.NetworkAclRule("privateS3NetworkAclRule",
-    cidr_block=private_s3_prefix_list.cidr_blocks[0],
-    egress=False,
-    from_port=443,
     network_acl_id=bar.id,
+    rule_number=200,
+    egress=False,
     protocol="tcp",
     rule_action="allow",
-    rule_number=200,
+    cidr_block=private_s3_prefix_list.cidr_blocks[0],
+    from_port=443,
     to_port=443)
 ```
 
@@ -139,24 +139,22 @@ private_s3_network_acl_rule = aws.ec2.NetworkAclRule("privateS3NetworkAclRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const privateS3VpcEndpoint = new aws.ec2.VpcEndpoint("private_s3", {
+const privateS3VpcEndpoint = new aws.ec2.VpcEndpoint("privateS3VpcEndpoint", {
+    vpcId: aws_vpc.foo.id,
     serviceName: "com.amazonaws.us-west-2.s3",
-    vpcId: aws_vpc_foo.id,
 });
 const privateS3PrefixList = privateS3VpcEndpoint.prefixListId.apply(prefixListId => aws.getPrefixList({
     prefixListId: prefixListId,
-}, { async: true }));
-const bar = new aws.ec2.NetworkAcl("bar", {
-    vpcId: aws_vpc_foo.id,
-});
-const privateS3NetworkAclRule = new aws.ec2.NetworkAclRule("private_s3", {
-    cidrBlock: privateS3PrefixList.apply(privateS3PrefixList => privateS3PrefixList.cidrBlocks[0]),
-    egress: false,
-    fromPort: 443,
+}));
+const bar = new aws.ec2.NetworkAcl("bar", {vpcId: aws_vpc.foo.id});
+const privateS3NetworkAclRule = new aws.ec2.NetworkAclRule("privateS3NetworkAclRule", {
     networkAclId: bar.id,
+    ruleNumber: 200,
+    egress: false,
     protocol: "tcp",
     ruleAction: "allow",
-    ruleNumber: 200,
+    cidrBlock: privateS3PrefixList.cidrBlocks[0],
+    fromPort: 443,
     toPort: 443,
 });
 ```
@@ -199,7 +197,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -273,7 +271,7 @@ const test = pulumi.output(aws.getPrefixList({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrefixList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListArgs">GetPrefixListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListResult">GetPrefixListResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrefixList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetPrefixListArgs">GetPrefixListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetPrefixListResult">GetPrefixListResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -718,7 +716,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetPrefixListFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetPrefixListFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetPrefixListFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetPrefixListFilter.html">output</a> API doc for this type.

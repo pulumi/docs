@@ -38,8 +38,8 @@ class MyStack : Stack
         }));
         var subnet = new Aws.Ec2.Subnet("subnet", new Aws.Ec2.SubnetArgs
         {
-            CidrBlock = "10.0.1.0/24",
             VpcId = selected.Apply(selected => selected.VpcId),
+            CidrBlock = "10.0.1.0/24",
         });
     }
 
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,8 +67,8 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewSubnet(ctx, "subnet", &ec2.SubnetArgs{
-			CidrBlock: pulumi.String("10.0.1.0/24"),
 			VpcId:     pulumi.String(selected.VpcId),
+			CidrBlock: pulumi.String("10.0.1.0/24"),
 		})
 		if err != nil {
 			return err
@@ -89,8 +89,8 @@ config = pulumi.Config()
 security_group_id = config.require_object("securityGroupId")
 selected = aws.ec2.get_security_group(id=security_group_id)
 subnet = aws.ec2.Subnet("subnet",
-    cidr_block="10.0.1.0/24",
-    vpc_id=selected.vpc_id)
+    vpc_id=selected.vpc_id,
+    cidr_block="10.0.1.0/24")
 ```
 
 {{% /example %}}
@@ -102,14 +102,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const securityGroupId = config.require("securityGroupId");
-
-const selected = pulumi.output(aws.ec2.getSecurityGroup({
+const securityGroupId = config.requireObject("securityGroupId");
+const selected = aws.ec2.getSecurityGroup({
     id: securityGroupId,
-}, { async: true }));
+});
 const subnet = new aws.ec2.Subnet("subnet", {
+    vpcId: selected.then(selected => selected.vpcId),
     cidrBlock: "10.0.1.0/24",
-    vpcId: selected.vpcId!,
 });
 ```
 
@@ -134,7 +133,7 @@ const subnet = new aws.ec2.Subnet("subnet", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupSecurityGroupArgs">LookupSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupSecurityGroupResult">LookupSecurityGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupSecurityGroupArgs">LookupSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupSecurityGroupResult">LookupSecurityGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSecurityGroup` in the Go SDK.
 
@@ -753,7 +752,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSecurityGroupFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSecurityGroupFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetSecurityGroupFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetSecurityGroupFilter.html">output</a> API doc for this type.

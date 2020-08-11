@@ -28,8 +28,8 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.Ec2TransitGateway.GetDirectConnectGatewayAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetDirectConnectGatewayAttachmentArgs
         {
-            DxGatewayId = aws_dx_gateway.Example.Id,
             TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+            DxGatewayId = aws_dx_gateway.Example.Id,
         }));
     }
 
@@ -43,17 +43,17 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := aws_dx_gateway.Example.Id
-		opt1 := aws_ec2_transit_gateway.Example.Id
+		opt0 := aws_ec2_transit_gateway.Example.Id
+		opt1 := aws_dx_gateway.Example.Id
 		_, err := ec2transitgateway.GetDirectConnectGatewayAttachment(ctx, &ec2transitgateway.GetDirectConnectGatewayAttachmentArgs{
-			DxGatewayId:      &opt0,
-			TransitGatewayId: &opt1,
+			TransitGatewayId: &opt0,
+			DxGatewayId:      &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -70,8 +70,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ec2transitgateway.get_direct_connect_gateway_attachment(dx_gateway_id=aws_dx_gateway["example"]["id"],
-    transit_gateway_id=aws_ec2_transit_gateway["example"]["id"])
+example = aws.ec2transitgateway.get_direct_connect_gateway_attachment(transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
+    dx_gateway_id=aws_dx_gateway["example"]["id"])
 ```
 
 {{% /example %}}
@@ -82,10 +82,10 @@ example = aws.ec2transitgateway.get_direct_connect_gateway_attachment(dx_gateway
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_example.id]).apply(([aws_dx_gateway_exampleId, aws_ec2_transit_gateway_exampleId]) => aws.ec2transitgateway.getDirectConnectGatewayAttachment({
-    dxGatewayId: aws_dx_gateway_exampleId,
-    transitGatewayId: aws_ec2_transit_gateway_exampleId,
-}, { async: true }));
+const example = aws.ec2transitgateway.getDirectConnectGatewayAttachment({
+    transitGatewayId: aws_ec2_transit_gateway.example.id,
+    dxGatewayId: aws_dx_gateway.example.id,
+});
 ```
 
 {{% /example %}}
@@ -109,7 +109,7 @@ const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectConnectGatewayAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentArgs">GetDirectConnectGatewayAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentResult">GetDirectConnectGatewayAttachmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectConnectGatewayAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentArgs">GetDirectConnectGatewayAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentResult">GetDirectConnectGatewayAttachmentResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -594,7 +594,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetDirectConnectGatewayAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Inputs.GetDirectConnectGatewayAttachmentFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Outputs.GetDirectConnectGatewayAttachmentFilter.html">output</a> API doc for this type.

@@ -36,17 +36,17 @@ class MyStack : Stack
         });
         var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
         {
+            DomainName = "example.com",
+            CertificateName = "example-api",
             CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
             CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
-            CertificateName = "example-api",
             CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
-            DomainName = "example.com",
         });
         var test = new Aws.ApiGateway.BasePathMapping("test", new Aws.ApiGateway.BasePathMappingArgs
         {
             RestApi = aws_api_gateway_rest_api.MyDemoAPI.Id,
-            DomainName = exampleDomainName.Domain,
             StageName = exampleDeployment.StageName,
+            DomainName = exampleDomainName.Domain,
         });
     }
 
@@ -68,15 +68,15 @@ example_deployment = aws.apigateway.Deployment("exampleDeployment",
     rest_api=aws_api_gateway_rest_api["MyDemoAPI"]["id"],
     stage_name="live")
 example_domain_name = aws.apigateway.DomainName("exampleDomainName",
+    domain_name="example.com",
+    certificate_name="example-api",
     certificate_body=(lambda path: open(path).read())(f"{path['module']}/example.com/example.crt"),
     certificate_chain=(lambda path: open(path).read())(f"{path['module']}/example.com/ca.crt"),
-    certificate_name="example-api",
-    certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"),
-    domain_name="example.com")
+    certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"))
 test = aws.apigateway.BasePathMapping("test",
     rest_api=aws_api_gateway_rest_api["MyDemoAPI"]["id"],
-    domain_name=example_domain_name.domain_name,
-    stage_name=example_deployment.stage_name)
+    stage_name=example_deployment.stage_name,
+    domain_name=example_domain_name.domain_name)
 ```
 
 {{% /example %}}
@@ -86,24 +86,23 @@ test = aws.apigateway.BasePathMapping("test",
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as fs from "fs";
+import * from "fs";
 
-const exampleDeployment = new aws.apigateway.Deployment("example", {
-    // See aws_api_gateway_rest_api docs for how to create this
-    restApi: aws_api_gateway_rest_api_MyDemoAPI.id,
+const exampleDeployment = new aws.apigateway.Deployment("exampleDeployment", {
+    restApi: aws_api_gateway_rest_api.MyDemoAPI.id,
     stageName: "live",
 });
-const exampleDomainName = new aws.apigateway.DomainName("example", {
-    certificateBody: fs.readFileSync(`./example.com/example.crt`, "utf-8"),
-    certificateChain: fs.readFileSync(`./example.com/ca.crt`, "utf-8"),
-    certificateName: "example-api",
-    certificatePrivateKey: fs.readFileSync(`./example.com/example.key`, "utf-8"),
+const exampleDomainName = new aws.apigateway.DomainName("exampleDomainName", {
     domainName: "example.com",
+    certificateName: "example-api",
+    certificateBody: fs.readFileSync(`${path.module}/example.com/example.crt`),
+    certificateChain: fs.readFileSync(`${path.module}/example.com/ca.crt`),
+    certificatePrivateKey: fs.readFileSync(`${path.module}/example.com/example.key`),
 });
 const test = new aws.apigateway.BasePathMapping("test", {
-    restApi: aws_api_gateway_rest_api_MyDemoAPI.id,
-    domainName: exampleDomainName.domainName,
+    restApi: aws_api_gateway_rest_api.MyDemoAPI.id,
     stageName: exampleDeployment.stageName,
+    domainName: exampleDomainName.domainName,
 });
 ```
 
@@ -125,7 +124,7 @@ const test = new aws.apigateway.BasePathMapping("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMapping">NewBasePathMapping</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMappingArgs">BasePathMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMapping">BasePathMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMapping">NewBasePathMapping</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMappingArgs">BasePathMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMapping">BasePathMapping</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -199,7 +198,7 @@ const test = new aws.apigateway.BasePathMapping("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -219,7 +218,7 @@ const test = new aws.apigateway.BasePathMapping("test", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMappingArgs">BasePathMappingArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMappingArgs">BasePathMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -229,7 +228,7 @@ const test = new aws.apigateway.BasePathMapping("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -592,7 +591,7 @@ Get an existing BasePathMapping resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBasePathMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMappingState">BasePathMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#BasePathMapping">BasePathMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBasePathMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMappingState">BasePathMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#BasePathMapping">BasePathMapping</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

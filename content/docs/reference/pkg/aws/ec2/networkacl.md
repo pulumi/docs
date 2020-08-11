@@ -35,15 +35,16 @@ class MyStack : Stack
     {
         var main = new Aws.Ec2.NetworkAcl("main", new Aws.Ec2.NetworkAclArgs
         {
+            VpcId = aws_vpc.Main.Id,
             Egress = 
             {
                 new Aws.Ec2.Inputs.NetworkAclEgressArgs
                 {
+                    Protocol = "tcp",
+                    RuleNo = 200,
                     Action = "allow",
                     CidrBlock = "10.3.0.0/18",
                     FromPort = 443,
-                    Protocol = "tcp",
-                    RuleNo = 200,
                     ToPort = 443,
                 },
             },
@@ -51,11 +52,11 @@ class MyStack : Stack
             {
                 new Aws.Ec2.Inputs.NetworkAclIngressArgs
                 {
+                    Protocol = "tcp",
+                    RuleNo = 100,
                     Action = "allow",
                     CidrBlock = "10.3.0.0/18",
                     FromPort = 80,
-                    Protocol = "tcp",
-                    RuleNo = 100,
                     ToPort = 80,
                 },
             },
@@ -63,7 +64,6 @@ class MyStack : Stack
             {
                 { "Name", "main" },
             },
-            VpcId = aws_vpc.Main.Id,
         });
     }
 
@@ -77,37 +77,37 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewNetworkAcl(ctx, "main", &ec2.NetworkAclArgs{
+			VpcId: pulumi.Any(aws_vpc.Main.Id),
 			Egress: ec2.NetworkAclEgressArray{
 				&ec2.NetworkAclEgressArgs{
+					Protocol:  pulumi.String("tcp"),
+					RuleNo:    pulumi.Int(200),
 					Action:    pulumi.String("allow"),
 					CidrBlock: pulumi.String("10.3.0.0/18"),
 					FromPort:  pulumi.Int(443),
-					Protocol:  pulumi.String("tcp"),
-					RuleNo:    pulumi.Int(200),
 					ToPort:    pulumi.Int(443),
 				},
 			},
 			Ingress: ec2.NetworkAclIngressArray{
 				&ec2.NetworkAclIngressArgs{
+					Protocol:  pulumi.String("tcp"),
+					RuleNo:    pulumi.Int(100),
 					Action:    pulumi.String("allow"),
 					CidrBlock: pulumi.String("10.3.0.0/18"),
 					FromPort:  pulumi.Int(80),
-					Protocol:  pulumi.String("tcp"),
-					RuleNo:    pulumi.Int(100),
 					ToPort:    pulumi.Int(80),
 				},
 			},
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("main"),
 			},
-			VpcId: pulumi.String(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err
@@ -125,26 +125,26 @@ import pulumi
 import pulumi_aws as aws
 
 main = aws.ec2.NetworkAcl("main",
+    vpc_id=aws_vpc["main"]["id"],
     egress=[{
+        "protocol": "tcp",
+        "ruleNo": 200,
         "action": "allow",
         "cidr_block": "10.3.0.0/18",
         "from_port": 443,
-        "protocol": "tcp",
-        "ruleNo": 200,
         "to_port": 443,
     }],
     ingress=[{
+        "protocol": "tcp",
+        "ruleNo": 100,
         "action": "allow",
         "cidr_block": "10.3.0.0/18",
         "from_port": 80,
-        "protocol": "tcp",
-        "ruleNo": 100,
         "to_port": 80,
     }],
     tags={
         "Name": "main",
-    },
-    vpc_id=aws_vpc["main"]["id"])
+    })
 ```
 
 {{% /example %}}
@@ -156,26 +156,26 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const main = new aws.ec2.NetworkAcl("main", {
+    vpcId: aws_vpc.main.id,
     egress: [{
+        protocol: "tcp",
+        ruleNo: 200,
         action: "allow",
         cidrBlock: "10.3.0.0/18",
         fromPort: 443,
-        protocol: "tcp",
-        ruleNo: 200,
         toPort: 443,
     }],
     ingress: [{
+        protocol: "tcp",
+        ruleNo: 100,
         action: "allow",
         cidrBlock: "10.3.0.0/18",
         fromPort: 80,
-        protocol: "tcp",
-        ruleNo: 100,
         toPort: 80,
     }],
     tags: {
         Name: "main",
     },
-    vpcId: aws_vpc_main.id,
 });
 ```
 
@@ -197,7 +197,7 @@ const main = new aws.ec2.NetworkAcl("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAcl">NewNetworkAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclArgs">NetworkAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAcl">NetworkAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAcl">NewNetworkAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclArgs">NetworkAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAcl">NetworkAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -271,7 +271,7 @@ const main = new aws.ec2.NetworkAcl("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -291,7 +291,7 @@ const main = new aws.ec2.NetworkAcl("main", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclArgs">NetworkAclArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclArgs">NetworkAclArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,7 +301,7 @@ const main = new aws.ec2.NetworkAcl("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -796,7 +796,7 @@ Get an existing NetworkAcl resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclState">NetworkAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAcl">NetworkAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclState">NetworkAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAcl">NetworkAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1256,7 +1256,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclEgressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclEgressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.NetworkAclEgressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.NetworkAclEgress.html">output</a> API doc for this type.
@@ -1706,7 +1706,7 @@ valid network mask.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkAclIngressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclIngressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.NetworkAclIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.NetworkAclIngress.html">output</a> API doc for this type.

@@ -30,11 +30,11 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
         {
+            RoleArn = aws_iam_role.Example.Arn,
             Command = new Aws.Glue.Inputs.JobCommandArgs
             {
                 ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.py",
             },
-            RoleArn = aws_iam_role.Example.Arn,
         });
     }
 
@@ -50,17 +50,17 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
+			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 			Command: &glue.JobCommandArgs{
 				ScriptLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/example.py")),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -78,10 +78,10 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Job("example",
+    role_arn=aws_iam_role["example"]["arn"],
     command={
         "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
-    },
-    role_arn=aws_iam_role["example"]["arn"])
+    })
 ```
 
 {{% /example %}}
@@ -93,10 +93,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Job("example", {
+    roleArn: aws_iam_role.example.arn,
     command: {
-        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.py`,
+        scriptLocation: `s3://${aws_s3_bucket.example.bucket}/example.py`,
     },
-    roleArn: aws_iam_role_example.arn,
 });
 ```
 
@@ -114,6 +114,7 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
         {
+            RoleArn = aws_iam_role.Example.Arn,
             Command = new Aws.Glue.Inputs.JobCommandArgs
             {
                 ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.scala",
@@ -122,7 +123,6 @@ class MyStack : Stack
             {
                 { "--job-language", "scala" },
             },
-            RoleArn = aws_iam_role.Example.Arn,
         });
     }
 
@@ -138,20 +138,20 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
+			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
 			Command: &glue.JobCommandArgs{
 				ScriptLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/example.scala")),
 			},
 			DefaultArguments: pulumi.StringMap{
 				"--job-language": pulumi.String("scala"),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -169,13 +169,13 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Job("example",
+    role_arn=aws_iam_role["example"]["arn"],
     command={
         "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
     },
     default_arguments={
         "--job-language": "scala",
-    },
-    role_arn=aws_iam_role["example"]["arn"])
+    })
 ```
 
 {{% /example %}}
@@ -187,13 +187,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Job("example", {
+    roleArn: aws_iam_role.example.arn,
     command: {
-        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.scala`,
+        scriptLocation: `s3://${aws_s3_bucket.example.bucket}/example.scala`,
     },
     defaultArguments: {
         "--job-language": "scala",
     },
-    roleArn: aws_iam_role_example.arn,
 });
 ```
 
@@ -213,6 +213,7 @@ class MyStack : Stack
         {
             RetentionInDays = 14,
         });
+        // ... other configuration ...
         var exampleJob = new Aws.Glue.Job("exampleJob", new Aws.Glue.JobArgs
         {
             DefaultArguments = 
@@ -235,8 +236,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -272,6 +273,7 @@ import pulumi
 import pulumi_aws as aws
 
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=14)
+# ... other configuration ...
 example_job = aws.glue.Job("exampleJob", default_arguments={
     "--continuous-log-logGroup": example_log_group.name,
     "--enable-continuous-cloudwatch-log": "true",
@@ -288,18 +290,14 @@ example_job = aws.glue.Job("exampleJob", default_arguments={
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {
-    retentionInDays: 14,
-});
-const exampleJob = new aws.glue.Job("example", {
-    defaultArguments: {
-        // ... potentially other arguments ...
-        "--continuous-log-logGroup": exampleLogGroup.name,
-        "--enable-continuous-cloudwatch-log": "true",
-        "--enable-continuous-log-filter": "true",
-        "--enable-metrics": "",
-    },
-});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {retentionInDays: 14});
+// ... other configuration ...
+const exampleJob = new aws.glue.Job("exampleJob", {defaultArguments: {
+    "--continuous-log-logGroup": exampleLogGroup.name,
+    "--enable-continuous-cloudwatch-log": "true",
+    "--enable-continuous-log-filter": "true",
+    "--enable-metrics": "",
+}});
 ```
 
 {{% /example %}}
@@ -316,11 +314,11 @@ const exampleJob = new aws.glue.Job("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocated_capacity=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -394,7 +392,7 @@ const exampleJob = new aws.glue.Job("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -414,7 +412,7 @@ const exampleJob = new aws.glue.Job("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -424,7 +422,7 @@ const exampleJob = new aws.glue.Job("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -509,17 +507,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="allocatedcapacity_csharp">
-<a href="#allocatedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -704,17 +691,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="allocatedcapacity_go">
-<a href="#allocatedcapacity_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_go">
@@ -898,17 +874,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="allocatedcapacity_nodejs">
-<a href="#allocatedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_nodejs">
@@ -1091,17 +1056,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="allocated_capacity_python">
-<a href="#allocated_capacity_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1399,11 +1353,11 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocated_capacity=None<span class="p">, </span>arn=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1512,17 +1466,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_allocatedcapacity_csharp">
-<a href="#state_allocatedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,17 +1661,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_allocatedcapacity_go">
-<a href="#state_allocatedcapacity_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -1923,17 +1855,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_allocatedcapacity_nodejs">
-<a href="#state_allocatedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -2127,17 +2048,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_allocated_capacity_python">
-<a href="#state_allocated_capacity_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2347,7 +2257,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobCommandArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobCommandOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobCommandArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobCommandOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.JobCommandArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.JobCommand.html">output</a> API doc for this type.
@@ -2525,7 +2435,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobExecutionPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobExecutionPropertyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobExecutionPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobExecutionPropertyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.JobExecutionPropertyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.JobExecutionProperty.html">output</a> API doc for this type.
@@ -2615,7 +2525,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobNotificationPropertyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#JobNotificationPropertyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.JobNotificationPropertyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.JobNotificationProperty.html">output</a> API doc for this type.

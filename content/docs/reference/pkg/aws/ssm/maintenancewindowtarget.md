@@ -19,18 +19,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const window = new aws.ssm.MaintenanceWindow("window", {
-    cutoff: 1,
-    duration: 3,
     schedule: "cron(0 16 ? * TUE *)",
+    duration: 3,
+    cutoff: 1,
 });
 const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+    windowId: window.id,
     description: "This is a maintenance window target",
     resourceType: "INSTANCE",
     targets: [{
         key: "tag:Name",
         values: ["acceptance_test"],
     }],
-    windowId: window.id,
 });
 ```
 ```python
@@ -38,17 +38,17 @@ import pulumi
 import pulumi_aws as aws
 
 window = aws.ssm.MaintenanceWindow("window",
-    cutoff=1,
+    schedule="cron(0 16 ? * TUE *)",
     duration=3,
-    schedule="cron(0 16 ? * TUE *)")
+    cutoff=1)
 target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    window_id=window.id,
     description="This is a maintenance window target",
     resource_type="INSTANCE",
     targets=[{
         "key": "tag:Name",
         "values": ["acceptance_test"],
-    }],
-    window_id=window.id)
+    }])
 ```
 ```csharp
 using Pulumi;
@@ -60,12 +60,13 @@ class MyStack : Stack
     {
         var window = new Aws.Ssm.MaintenanceWindow("window", new Aws.Ssm.MaintenanceWindowArgs
         {
-            Cutoff = 1,
-            Duration = 3,
             Schedule = "cron(0 16 ? * TUE *)",
+            Duration = 3,
+            Cutoff = 1,
         });
         var target1 = new Aws.Ssm.MaintenanceWindowTarget("target1", new Aws.Ssm.MaintenanceWindowTargetArgs
         {
+            WindowId = window.Id,
             Description = "This is a maintenance window target",
             ResourceType = "INSTANCE",
             Targets = 
@@ -79,7 +80,6 @@ class MyStack : Stack
                     },
                 },
             },
-            WindowId = window.Id,
         });
     }
 
@@ -89,21 +89,22 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		window, err := ssm.NewMaintenanceWindow(ctx, "window", &ssm.MaintenanceWindowArgs{
-			Cutoff:   pulumi.Int(1),
-			Duration: pulumi.Int(3),
 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+			Duration: pulumi.Int(3),
+			Cutoff:   pulumi.Int(1),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+			WindowId:     window.ID(),
 			Description:  pulumi.String("This is a maintenance window target"),
 			ResourceType: pulumi.String("INSTANCE"),
 			Targets: ssm.MaintenanceWindowTargetTargetArray{
@@ -114,7 +115,6 @@ func main() {
 					},
 				},
 			},
-			WindowId: window.ID(),
 		})
 		if err != nil {
 			return err
@@ -131,11 +131,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const window = new aws.ssm.MaintenanceWindow("window", {
-    cutoff: 1,
-    duration: 3,
     schedule: "cron(0 16 ? * TUE *)",
+    duration: 3,
+    cutoff: 1,
 });
 const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+    windowId: window.id,
     description: "This is a maintenance window target",
     resourceType: "RESOURCE_GROUP",
     targets: [{
@@ -145,7 +146,6 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
             "AWS::EC2::VPC",
         ],
     }],
-    windowId: window.id,
 });
 ```
 ```python
@@ -153,10 +153,11 @@ import pulumi
 import pulumi_aws as aws
 
 window = aws.ssm.MaintenanceWindow("window",
-    cutoff=1,
+    schedule="cron(0 16 ? * TUE *)",
     duration=3,
-    schedule="cron(0 16 ? * TUE *)")
+    cutoff=1)
 target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    window_id=window.id,
     description="This is a maintenance window target",
     resource_type="RESOURCE_GROUP",
     targets=[{
@@ -165,8 +166,7 @@ target1 = aws.ssm.MaintenanceWindowTarget("target1",
             "AWS::EC2::INSTANCE",
             "AWS::EC2::VPC",
         ],
-    }],
-    window_id=window.id)
+    }])
 ```
 ```csharp
 using Pulumi;
@@ -178,12 +178,13 @@ class MyStack : Stack
     {
         var window = new Aws.Ssm.MaintenanceWindow("window", new Aws.Ssm.MaintenanceWindowArgs
         {
-            Cutoff = 1,
-            Duration = 3,
             Schedule = "cron(0 16 ? * TUE *)",
+            Duration = 3,
+            Cutoff = 1,
         });
         var target1 = new Aws.Ssm.MaintenanceWindowTarget("target1", new Aws.Ssm.MaintenanceWindowTargetArgs
         {
+            WindowId = window.Id,
             Description = "This is a maintenance window target",
             ResourceType = "RESOURCE_GROUP",
             Targets = 
@@ -198,7 +199,6 @@ class MyStack : Stack
                     },
                 },
             },
-            WindowId = window.Id,
         });
     }
 
@@ -208,21 +208,22 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		window, err := ssm.NewMaintenanceWindow(ctx, "window", &ssm.MaintenanceWindowArgs{
-			Cutoff:   pulumi.Int(1),
-			Duration: pulumi.Int(3),
 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+			Duration: pulumi.Int(3),
+			Cutoff:   pulumi.Int(1),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+			WindowId:     window.ID(),
 			Description:  pulumi.String("This is a maintenance window target"),
 			ResourceType: pulumi.String("RESOURCE_GROUP"),
 			Targets: ssm.MaintenanceWindowTargetTargetArray{
@@ -234,7 +235,6 @@ func main() {
 					},
 				},
 			},
-			WindowId: window.ID(),
 		})
 		if err != nil {
 			return err
@@ -259,7 +259,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTarget">NewMaintenanceWindowTarget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetArgs">MaintenanceWindowTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTarget">MaintenanceWindowTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTarget">NewMaintenanceWindowTarget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTargetArgs">MaintenanceWindowTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTarget">MaintenanceWindowTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -333,7 +333,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -353,7 +353,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetArgs">MaintenanceWindowTargetArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTargetArgs">MaintenanceWindowTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -363,7 +363,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -818,7 +818,7 @@ Get an existing MaintenanceWindowTarget resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaintenanceWindowTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetState">MaintenanceWindowTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTarget">MaintenanceWindowTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaintenanceWindowTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTargetState">MaintenanceWindowTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTarget">MaintenanceWindowTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1238,7 +1238,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTargetTarget.html">output</a> API doc for this type.

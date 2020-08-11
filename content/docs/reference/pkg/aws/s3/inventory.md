@@ -35,18 +35,18 @@ class MyStack : Stack
         var testInventory = new Aws.S3.Inventory("testInventory", new Aws.S3.InventoryArgs
         {
             Bucket = testBucket.Id,
-            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
-            {
-                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
-                {
-                    BucketArn = inventory.Arn,
-                    Format = "ORC",
-                },
-            },
             IncludedObjectVersions = "All",
             Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
             {
                 Frequency = "Daily",
+            },
+            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+            {
+                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+                {
+                    Format = "ORC",
+                    BucketArn = inventory.Arn,
+                },
             },
         });
     }
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,16 +76,16 @@ func main() {
 			return err
 		}
 		_, err = s3.NewInventory(ctx, "testInventory", &s3.InventoryArgs{
-			Bucket: testBucket.ID(),
-			Destination: &s3.InventoryDestinationArgs{
-				Bucket: &s3.InventoryDestinationBucketArgs{
-					BucketArn: inventory.Arn,
-					Format:    pulumi.String("ORC"),
-				},
-			},
+			Bucket:                 testBucket.ID(),
 			IncludedObjectVersions: pulumi.String("All"),
 			Schedule: &s3.InventoryScheduleArgs{
 				Frequency: pulumi.String("Daily"),
+			},
+			Destination: &s3.InventoryDestinationArgs{
+				Bucket: &s3.InventoryDestinationBucketArgs{
+					Format:    pulumi.String("ORC"),
+					BucketArn: inventory.Arn,
+				},
 			},
 		})
 		if err != nil {
@@ -107,15 +107,15 @@ test_bucket = aws.s3.Bucket("testBucket")
 inventory = aws.s3.Bucket("inventory")
 test_inventory = aws.s3.Inventory("testInventory",
     bucket=test_bucket.id,
-    destination={
-        "bucket": {
-            "bucketArn": inventory.arn,
-            "format": "ORC",
-        },
-    },
     included_object_versions="All",
     schedule={
         "frequency": "Daily",
+    },
+    destination={
+        "bucket": {
+            "format": "ORC",
+            "bucketArn": inventory.arn,
+        },
     })
 ```
 
@@ -127,19 +127,19 @@ test_inventory = aws.s3.Inventory("testInventory",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testBucket = new aws.s3.Bucket("test", {});
+const testBucket = new aws.s3.Bucket("testBucket", {});
 const inventory = new aws.s3.Bucket("inventory", {});
-const testInventory = new aws.s3.Inventory("test", {
+const testInventory = new aws.s3.Inventory("testInventory", {
     bucket: testBucket.id,
-    destination: {
-        bucket: {
-            bucketArn: inventory.arn,
-            format: "ORC",
-        },
-    },
     includedObjectVersions: "All",
     schedule: {
         frequency: "Daily",
+    },
+    destination: {
+        bucket: {
+            format: "ORC",
+            bucketArn: inventory.arn,
+        },
     },
 });
 ```
@@ -165,23 +165,23 @@ class MyStack : Stack
         var test_prefix = new Aws.S3.Inventory("test-prefix", new Aws.S3.InventoryArgs
         {
             Bucket = test.Id,
-            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+            IncludedObjectVersions = "All",
+            Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
             {
-                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
-                {
-                    BucketArn = inventory.Arn,
-                    Format = "ORC",
-                    Prefix = "inventory",
-                },
+                Frequency = "Daily",
             },
             Filter = new Aws.S3.Inputs.InventoryFilterArgs
             {
                 Prefix = "documents/",
             },
-            IncludedObjectVersions = "All",
-            Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
             {
-                Frequency = "Daily",
+                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+                {
+                    Format = "ORC",
+                    BucketArn = inventory.Arn,
+                    Prefix = "inventory",
+                },
             },
         });
     }
@@ -196,7 +196,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -211,20 +211,20 @@ func main() {
 			return err
 		}
 		_, err = s3.NewInventory(ctx, "test_prefix", &s3.InventoryArgs{
-			Bucket: test.ID(),
-			Destination: &s3.InventoryDestinationArgs{
-				Bucket: &s3.InventoryDestinationBucketArgs{
-					BucketArn: inventory.Arn,
-					Format:    pulumi.String("ORC"),
-					Prefix:    pulumi.String("inventory"),
-				},
+			Bucket:                 test.ID(),
+			IncludedObjectVersions: pulumi.String("All"),
+			Schedule: &s3.InventoryScheduleArgs{
+				Frequency: pulumi.String("Daily"),
 			},
 			Filter: &s3.InventoryFilterArgs{
 				Prefix: pulumi.String("documents/"),
 			},
-			IncludedObjectVersions: pulumi.String("All"),
-			Schedule: &s3.InventoryScheduleArgs{
-				Frequency: pulumi.String("Daily"),
+			Destination: &s3.InventoryDestinationArgs{
+				Bucket: &s3.InventoryDestinationBucketArgs{
+					Format:    pulumi.String("ORC"),
+					BucketArn: inventory.Arn,
+					Prefix:    pulumi.String("inventory"),
+				},
 			},
 		})
 		if err != nil {
@@ -246,19 +246,19 @@ test = aws.s3.Bucket("test")
 inventory = aws.s3.Bucket("inventory")
 test_prefix = aws.s3.Inventory("test-prefix",
     bucket=test.id,
-    destination={
-        "bucket": {
-            "bucketArn": inventory.arn,
-            "format": "ORC",
-            "prefix": "inventory",
-        },
+    included_object_versions="All",
+    schedule={
+        "frequency": "Daily",
     },
     filter={
         "prefix": "documents/",
     },
-    included_object_versions="All",
-    schedule={
-        "frequency": "Daily",
+    destination={
+        "bucket": {
+            "format": "ORC",
+            "bucketArn": inventory.arn,
+            "prefix": "inventory",
+        },
     })
 ```
 
@@ -274,19 +274,19 @@ const test = new aws.s3.Bucket("test", {});
 const inventory = new aws.s3.Bucket("inventory", {});
 const test_prefix = new aws.s3.Inventory("test-prefix", {
     bucket: test.id,
-    destination: {
-        bucket: {
-            bucketArn: inventory.arn,
-            format: "ORC",
-            prefix: "inventory",
-        },
+    includedObjectVersions: "All",
+    schedule: {
+        frequency: "Daily",
     },
     filter: {
         prefix: "documents/",
     },
-    includedObjectVersions: "All",
-    schedule: {
-        frequency: "Daily",
+    destination: {
+        bucket: {
+            format: "ORC",
+            bucketArn: inventory.arn,
+            prefix: "inventory",
+        },
     },
 });
 ```
@@ -309,7 +309,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#Inventory">NewInventory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryArgs">InventoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#Inventory">Inventory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Inventory">NewInventory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryArgs">InventoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Inventory">Inventory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -383,7 +383,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -403,7 +403,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryArgs">InventoryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryArgs">InventoryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -413,7 +413,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -956,7 +956,7 @@ Get an existing Inventory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInventory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryState">InventoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#Inventory">Inventory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInventory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryState">InventoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Inventory">Inventory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1464,7 +1464,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestination.html">output</a> API doc for this type.
@@ -1554,7 +1554,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.html">output</a> API doc for this type.
@@ -1820,7 +1820,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucketEncryption.html">output</a> API doc for this type.
@@ -1954,7 +1954,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketEncryptionSseKmsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucketEncryptionSseKms.html">output</a> API doc for this type.
@@ -2044,7 +2044,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryFilter.html">output</a> API doc for this type.
@@ -2134,7 +2134,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#InventoryScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventorySchedule.html">output</a> API doc for this type.

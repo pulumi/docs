@@ -29,33 +29,33 @@ class MyStack : Stack
         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
         {
             MeshName = aws_appmesh_mesh.Simple.Id,
+            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
             {
                 HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
                 {
-                    Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
-                    {
-                        WeightedTarget = 
-                        {
-                            
-                            {
-                                { "virtualNode", aws_appmesh_virtual_node.Serviceb1.Name },
-                                { "weight", 90 },
-                            },
-                            
-                            {
-                                { "virtualNode", aws_appmesh_virtual_node.Serviceb2.Name },
-                                { "weight", 10 },
-                            },
-                        },
-                    },
                     Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
                     {
                         Prefix = "/",
                     },
+                    Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+                    {
+                        WeightedTargets = 
+                        {
+                            new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+                            {
+                                VirtualNode = aws_appmesh_virtual_node.Serviceb1.Name,
+                                Weight = 90,
+                            },
+                            new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+                            {
+                                VirtualNode = aws_appmesh_virtual_node.Serviceb2.Name,
+                                Weight = 10,
+                            },
+                        },
+                    },
                 },
             },
-            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
         });
     }
 
@@ -69,34 +69,34 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
-					Action: &appmesh.RouteSpecHttpRouteActionArgs{
-						WeightedTarget: pulumi.MapArray{
-							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
-								"weight":      pulumi.Float64(90),
-							},
-							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb2.Name),
-								"weight":      pulumi.Float64(10),
-							},
-						},
-					},
 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
 						Prefix: pulumi.String("/"),
 					},
+					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+								Weight:      pulumi.Int(90),
+							},
+							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb2.Name),
+								Weight:      pulumi.Int(10),
+							},
+						},
+					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err
@@ -115,10 +115,14 @@ import pulumi_aws as aws
 
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
+    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
     spec={
         "httpRoute": {
+            "match": {
+                "prefix": "/",
+            },
             "action": {
-                "weightedTarget": [
+                "weightedTargets": [
                     {
                         "virtualNode": aws_appmesh_virtual_node["serviceb1"]["name"],
                         "weight": 90,
@@ -129,12 +133,8 @@ serviceb = aws.appmesh.Route("serviceb",
                     },
                 ],
             },
-            "match": {
-                "prefix": "/",
-            },
         },
-    },
-    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
+    })
 ```
 
 {{% /example %}}
@@ -146,27 +146,27 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb = new aws.appmesh.Route("serviceb", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
+    virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
     spec: {
         httpRoute: {
+            match: {
+                prefix: "/",
+            },
             action: {
                 weightedTargets: [
                     {
-                        virtualNode: aws_appmesh_virtual_node_serviceb1.name,
+                        virtualNode: aws_appmesh_virtual_node.serviceb1.name,
                         weight: 90,
                     },
                     {
-                        virtualNode: aws_appmesh_virtual_node_serviceb2.name,
+                        virtualNode: aws_appmesh_virtual_node.serviceb2.name,
                         weight: 10,
                     },
                 ],
             },
-            match: {
-                prefix: "/",
-            },
         },
     },
-    virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
 
@@ -185,41 +185,41 @@ class MyStack : Stack
         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
         {
             MeshName = aws_appmesh_mesh.Simple.Id,
+            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
             {
                 HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
                 {
-                    Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
-                    {
-                        WeightedTarget = 
-                        {
-                            
-                            {
-                                { "virtualNode", aws_appmesh_virtual_node.Serviceb.Name },
-                                { "weight", 100 },
-                            },
-                        },
-                    },
                     Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
                     {
-                        Header = 
-                        {
-                            
-                            {
-                                { "match", 
-                                {
-                                    { "prefix", "123" },
-                                } },
-                                { "name", "clientRequestId" },
-                            },
-                        },
                         Method = "POST",
                         Prefix = "/",
                         Scheme = "https",
+                        Headers = 
+                        {
+                            new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs
+                            {
+                                Name = "clientRequestId",
+                                Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs
+                                {
+                                    Prefix = "123",
+                                },
+                            },
+                        },
+                    },
+                    Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+                    {
+                        WeightedTargets = 
+                        {
+                            new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+                            {
+                                VirtualNode = aws_appmesh_virtual_node.Serviceb.Name,
+                                Weight = 100,
+                            },
+                        },
                     },
                 },
             },
-            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
         });
     }
 
@@ -233,40 +233,40 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
-					Action: &appmesh.RouteSpecHttpRouteActionArgs{
-						WeightedTarget: pulumi.MapArray{
-							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb.Name),
-								"weight":      pulumi.Float64(100),
-							},
-						},
-					},
 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
-						Header: pulumi.MapArray{
-							pulumi.Map{
-								"match": pulumi.StringMap{
-									"prefix": pulumi.String("123"),
-								},
-								"name": pulumi.String("clientRequestId"),
-							},
-						},
 						Method: pulumi.String("POST"),
 						Prefix: pulumi.String("/"),
 						Scheme: pulumi.String("https"),
+						Headers: appmesh.RouteSpecHttpRouteMatchHeaderArray{
+							&appmesh.RouteSpecHttpRouteMatchHeaderArgs{
+								Name: pulumi.String("clientRequestId"),
+								Match: &appmesh.RouteSpecHttpRouteMatchHeaderMatchArgs{
+									Prefix: pulumi.String("123"),
+								},
+							},
+						},
+					},
+					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb.Name),
+								Weight:      pulumi.Int(100),
+							},
+						},
 					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err
@@ -285,28 +285,28 @@ import pulumi_aws as aws
 
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
+    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
     spec={
         "httpRoute": {
+            "match": {
+                "method": "POST",
+                "prefix": "/",
+                "scheme": "https",
+                "headers": [{
+                    "name": "clientRequestId",
+                    "match": {
+                        "prefix": "123",
+                    },
+                }],
+            },
             "action": {
-                "weightedTarget": [{
+                "weightedTargets": [{
                     "virtualNode": aws_appmesh_virtual_node["serviceb"]["name"],
                     "weight": 100,
                 }],
             },
-            "match": {
-                "header": [{
-                    "match": {
-                        "prefix": "123",
-                    },
-                    "name": "clientRequestId",
-                }],
-                "method": "POST",
-                "prefix": "/",
-                "scheme": "https",
-            },
         },
-    },
-    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
+    })
 ```
 
 {{% /example %}}
@@ -318,29 +318,29 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb = new aws.appmesh.Route("serviceb", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
+    virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
     spec: {
         httpRoute: {
-            action: {
-                weightedTargets: [{
-                    virtualNode: aws_appmesh_virtual_node_serviceb.name,
-                    weight: 100,
-                }],
-            },
             match: {
-                headers: [{
-                    match: {
-                        prefix: "123",
-                    },
-                    name: "clientRequestId",
-                }],
                 method: "POST",
                 prefix: "/",
                 scheme: "https",
+                headers: [{
+                    name: "clientRequestId",
+                    match: {
+                        prefix: "123",
+                    },
+                }],
+            },
+            action: {
+                weightedTargets: [{
+                    virtualNode: aws_appmesh_virtual_node.serviceb.name,
+                    weight: 100,
+                }],
             },
         },
     },
-    virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
 
@@ -359,24 +359,24 @@ class MyStack : Stack
         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
         {
             MeshName = aws_appmesh_mesh.Simple.Id,
+            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
             {
                 TcpRoute = new Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs
                 {
                     Action = new Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs
                     {
-                        WeightedTarget = 
+                        WeightedTargets = 
                         {
-                            
+                            new Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs
                             {
-                                { "virtualNode", aws_appmesh_virtual_node.Serviceb1.Name },
-                                { "weight", 100 },
+                                VirtualNode = aws_appmesh_virtual_node.Serviceb1.Name,
+                                Weight = 100,
                             },
                         },
                     },
                 },
             },
-            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
         });
     }
 
@@ -390,27 +390,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
 			Spec: &appmesh.RouteSpecArgs{
 				TcpRoute: &appmesh.RouteSpecTcpRouteArgs{
 					Action: &appmesh.RouteSpecTcpRouteActionArgs{
-						WeightedTarget: pulumi.MapArray{
-							pulumi.Map{
-								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
-								"weight":      pulumi.Float64(100),
+						WeightedTargets: appmesh.RouteSpecTcpRouteActionWeightedTargetArray{
+							&appmesh.RouteSpecTcpRouteActionWeightedTargetArgs{
+								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+								Weight:      pulumi.Int(100),
 							},
 						},
 					},
 				},
 			},
-			VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
 		})
 		if err != nil {
 			return err
@@ -429,17 +429,17 @@ import pulumi_aws as aws
 
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
+    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
     spec={
         "tcpRoute": {
             "action": {
-                "weightedTarget": [{
+                "weightedTargets": [{
                     "virtualNode": aws_appmesh_virtual_node["serviceb1"]["name"],
                     "weight": 100,
                 }],
             },
         },
-    },
-    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
+    })
 ```
 
 {{% /example %}}
@@ -451,18 +451,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb = new aws.appmesh.Route("serviceb", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
+    virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
     spec: {
         tcpRoute: {
             action: {
                 weightedTargets: [{
-                    virtualNode: aws_appmesh_virtual_node_serviceb1.name,
+                    virtualNode: aws_appmesh_virtual_node.serviceb1.name,
                     weight: 100,
                 }],
             },
         },
     },
-    virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
 
@@ -484,7 +484,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -558,7 +558,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -578,7 +578,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -588,7 +588,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1127,7 +1127,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1631,7 +1631,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpec.html">output</a> API doc for this type.
@@ -1813,7 +1813,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRoute.html">output</a> API doc for this type.
@@ -1947,7 +1947,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteAction.html">output</a> API doc for this type.
@@ -2041,7 +2041,7 @@ You can specify one or more targets and their relative weights with which to dis
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteActionWeightedTarget.html">output</a> API doc for this type.
@@ -2175,7 +2175,7 @@ You can specify one or more targets and their relative weights with which to dis
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.html">output</a> API doc for this type.
@@ -2401,7 +2401,7 @@ This parameter must always start with /, which by itself matches all requests to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeader.html">output</a> API doc for this type.
@@ -2579,7 +2579,7 @@ This parameter must always start with /, which by itself matches all requests to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatch.html">output</a> API doc for this type.
@@ -2849,7 +2849,7 @@ This parameter must always start with /, which by itself matches all requests to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatchRange.html">output</a> API doc for this type.
@@ -2983,7 +2983,7 @@ This parameter must always start with /, which by itself matches all requests to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRoute.html">output</a> API doc for this type.
@@ -3073,7 +3073,7 @@ This parameter must always start with /, which by itself matches all requests to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteAction.html">output</a> API doc for this type.
@@ -3167,7 +3167,7 @@ You can specify one or more targets and their relative weights with which to dis
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteActionWeightedTarget.html">output</a> API doc for this type.

@@ -41,7 +41,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,17 +101,11 @@ class MyStack : Stack
         });
         var dev_ns = new Aws.Route53.Record("dev-ns", new Aws.Route53.RecordArgs
         {
-            Name = "dev.example.com",
-            Records = 
-            {
-                dev.NameServers.Apply(nameServers => nameServers[0]),
-                dev.NameServers.Apply(nameServers => nameServers[1]),
-                dev.NameServers.Apply(nameServers => nameServers[2]),
-                dev.NameServers.Apply(nameServers => nameServers[3]),
-            },
-            Ttl = 30,
-            Type = "NS",
             ZoneId = main.ZoneId,
+            Name = "dev.example.com",
+            Type = "NS",
+            Ttl = 30,
+            Records = dev.NameServers,
         });
     }
 
@@ -125,7 +119,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -144,24 +138,11 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "dev_ns", &route53.RecordArgs{
-			Name: pulumi.String("dev.example.com"),
-			Records: pulumi.StringArray{
-				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
-					return nameServers[0], nil
-				}).(pulumi.StringOutput),
-				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
-					return nameServers[1], nil
-				}).(pulumi.StringOutput),
-				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
-					return nameServers[2], nil
-				}).(pulumi.StringOutput),
-				dev.NameServers.ApplyT(func(nameServers []string) (string, error) {
-					return nameServers[3], nil
-				}).(pulumi.StringOutput),
-			},
-			Ttl:    pulumi.Int(30),
-			Type:   pulumi.String("NS"),
-			ZoneId: main.ZoneId,
+			ZoneId:  main.ZoneId,
+			Name:    pulumi.String("dev.example.com"),
+			Type:    pulumi.String("NS"),
+			Ttl:     pulumi.Int(30),
+			Records: dev.NameServers,
 		})
 		if err != nil {
 			return err
@@ -183,16 +164,11 @@ dev = aws.route53.Zone("dev", tags={
     "Environment": "dev",
 })
 dev_ns = aws.route53.Record("dev-ns",
+    zone_id=main.zone_id,
     name="dev.example.com",
-    records=[
-        dev.name_servers[0],
-        dev.name_servers[1],
-        dev.name_servers[2],
-        dev.name_servers[3],
-    ],
-    ttl="30",
     type="NS",
-    zone_id=main.zone_id)
+    ttl="30",
+    records=dev.name_servers)
 ```
 
 {{% /example %}}
@@ -204,22 +180,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const main = new aws.route53.Zone("main", {});
-const dev = new aws.route53.Zone("dev", {
-    tags: {
-        Environment: "dev",
-    },
-});
+const dev = new aws.route53.Zone("dev", {tags: {
+    Environment: "dev",
+}});
 const dev_ns = new aws.route53.Record("dev-ns", {
-    name: "dev.example.com",
-    records: [
-        dev.nameServers[0],
-        dev.nameServers[1],
-        dev.nameServers[2],
-        dev.nameServers[3],
-    ],
-    ttl: 30,
-    type: "NS",
     zoneId: main.zoneId,
+    name: "dev.example.com",
+    type: "NS",
+    ttl: "30",
+    records: dev.nameServers,
 });
 ```
 
@@ -257,7 +226,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -266,7 +235,7 @@ func main() {
 		_, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
 			Vpcs: route53.ZoneVpcArray{
 				&route53.ZoneVpcArgs{
-					VpcId: pulumi.String(aws_vpc.Example.Id),
+					VpcId: pulumi.Any(aws_vpc.Example.Id),
 				},
 			},
 		})
@@ -298,11 +267,9 @@ private = aws.route53.Zone("private", vpcs=[{
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const privateZone = new aws.route53.Zone("private", {
-    vpcs: [{
-        vpcId: aws_vpc_example.id,
-    }],
-});
+const _private = new aws.route53.Zone("private", {vpcs: [{
+    vpcId: aws_vpc.example.id,
+}]});
 ```
 
 {{% /example %}}
@@ -323,7 +290,7 @@ const privateZone = new aws.route53.Zone("private", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Zone">NewZone</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Zone">NewZone</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -397,7 +364,7 @@ const privateZone = new aws.route53.Zone("private", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -417,7 +384,7 @@ const privateZone = new aws.route53.Zone("private", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -427,7 +394,7 @@ const privateZone = new aws.route53.Zone("private", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -970,7 +937,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneState">ZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneState">ZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1478,7 +1445,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneVpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneVpcOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ZoneVpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ZoneVpc.html">output</a> API doc for this type.

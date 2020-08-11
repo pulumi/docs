@@ -19,20 +19,21 @@ Provides the ability to register instances and containers with an Application Lo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testTargetGroup = new aws.lb.TargetGroup("test", {
-    targetType: "lambda",
-});
-const testFunction = new aws.lambda.Function("test", {});
-const withLb = new aws.lambda.Permission("with_lb", {
+const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {targetType: "lambda"});
+const testFunction = new aws.lambda.Function("testFunction", {});
+// Other arguments
+const withLb = new aws.lambda.Permission("withLb", {
     action: "lambda:InvokeFunction",
-    function: testFunction.arn,
+    "function": testFunction.arn,
     principal: "elasticloadbalancing.amazonaws.com",
     sourceArn: testTargetGroup.arn,
 });
-const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
+const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGroupAttachment", {
     targetGroupArn: testTargetGroup.arn,
     targetId: testFunction.arn,
-}, { dependsOn: [withLb] });
+}, {
+    dependsOn: [withLb],
+});
 ```
 ```python
 import pulumi
@@ -40,6 +41,7 @@ import pulumi_aws as aws
 
 test_target_group = aws.lb.TargetGroup("testTargetGroup", target_type="lambda")
 test_function = aws.lambda_.Function("testFunction")
+# Other arguments
 with_lb = aws.lambda_.Permission("withLb",
     action="lambda:InvokeFunction",
     function=test_function.arn,
@@ -48,7 +50,7 @@ with_lb = aws.lambda_.Permission("withLb",
 test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
     target_group_arn=test_target_group.arn,
     target_id=test_function.arn,
-    opts=ResourceOptions(depends_on=["aws_lambda_permission.with_lb"]))
+    opts=ResourceOptions(depends_on=[with_lb]))
 ```
 ```csharp
 using Pulumi;
@@ -65,6 +67,7 @@ class MyStack : Stack
         var testFunction = new Aws.Lambda.Function("testFunction", new Aws.Lambda.FunctionArgs
         {
         });
+        // Other arguments
         var withLb = new Aws.Lambda.Permission("withLb", new Aws.Lambda.PermissionArgs
         {
             Action = "lambda:InvokeFunction",
@@ -80,7 +83,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_lambda_permission.with_lb",
+                withLb,
             },
         });
     }
@@ -91,8 +94,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,7 +111,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = lambda.NewPermission(ctx, "withLb", &lambda.PermissionArgs{
+		withLb, err := lambda.NewPermission(ctx, "withLb", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
 			Function:  testFunction.Arn,
 			Principal: pulumi.String("elasticloadbalancing.amazonaws.com"),
@@ -121,7 +124,7 @@ func main() {
 			TargetGroupArn: testTargetGroup.Arn,
 			TargetId:       testFunction.Arn,
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_lambda_permission.with_lb",
+			withLb,
 		}))
 		if err != nil {
 			return err
@@ -148,14 +151,16 @@ class MyStack : Stack
         var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
         {
         });
+        // Other arguments
         var testInstance = new Aws.Ec2.Instance("testInstance", new Aws.Ec2.InstanceArgs
         {
         });
+        // Other arguments
         var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
         {
-            Port = 80,
             TargetGroupArn = testTargetGroup.Arn,
             TargetId = testInstance.Id,
+            Port = 80,
         });
     }
 
@@ -169,8 +174,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -185,9 +190,9 @@ func main() {
 			return err
 		}
 		_, err = lb.NewTargetGroupAttachment(ctx, "testTargetGroupAttachment", &lb.TargetGroupAttachmentArgs{
-			Port:           pulumi.Int(80),
 			TargetGroupArn: testTargetGroup.Arn,
 			TargetId:       testInstance.ID(),
+			Port:           pulumi.Int(80),
 		})
 		if err != nil {
 			return err
@@ -205,11 +210,13 @@ import pulumi
 import pulumi_aws as aws
 
 test_target_group = aws.lb.TargetGroup("testTargetGroup")
+# Other arguments
 test_instance = aws.ec2.Instance("testInstance")
+# Other arguments
 test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
-    port=80,
     target_group_arn=test_target_group.arn,
-    target_id=test_instance.id)
+    target_id=test_instance.id,
+    port=80)
 ```
 
 {{% /example %}}
@@ -220,12 +227,14 @@ test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAtta
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testTargetGroup = new aws.lb.TargetGroup("test", {});
-const testInstance = new aws.ec2.Instance("test", {});
-const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
-    port: 80,
+const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {});
+// Other arguments
+const testInstance = new aws.ec2.Instance("testInstance", {});
+// Other arguments
+const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGroupAttachment", {
     targetGroupArn: testTargetGroup.arn,
     targetId: testInstance.id,
+    port: 80,
 });
 ```
 
@@ -247,7 +256,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachment">NewTargetGroupAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachmentArgs">TargetGroupAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachment">TargetGroupAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachment">NewTargetGroupAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachmentArgs">TargetGroupAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachment">TargetGroupAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -321,7 +330,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -341,7 +350,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachmentArgs">TargetGroupAttachmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachmentArgs">TargetGroupAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -351,7 +360,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -714,7 +723,7 @@ Get an existing TargetGroupAttachment resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTargetGroupAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachmentState">TargetGroupAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupAttachment">TargetGroupAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTargetGroupAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachmentState">TargetGroupAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#TargetGroupAttachment">TargetGroupAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

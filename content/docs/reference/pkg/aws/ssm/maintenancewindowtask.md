@@ -16,219 +16,6 @@ Provides an SSM Maintenance Window Task resource
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Automation Tasks
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
-        {
-            MaxConcurrency = "2",
-            MaxErrors = "1",
-            Priority = 1,
-            ServiceRoleArn = aws_iam_role.Example.Arn,
-            Targets = 
-            {
-                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
-                {
-                    Key = "InstanceIds",
-                    Values = 
-                    {
-                        aws_instance.Example.Id,
-                    },
-                },
-            },
-            TaskArn = "AWS-RestartEC2Instance",
-            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
-            {
-                AutomationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs
-                {
-                    DocumentVersion = "$LATEST",
-                    Parameter = 
-                    {
-                        
-                        {
-                            { "name", "InstanceId" },
-                            { "values", 
-                            {
-                                aws_instance.Example.Id,
-                            } },
-                        },
-                    },
-                },
-            },
-            TaskType = "AUTOMATION",
-            WindowId = aws_ssm_maintenance_window.Example.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
-			MaxConcurrency: pulumi.String("2"),
-			MaxErrors:      pulumi.String("1"),
-			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
-			Targets: ssm.MaintenanceWindowTaskTargetArray{
-				&ssm.MaintenanceWindowTaskTargetArgs{
-					Key: pulumi.String("InstanceIds"),
-					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
-					},
-				},
-			},
-			TaskArn: pulumi.String("AWS-RestartEC2Instance"),
-			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
-				AutomationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs{
-					DocumentVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
-					Parameter: pulumi.MapArray{
-						pulumi.Map{
-							"name": pulumi.String("InstanceId"),
-							"values": pulumi.StringArray{
-								pulumi.String(aws_instance.Example.Id),
-							},
-						},
-					},
-				},
-			},
-			TaskType: pulumi.String("AUTOMATION"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ssm.MaintenanceWindowTask("example",
-    max_concurrency=2,
-    max_errors=1,
-    priority=1,
-    service_role_arn=aws_iam_role["example"]["arn"],
-    targets=[{
-        "key": "InstanceIds",
-        "values": [aws_instance["example"]["id"]],
-    }],
-    task_arn="AWS-RestartEC2Instance",
-    task_invocation_parameters={
-        "automationParameters": {
-            "document_version": "$LATEST",
-            "parameter": [{
-                "name": "InstanceId",
-                "values": [aws_instance["example"]["id"]],
-            }],
-        },
-    },
-    task_type="AUTOMATION",
-    window_id=aws_ssm_maintenance_window["example"]["id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ssm.MaintenanceWindowTask("example", {
-    maxConcurrency: "2",
-    maxErrors: "1",
-    priority: 1,
-    serviceRoleArn: aws_iam_role_example.arn,
-    targets: [{
-        key: "InstanceIds",
-        values: [aws_instance_example.id],
-    }],
-    taskArn: "AWS-RestartEC2Instance",
-    taskInvocationParameters: {
-        automationParameters: {
-            documentVersion: "$LATEST",
-            parameters: [{
-                name: "InstanceId",
-                values: [aws_instance_example.id],
-            }],
-        },
-    },
-    taskType: "AUTOMATION",
-    windowId: aws_ssm_maintenance_window_example.id,
-});
-```
-
-{{% /example %}}
-
-### Lambda Tasks
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ssm.MaintenanceWindowTask("example", {
-    maxConcurrency: "2",
-    maxErrors: "1",
-    priority: 1,
-    serviceRoleArn: aws_iam_role_example.arn,
-    targets: [{
-        key: "InstanceIds",
-        values: [aws_instance_example.id],
-    }],
-    taskArn: aws_lambda_function_example.arn,
-    taskInvocationParameters: {
-        lambdaParameters: {
-            clientContext: Buffer.from("{\"key1\":\"value1\"}").toString("base64"),
-            payload: "{\"key1\":\"value1\"}",
-        },
-    },
-    taskType: "LAMBDA",
-    windowId: aws_ssm_maintenance_window_example.id,
-});
-```
-
-{{% /example %}}
-
 ### Run Command Tasks
 {{% example csharp %}}
 ```csharp
@@ -245,6 +32,9 @@ class MyStack : Stack
             MaxErrors = "1",
             Priority = 1,
             ServiceRoleArn = aws_iam_role.Example.Arn,
+            TaskArn = "AWS-RunShellScript",
+            TaskType = "RUN_COMMAND",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
             Targets = 
             {
                 new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
@@ -256,11 +46,14 @@ class MyStack : Stack
                     },
                 },
             },
-            TaskArn = "AWS-RunShellScript",
             TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
             {
                 RunCommandParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs
                 {
+                    OutputS3Bucket = aws_s3_bucket.Example.Bucket,
+                    OutputS3KeyPrefix = "output",
+                    ServiceRoleArn = aws_iam_role.Example.Arn,
+                    TimeoutSeconds = 600,
                     NotificationConfig = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs
                     {
                         NotificationArn = aws_sns_topic.Example.Arn,
@@ -270,25 +63,19 @@ class MyStack : Stack
                         },
                         NotificationType = "Command",
                     },
-                    OutputS3Bucket = aws_s3_bucket.Example.Bucket,
-                    OutputS3KeyPrefix = "output",
-                    Parameter = 
+                    Parameters = 
                     {
-                        
+                        new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs
                         {
-                            { "name", "commands" },
-                            { "values", 
+                            Name = "commands",
+                            Values = 
                             {
                                 "date",
-                            } },
+                            },
                         },
                     },
-                    ServiceRoleArn = aws_iam_role.Example.Arn,
-                    TimeoutSeconds = 600,
                 },
             },
-            TaskType = "RUN_COMMAND",
-            WindowId = aws_ssm_maintenance_window.Example.Id,
         });
     }
 
@@ -302,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -312,41 +99,41 @@ func main() {
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+			TaskArn:        pulumi.String("AWS-RunShellScript"),
+			TaskType:       pulumi.String("RUN_COMMAND"),
+			WindowId:       pulumi.Any(aws_ssm_maintenance_window.Example.Id),
 			Targets: ssm.MaintenanceWindowTaskTargetArray{
 				&ssm.MaintenanceWindowTaskTargetArgs{
 					Key: pulumi.String("InstanceIds"),
 					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
+						pulumi.Any(aws_instance.Example.Id),
 					},
 				},
 			},
-			TaskArn: pulumi.String("AWS-RunShellScript"),
 			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
 				RunCommandParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs{
+					OutputS3Bucket:    pulumi.Any(aws_s3_bucket.Example.Bucket),
+					OutputS3KeyPrefix: pulumi.String("output"),
+					ServiceRoleArn:    pulumi.Any(aws_iam_role.Example.Arn),
+					TimeoutSeconds:    pulumi.Int(600),
 					NotificationConfig: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs{
-						NotificationArn: pulumi.String(aws_sns_topic.Example.Arn),
+						NotificationArn: pulumi.Any(aws_sns_topic.Example.Arn),
 						NotificationEvents: pulumi.StringArray{
 							pulumi.String("All"),
 						},
 						NotificationType: pulumi.String("Command"),
 					},
-					OutputS3Bucket:    pulumi.String(aws_s3_bucket.Example.Bucket),
-					OutputS3KeyPrefix: pulumi.String("output"),
-					Parameter: pulumi.MapArray{
-						pulumi.Map{
-							"name": pulumi.String("commands"),
-							"values": pulumi.StringArray{
+					Parameters: ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArray{
+						&ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs{
+							Name: pulumi.String("commands"),
+							Values: pulumi.StringArray{
 								pulumi.String("date"),
 							},
 						},
 					},
-					ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
-					TimeoutSeconds: pulumi.Int(600),
 				},
 			},
-			TaskType: pulumi.String("RUN_COMMAND"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -368,30 +155,30 @@ example = aws.ssm.MaintenanceWindowTask("example",
     max_errors=1,
     priority=1,
     service_role_arn=aws_iam_role["example"]["arn"],
+    task_arn="AWS-RunShellScript",
+    task_type="RUN_COMMAND",
+    window_id=aws_ssm_maintenance_window["example"]["id"],
     targets=[{
         "key": "InstanceIds",
         "values": [aws_instance["example"]["id"]],
     }],
-    task_arn="AWS-RunShellScript",
     task_invocation_parameters={
         "runCommandParameters": {
+            "outputS3Bucket": aws_s3_bucket["example"]["bucket"],
+            "outputS3KeyPrefix": "output",
+            "service_role_arn": aws_iam_role["example"]["arn"],
+            "timeoutSeconds": 600,
             "notificationConfig": {
                 "notificationArn": aws_sns_topic["example"]["arn"],
                 "notificationEvents": ["All"],
                 "notification_type": "Command",
             },
-            "outputS3Bucket": aws_s3_bucket["example"]["bucket"],
-            "outputS3KeyPrefix": "output",
-            "parameter": [{
+            "parameters": [{
                 "name": "commands",
                 "values": ["date"],
             }],
-            "service_role_arn": aws_iam_role["example"]["arn"],
-            "timeoutSeconds": 600,
         },
-    },
-    task_type="RUN_COMMAND",
-    window_id=aws_ssm_maintenance_window["example"]["id"])
+    })
 ```
 
 {{% /example %}}
@@ -403,34 +190,34 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ssm.MaintenanceWindowTask("example", {
-    maxConcurrency: "2",
-    maxErrors: "1",
+    maxConcurrency: 2,
+    maxErrors: 1,
     priority: 1,
-    serviceRoleArn: aws_iam_role_example.arn,
+    serviceRoleArn: aws_iam_role.example.arn,
+    taskArn: "AWS-RunShellScript",
+    taskType: "RUN_COMMAND",
+    windowId: aws_ssm_maintenance_window.example.id,
     targets: [{
         key: "InstanceIds",
-        values: [aws_instance_example.id],
+        values: [aws_instance.example.id],
     }],
-    taskArn: "AWS-RunShellScript",
     taskInvocationParameters: {
         runCommandParameters: {
+            outputS3Bucket: aws_s3_bucket.example.bucket,
+            outputS3KeyPrefix: "output",
+            serviceRoleArn: aws_iam_role.example.arn,
+            timeoutSeconds: 600,
             notificationConfig: {
-                notificationArn: aws_sns_topic_example.arn,
+                notificationArn: aws_sns_topic.example.arn,
                 notificationEvents: ["All"],
                 notificationType: "Command",
             },
-            outputS3Bucket: aws_s3_bucket_example.bucket,
-            outputS3KeyPrefix: "output",
             parameters: [{
                 name: "commands",
                 values: ["date"],
             }],
-            serviceRoleArn: aws_iam_role_example.arn,
-            timeoutSeconds: 600,
         },
     },
-    taskType: "RUN_COMMAND",
-    windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
 
@@ -452,6 +239,9 @@ class MyStack : Stack
             MaxErrors = "1",
             Priority = 1,
             ServiceRoleArn = aws_iam_role.Example.Arn,
+            TaskArn = aws_sfn_activity.Example.Id,
+            TaskType = "STEP_FUNCTIONS",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
             Targets = 
             {
                 new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
@@ -463,7 +253,6 @@ class MyStack : Stack
                     },
                 },
             },
-            TaskArn = aws_sfn_activity.Example.Id,
             TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
             {
                 StepFunctionsParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs
@@ -472,8 +261,6 @@ class MyStack : Stack
                     Name = "example",
                 },
             },
-            TaskType = "STEP_FUNCTIONS",
-            WindowId = aws_ssm_maintenance_window.Example.Id,
         });
     }
 
@@ -487,7 +274,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -497,24 +284,24 @@ func main() {
 			MaxConcurrency: pulumi.String("2"),
 			MaxErrors:      pulumi.String("1"),
 			Priority:       pulumi.Int(1),
-			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			ServiceRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+			TaskArn:        pulumi.Any(aws_sfn_activity.Example.Id),
+			TaskType:       pulumi.String("STEP_FUNCTIONS"),
+			WindowId:       pulumi.Any(aws_ssm_maintenance_window.Example.Id),
 			Targets: ssm.MaintenanceWindowTaskTargetArray{
 				&ssm.MaintenanceWindowTaskTargetArgs{
 					Key: pulumi.String("InstanceIds"),
 					Values: pulumi.StringArray{
-						pulumi.String(aws_instance.Example.Id),
+						pulumi.Any(aws_instance.Example.Id),
 					},
 				},
 			},
-			TaskArn: pulumi.String(aws_sfn_activity.Example.Id),
 			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
 				StepFunctionsParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs{
 					Input: pulumi.String("{\"key1\":\"value1\"}"),
 					Name:  pulumi.String("example"),
 				},
 			},
-			TaskType: pulumi.String("STEP_FUNCTIONS"),
-			WindowId: pulumi.String(aws_ssm_maintenance_window.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -536,19 +323,19 @@ example = aws.ssm.MaintenanceWindowTask("example",
     max_errors=1,
     priority=1,
     service_role_arn=aws_iam_role["example"]["arn"],
+    task_arn=aws_sfn_activity["example"]["id"],
+    task_type="STEP_FUNCTIONS",
+    window_id=aws_ssm_maintenance_window["example"]["id"],
     targets=[{
         "key": "InstanceIds",
         "values": [aws_instance["example"]["id"]],
     }],
-    task_arn=aws_sfn_activity["example"]["id"],
     task_invocation_parameters={
         "stepFunctionsParameters": {
             "input": "{\"key1\":\"value1\"}",
             "name": "example",
         },
-    },
-    task_type="STEP_FUNCTIONS",
-    window_id=aws_ssm_maintenance_window["example"]["id"])
+    })
 ```
 
 {{% /example %}}
@@ -560,23 +347,23 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ssm.MaintenanceWindowTask("example", {
-    maxConcurrency: "2",
-    maxErrors: "1",
+    maxConcurrency: 2,
+    maxErrors: 1,
     priority: 1,
-    serviceRoleArn: aws_iam_role_example.arn,
+    serviceRoleArn: aws_iam_role.example.arn,
+    taskArn: aws_sfn_activity.example.id,
+    taskType: "STEP_FUNCTIONS",
+    windowId: aws_ssm_maintenance_window.example.id,
     targets: [{
         key: "InstanceIds",
-        values: [aws_instance_example.id],
+        values: [aws_instance.example.id],
     }],
-    taskArn: aws_sfn_activity_example.id,
     taskInvocationParameters: {
         stepFunctionsParameters: {
             input: "{\"key1\":\"value1\"}",
             name: "example",
         },
     },
-    taskType: "STEP_FUNCTIONS",
-    windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
 
@@ -594,11 +381,11 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.MaintenanceWindowTask">MaintenanceWindowTask</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>logging_info=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.MaintenanceWindowTask">MaintenanceWindowTask</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTask">NewMaintenanceWindowTask</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTask">NewMaintenanceWindowTask</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -672,7 +459,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -692,7 +479,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -702,7 +489,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -854,17 +641,6 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="logginginfo_csharp">
-<a href="#logginginfo_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -895,19 +671,8 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="taskparameters_csharp">
-<a href="#taskparameters_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1004,17 +769,6 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="logginginfo_go">
-<a href="#logginginfo_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -1045,19 +799,8 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="taskparameters_go">
-<a href="#taskparameters_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1154,17 +897,6 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="logginginfo_nodejs">
-<a href="#logginginfo_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1195,19 +927,8 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="taskparameters_nodejs">
-<a href="#taskparameters_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1304,17 +1025,6 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="logging_info_python">
-<a href="#logging_info_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1345,19 +1055,8 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="task_parameters_python">
-<a href="#task_parameters_python" style="color: inherit; text-decoration: inherit;">task_<wbr>parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1457,11 +1156,11 @@ Get an existing MaintenanceWindowTask resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>logging_info=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaintenanceWindowTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskState">MaintenanceWindowTaskState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaintenanceWindowTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskState">MaintenanceWindowTaskState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1582,17 +1281,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_logginginfo_csharp">
-<a href="#state_logginginfo_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrency_csharp">
@@ -1678,19 +1366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_taskparameters_csharp">
-<a href="#state_taskparameters_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1731,17 +1408,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_logginginfo_go">
-<a href="#state_logginginfo_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1828,19 +1494,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_taskparameters_go">
-<a href="#state_taskparameters_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1881,17 +1536,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_logginginfo_nodejs">
-<a href="#state_logginginfo_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1978,19 +1622,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_taskparameters_nodejs">
-<a href="#state_taskparameters_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2031,17 +1664,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_logging_info_python">
-<a href="#state_logging_info_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>info</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2128,19 +1750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+    <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_task_parameters_python">
-<a href="#state_task_parameters_python" style="color: inherit; text-decoration: inherit;">task_<wbr>parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2179,179 +1790,13 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskLoggingInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskLoggingInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskLoggingInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskLoggingInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskLoggingInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3bucketname_csharp">
-<a href="#s3bucketname_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3region_csharp">
-<a href="#s3region_csharp" style="color: inherit; text-decoration: inherit;">S3Region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="s3bucketprefix_csharp">
-<a href="#s3bucketprefix_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3bucketname_go">
-<a href="#s3bucketname_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3region_go">
-<a href="#s3region_go" style="color: inherit; text-decoration: inherit;">S3Region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="s3bucketprefix_go">
-<a href="#s3bucketprefix_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3bucketname_nodejs">
-<a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3region_nodejs">
-<a href="#s3region_nodejs" style="color: inherit; text-decoration: inherit;">s3Region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="s3bucketprefix_nodejs">
-<a href="#s3bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3_bucket_name_python">
-<a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="s3_region_python">
-<a href="#s3_region_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="s3bucketprefix_python">
-<a href="#s3bucketprefix_python" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTarget">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTarget.html">output</a> API doc for this type.
@@ -2381,7 +1826,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The array of strings.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2408,7 +1854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The array of strings.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2435,7 +1882,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The array of strings.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2462,7 +1910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The array of strings.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2477,7 +1926,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParameters.html">output</a> API doc for this type.
@@ -2699,7 +2148,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParameters.html">output</a> API doc for this type.
@@ -2833,7 +2282,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter.html">output</a> API doc for this type.
@@ -2967,7 +2416,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters.html">output</a> API doc for this type.
@@ -3145,7 +2594,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters.html">output</a> API doc for this type.
@@ -3587,7 +3036,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig.html">output</a> API doc for this type.
@@ -3765,7 +3214,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter.html">output</a> API doc for this type.
@@ -3899,7 +3348,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters.html">output</a> API doc for this type.
@@ -4019,136 +3468,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the STEP_FUNCTION task.
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskParameter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskParameterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskParameter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
