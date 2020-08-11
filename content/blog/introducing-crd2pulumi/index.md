@@ -86,7 +86,7 @@ CustomResource.
 
 {{% choosable language typescript %}}
 
-```
+```sh
 $ crd2pulumi nodejs crd.yaml
 ```
 
@@ -100,14 +100,14 @@ const cronTabDefinition = new crontabs.CronTabDefinition("my-crontab-definition"
 // Instantiate a CronTab resource.
 const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 {
-	metadata: {
-    	name: "my-new-cron-object",
-	},
-	spec: {
-    	cronSpec: "* * * * */5",
-    	image: "my-awesome-cron-image",
+    metadata: {
+        name: "my-new-cron-object",
+    },
+    spec: {
+        cronSpec: "* * * * */5",
+        image: "my-awesome-cron-image",
         replicas: 3,
-	}
+    }
 });
 ```
 
@@ -127,7 +127,7 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 
 {{% choosable language go %}}
 
-```
+```sh
 $ crd2pulumi go crd.yaml
 ```
 
@@ -142,7 +142,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-        // Register the CronTab CRD.
+		// Register the CronTab CRD.
 		_, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
 			&yaml.ConfigFileArgs{
 				File: "crontabdefinition.yaml",
@@ -151,7 +151,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-        // Instantiate a CronTab resource.
+		// Instantiate a CronTab resource.
 		_, err = NewCronTab(ctx, "my-new-cron-object", &CronTabArgs{
 			Metadata: &v1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
@@ -189,7 +189,7 @@ what it looks like to create a `Certificate` CustomResource using our new types.
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as certificates from "./certificates"
 
 // Register the Certificate CRD.
@@ -245,7 +245,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 
-        // Register the Certificate CRD.
+		// Register the Certificate CRD.
 		_, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
 			&yaml.ConfigFileArgs{
 				File: "certificate.yaml",
@@ -255,7 +255,7 @@ func main() {
 			return err
 		}
 
-        // Instantiate a Certificate resource.
+		// Instantiate a Certificate resource.
 		_, err = NewCertificate(ctx, "example-cert", &CertificateArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("example-com"),
