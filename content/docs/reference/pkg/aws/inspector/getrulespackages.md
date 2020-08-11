@@ -43,9 +43,9 @@ class MyStack : Stack
         });
         var assessmentAssessmentTemplate = new Aws.Inspector.AssessmentTemplate("assessmentAssessmentTemplate", new Aws.Inspector.AssessmentTemplateArgs
         {
+            TargetArn = assessmentAssessmentTarget.Arn,
             Duration = 60,
             RulesPackageArns = rules.Apply(rules => rules.Arns),
-            TargetArn = assessmentAssessmentTarget.Arn,
         });
     }
 
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/inspector"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/inspector"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +84,9 @@ func main() {
 			return err
 		}
 		_, err = inspector.NewAssessmentTemplate(ctx, "assessmentAssessmentTemplate", &inspector.AssessmentTemplateArgs{
+			TargetArn:        assessmentAssessmentTarget.Arn,
 			Duration:         pulumi.Int(60),
 			RulesPackageArns: toPulumiStringArray(rules.Arns),
-			TargetArn:        assessmentAssessmentTarget.Arn,
 		})
 		if err != nil {
 			return err
@@ -117,9 +117,9 @@ group = aws.inspector.ResourceGroup("group", tags={
 })
 assessment_assessment_target = aws.inspector.AssessmentTarget("assessmentAssessmentTarget", resource_group_arn=group.arn)
 assessment_assessment_template = aws.inspector.AssessmentTemplate("assessmentAssessmentTemplate",
+    target_arn=assessment_assessment_target.arn,
     duration="60",
-    rules_package_arns=rules.arns,
-    target_arn=assessment_assessment_target.arn)
+    rules_package_arns=rules.arns)
 ```
 
 {{% /example %}}
@@ -130,21 +130,16 @@ assessment_assessment_template = aws.inspector.AssessmentTemplate("assessmentAss
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-// Declare the data source
-const rules = pulumi.output(aws.inspector.getRulesPackages({ async: true }));
+const rules = aws.inspector.getRulesPackages({});
 // e.g. Use in aws_inspector_assessment_template
-const group = new aws.inspector.ResourceGroup("group", {
-    tags: {
-        test: "test",
-    },
-});
-const assessmentAssessmentTarget = new aws.inspector.AssessmentTarget("assessment", {
-    resourceGroupArn: group.arn,
-});
-const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("assessment", {
-    duration: 60,
-    rulesPackageArns: rules.arns,
+const group = new aws.inspector.ResourceGroup("group", {tags: {
+    test: "test",
+}});
+const assessmentAssessmentTarget = new aws.inspector.AssessmentTarget("assessmentAssessmentTarget", {resourceGroupArn: group.arn});
+const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("assessmentAssessmentTemplate", {
     targetArn: assessmentAssessmentTarget.arn,
+    duration: "60",
+    rulesPackageArns: rules.then(rules => rules.arns),
 });
 ```
 
@@ -169,7 +164,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesPackages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/inspector?tab=doc#GetRulesPackagesResult">GetRulesPackagesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesPackages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/inspector?tab=doc#GetRulesPackagesResult">GetRulesPackagesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

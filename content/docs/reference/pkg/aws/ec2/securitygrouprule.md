@@ -23,6 +23,7 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Setting `protocol = "all"` or `protocol = -1` with `from_port` and `to_port` will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.
 
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
+
 ## Usage with prefix list IDs
 
 Prefix list IDs are manged by AWS internally. Prefix list IDs
@@ -34,14 +35,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // ...
-const myEndpoint = new aws.ec2.VpcEndpoint("my_endpoint", {});
-const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
-    fromPort: 0,
-    prefixListIds: [myEndpoint.prefixListId],
-    protocol: "-1",
-    securityGroupId: "sg-123456",
-    toPort: 0,
+const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
+// ...
+const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
     type: "egress",
+    toPort: 0,
+    protocol: "-1",
+    prefixListIds: [myEndpoint.prefixListId],
+    fromPort: 0,
+    securityGroupId: "sg-123456",
 });
 ```
 ```python
@@ -50,13 +52,14 @@ import pulumi_aws as aws
 
 # ...
 my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+# ...
 allow_all = aws.ec2.SecurityGroupRule("allowAll",
-    from_port=0,
-    prefix_list_ids=[my_endpoint.prefix_list_id],
-    protocol="-1",
-    security_group_id="sg-123456",
+    type="egress",
     to_port=0,
-    type="egress")
+    protocol="-1",
+    prefix_list_ids=[my_endpoint.prefix_list_id],
+    from_port=0,
+    security_group_id="sg-123456")
 ```
 ```csharp
 using Pulumi;
@@ -70,17 +73,18 @@ class MyStack : Stack
         var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
         {
         });
+        // ...
         var allowAll = new Aws.Ec2.SecurityGroupRule("allowAll", new Aws.Ec2.SecurityGroupRuleArgs
         {
-            FromPort = 0,
+            Type = "egress",
+            ToPort = 0,
+            Protocol = "-1",
             PrefixListIds = 
             {
                 myEndpoint.PrefixListId,
             },
-            Protocol = "-1",
+            FromPort = 0,
             SecurityGroupId = "sg-123456",
-            ToPort = 0,
-            Type = "egress",
         });
     }
 
@@ -90,7 +94,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,70 +105,13 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
-			FromPort: pulumi.Int(0),
+			Type:     pulumi.String("egress"),
+			ToPort:   pulumi.Int(0),
+			Protocol: pulumi.String("-1"),
 			PrefixListIds: pulumi.StringArray{
 				myEndpoint.PrefixListId,
 			},
-			Protocol:        pulumi.String("-1"),
-			SecurityGroupId: pulumi.String("sg-123456"),
-			ToPort:          pulumi.Int(0),
-			Type:            pulumi.String("egress"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Ec2.SecurityGroupRule("example", new Aws.Ec2.SecurityGroupRuleArgs
-        {
-            Type = "ingress",
-            FromPort = 0,
-            ToPort = 65535,
-            Protocol = "tcp",
-            CidrBlocks = aws_vpc.Example.Cidr_block,
-            SecurityGroupId = "sg-123456",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
-			Type:            pulumi.String("ingress"),
 			FromPort:        pulumi.Int(0),
-			ToPort:          pulumi.Int(65535),
-			Protocol:        pulumi.String("tcp"),
-			CidrBlocks:      aws_vpc.Example.Cidr_block,
 			SecurityGroupId: pulumi.String("sg-123456"),
 		})
 		if err != nil {
@@ -175,43 +122,6 @@ func main() {
 }
 ```
 
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ec2.SecurityGroupRule("example",
-    type="ingress",
-    from_port=0,
-    to_port=65535,
-    protocol="tcp",
-    cidr_blocks=aws_vpc["example"]["cidr_block"],
-    security_group_id="sg-123456")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ec2.SecurityGroupRule("example", {
-    type: "ingress",
-    fromPort: 0,
-    toPort: 65535,
-    protocol: "tcp",
-    cidrBlocks: aws_vpc.example.cidr_block,
-    securityGroupId: "sg-123456",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SecurityGroupRule Resource {#create}
@@ -227,7 +137,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRule">NewSecurityGroupRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRule">NewSecurityGroupRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -301,7 +211,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +231,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +241,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1018,7 +928,7 @@ Get an existing SecurityGroupRule resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRuleState">SecurityGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRuleState">SecurityGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

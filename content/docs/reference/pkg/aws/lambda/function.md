@@ -32,56 +32,6 @@ large files efficiently.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Basic Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    environment: {
-        variables: {
-            foo: "bar",
-        },
-    },
-    code: new pulumi.asset.FileArchive("lambda_function_payload.zip"),
-    handler: "exports.test",
-    role: iamForLambda.arn,
-    runtime: "nodejs12.x",
-});
-```
-
-{{% /example %}}
-
 ### Lambda Layers
 {{% example csharp %}}
 ```csharp
@@ -95,6 +45,7 @@ class MyStack : Stack
         var exampleLayerVersion = new Aws.Lambda.LayerVersion("exampleLayerVersion", new Aws.Lambda.LayerVersionArgs
         {
         });
+        // ... other configuration ...
         var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
         {
             Layers = 
@@ -114,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -145,6 +96,7 @@ import pulumi
 import pulumi_aws as aws
 
 example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
+# ... other configuration ...
 example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
 ```
 
@@ -156,11 +108,9 @@ example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLayerVersion = new aws.lambda.LayerVersion("example", {});
-const exampleFunction = new aws.lambda.Function("example", {
-    // ... other configuration ...
-    layers: [exampleLayerVersion.arn],
-});
+const exampleLayerVersion = new aws.lambda.LayerVersion("exampleLayerVersion", {});
+// ... other configuration ...
+const exampleFunction = new aws.lambda.Function("exampleFunction", {layers: [exampleLayerVersion.arn]});
 ```
 
 {{% /example %}}
@@ -175,16 +125,6 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
-        {
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                "aws_cloudwatch_log_group.example",
-                "aws_iam_role_policy_attachment.lambda_logs",
-            },
-        });
         // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
         // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
         var example = new Aws.CloudWatch.LogGroup("example", new Aws.CloudWatch.LogGroupArgs
@@ -194,8 +134,8 @@ class MyStack : Stack
         // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
         var lambdaLogging = new Aws.Iam.Policy("lambdaLogging", new Aws.Iam.PolicyArgs
         {
-            Description = "IAM policy for logging from a lambda",
             Path = "/",
+            Description = "IAM policy for logging from a lambda",
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -210,13 +150,22 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var lambdaLogs = new Aws.Iam.RolePolicyAttachment("lambdaLogs", new Aws.Iam.RolePolicyAttachmentArgs
         {
-            PolicyArn = lambdaLogging.Arn,
             Role = aws_iam_role.Iam_for_lambda.Name,
+            PolicyArn = lambdaLogging.Arn,
+        });
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                lambdaLogs,
+                example,
+            },
         });
     }
 
@@ -232,39 +181,39 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := lambda.NewFunction(ctx, "testLambda", nil, pulumi.DependsOn([]pulumi.Resource{
-			"aws_cloudwatch_log_group.example",
-			"aws_iam_role_policy_attachment.lambda_logs",
-		}))
-		if err != nil {
-			return err
-		}
-		_, err = cloudwatch.NewLogGroup(ctx, "example", &cloudwatch.LogGroupArgs{
+		example, err := cloudwatch.NewLogGroup(ctx, "example", &cloudwatch.LogGroupArgs{
 			RetentionInDays: pulumi.Int(14),
 		})
 		if err != nil {
 			return err
 		}
 		lambdaLogging, err := iam.NewPolicy(ctx, "lambdaLogging", &iam.PolicyArgs{
-			Description: pulumi.String("IAM policy for logging from a lambda"),
 			Path:        pulumi.String("/"),
-			Policy:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*:*:*\",\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			Description: pulumi.String("IAM policy for logging from a lambda"),
+			Policy:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*:*:*\",\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRolePolicyAttachment(ctx, "lambdaLogs", &iam.RolePolicyAttachmentArgs{
+		lambdaLogs, err := iam.NewRolePolicyAttachment(ctx, "lambdaLogs", &iam.RolePolicyAttachmentArgs{
+			Role:      pulumi.Any(aws_iam_role.Iam_for_lambda.Name),
 			PolicyArn: lambdaLogging.Arn,
-			Role:      pulumi.String(aws_iam_role.Iam_for_lambda.Name),
 		})
+		if err != nil {
+			return err
+		}
+		_, err = lambda.NewFunction(ctx, "testLambda", nil, pulumi.DependsOn([]pulumi.Resource{
+			lambdaLogs,
+			example,
+		}))
 		if err != nil {
 			return err
 		}
@@ -280,17 +229,13 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test_lambda = aws.lambda_.Function("testLambda", opts=ResourceOptions(depends_on=[
-        "aws_cloudwatch_log_group.example",
-        "aws_iam_role_policy_attachment.lambda_logs",
-    ]))
 # This is to optionally manage the CloudWatch Log Group for the Lambda Function.
 # If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
 example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
 # See also the following AWS managed policy: AWSLambdaBasicExecutionRole
 lambda_logging = aws.iam.Policy("lambdaLogging",
-    description="IAM policy for logging from a lambda",
     path="/",
+    description="IAM policy for logging from a lambda",
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -305,11 +250,14 @@ lambda_logging = aws.iam.Policy("lambdaLogging",
     }
   ]
 }
-
 """)
 lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
-    policy_arn=lambda_logging.arn,
-    role=aws_iam_role["iam_for_lambda"]["name"])
+    role=aws_iam_role["iam_for_lambda"]["name"],
+    policy_arn=lambda_logging.arn)
+test_lambda = aws.lambda_.Function("testLambda", opts=ResourceOptions(depends_on=[
+        lambda_logs,
+        example,
+    ]))
 ```
 
 {{% /example %}}
@@ -322,13 +270,11 @@ import * as aws from "@pulumi/aws";
 
 // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
 // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-const example = new aws.cloudwatch.LogGroup("example", {
-    retentionInDays: 14,
-});
+const example = new aws.cloudwatch.LogGroup("example", {retentionInDays: 14});
 // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-const lambdaLogging = new aws.iam.Policy("lambda_logging", {
-    description: "IAM policy for logging from a lambda",
+const lambdaLogging = new aws.iam.Policy("lambdaLogging", {
     path: "/",
+    description: "IAM policy for logging from a lambda",
     policy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -345,11 +291,16 @@ const lambdaLogging = new aws.iam.Policy("lambda_logging", {
 }
 `,
 });
-const lambdaLogs = new aws.iam.RolePolicyAttachment("lambda_logs", {
+const lambdaLogs = new aws.iam.RolePolicyAttachment("lambdaLogs", {
+    role: aws_iam_role.iam_for_lambda.name,
     policyArn: lambdaLogging.arn,
-    role: aws_iam_role_iam_for_lambda.name,
 });
-const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [example, lambdaLogs] });
+const testLambda = new aws.lambda.Function("testLambda", {}, {
+    dependsOn: [
+        lambdaLogs,
+        example,
+    ],
+});
 ```
 
 {{% /example %}}
@@ -370,7 +321,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [exam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Function">NewFunction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Function">NewFunction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -444,7 +395,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [exam
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -464,7 +415,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [exam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -474,7 +425,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [exam
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1893,7 +1844,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -3277,7 +3228,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionDeadLetterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionDeadLetterConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionDeadLetterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionDeadLetterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionDeadLetterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionDeadLetterConfig.html">output</a> API doc for this type.
@@ -3379,7 +3330,7 @@ which service is targeted.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEnvironmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEnvironmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEnvironmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEnvironment.html">output</a> API doc for this type.
@@ -3469,7 +3420,7 @@ which service is targeted.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionFileSystemConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionFileSystemConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionFileSystemConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionFileSystemConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionFileSystemConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionFileSystemConfig.html">output</a> API doc for this type.
@@ -3603,7 +3554,7 @@ which service is targeted.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionTracingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionTracingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionTracingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionTracingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionTracingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionTracingConfig.html">output</a> API doc for this type.
@@ -3709,7 +3660,7 @@ X-Ray for a tracing decision.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionVpcConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionVpcConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionVpcConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionVpcConfig.html">output</a> API doc for this type.

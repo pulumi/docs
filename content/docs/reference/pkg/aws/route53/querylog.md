@@ -32,6 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Example CloudWatch log group in us-east-1
         var us_east_1 = new Aws.Provider("us-east-1", new Aws.ProviderArgs
         {
             Region = "us-east-1",
@@ -41,8 +42,10 @@ class MyStack : Stack
             RetentionInDays = 30,
         }, new CustomResourceOptions
         {
-            Provider = "aws.us-east-1",
+            Provider = aws.Us_east_1,
         });
+        // Example CloudWatch log resource policy to allow Route53 to write logs
+        // to any log group under /aws/route53/*
         var route53_query_logging_policyPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
         {
             Statements = 
@@ -53,6 +56,10 @@ class MyStack : Stack
                     {
                         "logs:CreateLogStream",
                         "logs:PutLogEvents",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:logs:*:*:log-group:/aws/route53/*",
                     },
                     Principals = 
                     {
@@ -65,10 +72,6 @@ class MyStack : Stack
                             Type = "Service",
                         },
                     },
-                    Resources = 
-                    {
-                        "arn:aws:logs:*:*:log-group:/aws/route53/*",
-                    },
                 },
             },
         }));
@@ -78,8 +81,9 @@ class MyStack : Stack
             PolicyName = "route53-query-logging-policy",
         }, new CustomResourceOptions
         {
-            Provider = "aws.us-east-1",
+            Provider = aws.Us_east_1,
         });
+        // Example Route53 zone with query logging
         var exampleComZone = new Aws.Route53.Zone("exampleComZone", new Aws.Route53.ZoneArgs
         {
         });
@@ -91,7 +95,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_cloudwatch_log_resource_policy.route53-query-logging-policy",
+                route53_query_logging_policyLogResourcePolicy,
             },
         });
     }
@@ -106,10 +110,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -123,7 +127,7 @@ func main() {
 		}
 		awsRoute53ExampleCom, err := cloudwatch.NewLogGroup(ctx, "awsRoute53ExampleCom", &cloudwatch.LogGroupArgs{
 			RetentionInDays: pulumi.Int(30),
-		}, pulumi.Provider("aws.us-east-1"))
+		}, pulumi.Provider(aws.Us-east-1))
 		if err != nil {
 			return err
 		}
@@ -134,6 +138,9 @@ func main() {
 						"logs:CreateLogStream",
 						"logs:PutLogEvents",
 					},
+					Resources: []string{
+						"arn:aws:logs:*:*:log-group:/aws/route53/*",
+					},
 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
 						iam.GetPolicyDocumentStatementPrincipal{
 							Identifiers: []string{
@@ -141,9 +148,6 @@ func main() {
 							},
 							Type: "Service",
 						},
-					},
-					Resources: []string{
-						"arn:aws:logs:*:*:log-group:/aws/route53/*",
 					},
 				},
 			},
@@ -154,7 +158,7 @@ func main() {
 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "route53_query_logging_policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
 			PolicyDocument: pulumi.String(route53_query_logging_policyPolicyDocument.Json),
 			PolicyName:     pulumi.String("route53-query-logging-policy"),
-		}, pulumi.Provider("aws.us-east-1"))
+		}, pulumi.Provider(aws.Us-east-1))
 		if err != nil {
 			return err
 		}
@@ -166,7 +170,7 @@ func main() {
 			CloudwatchLogGroupArn: awsRoute53ExampleCom.Arn,
 			ZoneId:                exampleComZone.ZoneId,
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_cloudwatch_log_resource_policy.route53-query-logging-policy",
+			route53_query_logging_policyLogResourcePolicy,
 		}))
 		if err != nil {
 			return err
@@ -184,29 +188,33 @@ import pulumi
 import pulumi_aws as aws
 import pulumi_pulumi as pulumi
 
+# Example CloudWatch log group in us-east-1
 us_east_1 = pulumi.providers.Aws("us-east-1", region="us-east-1")
 aws_route53_example_com = aws.cloudwatch.LogGroup("awsRoute53ExampleCom", retention_in_days=30,
-opts=ResourceOptions(provider="aws.us-east-1"))
+opts=ResourceOptions(provider=aws["us-east-1"]))
+# Example CloudWatch log resource policy to allow Route53 to write logs
+# to any log group under /aws/route53/*
 route53_query_logging_policy_policy_document = aws.iam.get_policy_document(statements=[{
     "actions": [
         "logs:CreateLogStream",
         "logs:PutLogEvents",
     ],
+    "resources": ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     "principals": [{
         "identifiers": ["route53.amazonaws.com"],
         "type": "Service",
     }],
-    "resources": ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
 }])
 route53_query_logging_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy",
     policy_document=route53_query_logging_policy_policy_document.json,
     policy_name="route53-query-logging-policy",
-    opts=ResourceOptions(provider="aws.us-east-1"))
+    opts=ResourceOptions(provider=aws["us-east-1"]))
+# Example Route53 zone with query logging
 example_com_zone = aws.route53.Zone("exampleComZone")
 example_com_query_log = aws.route53.QueryLog("exampleComQueryLog",
     cloudwatch_log_group_arn=aws_route53_example_com.arn,
     zone_id=example_com_zone.zone_id,
-    opts=ResourceOptions(depends_on=["aws_cloudwatch_log_resource_policy.route53-query-logging-policy"]))
+    opts=ResourceOptions(depends_on=[route53_query_logging_policy_log_resource_policy]))
 ```
 
 {{% /example %}}
@@ -217,34 +225,40 @@ example_com_query_log = aws.route53.QueryLog("exampleComQueryLog",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const us_east_1 = new aws.Provider("us-east-1", {
-    region: "us-east-1",
+// Example CloudWatch log group in us-east-1
+const us_east_1 = new aws.Provider("us-east-1", {region: "us-east-1"});
+const awsRoute53ExampleCom = new aws.cloudwatch.LogGroup("awsRoute53ExampleCom", {retentionInDays: 30}, {
+    provider: aws["us-east-1"],
 });
-const exampleComZone = new aws.route53.Zone("example_com", {});
-const awsRoute53ExampleCom = new aws.cloudwatch.LogGroup("aws_route53_example_com", {
-    retentionInDays: 30,
-}, { provider: us_east_1 });
-const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+// Example CloudWatch log resource policy to allow Route53 to write logs
+// to any log group under /aws/route53/*
+const route53-query-logging-policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
             "logs:PutLogEvents",
         ],
+        resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
         principals: [{
             identifiers: ["route53.amazonaws.com"],
             type: "Service",
         }],
-        resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-}, { async: true }));
-const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
-    policyDocument: route53_query_logging_policyPolicyDocument.json,
+});
+const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy", {
+    policyDocument: route53_query_logging_policyPolicyDocument.then(route53_query_logging_policyPolicyDocument => route53_query_logging_policyPolicyDocument.json),
     policyName: "route53-query-logging-policy",
-}, { provider: us_east_1 });
-const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
+}, {
+    provider: aws["us-east-1"],
+});
+// Example Route53 zone with query logging
+const exampleComZone = new aws.route53.Zone("exampleComZone", {});
+const exampleComQueryLog = new aws.route53.QueryLog("exampleComQueryLog", {
     cloudwatchLogGroupArn: awsRoute53ExampleCom.arn,
     zoneId: exampleComZone.zoneId,
-}, { dependsOn: [route53_query_logging_policyLogResourcePolicy] });
+}, {
+    dependsOn: [route53_query_logging_policyLogResourcePolicy],
+});
 ```
 
 {{% /example %}}
@@ -265,7 +279,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLog">NewQueryLog</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLog">NewQueryLog</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -339,7 +353,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -359,7 +373,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,7 +383,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -644,7 +658,7 @@ Get an existing QueryLog resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueryLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLogState">QueryLogState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueryLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLogState">QueryLogState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

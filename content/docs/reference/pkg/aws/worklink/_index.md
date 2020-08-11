@@ -24,7 +24,7 @@ Explore the resources and functions of the worklink module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -35,7 +35,7 @@ Explore the resources and functions of the worklink module in the AWS package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.html" title="Pulumi.Aws.WorkLink">Pulumi.Aws.WorkLink</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/worklink?tab=doc#" title="aws/worklink">aws/worklink</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/worklink?tab=doc#" title="aws/worklink">aws/worklink</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/worklink/#" title="@pulumi/aws/worklink">@pulumi/aws/worklink</a></dd>

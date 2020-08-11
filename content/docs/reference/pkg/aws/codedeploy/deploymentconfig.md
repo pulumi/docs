@@ -37,25 +37,10 @@ class MyStack : Stack
         });
         var fooDeploymentGroup = new Aws.CodeDeploy.DeploymentGroup("fooDeploymentGroup", new Aws.CodeDeploy.DeploymentGroupArgs
         {
-            AlarmConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs
-            {
-                Alarms = 
-                {
-                    "my-alarm-name",
-                },
-                Enabled = true,
-            },
             AppName = aws_codedeploy_app.Foo_app.Name,
-            AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
-            {
-                Enabled = true,
-                Events = 
-                {
-                    "DEPLOYMENT_FAILURE",
-                },
-            },
-            DeploymentConfigName = fooDeploymentConfig.Id,
             DeploymentGroupName = "bar",
+            ServiceRoleArn = aws_iam_role.Foo_role.Arn,
+            DeploymentConfigName = fooDeploymentConfig.Id,
             Ec2TagFilters = 
             {
                 new Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagFilterArgs
@@ -65,7 +50,6 @@ class MyStack : Stack
                     Value = "filtervalue",
                 },
             },
-            ServiceRoleArn = aws_iam_role.Foo_role.Arn,
             TriggerConfigurations = 
             {
                 new Aws.CodeDeploy.Inputs.DeploymentGroupTriggerConfigurationArgs
@@ -77,6 +61,22 @@ class MyStack : Stack
                     TriggerName = "foo-trigger",
                     TriggerTargetArn = "foo-topic-arn",
                 },
+            },
+            AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
+            {
+                Enabled = true,
+                Events = 
+                {
+                    "DEPLOYMENT_FAILURE",
+                },
+            },
+            AlarmConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs
+            {
+                Alarms = 
+                {
+                    "my-alarm-name",
+                },
+                Enabled = true,
             },
         });
     }
@@ -91,7 +91,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,21 +108,10 @@ func main() {
 			return err
 		}
 		_, err = codedeploy.NewDeploymentGroup(ctx, "fooDeploymentGroup", &codedeploy.DeploymentGroupArgs{
-			AlarmConfiguration: &codedeploy.DeploymentGroupAlarmConfigurationArgs{
-				Alarms: pulumi.StringArray{
-					pulumi.String("my-alarm-name"),
-				},
-				Enabled: pulumi.Bool(true),
-			},
-			AppName: pulumi.String(aws_codedeploy_app.Foo_app.Name),
-			AutoRollbackConfiguration: &codedeploy.DeploymentGroupAutoRollbackConfigurationArgs{
-				Enabled: pulumi.Bool(true),
-				Events: pulumi.StringArray{
-					pulumi.String("DEPLOYMENT_FAILURE"),
-				},
-			},
-			DeploymentConfigName: fooDeploymentConfig.ID(),
+			AppName:              pulumi.Any(aws_codedeploy_app.Foo_app.Name),
 			DeploymentGroupName:  pulumi.String("bar"),
+			ServiceRoleArn:       pulumi.Any(aws_iam_role.Foo_role.Arn),
+			DeploymentConfigName: fooDeploymentConfig.ID(),
 			Ec2TagFilters: codedeploy.DeploymentGroupEc2TagFilterArray{
 				&codedeploy.DeploymentGroupEc2TagFilterArgs{
 					Key:   pulumi.String("filterkey"),
@@ -130,7 +119,6 @@ func main() {
 					Value: pulumi.String("filtervalue"),
 				},
 			},
-			ServiceRoleArn: pulumi.String(aws_iam_role.Foo_role.Arn),
 			TriggerConfigurations: codedeploy.DeploymentGroupTriggerConfigurationArray{
 				&codedeploy.DeploymentGroupTriggerConfigurationArgs{
 					TriggerEvents: pulumi.StringArray{
@@ -139,6 +127,18 @@ func main() {
 					TriggerName:      pulumi.String("foo-trigger"),
 					TriggerTargetArn: pulumi.String("foo-topic-arn"),
 				},
+			},
+			AutoRollbackConfiguration: &codedeploy.DeploymentGroupAutoRollbackConfigurationArgs{
+				Enabled: pulumi.Bool(true),
+				Events: pulumi.StringArray{
+					pulumi.String("DEPLOYMENT_FAILURE"),
+				},
+			},
+			AlarmConfiguration: &codedeploy.DeploymentGroupAlarmConfigurationArgs{
+				Alarms: pulumi.StringArray{
+					pulumi.String("my-alarm-name"),
+				},
+				Enabled: pulumi.Bool(true),
 			},
 		})
 		if err != nil {
@@ -163,28 +163,28 @@ foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
         "value": 2,
     })
 foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
-    alarm_configuration={
-        "alarms": ["my-alarm-name"],
-        "enabled": True,
-    },
     app_name=aws_codedeploy_app["foo_app"]["name"],
-    auto_rollback_configuration={
-        "enabled": True,
-        "events": ["DEPLOYMENT_FAILURE"],
-    },
-    deployment_config_name=foo_deployment_config.id,
     deployment_group_name="bar",
+    service_role_arn=aws_iam_role["foo_role"]["arn"],
+    deployment_config_name=foo_deployment_config.id,
     ec2_tag_filters=[{
         "key": "filterkey",
         "type": "KEY_AND_VALUE",
         "value": "filtervalue",
     }],
-    service_role_arn=aws_iam_role["foo_role"]["arn"],
     trigger_configurations=[{
         "triggerEvents": ["DeploymentFailure"],
         "triggerName": "foo-trigger",
         "triggerTargetArn": "foo-topic-arn",
-    }])
+    }],
+    auto_rollback_configuration={
+        "enabled": True,
+        "events": ["DEPLOYMENT_FAILURE"],
+    },
+    alarm_configuration={
+        "alarms": ["my-alarm-name"],
+        "enabled": True,
+    })
 ```
 
 {{% /example %}}
@@ -195,36 +195,36 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooDeploymentConfig = new aws.codedeploy.DeploymentConfig("foo", {
+const fooDeploymentConfig = new aws.codedeploy.DeploymentConfig("fooDeploymentConfig", {
     deploymentConfigName: "test-deployment-config",
     minimumHealthyHosts: {
         type: "HOST_COUNT",
         value: 2,
     },
 });
-const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
-    alarmConfiguration: {
-        alarms: ["my-alarm-name"],
-        enabled: true,
-    },
-    appName: aws_codedeploy_app_foo_app.name,
-    autoRollbackConfiguration: {
-        enabled: true,
-        events: ["DEPLOYMENT_FAILURE"],
-    },
-    deploymentConfigName: fooDeploymentConfig.id,
+const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGroup", {
+    appName: aws_codedeploy_app.foo_app.name,
     deploymentGroupName: "bar",
+    serviceRoleArn: aws_iam_role.foo_role.arn,
+    deploymentConfigName: fooDeploymentConfig.id,
     ec2TagFilters: [{
         key: "filterkey",
         type: "KEY_AND_VALUE",
         value: "filtervalue",
     }],
-    serviceRoleArn: aws_iam_role_foo_role.arn,
     triggerConfigurations: [{
         triggerEvents: ["DeploymentFailure"],
         triggerName: "foo-trigger",
         triggerTargetArn: "foo-topic-arn",
     }],
+    autoRollbackConfiguration: {
+        enabled: true,
+        events: ["DEPLOYMENT_FAILURE"],
+    },
+    alarmConfiguration: {
+        alarms: ["my-alarm-name"],
+        enabled: true,
+    },
 });
 ```
 
@@ -242,29 +242,24 @@ class MyStack : Stack
     {
         var fooDeploymentConfig = new Aws.CodeDeploy.DeploymentConfig("fooDeploymentConfig", new Aws.CodeDeploy.DeploymentConfigArgs
         {
-            ComputePlatform = "Lambda",
             DeploymentConfigName = "test-deployment-config",
+            ComputePlatform = "Lambda",
             TrafficRoutingConfig = new Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigArgs
             {
+                Type = "TimeBasedLinear",
                 TimeBasedLinear = new Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs
                 {
                     Interval = 10,
                     Percentage = 10,
                 },
-                Type = "TimeBasedLinear",
             },
         });
         var fooDeploymentGroup = new Aws.CodeDeploy.DeploymentGroup("fooDeploymentGroup", new Aws.CodeDeploy.DeploymentGroupArgs
         {
-            AlarmConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs
-            {
-                Alarms = 
-                {
-                    "my-alarm-name",
-                },
-                Enabled = true,
-            },
             AppName = aws_codedeploy_app.Foo_app.Name,
+            DeploymentGroupName = "bar",
+            ServiceRoleArn = aws_iam_role.Foo_role.Arn,
+            DeploymentConfigName = fooDeploymentConfig.Id,
             AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
             {
                 Enabled = true,
@@ -273,9 +268,14 @@ class MyStack : Stack
                     "DEPLOYMENT_STOP_ON_ALARM",
                 },
             },
-            DeploymentConfigName = fooDeploymentConfig.Id,
-            DeploymentGroupName = "bar",
-            ServiceRoleArn = aws_iam_role.Foo_role.Arn,
+            AlarmConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs
+            {
+                Alarms = 
+                {
+                    "my-alarm-name",
+                },
+                Enabled = true,
+            },
         });
     }
 
@@ -289,43 +289,43 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooDeploymentConfig, err := codedeploy.NewDeploymentConfig(ctx, "fooDeploymentConfig", &codedeploy.DeploymentConfigArgs{
-			ComputePlatform:      pulumi.String("Lambda"),
 			DeploymentConfigName: pulumi.String("test-deployment-config"),
+			ComputePlatform:      pulumi.String("Lambda"),
 			TrafficRoutingConfig: &codedeploy.DeploymentConfigTrafficRoutingConfigArgs{
+				Type: pulumi.String("TimeBasedLinear"),
 				TimeBasedLinear: &codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs{
 					Interval:   pulumi.Int(10),
 					Percentage: pulumi.Int(10),
 				},
-				Type: pulumi.String("TimeBasedLinear"),
 			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = codedeploy.NewDeploymentGroup(ctx, "fooDeploymentGroup", &codedeploy.DeploymentGroupArgs{
-			AlarmConfiguration: &codedeploy.DeploymentGroupAlarmConfigurationArgs{
-				Alarms: pulumi.StringArray{
-					pulumi.String("my-alarm-name"),
-				},
-				Enabled: pulumi.Bool(true),
-			},
-			AppName: pulumi.String(aws_codedeploy_app.Foo_app.Name),
+			AppName:              pulumi.Any(aws_codedeploy_app.Foo_app.Name),
+			DeploymentGroupName:  pulumi.String("bar"),
+			ServiceRoleArn:       pulumi.Any(aws_iam_role.Foo_role.Arn),
+			DeploymentConfigName: fooDeploymentConfig.ID(),
 			AutoRollbackConfiguration: &codedeploy.DeploymentGroupAutoRollbackConfigurationArgs{
 				Enabled: pulumi.Bool(true),
 				Events: pulumi.StringArray{
 					pulumi.String("DEPLOYMENT_STOP_ON_ALARM"),
 				},
 			},
-			DeploymentConfigName: fooDeploymentConfig.ID(),
-			DeploymentGroupName:  pulumi.String("bar"),
-			ServiceRoleArn:       pulumi.String(aws_iam_role.Foo_role.Arn),
+			AlarmConfiguration: &codedeploy.DeploymentGroupAlarmConfigurationArgs{
+				Alarms: pulumi.StringArray{
+					pulumi.String("my-alarm-name"),
+				},
+				Enabled: pulumi.Bool(true),
+			},
 		})
 		if err != nil {
 			return err
@@ -343,28 +343,28 @@ import pulumi
 import pulumi_aws as aws
 
 foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
-    compute_platform="Lambda",
     deployment_config_name="test-deployment-config",
+    compute_platform="Lambda",
     traffic_routing_config={
+        "type": "TimeBasedLinear",
         "timeBasedLinear": {
             "interval": 10,
             "percentage": 10,
         },
-        "type": "TimeBasedLinear",
     })
 foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
-    alarm_configuration={
-        "alarms": ["my-alarm-name"],
-        "enabled": True,
-    },
     app_name=aws_codedeploy_app["foo_app"]["name"],
+    deployment_group_name="bar",
+    service_role_arn=aws_iam_role["foo_role"]["arn"],
+    deployment_config_name=foo_deployment_config.id,
     auto_rollback_configuration={
         "enabled": True,
         "events": ["DEPLOYMENT_STOP_ON_ALARM"],
     },
-    deployment_config_name=foo_deployment_config.id,
-    deployment_group_name="bar",
-    service_role_arn=aws_iam_role["foo_role"]["arn"])
+    alarm_configuration={
+        "alarms": ["my-alarm-name"],
+        "enabled": True,
+    })
 ```
 
 {{% /example %}}
@@ -375,30 +375,30 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooDeploymentConfig = new aws.codedeploy.DeploymentConfig("foo", {
-    computePlatform: "Lambda",
+const fooDeploymentConfig = new aws.codedeploy.DeploymentConfig("fooDeploymentConfig", {
     deploymentConfigName: "test-deployment-config",
+    computePlatform: "Lambda",
     trafficRoutingConfig: {
+        type: "TimeBasedLinear",
         timeBasedLinear: {
             interval: 10,
             percentage: 10,
         },
-        type: "TimeBasedLinear",
     },
 });
-const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
-    alarmConfiguration: {
-        alarms: ["my-alarm-name"],
-        enabled: true,
-    },
-    appName: aws_codedeploy_app_foo_app.name,
+const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGroup", {
+    appName: aws_codedeploy_app.foo_app.name,
+    deploymentGroupName: "bar",
+    serviceRoleArn: aws_iam_role.foo_role.arn,
+    deploymentConfigName: fooDeploymentConfig.id,
     autoRollbackConfiguration: {
         enabled: true,
         events: ["DEPLOYMENT_STOP_ON_ALARM"],
     },
-    deploymentConfigName: fooDeploymentConfig.id,
-    deploymentGroupName: "bar",
-    serviceRoleArn: aws_iam_role_foo_role.arn,
+    alarmConfiguration: {
+        alarms: ["my-alarm-name"],
+        enabled: true,
+    },
 });
 ```
 
@@ -420,7 +420,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfig">NewDeploymentConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">NewDeploymentConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -494,7 +494,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -514,7 +514,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -524,7 +524,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -931,7 +931,7 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1303,7 +1303,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigMinimumHealthyHostsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigMinimumHealthyHosts.html">output</a> API doc for this type.
@@ -1449,7 +1449,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfig.html">output</a> API doc for this type.
@@ -1627,7 +1627,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanary.html">output</a> API doc for this type.
@@ -1761,7 +1761,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinear.html">output</a> API doc for this type.

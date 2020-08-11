@@ -55,8 +55,8 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_lambda_permission.example",
-                "aws_organizations_organization.example",
+                examplePermission,
+                exampleOrganization,
             },
         });
     }
@@ -71,23 +71,23 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
-			Function:  pulumi.String(aws_lambda_function.Example.Arn),
+			Function:  pulumi.Any(aws_lambda_function.Example.Arn),
 			Principal: pulumi.String("config.amazonaws.com"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
 			AwsServiceAccessPrincipals: pulumi.StringArray{
 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
 			},
@@ -97,13 +97,13 @@ func main() {
 			return err
 		}
 		_, err = cfg.NewOrganizationCustomRule(ctx, "exampleOrganizationCustomRule", &cfg.OrganizationCustomRuleArgs{
-			LambdaFunctionArn: pulumi.String(aws_lambda_function.Example.Arn),
+			LambdaFunctionArn: pulumi.Any(aws_lambda_function.Example.Arn),
 			TriggerTypes: pulumi.StringArray{
 				pulumi.String("ConfigurationItemChangeNotification"),
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_lambda_permission.example",
-			"aws_organizations_organization.example",
+			examplePermission,
+			exampleOrganization,
 		}))
 		if err != nil {
 			return err
@@ -131,8 +131,8 @@ example_organization_custom_rule = aws.cfg.OrganizationCustomRule("exampleOrgani
     lambda_function_arn=aws_lambda_function["example"]["arn"],
     trigger_types=["ConfigurationItemChangeNotification"],
     opts=ResourceOptions(depends_on=[
-            "aws_lambda_permission.example",
-            "aws_organizations_organization.example",
+            example_permission,
+            example_organization,
         ]))
 ```
 
@@ -144,19 +144,24 @@ example_organization_custom_rule = aws.cfg.OrganizationCustomRule("exampleOrgani
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePermission = new aws.lambda.Permission("example", {
+const examplePermission = new aws.lambda.Permission("examplePermission", {
     action: "lambda:InvokeFunction",
-    function: aws_lambda_function_example.arn,
+    "function": aws_lambda_function.example.arn,
     principal: "config.amazonaws.com",
 });
-const exampleOrganization = new aws.organizations.Organization("example", {
+const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
     awsServiceAccessPrincipals: ["config-multiaccountsetup.amazonaws.com"],
     featureSet: "ALL",
 });
-const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("example", {
-    lambdaFunctionArn: aws_lambda_function_example.arn,
+const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampleOrganizationCustomRule", {
+    lambdaFunctionArn: aws_lambda_function.example.arn,
     triggerTypes: ["ConfigurationItemChangeNotification"],
-}, { dependsOn: [examplePermission, exampleOrganization] });
+}, {
+    dependsOn: [
+        examplePermission,
+        exampleOrganization,
+    ],
+});
 ```
 
 {{% /example %}}
@@ -177,7 +182,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRule">NewOrganizationCustomRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRule">NewOrganizationCustomRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -251,7 +256,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -271,7 +276,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +286,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -996,7 +1001,7 @@ Get an existing OrganizationCustomRule resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRuleState">OrganizationCustomRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRuleState">OrganizationCustomRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

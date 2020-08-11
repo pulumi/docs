@@ -29,50 +29,50 @@ class MyStack : Stack
     {
         var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
         {
+            ClusterIdentifier = "aurora-cluster-demo",
             AvailabilityZones = 
             {
                 "us-west-2a",
                 "us-west-2b",
                 "us-west-2c",
             },
-            BackupRetentionPeriod = 5,
-            ClusterIdentifier = "aurora-cluster-demo",
             DatabaseName = "mydb",
-            MasterPassword = "bar",
             MasterUsername = "foo",
+            MasterPassword = "bar",
+            BackupRetentionPeriod = 5,
             PreferredBackupWindow = "07:00-09:00",
         });
         var test1 = new Aws.Rds.ClusterInstance("test1", new Aws.Rds.ClusterInstanceArgs
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
-            Engine = @default.Engine,
-            EngineVersion = @default.EngineVersion,
             Identifier = "test1",
             InstanceClass = "db.t2.small",
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
         });
         var test2 = new Aws.Rds.ClusterInstance("test2", new Aws.Rds.ClusterInstanceArgs
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
-            Engine = @default.Engine,
-            EngineVersion = @default.EngineVersion,
             Identifier = "test2",
             InstanceClass = "db.t2.small",
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
         });
         var test3 = new Aws.Rds.ClusterInstance("test3", new Aws.Rds.ClusterInstanceArgs
         {
             ApplyImmediately = true,
             ClusterIdentifier = @default.Id,
-            Engine = @default.Engine,
-            EngineVersion = @default.EngineVersion,
             Identifier = "test3",
             InstanceClass = "db.t2.small",
+            Engine = @default.Engine,
+            EngineVersion = @default.EngineVersion,
         });
         var eligible = new Aws.Rds.ClusterEndpoint("eligible", new Aws.Rds.ClusterEndpointArgs
         {
-            ClusterEndpointIdentifier = "reader",
             ClusterIdentifier = @default.Id,
+            ClusterEndpointIdentifier = "reader",
             CustomEndpointType = "READER",
             ExcludedMembers = 
             {
@@ -82,8 +82,8 @@ class MyStack : Stack
         });
         var @static = new Aws.Rds.ClusterEndpoint("static", new Aws.Rds.ClusterEndpointArgs
         {
-            ClusterEndpointIdentifier = "static",
             ClusterIdentifier = @default.Id,
+            ClusterEndpointIdentifier = "static",
             CustomEndpointType = "READER",
             StaticMembers = 
             {
@@ -103,23 +103,23 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := rds.NewCluster(ctx, "_default", &rds.ClusterArgs{
+			ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-west-2a"),
 				pulumi.String("us-west-2b"),
 				pulumi.String("us-west-2c"),
 			},
-			BackupRetentionPeriod: pulumi.Int(5),
-			ClusterIdentifier:     pulumi.String("aurora-cluster-demo"),
 			DatabaseName:          pulumi.String("mydb"),
-			MasterPassword:        pulumi.String("bar"),
 			MasterUsername:        pulumi.String("foo"),
+			MasterPassword:        pulumi.String("bar"),
+			BackupRetentionPeriod: pulumi.Int(5),
 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
 		})
 		if err != nil {
@@ -128,10 +128,10 @@ func main() {
 		test1, err := rds.NewClusterInstance(ctx, "test1", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
-			Engine:            _default.Engine,
-			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test1"),
 			InstanceClass:     pulumi.String("db.t2.small"),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 		})
 		if err != nil {
 			return err
@@ -139,10 +139,10 @@ func main() {
 		test2, err := rds.NewClusterInstance(ctx, "test2", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
-			Engine:            _default.Engine,
-			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test2"),
 			InstanceClass:     pulumi.String("db.t2.small"),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 		})
 		if err != nil {
 			return err
@@ -150,17 +150,17 @@ func main() {
 		test3, err := rds.NewClusterInstance(ctx, "test3", &rds.ClusterInstanceArgs{
 			ApplyImmediately:  pulumi.Bool(true),
 			ClusterIdentifier: _default.ID(),
-			Engine:            _default.Engine,
-			EngineVersion:     _default.EngineVersion,
 			Identifier:        pulumi.String("test3"),
 			InstanceClass:     pulumi.String("db.t2.small"),
+			Engine:            _default.Engine,
+			EngineVersion:     _default.EngineVersion,
 		})
 		if err != nil {
 			return err
 		}
 		_, err = rds.NewClusterEndpoint(ctx, "eligible", &rds.ClusterEndpointArgs{
-			ClusterEndpointIdentifier: pulumi.String("reader"),
 			ClusterIdentifier:         _default.ID(),
+			ClusterEndpointIdentifier: pulumi.String("reader"),
 			CustomEndpointType:        pulumi.String("READER"),
 			ExcludedMembers: pulumi.StringArray{
 				test1.ID(),
@@ -171,8 +171,8 @@ func main() {
 			return err
 		}
 		_, err = rds.NewClusterEndpoint(ctx, "static", &rds.ClusterEndpointArgs{
-			ClusterEndpointIdentifier: pulumi.String("static"),
 			ClusterIdentifier:         _default.ID(),
+			ClusterEndpointIdentifier: pulumi.String("static"),
 			CustomEndpointType:        pulumi.String("READER"),
 			StaticMembers: pulumi.StringArray{
 				test1.ID(),
@@ -195,49 +195,49 @@ import pulumi
 import pulumi_aws as aws
 
 default = aws.rds.Cluster("default",
+    cluster_identifier="aurora-cluster-demo",
     availability_zones=[
         "us-west-2a",
         "us-west-2b",
         "us-west-2c",
     ],
-    backup_retention_period=5,
-    cluster_identifier="aurora-cluster-demo",
     database_name="mydb",
-    master_password="bar",
     master_username="foo",
+    master_password="bar",
+    backup_retention_period=5,
     preferred_backup_window="07:00-09:00")
 test1 = aws.rds.ClusterInstance("test1",
     apply_immediately=True,
     cluster_identifier=default.id,
-    engine=default.engine,
-    engine_version=default.engine_version,
     identifier="test1",
-    instance_class="db.t2.small")
+    instance_class="db.t2.small",
+    engine=default.engine,
+    engine_version=default.engine_version)
 test2 = aws.rds.ClusterInstance("test2",
     apply_immediately=True,
     cluster_identifier=default.id,
-    engine=default.engine,
-    engine_version=default.engine_version,
     identifier="test2",
-    instance_class="db.t2.small")
+    instance_class="db.t2.small",
+    engine=default.engine,
+    engine_version=default.engine_version)
 test3 = aws.rds.ClusterInstance("test3",
     apply_immediately=True,
     cluster_identifier=default.id,
-    engine=default.engine,
-    engine_version=default.engine_version,
     identifier="test3",
-    instance_class="db.t2.small")
+    instance_class="db.t2.small",
+    engine=default.engine,
+    engine_version=default.engine_version)
 eligible = aws.rds.ClusterEndpoint("eligible",
-    cluster_endpoint_identifier="reader",
     cluster_identifier=default.id,
+    cluster_endpoint_identifier="reader",
     custom_endpoint_type="READER",
     excluded_members=[
         test1.id,
         test2.id,
     ])
 static = aws.rds.ClusterEndpoint("static",
-    cluster_endpoint_identifier="static",
     cluster_identifier=default.id,
+    cluster_endpoint_identifier="static",
     custom_endpoint_type="READER",
     static_members=[
         test1.id,
@@ -253,46 +253,46 @@ static = aws.rds.ClusterEndpoint("static",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.rds.Cluster("default", {
+const _default = new aws.rds.Cluster("default", {
+    clusterIdentifier: "aurora-cluster-demo",
     availabilityZones: [
         "us-west-2a",
         "us-west-2b",
         "us-west-2c",
     ],
-    backupRetentionPeriod: 5,
-    clusterIdentifier: "aurora-cluster-demo",
     databaseName: "mydb",
-    masterPassword: "bar",
     masterUsername: "foo",
+    masterPassword: "bar",
+    backupRetentionPeriod: 5,
     preferredBackupWindow: "07:00-09:00",
 });
 const test1 = new aws.rds.ClusterInstance("test1", {
     applyImmediately: true,
-    clusterIdentifier: defaultCluster.id,
-    engine: defaultCluster.engine,
-    engineVersion: defaultCluster.engineVersion,
+    clusterIdentifier: _default.id,
     identifier: "test1",
     instanceClass: "db.t2.small",
+    engine: _default.engine,
+    engineVersion: _default.engineVersion,
 });
 const test2 = new aws.rds.ClusterInstance("test2", {
     applyImmediately: true,
-    clusterIdentifier: defaultCluster.id,
-    engine: defaultCluster.engine,
-    engineVersion: defaultCluster.engineVersion,
+    clusterIdentifier: _default.id,
     identifier: "test2",
     instanceClass: "db.t2.small",
+    engine: _default.engine,
+    engineVersion: _default.engineVersion,
 });
 const test3 = new aws.rds.ClusterInstance("test3", {
     applyImmediately: true,
-    clusterIdentifier: defaultCluster.id,
-    engine: defaultCluster.engine,
-    engineVersion: defaultCluster.engineVersion,
+    clusterIdentifier: _default.id,
     identifier: "test3",
     instanceClass: "db.t2.small",
+    engine: _default.engine,
+    engineVersion: _default.engineVersion,
 });
 const eligible = new aws.rds.ClusterEndpoint("eligible", {
+    clusterIdentifier: _default.id,
     clusterEndpointIdentifier: "reader",
-    clusterIdentifier: defaultCluster.id,
     customEndpointType: "READER",
     excludedMembers: [
         test1.id,
@@ -300,8 +300,8 @@ const eligible = new aws.rds.ClusterEndpoint("eligible", {
     ],
 });
 const static = new aws.rds.ClusterEndpoint("static", {
+    clusterIdentifier: _default.id,
     clusterEndpointIdentifier: "static",
-    clusterIdentifier: defaultCluster.id,
     customEndpointType: "READER",
     staticMembers: [
         test1.id,
@@ -328,7 +328,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpoint">NewClusterEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpointArgs">ClusterEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpoint">ClusterEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpoint">NewClusterEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpointArgs">ClusterEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpoint">ClusterEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -402,7 +402,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -422,7 +422,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpointArgs">ClusterEndpointArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpointArgs">ClusterEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -432,7 +432,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -971,7 +971,7 @@ Get an existing ClusterEndpoint resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpointState">ClusterEndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterEndpoint">ClusterEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpointState">ClusterEndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#ClusterEndpoint">ClusterEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

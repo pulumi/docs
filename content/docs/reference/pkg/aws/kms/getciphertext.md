@@ -41,7 +41,6 @@ class MyStack : Stack
   ""client_id"": ""e587dbae22222f55da22"",
   ""client_secret"": ""8289575d00000ace55e1815ec13673955721b8a5""
 }
-
 ",
         }));
     }
@@ -58,7 +57,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +90,6 @@ oauth = oauth_config.key_id.apply(lambda key_id: aws.kms.get_cipher_text(key_id=
   "client_id": "e587dbae22222f55da22",
   "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
 }
-
 """))
 ```
 
@@ -103,7 +101,7 @@ oauth = oauth_config.key_id.apply(lambda key_id: aws.kms.get_cipher_text(key_id=
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const oauthConfig = new aws.kms.Key("oauth_config", {
+const oauthConfig = new aws.kms.Key("oauthConfig", {
     description: "oauth config",
     isEnabled: true,
 });
@@ -114,7 +112,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
   "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
 }
 `,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}
@@ -138,7 +136,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCipherText<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms?tab=doc#GetCipherTextArgs">GetCipherTextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms?tab=doc#GetCipherTextResult">GetCipherTextResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCipherText<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms?tab=doc#GetCipherTextArgs">GetCipherTextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms?tab=doc#GetCipherTextResult">GetCipherTextResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

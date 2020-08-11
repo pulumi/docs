@@ -13,65 +13,6 @@ meta_desc: "Explore the GetTaskDefinition function of the ecs module, including 
 The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const mongoTaskDefinition = new aws.ecs.TaskDefinition("mongo", {
-    containerDefinitions: `[
-  {
-    "cpu": 128,
-    "environment": [{
-      "name": "SECRET",
-      "value": "KEY"
-    }],
-    "essential": true,
-    "image": "mongo:latest",
-    "memory": 128,
-    "memoryReservation": 64,
-    "name": "mongodb"
-  }
-]
-`,
-    family: "mongodb",
-});
-// Simply specify the family to find the latest ACTIVE revision in that family.
-const mongoEcsTaskDefinition = mongoTaskDefinition.family.apply(family => aws.ecs.getTaskDefinition({
-    taskDefinition: family,
-}, { async: true }));
-const foo = new aws.ecs.Cluster("foo", {});
-const mongoService = new aws.ecs.Service("mongo", {
-    cluster: foo.id,
-    desiredCount: 2,
-    taskDefinition: pulumi.all([mongoTaskDefinition.family, mongoTaskDefinition.revision, mongoEcsTaskDefinition]).apply(([family, revision, mongoEcsTaskDefinition]) => `${family}:${(() => {
-        throw "tf2pulumi error: NYI: call to max";
-        return (() => { throw "NYI: call to max"; })();
-    })()}`),
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetTaskDefinition {#using}
@@ -90,7 +31,7 @@ const mongoService = new aws.ecs.Service("mongo", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTaskDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#LookupTaskDefinitionArgs">LookupTaskDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#LookupTaskDefinitionResult">LookupTaskDefinitionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTaskDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#LookupTaskDefinitionArgs">LookupTaskDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#LookupTaskDefinitionResult">LookupTaskDefinitionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTaskDefinition` in the Go SDK.
 

@@ -15,6 +15,157 @@ Provides a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/
 > **NOTE:** During deletion of an `aws.workspaces.Workspace` resource, the service role `workspaces_DefaultRole` must be attached to the
 policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak the ENI that the Workspaces service creates for the Workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var valueWindows10 = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
+        {
+            BundleId = "wsb-bh8rsxt14",
+        }));
+        var example = new Aws.Workspaces.Workspace("example", new Aws.Workspaces.WorkspaceArgs
+        {
+            DirectoryId = aws_workspaces_directory.Example.Id,
+            BundleId = valueWindows10.Apply(valueWindows10 => valueWindows10.Id),
+            UserName = "john.doe",
+            RootVolumeEncryptionEnabled = true,
+            UserVolumeEncryptionEnabled = true,
+            VolumeEncryptionKey = "alias/aws/workspaces",
+            WorkspaceProperties = new Aws.Workspaces.Inputs.WorkspaceWorkspacePropertiesArgs
+            {
+                ComputeTypeName = "VALUE",
+                UserVolumeSizeGib = 10,
+                RootVolumeSizeGib = 80,
+                RunningMode = "AUTO_STOP",
+                RunningModeAutoStopTimeoutInMinutes = 60,
+            },
+            Tags = 
+            {
+                { "Department", "IT" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "wsb-bh8rsxt14"
+		valueWindows10, err := workspaces.GetBundle(ctx, &workspaces.GetBundleArgs{
+			BundleId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = workspaces.NewWorkspace(ctx, "example", &workspaces.WorkspaceArgs{
+			DirectoryId:                 pulumi.Any(aws_workspaces_directory.Example.Id),
+			BundleId:                    pulumi.String(valueWindows10.Id),
+			UserName:                    pulumi.String("john.doe"),
+			RootVolumeEncryptionEnabled: pulumi.Bool(true),
+			UserVolumeEncryptionEnabled: pulumi.Bool(true),
+			VolumeEncryptionKey:         pulumi.String("alias/aws/workspaces"),
+			WorkspaceProperties: &workspaces.WorkspaceWorkspacePropertiesArgs{
+				ComputeTypeName:                     pulumi.String("VALUE"),
+				UserVolumeSizeGib:                   pulumi.Int(10),
+				RootVolumeSizeGib:                   pulumi.Int(80),
+				RunningMode:                         pulumi.String("AUTO_STOP"),
+				RunningModeAutoStopTimeoutInMinutes: pulumi.Int(60),
+			},
+			Tags: pulumi.StringMap{
+				"Department": pulumi.String("IT"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+value_windows10 = aws.workspaces.get_bundle(bundle_id="wsb-bh8rsxt14")
+example = aws.workspaces.Workspace("example",
+    directory_id=aws_workspaces_directory["example"]["id"],
+    bundle_id=value_windows10.id,
+    user_name="john.doe",
+    root_volume_encryption_enabled=True,
+    user_volume_encryption_enabled=True,
+    volume_encryption_key="alias/aws/workspaces",
+    workspace_properties={
+        "computeTypeName": "VALUE",
+        "userVolumeSizeGib": 10,
+        "rootVolumeSizeGib": 80,
+        "runningMode": "AUTO_STOP",
+        "runningModeAutoStopTimeoutInMinutes": 60,
+    },
+    tags={
+        "Department": "IT",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const valueWindows10 = aws.workspaces.getBundle({
+    bundleId: "wsb-bh8rsxt14",
+});
+const example = new aws.workspaces.Workspace("example", {
+    directoryId: aws_workspaces_directory.example.id,
+    bundleId: valueWindows10.then(valueWindows10 => valueWindows10.id),
+    userName: "john.doe",
+    rootVolumeEncryptionEnabled: true,
+    userVolumeEncryptionEnabled: true,
+    volumeEncryptionKey: "alias/aws/workspaces",
+    workspaceProperties: {
+        computeTypeName: "VALUE",
+        userVolumeSizeGib: 10,
+        rootVolumeSizeGib: 80,
+        runningMode: "AUTO_STOP",
+        runningModeAutoStopTimeoutInMinutes: 60,
+    },
+    tags: {
+        Department: "IT",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}
@@ -30,7 +181,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Workspace">NewWorkspace</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#WorkspaceArgs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Workspace">Workspace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Workspace">NewWorkspace</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#WorkspaceArgs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Workspace">Workspace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +255,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -124,7 +275,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#WorkspaceArgs">WorkspaceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#WorkspaceArgs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -134,7 +285,7 @@ policy `arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess`, or it will leak 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -805,7 +956,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#WorkspaceState">WorkspaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Workspace">Workspace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#WorkspaceState">WorkspaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Workspace">Workspace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1441,7 +1592,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#WorkspaceWorkspacePropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#WorkspaceWorkspacePropertiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#WorkspaceWorkspacePropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#WorkspaceWorkspacePropertiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Inputs.WorkspaceWorkspacePropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.WorkspaceWorkspaceProperties.html">output</a> API doc for this type.

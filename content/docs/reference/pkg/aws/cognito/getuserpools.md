@@ -36,9 +36,9 @@ class MyStack : Stack
         }));
         var cognito = new Aws.ApiGateway.Authorizer("cognito", new Aws.ApiGateway.AuthorizerArgs
         {
-            ProviderArns = selectedUserPools.Apply(selectedUserPools => selectedUserPools.Arns),
-            RestApi = selectedRestApi.Apply(selectedRestApi => selectedRestApi.Id),
             Type = "COGNITO_USER_POOLS",
+            RestApi = selectedRestApi.Apply(selectedRestApi => selectedRestApi.Id),
+            ProviderArns = selectedUserPools.Apply(selectedUserPools => selectedUserPools.Arns),
         });
     }
 
@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -72,9 +72,9 @@ func main() {
 			return err
 		}
 		_, err = apigateway.NewAuthorizer(ctx, "cognito", &apigateway.AuthorizerArgs{
-			ProviderArns: toPulumiStringArray(selectedUserPools.Arns),
-			RestApi:      pulumi.String(selectedRestApi.Id),
 			Type:         pulumi.String("COGNITO_USER_POOLS"),
+			RestApi:      pulumi.String(selectedRestApi.Id),
+			ProviderArns: toPulumiStringArray(selectedUserPools.Arns),
 		})
 		if err != nil {
 			return err
@@ -101,9 +101,9 @@ import pulumi_aws as aws
 selected_rest_api = aws.apigateway.get_rest_api(name=var["api_gateway_name"])
 selected_user_pools = aws.cognito.get_user_pools(name=var["cognito_user_pool_name"])
 cognito = aws.apigateway.Authorizer("cognito",
-    provider_arns=selected_user_pools.arns,
+    type="COGNITO_USER_POOLS",
     rest_api=selected_rest_api.id,
-    type="COGNITO_USER_POOLS")
+    provider_arns=selected_user_pools.arns)
 ```
 
 {{% /example %}}
@@ -114,16 +114,16 @@ cognito = aws.apigateway.Authorizer("cognito",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selectedRestApi = pulumi.output(aws.apigateway.getRestApi({
-    name: var_api_gateway_name,
-}, { async: true }));
-const selectedUserPools = pulumi.output(aws.cognito.getUserPools({
-    name: var_cognito_user_pool_name,
-}, { async: true }));
+const selectedRestApi = aws.apigateway.getRestApi({
+    name: _var.api_gateway_name,
+});
+const selectedUserPools = aws.cognito.getUserPools({
+    name: _var.cognito_user_pool_name,
+});
 const cognito = new aws.apigateway.Authorizer("cognito", {
-    providerArns: selectedUserPools.arns,
-    restApi: selectedRestApi.id,
     type: "COGNITO_USER_POOLS",
+    restApi: selectedRestApi.then(selectedRestApi => selectedRestApi.id),
+    providerArns: selectedUserPools.then(selectedUserPools => selectedUserPools.arns),
 });
 ```
 
@@ -148,7 +148,7 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPools<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#GetUserPoolsArgs">GetUserPoolsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#GetUserPoolsResult">GetUserPoolsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPools<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#GetUserPoolsArgs">GetUserPoolsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#GetUserPoolsResult">GetUserPoolsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

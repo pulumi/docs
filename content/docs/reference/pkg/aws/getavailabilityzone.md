@@ -22,71 +22,6 @@ the region and the subnet letter to network numbers.
 This is different from the `aws.getAvailabilityZones` (plural) data source,
 which provides a list of the available zones.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const regionNumber = config.get("regionNumber") || {
-    "ap-northeast-1": 5,
-    "eu-central-1": 4,
-    "us-east-1": 1,
-    "us-west-1": 2,
-    "us-west-2": 3,
-};
-const azNumber = config.get("azNumber") || {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: 4,
-    e: 5,
-    f: 6,
-};
-
-// Retrieve the AZ where we want to create network resources
-// This must be in the region selected on the AWS provider.
-const exampleAvailabilityZone = pulumi.output(aws.getAvailabilityZone({
-    name: "eu-central-1a",
-}, { async: true }));
-// Create a VPC for the region associated with the AZ
-const exampleVpc = new aws.ec2.Vpc("example", {
-    cidrBlock: exampleAvailabilityZone.apply(exampleAvailabilityZone => (() => {
-        throw "tf2pulumi error: NYI: call to cidrsubnet";
-        return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
-});
-// Create a subnet for the AZ within the regional VPC
-const exampleSubnet = new aws.ec2.Subnet("example", {
-    cidrBlock: pulumi.all([exampleVpc.cidrBlock, exampleAvailabilityZone]).apply(([cidrBlock, exampleAvailabilityZone]) => (() => {
-        throw "tf2pulumi error: NYI: call to cidrsubnet";
-        return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
-    vpcId: exampleVpc.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAvailabilityZone {#using}
@@ -105,7 +40,7 @@ const exampleSubnet = new aws.ec2.Subnet("example", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZoneArgs">GetAvailabilityZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZoneResult">GetAvailabilityZoneResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZoneArgs">GetAvailabilityZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZoneResult">GetAvailabilityZoneResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -890,7 +825,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZoneFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZoneFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZoneFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZoneFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetAvailabilityZoneFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAvailabilityZoneFilter.html">output</a> API doc for this type.

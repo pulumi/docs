@@ -27,26 +27,22 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpc = new aws.ec2.Vpc("foo", {
-    cidrBlock: "10.0.0.0/16",
-});
-const bar = new aws.ec2.Vpc("bar", {
-    cidrBlock: "10.1.0.0/16",
-});
-const fooVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("foo", {
-    autoAccept: true,
-    peerVpcId: bar.id,
+const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.0.0.0/16"});
+const bar = new aws.ec2.Vpc("bar", {cidrBlock: "10.1.0.0/16"});
+const fooVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection", {
     vpcId: fooVpc.id,
+    peerVpcId: bar.id,
+    autoAccept: true,
 });
-const fooPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("foo", {
+const fooPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("fooPeeringConnectionOptions", {
+    vpcPeeringConnectionId: fooVpcPeeringConnection.id,
     accepter: {
         allowRemoteVpcDnsResolution: true,
     },
     requester: {
-        allowClassicLinkToRemoteVpc: true,
         allowVpcToRemoteClassicLink: true,
+        allowClassicLinkToRemoteVpc: true,
     },
-    vpcPeeringConnectionId: fooVpcPeeringConnection.id,
 });
 ```
 ```python
@@ -56,18 +52,18 @@ import pulumi_aws as aws
 foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.0.0.0/16")
 bar = aws.ec2.Vpc("bar", cidr_block="10.1.0.0/16")
 foo_vpc_peering_connection = aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection",
-    auto_accept=True,
+    vpc_id=foo_vpc.id,
     peer_vpc_id=bar.id,
-    vpc_id=foo_vpc.id)
+    auto_accept=True)
 foo_peering_connection_options = aws.ec2.PeeringConnectionOptions("fooPeeringConnectionOptions",
+    vpc_peering_connection_id=foo_vpc_peering_connection.id,
     accepter={
         "allowRemoteVpcDnsResolution": True,
     },
     requester={
-        "allowClassicLinkToRemoteVpc": True,
         "allowVpcToRemoteClassicLink": True,
-    },
-    vpc_peering_connection_id=foo_vpc_peering_connection.id)
+        "allowClassicLinkToRemoteVpc": True,
+    })
 ```
 ```csharp
 using Pulumi;
@@ -87,22 +83,22 @@ class MyStack : Stack
         });
         var fooVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("fooVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
         {
-            AutoAccept = true,
-            PeerVpcId = bar.Id,
             VpcId = fooVpc.Id,
+            PeerVpcId = bar.Id,
+            AutoAccept = true,
         });
         var fooPeeringConnectionOptions = new Aws.Ec2.PeeringConnectionOptions("fooPeeringConnectionOptions", new Aws.Ec2.PeeringConnectionOptionsArgs
         {
+            VpcPeeringConnectionId = fooVpcPeeringConnection.Id,
             Accepter = new Aws.Ec2.Inputs.PeeringConnectionOptionsAccepterArgs
             {
                 AllowRemoteVpcDnsResolution = true,
             },
             Requester = new Aws.Ec2.Inputs.PeeringConnectionOptionsRequesterArgs
             {
-                AllowClassicLinkToRemoteVpc = true,
                 AllowVpcToRemoteClassicLink = true,
+                AllowClassicLinkToRemoteVpc = true,
             },
-            VpcPeeringConnectionId = fooVpcPeeringConnection.Id,
         });
     }
 
@@ -112,7 +108,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,22 +127,22 @@ func main() {
 			return err
 		}
 		fooVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "fooVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
-			AutoAccept: pulumi.Bool(true),
-			PeerVpcId:  bar.ID(),
 			VpcId:      fooVpc.ID(),
+			PeerVpcId:  bar.ID(),
+			AutoAccept: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewPeeringConnectionOptions(ctx, "fooPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			VpcPeeringConnectionId: fooVpcPeeringConnection.ID(),
 			Accepter: &ec2.PeeringConnectionOptionsAccepterArgs{
 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
 			},
 			Requester: &ec2.PeeringConnectionOptionsRequesterArgs{
-				AllowClassicLinkToRemoteVpc: pulumi.Bool(true),
 				AllowVpcToRemoteClassicLink: pulumi.Bool(true),
+				AllowClassicLinkToRemoteVpc: pulumi.Bool(true),
 			},
-			VpcPeeringConnectionId: fooVpcPeeringConnection.ID(),
 		})
 		if err != nil {
 			return err
@@ -163,48 +159,60 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const requester = new aws.Provider("requester", {});
+// Requester's credentials.
 const accepter = new aws.Provider("accepter", {});
+// Accepter's credentials.
 const main = new aws.ec2.Vpc("main", {
     cidrBlock: "10.0.0.0/16",
-    enableDnsHostnames: true,
     enableDnsSupport: true,
-}, { provider: requester });
-const peerVpc = new aws.ec2.Vpc("peer", {
+    enableDnsHostnames: true,
+}, {
+    provider: aws.requester,
+});
+const peerVpc = new aws.ec2.Vpc("peerVpc", {
     cidrBlock: "10.1.0.0/16",
-    enableDnsHostnames: true,
     enableDnsSupport: true,
-}, { provider: accepter });
-const peerCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: accepter, async: true }));
-const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
-    autoAccept: false,
-    peerOwnerId: peerCallerIdentity.accountId,
+    enableDnsHostnames: true,
+}, {
+    provider: aws.accepter,
+});
+const peerCallerIdentity = aws.getCallerIdentity({});
+const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection", {
+    vpcId: main.id,
     peerVpcId: peerVpc.id,
+    peerOwnerId: peerCallerIdentity.then(peerCallerIdentity => peerCallerIdentity.accountId),
+    autoAccept: false,
     tags: {
         Side: "Requester",
     },
-    vpcId: main.id,
-}, { provider: requester });
-const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepter("peer", {
+}, {
+    provider: aws.requester,
+});
+const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", {
+    vpcPeeringConnectionId: peerVpcPeeringConnection.id,
     autoAccept: true,
     tags: {
         Side: "Accepter",
     },
-    vpcPeeringConnectionId: peerVpcPeeringConnection.id,
-}, { provider: accepter });
-const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("requester", {
+}, {
+    provider: aws.accepter,
+});
+const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions", {
+    vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
     requester: {
         allowRemoteVpcDnsResolution: true,
     },
-    // As options can't be set until the connection has been accepted
-    // create an explicit dependency on the accepter.
+}, {
+    provider: aws.requester,
+});
+const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions", {
     vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
-}, { provider: requester });
-const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("accepter", {
     accepter: {
         allowRemoteVpcDnsResolution: true,
     },
-    vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
-}, { provider: accepter });
+}, {
+    provider: aws.accepter,
+});
 ```
 ```python
 import pulumi
@@ -212,46 +220,48 @@ import pulumi_aws as aws
 import pulumi_pulumi as pulumi
 
 requester = pulumi.providers.Aws("requester")
+# Requester's credentials.
 accepter = pulumi.providers.Aws("accepter")
+# Accepter's credentials.
 main = aws.ec2.Vpc("main",
     cidr_block="10.0.0.0/16",
-    enable_dns_hostnames=True,
     enable_dns_support=True,
-    opts=ResourceOptions(provider="aws.requester"))
+    enable_dns_hostnames=True,
+    opts=ResourceOptions(provider=aws["requester"]))
 peer_vpc = aws.ec2.Vpc("peerVpc",
     cidr_block="10.1.0.0/16",
-    enable_dns_hostnames=True,
     enable_dns_support=True,
-    opts=ResourceOptions(provider="aws.accepter"))
+    enable_dns_hostnames=True,
+    opts=ResourceOptions(provider=aws["accepter"]))
 peer_caller_identity = aws.get_caller_identity()
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
-    auto_accept=False,
-    peer_owner_id=peer_caller_identity.account_id,
+    vpc_id=main.id,
     peer_vpc_id=peer_vpc.id,
+    peer_owner_id=peer_caller_identity.account_id,
+    auto_accept=False,
     tags={
         "Side": "Requester",
     },
-    vpc_id=main.id,
-    opts=ResourceOptions(provider="aws.requester"))
+    opts=ResourceOptions(provider=aws["requester"]))
 peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter",
+    vpc_peering_connection_id=peer_vpc_peering_connection.id,
     auto_accept=True,
     tags={
         "Side": "Accepter",
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection.id,
-    opts=ResourceOptions(provider="aws.accepter"))
+    opts=ResourceOptions(provider=aws["accepter"]))
 requester_peering_connection_options = aws.ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions",
+    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
     requester={
         "allowRemoteVpcDnsResolution": True,
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
-    opts=ResourceOptions(provider="aws.requester"))
+    opts=ResourceOptions(provider=aws["requester"]))
 accepter_peering_connection_options = aws.ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions",
+    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
     accepter={
         "allowRemoteVpcDnsResolution": True,
     },
-    vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
-    opts=ResourceOptions(provider="aws.accepter"))
+    opts=ResourceOptions(provider=aws["accepter"]))
 ```
 ```csharp
 using Pulumi;
@@ -264,75 +274,77 @@ class MyStack : Stack
         var requester = new Aws.Provider("requester", new Aws.ProviderArgs
         {
         });
+        // Requester's credentials.
         var accepter = new Aws.Provider("accepter", new Aws.ProviderArgs
         {
         });
+        // Accepter's credentials.
         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
         {
             CidrBlock = "10.0.0.0/16",
-            EnableDnsHostnames = true,
             EnableDnsSupport = true,
+            EnableDnsHostnames = true,
         }, new CustomResourceOptions
         {
-            Provider = "aws.requester",
+            Provider = aws.Requester,
         });
         var peerVpc = new Aws.Ec2.Vpc("peerVpc", new Aws.Ec2.VpcArgs
         {
             CidrBlock = "10.1.0.0/16",
-            EnableDnsHostnames = true,
             EnableDnsSupport = true,
+            EnableDnsHostnames = true,
         }, new CustomResourceOptions
         {
-            Provider = "aws.accepter",
+            Provider = aws.Accepter,
         });
         var peerCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
         var peerVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("peerVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
         {
-            AutoAccept = false,
-            PeerOwnerId = peerCallerIdentity.Apply(peerCallerIdentity => peerCallerIdentity.AccountId),
+            VpcId = main.Id,
             PeerVpcId = peerVpc.Id,
+            PeerOwnerId = peerCallerIdentity.Apply(peerCallerIdentity => peerCallerIdentity.AccountId),
+            AutoAccept = false,
             Tags = 
             {
                 { "Side", "Requester" },
             },
-            VpcId = main.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.requester",
+            Provider = aws.Requester,
         });
         var peerVpcPeeringConnectionAccepter = new Aws.Ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", new Aws.Ec2.VpcPeeringConnectionAccepterArgs
         {
+            VpcPeeringConnectionId = peerVpcPeeringConnection.Id,
             AutoAccept = true,
             Tags = 
             {
                 { "Side", "Accepter" },
             },
-            VpcPeeringConnectionId = peerVpcPeeringConnection.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.accepter",
+            Provider = aws.Accepter,
         });
         var requesterPeeringConnectionOptions = new Aws.Ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions", new Aws.Ec2.PeeringConnectionOptionsArgs
         {
+            VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
             Requester = new Aws.Ec2.Inputs.PeeringConnectionOptionsRequesterArgs
             {
                 AllowRemoteVpcDnsResolution = true,
             },
-            VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.requester",
+            Provider = aws.Requester,
         });
         var accepterPeeringConnectionOptions = new Aws.Ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions", new Aws.Ec2.PeeringConnectionOptionsArgs
         {
+            VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
             Accepter = new Aws.Ec2.Inputs.PeeringConnectionOptionsAccepterArgs
             {
                 AllowRemoteVpcDnsResolution = true,
             },
-            VpcPeeringConnectionId = peerVpcPeeringConnectionAccepter.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.accepter",
+            Provider = aws.Accepter,
         });
     }
 
@@ -342,9 +354,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -360,17 +372,17 @@ func main() {
 		}
 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
 			CidrBlock:          pulumi.String("10.0.0.0/16"),
-			EnableDnsHostnames: pulumi.Bool(true),
 			EnableDnsSupport:   pulumi.Bool(true),
-		}, pulumi.Provider("aws.requester"))
+			EnableDnsHostnames: pulumi.Bool(true),
+		}, pulumi.Provider(aws.Requester))
 		if err != nil {
 			return err
 		}
 		peerVpc, err := ec2.NewVpc(ctx, "peerVpc", &ec2.VpcArgs{
 			CidrBlock:          pulumi.String("10.1.0.0/16"),
-			EnableDnsHostnames: pulumi.Bool(true),
 			EnableDnsSupport:   pulumi.Bool(true),
-		}, pulumi.Provider("aws.accepter"))
+			EnableDnsHostnames: pulumi.Bool(true),
+		}, pulumi.Provider(aws.Accepter))
 		if err != nil {
 			return err
 		}
@@ -379,42 +391,42 @@ func main() {
 			return err
 		}
 		peerVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "peerVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
-			AutoAccept:  pulumi.Bool(false),
-			PeerOwnerId: pulumi.String(peerCallerIdentity.AccountId),
+			VpcId:       main.ID(),
 			PeerVpcId:   peerVpc.ID(),
+			PeerOwnerId: pulumi.String(peerCallerIdentity.AccountId),
+			AutoAccept:  pulumi.Bool(false),
 			Tags: pulumi.StringMap{
 				"Side": pulumi.String("Requester"),
 			},
-			VpcId: main.ID(),
-		}, pulumi.Provider("aws.requester"))
+		}, pulumi.Provider(aws.Requester))
 		if err != nil {
 			return err
 		}
 		peerVpcPeeringConnectionAccepter, err := ec2.NewVpcPeeringConnectionAccepter(ctx, "peerVpcPeeringConnectionAccepter", &ec2.VpcPeeringConnectionAccepterArgs{
-			AutoAccept: pulumi.Bool(true),
+			VpcPeeringConnectionId: peerVpcPeeringConnection.ID(),
+			AutoAccept:             pulumi.Bool(true),
 			Tags: pulumi.StringMap{
 				"Side": pulumi.String("Accepter"),
 			},
-			VpcPeeringConnectionId: peerVpcPeeringConnection.ID(),
-		}, pulumi.Provider("aws.accepter"))
+		}, pulumi.Provider(aws.Accepter))
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewPeeringConnectionOptions(ctx, "requesterPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
 			Requester: &ec2.PeeringConnectionOptionsRequesterArgs{
 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
 			},
-			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
-		}, pulumi.Provider("aws.requester"))
+		}, pulumi.Provider(aws.Requester))
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewPeeringConnectionOptions(ctx, "accepterPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
 			Accepter: &ec2.PeeringConnectionOptionsAccepterArgs{
 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
 			},
-			VpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.ID(),
-		}, pulumi.Provider("aws.accepter"))
+		}, pulumi.Provider(aws.Accepter))
 		if err != nil {
 			return err
 		}
@@ -438,7 +450,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptions">NewPeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">NewPeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -512,7 +524,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -532,7 +544,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -542,7 +554,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -877,7 +889,7 @@ Get an existing PeeringConnectionOptions resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsState">PeeringConnectionOptionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsState">PeeringConnectionOptionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1177,7 +1189,7 @@ the peering connection (a maximum of one).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.PeeringConnectionOptionsAccepterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.PeeringConnectionOptionsAccepter.html">output</a> API doc for this type.
@@ -1375,7 +1387,7 @@ connection. This option is not supported for inter-region VPC peering.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.PeeringConnectionOptionsRequesterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.PeeringConnectionOptionsRequester.html">output</a> API doc for this type.

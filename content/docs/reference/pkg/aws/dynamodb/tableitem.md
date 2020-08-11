@@ -31,6 +31,9 @@ class MyStack : Stack
     {
         var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
         {
+            ReadCapacity = 10,
+            WriteCapacity = 10,
+            HashKey = "exampleHashKey",
             Attributes = 
             {
                 new Aws.DynamoDB.Inputs.TableAttributeArgs
@@ -39,12 +42,10 @@ class MyStack : Stack
                     Type = "S",
                 },
             },
-            HashKey = "exampleHashKey",
-            ReadCapacity = 10,
-            WriteCapacity = 10,
         });
         var exampleTableItem = new Aws.DynamoDB.TableItem("exampleTableItem", new Aws.DynamoDB.TableItemArgs
         {
+            TableName = exampleTable.Name,
             HashKey = exampleTable.HashKey,
             Item = @"{
   ""exampleHashKey"": {""S"": ""something""},
@@ -53,9 +54,7 @@ class MyStack : Stack
   ""three"": {""N"": ""33333""},
   ""four"": {""N"": ""44444""}
 }
-
 ",
-            TableName = exampleTable.Name,
         });
     }
 
@@ -71,30 +70,30 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+			ReadCapacity:  pulumi.Int(10),
+			WriteCapacity: pulumi.Int(10),
+			HashKey:       pulumi.String("exampleHashKey"),
 			Attributes: dynamodb.TableAttributeArray{
 				&dynamodb.TableAttributeArgs{
 					Name: pulumi.String("exampleHashKey"),
 					Type: pulumi.String("S"),
 				},
 			},
-			HashKey:       pulumi.String("exampleHashKey"),
-			ReadCapacity:  pulumi.Int(10),
-			WriteCapacity: pulumi.Int(10),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = dynamodb.NewTableItem(ctx, "exampleTableItem", &dynamodb.TableItemArgs{
-			HashKey:   exampleTable.HashKey,
-			Item:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "  \"exampleHashKey\": {\"S\": \"something\"},\n", "  \"one\": {\"N\": \"11111\"},\n", "  \"two\": {\"N\": \"22222\"},\n", "  \"three\": {\"N\": \"33333\"},\n", "  \"four\": {\"N\": \"44444\"}\n", "}\n", "\n")),
 			TableName: exampleTable.Name,
+			HashKey:   exampleTable.HashKey,
+			Item:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"exampleHashKey\": {\"S\": \"something\"},\n", "  \"one\": {\"N\": \"11111\"},\n", "  \"two\": {\"N\": \"22222\"},\n", "  \"three\": {\"N\": \"33333\"},\n", "  \"four\": {\"N\": \"44444\"}\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -112,14 +111,15 @@ import pulumi
 import pulumi_aws as aws
 
 example_table = aws.dynamodb.Table("exampleTable",
+    read_capacity=10,
+    write_capacity=10,
+    hash_key="exampleHashKey",
     attributes=[{
         "name": "exampleHashKey",
         "type": "S",
-    }],
-    hash_key="exampleHashKey",
-    read_capacity=10,
-    write_capacity=10)
+    }])
 example_table_item = aws.dynamodb.TableItem("exampleTableItem",
+    table_name=example_table.name,
     hash_key=example_table.hash_key,
     item="""{
   "exampleHashKey": {"S": "something"},
@@ -128,9 +128,7 @@ example_table_item = aws.dynamodb.TableItem("exampleTableItem",
   "three": {"N": "33333"},
   "four": {"N": "44444"}
 }
-
-""",
-    table_name=example_table.name)
+""")
 ```
 
 {{% /example %}}
@@ -141,16 +139,17 @@ example_table_item = aws.dynamodb.TableItem("exampleTableItem",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleTable = new aws.dynamodb.Table("example", {
+const exampleTable = new aws.dynamodb.Table("exampleTable", {
+    readCapacity: 10,
+    writeCapacity: 10,
+    hashKey: "exampleHashKey",
     attributes: [{
         name: "exampleHashKey",
         type: "S",
     }],
-    hashKey: "exampleHashKey",
-    readCapacity: 10,
-    writeCapacity: 10,
 });
-const exampleTableItem = new aws.dynamodb.TableItem("example", {
+const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
+    tableName: exampleTable.name,
     hashKey: exampleTable.hashKey,
     item: `{
   "exampleHashKey": {"S": "something"},
@@ -160,7 +159,6 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
   "four": {"N": "44444"}
 }
 `,
-    tableName: exampleTable.name,
 });
 ```
 
@@ -182,7 +180,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItem">NewTableItem</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItemArgs">TableItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItem">TableItem</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItem">NewTableItem</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItemArgs">TableItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItem">TableItem</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -256,7 +254,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -276,7 +274,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItemArgs">TableItemArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItemArgs">TableItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +284,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -653,7 +651,7 @@ Get an existing TableItem resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTableItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItemState">TableItemState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#TableItem">TableItem</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTableItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItemState">TableItemState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#TableItem">TableItem</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

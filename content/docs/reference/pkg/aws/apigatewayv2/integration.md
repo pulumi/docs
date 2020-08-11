@@ -44,14 +44,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apigatewayv2.NewIntegration(ctx, "example", &apigatewayv2.IntegrationArgs{
-			ApiId:           pulumi.String(aws_apigatewayv2_api.Example.Id),
+			ApiId:           pulumi.Any(aws_apigatewayv2_api.Example.Id),
 			IntegrationType: pulumi.String("MOCK"),
 		})
 		if err != nil {
@@ -83,7 +83,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.apigatewayv2.Integration("example", {
-    apiId: aws_apigatewayv2_api_example.id,
+    apiId: aws_apigatewayv2_api.example.id,
     integrationType: "MOCK",
 });
 ```
@@ -103,18 +103,18 @@ class MyStack : Stack
         var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
         {
             Code = new FileArchive("example.zip"),
-            Handler = "index.handler",
             Role = aws_iam_role.Example.Arn,
+            Handler = "index.handler",
             Runtime = "nodejs10.x",
         });
         var exampleIntegration = new Aws.ApiGatewayV2.Integration("exampleIntegration", new Aws.ApiGatewayV2.IntegrationArgs
         {
             ApiId = aws_apigatewayv2_api.Example.Id,
+            IntegrationType = "AWS",
             ConnectionType = "INTERNET",
             ContentHandlingStrategy = "CONVERT_TO_TEXT",
             Description = "Lambda example",
             IntegrationMethod = "POST",
-            IntegrationType = "AWS",
             IntegrationUri = exampleFunction.InvokeArn,
             PassthroughBehavior = "WHEN_NO_MATCH",
         });
@@ -136,16 +136,16 @@ import pulumi_aws as aws
 
 example_function = aws.lambda_.Function("exampleFunction",
     code=pulumi.FileArchive("example.zip"),
-    handler="index.handler",
     role=aws_iam_role["example"]["arn"],
+    handler="index.handler",
     runtime="nodejs10.x")
 example_integration = aws.apigatewayv2.Integration("exampleIntegration",
     api_id=aws_apigatewayv2_api["example"]["id"],
+    integration_type="AWS",
     connection_type="INTERNET",
     content_handling_strategy="CONVERT_TO_TEXT",
     description="Lambda example",
     integration_method="POST",
-    integration_type="AWS",
     integration_uri=example_function.invoke_arn,
     passthrough_behavior="WHEN_NO_MATCH")
 ```
@@ -158,19 +158,19 @@ example_integration = aws.apigatewayv2.Integration("exampleIntegration",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleFunction = new aws.lambda.Function("example", {
+const exampleFunction = new aws.lambda.Function("exampleFunction", {
     code: new pulumi.asset.FileArchive("example.zip"),
+    role: aws_iam_role.example.arn,
     handler: "index.handler",
-    role: aws_iam_role_example.arn,
     runtime: "nodejs10.x",
 });
-const exampleIntegration = new aws.apigatewayv2.Integration("example", {
-    apiId: aws_apigatewayv2_api_example.id,
+const exampleIntegration = new aws.apigatewayv2.Integration("exampleIntegration", {
+    apiId: aws_apigatewayv2_api.example.id,
+    integrationType: "AWS",
     connectionType: "INTERNET",
     contentHandlingStrategy: "CONVERT_TO_TEXT",
     description: "Lambda example",
     integrationMethod: "POST",
-    integrationType: "AWS",
     integrationUri: exampleFunction.invokeArn,
     passthroughBehavior: "WHEN_NO_MATCH",
 });
@@ -190,11 +190,11 @@ const exampleIntegration = new aws.apigatewayv2.Integration("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>connection_id=None<span class="p">, </span>connection_type=None<span class="p">, </span>content_handling_strategy=None<span class="p">, </span>credentials_arn=None<span class="p">, </span>description=None<span class="p">, </span>integration_method=None<span class="p">, </span>integration_type=None<span class="p">, </span>integration_uri=None<span class="p">, </span>passthrough_behavior=None<span class="p">, </span>payload_format_version=None<span class="p">, </span>request_templates=None<span class="p">, </span>template_selection_expression=None<span class="p">, </span>timeout_milliseconds=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>connection_id=None<span class="p">, </span>connection_type=None<span class="p">, </span>content_handling_strategy=None<span class="p">, </span>credentials_arn=None<span class="p">, </span>description=None<span class="p">, </span>integration_method=None<span class="p">, </span>integration_type=None<span class="p">, </span>integration_uri=None<span class="p">, </span>passthrough_behavior=None<span class="p">, </span>payload_format_version=None<span class="p">, </span>request_parameters=None<span class="p">, </span>request_templates=None<span class="p">, </span>template_selection_expression=None<span class="p">, </span>timeout_milliseconds=None<span class="p">, </span>tls_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -268,7 +268,7 @@ const exampleIntegration = new aws.apigatewayv2.Integration("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -288,7 +288,7 @@ const exampleIntegration = new aws.apigatewayv2.Integration("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,7 +298,7 @@ const exampleIntegration = new aws.apigatewayv2.Integration("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -488,6 +488,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestparameters_csharp">
+<a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttemplates_csharp">
 <a href="#requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
 </span> 
@@ -517,6 +529,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsconfig_csharp">
+<a href="#tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -652,6 +675,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestparameters_go">
+<a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttemplates_go">
 <a href="#requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
 </span> 
@@ -681,6 +716,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsconfig_go">
+<a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -816,6 +862,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestparameters_nodejs">
+<a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttemplates_nodejs">
 <a href="#requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
 </span> 
@@ -845,6 +903,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsconfig_nodejs">
+<a href="#tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -980,6 +1049,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="request_parameters_python">
+<a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="request_templates_python">
 <a href="#request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
 </span> 
@@ -1009,6 +1090,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_config_python">
+<a href="#tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Dict[Integration<wbr>Tls<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1153,11 +1245,11 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>connection_id=None<span class="p">, </span>connection_type=None<span class="p">, </span>content_handling_strategy=None<span class="p">, </span>credentials_arn=None<span class="p">, </span>description=None<span class="p">, </span>integration_method=None<span class="p">, </span>integration_response_selection_expression=None<span class="p">, </span>integration_type=None<span class="p">, </span>integration_uri=None<span class="p">, </span>passthrough_behavior=None<span class="p">, </span>payload_format_version=None<span class="p">, </span>request_templates=None<span class="p">, </span>template_selection_expression=None<span class="p">, </span>timeout_milliseconds=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>connection_id=None<span class="p">, </span>connection_type=None<span class="p">, </span>content_handling_strategy=None<span class="p">, </span>credentials_arn=None<span class="p">, </span>description=None<span class="p">, </span>integration_method=None<span class="p">, </span>integration_response_selection_expression=None<span class="p">, </span>integration_type=None<span class="p">, </span>integration_uri=None<span class="p">, </span>passthrough_behavior=None<span class="p">, </span>payload_format_version=None<span class="p">, </span>request_parameters=None<span class="p">, </span>request_templates=None<span class="p">, </span>template_selection_expression=None<span class="p">, </span>timeout_milliseconds=None<span class="p">, </span>tls_config=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1404,6 +1496,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_requestparameters_csharp">
+<a href="#state_requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_requesttemplates_csharp">
 <a href="#state_requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
 </span> 
@@ -1433,6 +1537,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tlsconfig_csharp">
+<a href="#state_tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1579,6 +1694,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_requestparameters_go">
+<a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_requesttemplates_go">
 <a href="#state_requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
 </span> 
@@ -1608,6 +1735,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tlsconfig_go">
+<a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1754,6 +1892,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_requestparameters_nodejs">
+<a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_requesttemplates_nodejs">
 <a href="#state_requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
 </span> 
@@ -1783,6 +1933,17 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tlsconfig_nodejs">
+<a href="#state_tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1929,6 +2090,18 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_request_parameters_python">
+<a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A key-value map specifying request parameters that are passed from the method request to the backend.
+Supported only for WebSocket APIs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_request_templates_python">
 <a href="#state_request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
 </span> 
@@ -1960,10 +2133,117 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tls_config_python">
+<a href="#state_tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Dict[Integration<wbr>Tls<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="integrationtlsconfig">Integration<wbr>Tls<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntegrationTlsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntegrationTlsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#IntegrationTlsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#IntegrationTlsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.IntegrationTlsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.IntegrationTlsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servernametoverify_csharp">
+<a href="#servernametoverify_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name<wbr>To<wbr>Verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servernametoverify_go">
+<a href="#servernametoverify_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name<wbr>To<wbr>Verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servernametoverify_nodejs">
+<a href="#servernametoverify_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name<wbr>To<wbr>Verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servernametoverify_python">
+<a href="#servernametoverify_python" style="color: inherit; text-decoration: inherit;">server<wbr>Name<wbr>To<wbr>Verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

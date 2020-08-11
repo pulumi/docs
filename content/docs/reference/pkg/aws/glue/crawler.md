@@ -29,6 +29,7 @@ class MyStack : Stack
         var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
         {
             DatabaseName = aws_glue_catalog_database.Example.Name,
+            Role = aws_iam_role.Example.Arn,
             DynamodbTargets = 
             {
                 new Aws.Glue.Inputs.CrawlerDynamodbTargetArgs
@@ -36,7 +37,6 @@ class MyStack : Stack
                     Path = "table-name",
                 },
             },
-            Role = aws_iam_role.Example.Arn,
         });
     }
 
@@ -50,20 +50,20 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
-			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
+			DatabaseName: pulumi.Any(aws_glue_catalog_database.Example.Name),
+			Role:         pulumi.Any(aws_iam_role.Example.Arn),
 			DynamodbTargets: glue.CrawlerDynamodbTargetArray{
 				&glue.CrawlerDynamodbTargetArgs{
 					Path: pulumi.String("table-name"),
 				},
 			},
-			Role: pulumi.String(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -82,10 +82,10 @@ import pulumi_aws as aws
 
 example = aws.glue.Crawler("example",
     database_name=aws_glue_catalog_database["example"]["name"],
+    role=aws_iam_role["example"]["arn"],
     dynamodb_targets=[{
         "path": "table-name",
-    }],
-    role=aws_iam_role["example"]["arn"])
+    }])
 ```
 
 {{% /example %}}
@@ -97,11 +97,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Crawler("example", {
-    databaseName: aws_glue_catalog_database_example.name,
+    databaseName: aws_glue_catalog_database.example.name,
+    role: aws_iam_role.example.arn,
     dynamodbTargets: [{
         path: "table-name",
     }],
-    role: aws_iam_role_example.arn,
 });
 ```
 
@@ -120,6 +120,7 @@ class MyStack : Stack
         var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
         {
             DatabaseName = aws_glue_catalog_database.Example.Name,
+            Role = aws_iam_role.Example.Arn,
             JdbcTargets = 
             {
                 new Aws.Glue.Inputs.CrawlerJdbcTargetArgs
@@ -128,7 +129,6 @@ class MyStack : Stack
                     Path = "database-name/%",
                 },
             },
-            Role = aws_iam_role.Example.Arn,
         });
     }
 
@@ -144,21 +144,21 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
-			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
+			DatabaseName: pulumi.Any(aws_glue_catalog_database.Example.Name),
+			Role:         pulumi.Any(aws_iam_role.Example.Arn),
 			JdbcTargets: glue.CrawlerJdbcTargetArray{
 				&glue.CrawlerJdbcTargetArgs{
-					ConnectionName: pulumi.String(aws_glue_connection.Example.Name),
+					ConnectionName: pulumi.Any(aws_glue_connection.Example.Name),
 					Path:           pulumi.String(fmt.Sprintf("%v%v", "database-name/", "%")),
 				},
 			},
-			Role: pulumi.String(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -177,11 +177,11 @@ import pulumi_aws as aws
 
 example = aws.glue.Crawler("example",
     database_name=aws_glue_catalog_database["example"]["name"],
+    role=aws_iam_role["example"]["arn"],
     jdbc_targets=[{
         "connectionName": aws_glue_connection["example"]["name"],
         "path": "database-name/%",
-    }],
-    role=aws_iam_role["example"]["arn"])
+    }])
 ```
 
 {{% /example %}}
@@ -193,12 +193,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Crawler("example", {
-    databaseName: aws_glue_catalog_database_example.name,
+    databaseName: aws_glue_catalog_database.example.name,
+    role: aws_iam_role.example.arn,
     jdbcTargets: [{
-        connectionName: aws_glue_connection_example.name,
-        path: "database-name/%",
+        connectionName: aws_glue_connection.example.name,
+        path: `database-name/%`,
     }],
-    role: aws_iam_role_example.arn,
 });
 ```
 
@@ -240,15 +240,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
-			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
-			Role:         pulumi.String(aws_iam_role.Example.Arn),
+			DatabaseName: pulumi.Any(aws_glue_catalog_database.Example.Name),
+			Role:         pulumi.Any(aws_iam_role.Example.Arn),
 			S3Targets: glue.CrawlerS3TargetArray{
 				&glue.CrawlerS3TargetArgs{
 					Path: pulumi.String(fmt.Sprintf("%v%v", "s3://", aws_s3_bucket.Example.Bucket)),
@@ -287,10 +287,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Crawler("example", {
-    databaseName: aws_glue_catalog_database_example.name,
-    role: aws_iam_role_example.arn,
+    databaseName: aws_glue_catalog_database.example.name,
+    role: aws_iam_role.example.arn,
     s3Targets: [{
-        path: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}`,
+        path: `s3://${aws_s3_bucket.example.bucket}`,
     }],
 });
 ```
@@ -313,7 +313,7 @@ const example = new aws.glue.Crawler("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Crawler">NewCrawler</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerArgs">CrawlerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Crawler">Crawler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Crawler">NewCrawler</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerArgs">CrawlerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Crawler">Crawler</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -387,7 +387,7 @@ const example = new aws.glue.Crawler("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -407,7 +407,7 @@ const example = new aws.glue.Crawler("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerArgs">CrawlerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerArgs">CrawlerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -417,7 +417,7 @@ const example = new aws.glue.Crawler("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1304,7 +1304,7 @@ Get an existing Crawler resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCrawler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerState">CrawlerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Crawler">Crawler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCrawler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerState">CrawlerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Crawler">Crawler</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2156,7 +2156,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerCatalogTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerCatalogTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerCatalogTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerCatalogTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerCatalogTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerCatalogTarget.html">output</a> API doc for this type.
@@ -2290,7 +2290,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerDynamodbTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerDynamodbTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerDynamodbTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerDynamodbTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerDynamodbTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerDynamodbTarget.html">output</a> API doc for this type.
@@ -2380,7 +2380,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerJdbcTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerJdbcTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerJdbcTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerJdbcTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerJdbcTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerJdbcTarget.html">output</a> API doc for this type.
@@ -2558,7 +2558,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerS3TargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerS3TargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerS3TargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerS3TargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerS3TargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerS3Target.html">output</a> API doc for this type.
@@ -2692,7 +2692,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerSchemaChangePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerSchemaChangePolicy.html">output</a> API doc for this type.

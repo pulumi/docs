@@ -51,6 +51,8 @@ class MyStack : Stack
         var wu_tang_ssl = new Aws.Elb.LoadBalancerPolicy("wu-tang-ssl", new Aws.Elb.LoadBalancerPolicyArgs
         {
             LoadBalancerName = wu_tang.Name,
+            PolicyName = "wu-tang-ssl",
+            PolicyTypeName = "SSLNegotiationPolicyType",
             PolicyAttributes = 
             {
                 new Aws.Elb.Inputs.LoadBalancerPolicyPolicyAttributeArgs
@@ -64,8 +66,6 @@ class MyStack : Stack
                     Value = "true",
                 },
             },
-            PolicyName = "wu-tang-ssl",
-            PolicyTypeName = "SSLNegotiationPolicyType",
         });
         var wu_tang_listener_policies_443 = new Aws.Elb.ListenerPolicy("wu-tang-listener-policies-443", new Aws.Elb.ListenerPolicyArgs
         {
@@ -88,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,6 +116,8 @@ func main() {
 		}
 		_, err = elb.NewLoadBalancerPolicy(ctx, "wu_tang_ssl", &elb.LoadBalancerPolicyArgs{
 			LoadBalancerName: wu_tang.Name,
+			PolicyName:       pulumi.String("wu-tang-ssl"),
+			PolicyTypeName:   pulumi.String("SSLNegotiationPolicyType"),
 			PolicyAttributes: elb.LoadBalancerPolicyPolicyAttributeArray{
 				&elb.LoadBalancerPolicyPolicyAttributeArgs{
 					Name:  pulumi.String("ECDHE-ECDSA-AES128-GCM-SHA256"),
@@ -126,8 +128,6 @@ func main() {
 					Value: pulumi.String("true"),
 				},
 			},
-			PolicyName:     pulumi.String("wu-tang-ssl"),
-			PolicyTypeName: pulumi.String("SSLNegotiationPolicyType"),
 		})
 		if err != nil {
 			return err
@@ -168,6 +168,8 @@ wu_tang = aws.elb.LoadBalancer("wu-tang",
     })
 wu_tang_ssl = aws.elb.LoadBalancerPolicy("wu-tang-ssl",
     load_balancer_name=wu_tang.name,
+    policy_name="wu-tang-ssl",
+    policy_type_name="SSLNegotiationPolicyType",
     policy_attributes=[
         {
             "name": "ECDHE-ECDSA-AES128-GCM-SHA256",
@@ -177,9 +179,7 @@ wu_tang_ssl = aws.elb.LoadBalancerPolicy("wu-tang-ssl",
             "name": "Protocol-TLSv1.2",
             "value": "true",
         },
-    ],
-    policy_name="wu-tang-ssl",
-    policy_type_name="SSLNegotiationPolicyType")
+    ])
 wu_tang_listener_policies_443 = aws.elb.ListenerPolicy("wu-tang-listener-policies-443",
     load_balancer_name=wu_tang.name,
     load_balancer_port=443,
@@ -209,6 +209,8 @@ const wu_tang = new aws.elb.LoadBalancer("wu-tang", {
 });
 const wu_tang_ssl = new aws.elb.LoadBalancerPolicy("wu-tang-ssl", {
     loadBalancerName: wu_tang.name,
+    policyName: "wu-tang-ssl",
+    policyTypeName: "SSLNegotiationPolicyType",
     policyAttributes: [
         {
             name: "ECDHE-ECDSA-AES128-GCM-SHA256",
@@ -219,8 +221,6 @@ const wu_tang_ssl = new aws.elb.LoadBalancerPolicy("wu-tang-ssl", {
             value: "true",
         },
     ],
-    policyName: "wu-tang-ssl",
-    policyTypeName: "SSLNegotiationPolicyType",
 });
 const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listener-policies-443", {
     loadBalancerName: wu_tang.name,
@@ -266,6 +266,8 @@ class MyStack : Stack
         var wu_tang_ssl_tls_1_1 = new Aws.Elb.LoadBalancerPolicy("wu-tang-ssl-tls-1-1", new Aws.Elb.LoadBalancerPolicyArgs
         {
             LoadBalancerName = wu_tang.Name,
+            PolicyName = "wu-tang-ssl",
+            PolicyTypeName = "SSLNegotiationPolicyType",
             PolicyAttributes = 
             {
                 new Aws.Elb.Inputs.LoadBalancerPolicyPolicyAttributeArgs
@@ -274,8 +276,6 @@ class MyStack : Stack
                     Value = "ELBSecurityPolicy-TLS-1-1-2017-01",
                 },
             },
-            PolicyName = "wu-tang-ssl",
-            PolicyTypeName = "SSLNegotiationPolicyType",
         });
         var wu_tang_listener_policies_443 = new Aws.Elb.ListenerPolicy("wu-tang-listener-policies-443", new Aws.Elb.ListenerPolicyArgs
         {
@@ -298,7 +298,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -326,14 +326,14 @@ func main() {
 		}
 		_, err = elb.NewLoadBalancerPolicy(ctx, "wu_tang_ssl_tls_1_1", &elb.LoadBalancerPolicyArgs{
 			LoadBalancerName: wu_tang.Name,
+			PolicyName:       pulumi.String("wu-tang-ssl"),
+			PolicyTypeName:   pulumi.String("SSLNegotiationPolicyType"),
 			PolicyAttributes: elb.LoadBalancerPolicyPolicyAttributeArray{
 				&elb.LoadBalancerPolicyPolicyAttributeArgs{
 					Name:  pulumi.String("Reference-Security-Policy"),
 					Value: pulumi.String("ELBSecurityPolicy-TLS-1-1-2017-01"),
 				},
 			},
-			PolicyName:     pulumi.String("wu-tang-ssl"),
-			PolicyTypeName: pulumi.String("SSLNegotiationPolicyType"),
 		})
 		if err != nil {
 			return err
@@ -374,12 +374,12 @@ wu_tang = aws.elb.LoadBalancer("wu-tang",
     })
 wu_tang_ssl_tls_1_1 = aws.elb.LoadBalancerPolicy("wu-tang-ssl-tls-1-1",
     load_balancer_name=wu_tang.name,
+    policy_name="wu-tang-ssl",
+    policy_type_name="SSLNegotiationPolicyType",
     policy_attributes=[{
         "name": "Reference-Security-Policy",
         "value": "ELBSecurityPolicy-TLS-1-1-2017-01",
-    }],
-    policy_name="wu-tang-ssl",
-    policy_type_name="SSLNegotiationPolicyType")
+    }])
 wu_tang_listener_policies_443 = aws.elb.ListenerPolicy("wu-tang-listener-policies-443",
     load_balancer_name=wu_tang.name,
     load_balancer_port=443,
@@ -409,12 +409,12 @@ const wu_tang = new aws.elb.LoadBalancer("wu-tang", {
 });
 const wu_tang_ssl_tls_1_1 = new aws.elb.LoadBalancerPolicy("wu-tang-ssl-tls-1-1", {
     loadBalancerName: wu_tang.name,
+    policyName: "wu-tang-ssl",
+    policyTypeName: "SSLNegotiationPolicyType",
     policyAttributes: [{
         name: "Reference-Security-Policy",
         value: "ELBSecurityPolicy-TLS-1-1-2017-01",
     }],
-    policyName: "wu-tang-ssl",
-    policyTypeName: "SSLNegotiationPolicyType",
 });
 const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listener-policies-443", {
     loadBalancerName: wu_tang.name,
@@ -441,7 +441,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicy">NewListenerPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicyArgs">ListenerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicy">ListenerPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicy">NewListenerPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicyArgs">ListenerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicy">ListenerPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -515,7 +515,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -535,7 +535,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicyArgs">ListenerPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicyArgs">ListenerPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -545,7 +545,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -864,7 +864,7 @@ Get an existing ListenerPolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicyState">ListenerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#ListenerPolicy">ListenerPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicyState">ListenerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#ListenerPolicy">ListenerPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

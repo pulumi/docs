@@ -38,14 +38,14 @@ class MyStack : Stack
         });
         var exampleAmazonsesVerificationRecord = new Aws.Route53.Record("exampleAmazonsesVerificationRecord", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Example.Zone_id,
             Name = example.Id.Apply(id => $"_amazonses.{id}"),
+            Type = "TXT",
+            Ttl = 600,
             Records = 
             {
                 example.VerificationToken,
             },
-            Ttl = 600,
-            Type = "TXT",
-            ZoneId = aws_route53_zone.Example.Zone_id,
         });
         var exampleVerification = new Aws.Ses.DomainIdentityVerification("exampleVerification", new Aws.Ses.DomainIdentityVerificationArgs
         {
@@ -54,7 +54,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_route53_record.example_amazonses_verification_record",
+                exampleAmazonsesVerificationRecord,
             },
         });
     }
@@ -71,8 +71,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,16 +84,16 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = route53.NewRecord(ctx, "exampleAmazonsesVerificationRecord", &route53.RecordArgs{
+		exampleAmazonsesVerificationRecord, err := route53.NewRecord(ctx, "exampleAmazonsesVerificationRecord", &route53.RecordArgs{
+			ZoneId: pulumi.Any(aws_route53_zone.Example.Zone_id),
 			Name: example.ID().ApplyT(func(id string) (string, error) {
 				return fmt.Sprintf("%v%v", "_amazonses.", id), nil
 			}).(pulumi.StringOutput),
+			Type: pulumi.String("TXT"),
+			Ttl:  pulumi.Int(600),
 			Records: pulumi.StringArray{
 				example.VerificationToken,
 			},
-			Ttl:    pulumi.Int(600),
-			Type:   pulumi.String("TXT"),
-			ZoneId: pulumi.String(aws_route53_zone.Example.Zone_id),
 		})
 		if err != nil {
 			return err
@@ -101,7 +101,7 @@ func main() {
 		_, err = ses.NewDomainIdentityVerification(ctx, "exampleVerification", &ses.DomainIdentityVerificationArgs{
 			Domain: example.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_route53_record.example_amazonses_verification_record",
+			exampleAmazonsesVerificationRecord,
 		}))
 		if err != nil {
 			return err
@@ -120,13 +120,13 @@ import pulumi_aws as aws
 
 example = aws.ses.DomainIdentity("example", domain="example.com")
 example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVerificationRecord",
+    zone_id=aws_route53_zone["example"]["zone_id"],
     name=example.id.apply(lambda id: f"_amazonses.{id}"),
-    records=[example.verification_token],
-    ttl="600",
     type="TXT",
-    zone_id=aws_route53_zone["example"]["zone_id"])
+    ttl="600",
+    records=[example.verification_token])
 example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id,
-opts=ResourceOptions(depends_on=["aws_route53_record.example_amazonses_verification_record"]))
+opts=ResourceOptions(depends_on=[example_amazonses_verification_record]))
 ```
 
 {{% /example %}}
@@ -137,19 +137,17 @@ opts=ResourceOptions(depends_on=["aws_route53_record.example_amazonses_verificat
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.ses.DomainIdentity("example", {
-    domain: "example.com",
-});
-const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazonses_verification_record", {
+const example = new aws.ses.DomainIdentity("example", {domain: "example.com"});
+const exampleAmazonsesVerificationRecord = new aws.route53.Record("exampleAmazonsesVerificationRecord", {
+    zoneId: aws_route53_zone.example.zone_id,
     name: pulumi.interpolate`_amazonses.${example.id}`,
-    records: [example.verificationToken],
-    ttl: 600,
     type: "TXT",
-    zoneId: aws_route53_zone_example.zoneId,
+    ttl: "600",
+    records: [example.verificationToken],
 });
-const exampleVerification = new aws.ses.DomainIdentityVerification("example_verification", {
-    domain: example.id,
-}, { dependsOn: [exampleAmazonsesVerificationRecord] });
+const exampleVerification = new aws.ses.DomainIdentityVerification("exampleVerification", {domain: example.id}, {
+    dependsOn: [exampleAmazonsesVerificationRecord],
+});
 ```
 
 {{% /example %}}
@@ -170,7 +168,7 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerification">NewDomainIdentityVerification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerificationArgs">DomainIdentityVerificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerification">DomainIdentityVerification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerification">NewDomainIdentityVerification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerificationArgs">DomainIdentityVerificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerification">DomainIdentityVerification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -244,7 +242,7 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -264,7 +262,7 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerificationArgs">DomainIdentityVerificationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerificationArgs">DomainIdentityVerificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +272,7 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -549,7 +547,7 @@ Get an existing DomainIdentityVerification resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainIdentityVerification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerificationState">DomainIdentityVerificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#DomainIdentityVerification">DomainIdentityVerification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainIdentityVerification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerificationState">DomainIdentityVerificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#DomainIdentityVerification">DomainIdentityVerification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

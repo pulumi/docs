@@ -29,8 +29,8 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.Ecs.GetService.InvokeAsync(new Aws.Ecs.GetServiceArgs
         {
-            ClusterArn = data.Aws_ecs_cluster.Example.Arn,
             ServiceName = "example",
+            ClusterArn = data.Aws_ecs_cluster.Example.Arn,
         }));
     }
 
@@ -44,15 +44,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.LookupService(ctx, &ecs.LookupServiceArgs{
-			ClusterArn:  data.Aws_ecs_cluster.Example.Arn,
 			ServiceName: "example",
+			ClusterArn:  data.Aws_ecs_cluster.Example.Arn,
 		}, nil)
 		if err != nil {
 			return err
@@ -69,8 +69,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ecs.get_service(cluster_arn=data["aws_ecs_cluster"]["example"]["arn"],
-    service_name="example")
+example = aws.ecs.get_service(service_name="example",
+    cluster_arn=data["aws_ecs_cluster"]["example"]["arn"])
 ```
 
 {{% /example %}}
@@ -81,10 +81,10 @@ example = aws.ecs.get_service(cluster_arn=data["aws_ecs_cluster"]["example"]["ar
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
-    clusterArn: arn,
+const example = aws.ecs.getService({
     serviceName: "example",
-}, { async: true }));
+    clusterArn: data.aws_ecs_cluster.example.arn,
+});
 ```
 
 {{% /example %}}
@@ -108,7 +108,7 @@ const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupService` in the Go SDK.
 

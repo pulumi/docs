@@ -34,7 +34,7 @@ Explore the resources and functions of the guardduty module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -45,7 +45,7 @@ Explore the resources and functions of the guardduty module in the AWS package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GuardDuty.html" title="Pulumi.Aws.GuardDuty">Pulumi.Aws.GuardDuty</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#" title="aws/guardduty">aws/guardduty</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#" title="aws/guardduty">aws/guardduty</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#" title="@pulumi/aws/guardduty">@pulumi/aws/guardduty</a></dd>

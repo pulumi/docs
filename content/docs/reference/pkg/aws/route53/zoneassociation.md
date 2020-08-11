@@ -22,11 +22,98 @@ Manages a Route53 Hosted Zone VPC association. VPC associations can only be made
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Aws.Ec2.Vpc("primary", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.6.0.0/16",
+            EnableDnsHostnames = true,
+            EnableDnsSupport = true,
+        });
+        var secondaryVpc = new Aws.Ec2.Vpc("secondaryVpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.7.0.0/16",
+            EnableDnsHostnames = true,
+            EnableDnsSupport = true,
+        });
+        var example = new Aws.Route53.Zone("example", new Aws.Route53.ZoneArgs
+        {
+            Vpcs = 
+            {
+                new Aws.Route53.Inputs.ZoneVpcArgs
+                {
+                    VpcId = primary.Id,
+                },
+            },
+        });
+        var secondaryZoneAssociation = new Aws.Route53.ZoneAssociation("secondaryZoneAssociation", new Aws.Route53.ZoneAssociationArgs
+        {
+            ZoneId = example.ZoneId,
+            VpcId = secondaryVpc.Id,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := ec2.NewVpc(ctx, "primary", &ec2.VpcArgs{
+			CidrBlock:          pulumi.String("10.6.0.0/16"),
+			EnableDnsHostnames: pulumi.Bool(true),
+			EnableDnsSupport:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		secondaryVpc, err := ec2.NewVpc(ctx, "secondaryVpc", &ec2.VpcArgs{
+			CidrBlock:          pulumi.String("10.7.0.0/16"),
+			EnableDnsHostnames: pulumi.Bool(true),
+			EnableDnsSupport:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		example, err := route53.NewZone(ctx, "example", &route53.ZoneArgs{
+			Vpcs: route53.ZoneVpcArray{
+				&route53.ZoneVpcArgs{
+					VpcId: primary.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = route53.NewZoneAssociation(ctx, "secondaryZoneAssociation", &route53.ZoneAssociationArgs{
+			ZoneId: example.ZoneId,
+			VpcId:  secondaryVpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -42,20 +129,12 @@ secondary_vpc = aws.ec2.Vpc("secondaryVpc",
     cidr_block="10.7.0.0/16",
     enable_dns_hostnames=True,
     enable_dns_support=True)
-example = aws.route53.Zone("example",
-    lifecycle={
-        "ignoreChanges": [
-            "vpcId",
-            "vpcRegion",
-            "vpcs",
-        ],
-    },
-    vpcs=[{
-        "vpc_id": primary.id,
-    }])
+example = aws.route53.Zone("example", vpcs=[{
+    "vpc_id": primary.id,
+}])
 secondary_zone_association = aws.route53.ZoneAssociation("secondaryZoneAssociation",
-    vpc_id=secondary_vpc.id,
-    zone_id=example.zone_id)
+    zone_id=example.zone_id,
+    vpc_id=secondary_vpc.id)
 ```
 
 {{% /example %}}
@@ -71,24 +150,17 @@ const primary = new aws.ec2.Vpc("primary", {
     enableDnsHostnames: true,
     enableDnsSupport: true,
 });
-const secondaryVpc = new aws.ec2.Vpc("secondary", {
+const secondaryVpc = new aws.ec2.Vpc("secondaryVpc", {
     cidrBlock: "10.7.0.0/16",
     enableDnsHostnames: true,
     enableDnsSupport: true,
 });
-const example = new aws.route53.Zone("example", {
-    // NOTE: The aws_route53_zone vpc argument accepts multiple configuration
-    //       blocks. The below usage of the single vpc configuration, the
-    //       lifecycle configuration, and the aws_route53_zone_association
-    //       resource is for illustrative purposes (e.g. for a separate
-    //       cross-account authorization process, which is not shown here).
-    vpcs: [{
-        vpcId: primary.id,
-    }],
-}, { ignoreChanges: ["vpcId", "vpcRegion", "vpcs"] });
-const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
-    vpcId: secondaryVpc.id,
+const example = new aws.route53.Zone("example", {vpcs: [{
+    vpcId: primary.id,
+}]});
+const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondaryZoneAssociation", {
     zoneId: example.zoneId,
+    vpcId: secondaryVpc.id,
 });
 ```
 
@@ -110,7 +182,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociation">NewZoneAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociation">NewZoneAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -184,7 +256,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -204,7 +276,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +286,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -533,7 +605,7 @@ Get an existing ZoneAssociation resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociationState">ZoneAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociationState">ZoneAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

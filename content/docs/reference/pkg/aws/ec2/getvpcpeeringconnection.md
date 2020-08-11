@@ -29,8 +29,8 @@ class MyStack : Stack
     {
         var pc = Output.Create(Aws.Ec2.GetVpcPeeringConnection.InvokeAsync(new Aws.Ec2.GetVpcPeeringConnectionArgs
         {
-            PeerCidrBlock = "10.0.1.0/22",
             VpcId = aws_vpc.Foo.Id,
+            PeerCidrBlock = "10.0.1.0/22",
         }));
         // Create a route table
         var rt = new Aws.Ec2.RouteTable("rt", new Aws.Ec2.RouteTableArgs
@@ -40,8 +40,8 @@ class MyStack : Stack
         // Create a route
         var route = new Aws.Ec2.Route("route", new Aws.Ec2.RouteArgs
         {
-            DestinationCidrBlock = pc.Apply(pc => pc.PeerCidrBlock),
             RouteTableId = rt.Id,
+            DestinationCidrBlock = pc.Apply(pc => pc.PeerCidrBlock),
             VpcPeeringConnectionId = pc.Apply(pc => pc.Id),
         });
     }
@@ -56,30 +56,30 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "10.0.1.0/22"
-		opt1 := aws_vpc.Foo.Id
+		opt0 := aws_vpc.Foo.Id
+		opt1 := "10.0.1.0/22"
 		pc, err := ec2.LookupVpcPeeringConnection(ctx, &ec2.LookupVpcPeeringConnectionArgs{
-			PeerCidrBlock: &opt0,
-			VpcId:         &opt1,
+			VpcId:         &opt0,
+			PeerCidrBlock: &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		rt, err := ec2.NewRouteTable(ctx, "rt", &ec2.RouteTableArgs{
-			VpcId: pulumi.String(aws_vpc.Foo.Id),
+			VpcId: pulumi.Any(aws_vpc.Foo.Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
-			DestinationCidrBlock:   pulumi.String(pc.PeerCidrBlock),
 			RouteTableId:           rt.ID(),
+			DestinationCidrBlock:   pulumi.String(pc.PeerCidrBlock),
 			VpcPeeringConnectionId: pulumi.String(pc.Id),
 		})
 		if err != nil {
@@ -97,14 +97,14 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-pc = aws.ec2.get_vpc_peering_connection(peer_cidr_block="10.0.1.0/22",
-    vpc_id=aws_vpc["foo"]["id"])
+pc = aws.ec2.get_vpc_peering_connection(vpc_id=aws_vpc["foo"]["id"],
+    peer_cidr_block="10.0.1.0/22")
 # Create a route table
 rt = aws.ec2.RouteTable("rt", vpc_id=aws_vpc["foo"]["id"])
 # Create a route
 route = aws.ec2.Route("route",
-    destination_cidr_block=pc.peer_cidr_block,
     route_table_id=rt.id,
+    destination_cidr_block=pc.peer_cidr_block,
     vpc_peering_connection_id=pc.id)
 ```
 
@@ -116,20 +116,17 @@ route = aws.ec2.Route("route",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-// Declare the data source
-const pc = aws_vpc_foo.id.apply(id => aws.ec2.getVpcPeeringConnection({
+const pc = aws.ec2.getVpcPeeringConnection({
+    vpcId: aws_vpc.foo.id,
     peerCidrBlock: "10.0.1.0/22",
-    vpcId: id,
-}, { async: true }));
-// Create a route table
-const rt = new aws.ec2.RouteTable("rt", {
-    vpcId: aws_vpc_foo.id,
 });
+// Create a route table
+const rt = new aws.ec2.RouteTable("rt", {vpcId: aws_vpc.foo.id});
 // Create a route
-const route = new aws.ec2.Route("r", {
-    destinationCidrBlock: pc.peerCidrBlock!,
+const route = new aws.ec2.Route("route", {
     routeTableId: rt.id,
-    vpcPeeringConnectionId: pc.id!,
+    destinationCidrBlock: pc.then(pc => pc.peerCidrBlock),
+    vpcPeeringConnectionId: pc.then(pc => pc.id),
 });
 ```
 
@@ -154,7 +151,7 @@ const route = new aws.ec2.Route("r", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcPeeringConnection` in the Go SDK.
 
@@ -1365,7 +1362,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcPeeringConnectionFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcPeeringConnectionFilter.html">output</a> API doc for this type.

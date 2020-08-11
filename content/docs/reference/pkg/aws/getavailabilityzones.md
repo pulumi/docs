@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -161,7 +161,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -241,12 +241,12 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>blacklisted_names=None<span class="p">, </span>blacklisted_zone_ids=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>group_names=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>group_names=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZonesResult">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesResult">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -276,28 +276,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistednames_csharp">
-<a href="#blacklistednames_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistedzoneids_csharp">
-<a href="#blacklistedzoneids_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -374,28 +352,6 @@ to which the underlying AWS account has access, regardless of their state.
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistednames_go">
-<a href="#blacklistednames_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistedzoneids_go">
-<a href="#blacklistedzoneids_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludenames_go">
@@ -471,28 +427,6 @@ to which the underlying AWS account has access, regardless of their state.
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistednames_nodejs">
-<a href="#blacklistednames_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklistedzoneids_nodejs">
-<a href="#blacklistedzoneids_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludenames_nodejs">
@@ -567,28 +501,6 @@ to which the underlying AWS account has access, regardless of their state.
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklisted_names_python">
-<a href="#blacklisted_names_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone names to exclude. Use `exclude_names` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="blacklisted_zone_ids_python">
-<a href="#blacklisted_zone_ids_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>zone_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of Availability Zone IDs to exclude. Use `exclude_zone_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -710,26 +622,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistednames_csharp">
-<a href="#blacklistednames_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistedzoneids_csharp">
-<a href="#blacklistedzoneids_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="excludenames_csharp">
@@ -829,26 +721,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistednames_go">
-<a href="#blacklistednames_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistedzoneids_go">
-<a href="#blacklistedzoneids_go" style="color: inherit; text-decoration: inherit;">Blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -950,26 +822,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistednames_nodejs">
-<a href="#blacklistednames_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklistedzoneids_nodejs">
-<a href="#blacklistedzoneids_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted<wbr>Zone<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="excludenames_nodejs">
@@ -1070,26 +922,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklisted_names_python">
-<a href="#blacklisted_names_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_names` instead{{% /md %}}</p></dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="blacklisted_zone_ids_python">
-<a href="#blacklisted_zone_ids_python" style="color: inherit; text-decoration: inherit;">blacklisted_<wbr>zone_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `exclude_zone_ids` instead{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="exclude_names_python">
@@ -1159,7 +991,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZonesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetAvailabilityZonesFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetAvailabilityZonesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAvailabilityZonesFilter.html">output</a> API doc for this type.

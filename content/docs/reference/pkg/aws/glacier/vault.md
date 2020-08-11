@@ -33,6 +33,18 @@ class MyStack : Stack
         });
         var myArchive = new Aws.Glacier.Vault("myArchive", new Aws.Glacier.VaultArgs
         {
+            Notifications = 
+            {
+                new Aws.Glacier.Inputs.VaultNotificationArgs
+                {
+                    SnsTopic = awsSnsTopic.Arn,
+                    Events = 
+                    {
+                        "ArchiveRetrievalCompleted",
+                        "InventoryRetrievalCompleted",
+                    },
+                },
+            },
             AccessPolicy = @"{
     ""Version"":""2012-10-17"",
     ""Statement"":[
@@ -48,20 +60,7 @@ class MyStack : Stack
        }
     ]
 }
-
 ",
-            Notifications = 
-            {
-                new Aws.Glacier.Inputs.VaultNotificationArgs
-                {
-                    Events = 
-                    {
-                        "ArchiveRetrievalCompleted",
-                        "InventoryRetrievalCompleted",
-                    },
-                    SnsTopic = awsSnsTopic.Arn,
-                },
-            },
             Tags = 
             {
                 { "Test", "MyArchive" },
@@ -81,8 +80,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,16 +92,16 @@ func main() {
 			return err
 		}
 		_, err = glacier.NewVault(ctx, "myArchive", &glacier.VaultArgs{
-			AccessPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[\n", "       {\n", "          \"Sid\": \"add-read-only-perm\",\n", "          \"Principal\": \"*\",\n", "          \"Effect\": \"Allow\",\n", "          \"Action\": [\n", "             \"glacier:InitiateJob\",\n", "             \"glacier:GetJobOutput\"\n", "          ],\n", "          \"Resource\": \"arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive\"\n", "       }\n", "    ]\n", "}\n", "\n")),
 			Notifications: glacier.VaultNotificationArray{
 				&glacier.VaultNotificationArgs{
+					SnsTopic: awsSnsTopic.Arn,
 					Events: pulumi.StringArray{
 						pulumi.String("ArchiveRetrievalCompleted"),
 						pulumi.String("InventoryRetrievalCompleted"),
 					},
-					SnsTopic: awsSnsTopic.Arn,
 				},
 			},
+			AccessPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[\n", "       {\n", "          \"Sid\": \"add-read-only-perm\",\n", "          \"Principal\": \"*\",\n", "          \"Effect\": \"Allow\",\n", "          \"Action\": [\n", "             \"glacier:InitiateJob\",\n", "             \"glacier:GetJobOutput\"\n", "          ],\n", "          \"Resource\": \"arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive\"\n", "       }\n", "    ]\n", "}\n")),
 			Tags: pulumi.StringMap{
 				"Test": pulumi.String("MyArchive"),
 			},
@@ -124,6 +123,13 @@ import pulumi_aws as aws
 
 aws_sns_topic = aws.sns.Topic("awsSnsTopic")
 my_archive = aws.glacier.Vault("myArchive",
+    notifications=[{
+        "sns_topic": aws_sns_topic.arn,
+        "events": [
+            "ArchiveRetrievalCompleted",
+            "InventoryRetrievalCompleted",
+        ],
+    }],
     access_policy="""{
     "Version":"2012-10-17",
     "Statement":[
@@ -139,15 +145,7 @@ my_archive = aws.glacier.Vault("myArchive",
        }
     ]
 }
-
 """,
-    notifications=[{
-        "events": [
-            "ArchiveRetrievalCompleted",
-            "InventoryRetrievalCompleted",
-        ],
-        "sns_topic": aws_sns_topic.arn,
-    }],
     tags={
         "Test": "MyArchive",
     })
@@ -161,8 +159,15 @@ my_archive = aws.glacier.Vault("myArchive",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const awsSnsTopic = new aws.sns.Topic("aws_sns_topic", {});
-const myArchive = new aws.glacier.Vault("my_archive", {
+const awsSnsTopic = new aws.sns.Topic("awsSnsTopic", {});
+const myArchive = new aws.glacier.Vault("myArchive", {
+    notifications: [{
+        snsTopic: awsSnsTopic.arn,
+        events: [
+            "ArchiveRetrievalCompleted",
+            "InventoryRetrievalCompleted",
+        ],
+    }],
     accessPolicy: `{
     "Version":"2012-10-17",
     "Statement":[
@@ -179,13 +184,6 @@ const myArchive = new aws.glacier.Vault("my_archive", {
     ]
 }
 `,
-    notifications: [{
-        events: [
-            "ArchiveRetrievalCompleted",
-            "InventoryRetrievalCompleted",
-        ],
-        snsTopic: awsSnsTopic.arn,
-    }],
     tags: {
         Test: "MyArchive",
     },
@@ -210,7 +208,7 @@ const myArchive = new aws.glacier.Vault("my_archive", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#Vault">NewVault</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultArgs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#Vault">Vault</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#Vault">NewVault</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultArgs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#Vault">Vault</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -284,7 +282,7 @@ const myArchive = new aws.glacier.Vault("my_archive", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -304,7 +302,7 @@ const myArchive = new aws.glacier.Vault("my_archive", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultArgs">VaultArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultArgs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -314,7 +312,7 @@ const myArchive = new aws.glacier.Vault("my_archive", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -769,7 +767,7 @@ Get an existing Vault resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultState">VaultState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#Vault">Vault</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultState">VaultState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#Vault">Vault</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1189,7 +1187,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultNotificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Inputs.VaultNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Outputs.VaultNotification.html">output</a> API doc for this type.

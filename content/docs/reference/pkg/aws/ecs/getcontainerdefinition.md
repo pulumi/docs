@@ -29,8 +29,8 @@ class MyStack : Stack
     {
         var ecs_mongo = Output.Create(Aws.Ecs.GetContainerDefinition.InvokeAsync(new Aws.Ecs.GetContainerDefinitionArgs
         {
-            ContainerName = "mongodb",
             TaskDefinition = aws_ecs_task_definition.Mongo.Id,
+            ContainerName = "mongodb",
         }));
     }
 
@@ -44,15 +44,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.GetContainerDefinition(ctx, &ecs.GetContainerDefinitionArgs{
-			ContainerName:  "mongodb",
 			TaskDefinition: aws_ecs_task_definition.Mongo.Id,
+			ContainerName:  "mongodb",
 		}, nil)
 		if err != nil {
 			return err
@@ -69,8 +69,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-ecs_mongo = aws.ecs.get_container_definition(container_name="mongodb",
-    task_definition=aws_ecs_task_definition["mongo"]["id"])
+ecs_mongo = aws.ecs.get_container_definition(task_definition=aws_ecs_task_definition["mongo"]["id"],
+    container_name="mongodb")
 ```
 
 {{% /example %}}
@@ -81,10 +81,10 @@ ecs_mongo = aws.ecs.get_container_definition(container_name="mongodb",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContainerDefinition({
+const ecs-mongo = aws.ecs.getContainerDefinition({
+    taskDefinition: aws_ecs_task_definition.mongo.id,
     containerName: "mongodb",
-    taskDefinition: id,
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -108,7 +108,7 @@ const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContai
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#GetContainerDefinitionArgs">GetContainerDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#GetContainerDefinitionResult">GetContainerDefinitionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#GetContainerDefinitionArgs">GetContainerDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#GetContainerDefinitionResult">GetContainerDefinitionResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

@@ -12,6 +12,8 @@ meta_desc: "Explore the CapacityProvider resource of the ecs module, including e
 
 Provides an ECS cluster capacity provider. More information can be found on the [ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html).
 
+> **NOTE:** Associating an ECS Capacity Provider to an Auto Scaling Group will automatically add the `AmazonECSManaged` tag to the Auto Scaling Group. This tag should be included in the `aws.autoscaling.Group` resource configuration to prevent the provider from removing it in subsequent executions as well as ensuring the `AmazonECSManaged` tag is propagated to all EC2 Instances in the Auto Scaling Group if `min_size` is above 0 on creation. Any EC2 Instances in the Auto Scaling Group without this tag must be manually be updated, otherwise they may cause unexpected scaling behavior and metrics.
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,11 +28,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var test = new Aws.Ecs.CapacityProvider("test", new Aws.Ecs.CapacityProviderArgs
+        // ... other configuration, including potentially other tags ...
+        var testGroup = new Aws.AutoScaling.Group("testGroup", new Aws.AutoScaling.GroupArgs
+        {
+            Tags = 
+            {
+                new Aws.AutoScaling.Inputs.GroupTagArgs
+                {
+                    Key = "AmazonECSManaged",
+                    PropagateAtLaunch = true,
+                },
+            },
+        });
+        var testCapacityProvider = new Aws.Ecs.CapacityProvider("testCapacityProvider", new Aws.Ecs.CapacityProviderArgs
         {
             AutoScalingGroupProvider = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderArgs
             {
-                AutoScalingGroupArn = aws_autoscaling_group.Test.Arn,
+                AutoScalingGroupArn = testGroup.Arn,
                 ManagedTerminationProtection = "ENABLED",
                 ManagedScaling = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs
                 {
@@ -53,15 +67,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ecs.NewCapacityProvider(ctx, "test", &ecs.CapacityProviderArgs{
+		testGroup, err := autoscaling.NewGroup(ctx, "testGroup", &autoscaling.GroupArgs{
+			Tags: autoscaling.GroupTagArray{
+				&autoscaling.GroupTagArgs{
+					Key:               pulumi.String("AmazonECSManaged"),
+					PropagateAtLaunch: pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewCapacityProvider(ctx, "testCapacityProvider", &ecs.CapacityProviderArgs{
 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
-				AutoScalingGroupArn:          pulumi.String(aws_autoscaling_group.Test.Arn),
+				AutoScalingGroupArn:          testGroup.Arn,
 				ManagedTerminationProtection: pulumi.String("ENABLED"),
 				ManagedScaling: &ecs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs{
 					MaximumScalingStepSize: pulumi.Int(1000),
@@ -86,8 +112,13 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test = aws.ecs.CapacityProvider("test", auto_scaling_group_provider={
-    "autoScalingGroupArn": aws_autoscaling_group["test"]["arn"],
+# ... other configuration, including potentially other tags ...
+test_group = aws.autoscaling.Group("testGroup", tags=[{
+    "key": "AmazonECSManaged",
+    "propagateAtLaunch": True,
+}])
+test_capacity_provider = aws.ecs.CapacityProvider("testCapacityProvider", auto_scaling_group_provider={
+    "autoScalingGroupArn": test_group.arn,
     "managedTerminationProtection": "ENABLED",
     "managedScaling": {
         "maximumScalingStepSize": 1000,
@@ -106,8 +137,13 @@ test = aws.ecs.CapacityProvider("test", auto_scaling_group_provider={
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
-    autoScalingGroupArn: aws_autoscaling_group.test.arn,
+// ... other configuration, including potentially other tags ...
+const testGroup = new aws.autoscaling.Group("testGroup", {tags: [{
+    key: "AmazonECSManaged",
+    propagateAtLaunch: true,
+}]});
+const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider", {autoScalingGroupProvider: {
+    autoScalingGroupArn: testGroup.arn,
     managedTerminationProtection: "ENABLED",
     managedScaling: {
         maximumScalingStepSize: 1000,
@@ -136,7 +172,7 @@ const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProvider">NewCapacityProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderArgs">CapacityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProvider">CapacityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProvider">NewCapacityProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderArgs">CapacityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProvider">CapacityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -210,7 +246,7 @@ const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -230,7 +266,7 @@ const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderArgs">CapacityProviderArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderArgs">CapacityProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -240,7 +276,7 @@ const test = new aws.ecs.CapacityProvider("test", {autoScalingGroupProvider: {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -603,7 +639,7 @@ Get an existing CapacityProvider resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderState">CapacityProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProvider">CapacityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderState">CapacityProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProvider">CapacityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -931,7 +967,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProvider.html">output</a> API doc for this type.
@@ -1109,7 +1145,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProviderManagedScaling.html">output</a> API doc for this type.

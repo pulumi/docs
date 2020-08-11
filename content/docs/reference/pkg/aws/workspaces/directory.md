@@ -32,15 +32,15 @@ class MyStack : Stack
         });
         var private_a = new Aws.Ec2.Subnet("private-a", new Aws.Ec2.SubnetArgs
         {
+            VpcId = mainVpc.Id,
             AvailabilityZone = "us-east-1a",
             CidrBlock = "10.0.0.0/24",
-            VpcId = mainVpc.Id,
         });
         var private_b = new Aws.Ec2.Subnet("private-b", new Aws.Ec2.SubnetArgs
         {
+            VpcId = mainVpc.Id,
             AvailabilityZone = "us-east-1b",
             CidrBlock = "10.0.1.0/24",
-            VpcId = mainVpc.Id,
         });
         var mainDirectory = new Aws.DirectoryService.Directory("mainDirectory", new Aws.DirectoryService.DirectoryArgs
         {
@@ -48,12 +48,12 @@ class MyStack : Stack
             Size = "Small",
             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
             {
+                VpcId = mainVpc.Id,
                 SubnetIds = 
                 {
                     private_a.Id,
                     private_b.Id,
                 },
-                VpcId = mainVpc.Id,
             },
         });
         var mainWorkspaces_directoryDirectory = new Aws.Workspaces.Directory("mainWorkspaces/directoryDirectory", new Aws.Workspaces.DirectoryArgs
@@ -77,9 +77,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,17 +92,17 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewSubnet(ctx, "private_a", &ec2.SubnetArgs{
+			VpcId:            mainVpc.ID(),
 			AvailabilityZone: pulumi.String("us-east-1a"),
 			CidrBlock:        pulumi.String("10.0.0.0/24"),
-			VpcId:            mainVpc.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewSubnet(ctx, "private_b", &ec2.SubnetArgs{
+			VpcId:            mainVpc.ID(),
 			AvailabilityZone: pulumi.String("us-east-1b"),
 			CidrBlock:        pulumi.String("10.0.1.0/24"),
-			VpcId:            mainVpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -111,11 +111,11 @@ func main() {
 			Password: pulumi.String("#S1ncerely"),
 			Size:     pulumi.String("Small"),
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+				VpcId: mainVpc.ID(),
 				SubnetIds: pulumi.StringArray{
 					private_a.ID(),
 					private_b.ID(),
 				},
-				VpcId: mainVpc.ID(),
 			},
 		})
 		if err != nil {
@@ -145,22 +145,22 @@ import pulumi_aws as aws
 
 main_vpc = aws.ec2.Vpc("mainVpc", cidr_block="10.0.0.0/16")
 private_a = aws.ec2.Subnet("private-a",
+    vpc_id=main_vpc.id,
     availability_zone="us-east-1a",
-    cidr_block="10.0.0.0/24",
-    vpc_id=main_vpc.id)
+    cidr_block="10.0.0.0/24")
 private_b = aws.ec2.Subnet("private-b",
+    vpc_id=main_vpc.id,
     availability_zone="us-east-1b",
-    cidr_block="10.0.1.0/24",
-    vpc_id=main_vpc.id)
+    cidr_block="10.0.1.0/24")
 main_directory = aws.directoryservice.Directory("mainDirectory",
     password="#S1ncerely",
     size="Small",
     vpc_settings={
+        "vpc_id": main_vpc.id,
         "subnet_ids": [
             private_a.id,
             private_b.id,
         ],
-        "vpc_id": main_vpc.id,
     })
 main_workspaces_directory_directory = aws.workspaces.Directory("mainWorkspaces/directoryDirectory",
     directory_id=main_directory.id,
@@ -178,31 +178,29 @@ main_workspaces_directory_directory = aws.workspaces.Directory("mainWorkspaces/d
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const mainVpc = new aws.ec2.Vpc("main", {
-    cidrBlock: "10.0.0.0/16",
-});
+const mainVpc = new aws.ec2.Vpc("mainVpc", {cidrBlock: "10.0.0.0/16"});
 const private_a = new aws.ec2.Subnet("private-a", {
+    vpcId: mainVpc.id,
     availabilityZone: "us-east-1a",
     cidrBlock: "10.0.0.0/24",
-    vpcId: mainVpc.id,
 });
 const private_b = new aws.ec2.Subnet("private-b", {
+    vpcId: mainVpc.id,
     availabilityZone: "us-east-1b",
     cidrBlock: "10.0.1.0/24",
-    vpcId: mainVpc.id,
 });
-const mainDirectory = new aws.directoryservice.Directory("main", {
+const mainDirectory = new aws.directoryservice.Directory("mainDirectory", {
     password: "#S1ncerely",
     size: "Small",
     vpcSettings: {
+        vpcId: mainVpc.id,
         subnetIds: [
             private_a.id,
             private_b.id,
         ],
-        vpcId: mainVpc.id,
     },
 });
-const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
+const mainWorkspaces_directoryDirectory = new aws.workspaces.Directory("mainWorkspaces/directoryDirectory", {
     directoryId: mainDirectory.id,
     selfServicePermissions: {
         increaseVolumeSize: true,
@@ -229,7 +227,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Directory">NewDirectory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Directory">NewDirectory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -303,7 +301,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -323,7 +321,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -333,7 +331,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1092,7 +1090,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1816,7 +1814,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Inputs.DirectorySelfServicePermissionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.DirectorySelfServicePermissions.html">output</a> API doc for this type.

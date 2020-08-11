@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,13 +116,13 @@ example_vpn_connection = aws.ec2.VpnConnection("exampleVpnConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("example", {});
-const exampleCustomerGateway = new aws.ec2.CustomerGateway("example", {
-    bgpAsn: "65000",
+const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("exampleTransitGateway", {});
+const exampleCustomerGateway = new aws.ec2.CustomerGateway("exampleCustomerGateway", {
+    bgpAsn: 65000,
     ipAddress: "172.0.0.1",
     type: "ipsec.1",
 });
-const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
+const exampleVpnConnection = new aws.ec2.VpnConnection("exampleVpnConnection", {
     customerGatewayId: exampleCustomerGateway.id,
     transitGatewayId: exampleTransitGateway.id,
     type: exampleCustomerGateway.type,
@@ -157,10 +157,10 @@ class MyStack : Stack
         });
         var main = new Aws.Ec2.VpnConnection("main", new Aws.Ec2.VpnConnectionArgs
         {
-            CustomerGatewayId = customerGateway.Id,
-            StaticRoutesOnly = true,
-            Type = "ipsec.1",
             VpnGatewayId = vpnGateway.Id,
+            CustomerGatewayId = customerGateway.Id,
+            Type = "ipsec.1",
+            StaticRoutesOnly = true,
         });
     }
 
@@ -174,7 +174,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -201,10 +201,10 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewVpnConnection(ctx, "main", &ec2.VpnConnectionArgs{
-			CustomerGatewayId: customerGateway.ID(),
-			StaticRoutesOnly:  pulumi.Bool(true),
-			Type:              pulumi.String("ipsec.1"),
 			VpnGatewayId:      vpnGateway.ID(),
+			CustomerGatewayId: customerGateway.ID(),
+			Type:              pulumi.String("ipsec.1"),
+			StaticRoutesOnly:  pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -228,10 +228,10 @@ customer_gateway = aws.ec2.CustomerGateway("customerGateway",
     ip_address="172.0.0.1",
     type="ipsec.1")
 main = aws.ec2.VpnConnection("main",
+    vpn_gateway_id=vpn_gateway.id,
     customer_gateway_id=customer_gateway.id,
-    static_routes_only=True,
     type="ipsec.1",
-    vpn_gateway_id=vpn_gateway.id)
+    static_routes_only=True)
 ```
 
 {{% /example %}}
@@ -242,22 +242,18 @@ main = aws.ec2.VpnConnection("main",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const vpc = new aws.ec2.Vpc("vpc", {
-    cidrBlock: "10.0.0.0/16",
-});
-const vpnGateway = new aws.ec2.VpnGateway("vpn_gateway", {
-    vpcId: vpc.id,
-});
-const customerGateway = new aws.ec2.CustomerGateway("customer_gateway", {
-    bgpAsn: "65000",
+const vpc = new aws.ec2.Vpc("vpc", {cidrBlock: "10.0.0.0/16"});
+const vpnGateway = new aws.ec2.VpnGateway("vpnGateway", {vpcId: vpc.id});
+const customerGateway = new aws.ec2.CustomerGateway("customerGateway", {
+    bgpAsn: 65000,
     ipAddress: "172.0.0.1",
     type: "ipsec.1",
 });
 const main = new aws.ec2.VpnConnection("main", {
-    customerGatewayId: customerGateway.id,
-    staticRoutesOnly: true,
-    type: "ipsec.1",
     vpnGatewayId: vpnGateway.id,
+    customerGatewayId: customerGateway.id,
+    type: "ipsec.1",
+    staticRoutesOnly: true,
 });
 ```
 
@@ -279,7 +275,7 @@ const main = new aws.ec2.VpnConnection("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnection">NewVpnConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionArgs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnection">VpnConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnection">NewVpnConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionArgs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnection">VpnConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -353,7 +349,7 @@ const main = new aws.ec2.VpnConnection("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -373,7 +369,7 @@ const main = new aws.ec2.VpnConnection("main", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionArgs">VpnConnectionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionArgs">VpnConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -383,7 +379,7 @@ const main = new aws.ec2.VpnConnection("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1662,7 +1658,7 @@ Get an existing VpnConnection resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionState">VpnConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnection">VpnConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionState">VpnConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnection">VpnConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2906,7 +2902,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRouteTypeOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionRouteTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpnConnectionRoute.html">output</a> API doc for this type.
@@ -3072,7 +3068,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionVgwTelemetryOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpnConnectionVgwTelemetryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpnConnectionVgwTelemetry.html">output</a> API doc for this type.

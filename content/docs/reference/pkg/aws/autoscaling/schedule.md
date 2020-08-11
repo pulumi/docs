@@ -32,11 +32,11 @@ class MyStack : Stack
             {
                 "us-west-2a",
             },
-            ForceDelete = true,
-            HealthCheckGracePeriod = 300,
-            HealthCheckType = "ELB",
             MaxSize = 1,
             MinSize = 1,
+            HealthCheckGracePeriod = 300,
+            HealthCheckType = "ELB",
+            ForceDelete = true,
             TerminationPolicies = 
             {
                 "OldestInstance",
@@ -44,13 +44,13 @@ class MyStack : Stack
         });
         var foobarSchedule = new Aws.AutoScaling.Schedule("foobarSchedule", new Aws.AutoScaling.ScheduleArgs
         {
-            AutoscalingGroupName = foobarGroup.Name,
-            DesiredCapacity = 0,
-            EndTime = "2016-12-12T06:00:00Z",
-            MaxSize = 1,
-            MinSize = 0,
             ScheduledActionName = "foobar",
+            MinSize = 0,
+            MaxSize = 1,
+            DesiredCapacity = 0,
             StartTime = "2016-12-11T18:00:00Z",
+            EndTime = "2016-12-12T06:00:00Z",
+            AutoscalingGroupName = foobarGroup.Name,
         });
     }
 
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,11 +74,11 @@ func main() {
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-west-2a"),
 			},
-			ForceDelete:            pulumi.Bool(true),
-			HealthCheckGracePeriod: pulumi.Int(300),
-			HealthCheckType:        pulumi.String("ELB"),
 			MaxSize:                pulumi.Int(1),
 			MinSize:                pulumi.Int(1),
+			HealthCheckGracePeriod: pulumi.Int(300),
+			HealthCheckType:        pulumi.String("ELB"),
+			ForceDelete:            pulumi.Bool(true),
 			TerminationPolicies: pulumi.StringArray{
 				pulumi.String("OldestInstance"),
 			},
@@ -87,13 +87,13 @@ func main() {
 			return err
 		}
 		_, err = autoscaling.NewSchedule(ctx, "foobarSchedule", &autoscaling.ScheduleArgs{
-			AutoscalingGroupName: foobarGroup.Name,
-			DesiredCapacity:      pulumi.Int(0),
-			EndTime:              pulumi.String("2016-12-12T06:00:00Z"),
-			MaxSize:              pulumi.Int(1),
-			MinSize:              pulumi.Int(0),
 			ScheduledActionName:  pulumi.String("foobar"),
+			MinSize:              pulumi.Int(0),
+			MaxSize:              pulumi.Int(1),
+			DesiredCapacity:      pulumi.Int(0),
 			StartTime:            pulumi.String("2016-12-11T18:00:00Z"),
+			EndTime:              pulumi.String("2016-12-12T06:00:00Z"),
+			AutoscalingGroupName: foobarGroup.Name,
 		})
 		if err != nil {
 			return err
@@ -112,20 +112,20 @@ import pulumi_aws as aws
 
 foobar_group = aws.autoscaling.Group("foobarGroup",
     availability_zones=["us-west-2a"],
-    force_delete=True,
-    health_check_grace_period=300,
-    health_check_type="ELB",
     max_size=1,
     min_size=1,
+    health_check_grace_period=300,
+    health_check_type="ELB",
+    force_delete=True,
     termination_policies=["OldestInstance"])
 foobar_schedule = aws.autoscaling.Schedule("foobarSchedule",
-    autoscaling_group_name=foobar_group.name,
-    desired_capacity=0,
-    end_time="2016-12-12T06:00:00Z",
-    max_size=1,
-    min_size=0,
     scheduled_action_name="foobar",
-    start_time="2016-12-11T18:00:00Z")
+    min_size=0,
+    max_size=1,
+    desired_capacity=0,
+    start_time="2016-12-11T18:00:00Z",
+    end_time="2016-12-12T06:00:00Z",
+    autoscaling_group_name=foobar_group.name)
 ```
 
 {{% /example %}}
@@ -136,23 +136,23 @@ foobar_schedule = aws.autoscaling.Schedule("foobarSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foobarGroup = new aws.autoscaling.Group("foobar", {
+const foobarGroup = new aws.autoscaling.Group("foobarGroup", {
     availabilityZones: ["us-west-2a"],
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
     maxSize: 1,
     minSize: 1,
+    healthCheckGracePeriod: 300,
+    healthCheckType: "ELB",
+    forceDelete: true,
     terminationPolicies: ["OldestInstance"],
 });
-const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
-    autoscalingGroupName: foobarGroup.name,
-    desiredCapacity: 0,
-    endTime: "2016-12-12T06:00:00Z",
-    maxSize: 1,
-    minSize: 0,
+const foobarSchedule = new aws.autoscaling.Schedule("foobarSchedule", {
     scheduledActionName: "foobar",
+    minSize: 0,
+    maxSize: 1,
+    desiredCapacity: 0,
     startTime: "2016-12-11T18:00:00Z",
+    endTime: "2016-12-12T06:00:00Z",
+    autoscalingGroupName: foobarGroup.name,
 });
 ```
 
@@ -174,7 +174,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Schedule">NewSchedule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Schedule">NewSchedule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -248,7 +248,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -268,7 +268,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -877,7 +877,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchedule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#ScheduleState">ScheduleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchedule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#ScheduleState">ScheduleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

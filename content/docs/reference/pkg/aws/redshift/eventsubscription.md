@@ -38,11 +38,19 @@ class MyStack : Stack
             ClusterIdentifier = "default",
             DatabaseName = "default",
         });
+        // ...
         var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
         {
         });
         var defaultEventSubscription = new Aws.RedShift.EventSubscription("defaultEventSubscription", new Aws.RedShift.EventSubscriptionArgs
         {
+            SnsTopicArn = defaultTopic.Arn,
+            SourceType = "cluster",
+            SourceIds = 
+            {
+                defaultCluster.Id,
+            },
+            Severity = "INFO",
             EventCategories = 
             {
                 "configuration",
@@ -50,13 +58,6 @@ class MyStack : Stack
                 "monitoring",
                 "security",
             },
-            Severity = "INFO",
-            SnsTopicArn = defaultTopic.Arn,
-            SourceIds = 
-            {
-                defaultCluster.Id,
-            },
-            SourceType = "cluster",
             Tags = 
             {
                 { "Name", "default" },
@@ -74,8 +75,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,18 +94,18 @@ func main() {
 			return err
 		}
 		_, err = redshift.NewEventSubscription(ctx, "defaultEventSubscription", &redshift.EventSubscriptionArgs{
+			SnsTopicArn: defaultTopic.Arn,
+			SourceType:  pulumi.String("cluster"),
+			SourceIds: pulumi.StringArray{
+				defaultCluster.ID(),
+			},
+			Severity: pulumi.String("INFO"),
 			EventCategories: pulumi.StringArray{
 				pulumi.String("configuration"),
 				pulumi.String("management"),
 				pulumi.String("monitoring"),
 				pulumi.String("security"),
 			},
-			Severity:    pulumi.String("INFO"),
-			SnsTopicArn: defaultTopic.Arn,
-			SourceIds: pulumi.StringArray{
-				defaultCluster.ID(),
-			},
-			SourceType: pulumi.String("cluster"),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("default"),
 			},
@@ -127,18 +128,19 @@ import pulumi_aws as aws
 default_cluster = aws.redshift.Cluster("defaultCluster",
     cluster_identifier="default",
     database_name="default")
+# ...
 default_topic = aws.sns.Topic("defaultTopic")
 default_event_subscription = aws.redshift.EventSubscription("defaultEventSubscription",
+    sns_topic_arn=default_topic.arn,
+    source_type="cluster",
+    source_ids=[default_cluster.id],
+    severity="INFO",
     event_categories=[
         "configuration",
         "management",
         "monitoring",
         "security",
     ],
-    severity="INFO",
-    sns_topic_arn=default_topic.arn,
-    source_ids=[default_cluster.id],
-    source_type="cluster",
     tags={
         "Name": "default",
     })
@@ -152,22 +154,23 @@ default_event_subscription = aws.redshift.EventSubscription("defaultEventSubscri
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.redshift.Cluster("default", {
+const defaultCluster = new aws.redshift.Cluster("defaultCluster", {
     clusterIdentifier: "default",
     databaseName: "default",
 });
-const defaultTopic = new aws.sns.Topic("default", {});
-const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
+// ...
+const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+const defaultEventSubscription = new aws.redshift.EventSubscription("defaultEventSubscription", {
+    snsTopicArn: defaultTopic.arn,
+    sourceType: "cluster",
+    sourceIds: [defaultCluster.id],
+    severity: "INFO",
     eventCategories: [
         "configuration",
         "management",
         "monitoring",
         "security",
     ],
-    severity: "INFO",
-    snsTopicArn: defaultTopic.arn,
-    sourceIds: [defaultCluster.id],
-    sourceType: "cluster",
     tags: {
         Name: "default",
     },
@@ -192,7 +195,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -266,7 +269,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -286,7 +289,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +299,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -955,7 +958,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

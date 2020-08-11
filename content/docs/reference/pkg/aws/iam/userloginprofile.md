@@ -30,13 +30,13 @@ class MyStack : Stack
     {
         var exampleUser = new Aws.Iam.User("exampleUser", new Aws.Iam.UserArgs
         {
-            ForceDestroy = true,
             Path = "/",
+            ForceDestroy = true,
         });
         var exampleUserLoginProfile = new Aws.Iam.UserLoginProfile("exampleUserLoginProfile", new Aws.Iam.UserLoginProfileArgs
         {
-            PgpKey = "keybase:some_person_that_exists",
             User = exampleUser.Name,
+            PgpKey = "keybase:some_person_that_exists",
         });
         this.Password = exampleUserLoginProfile.EncryptedPassword;
     }
@@ -53,22 +53,22 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleUser, err := iam.NewUser(ctx, "exampleUser", &iam.UserArgs{
-			ForceDestroy: pulumi.Bool(true),
 			Path:         pulumi.String("/"),
+			ForceDestroy: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		exampleUserLoginProfile, err := iam.NewUserLoginProfile(ctx, "exampleUserLoginProfile", &iam.UserLoginProfileArgs{
-			PgpKey: pulumi.String("keybase:some_person_that_exists"),
 			User:   exampleUser.Name,
+			PgpKey: pulumi.String("keybase:some_person_that_exists"),
 		})
 		if err != nil {
 			return err
@@ -87,11 +87,11 @@ import pulumi
 import pulumi_aws as aws
 
 example_user = aws.iam.User("exampleUser",
-    force_destroy=True,
-    path="/")
+    path="/",
+    force_destroy=True)
 example_user_login_profile = aws.iam.UserLoginProfile("exampleUserLoginProfile",
-    pgp_key="keybase:some_person_that_exists",
-    user=example_user.name)
+    user=example_user.name,
+    pgp_key="keybase:some_person_that_exists")
 pulumi.export("password", example_user_login_profile.encrypted_password)
 ```
 
@@ -103,15 +103,14 @@ pulumi.export("password", example_user_login_profile.encrypted_password)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleUser = new aws.iam.User("example", {
-    forceDestroy: true,
+const exampleUser = new aws.iam.User("exampleUser", {
     path: "/",
+    forceDestroy: true,
 });
-const exampleUserLoginProfile = new aws.iam.UserLoginProfile("example", {
-    pgpKey: "keybase:some_person_that_exists",
+const exampleUserLoginProfile = new aws.iam.UserLoginProfile("exampleUserLoginProfile", {
     user: exampleUser.name,
+    pgpKey: "keybase:some_person_that_exists",
 });
-
 export const password = exampleUserLoginProfile.encryptedPassword;
 ```
 
@@ -133,7 +132,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfile">NewUserLoginProfile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfile">NewUserLoginProfile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -207,7 +206,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -227,7 +226,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -237,7 +236,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -688,7 +687,7 @@ Get an existing UserLoginProfile resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserLoginProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfileState">UserLoginProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserLoginProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfileState">UserLoginProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

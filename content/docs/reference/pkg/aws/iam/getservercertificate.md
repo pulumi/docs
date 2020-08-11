@@ -32,8 +32,8 @@ class MyStack : Stack
     {
         var my_domain = Output.Create(Aws.Iam.GetServerCertificate.InvokeAsync(new Aws.Iam.GetServerCertificateArgs
         {
-            Latest = true,
             NamePrefix = "my-domain.org",
+            Latest = true,
         }));
         var elb = new Aws.Elb.LoadBalancer("elb", new Aws.Elb.LoadBalancerArgs
         {
@@ -61,18 +61,18 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := true
-		opt1 := "my-domain.org"
+		opt0 := "my-domain.org"
+		opt1 := true
 		my_domain, err := iam.LookupServerCertificate(ctx, &iam.LookupServerCertificateArgs{
-			Latest:     &opt0,
-			NamePrefix: &opt1,
+			NamePrefix: &opt0,
+			Latest:     &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -103,8 +103,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-my_domain = aws.iam.get_server_certificate(latest=True,
-    name_prefix="my-domain.org")
+my_domain = aws.iam.get_server_certificate(name_prefix="my-domain.org",
+    latest=True)
 elb = aws.elb.LoadBalancer("elb", listeners=[{
     "instance_port": 8000,
     "instanceProtocol": "https",
@@ -122,19 +122,17 @@ elb = aws.elb.LoadBalancer("elb", listeners=[{
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const my_domain = pulumi.output(aws.iam.getServerCertificate({
-    latest: true,
+const my-domain = aws.iam.getServerCertificate({
     namePrefix: "my-domain.org",
-}, { async: true }));
-const elb = new aws.elb.LoadBalancer("elb", {
-    listeners: [{
-        instancePort: 8000,
-        instanceProtocol: "https",
-        lbPort: 443,
-        lbProtocol: "https",
-        sslCertificateId: my_domain.arn,
-    }],
+    latest: true,
 });
+const elb = new aws.elb.LoadBalancer("elb", {listeners: [{
+    instancePort: 8000,
+    instanceProtocol: "https",
+    lbPort: 443,
+    lbProtocol: "https",
+    sslCertificateId: my_domain.then(my_domain => my_domain.arn),
+}]});
 ```
 
 {{% /example %}}
@@ -158,7 +156,7 @@ const elb = new aws.elb.LoadBalancer("elb", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupServerCertificateArgs">LookupServerCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupServerCertificateResult">LookupServerCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#LookupServerCertificateArgs">LookupServerCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#LookupServerCertificateResult">LookupServerCertificateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServerCertificate` in the Go SDK.
 

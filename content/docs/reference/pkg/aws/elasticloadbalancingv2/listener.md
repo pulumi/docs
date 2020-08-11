@@ -31,24 +31,26 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = 443,
+            Protocol = "HTTPS",
+            SslPolicy = "ELBSecurityPolicy-2016-08",
             CertificateArn = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
             DefaultActions = 
             {
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
-                    TargetGroupArn = frontEndTargetGroup.Arn,
                     Type = "forward",
+                    TargetGroupArn = frontEndTargetGroup.Arn,
                 },
             },
-            LoadBalancerArn = frontEndLoadBalancer.Arn,
-            Port = 443,
-            Protocol = "HTTPS",
-            SslPolicy = "ELBSecurityPolicy-2016-08",
         });
     }
 
@@ -62,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,17 +79,17 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
-			CertificateArn: pulumi.String("arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"),
-			DefaultActions: lb.ListenerDefaultActionArray{
-				&lb.ListenerDefaultActionArgs{
-					TargetGroupArn: frontEndTargetGroup.Arn,
-					Type:           pulumi.String("forward"),
-				},
-			},
 			LoadBalancerArn: frontEndLoadBalancer.Arn,
 			Port:            pulumi.Int(443),
 			Protocol:        pulumi.String("HTTPS"),
 			SslPolicy:       pulumi.String("ELBSecurityPolicy-2016-08"),
+			CertificateArn:  pulumi.String("arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"),
+			DefaultActions: lb.ListenerDefaultActionArray{
+				&lb.ListenerDefaultActionArgs{
+					Type:           pulumi.String("forward"),
+					TargetGroupArn: frontEndTargetGroup.Arn,
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -105,17 +107,19 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener",
-    certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
-    default_actions=[{
-        "target_group_arn": front_end_target_group.arn,
-        "type": "forward",
-    }],
     load_balancer_arn=front_end_load_balancer.arn,
     port="443",
     protocol="HTTPS",
-    ssl_policy="ELBSecurityPolicy-2016-08")
+    ssl_policy="ELBSecurityPolicy-2016-08",
+    certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
+    default_actions=[{
+        "type": "forward",
+        "target_group_arn": front_end_target_group.arn,
+    }])
 ```
 
 {{% /example %}}
@@ -126,18 +130,20 @@ front_end_listener = aws.lb.Listener("frontEndListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndTargetGroup = new aws.lb.TargetGroup("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {
-    certificateArn: "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
-    defaultActions: [{
-        targetGroupArn: frontEndTargetGroup.arn,
-        type: "forward",
-    }],
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndTargetGroup = new aws.lb.TargetGroup("frontEndTargetGroup", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {
     loadBalancerArn: frontEndLoadBalancer.arn,
-    port: 443,
+    port: "443",
     protocol: "HTTPS",
     sslPolicy: "ELBSecurityPolicy-2016-08",
+    certificateArn: "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
+    defaultActions: [{
+        type: "forward",
+        targetGroupArn: frontEndTargetGroup.arn,
+    }],
 });
 ```
 
@@ -156,24 +162,25 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = 80,
+            Protocol = "HTTP",
             DefaultActions = 
             {
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
+                    Type = "redirect",
                     Redirect = new Aws.LB.Inputs.ListenerDefaultActionRedirectArgs
                     {
                         Port = "443",
                         Protocol = "HTTPS",
                         StatusCode = "HTTP_301",
                     },
-                    Type = "redirect",
                 },
             },
-            LoadBalancerArn = frontEndLoadBalancer.Arn,
-            Port = 80,
-            Protocol = "HTTP",
         });
     }
 
@@ -187,7 +194,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -198,19 +205,19 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+			LoadBalancerArn: frontEndLoadBalancer.Arn,
+			Port:            pulumi.Int(80),
+			Protocol:        pulumi.String("HTTP"),
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
+					Type: pulumi.String("redirect"),
 					Redirect: &lb.ListenerDefaultActionRedirectArgs{
 						Port:       pulumi.String("443"),
 						Protocol:   pulumi.String("HTTPS"),
 						StatusCode: pulumi.String("HTTP_301"),
 					},
-					Type: pulumi.String("redirect"),
 				},
 			},
-			LoadBalancerArn: frontEndLoadBalancer.Arn,
-			Port:            pulumi.Int(80),
-			Protocol:        pulumi.String("HTTP"),
 		})
 		if err != nil {
 			return err
@@ -228,18 +235,19 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener",
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP",
     default_actions=[{
+        "type": "redirect",
         "redirect": {
             "port": "443",
             "protocol": "HTTPS",
             "status_code": "HTTP_301",
         },
-        "type": "redirect",
-    }],
-    load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
-    protocol="HTTP")
+    }])
 ```
 
 {{% /example %}}
@@ -250,19 +258,20 @@ front_end_listener = aws.lb.Listener("frontEndListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {
+    loadBalancerArn: frontEndLoadBalancer.arn,
+    port: "80",
+    protocol: "HTTP",
     defaultActions: [{
+        type: "redirect",
         redirect: {
             port: "443",
             protocol: "HTTPS",
             statusCode: "HTTP_301",
         },
-        type: "redirect",
     }],
-    loadBalancerArn: frontEndLoadBalancer.arn,
-    port: 80,
-    protocol: "HTTP",
 });
 ```
 
@@ -281,24 +290,25 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = 80,
+            Protocol = "HTTP",
             DefaultActions = 
             {
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
+                    Type = "fixed-response",
                     FixedResponse = new Aws.LB.Inputs.ListenerDefaultActionFixedResponseArgs
                     {
                         ContentType = "text/plain",
                         MessageBody = "Fixed response content",
                         StatusCode = "200",
                     },
-                    Type = "fixed-response",
                 },
             },
-            LoadBalancerArn = frontEndLoadBalancer.Arn,
-            Port = 80,
-            Protocol = "HTTP",
         });
     }
 
@@ -312,7 +322,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -323,19 +333,19 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+			LoadBalancerArn: frontEndLoadBalancer.Arn,
+			Port:            pulumi.Int(80),
+			Protocol:        pulumi.String("HTTP"),
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
+					Type: pulumi.String("fixed-response"),
 					FixedResponse: &lb.ListenerDefaultActionFixedResponseArgs{
 						ContentType: pulumi.String("text/plain"),
 						MessageBody: pulumi.String("Fixed response content"),
 						StatusCode:  pulumi.String("200"),
 					},
-					Type: pulumi.String("fixed-response"),
 				},
 			},
-			LoadBalancerArn: frontEndLoadBalancer.Arn,
-			Port:            pulumi.Int(80),
-			Protocol:        pulumi.String("HTTP"),
 		})
 		if err != nil {
 			return err
@@ -353,18 +363,19 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener",
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP",
     default_actions=[{
+        "type": "fixed-response",
         "fixedResponse": {
             "content_type": "text/plain",
             "messageBody": "Fixed response content",
             "status_code": "200",
         },
-        "type": "fixed-response",
-    }],
-    load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
-    protocol="HTTP")
+    }])
 ```
 
 {{% /example %}}
@@ -375,19 +386,20 @@ front_end_listener = aws.lb.Listener("frontEndListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {
+    loadBalancerArn: frontEndLoadBalancer.arn,
+    port: "80",
+    protocol: "HTTP",
     defaultActions: [{
+        type: "fixed-response",
         fixedResponse: {
             contentType: "text/plain",
             messageBody: "Fixed response content",
             statusCode: "200",
         },
-        type: "fixed-response",
     }],
-    loadBalancerArn: frontEndLoadBalancer.arn,
-    port: 80,
-    protocol: "HTTP",
 });
 ```
 
@@ -406,41 +418,46 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
         {
         });
+        // ...
         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
         {
         });
+        // ...
         var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
         {
         });
+        // ...
         var domain = new Aws.Cognito.UserPoolDomain("domain", new Aws.Cognito.UserPoolDomainArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = 80,
+            Protocol = "HTTP",
             DefaultActions = 
             {
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
+                    Type = "authenticate-cognito",
                     AuthenticateCognito = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateCognitoArgs
                     {
                         UserPoolArn = pool.Arn,
                         UserPoolClientId = client.Id,
                         UserPoolDomain = domain.Domain,
                     },
-                    Type = "authenticate-cognito",
                 },
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
-                    TargetGroupArn = frontEndTargetGroup.Arn,
                     Type = "forward",
+                    TargetGroupArn = frontEndTargetGroup.Arn,
                 },
             },
-            LoadBalancerArn = frontEndLoadBalancer.Arn,
-            Port = 80,
-            Protocol = "HTTP",
         });
     }
 
@@ -454,8 +471,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -482,23 +499,23 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+			LoadBalancerArn: frontEndLoadBalancer.Arn,
+			Port:            pulumi.Int(80),
+			Protocol:        pulumi.String("HTTP"),
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
+					Type: pulumi.String("authenticate-cognito"),
 					AuthenticateCognito: &lb.ListenerDefaultActionAuthenticateCognitoArgs{
 						UserPoolArn:      pool.Arn,
 						UserPoolClientId: client.ID(),
 						UserPoolDomain:   domain.Domain,
 					},
-					Type: pulumi.String("authenticate-cognito"),
 				},
 				&lb.ListenerDefaultActionArgs{
-					TargetGroupArn: frontEndTargetGroup.Arn,
 					Type:           pulumi.String("forward"),
+					TargetGroupArn: frontEndTargetGroup.Arn,
 				},
 			},
-			LoadBalancerArn: frontEndLoadBalancer.Arn,
-			Port:            pulumi.Int(80),
-			Protocol:        pulumi.String("HTTP"),
 		})
 		if err != nil {
 			return err
@@ -516,28 +533,33 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+# ...
 pool = aws.cognito.UserPool("pool")
+# ...
 client = aws.cognito.UserPoolClient("client")
+# ...
 domain = aws.cognito.UserPoolDomain("domain")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener",
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP",
     default_actions=[
         {
+            "type": "authenticate-cognito",
             "authenticateCognito": {
                 "userPoolArn": pool.arn,
                 "userPoolClientId": client.id,
                 "userPoolDomain": domain.domain,
             },
-            "type": "authenticate-cognito",
         },
         {
-            "target_group_arn": front_end_target_group.arn,
             "type": "forward",
+            "target_group_arn": front_end_target_group.arn,
         },
-    ],
-    load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
-    protocol="HTTP")
+    ])
 ```
 
 {{% /example %}}
@@ -548,29 +570,34 @@ front_end_listener = aws.lb.Listener("frontEndListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndTargetGroup = new aws.lb.TargetGroup("front_end", {});
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndTargetGroup = new aws.lb.TargetGroup("frontEndTargetGroup", {});
+// ...
 const pool = new aws.cognito.UserPool("pool", {});
+// ...
 const client = new aws.cognito.UserPoolClient("client", {});
+// ...
 const domain = new aws.cognito.UserPoolDomain("domain", {});
-const frontEndListener = new aws.lb.Listener("front_end", {
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {
+    loadBalancerArn: frontEndLoadBalancer.arn,
+    port: "80",
+    protocol: "HTTP",
     defaultActions: [
         {
+            type: "authenticate-cognito",
             authenticateCognito: {
                 userPoolArn: pool.arn,
                 userPoolClientId: client.id,
                 userPoolDomain: domain.domain,
             },
-            type: "authenticate-cognito",
         },
         {
-            targetGroupArn: frontEndTargetGroup.arn,
             type: "forward",
+            targetGroupArn: frontEndTargetGroup.arn,
         },
     ],
-    loadBalancerArn: frontEndLoadBalancer.arn,
-    port: 80,
-    protocol: "HTTP",
 });
 ```
 
@@ -589,15 +616,21 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = 80,
+            Protocol = "HTTP",
             DefaultActions = 
             {
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
+                    Type = "authenticate-oidc",
                     AuthenticateOidc = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateOidcArgs
                     {
                         AuthorizationEndpoint = "https://example.com/authorization_endpoint",
@@ -607,17 +640,13 @@ class MyStack : Stack
                         TokenEndpoint = "https://example.com/token_endpoint",
                         UserInfoEndpoint = "https://example.com/user_info_endpoint",
                     },
-                    Type = "authenticate-oidc",
                 },
                 new Aws.LB.Inputs.ListenerDefaultActionArgs
                 {
-                    TargetGroupArn = frontEndTargetGroup.Arn,
                     Type = "forward",
+                    TargetGroupArn = frontEndTargetGroup.Arn,
                 },
             },
-            LoadBalancerArn = frontEndLoadBalancer.Arn,
-            Port = 80,
-            Protocol = "HTTP",
         });
     }
 
@@ -631,7 +660,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -646,8 +675,12 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListener(ctx, "frontEndListener", &lb.ListenerArgs{
+			LoadBalancerArn: frontEndLoadBalancer.Arn,
+			Port:            pulumi.Int(80),
+			Protocol:        pulumi.String("HTTP"),
 			DefaultActions: lb.ListenerDefaultActionArray{
 				&lb.ListenerDefaultActionArgs{
+					Type: pulumi.String("authenticate-oidc"),
 					AuthenticateOidc: &lb.ListenerDefaultActionAuthenticateOidcArgs{
 						AuthorizationEndpoint: pulumi.String("https://example.com/authorization_endpoint"),
 						ClientId:              pulumi.String("client_id"),
@@ -656,16 +689,12 @@ func main() {
 						TokenEndpoint:         pulumi.String("https://example.com/token_endpoint"),
 						UserInfoEndpoint:      pulumi.String("https://example.com/user_info_endpoint"),
 					},
-					Type: pulumi.String("authenticate-oidc"),
 				},
 				&lb.ListenerDefaultActionArgs{
-					TargetGroupArn: frontEndTargetGroup.Arn,
 					Type:           pulumi.String("forward"),
+					TargetGroupArn: frontEndTargetGroup.Arn,
 				},
 			},
-			LoadBalancerArn: frontEndLoadBalancer.Arn,
-			Port:            pulumi.Int(80),
-			Protocol:        pulumi.String("HTTP"),
 		})
 		if err != nil {
 			return err
@@ -683,10 +712,16 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener",
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP",
     default_actions=[
         {
+            "type": "authenticate-oidc",
             "authenticateOidc": {
                 "authorizationEndpoint": "https://example.com/authorization_endpoint",
                 "client_id": "client_id",
@@ -695,16 +730,12 @@ front_end_listener = aws.lb.Listener("frontEndListener",
                 "tokenEndpoint": "https://example.com/token_endpoint",
                 "userInfoEndpoint": "https://example.com/user_info_endpoint",
             },
-            "type": "authenticate-oidc",
         },
         {
-            "target_group_arn": front_end_target_group.arn,
             "type": "forward",
+            "target_group_arn": front_end_target_group.arn,
         },
-    ],
-    load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
-    protocol="HTTP")
+    ])
 ```
 
 {{% /example %}}
@@ -715,11 +746,17 @@ front_end_listener = aws.lb.Listener("frontEndListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndTargetGroup = new aws.lb.TargetGroup("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndTargetGroup = new aws.lb.TargetGroup("frontEndTargetGroup", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {
+    loadBalancerArn: frontEndLoadBalancer.arn,
+    port: "80",
+    protocol: "HTTP",
     defaultActions: [
         {
+            type: "authenticate-oidc",
             authenticateOidc: {
                 authorizationEndpoint: "https://example.com/authorization_endpoint",
                 clientId: "client_id",
@@ -728,16 +765,12 @@ const frontEndListener = new aws.lb.Listener("front_end", {
                 tokenEndpoint: "https://example.com/token_endpoint",
                 userInfoEndpoint: "https://example.com/user_info_endpoint",
             },
-            type: "authenticate-oidc",
         },
         {
-            targetGroupArn: frontEndTargetGroup.arn,
             type: "forward",
+            targetGroupArn: frontEndTargetGroup.arn,
         },
     ],
-    loadBalancerArn: frontEndLoadBalancer.arn,
-    port: 80,
-    protocol: "HTTP",
 });
 ```
 
@@ -760,7 +793,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#Listener">NewListener</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#Listener">NewListener</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -834,7 +867,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -854,7 +887,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerArgs">ListenerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerArgs">ListenerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -864,7 +897,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1359,7 +1392,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1819,7 +1852,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultAction.html">output</a> API doc for this type.
@@ -2205,7 +2238,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateCognitoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateCognitoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateCognitoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateCognitoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionAuthenticateCognitoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionAuthenticateCognito.html">output</a> API doc for this type.
@@ -2603,7 +2636,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateOidcOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionAuthenticateOidcOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionAuthenticateOidcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionAuthenticateOidc.html">output</a> API doc for this type.
@@ -3133,7 +3166,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionFixedResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionFixedResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionFixedResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionFixedResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionFixedResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionFixedResponse.html">output</a> API doc for this type.
@@ -3311,7 +3344,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionForwardArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionForward.html">output</a> API doc for this type.
@@ -3445,7 +3478,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardStickinessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardStickinessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionForwardStickinessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionForwardStickiness.html">output</a> API doc for this type.
@@ -3579,7 +3612,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardTargetGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionForwardTargetGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionForwardTargetGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionForwardTargetGroup.html">output</a> API doc for this type.
@@ -3713,7 +3746,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionRedirectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerDefaultActionRedirectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerDefaultActionRedirectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerDefaultActionRedirect.html">output</a> API doc for this type.

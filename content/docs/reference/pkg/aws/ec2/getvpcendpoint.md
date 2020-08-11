@@ -29,13 +29,13 @@ class MyStack : Stack
     {
         var s3 = Output.Create(Aws.Ec2.GetVpcEndpoint.InvokeAsync(new Aws.Ec2.GetVpcEndpointArgs
         {
-            ServiceName = "com.amazonaws.us-west-2.s3",
             VpcId = aws_vpc.Foo.Id,
+            ServiceName = "com.amazonaws.us-west-2.s3",
         }));
         var privateS3 = new Aws.Ec2.VpcEndpointRouteTableAssociation("privateS3", new Aws.Ec2.VpcEndpointRouteTableAssociationArgs
         {
-            RouteTableId = aws_route_table.Private.Id,
             VpcEndpointId = s3.Apply(s3 => s3.Id),
+            RouteTableId = aws_route_table.Private.Id,
         });
     }
 
@@ -49,24 +49,24 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "com.amazonaws.us-west-2.s3"
-		opt1 := aws_vpc.Foo.Id
+		opt0 := aws_vpc.Foo.Id
+		opt1 := "com.amazonaws.us-west-2.s3"
 		s3, err := ec2.LookupVpcEndpoint(ctx, &ec2.LookupVpcEndpointArgs{
-			ServiceName: &opt0,
-			VpcId:       &opt1,
+			VpcId:       &opt0,
+			ServiceName: &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewVpcEndpointRouteTableAssociation(ctx, "privateS3", &ec2.VpcEndpointRouteTableAssociationArgs{
-			RouteTableId:  pulumi.String(aws_route_table.Private.Id),
 			VpcEndpointId: pulumi.String(s3.Id),
+			RouteTableId:  pulumi.Any(aws_route_table.Private.Id),
 		})
 		if err != nil {
 			return err
@@ -83,11 +83,11 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-s3 = aws.ec2.get_vpc_endpoint(service_name="com.amazonaws.us-west-2.s3",
-    vpc_id=aws_vpc["foo"]["id"])
+s3 = aws.ec2.get_vpc_endpoint(vpc_id=aws_vpc["foo"]["id"],
+    service_name="com.amazonaws.us-west-2.s3")
 private_s3 = aws.ec2.VpcEndpointRouteTableAssociation("privateS3",
-    route_table_id=aws_route_table["private"]["id"],
-    vpc_endpoint_id=s3.id)
+    vpc_endpoint_id=s3.id,
+    route_table_id=aws_route_table["private"]["id"])
 ```
 
 {{% /example %}}
@@ -98,14 +98,13 @@ private_s3 = aws.ec2.VpcEndpointRouteTableAssociation("privateS3",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-// Declare the data source
-const s3 = aws_vpc_foo.id.apply(id => aws.ec2.getVpcEndpoint({
+const s3 = aws.ec2.getVpcEndpoint({
+    vpcId: aws_vpc.foo.id,
     serviceName: "com.amazonaws.us-west-2.s3",
-    vpcId: id,
-}, { async: true }));
-const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
-    routeTableId: aws_route_table_private.id,
-    vpcEndpointId: s3.id!,
+});
+const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
+    vpcEndpointId: s3.then(s3 => s3.id),
+    routeTableId: aws_route_table["private"].id,
 });
 ```
 
@@ -130,7 +129,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcEndpointArgs">LookupVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcEndpointResult">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcEndpointArgs">LookupVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcEndpointResult">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcEndpoint` in the Go SDK.
 
@@ -1313,7 +1312,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointDnsEntry">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointDnsEntry">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointDnsEntry.html">output</a> API doc for this type.
@@ -1447,7 +1446,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcEndpointFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointFilter.html">output</a> API doc for this type.

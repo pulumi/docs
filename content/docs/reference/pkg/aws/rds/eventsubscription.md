@@ -36,20 +36,26 @@ class MyStack : Stack
         var defaultInstance = new Aws.Rds.Instance("defaultInstance", new Aws.Rds.InstanceArgs
         {
             AllocatedStorage = 10,
-            DbSubnetGroupName = "my_database_subnet_group",
             Engine = "mysql",
             EngineVersion = "5.6.17",
             InstanceClass = "db.t2.micro",
             Name = "mydb",
-            ParameterGroupName = "default.mysql5.6",
-            Password = "bar",
             Username = "foo",
+            Password = "bar",
+            DbSubnetGroupName = "my_database_subnet_group",
+            ParameterGroupName = "default.mysql5.6",
         });
         var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
         {
         });
         var defaultEventSubscription = new Aws.Rds.EventSubscription("defaultEventSubscription", new Aws.Rds.EventSubscriptionArgs
         {
+            SnsTopic = defaultTopic.Arn,
+            SourceType = "db-instance",
+            SourceIds = 
+            {
+                defaultInstance.Id,
+            },
             EventCategories = 
             {
                 "availability",
@@ -63,12 +69,6 @@ class MyStack : Stack
                 "recovery",
                 "restoration",
             },
-            SnsTopic = defaultTopic.Arn,
-            SourceIds = 
-            {
-                defaultInstance.Id,
-            },
-            SourceType = "db-instance",
         });
     }
 
@@ -82,8 +82,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,14 +91,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultInstance, err := rds.NewInstance(ctx, "defaultInstance", &rds.InstanceArgs{
 			AllocatedStorage:   pulumi.Int(10),
-			DbSubnetGroupName:  pulumi.String("my_database_subnet_group"),
 			Engine:             pulumi.String("mysql"),
 			EngineVersion:      pulumi.String("5.6.17"),
 			InstanceClass:      pulumi.String("db.t2.micro"),
 			Name:               pulumi.String("mydb"),
-			ParameterGroupName: pulumi.String("default.mysql5.6"),
-			Password:           pulumi.String("bar"),
 			Username:           pulumi.String("foo"),
+			Password:           pulumi.String("bar"),
+			DbSubnetGroupName:  pulumi.String("my_database_subnet_group"),
+			ParameterGroupName: pulumi.String("default.mysql5.6"),
 		})
 		if err != nil {
 			return err
@@ -108,6 +108,11 @@ func main() {
 			return err
 		}
 		_, err = rds.NewEventSubscription(ctx, "defaultEventSubscription", &rds.EventSubscriptionArgs{
+			SnsTopic:   defaultTopic.Arn,
+			SourceType: pulumi.String("db-instance"),
+			SourceIds: pulumi.StringArray{
+				defaultInstance.ID(),
+			},
 			EventCategories: pulumi.StringArray{
 				pulumi.String("availability"),
 				pulumi.String("deletion"),
@@ -120,11 +125,6 @@ func main() {
 				pulumi.String("recovery"),
 				pulumi.String("restoration"),
 			},
-			SnsTopic: defaultTopic.Arn,
-			SourceIds: pulumi.StringArray{
-				defaultInstance.ID(),
-			},
-			SourceType: pulumi.String("db-instance"),
 		})
 		if err != nil {
 			return err
@@ -143,16 +143,19 @@ import pulumi_aws as aws
 
 default_instance = aws.rds.Instance("defaultInstance",
     allocated_storage=10,
-    db_subnet_group_name="my_database_subnet_group",
     engine="mysql",
     engine_version="5.6.17",
     instance_class="db.t2.micro",
     name="mydb",
-    parameter_group_name="default.mysql5.6",
+    username="foo",
     password="bar",
-    username="foo")
+    db_subnet_group_name="my_database_subnet_group",
+    parameter_group_name="default.mysql5.6")
 default_topic = aws.sns.Topic("defaultTopic")
 default_event_subscription = aws.rds.EventSubscription("defaultEventSubscription",
+    sns_topic=default_topic.arn,
+    source_type="db-instance",
+    source_ids=[default_instance.id],
     event_categories=[
         "availability",
         "deletion",
@@ -164,10 +167,7 @@ default_event_subscription = aws.rds.EventSubscription("defaultEventSubscription
         "read replica",
         "recovery",
         "restoration",
-    ],
-    sns_topic=default_topic.arn,
-    source_ids=[default_instance.id],
-    source_type="db-instance")
+    ])
 ```
 
 {{% /example %}}
@@ -178,19 +178,22 @@ default_event_subscription = aws.rds.EventSubscription("defaultEventSubscription
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultInstance = new aws.rds.Instance("default", {
+const defaultInstance = new aws.rds.Instance("defaultInstance", {
     allocatedStorage: 10,
-    dbSubnetGroupName: "my_database_subnet_group",
     engine: "mysql",
     engineVersion: "5.6.17",
     instanceClass: "db.t2.micro",
     name: "mydb",
-    parameterGroupName: "default.mysql5.6",
-    password: "bar",
     username: "foo",
+    password: "bar",
+    dbSubnetGroupName: "my_database_subnet_group",
+    parameterGroupName: "default.mysql5.6",
 });
-const defaultTopic = new aws.sns.Topic("default", {});
-const defaultEventSubscription = new aws.rds.EventSubscription("default", {
+const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+const defaultEventSubscription = new aws.rds.EventSubscription("defaultEventSubscription", {
+    snsTopic: defaultTopic.arn,
+    sourceType: "db-instance",
+    sourceIds: [defaultInstance.id],
     eventCategories: [
         "availability",
         "deletion",
@@ -203,9 +206,6 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
         "recovery",
         "restoration",
     ],
-    snsTopic: defaultTopic.arn,
-    sourceIds: [defaultInstance.id],
-    sourceType: "db-instance",
 });
 ```
 
@@ -227,7 +227,7 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscription">NewEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -301,7 +301,7 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +321,7 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscriptionArgs">EventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +331,7 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -950,7 +950,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

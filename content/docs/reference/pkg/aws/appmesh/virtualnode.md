@@ -81,14 +81,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
 				Backends: appmesh.VirtualNodeSpecBackendArray{
 					&appmesh.VirtualNodeSpecBackendArgs{
@@ -156,7 +156,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
     spec: {
         backends: [{
             virtualService: {
@@ -224,8 +224,8 @@ class MyStack : Stack
                         {
                             { "stack", "blue" },
                         },
-                        NamespaceName = example.Name,
                         ServiceName = "serviceb1",
+                        NamespaceName = example.Name,
                     },
                 },
             },
@@ -242,8 +242,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/servicediscovery"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -254,7 +254,7 @@ func main() {
 			return err
 		}
 		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
 				Backends: appmesh.VirtualNodeSpecBackendArray{
 					&appmesh.VirtualNodeSpecBackendArgs{
@@ -274,8 +274,8 @@ func main() {
 						Attributes: pulumi.StringMap{
 							"stack": pulumi.String("blue"),
 						},
-						NamespaceName: example.Name,
 						ServiceName:   pulumi.String("serviceb1"),
+						NamespaceName: example.Name,
 					},
 				},
 			},
@@ -315,8 +315,8 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
                 "attributes": {
                     "stack": "blue",
                 },
-                "namespaceName": example.name,
                 "service_name": "serviceb1",
+                "namespaceName": example.name,
             },
         },
     })
@@ -332,7 +332,7 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.servicediscovery.HttpNamespace("example", {});
 const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
     spec: {
         backends: [{
             virtualService: {
@@ -350,8 +350,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
                 attributes: {
                     stack: "blue",
                 },
-                namespaceName: example.name,
                 serviceName: "serviceb1",
+                namespaceName: example.name,
             },
         },
     },
@@ -387,19 +387,19 @@ class MyStack : Stack
                 },
                 Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
                 {
-                    HealthCheck = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs
-                    {
-                        HealthyThreshold = 2,
-                        IntervalMillis = 5000,
-                        Path = "/ping",
-                        Protocol = "http",
-                        TimeoutMillis = 2000,
-                        UnhealthyThreshold = 2,
-                    },
                     PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
                     {
                         Port = 8080,
                         Protocol = "http",
+                    },
+                    HealthCheck = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs
+                    {
+                        Protocol = "http",
+                        Path = "/ping",
+                        HealthyThreshold = 2,
+                        UnhealthyThreshold = 2,
+                        TimeoutMillis = 2000,
+                        IntervalMillis = 5000,
                     },
                 },
                 ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
@@ -423,14 +423,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
 				Backends: appmesh.VirtualNodeSpecBackendArray{
 					&appmesh.VirtualNodeSpecBackendArgs{
@@ -440,17 +440,17 @@ func main() {
 					},
 				},
 				Listener: &appmesh.VirtualNodeSpecListenerArgs{
-					HealthCheck: &appmesh.VirtualNodeSpecListenerHealthCheckArgs{
-						HealthyThreshold:   pulumi.Int(2),
-						IntervalMillis:     pulumi.Int(5000),
-						Path:               pulumi.String("/ping"),
-						Protocol:           pulumi.String("http"),
-						TimeoutMillis:      pulumi.Int(2000),
-						UnhealthyThreshold: pulumi.Int(2),
-					},
 					PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
 						Port:     pulumi.Int(8080),
 						Protocol: pulumi.String("http"),
+					},
+					HealthCheck: &appmesh.VirtualNodeSpecListenerHealthCheckArgs{
+						Protocol:           pulumi.String("http"),
+						Path:               pulumi.String("/ping"),
+						HealthyThreshold:   pulumi.Int(2),
+						UnhealthyThreshold: pulumi.Int(2),
+						TimeoutMillis:      pulumi.Int(2000),
+						IntervalMillis:     pulumi.Int(5000),
 					},
 				},
 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
@@ -484,17 +484,17 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
             },
         }],
         "listener": {
-            "health_check": {
-                "healthyThreshold": 2,
-                "intervalMillis": 5000,
-                "path": "/ping",
-                "protocol": "http",
-                "timeoutMillis": 2000,
-                "unhealthyThreshold": 2,
-            },
             "portMapping": {
                 "port": 8080,
                 "protocol": "http",
+            },
+            "health_check": {
+                "protocol": "http",
+                "path": "/ping",
+                "healthyThreshold": 2,
+                "unhealthyThreshold": 2,
+                "timeoutMillis": 2000,
+                "intervalMillis": 5000,
             },
         },
         "serviceDiscovery": {
@@ -514,7 +514,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
     spec: {
         backends: [{
             virtualService: {
@@ -522,17 +522,17 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             },
         }],
         listener: {
-            healthCheck: {
-                healthyThreshold: 2,
-                intervalMillis: 5000,
-                path: "/ping",
-                protocol: "http",
-                timeoutMillis: 2000,
-                unhealthyThreshold: 2,
-            },
             portMapping: {
                 port: 8080,
                 protocol: "http",
+            },
+            healthCheck: {
+                protocol: "http",
+                path: "/ping",
+                healthyThreshold: 2,
+                unhealthyThreshold: 2,
+                timeoutMillis: 2000,
+                intervalMillis: 5000,
             },
         },
         serviceDiscovery: {
@@ -579,6 +579,13 @@ class MyStack : Stack
                         Protocol = "http",
                     },
                 },
+                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+                {
+                    Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                    {
+                        Hostname = "serviceb.simpleapp.local",
+                    },
+                },
                 Logging = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingArgs
                 {
                     AccessLog = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogArgs
@@ -587,13 +594,6 @@ class MyStack : Stack
                         {
                             Path = "/dev/stdout",
                         },
-                    },
-                },
-                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
-                {
-                    Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
-                    {
-                        Hostname = "serviceb.simpleapp.local",
                     },
                 },
             },
@@ -610,14 +610,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
 				Backends: appmesh.VirtualNodeSpecBackendArray{
 					&appmesh.VirtualNodeSpecBackendArgs{
@@ -632,16 +632,16 @@ func main() {
 						Protocol: pulumi.String("http"),
 					},
 				},
+				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
+					Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
+						Hostname: pulumi.String("serviceb.simpleapp.local"),
+					},
+				},
 				Logging: &appmesh.VirtualNodeSpecLoggingArgs{
 					AccessLog: &appmesh.VirtualNodeSpecLoggingAccessLogArgs{
 						File: &appmesh.VirtualNodeSpecLoggingAccessLogFileArgs{
 							Path: pulumi.String("/dev/stdout"),
 						},
-					},
-				},
-				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
-					Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
-						Hostname: pulumi.String("serviceb.simpleapp.local"),
 					},
 				},
 			},
@@ -675,16 +675,16 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
                 "protocol": "http",
             },
         },
+        "serviceDiscovery": {
+            "dns": {
+                "hostname": "serviceb.simpleapp.local",
+            },
+        },
         "logging": {
             "accessLog": {
                 "file": {
                     "path": "/dev/stdout",
                 },
-            },
-        },
-        "serviceDiscovery": {
-            "dns": {
-                "hostname": "serviceb.simpleapp.local",
             },
         },
     })
@@ -699,7 +699,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
-    meshName: aws_appmesh_mesh_simple.id,
+    meshName: aws_appmesh_mesh.simple.id,
     spec: {
         backends: [{
             virtualService: {
@@ -712,16 +712,16 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
                 protocol: "http",
             },
         },
+        serviceDiscovery: {
+            dns: {
+                hostname: "serviceb.simpleapp.local",
+            },
+        },
         logging: {
             accessLog: {
                 file: {
                     path: "/dev/stdout",
                 },
-            },
-        },
-        serviceDiscovery: {
-            dns: {
-                hostname: "serviceb.simpleapp.local",
             },
         },
     },
@@ -746,7 +746,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNode">NewVirtualNode</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">NewVirtualNode</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -820,7 +820,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -840,7 +840,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -850,7 +850,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1345,7 +1345,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1805,7 +1805,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpec.html">output</a> API doc for this type.
@@ -2027,7 +2027,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackend.html">output</a> API doc for this type.
@@ -2117,7 +2117,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualService.html">output</a> API doc for this type.
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListener.html">output</a> API doc for this type.
@@ -2341,7 +2341,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerHealthCheck.html">output</a> API doc for this type.
@@ -2695,7 +2695,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerPortMapping.html">output</a> API doc for this type.
@@ -2829,7 +2829,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLogging.html">output</a> API doc for this type.
@@ -2919,7 +2919,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLoggingAccessLog.html">output</a> API doc for this type.
@@ -3009,7 +3009,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLoggingAccessLogFile.html">output</a> API doc for this type.
@@ -3099,7 +3099,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscovery.html">output</a> API doc for this type.
@@ -3233,7 +3233,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscoveryAwsCloudMap.html">output</a> API doc for this type.
@@ -3415,7 +3415,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscoveryDns.html">output</a> API doc for this type.

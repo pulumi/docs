@@ -37,21 +37,21 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
-                    Actions = 
-                    {
-                        "logs:PutSubscriptionFilter",
-                    },
                     Effect = "Allow",
                     Principals = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
                         {
+                            Type = "AWS",
                             Identifiers = 
                             {
                                 "123456789012",
                             },
-                            Type = "AWS",
                         },
+                    },
+                    Actions = 
+                    {
+                        "logs:PutSubscriptionFilter",
                     },
                     Resources = 
                     {
@@ -62,8 +62,8 @@ class MyStack : Stack
         }));
         var testDestinationPolicyLogDestinationPolicy = new Aws.CloudWatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy", new Aws.CloudWatch.LogDestinationPolicyArgs
         {
-            AccessPolicy = testDestinationPolicyPolicyDocument.Apply(testDestinationPolicyPolicyDocument => testDestinationPolicyPolicyDocument.Json),
             DestinationName = testDestination.Name,
+            AccessPolicy = testDestinationPolicyPolicyDocument.Apply(testDestinationPolicyPolicyDocument => testDestinationPolicyPolicyDocument.Json),
         });
     }
 
@@ -77,25 +77,25 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testDestination, err := cloudwatch.NewLogDestination(ctx, "testDestination", &cloudwatch.LogDestinationArgs{
-			RoleArn:   pulumi.String(aws_iam_role.Iam_for_cloudwatch.Arn),
-			TargetArn: pulumi.String(aws_kinesis_stream.Kinesis_for_cloudwatch.Arn),
+			RoleArn:   pulumi.Any(aws_iam_role.Iam_for_cloudwatch.Arn),
+			TargetArn: pulumi.Any(aws_kinesis_stream.Kinesis_for_cloudwatch.Arn),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cloudwatch.NewLogDestinationPolicy(ctx, "testDestinationPolicyLogDestinationPolicy", &cloudwatch.LogDestinationPolicyArgs{
+			DestinationName: testDestination.Name,
 			AccessPolicy: testDestinationPolicyPolicyDocument.ApplyT(func(testDestinationPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
 				return testDestinationPolicyPolicyDocument.Json, nil
 			}).(pulumi.StringOutput),
-			DestinationName: testDestination.Name,
 		})
 		if err != nil {
 			return err
@@ -116,17 +116,17 @@ test_destination = aws.cloudwatch.LogDestination("testDestination",
     role_arn=aws_iam_role["iam_for_cloudwatch"]["arn"],
     target_arn=aws_kinesis_stream["kinesis_for_cloudwatch"]["arn"])
 test_destination_policy_policy_document = test_destination.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
-    "actions": ["logs:PutSubscriptionFilter"],
     "effect": "Allow",
     "principals": [{
-        "identifiers": ["123456789012"],
         "type": "AWS",
+        "identifiers": ["123456789012"],
     }],
+    "actions": ["logs:PutSubscriptionFilter"],
     "resources": [arn],
 }]))
 test_destination_policy_log_destination_policy = aws.cloudwatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy",
-    access_policy=test_destination_policy_policy_document.json,
-    destination_name=test_destination.name)
+    destination_name=test_destination.name,
+    access_policy=test_destination_policy_policy_document.json)
 ```
 
 {{% /example %}}
@@ -137,24 +137,24 @@ test_destination_policy_log_destination_policy = aws.cloudwatch.LogDestinationPo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testDestination = new aws.cloudwatch.LogDestination("test_destination", {
-    roleArn: aws_iam_role_iam_for_cloudwatch.arn,
-    targetArn: aws_kinesis_stream_kinesis_for_cloudwatch.arn,
+const testDestination = new aws.cloudwatch.LogDestination("testDestination", {
+    roleArn: aws_iam_role.iam_for_cloudwatch.arn,
+    targetArn: aws_kinesis_stream.kinesis_for_cloudwatch.arn,
 });
 const testDestinationPolicyPolicyDocument = testDestination.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
-        actions: ["logs:PutSubscriptionFilter"],
         effect: "Allow",
         principals: [{
-            identifiers: ["123456789012"],
             type: "AWS",
+            identifiers: ["123456789012"],
         }],
+        actions: ["logs:PutSubscriptionFilter"],
         resources: [arn],
     }],
-}, { async: true }));
-const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinationPolicy("test_destination_policy", {
-    accessPolicy: testDestinationPolicyPolicyDocument.json,
+}));
+const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy", {
     destinationName: testDestination.name,
+    accessPolicy: testDestinationPolicyPolicyDocument.json,
 });
 ```
 
@@ -176,7 +176,7 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">NewLogDestinationPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicyArgs">LogDestinationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">LogDestinationPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">NewLogDestinationPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicyArgs">LogDestinationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">LogDestinationPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -250,7 +250,7 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -270,7 +270,7 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicyArgs">LogDestinationPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicyArgs">LogDestinationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -280,7 +280,7 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -555,7 +555,7 @@ Get an existing LogDestinationPolicy resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogDestinationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicyState">LogDestinationPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">LogDestinationPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogDestinationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicyState">LogDestinationPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogDestinationPolicy">LogDestinationPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
