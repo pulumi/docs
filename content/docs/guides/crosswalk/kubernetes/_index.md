@@ -85,7 +85,7 @@ success.
 Deploying [Pulumi Stacks][stack] in Kubernetes provides the capability to build
 out CI/CD and automation systems into your clusters, creating native support to manage your infrastructure alongside your Kubernetes workloads.
 
-[Get started][k8s-operator-cicd] with the Pulumi Kubernetes Operator in your CI/CD pipelines.
+[Get started][k8s-operator-cicd] with the Pulumi Kubernetes Operator in your [continuous delivery][pulumi-cd] pipelines.
 
 [k8s-operator]: https://github.com/pulumi/pulumi-kubernetes-operator
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
