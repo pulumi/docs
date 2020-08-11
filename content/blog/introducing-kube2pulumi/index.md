@@ -43,12 +43,12 @@ metadata:
 {{% choosable language typescript %}}
 Here, we choose TypeScript and select our YAML manifest.
 
-```
+```sh
 $ kube2pulumi typescript -f namespace.yaml
 Conversion successful! Generated File: namespace.ts
 ```
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as kubernetes from "@pulumi/kubernetes";
 
@@ -66,7 +66,7 @@ const fooNamespace = new kubernetes.core.v1.Namespace("fooNamespace", {
 {{% choosable language python %}}
 Here, we choose Python and select our YAML manifest.
 
-```
+```sh
 $ kube2pulumi python -f namespace.yaml
 Conversion successful! Generated File: `__main__.py`
 ```
@@ -88,7 +88,7 @@ foo_namespace = kubernetes.core.v1.Namespace("fooNamespace",
 {{% choosable language csharp %}}
 Here, we choose C# and select our YAML manifest.
 
-```
+```sh
 $ kube2pulumi csharp -f namespace.yaml
 Conversion successful! Generated File: Program.cs
 ```
@@ -120,7 +120,7 @@ class MyStack : Stack
 {{% choosable language go %}}
 Here, we choose Go and select our YAML manifest.
 
-```
+```sh
 $ kube2pulumi go -f namespace.yaml
 Conversion successful! Generated File: main.go
 ```
@@ -162,10 +162,12 @@ scenario. Our newly announced [Pulumi Kubernetes Operator] requires a few differ
 Account, Role, RoleBinding, and Deployment, totaling about 130 lines of YAML. Let's try converting that directory
 to some real code!
 
-```
+```sh
 $ ls operator
 operator.yaml  role.yaml  role_binding.yaml  service_account.yaml
+```
 
+```sh
 $ kube2pulumi typescript -d operator
 Conversion successful! Generated File: operator/main.ts
 ```
@@ -352,7 +354,7 @@ project. First, we define a variable for the operator name and then swap out har
 resource names. With these changes, it doesn't require any thought to keep these resources in sync! You can later decide
 to change the name in one place, and every other reference will update automatically as well.
 
-```ts
+```typescript
 const operatorName = "pulumi-kubernetes-operator";
 
 const pulumi_kubernetes_operatorServiceAccount = new kubernetes.core.v1.ServiceAccount("pulumi_kubernetes_operatorServiceAccount", {
