@@ -308,6 +308,10 @@ at your fingertips, you can stop worrying about YAML indentation, and get back t
 
 ## Learn More
 
+If you'd like to try `crd2pulumi` today, head to the [release page] and download the appropriate binary for your
+operating system. We will be adding support for .NET and Python in the coming weeks, and welcome your feedback in the
+meantime!
+
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
 source and free to use.
@@ -332,4 +336,5 @@ any questions, need support, or just want to say hello.
 [CustomResourceDefinition]: {{< relref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
 [real-world cert-manager example]: https://docs.cert-manager.io/en/release-0.7/tasks/issuing-certificates/index.html#creating-certificate-resources
+[release page]: https://github.com/pulumi/pulumi-kubernetes/releases/tag/crd2pulumi%2Fv1.0.0
 <!-- markdownlint-enable url -->
