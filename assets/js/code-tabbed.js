@@ -22,7 +22,8 @@
     function showLanguageItem(i) {
 
         $(".code-tabbed-content")
-            .scrollTop(0);
+            .scrollTop(0)
+            .scrollLeft(0);
 
         $(".code-tabbed-tab")
             .removeClass("active")

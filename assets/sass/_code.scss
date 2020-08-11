@@ -83,17 +83,25 @@ pre {
     @apply shadow-lg;
 
     .code-tabbed-tabs {
-        @apply bg-black shadow-md p-0 flex items-center;
+        @apply bg-black shadow-md p-0 flex items-center overflow-hidden;
 
         .code-tabbed-tab {
-            @apply w-40 p-2 my-0 flex items-center text-sm cursor-pointer;
+            @apply p-2 my-0 flex items-center text-sm cursor-pointer;
 
             .code-tabbed-tab-label {
-                @apply ml-2 font-body text-gray-500;
+                @apply mx-2 font-body text-gray-500;
             }
 
             .code-tabbed-tab-indicator {
-                @apply ml-4 mr-2 bg-orange-300 rounded-full h-2 w-2 invisible;
+                @apply ml-1 mr-2 bg-orange-300 rounded-full h-2 w-2 invisible hidden;
+
+                @screen md {
+                    @apply block;
+                }
+            }
+
+            @screen md {
+                @apply w-40;
             }
 
             &:hover {
@@ -116,10 +124,6 @@ pre {
 
             &:last-of-type {
                 @apply w-full;
-
-                // &:after {
-                //     content: " ";
-                // }
             }
         }
     }
@@ -130,7 +134,6 @@ pre {
 
         .code-tabbed-content-item {
             @apply hidden opacity-0 pointer-events-none;
-            // @include transition(opacity);
 
             .highlight {
                 @apply absolute;

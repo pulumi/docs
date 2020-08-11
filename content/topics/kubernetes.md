@@ -32,8 +32,6 @@ kubernetes_overview:
 
                 // Create a namespace.
                 const devNamespace = new kubernetes.core.v1.Namespace("devNamespace", {
-                    apiVersion: "v1",
-                    kind: "Namespace",
                     metadata: {
                         name: "dev",
                     },
@@ -55,8 +53,6 @@ kubernetes_overview:
                 # Create a namespace.
                 dev_namespace = kubernetes.core.v1.Namespace(
                     "devNamespace",
-                    api_version="v1",
-                    kind="Namespace",
                     metadata={
                         "name": "dev",
                     })
@@ -89,8 +85,6 @@ kubernetes_overview:
 
                             // Create a namespace.
                             ns, err := corev1.NewNamespace(ctx, "devNamespace", &corev1.NamespaceArgs{
-                                ApiVersion: pulumi.String("v1"),
-                                Kind:       pulumi.String("Namespace"),
                                 Metadata: &metav1.ObjectMetaArgs{
                                     Name: pulumi.String("dev"),
                                 },
@@ -129,8 +123,6 @@ kubernetes_overview:
                         // Create a namespace.
                         var devNamespace = new Kubernetes.Core.V1.Namespace("devNamespace", new Kubernetes.Types.Inputs.Core.V1.NamespaceArgs
                         {
-                            ApiVersion = "v1",
-                            Kind = "Namespace",
                             Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
                             {
                                 Name = "dev",
@@ -215,8 +207,8 @@ superpowers:
 detail_sections:
     - title: Continue using the tools you love
       description: |
-        Pulumi has first-class support for the Kubernetes tools you might already be working with such as
-        Helm, Kustomize, YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
+        Pulumi has first-class support for popular Kubernetes tools like Helm, Kustomize,
+        YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
       cta: Learn More
       cta_url: "/"
       items:
