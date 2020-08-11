@@ -1,6 +1,6 @@
 ---
 title: "Getting Started With Kubernetes: Day 2"
-date: 2020-08-09T15:28:27-05:00
+date: 2020-08-10
 meta_desc: "How to use infrastructure as code for day 2 maintenance tasks in Kubernetes."
 meta_image: day_2.png
 authors:
@@ -37,8 +37,6 @@ Pulumi also lets you keep an eye on your Kubernetes resources in real-time with 
 There are many [logging and monitoring](https://kubernetes.io/docs/tasks/debug-application-cluster/) solutions available for Kubernetes. In the previous section, we used Prometheus for generating metrics. Pulumi supports logging and monitoring tools to assist with cluster and application management.
 
 Kubernetes Cluster Services provide logging and monitoring at the cluster level or a subset of apps and workloads. Check out our tutorials for setting up logging and monitoring for Kubernetes on [AWS, Azure, and GCP]({{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}). The tutorial also shows how to configure [DataDog](https://www.datadoghq.com/) to log and monitor applications. The [example code](https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services/datadog-daemonset) is on Github.
-
-Pulumi also includes tools for managing resources. [Kubernetes Query](https://github.com/pulumi/pulumi-query-kubernetes) supports both batch and streaming queries that lets you ask questions such as, “How many Pods are in a Node?” Batch queries run to completion and return results based on the current configuration. Streaming queries continuously watch the cluster and take action based on criteria; for example, a streaming query can watch storage and warn you if the storage is 80% full. You can read about typical use cases on the Pulumi [blog]({{< relref "/blog/query-kubernetes" >}}).
 
 ## Summary
 
