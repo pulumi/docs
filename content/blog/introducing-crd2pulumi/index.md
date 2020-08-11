@@ -94,8 +94,10 @@ $ crd2pulumi nodejs crd.yaml
 import * as crontabs from "./crontabs"
 import * as pulumi from "@pulumi/pulumi"
 
-const cronTabDefinition = new crontabs.CronTabDefinition("my-crontab-definition")
+// Register the CronTab CRD.
+const cronTabDefinition = new crontabs.CronTabDefinition("my-crontab-definition");
 
+// Instantiate a CronTab resource.
 const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
 {
 	metadata: {
@@ -106,7 +108,7 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
     	image: "my-awesome-cron-image",
         replicas: 3,
 	}
-})
+});
 ```
 
 {{% /choosable %}}
@@ -140,6 +142,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+        // Register the CronTab CRD.
 		_, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
 			&yaml.ConfigFileArgs{
 				File: "crontabdefinition.yaml",
@@ -148,6 +151,7 @@ func main() {
 		if err != nil {
 			return err
 		}
+        // Instantiate a CronTab resource.
 		_, err = NewCronTab(ctx, "my-new-cron-object", &CronTabArgs{
 			Metadata: &v1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
@@ -177,7 +181,114 @@ unsupported argument, your IDE will immediately warn you!
 
 ## Cert Manager Example
 
-TODO
+Now let's examine a [real-world cert-manager example]. In this case, the CRD is over 1200 lines
+of YAML, but `crd2pulumi` generates a nice interface so that we don't have to worry about it. Here's
+what it looks like to create a `Certificate` CustomResource using our new types.
+
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
+```ts
+import * as certificates from "./certificates"
+
+// Register the Certificate CRD.
+new certificates.CertificateDefinition("certificate");
+
+// Instantiate a Certificate resource.
+new certificates.v1beta1.Certificate("example-cert", {
+    metadata: {
+        name: "example-com",
+    },
+    spec: {
+        secretName: "example-com-tls",
+        duration: "2160h",
+        renewBefore: "360h",
+        commonName: "example.com",
+        dnsNames: [
+            "example.com",
+            "www.example.com",
+        ],
+        issuerRef: {
+            name: "ca-issuer",
+            kind: "Issuer",
+        }
+    }
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+*Coming soon!*
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+*Coming soon!*
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+        // Register the Certificate CRD.
+		_, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
+			&yaml.ConfigFileArgs{
+				File: "certificate.yaml",
+			},
+		)
+		if err != nil {
+			return err
+		}
+
+        // Instantiate a Certificate resource.
+		_, err = NewCertificate(ctx, "example-cert", &CertificateArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("example-com"),
+			},
+			Spec: CertificateSpecArgs{
+				SecretName:  pulumi.String("example-com-tls"),
+				Duration:    pulumi.String("2160h"),
+				RenewBefore: pulumi.String("360h"),
+				CommonName:  pulumi.String("example.com"),
+				DnsNames: pulumi.StringArray{
+					pulumi.String("example.com"),
+					pulumi.String("www.example.com"),
+				},
+				IssuerRef: CertificateSpecIssuerRefArgs{
+					Name: pulumi.String("ca-issuer"),
+					Kind: pulumi.String("Issuer"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Kubernetes can be complex, but Pulumi gives you the tools you need to manage it successfully. With Pulumi superpowers
+at your fingertips, you can stop worrying about YAML indentation, and get back to solving the problems you care about!
 
 ## Learn More
 
@@ -204,4 +315,5 @@ any questions, need support, or just want to say hello.
 [CustomResource]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions/customresource" >}}
 [CustomResourceDefinition]: {{< relref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
+[real-world cert-manager example]: https://docs.cert-manager.io/en/release-0.7/tasks/issuing-certificates/index.html#creating-certificate-resources
 <!-- markdownlint-enable url -->
