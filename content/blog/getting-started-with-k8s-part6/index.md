@@ -16,7 +16,7 @@ Your application made it out of the dev stage, passed the testing stage, and arr
 
 Day 2 tasks fall into three categories. The first category is managing cluster components. It involves managing nodes, users and groups, ingress and egress, networking, storage, and [operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). The second category is changing cluster components, including setting optimal resource quota, reclaiming unneeded resources, scaling, tuning and updating clusters, and managing [CRDs](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions). The third category of tasks is cluster monitoring and [logging](https://kubernetes.io/docs/tasks/debug-application-cluster/), which involves collecting and analyzing metrics, and monitoring the health of the cluster.
 
-Anyone of these tasks in these three categories would require more coverage than a single article. Let’s take a look at how we can use infrastructure as code to address some of these tasks.
+Although this subject is much deeper than we can cover in a single article, let’s take a look at how infrastructure as code can simplify some of these tasks.
 
 ## Managing secrets
 
