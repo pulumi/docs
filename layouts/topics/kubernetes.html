@@ -4,7 +4,11 @@
             <div class="header-hero-item pr-20">
                 <h1>{{ .Params.hero.title }}</h1>
                 <p>{{ .Params.hero.body | markdownify }}</p>
-
+                <p>
+                    <a class="text-blue-300 hover:text-blue-200 font-bold" href="{{ relref . "/blog" }}">
+                        <span class="hover:mr-1">Check out what's new on the Pulumi blog.</span>
+                    </a>
+                </p>
                 <div class="flex items-center my-8">
                     <span title="Go">
                         <svg class="mr-2 h-5" viewBox="0 0 200 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +52,6 @@
                 </div>
             </div>
             <div class="header-hero-item">
-                <!-- TODO: Use side-by-side SVGs here. -->
                 <img src="/images/topics/kubernetes/kubernetes-super-pulumipus.png" alt="Kubernetes and Pulumi" />
             </div>
         </div>
@@ -57,6 +60,16 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
+
+    <nav class="nav-section-sticky">
+        <div class="container mx-auto uppercase">
+            <ul>
+                <li><a href="#superpowers">Superpowers</a></li>
+                <li><a href="#summit">Cloud Engineering Summit</a></li>
+                <li><a href="#contact">Request a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Customer logos -->
     <section id="customers" class="mb-16 px-4">
@@ -145,7 +158,7 @@
                         {{ end }}
                     </ul>
                     <div class="my-8">
-                        <a id="kubernetes-request-more-information" class="btn" href="#contact" track-click>
+                        <a id="kubernetes-request-more-information" class="btn block text-center md:inline-block" href="#contact" track-click>
                             {{ .cta }}
                         </a>
                     </div>
@@ -154,11 +167,11 @@
         </div>
     </section>
 
-    <section class="bg-white pt-24 px-4 justify-center" id="editions">
+    <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
         <div class="container mx-auto lg:flex justify-center">
             <ul class="flex flex-col md:flex-row md:flex-wrap items-start list-none p-0">
-                {{ range $i, $item := .Params.superpowers }}
-                    {{ $testHref := "/docs/get-started" }}
+                {{ $powers := .Params.superpowers }}
+                {{ range $i, $item := $powers }}
                     <li class="md:w-1/2 md:flex items-start mt-0">
                         <div class="text-center md:text-left mb-4 md:mb-0">
                             <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
@@ -178,7 +191,13 @@
                                     <span class="text-blue-400">&rarr;</span>
                                 </a>
                             </p>
-                            <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                            {{ $borderBottom := "border-b"}}
+                            {{ if eq $i (sub (len $powers) 2) }}
+                                {{ $borderBottom = "border-b md:border-none" }}
+                            {{ else if eq $i (sub (len $powers) 1) }}
+                                {{ $borderBottom = "border-none" }}
+                            {{ end }}
+                            <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
                         </div>
                     </li>
                 {{ end }}
@@ -186,48 +205,86 @@
         </div>
     </section>
 
+    <a id="summit"></a>
+    <svg width="100%" viewBox="0 0 1868 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1868 58H0V0C401.799 114.686 1778.83 -37.1767 1868 30V58Z" fill="#F7FAFC"/>
+    </svg>
+    <section class="bg-gray-100 pt-8 pb-16 px-4 mb-0">
+        <div class="container mx-auto max-w-2xl flex flex-col justify-center text-center">
+            <div class="inline-block flex items-center justify-center">
+                <span class="text-orange-500 bg-orange-100 p-4 rounded-full border-4 border-orange-300" style="fill: #ee975c;">
+                    <svg class="w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs>
+                        <path d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" class="fa-secondary sparkle secondary"/>
+                        <path d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z" class="fa-primary sparkle primary"/>
+                    </svg>
+                </span>
+            </div>
+            <h3 class="mt-4 text-4xl text-gray-800">
+                Cloud Engineering Summit
+            </h3>
+            <div class="">
+                <p class="leading-relaxed mt-6 mb-10 text-2xl text-gray-700">
+                    Here are a handful of interesting, handcrafted words for you to read
+                    before clicking the button just below, there.
+                </p>
+                <div>
+                    <a href="https://cloudengineeringsummit.com" rel="noopener noreferrer" target="_blank" class="btn group btn-orange py-3 px-4">
+                        <span>Register Now</span>
+                        <span class="inline-block pl-1 w-4 group-hover:pl-2 transition-all">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <svg width="100%" viewBox="0 0 1868 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-6.10352e-05 0H1868V58C1466.2 -56.6861 89.1693 95.1767 -6.10352e-05 28V0Z" fill="#F7FAFC"/>
+    </svg>
+
     {{ range $index, $item := .Params.detail_sections }}
-        {{ $bgColor := "bg-gray-100" }}
-        {{ $iconColor := "text-purple-100" }}
-        {{ $ctaButtonColor := "btn-orange" }}
-        {{ $detailsBlockOrder := "order-first" }}
+        {{ $bgColor := "bg-white" }}
+        {{ $iconColor := "text-orange-300" }}
+        {{ $ctaButtonColor := "btn-purple" }}
         {{ if not (modBool $index 2) }}
-            {{ $bgColor = "bg-white" }}
-            {{ $iconColor = "text-orange-300" }}
-            {{ $ctaButtonColor = "btn-purple" }}
-            {{ $detailsBlockOrder = "order-first" }}
+            {{ $bgColor = "bg-gray-100" }}
+            {{ $iconColor = "text-purple-100" }}
+            {{ $ctaButtonColor = "btn-orange" }}
         {{ end }}
 
-        <section id="teams" class="{{ $bgColor }} py-16 px-4">
+        <section id="teams" class="{{ $bgColor }} py-32 px-4">
             <div class="container md:mx-auto md:flex">
-                <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <div class="md:w-1/2 md:mr-8">
                     <h2>{{ $item.title }}</h2>
                     <p class="text-xl">{{ $item.description }}</p>
-                    <a class="inline-block btn btn-lg {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
+                    <a class="hidden md:inline-block btn block text-center md:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
-                <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
+                <div class="my-8 md:my-0 md:w-1/2 md:flex flex-wrap">
                     {{ range $i, $row := $item.items }}
                         <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                            <div class="flex items-start">
-                                <i class="w-12 mr-4 fas fa-2x {{ $row.icon }} {{ $iconColor }}"></i>
-                                <div>
-                                    <h5>{{ $row.title }}</h5>
-                                    <p class="text-sm">{{ $row.description }}</p>
+                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                <div class="md:w-1/4 text-center">
+                                    <i class="inline-block mb-2 md:mb-0 fas fa-2x {{ $row.icon }} {{ $iconColor }}"></i>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h5 class="text-center md:text-left">{{ $row.title }}</h5>
+                                    <p class="md:text-sm">{{ $row.description }}</p>
                                 </div>
                             </div>
                         </div>
                     {{ end }}
                 </div>
             </div>
+            <a class="btn block md:hidden text-center md:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
+                {{ $item.cta }}
+            </a>
         </section>
     {{ end }}
 
     {{ with .Params.video_section }}
         <div class="max-w-4xl my-24 mx-auto px-4">
             <div class="text-center mb-8">
-                <h3>{{ .title }}</h3>
+                <h2>{{ .title }}</h2>
                 <p class="my-0">
                     {{ .subtitle }}
                 </p>
@@ -246,37 +303,37 @@
     {{ end }}
 
     <section id="get-started" class="bg-gray-100 py-16 px-4 md:px-0">
-            <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
-                <div class="md:w3-/12 mr-4">
-                    <h2>Get Started with Pulumi</h2>
-                    <p class="text-xl">
-                        Use Pulumi's open source SDK to create, deploy, and manage infrastructure on any cloud.
-                    </p>
-                </div>
+        <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
+            <div class="md:w3-/12 mr-4">
+                <h2>Get Started with Pulumi</h2>
+                <p class="text-xl">
+                    Use Pulumi's open source SDK to create, deploy, and manage infrastructure on any cloud.
+                </p>
             </div>
-            <div class="container mx-auto max-w-5xl">
-                <div class="flex flex-row max-w-full">
-                    <a id="get-started-aws" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
-                        href="{{ relref . "/docs/get-started/aws" }}" track-click>
-                        <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
-                    </a>
-                    <a id="get-started-azure" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
-                        href="{{ relref . "/docs/get-started/azure" }}" track-click>
-                        <img class="h-10" src="/logos/tech/azure.svg" alt="Azure">
-                    </a>
-                </div>
-                <div class="flex flex-row max-w-full">
-                    <a id="get-started-gcp" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
-                        href="{{ relref . "/docs/get-started/gcp" }}" track-click>
-                        <img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud">
-                    </a>
-                    <a id="get-started-kubernetes" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
-                        href="{{ relref . "/docs/get-started/kubernetes" }}" track-click>
-                        <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
-                    </a>
-                </div>
+        </div>
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-row max-w-full">
+                <a id="get-started-aws" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                    href="{{ relref . "/docs/get-started/aws" }}" track-click>
+                    <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
+                </a>
+                <a id="get-started-azure" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                    href="{{ relref . "/docs/get-started/azure" }}" track-click>
+                    <img class="h-10" src="/logos/tech/azure.svg" alt="Azure">
+                </a>
             </div>
-        </section>
+            <div class="flex flex-row max-w-full">
+                <a id="get-started-gcp" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                    href="{{ relref . "/docs/get-started/gcp" }}" track-click>
+                    <img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud">
+                </a>
+                <a id="get-started-kubernetes" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                    href="{{ relref . "/docs/get-started/kubernetes" }}" track-click>
+                    <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section id="contact" class="bg-white mb-0 py-16 text-white px-4 md:px-0">
         <div class="container mx-auto max-w-5xl bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
@@ -307,7 +364,7 @@
                             {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id) }}
                         </div>
                         <p class="text-black text-right text-base">
-                            ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>Start Free Trial</a>
+                            ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>start a free trial</a>.
                         </p>
                     </div>
                 </div>
