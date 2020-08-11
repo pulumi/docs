@@ -188,6 +188,7 @@ what it looks like to create a `Certificate` CustomResource using our new types.
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
+
 ```ts
 import * as certificates from "./certificates"
 
