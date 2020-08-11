@@ -103,7 +103,7 @@ const example = pulumi.output(azure.network.getPublicIPs({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_public_i_ps(</span>allocation_type=None<span class="p">, </span>attached=None<span class="p">, </span>name_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_public_ips(</span>allocation_type=None<span class="p">, </span>attached=None<span class="p">, </span>name_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
