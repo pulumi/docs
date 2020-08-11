@@ -2,6 +2,12 @@
 
 set -o errexit -o pipefail
 
+# See if we have the requisite credentials. If not, we might be in a fork, so exit.
+if [ -z "${AWS_ACCESS_KEY_ID:-}" ] || [ -z "${AWS_SECRET_ACCESS_KEY:-}" ] || [ -z "${PULUMI_ACCESS_TOKEN:-}" ]; then
+    echo "Missing secret tokens, possibly due to a forked PR. Exiting."
+    exit
+fi
+
 # This script handles closed pull requests by finding all of their associated site-preview
 # buckets and deleting them.
 
