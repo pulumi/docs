@@ -142,6 +142,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+
 		// Register the CronTab CRD.
 		_, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
 			&yaml.ConfigFileArgs{
@@ -151,6 +152,7 @@ func main() {
 		if err != nil {
 			return err
 		}
+
 		// Instantiate a CronTab resource.
 		_, err = NewCronTab(ctx, "my-new-cron-object", &CronTabArgs{
 			Metadata: &v1.ObjectMetaArgs{
@@ -159,7 +161,7 @@ func main() {
 			Spec: CronTabSpecArgs{
 				CronSpec: pulumi.String("* * * * */5"),
 				Image:    pulumi.String("my-awesome-cron-image"),
-                Replicas: pulumi.IntPtr(3),
+				Replicas: pulumi.IntPtr(3),
 			},
 		})
 		if err != nil {
