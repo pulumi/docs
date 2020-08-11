@@ -8,20 +8,24 @@ meta_desc: Pulumi provides a cloud native programming model for Kubernetes deplo
 hero:
     title: Kubernetes Superpowers
     body: >
-        Pulumi is the modern platform to manage all of your cloud native infrastructure using familiar engineering tools and workflows. Avoid complex YAML by using your favorite programming languages and automate your deployments to Amazon EKS, Azure AKS, Google GKE, DigitalOcean DOKS, multi-cloud, hybrid and on-premises clusters with leading ecosystem integrations.
+        Pulumi is the modern platform to manage all of your cloud native infrastructure using familiar engineering
+        tools and workflows. Avoid complex YAML, JSON, and DSLs by using your favorite programming languages and
+        automate your deployments to  Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS),
+        Google Kubernetes Engine (GKE),  DigitalOcean Kubernetes (DOKS), multi-cloud, hybrid and on-premises clusters
+        with leading ecosystem integrations.
 
 video_section:
   title: Pulumi In Action
-  subtitle: Watch how easy it is to setup Amazon EKS in 5 minutes with Pulumi
+  subtitle: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
   youtube_video_id: yA40w1ryMu8
-  video_title: Get Started with Amazon EKS in 5 Minutes
+  video_title: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
 
 kubernetes_overview:
     title: Cloud Native Engineering with Pulumi
     description: |
         Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
 
-        With Pulumi you can:
+        With Pulumi for Kubernetes you can:
     ide:
         tabs:
             - title: index.ts
@@ -142,90 +146,90 @@ kubernetes_overview:
                     }
                 }
     list:
-        - Provision Kubernetes clusters on all major cloud providers.
+        - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-        - Automate deployments with CI/CD integrations for [Spinnaker](https://www.pulumi.com/blog/unlocking-spinnaker-with-pulumi/), [Octopus](https://www.pulumi.com/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](https://www.pulumi.com/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](https://www.pulumi.com/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](https://www.pulumi.com/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](https://www.pulumi.com/docs/guides/continuous-delivery/).
-        - Seamlessly manage cloud resources with the Pulumi Kubernetes Operator.
+        - Automate Kubernetes deployments with CI/CD integrations for [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
+        - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator).
 
     cta: REQUEST MORE INFORMATION
 
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/get-started/kubernetes"
       icon_type: cloud
       description: |
-        With support for all public clouds and dozens of popular infrastructure service
-        providers including private and hybrid clouds, Pulumi gives you the flexibility
-        to run your clusters and workloads where you want to.
+       With support for all public clouds and dozens of popular infrastructure service
+       providers including private and hybrid clouds, Pulumi gives you the flexibility
+       to run your Kubernetes clusters and workloads wherever you want to.
 
     - title: Reduce Provisioning Time
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/get-started/kubernetes"
       icon_type: provisioning
       description: |
-        With Pulumi you are able to take advantage of the features of programming
-        languages, helping you reduce boilerplate code and ultimately ship applications
-        and infrastructure faster with greater consistency.
+        With Pulumi you are able to take advantage of the features of programming languages,
+        helping you reduce boilerplate code and ultimately ship Kubernetes infrastructure and
+        applications faster with greater consistency.
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/guides/continuous-delivery"
       icon_type: delivery
       description: |
         You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
-        continuously deliver apps and infrastructure. Improve the velocity and visibility
-        into your deployments from simple to complex global environments.
+        continuously deliver Kubernetes infrastructure and applications. Improve the velocity
+        and visibility into your deployments from simple to complex global environments.
 
     - title: Smart Architecture
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/intro/concepts"
       icon_type: architecture
       description: |
-        YAML and templated DSLs force you to write the same boilerplate code over and over. Using
-        Pulumi allows you to codify those patterns and best practices so you can stop reinventing
-        the wheel and start inventing the platforms of the future.
+        YAML and templated DSLs force you to write the same boilerplate code over and over.
+        Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
+        you can stop reinventing the wheel and start inventing the platforms of the future.
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/guides/crossguard"
       icon_type: policy
       description: |
-        When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent
-        mistakes from being deployed. Enforce security, compliance, cost controls, and best
-        practices using policies defined in real languages.
+        When you enable Pulumi's Policy as Code feature, you instantly gain the power to
+        prevent mistakes from being deployed. Enforce security, compliance, cost controls,
+        and best practices using policies defined in modern languages.
 
-    - title: Reduce Deployment Anxiety
+    - title: Reduce Deployment Complexity
       cta: Learn more
-      cta_url: "/docs/get-started"
+      cta_url: "/docs/guides/testing"
       icon_type: testing
       description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
         of common tools, frameworks, and techniques to unit, integration, and property test your
-        infrastructure. Ensure your infrastructure is correct before and after deployment.
+        Kubernetes infrastructure. Ensure your infrastructure is correct before and after deployment.
 
 detail_sections:
     - title: Continue using the tools you love
       description: |
-        Pulumi has first-class support for popular Kubernetes tools like Helm, Kustomize,
+        Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
       cta: Learn More
       cta_url: "/"
       items:
-          - title: First Class Support
-            description: Easily make the best use of existing tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
+          - title: Everything In One Place
+            description: Easily make the best use of existing Kubernetes tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
             icon: fa-tools
 
           - title: Efficient Adoption
-            description: There’s no need to rewrite your existing configurations to get started with Pulumi. You can efficiently adopt existing resources to deploy your application to save time and effort.
+            description: There’s no need to rewrite your existing Kubernetes configurations to get started with Pulumi. You can efficiently adopt existing resources to deploy your application to save time and effort.
             icon: fa-book
 
           - title: Secrets Management
             description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
             icon: fa-key
 
-          - title: A Unified Toolchain
-            description: Use Pulumi to organize all your tools in one place and give you the flexibility to build sophisticated, cloud native stacks in one unified toolchain.
+          - title: Pulumi Kubernetes Operator
+            description: The Pulumi Kubernetes Operator gives you a Kubernetes controller that deploys cloud infrastructure for you and your team.
             icon: fa-people-carry
 
     - title: Kubernetes Best Practices with Pulumi Crosswalk
@@ -235,15 +239,15 @@ detail_sections:
       cta_url: "/docs/guides/crosswalk/kubernetes"
       items:
           - title: Day 2 and Beyond
-            description: By using Pulumi Crosswalk, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
+            description: By using Pulumi Crosswalk for Kubernetes, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
             icon: fa-sun
 
           - title: Accessible Kubernetes
-            description: Through Pulumi's Crosswalk library extensions, the authorship experience has improved to make the API more accessible and approachable to operators and developers of all backgrounds.
+            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make theKubernetes API more accessible and approachable to operators and developers of all backgrounds.
             icon: fa-users
 
           - title: Focus on Delivering Value
-            description: With Pulumi you'll focus more on functionality and business logic, and less on YAML formatting or learning bespoke domain-specific languages (DSLs).
+            description: With Pulumi you'll focus more on functionality and business logic of your Kubernetes infrastructure and applications, and less on low-level implementation details.
             icon: fa-chalkboard-teacher
 
           - title: Avoid Pitfalls
@@ -252,10 +256,10 @@ detail_sections:
 
 contact_us_form:
     section_id: contact
-    hubspot_form_id: 212ce93d-e081-4998-b14b-f26a974da4fb
+    hubspot_form_id: 30017141-1093-4b94-b0eb-20aabc08447b
     headline: Want a demo?
     quote:
-        title: See why the world’s best engineering teams use Pulumi to enable true collaboration between developers and operators.
+        title: See why the world’s best engineering teams use Pulumi + Kubernetes to enable true collaboration between developers and operators.
         name: Fernando Carletti
         name_title: Head of DevOps, Credijusto
         content: |
