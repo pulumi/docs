@@ -10,7 +10,7 @@ tags:
     - day 2
 ---
 
-Your application has left the dev stage, passed the testing stage, and is now in production. As a developer, you might think that you’ve passed your responsibilities to operators. However, DevOps is a collaborative effort between developers and operators to build and maintain applications using shared techniques and processes. Day 2 activities are tasks for maintaining and improving applications in production.
+Your application made it out of the dev stage, passed the testing stage, and arrived in production. As a developer, you might think that it's an ops problem now. However, DevOps is a collaborative effort between developers and operators to build and maintain applications using shared techniques and processes, often called "Day 2" activities.
 
 <!--more-->
 
