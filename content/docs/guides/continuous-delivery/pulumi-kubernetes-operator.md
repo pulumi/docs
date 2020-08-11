@@ -286,10 +286,15 @@ Stack CustomResources provide the following properties to configure the Stack up
 
 ### Extended Examples
 
-Check out how to [manage a Kubernetes Blue/Green Deployment][blue-green-demo]
-using the Operator and a Stack CR.
+Check out how to [manage a Kubernetes Blue/Green Deployment][blue-green-demo],
+or how to create [AWS S3 buckets][aws-s3-demo] using the Operator and a Stack CR.
+
+You can watch a demo below for a complete walkthrough.
+
+{{< youtube "nQZr3uquc-c" >}}
 
 [blue-green-demo]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green
+[aws-s3-demo]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/aws-s3
 
 ## Concurrency
 
