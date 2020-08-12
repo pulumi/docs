@@ -1,5 +1,5 @@
 ---
-title: "New Kubernetes Superpowers for Cloud Native Infrastructure"
+title: "Announcing New Pulumi Open Source Projects for Kubernetes"
 date: 2020-08-12
 meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment automation, cloud native ecosystem integration, and easy Pulumi adoption."
 meta_image: k8s-enhancements.png
@@ -9,11 +9,11 @@ tags:
     - kubernetes
 ---
 
-Today, we’re excited to [announce](https://info.pulumi.com/press-release/kubernetes) new features that advance Pulumi’s Kubernetes support.  These capabilities have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.
+Today, we’re excited to [announce](https://info.pulumi.com/press-release/kubernetes) several new open source projects that advance Pulumi’s Kubernetes support.  These projects and features have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.
 
 <!--more-->
 
-These new features include:
+These new capabilities include:
 
 * A new in-cluster **Pulumi Kubernetes Operator** provides a Kubernetes-native GitOps experience for managing infrastructure on any cloud or Kubernetes cluster.
 * A **`kube2pulumi`** tool for converting YAML manifests to Pulumi Python, TypeScript, Go, or .NET brings Pulumi’s software engineering capabilities for Infrastructure-as-Code to bear on complex Kubernetes applications.
@@ -174,7 +174,7 @@ func main() {
 
 And best of all - you can try it out yourself at [pulumi.com/kube2pulumi]({{< relref "/kube2pulumi" >}}) to see how easy it is to bring your Kubernetes YAML to Pulumi!
 
-![Kubernetes to Pulumi Converter](kube2pulumi.png)
+[![Kubernetes to Pulumi Converter](kube2pulumi.png)]({{< relref "/kube2pulumi" >}})
 
 ## Strongly-Typed Kubernetes CRDs
 
