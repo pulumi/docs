@@ -18,6 +18,7 @@ Explore the resources and functions of the route53 module in the AWS package.
     <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
     <li><a href="resolverrule" title="ResolverRule"><span class="symbol resource"></span>ResolverRule</a></li>
     <li><a href="resolverruleassociation" title="ResolverRuleAssociation"><span class="symbol resource"></span>ResolverRuleAssociation</a></li>
+    <li><a href="vpcassociationauthorization" title="VpcAssociationAuthorization"><span class="symbol resource"></span>VpcAssociationAuthorization</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
     <li><a href="zoneassociation" title="ZoneAssociation"><span class="symbol resource"></span>ZoneAssociation</a></li>
 </ul>
@@ -39,7 +40,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

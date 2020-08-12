@@ -953,7 +953,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1355,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1757,7 +1757,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2159,7 +2159,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3046,7 +3046,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3504,7 +3504,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3962,7 +3962,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4420,7 +4420,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    <dd>{{% md %}}ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -241,7 +241,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>group_names=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -312,16 +312,6 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupnames_csharp">
-<a href="#groupnames_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -384,16 +374,6 @@ to which the underlying AWS account has access, regardless of their state.
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="groupnames_go">
-<a href="#groupnames_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -462,16 +442,6 @@ to which the underlying AWS account has access, regardless of their state.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupnames_nodejs">
-<a href="#groupnames_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -537,16 +507,6 @@ to which the underlying AWS account has access, regardless of their state.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="group_names_python">
-<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -578,6 +538,16 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="groupnames_csharp">
+<a href="#groupnames_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -654,16 +624,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="groupnames_csharp">
-<a href="#groupnames_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -678,6 +638,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="groupnames_go">
+<a href="#groupnames_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -754,16 +724,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="groupnames_go">
-<a href="#groupnames_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -778,6 +738,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="groupnames_nodejs">
+<a href="#groupnames_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -854,16 +824,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="groupnames_nodejs">
-<a href="#groupnames_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -878,6 +838,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="group_names_python">
+<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -949,16 +919,6 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getavailabilityzonesfilter">List[Get<wbr>Availability<wbr>Zones<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="group_names_python">
-<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
