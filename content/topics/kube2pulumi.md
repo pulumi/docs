@@ -1,8 +1,8 @@
 ---
-title: Convert Your Kubernetes YAML to a Real Language
+title: Upgrade Your Kubernetes YAML to a Modern Language
 url: /kube2pulumi
 layout: kube2pulumi
-meta_desc: See what your Kubernetes YAML would look like in a real language thanks to Pulumi.
+meta_desc: See what your Kubernetes YAML would look like in a modern language thanks to Pulumi.
 form:
     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
 ---
