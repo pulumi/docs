@@ -116,6 +116,7 @@ $tab-font-size: 14px !default;
 .mdl-tabs__tab.language-tab,
 .mdl-tabs__tab.os-tab,
 .mdl-tabs__tab.cloud-tab,
+.mdl-tabs__tab.input-kind-tab,
 .mdl-tabs__tab.k8s-language-tab {
     cursor: pointer;
 }
@@ -139,6 +140,9 @@ $tab-font-size: 14px !default;
 .os-prologue-linux + *,
 .os-prologue-macos + *,
 .os-prologue-windows + *,
+.input-kind-inline + *,
+.input-kind-url + *,
+.input-kind-upload + *,
 .k8s-language-prologue-yaml + *,
 .k8s-language-prologue-typescript + *,
 .k8s-language-prologue-typescript-kx + *,
