@@ -9,7 +9,7 @@ tags:
     - kubernetes
 ---
 
-Today, we’re excited to [announce](https://info.pulumi.com/kubernetes) new features that advance Pulumi’s Kubernetes support.  These capabilities have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.
+Today, we’re excited to [announce](https://info.pulumi.com/press-release/kubernetes) new features that advance Pulumi’s Kubernetes support.  These capabilities have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.
 
 <!--more-->
 
