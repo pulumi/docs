@@ -78,3 +78,91 @@ pre {
 .line[data-delay] {
     @apply opacity-0;
 }
+
+.code-tabbed {
+    @apply shadow-lg;
+
+    .code-tabbed-tabs {
+        @apply bg-black shadow-md p-0 flex items-center overflow-hidden;
+
+        .code-tabbed-tab {
+            @apply p-2 my-0 flex items-center text-sm cursor-pointer;
+
+            .code-tabbed-tab-label {
+                @apply mx-2 font-body text-gray-500;
+            }
+
+            .code-tabbed-tab-indicator {
+                @apply ml-1 mr-2 bg-orange-300 rounded-full h-2 w-2 invisible hidden;
+
+                @screen md {
+                    @apply block;
+                }
+            }
+
+            @screen md {
+                @apply w-40;
+            }
+
+            &:hover {
+                .code-tabbed-tab-label {
+                    @apply text-gray-400;
+                }
+            }
+
+            &.active {
+                @apply bg-gray-900;
+
+                .code-tabbed-tab-label {
+                    @apply text-white;
+                }
+
+                .code-tabbed-tab-indicator {
+                    @apply visible;
+                }
+            }
+
+            &:last-of-type {
+                @apply w-full;
+            }
+        }
+    }
+
+    .code-tabbed-content {
+        height: 480px;
+        @apply bg-gray-900 overflow-auto relative p-4 text-sm;
+
+        .code-tabbed-content-item {
+            @apply hidden opacity-0 pointer-events-none;
+
+            .highlight {
+                @apply absolute;
+
+                top: 16px;
+                right: 16px;
+                bottom: 16px;
+                left: 16px;
+
+                pre {
+                    @apply p-0 border-none shadow-none overflow-visible;
+
+                    code {
+                        @apply text-sm;
+                    }
+                }
+
+                .copy-button-container {
+                    display: none;
+                }
+            }
+
+            &.active {
+                @apply pointer-events-auto block opacity-100;
+            }
+        }
+    }
+
+    .code-tabbed-status {
+        @apply h-3 bg-blue-800 rounded-b;
+    }
+}
