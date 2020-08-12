@@ -35,10 +35,10 @@ The operator is composed of:
 
 - A ServiceAccount for identity,
 - A Role and RoleBinding to the ServiceAccount for RBAC, and
-- A Deployment to manage the controler.
+- A Deployment to manage the controller.
 
 To create the operator, choose an installation preference using Pulumi
-with a supported programming language, or `kubectl` with YAML.
+with a supported programming language or `kubectl` with YAML.
 
 - [Installing the Operator with Pulumi in Typescript, Python, C#, and Go][use-pulumi]
 - [Installing the Operator with kubectl][use-kubectl]
