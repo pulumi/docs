@@ -45,7 +45,7 @@ Maintaining a Kubernetes cluster and modern applications can be varied and compl
 Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles. If some concepts or terminology are unfamiliar, I encourage reading the earlier articles:
 
 - [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- [Basic application deployment]({{{< relref "/blog/getting-started-with-k8s-part2" >}})
+- [Basic application deployment]({{< relref "/blog/getting-started-with-k8s-part2" >}})
 - [Advance application deployment and Helm charts]({{< relref "/blog/getting-started-with-k8s-part3" >}})
 - [Stateful applications]({{< relref "/blog/getting-started-with-k8s-part4" >}})
 - [Networking]({{< relref "/blog/getting-started-with-k8s-part5" >}})
