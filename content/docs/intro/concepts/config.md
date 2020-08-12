@@ -110,7 +110,7 @@ console.log(`Password: ${config.require("dbPassword")}`);
 ```python
 import pulumi
 config = pulumi.Config()
-print('Password: %s'.format(config.require('dbPassword')))
+print('Password: {}'.format(config.require('dbPassword')))
 ```
 
 {{% /choosable %}}

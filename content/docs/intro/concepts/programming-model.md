@@ -502,7 +502,7 @@ let role = new aws.iam.Role("my-role", {
 
 ```python
 role = iam.Role('my-role', {
-    name='my-role-%s-%s'.format(pulumi.get_project(), pulumi.get_stack())
+    name='my-role-{}-{}'.format(pulumi.get_project(), pulumi.get_stack())
 }, opts=ResourceOptions(delete_before_replace=True))
 ```
 
