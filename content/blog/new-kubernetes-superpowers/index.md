@@ -288,6 +288,7 @@ func main() {
 {{% /choosable %}}
 
 {{< /chooser >}}
+
 ## OPA support in Pulumi CrossGuard Policy-as-Code
 
 Pulumi’s [CrossGuard](https://www.pulumi.com/docs/guides/crossguard/) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
