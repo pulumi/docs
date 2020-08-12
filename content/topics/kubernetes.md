@@ -251,7 +251,7 @@ detail_sections:
             icon: fa-chalkboard-teacher
 
           - title: Avoid Pitfalls
-            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the cluster, it’s workloads, and underlying resources.
+            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the cluster, its workloads, and underlying resources.
             icon: fa-pager
 
 contact_us_form:
