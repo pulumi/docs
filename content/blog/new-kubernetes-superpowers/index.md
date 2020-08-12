@@ -178,11 +178,19 @@ Today’s launch of the [`crd2pulumi`](https://github.com/pulumi/pulumi-kubernet
 
 For example, the commonly used [cert-manager](https://cert-manager.io/docs/installation/kubernetes/) CRD extends Kubernetes with the ability to easily configure Certificate Authorities and request certificates. After generating API wrappers with `crd2pulumi`, users can interact with the Cert Manager API from code:
 
-<!-- TODO: Replace with an IDE screenshot to highlight IDE tooling and/or lang chooser. -->
+![IDE type checking](ide-hint.png)
 
-```ts
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
 import * as certificates from "./certificates"
 
+// Register the Certificate CRD.
+new certificates.CertificateDefinition("certificate");
+
+// Instantiate a Certificate resource.
 new certificates.v1beta1.Certificate("example-cert", {
     metadata: {
         name: "example-com",
@@ -204,6 +212,82 @@ new certificates.v1beta1.Certificate("example-cert", {
 });
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+{{% notes type="info" %}}
+Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!
+{{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+{{% notes type="info" %}}
+Coming soon!
+{{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	certv1b1 "goexample/certificates/v1beta1"
+
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		// Register the Certificate CRD.
+        _, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
+			&yaml.ConfigFileArgs{
+				File: "certificate.yaml",
+			},
+		)
+		if err != nil {
+			return err
+		}
+
+		// Instantiate a Certificate resource.
+        _, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("example-com"),
+			},
+			Spec: certv1b1.CertificateSpecArgs{
+				SecretName:  pulumi.String("example-com-tls"),
+				Duration:    pulumi.String("2160h"),
+				RenewBefore: pulumi.String("360h"),
+				CommonName:  pulumi.String("example.com"),
+				DnsNames: pulumi.StringArray{
+					pulumi.String("example.com"),
+					pulumi.String("www.example.com"),
+				},
+				IssuerRef: certv1b1.CertificateSpecIssuerRefArgs{
+					Name: pulumi.String("ca-issuer"),
+					Kind: pulumi.String("Issuer"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 ## OPA support in Pulumi CrossGuard Policy-as-Code
 
 Pulumi’s [CrossGuard](https://www.pulumi.com/docs/guides/crossguard/) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
