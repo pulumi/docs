@@ -1,7 +1,6 @@
 ---
 title: "Introducing crd2pulumi: Typed CustomResources for Kubernetes"
 date: 2020-08-12
-draft: true
 meta_desc: Generate Kubernetes CustomResource types in TypeScript, Python, C#, and Go.
 meta_image: crd.png
 authors:
