@@ -1556,7 +1556,7 @@ listed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Like `principals` except gives resources that
+    <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
 {{% /md %}}</dd>
 
@@ -1582,7 +1582,7 @@ does *not* apply to. Used to apply a policy statement to all resources
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
-specifying a resource (or resource pattern) to which this statement applies.
+specifying a principal (or principal pattern) to which this statement applies.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1673,7 +1673,7 @@ listed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></span>
     </dt>
-    <dd>{{% md %}}Like `principals` except gives resources that
+    <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
 {{% /md %}}</dd>
 
@@ -1699,7 +1699,7 @@ does *not* apply to. Used to apply a policy statement to all resources
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
-specifying a resource (or resource pattern) to which this statement applies.
+specifying a principal (or principal pattern) to which this statement applies.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1790,7 +1790,7 @@ listed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]</a></span>
     </dt>
-    <dd>{{% md %}}Like `principals` except gives resources that
+    <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
 {{% /md %}}</dd>
 
@@ -1816,7 +1816,7 @@ does *not* apply to. Used to apply a policy statement to all resources
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
-specifying a resource (or resource pattern) to which this statement applies.
+specifying a principal (or principal pattern) to which this statement applies.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1907,7 +1907,7 @@ listed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal]</a></span>
     </dt>
-    <dd>{{% md %}}Like `principals` except gives resources that
+    <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
 {{% /md %}}</dd>
 
@@ -1933,7 +1933,7 @@ does *not* apply to. Used to apply a policy statement to all resources
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
-specifying a resource (or resource pattern) to which this statement applies.
+specifying a principal (or principal pattern) to which this statement applies.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

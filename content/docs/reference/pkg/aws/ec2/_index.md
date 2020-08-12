@@ -110,6 +110,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getroutetables" title="GetRouteTables"><span class="symbol function"></span>GetRouteTables</a></li>
     <li><a href="getsecuritygroup" title="GetSecurityGroup"><span class="symbol function"></span>GetSecurityGroup</a></li>
     <li><a href="getsecuritygroups" title="GetSecurityGroups"><span class="symbol function"></span>GetSecurityGroups</a></li>
+    <li><a href="getspotprice" title="GetSpotPrice"><span class="symbol function"></span>GetSpotPrice</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
     <li><a href="getsubnetids" title="GetSubnetIds"><span class="symbol function"></span>GetSubnetIds</a></li>
     <li><a href="getvpc" title="GetVpc"><span class="symbol function"></span>GetVpc</a></li>
@@ -130,7 +131,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

@@ -130,6 +130,118 @@ const example = new aws.lb.LoadBalancer("example", {
 
 {{% /example %}}
 
+### Specifying private IP addresses for an internal-facing load balancer
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.LB.LoadBalancer("example", new Aws.LB.LoadBalancerArgs
+        {
+            LoadBalancerType = "network",
+            SubnetMappings = 
+            {
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    PrivateIpv4Address = "10.0.1.15",
+                    SubnetId = aws_subnet.Example1.Id,
+                },
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    PrivateIpv4Address = "10.0.2.15",
+                    SubnetId = aws_subnet.Example2.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lb.NewLoadBalancer(ctx, "example", &lb.LoadBalancerArgs{
+			LoadBalancerType: pulumi.String("network"),
+			SubnetMappings: lb.LoadBalancerSubnetMappingArray{
+				&lb.LoadBalancerSubnetMappingArgs{
+					PrivateIpv4Address: pulumi.String("10.0.1.15"),
+					SubnetId:           pulumi.Any(aws_subnet.Example1.Id),
+				},
+				&lb.LoadBalancerSubnetMappingArgs{
+					PrivateIpv4Address: pulumi.String("10.0.2.15"),
+					SubnetId:           pulumi.Any(aws_subnet.Example2.Id),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lb.LoadBalancer("example",
+    load_balancer_type="network",
+    subnet_mappings=[
+        {
+            "privateIpv4Address": "10.0.1.15",
+            "subnet_id": aws_subnet["example1"]["id"],
+        },
+        {
+            "privateIpv4Address": "10.0.2.15",
+            "subnet_id": aws_subnet["example2"]["id"],
+        },
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lb.LoadBalancer("example", {
+    loadBalancerType: "network",
+    subnetMappings: [
+        {
+            privateIpv4Address: "10.0.1.15",
+            subnetId: aws_subnet_example1.id,
+        },
+        {
+            privateIpv4Address: "10.0.2.15",
+            subnetId: aws_subnet_example2.id,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favor of aws.lb.LoadBalancer{{% /md %}}</p>
 
@@ -2602,6 +2714,17 @@ for load balancers of type `network` will force a recreation of the resource.
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv4address_csharp">
+<a href="#privateipv4address_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2629,6 +2752,17 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv4address_go">
+<a href="#privateipv4address_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
 {{% /md %}}</dd>
 
 </dl>
@@ -2660,6 +2794,17 @@ for load balancers of type `network` will force a recreation of the resource.
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv4address_nodejs">
+<a href="#privateipv4address_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2687,6 +2832,17 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv4address_python">
+<a href="#privateipv4address_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
 {{% /md %}}</dd>
 
 </dl>
