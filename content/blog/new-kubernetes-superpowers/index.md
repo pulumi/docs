@@ -307,7 +307,7 @@ And as part of Pulumi’s support for organizational enforcement of policy, OPA-
 
 ## Helm 3 and Kustomize
 
-Pulumi's Kubernetes support has long included support for both defining Kubernetes resources directly in your Pulumi program, as well as using Pulumi to deploy Kubernetes resources define in existing YAML or Helm. With a wealth of existing YAML and Helm content out in the ecosystem, these features have been used heavily by cloud engineering teams to deploy critical Kubernetes platform services and application logic into their Kuberentes clusters.  
+Pulumi's Kubernetes support has long included support for both defining Kubernetes resources directly in your Pulumi program, as well as using Pulumi to deploy Kubernetes resources from existing YAML or Helm. With a wealth of existing YAML and Helm content out in the ecosystem, these features have been used heavily by cloud engineering teams to deploy critical Kubernetes platform services and application logic into their Kubernetes clusters.  
 
 Over the last few months, we've extended this support in two key ways. We added support for Helm 3, giving Pulumi programs access to the new generation of Helm Charts. And we [added support for Kustomize]({{< relref "/blog/announcing-kustomize-support" >}}), so that the same `kustomizations` that are supported by `kubectl` can also be deployed natively with Pulumi. Together these two enhancement ensure that Pulumi users have full access to the incredible ecosystem of content available for Kubernetes.
 
