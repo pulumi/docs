@@ -35,13 +35,13 @@ Kubernetes has been at the center of many Pulumi-enabled cloud modernization pro
 
 ## Pulumi Kubernetes Operator
 
-Pulumi integrates into [more than a dozen CI/CD and delivery systems](https://www.pulumi.com/docs/guides/continuous-delivery/), automating the delivery of cloud infrastructure changes to AWS, Azure, GCP, Kubernetes, and more. This includes traditional CI tools like [Jenkins](https://www.pulumi.com/docs/guides/continuous-delivery/jenkins/), managed CI/CD platforms like Azure DevOps, and cloud native continuous delivery platforms like [Spinnaker](https://www.pulumi.com/docs/guides/continuous-delivery/spinnaker/) (see below for more details!). At the same time, we have heard feedback from Pulumi users looking to automate their delivery processes inside Kubernetes using a GitOps approach to delivery - both for Kubernetes workloads and for cloud infrastructure in any [Pulumi-supported Cloud Provider](https://www.pulumi.com/docs/intro/cloud-providers/).
+Pulumi integrates into [more than a dozen CI/CD and delivery systems]({{< relref “/docs/guides/continuous-delivery” >}}), automating the delivery of cloud infrastructure changes to AWS, Azure, GCP, Kubernetes, and more. This includes traditional CI tools like [Jenkins]({{< relref “/docs/guides/continuous-delivery/jenkins” >}}), managed CI/CD platforms like Azure DevOps, and cloud native continuous delivery platforms like [Spinnaker]({{< relref “/docs/guides/continuous-delivery/spinnaker” >}}) (see below for more details!). At the same time, we have heard feedback from Pulumi users looking to automate their delivery processes inside Kubernetes using a GitOps approach to delivery - both for Kubernetes workloads and for cloud infrastructure in any [Pulumi-supported Cloud Provider]({{< relref “/docs/intro/cloud-providers” >}}).
 
-We’re excited to announce the new [pulumi-kubernetes-operator](https://github.com/pulumi/pulumi-kubernetes-operator) open source project which provides a new Kubernetes-native option for infrastructure delivery. The Pulumi Kubernetes Operator allows you to specify the cloud infrastructure you want to deploy using a new `Stack` CustomResource in your Kubernetes cluster. The operator continuously drives the state of your cloud resources to align with the specified Stack. Stack resources can point at any Pulumi program in any Git repository, and use that program to define the desired state of the infrastructure. These stacks provide the full flexibility of Pulumi, including the ability to enforce policy using CrossGuard policy-as-code coupled with the benefits of the declarative Kubernetes resource model. You can create these Stack resources in normal Kubernetes YAML, or else choose to use Pulumi to manage the Kubernetes resources as well!
+We’re excited to announce the new [pulumi-kubernetes-operator](https://github.com/pulumi/pulumi-kubernetes-operator) open source project which provides a new Kubernetes-native option for infrastructure delivery. The Pulumi Kubernetes Operator allows you to specify the cloud infrastructure to deploy using a new `Stack` CustomResource in your Kubernetes cluster. The operator continuously drives the state of your cloud resources to align with the specified Stack. Stack resources can point at any Pulumi program in any Git repository, and use that program to define the desired state of the infrastructure. These stacks provide the full flexibility of Pulumi, including the ability to enforce policy using CrossGuard policy-as-code coupled with the benefits of the declarative Kubernetes resource model. You can create these Stack resources in normal Kubernetes YAML, or use Pulumi to manage the Kubernetes resources as well!
 
 ![Pulumi Kubernetes Operator](pulumi-kubernetes-operator.png)
 
-Creating a Stack is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. The [Pulumi Console](https://www.pulumi.com/docs/intro/console/) augments these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
+Creating a Stack is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. The [Pulumi Console]({{< relref “/docs/intro/console” >}}) augments these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
 
 ```yaml
 apiVersion: pulumi.com/v1alpha1
@@ -62,9 +62,9 @@ spec:
 
 ## Pulumi Spinnaker Plugin
 
-Many teams using Spinnaker have asked about being able to automate the delivery of their cloud infrastructure changes using Pulumi through the same great continuous delivery platform that Spinnaker offers for application deployments.  As launch partners for the new Spinnaker Plugin model announced in June, Pulumi and Spinnaker worked closely together to deliver great support for Pulumi inside the Spinnaker continuous deployment platform.  
+Many teams using Spinnaker have asked about automating the delivery of their cloud infrastructure changes using Pulumi through the same great continuous delivery platform that Spinnaker offers for application deployments.  As launch partners for the new Spinnaker Plugin model announced in June, Pulumi and Spinnaker worked closely together to deliver complete support for Pulumi inside the Spinnaker continuous deployment platform.  
 
-You can check out the Pulumi Spinnaker integration in this presentation from Spinnaker Live and in the [Spinnaker guide](https://www.pulumi.com/docs/guides/continuous-delivery/spinnaker/) in the Pulumi docs.
+You can check out the Pulumi Spinnaker integration in this presentation from Spinnaker Live and in the [Spinnaker guide]({{< relref “/docs/guides/continuous-delivery/spinnaker” >}}) in the Pulumi docs.
 
 {{< youtube G1ovF6JmGdU >}}
 
@@ -291,7 +291,7 @@ func main() {
 
 ## OPA support in Pulumi CrossGuard Policy-as-Code
 
-Pulumi’s [CrossGuard](https://www.pulumi.com/docs/guides/crossguard/) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
+Pulumi’s [CrossGuard]({{< relref “/docs/guides/crossguard” >}}) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
 
 Today’s release of [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) support in Pulumi policy-as-code extends the existing support for TypeScript and Python to include OPA’s `.rego` language and runtime for declarative policy specification. As an emerging standard for cloud native policy, OPA is already used across a wide variety of cloud native technologies, and can now also be leveraged to author policies to run in Pulumi’s policy model across any cloud or Kubernetes.
 
@@ -309,7 +309,7 @@ And as part of Pulumi’s support for organizational enforcement of policy, OPA-
 
 We’re incredibly excited about today’s new features and the opportunity to deepen Pulumi’s support for Kubernetes and the Cloud Native ecosystem. The Pulumi Kubernetes Operator unlocks exciting new approaches to cloud native infrastructure delivery. The `kube2pulumi` tool makes it easier than ever to migrate from cumbersome YAML to expressive code. Strongly-typed CRDs bring the richness of Pulumi to the entire Cloud Native ecosystem of extensions to the Kubernetes platform. And OPA support in Pulumi policy-as-code brings cloud native policy authoring with OPA into the Pulumi Modern Infrastructure-as-Code world.
 
-It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started](https://www.pulumi.com/docs/get-started/kubernetes/) today.  
+It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started]({{< relref “/docs/get-started/kubernetes“ >}}) today.  
 
 You can learn more about each of the new capabilities in their corresponding project documentation:
 
@@ -317,4 +317,4 @@ You can learn more about each of the new capabilities in their corresponding pro
 * [Strongly-typed CRDs](https://cert-manager.io/docs/installation/kubernetes/)
 * [kube2pulumi](https://github.com/pulumi/kube2pulumi)
 * [OPA for Pulumi CrossGuard](https://github.com/pulumi/pulumi-policy-opa)
-* [Spinnaker Pulumi Plugin](https://www.pulumi.com/blog/unlocking-spinnaker-with-pulumi/)
+* [Spinnaker Pulumi Plugin]({{< relref “/blog/unlocking-spinnaker-with-pulumi“ >}})
