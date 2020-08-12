@@ -1,5 +1,5 @@
 import { TypeKeys } from "./index";
-import { LanguageKey, K8sLanguageKey, OSKey, CloudKey } from "../../components/chooser/chooser";
+import { LanguageKey, K8sLanguageKey, InputKindKey, OSKey, CloudKey } from "../../components/chooser/chooser";
 
 export interface SetLanguage {
     type: TypeKeys.SET_LANGUAGE;
@@ -9,6 +9,11 @@ export interface SetLanguage {
 export interface SetK8sLanguage {
     type: TypeKeys.SET_K8S_LANGUAGE;
     key: K8sLanguageKey;
+}
+
+export interface SetInputKind {
+    type: TypeKeys.SET_INPUT_KIND;
+    key: InputKindKey;
 }
 
 export interface SetOS {
@@ -34,6 +39,15 @@ export const setLanguage = (key: LanguageKey) => (dispatch, _getState) => {
 export const setK8sLanguage = (key: K8sLanguageKey) => (dispatch, _getState) => {
     const action: SetK8sLanguage = {
         type: TypeKeys.SET_K8S_LANGUAGE,
+        key: key,
+    };
+    dispatch(action);
+};
+
+// Set the current input kind.
+export const setInputKind = (key: InputKindKey) => (dispatch, _getState) => {
+    const action: SetInputKind = {
+        type: TypeKeys.SET_INPUT_KIND,
         key: key,
     };
     dispatch(action);
