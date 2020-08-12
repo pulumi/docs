@@ -3,7 +3,7 @@ title: "Module networking/v1"
 title_tag: "Module networking/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "ffb56cbd66a23d2c0ce121749832115f40ec831a"
+git_sha: "d7871675b54727f63f1e2254d06653daf06cc8c8"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="NetworkPolicy" data-link-title="NetworkPolicy">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L12">
         Resource <strong>NetworkPolicy</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a NetworkPolicy resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing NetworkPolicy resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of NetworkPolicy.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -101,7 +101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L50">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L50">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L54">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L54">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 Specification of the desired behavior for this NetworkPolicy.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -134,7 +134,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkPolicyList" data-link-title="NetworkPolicyList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">
         Resource <strong>NetworkPolicyList</strong>
     </a>
 </h3>
@@ -144,7 +144,7 @@ deployments.
 NetworkPolicyList is a list of NetworkPolicy objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -158,7 +158,7 @@ Create a NetworkPolicyList resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -169,14 +169,14 @@ Get an existing NetworkPolicyList resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -187,7 +187,7 @@ Returns true if the given object is an instance of NetworkPolicyList.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -204,7 +204,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicy'>NetworkPolicy</a>[]&gt;;</code></pre>
@@ -212,7 +212,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -228,7 +228,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -240,7 +240,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="NetworkPolicyArgs" data-link-title="NetworkPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L85">
         interface <strong>NetworkPolicyArgs</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ deployments.
 The set of arguments for constructing a NetworkPolicy resource.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L89">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L89">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ The set of arguments for constructing a NetworkPolicy resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L93">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L93">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L97">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L97">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -274,7 +274,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicy.ts#L101">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicy.ts#L101">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 Specification of the desired behavior for this NetworkPolicy.
 
 <h3 class="pdoc-module-header" id="NetworkPolicyListArgs" data-link-title="NetworkPolicyListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L86">
         interface <strong>NetworkPolicyListArgs</strong>
     </a>
 </h3>
@@ -292,7 +292,7 @@ Specification of the desired behavior for this NetworkPolicy.
 The set of arguments for constructing a NetworkPolicyList resource.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L90">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L90">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The set of arguments for constructing a NetworkPolicyList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L94">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L94">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy'>NetworkPolicy</a>&gt;[]&gt;;</code></pre>
@@ -308,7 +308,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/networking/v1/networkPolicyList.ts#L102">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/networking/v1/networkPolicyList.ts#L102">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
