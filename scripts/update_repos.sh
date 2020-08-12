@@ -57,6 +57,7 @@ TOOLS_REPOS=(
     "pulumi-tls"
     "pulumi-vault"
     "pulumi-vsphere"
+    "pulumi-wavefront"
 )
 
 update_repo() {
