@@ -38,6 +38,10 @@ class MyStack : Stack
                         "logs:PutLogEvents",
                         "logs:PutLogEventsBatch",
                     },
+                    Resources = 
+                    {
+                        "arn:aws:logs:*",
+                    },
                     Principals = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
@@ -48,10 +52,6 @@ class MyStack : Stack
                             },
                             Type = "Service",
                         },
-                    },
-                    Resources = 
-                    {
-                        "arn:aws:logs:*",
                     },
                 },
             },
@@ -73,8 +73,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,6 +88,9 @@ func main() {
 						"logs:PutLogEvents",
 						"logs:PutLogEventsBatch",
 					},
+					Resources: []string{
+						"arn:aws:logs:*",
+					},
 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
 						iam.GetPolicyDocumentStatementPrincipal{
 							Identifiers: []string{
@@ -95,9 +98,6 @@ func main() {
 							},
 							Type: "Service",
 						},
-					},
-					Resources: []string{
-						"arn:aws:logs:*",
 					},
 				},
 			},
@@ -130,11 +130,11 @@ elasticsearch_log_publishing_policy_policy_document = aws.iam.get_policy_documen
         "logs:PutLogEvents",
         "logs:PutLogEventsBatch",
     ],
+    "resources": ["arn:aws:logs:*"],
     "principals": [{
         "identifiers": ["es.amazonaws.com"],
         "type": "Service",
     }],
-    "resources": ["arn:aws:logs:*"],
 }])
 elasticsearch_log_publishing_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policyLogResourcePolicy",
     policy_document=elasticsearch_log_publishing_policy_policy_document.json,
@@ -149,22 +149,22 @@ elasticsearch_log_publishing_policy_log_resource_policy = aws.cloudwatch.LogReso
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const elasticsearch_log_publishing_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const elasticsearch-log-publishing-policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
             "logs:PutLogEvents",
             "logs:PutLogEventsBatch",
         ],
+        resources: ["arn:aws:logs:*"],
         principals: [{
             identifiers: ["es.amazonaws.com"],
             type: "Service",
         }],
-        resources: ["arn:aws:logs:*"],
     }],
-}, { async: true }));
-const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policy", {
-    policyDocument: elasticsearch_log_publishing_policyPolicyDocument.json,
+});
+const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policyLogResourcePolicy", {
+    policyDocument: elasticsearch_log_publishing_policyPolicyDocument.then(elasticsearch_log_publishing_policyPolicyDocument => elasticsearch_log_publishing_policyPolicyDocument.json),
     policyName: "elasticsearch-log-publishing-policy",
 });
 ```
@@ -192,6 +192,10 @@ class MyStack : Stack
                         "logs:CreateLogStream",
                         "logs:PutLogEvents",
                     },
+                    Resources = 
+                    {
+                        "arn:aws:logs:*:*:log-group:/aws/route53/*",
+                    },
                     Principals = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
@@ -202,10 +206,6 @@ class MyStack : Stack
                             },
                             Type = "Service",
                         },
-                    },
-                    Resources = 
-                    {
-                        "arn:aws:logs:*:*:log-group:/aws/route53/*",
                     },
                 },
             },
@@ -227,8 +227,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -241,6 +241,9 @@ func main() {
 						"logs:CreateLogStream",
 						"logs:PutLogEvents",
 					},
+					Resources: []string{
+						"arn:aws:logs:*:*:log-group:/aws/route53/*",
+					},
 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
 						iam.GetPolicyDocumentStatementPrincipal{
 							Identifiers: []string{
@@ -248,9 +251,6 @@ func main() {
 							},
 							Type: "Service",
 						},
-					},
-					Resources: []string{
-						"arn:aws:logs:*:*:log-group:/aws/route53/*",
 					},
 				},
 			},
@@ -282,11 +282,11 @@ route53_query_logging_policy_policy_document = aws.iam.get_policy_document(state
         "logs:CreateLogStream",
         "logs:PutLogEvents",
     ],
+    "resources": ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     "principals": [{
         "identifiers": ["route53.amazonaws.com"],
         "type": "Service",
     }],
-    "resources": ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
 }])
 route53_query_logging_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy",
     policy_document=route53_query_logging_policy_policy_document.json,
@@ -301,21 +301,21 @@ route53_query_logging_policy_log_resource_policy = aws.cloudwatch.LogResourcePol
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const route53-query-logging-policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
             "logs:PutLogEvents",
         ],
+        resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
         principals: [{
             identifiers: ["route53.amazonaws.com"],
             type: "Service",
         }],
-        resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-}, { async: true }));
-const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
-    policyDocument: route53_query_logging_policyPolicyDocument.json,
+});
+const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy", {
+    policyDocument: route53_query_logging_policyPolicyDocument.then(route53_query_logging_policyPolicyDocument => route53_query_logging_policyPolicyDocument.json),
     policyName: "route53-query-logging-policy",
 });
 ```
@@ -338,7 +338,7 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicy">NewLogResourcePolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicyArgs">LogResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicy">LogResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicy">NewLogResourcePolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicyArgs">LogResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicy">LogResourcePolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -412,7 +412,7 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -432,7 +432,7 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicyArgs">LogResourcePolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicyArgs">LogResourcePolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -442,7 +442,7 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -717,7 +717,7 @@ Get an existing LogResourcePolicy resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicyState">LogResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogResourcePolicy">LogResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicyState">LogResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogResourcePolicy">LogResourcePolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

@@ -43,6 +43,7 @@ class MyStack : Stack
     {
         var ami = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
         {
+            MostRecent = true,
             Filters = 
             {
                 new Aws.Inputs.GetAmiFilterArgs
@@ -54,7 +55,6 @@ class MyStack : Stack
                     },
                 },
             },
-            MostRecent = true,
             Owners = 
             {
                 "amazon",
@@ -62,8 +62,8 @@ class MyStack : Stack
         }));
         var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs
         {
-            Ami = ami.Apply(ami => ami.Id),
             InstanceType = "t2.micro",
+            Ami = ami.Apply(ami => ami.Id),
             Tags = 
             {
                 { "type", "test-instance" },
@@ -78,8 +78,8 @@ class MyStack : Stack
         });
         var sgAttachment = new Aws.Ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", new Aws.Ec2.NetworkInterfaceSecurityGroupAttachmentArgs
         {
-            NetworkInterfaceId = instance.PrimaryNetworkInterfaceId,
             SecurityGroupId = sg.Id,
+            NetworkInterfaceId = instance.PrimaryNetworkInterfaceId,
         });
     }
 
@@ -93,8 +93,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,6 +102,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
 		ami, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			MostRecent: &opt0,
 			Filters: []aws.GetAmiFilter{
 				aws.GetAmiFilter{
 					Name: "name",
@@ -110,7 +111,6 @@ func main() {
 					},
 				},
 			},
-			MostRecent: &opt0,
 			Owners: []string{
 				"amazon",
 			},
@@ -119,8 +119,8 @@ func main() {
 			return err
 		}
 		instance, err := ec2.NewInstance(ctx, "instance", &ec2.InstanceArgs{
-			Ami:          pulumi.String(ami.Id),
 			InstanceType: pulumi.String("t2.micro"),
+			Ami:          pulumi.String(ami.Id),
 			Tags: pulumi.StringMap{
 				"type": pulumi.String("test-instance"),
 			},
@@ -137,8 +137,8 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
-			NetworkInterfaceId: instance.PrimaryNetworkInterfaceId,
 			SecurityGroupId:    sg.ID(),
+			NetworkInterfaceId: instance.PrimaryNetworkInterfaceId,
 		})
 		if err != nil {
 			return err
@@ -155,15 +155,15 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-ami = aws.get_ami(filters=[{
+ami = aws.get_ami(most_recent=True,
+    filters=[{
         "name": "name",
         "values": ["amzn-ami-hvm-*"],
     }],
-    most_recent=True,
     owners=["amazon"])
 instance = aws.ec2.Instance("instance",
-    ami=ami.id,
     instance_type="t2.micro",
+    ami=ami.id,
     tags={
         "type": "test-instance",
     })
@@ -171,8 +171,8 @@ sg = aws.ec2.SecurityGroup("sg", tags={
     "type": "test-security-group",
 })
 sg_attachment = aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment",
-    network_interface_id=instance.primary_network_interface_id,
-    security_group_id=sg.id)
+    security_group_id=sg.id,
+    network_interface_id=instance.primary_network_interface_id)
 ```
 
 {{% /example %}}
@@ -183,29 +183,27 @@ sg_attachment = aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ami = pulumi.output(aws.getAmi({
+const ami = aws.getAmi({
+    mostRecent: true,
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
-    mostRecent: true,
     owners: ["amazon"],
-}, { async: true }));
+});
 const instance = new aws.ec2.Instance("instance", {
-    ami: ami.id,
     instanceType: "t2.micro",
+    ami: ami.then(ami => ami.id),
     tags: {
         type: "test-instance",
     },
 });
-const sg = new aws.ec2.SecurityGroup("sg", {
-    tags: {
-        type: "test-security-group",
-    },
-});
-const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_attachment", {
-    networkInterfaceId: instance.primaryNetworkInterfaceId,
+const sg = new aws.ec2.SecurityGroup("sg", {tags: {
+    type: "test-security-group",
+}});
+const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", {
     securityGroupId: sg.id,
+    networkInterfaceId: instance.primaryNetworkInterfaceId,
 });
 ```
 
@@ -227,7 +225,7 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NewNetworkInterfaceSecurityGroupAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentArgs">NetworkInterfaceSecurityGroupAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NetworkInterfaceSecurityGroupAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NewNetworkInterfaceSecurityGroupAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentArgs">NetworkInterfaceSecurityGroupAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NetworkInterfaceSecurityGroupAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -301,7 +299,7 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +319,7 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentArgs">NetworkInterfaceSecurityGroupAttachmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentArgs">NetworkInterfaceSecurityGroupAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +329,7 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -606,7 +604,7 @@ Get an existing NetworkInterfaceSecurityGroupAttachment resource's state with th
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaceSecurityGroupAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentState">NetworkInterfaceSecurityGroupAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NetworkInterfaceSecurityGroupAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaceSecurityGroupAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachmentState">NetworkInterfaceSecurityGroupAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkInterfaceSecurityGroupAttachment">NetworkInterfaceSecurityGroupAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

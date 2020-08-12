@@ -3,7 +3,7 @@ title: "Module discovery/v1beta1"
 title_tag: "Module discovery/v1beta1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1beta1"
 meta_desc: "Explore members of the v1beta1 module in the @pulumi/kubernetes package."
-git_sha: "ffb56cbd66a23d2c0ce121749832115f40ec831a"
+git_sha: "d7871675b54727f63f1e2254d06653daf06cc8c8"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EndpointSlice" data-link-title="EndpointSlice">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">
         Resource <strong>EndpointSlice</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 EndpointSlice represents a subset of the endpoints that implement a service. For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a EndpointSlice resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing EndpointSlice resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointSlice-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of EndpointSlice.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-addressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L42">property <b>addressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L42">property <b>addressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addressType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L46">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L46">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"discovery.k8s.io/v1beta1"</span>&gt;;</code></pre>
@@ -100,7 +100,7 @@ addressType specifies the type of address carried by this EndpointSlice. All add
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EndpointSlice-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L50">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L50">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Endpoint'>Endpoint</a>[]&gt;;</code></pre>
@@ -108,7 +108,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L54">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L54">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EndpointSlice"</span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EndpointSlice-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L58">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L58">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L62">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L62">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointPort'>EndpointPort</a>[]&gt;;</code></pre>
@@ -141,7 +141,7 @@ Standard object's metadata.
 ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
 
 <h4 class="pdoc-member-header" id="EndpointSlice-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EndpointSliceList" data-link-title="EndpointSliceList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">
         Resource <strong>EndpointSliceList</strong>
     </a>
 </h3>
@@ -160,7 +160,7 @@ deployments.
 EndpointSliceList represents a list of endpoint slices
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -174,7 +174,7 @@ Create a EndpointSliceList resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -185,14 +185,14 @@ Get an existing EndpointSliceList resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -203,7 +203,7 @@ Returns true if the given object is an instance of EndpointSliceList.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"discovery.k8s.io/v1beta1"</span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -220,7 +220,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointSlice'>EndpointSlice</a>[]&gt;;</code></pre>
@@ -228,7 +228,7 @@ deployments and may be missing (undefined) during planning phases.
 List of endpoint slices
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EndpointSliceList"</span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ List of endpoint slices
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -244,7 +244,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata.
 
 <h4 class="pdoc-member-header" id="EndpointSliceList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -256,7 +256,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointSliceArgs" data-link-title="EndpointSliceArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L99">
         interface <strong>EndpointSliceArgs</strong>
     </a>
 </h3>
@@ -266,7 +266,7 @@ deployments.
 The set of arguments for constructing a EndpointSlice resource.
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-addressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L103">property <b>addressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L103">property <b>addressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addressType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ The set of arguments for constructing a EndpointSlice resource.
 addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L107">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L107">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"discovery.k8s.io/v1beta1"</span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ addressType specifies the type of address carried by this EndpointSlice. All add
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L111">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L111">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Endpoint'>Endpoint</a>&gt;[]&gt;;</code></pre>
@@ -290,7 +290,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L115">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L115">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"EndpointSlice"</span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ endpoints is a list of unique endpoints in this slice. Each slice may include a 
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L119">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L119">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -306,7 +306,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="EndpointSliceArgs-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L123">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSlice.ts#L123">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EndpointPort'>EndpointPort</a>&gt;[]&gt;;</code></pre>
@@ -314,7 +314,7 @@ Standard object's metadata.
 ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
 
 <h3 class="pdoc-module-header" id="EndpointSliceListArgs" data-link-title="EndpointSliceListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L86">
         interface <strong>EndpointSliceListArgs</strong>
     </a>
 </h3>
@@ -324,7 +324,7 @@ ports specifies the list of network ports exposed by each endpoint in this slice
 The set of arguments for constructing a EndpointSliceList resource.
 
 <h4 class="pdoc-member-header" id="EndpointSliceListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L90">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L90">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"discovery.k8s.io/v1beta1"</span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The set of arguments for constructing a EndpointSliceList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EndpointSliceListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L94">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L94">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EndpointSlice'>EndpointSlice</a>&gt;[]&gt;;</code></pre>
@@ -340,7 +340,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 List of endpoint slices
 
 <h4 class="pdoc-member-header" id="EndpointSliceListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"EndpointSliceList"</span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ List of endpoint slices
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EndpointSliceListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L102">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/d7871675b54727f63f1e2254d06653daf06cc8c8/sdk/nodejs/discovery/v1beta1/endpointSliceList.ts#L102">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

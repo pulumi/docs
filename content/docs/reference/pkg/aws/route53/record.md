@@ -28,14 +28,10 @@ class MyStack : Stack
     {
         var www_dev = new Aws.Route53.Record("www-dev", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
             Name = "www",
-            Records = 
-            {
-                "dev.example.com",
-            },
-            SetIdentifier = "dev",
-            Ttl = 5,
             Type = "CNAME",
+            Ttl = 5,
             WeightedRoutingPolicies = 
             {
                 new Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs
@@ -43,18 +39,18 @@ class MyStack : Stack
                     Weight = 10,
                 },
             },
-            ZoneId = aws_route53_zone.Primary.Zone_id,
+            SetIdentifier = "dev",
+            Records = 
+            {
+                "dev.example.com",
+            },
         });
         var www_live = new Aws.Route53.Record("www-live", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
             Name = "www",
-            Records = 
-            {
-                "live.example.com",
-            },
-            SetIdentifier = "live",
-            Ttl = 5,
             Type = "CNAME",
+            Ttl = 5,
             WeightedRoutingPolicies = 
             {
                 new Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs
@@ -62,7 +58,11 @@ class MyStack : Stack
                     Weight = 90,
                 },
             },
-            ZoneId = aws_route53_zone.Primary.Zone_id,
+            SetIdentifier = "live",
+            Records = 
+            {
+                "live.example.com",
+            },
         });
     }
 
@@ -76,44 +76,44 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := route53.NewRecord(ctx, "www_dev", &route53.RecordArgs{
-			Name: pulumi.String("www"),
-			Records: pulumi.StringArray{
-				pulumi.String("dev.example.com"),
-			},
-			SetIdentifier: pulumi.String("dev"),
-			Ttl:           pulumi.Int(5),
-			Type:          pulumi.String("CNAME"),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
+			Name:   pulumi.String("www"),
+			Type:   pulumi.String("CNAME"),
+			Ttl:    pulumi.Int(5),
 			WeightedRoutingPolicies: route53.RecordWeightedRoutingPolicyArray{
 				&route53.RecordWeightedRoutingPolicyArgs{
 					Weight: pulumi.Int(10),
 				},
 			},
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			SetIdentifier: pulumi.String("dev"),
+			Records: pulumi.StringArray{
+				pulumi.String("dev.example.com"),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "www_live", &route53.RecordArgs{
-			Name: pulumi.String("www"),
-			Records: pulumi.StringArray{
-				pulumi.String("live.example.com"),
-			},
-			SetIdentifier: pulumi.String("live"),
-			Ttl:           pulumi.Int(5),
-			Type:          pulumi.String("CNAME"),
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
+			Name:   pulumi.String("www"),
+			Type:   pulumi.String("CNAME"),
+			Ttl:    pulumi.Int(5),
 			WeightedRoutingPolicies: route53.RecordWeightedRoutingPolicyArray{
 				&route53.RecordWeightedRoutingPolicyArgs{
 					Weight: pulumi.Int(90),
 				},
 			},
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			SetIdentifier: pulumi.String("live"),
+			Records: pulumi.StringArray{
+				pulumi.String("live.example.com"),
+			},
 		})
 		if err != nil {
 			return err
@@ -131,25 +131,25 @@ import pulumi
 import pulumi_aws as aws
 
 www_dev = aws.route53.Record("www-dev",
+    zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
-    records=["dev.example.com"],
-    set_identifier="dev",
-    ttl="5",
     type="CNAME",
+    ttl="5",
     weighted_routing_policies=[{
         "weight": 10,
     }],
-    zone_id=aws_route53_zone["primary"]["zone_id"])
+    set_identifier="dev",
+    records=["dev.example.com"])
 www_live = aws.route53.Record("www-live",
+    zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
-    records=["live.example.com"],
-    set_identifier="live",
-    ttl="5",
     type="CNAME",
+    ttl="5",
     weighted_routing_policies=[{
         "weight": 90,
     }],
-    zone_id=aws_route53_zone["primary"]["zone_id"])
+    set_identifier="live",
+    records=["live.example.com"])
 ```
 
 {{% /example %}}
@@ -161,26 +161,26 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const www_dev = new aws.route53.Record("www-dev", {
+    zoneId: aws_route53_zone.primary.zone_id,
     name: "www",
-    records: ["dev.example.com"],
-    setIdentifier: "dev",
-    ttl: 5,
     type: "CNAME",
+    ttl: "5",
     weightedRoutingPolicies: [{
         weight: 10,
     }],
-    zoneId: aws_route53_zone_primary.zoneId,
+    setIdentifier: "dev",
+    records: ["dev.example.com"],
 });
 const www_live = new aws.route53.Record("www-live", {
+    zoneId: aws_route53_zone.primary.zone_id,
     name: "www",
-    records: ["live.example.com"],
-    setIdentifier: "live",
-    ttl: 5,
     type: "CNAME",
+    ttl: "5",
     weightedRoutingPolicies: [{
         weight: 90,
     }],
-    zoneId: aws_route53_zone_primary.zoneId,
+    setIdentifier: "live",
+    records: ["live.example.com"],
 });
 ```
 
@@ -215,18 +215,18 @@ class MyStack : Stack
         });
         var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+            Name = "example.com",
+            Type = "A",
             Aliases = 
             {
                 new Aws.Route53.Inputs.RecordAliasArgs
                 {
-                    EvaluateTargetHealth = true,
                     Name = main.DnsName,
                     ZoneId = main.ZoneId,
+                    EvaluateTargetHealth = true,
                 },
             },
-            Name = "example.com",
-            Type = "A",
-            ZoneId = aws_route53_zone.Primary.Zone_id,
         });
     }
 
@@ -240,8 +240,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -264,16 +264,16 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "www", &route53.RecordArgs{
-			Aliases: route53.RecordAliasArray{
-				&route53.RecordAliasArgs{
-					EvaluateTargetHealth: pulumi.Bool(true),
-					Name:                 main.DnsName,
-					ZoneId:               main.ZoneId,
-				},
-			},
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 			Name:   pulumi.String("example.com"),
 			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			Aliases: route53.RecordAliasArray{
+				&route53.RecordAliasArgs{
+					Name:                 main.DnsName,
+					ZoneId:               main.ZoneId,
+					EvaluateTargetHealth: pulumi.Bool(true),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -299,14 +299,14 @@ main = aws.elb.LoadBalancer("main",
         "lbProtocol": "http",
     }])
 www = aws.route53.Record("www",
-    aliases=[{
-        "evaluateTargetHealth": True,
-        "name": main.dns_name,
-        "zone_id": main.zone_id,
-    }],
+    zone_id=aws_route53_zone["primary"]["zone_id"],
     name="example.com",
     type="A",
-    zone_id=aws_route53_zone["primary"]["zone_id"])
+    aliases=[{
+        "name": main.dns_name,
+        "zone_id": main.zone_id,
+        "evaluateTargetHealth": True,
+    }])
 ```
 
 {{% /example %}}
@@ -327,14 +327,14 @@ const main = new aws.elb.LoadBalancer("main", {
     }],
 });
 const www = new aws.route53.Record("www", {
-    aliases: [{
-        evaluateTargetHealth: true,
-        name: main.dnsName,
-        zoneId: main.zoneId,
-    }],
+    zoneId: aws_route53_zone.primary.zone_id,
     name: "example.com",
     type: "A",
-    zoneId: aws_route53_zone_primary.zoneId,
+    aliases: [{
+        name: main.dnsName,
+        zoneId: main.zoneId,
+        evaluateTargetHealth: true,
+    }],
 });
 ```
 
@@ -357,6 +357,9 @@ class MyStack : Stack
         {
             AllowOverwrite = true,
             Name = "test.example.com",
+            Ttl = 30,
+            Type = "NS",
+            ZoneId = exampleZone.ZoneId,
             Records = 
             {
                 exampleZone.NameServers.Apply(nameServers => nameServers[0]),
@@ -364,9 +367,6 @@ class MyStack : Stack
                 exampleZone.NameServers.Apply(nameServers => nameServers[2]),
                 exampleZone.NameServers.Apply(nameServers => nameServers[3]),
             },
-            Ttl = 30,
-            Type = "NS",
-            ZoneId = exampleZone.ZoneId,
         });
     }
 
@@ -380,7 +380,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -393,6 +393,9 @@ func main() {
 		_, err = route53.NewRecord(ctx, "exampleRecord", &route53.RecordArgs{
 			AllowOverwrite: pulumi.Bool(true),
 			Name:           pulumi.String("test.example.com"),
+			Ttl:            pulumi.Int(30),
+			Type:           pulumi.String("NS"),
+			ZoneId:         exampleZone.ZoneId,
 			Records: pulumi.StringArray{
 				exampleZone.NameServers.ApplyT(func(nameServers []string) (string, error) {
 					return nameServers[0], nil
@@ -407,9 +410,6 @@ func main() {
 					return nameServers[3], nil
 				}).(pulumi.StringOutput),
 			},
-			Ttl:    pulumi.Int(30),
-			Type:   pulumi.String("NS"),
-			ZoneId: exampleZone.ZoneId,
 		})
 		if err != nil {
 			return err
@@ -430,15 +430,15 @@ example_zone = aws.route53.Zone("exampleZone")
 example_record = aws.route53.Record("exampleRecord",
     allow_overwrite=True,
     name="test.example.com",
+    ttl=30,
+    type="NS",
+    zone_id=example_zone.zone_id,
     records=[
         example_zone.name_servers[0],
         example_zone.name_servers[1],
         example_zone.name_servers[2],
         example_zone.name_servers[3],
-    ],
-    ttl=30,
-    type="NS",
-    zone_id=example_zone.zone_id)
+    ])
 ```
 
 {{% /example %}}
@@ -449,19 +449,19 @@ example_record = aws.route53.Record("exampleRecord",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleZone = new aws.route53.Zone("example", {});
-const exampleRecord = new aws.route53.Record("example", {
+const exampleZone = new aws.route53.Zone("exampleZone", {});
+const exampleRecord = new aws.route53.Record("exampleRecord", {
     allowOverwrite: true,
     name: "test.example.com",
+    ttl: 30,
+    type: "NS",
+    zoneId: exampleZone.zoneId,
     records: [
         exampleZone.nameServers[0],
         exampleZone.nameServers[1],
         exampleZone.nameServers[2],
         exampleZone.nameServers[3],
     ],
-    ttl: 30,
-    type: "NS",
-    zoneId: exampleZone.zoneId,
 });
 ```
 
@@ -483,7 +483,7 @@ const exampleRecord = new aws.route53.Record("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Record">NewRecord</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">NewRecord</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -557,7 +557,7 @@ const exampleRecord = new aws.route53.Record("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -577,7 +577,7 @@ const exampleRecord = new aws.route53.Record("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -587,7 +587,7 @@ const exampleRecord = new aws.route53.Record("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1438,7 +1438,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2254,7 +2254,7 @@ Alias record documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordAliasOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordAliasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordAlias.html">output</a> API doc for this type.
@@ -2432,7 +2432,7 @@ Alias record documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordFailoverRoutingPolicy.html">output</a> API doc for this type.
@@ -2522,7 +2522,7 @@ Alias record documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordGeolocationRoutingPolicy.html">output</a> API doc for this type.
@@ -2700,7 +2700,7 @@ Alias record documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordLatencyRoutingPolicy.html">output</a> API doc for this type.
@@ -2790,7 +2790,7 @@ Alias record documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordWeightedRoutingPolicy.html">output</a> API doc for this type.

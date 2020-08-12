@@ -29,66 +29,66 @@ class MyStack : Stack
     {
         var barPipeline = new Aws.CodePipeline.Pipeline("barPipeline", new Aws.CodePipeline.PipelineArgs
         {
+            RoleArn = aws_iam_role.Bar.Arn,
             ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
             {
+                Location = aws_s3_bucket.Bar.Bucket,
+                Type = "S3",
                 EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
                 {
                     Id = data.Aws_kms_alias.S3kmskey.Arn,
                     Type = "KMS",
                 },
-                Location = aws_s3_bucket.Bar.Bucket,
-                Type = "S3",
             },
-            RoleArn = aws_iam_role.Bar.Arn,
             Stages = 
             {
                 new Aws.CodePipeline.Inputs.PipelineStageArgs
                 {
+                    Name = "Source",
                     Actions = 
                     {
                         new Aws.CodePipeline.Inputs.PipelineStageActionArgs
                         {
-                            Category = "Source",
-                            Configuration = 
-                            {
-                                { "Branch", "master" },
-                                { "Owner", "my-organization" },
-                                { "Repo", "test" },
-                            },
                             Name = "Source",
+                            Category = "Source",
+                            Owner = "ThirdParty",
+                            Provider = "GitHub",
+                            Version = "1",
                             OutputArtifacts = 
                             {
                                 "test",
                             },
-                            Owner = "ThirdParty",
-                            Provider = "GitHub",
-                            Version = "1",
+                            Configuration = 
+                            {
+                                { "Owner", "my-organization" },
+                                { "Repo", "test" },
+                                { "Branch", "master" },
+                            },
                         },
                     },
-                    Name = "Source",
                 },
                 new Aws.CodePipeline.Inputs.PipelineStageArgs
                 {
+                    Name = "Build",
                     Actions = 
                     {
                         new Aws.CodePipeline.Inputs.PipelineStageActionArgs
                         {
+                            Name = "Build",
                             Category = "Build",
-                            Configuration = 
-                            {
-                                { "ProjectName", "test" },
-                            },
+                            Owner = "AWS",
+                            Provider = "CodeBuild",
                             InputArtifacts = 
                             {
                                 "test",
                             },
-                            Name = "Build",
-                            Owner = "AWS",
-                            Provider = "CodeBuild",
                             Version = "1",
+                            Configuration = 
+                            {
+                                { "ProjectName", "test" },
+                            },
                         },
                     },
-                    Name = "Build",
                 },
             },
         });
@@ -96,6 +96,8 @@ class MyStack : Stack
         var barWebhook = new Aws.CodePipeline.Webhook("barWebhook", new Aws.CodePipeline.WebhookArgs
         {
             Authentication = "GITHUB_HMAC",
+            TargetAction = "Source",
+            TargetPipeline = barPipeline.Name,
             AuthenticationConfiguration = new Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs
             {
                 SecretToken = webhookSecret,
@@ -108,24 +110,22 @@ class MyStack : Stack
                     MatchEquals = "refs/heads/{Branch}",
                 },
             },
-            TargetAction = "Source",
-            TargetPipeline = barPipeline.Name,
         });
         // Wire the CodePipeline webhook into a GitHub repository.
         var barRepositoryWebhook = new Github.RepositoryWebhook("barRepositoryWebhook", new Github.RepositoryWebhookArgs
         {
+            Repository = github_repository.Repo.Name,
             Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
             {
+                Url = barWebhook.Url,
                 ContentType = "json",
                 InsecureSsl = true,
                 Secret = webhookSecret,
-                Url = barWebhook.Url,
             },
             Events = 
             {
                 "push",
             },
-            Repository = github_repository.Repo.Name,
         });
     }
 
@@ -141,7 +141,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline"
 	"github.com/pulumi/pulumi-github/sdk/go/github"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -149,53 +149,53 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		barPipeline, err := codepipeline.NewPipeline(ctx, "barPipeline", &codepipeline.PipelineArgs{
+			RoleArn: pulumi.Any(aws_iam_role.Bar.Arn),
 			ArtifactStore: &codepipeline.PipelineArtifactStoreArgs{
+				Location: pulumi.Any(aws_s3_bucket.Bar.Bucket),
+				Type:     pulumi.String("S3"),
 				EncryptionKey: &codepipeline.PipelineArtifactStoreEncryptionKeyArgs{
-					Id:   pulumi.String(data.Aws_kms_alias.S3kmskey.Arn),
+					Id:   pulumi.Any(data.Aws_kms_alias.S3kmskey.Arn),
 					Type: pulumi.String("KMS"),
 				},
-				Location: pulumi.String(aws_s3_bucket.Bar.Bucket),
-				Type:     pulumi.String("S3"),
 			},
-			RoleArn: pulumi.String(aws_iam_role.Bar.Arn),
 			Stages: codepipeline.PipelineStageArray{
 				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Source"),
 					Actions: codepipeline.PipelineStageActionArray{
 						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Source"),
 							Category: pulumi.String("Source"),
-							Configuration: pulumi.StringMap{
-								"Branch": pulumi.String("master"),
-								"Owner":  pulumi.String("my-organization"),
-								"Repo":   pulumi.String("test"),
-							},
-							Name: pulumi.String("Source"),
-							OutputArtifacts: pulumi.StringArray{
-								pulumi.String("test"),
-							},
 							Owner:    pulumi.String("ThirdParty"),
 							Provider: pulumi.String("GitHub"),
 							Version:  pulumi.String("1"),
+							OutputArtifacts: pulumi.StringArray{
+								pulumi.String("test"),
+							},
+							Configuration: pulumi.StringMap{
+								"Owner":  pulumi.String("my-organization"),
+								"Repo":   pulumi.String("test"),
+								"Branch": pulumi.String("master"),
+							},
 						},
 					},
-					Name: pulumi.String("Source"),
 				},
 				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Build"),
 					Actions: codepipeline.PipelineStageActionArray{
 						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Build"),
 							Category: pulumi.String("Build"),
-							Configuration: pulumi.StringMap{
-								"ProjectName": pulumi.String("test"),
-							},
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CodeBuild"),
 							InputArtifacts: pulumi.StringArray{
 								pulumi.String("test"),
 							},
-							Name:     pulumi.String("Build"),
-							Owner:    pulumi.String("AWS"),
-							Provider: pulumi.String("CodeBuild"),
-							Version:  pulumi.String("1"),
+							Version: pulumi.String("1"),
+							Configuration: pulumi.StringMap{
+								"ProjectName": pulumi.String("test"),
+							},
 						},
 					},
-					Name: pulumi.String("Build"),
 				},
 			},
 		})
@@ -205,6 +205,8 @@ func main() {
 		webhookSecret := "super-secret"
 		barWebhook, err := codepipeline.NewWebhook(ctx, "barWebhook", &codepipeline.WebhookArgs{
 			Authentication: pulumi.String("GITHUB_HMAC"),
+			TargetAction:   pulumi.String("Source"),
+			TargetPipeline: barPipeline.Name,
 			AuthenticationConfiguration: &codepipeline.WebhookAuthenticationConfigurationArgs{
 				SecretToken: pulumi.String(webhookSecret),
 			},
@@ -214,23 +216,21 @@ func main() {
 					MatchEquals: pulumi.String("refs/heads/{Branch}"),
 				},
 			},
-			TargetAction:   pulumi.String("Source"),
-			TargetPipeline: barPipeline.Name,
 		})
 		if err != nil {
 			return err
 		}
 		_, err = github.NewRepositoryWebhook(ctx, "barRepositoryWebhook", &github.RepositoryWebhookArgs{
+			Repository: pulumi.Any(github_repository.Repo.Name),
 			Configuration: &github.RepositoryWebhookConfigurationArgs{
+				Url:         barWebhook.Url,
 				ContentType: pulumi.String("json"),
 				InsecureSsl: pulumi.Bool(true),
 				Secret:      pulumi.String(webhookSecret),
-				Url:         barWebhook.Url,
 			},
 			Events: pulumi.StringArray{
 				pulumi.String("push"),
 			},
-			Repository: pulumi.String(github_repository.Repo.Name),
 		})
 		if err != nil {
 			return err
@@ -249,69 +249,69 @@ import pulumi_aws as aws
 import pulumi_github as github
 
 bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
+    role_arn=aws_iam_role["bar"]["arn"],
     artifact_store={
+        "location": aws_s3_bucket["bar"]["bucket"],
+        "type": "S3",
         "encryption_key": {
             "id": data["aws_kms_alias"]["s3kmskey"]["arn"],
             "type": "KMS",
         },
-        "location": aws_s3_bucket["bar"]["bucket"],
-        "type": "S3",
     },
-    role_arn=aws_iam_role["bar"]["arn"],
     stages=[
         {
+            "name": "Source",
             "actions": [{
-                "category": "Source",
-                "configuration": {
-                    "Branch": "master",
-                    "Owner": "my-organization",
-                    "Repo": "test",
-                },
                 "name": "Source",
-                "outputArtifacts": ["test"],
+                "category": "Source",
                 "owner": "ThirdParty",
                 "provider": "GitHub",
                 "version": "1",
+                "outputArtifacts": ["test"],
+                "configuration": {
+                    "Owner": "my-organization",
+                    "Repo": "test",
+                    "Branch": "master",
+                },
             }],
-            "name": "Source",
         },
         {
+            "name": "Build",
             "actions": [{
+                "name": "Build",
                 "category": "Build",
+                "owner": "AWS",
+                "provider": "CodeBuild",
+                "inputArtifacts": ["test"],
+                "version": "1",
                 "configuration": {
                     "ProjectName": "test",
                 },
-                "inputArtifacts": ["test"],
-                "name": "Build",
-                "owner": "AWS",
-                "provider": "CodeBuild",
-                "version": "1",
             }],
-            "name": "Build",
         },
     ])
 webhook_secret = "super-secret"
 bar_webhook = aws.codepipeline.Webhook("barWebhook",
     authentication="GITHUB_HMAC",
+    target_action="Source",
+    target_pipeline=bar_pipeline.name,
     authentication_configuration={
         "secretToken": webhook_secret,
     },
     filters=[{
         "jsonPath": "$.ref",
         "matchEquals": "refs/heads/{Branch}",
-    }],
-    target_action="Source",
-    target_pipeline=bar_pipeline.name)
+    }])
 # Wire the CodePipeline webhook into a GitHub repository.
 bar_repository_webhook = github.RepositoryWebhook("barRepositoryWebhook",
+    repository=github_repository["repo"]["name"],
     configuration={
+        "url": bar_webhook.url,
         "contentType": "json",
         "insecureSsl": True,
         "secret": webhook_secret,
-        "url": bar_webhook.url,
     },
-    events=["push"],
-    repository=github_repository["repo"]["name"])
+    events=["push"])
 ```
 
 {{% /example %}}
@@ -323,72 +323,72 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as github from "@pulumi/github";
 
-const barPipeline = new aws.codepipeline.Pipeline("bar", {
-    artifactStores: {
+const barPipeline = new aws.codepipeline.Pipeline("barPipeline", {
+    roleArn: aws_iam_role.bar.arn,
+    artifactStore: {
+        location: aws_s3_bucket.bar.bucket,
+        type: "S3",
         encryptionKey: {
-            id: aws_kms_alias_s3kmskey.arn,
+            id: data.aws_kms_alias.s3kmskey.arn,
             type: "KMS",
         },
-        location: aws_s3_bucket_bar.bucket,
-        type: "S3",
     },
-    roleArn: aws_iam_role_bar.arn,
     stages: [
         {
+            name: "Source",
             actions: [{
-                category: "Source",
-                configuration: {
-                    Branch: "master",
-                    Owner: "my-organization",
-                    Repo: "test",
-                },
                 name: "Source",
-                outputArtifacts: ["test"],
+                category: "Source",
                 owner: "ThirdParty",
                 provider: "GitHub",
                 version: "1",
+                outputArtifacts: ["test"],
+                configuration: {
+                    Owner: "my-organization",
+                    Repo: "test",
+                    Branch: "master",
+                },
             }],
-            name: "Source",
         },
         {
+            name: "Build",
             actions: [{
+                name: "Build",
                 category: "Build",
+                owner: "AWS",
+                provider: "CodeBuild",
+                inputArtifacts: ["test"],
+                version: "1",
                 configuration: {
                     ProjectName: "test",
                 },
-                inputArtifacts: ["test"],
-                name: "Build",
-                owner: "AWS",
-                provider: "CodeBuild",
-                version: "1",
             }],
-            name: "Build",
         },
     ],
 });
 const webhookSecret = "super-secret";
-const barWebhook = new aws.codepipeline.Webhook("bar", {
+const barWebhook = new aws.codepipeline.Webhook("barWebhook", {
     authentication: "GITHUB_HMAC",
+    targetAction: "Source",
+    targetPipeline: barPipeline.name,
     authenticationConfiguration: {
         secretToken: webhookSecret,
     },
     filters: [{
-        jsonPath: "$.ref",
+        jsonPath: `$.ref`,
         matchEquals: "refs/heads/{Branch}",
     }],
-    targetAction: "Source",
-    targetPipeline: barPipeline.name,
 });
 // Wire the CodePipeline webhook into a GitHub repository.
-const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
+const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook", {
+    repository: github_repository.repo.name,
     configuration: {
+        url: barWebhook.url,
         contentType: "json",
         insecureSsl: true,
         secret: webhookSecret,
-        url: barWebhook.url,
     },
     events: ["push"],
-    repository: github_repository_repo.name,
 });
 ```
 
@@ -410,7 +410,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#Webhook">NewWebhook</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">NewWebhook</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -484,7 +484,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -504,7 +504,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -514,7 +514,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1053,7 +1053,7 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookState">WebhookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookState">WebhookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1557,7 +1557,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookAuthenticationConfiguration.html">output</a> API doc for this type.
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookFilter.html">output</a> API doc for this type.

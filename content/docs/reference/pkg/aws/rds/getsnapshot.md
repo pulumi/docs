@@ -21,11 +21,85 @@ See the `aws.rds.ClusterSnapshot` data source for DB Cluster snapshots.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod = new Aws.Rds.Instance("prod", new Aws.Rds.InstanceArgs
+        {
+            AllocatedStorage = 10,
+            Engine = "mysql",
+            EngineVersion = "5.6.17",
+            InstanceClass = "db.t2.micro",
+            Name = "mydb",
+            Username = "foo",
+            Password = "bar",
+            DbSubnetGroupName = "my_database_subnet_group",
+            ParameterGroupName = "default.mysql5.6",
+        });
+        var latestProdSnapshot = prod.Id.Apply(id => Aws.Rds.GetSnapshot.InvokeAsync(new Aws.Rds.GetSnapshotArgs
+        {
+            DbInstanceIdentifier = id,
+            MostRecent = true,
+        }));
+        // Use the latest production snapshot to create a dev instance.
+        var dev = new Aws.Rds.Instance("dev", new Aws.Rds.InstanceArgs
+        {
+            InstanceClass = "db.t2.micro",
+            Name = "mydbdev",
+            SnapshotIdentifier = latestProdSnapshot.Apply(latestProdSnapshot => latestProdSnapshot.Id),
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		prod, err := rds.NewInstance(ctx, "prod", &rds.InstanceArgs{
+			AllocatedStorage:   pulumi.Int(10),
+			Engine:             pulumi.String("mysql"),
+			EngineVersion:      pulumi.String("5.6.17"),
+			InstanceClass:      pulumi.String("db.t2.micro"),
+			Name:               pulumi.String("mydb"),
+			Username:           pulumi.String("foo"),
+			Password:           pulumi.String("bar"),
+			DbSubnetGroupName:  pulumi.String("my_database_subnet_group"),
+			ParameterGroupName: pulumi.String("default.mysql5.6"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewInstance(ctx, "dev", &rds.InstanceArgs{
+			InstanceClass: pulumi.String("db.t2.micro"),
+			Name:          pulumi.String("mydbdev"),
+			SnapshotIdentifier: latestProdSnapshot.ApplyT(func(latestProdSnapshot rds.LookupSnapshotResult) (string, error) {
+				return latestProdSnapshot.Id, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -35,22 +109,19 @@ import pulumi_aws as aws
 
 prod = aws.rds.Instance("prod",
     allocated_storage=10,
-    db_subnet_group_name="my_database_subnet_group",
     engine="mysql",
     engine_version="5.6.17",
     instance_class="db.t2.micro",
     name="mydb",
-    parameter_group_name="default.mysql5.6",
+    username="foo",
     password="bar",
-    username="foo")
+    db_subnet_group_name="my_database_subnet_group",
+    parameter_group_name="default.mysql5.6")
 latest_prod_snapshot = prod.id.apply(lambda id: aws.rds.get_snapshot(db_instance_identifier=id,
     most_recent=True))
 # Use the latest production snapshot to create a dev instance.
 dev = aws.rds.Instance("dev",
     instance_class="db.t2.micro",
-    lifecycle={
-        "ignoreChanges": ["snapshotIdentifier"],
-    },
     name="mydbdev",
     snapshot_identifier=latest_prod_snapshot.id)
 ```
@@ -65,25 +136,25 @@ import * as aws from "@pulumi/aws";
 
 const prod = new aws.rds.Instance("prod", {
     allocatedStorage: 10,
-    dbSubnetGroupName: "my_database_subnet_group",
     engine: "mysql",
     engineVersion: "5.6.17",
     instanceClass: "db.t2.micro",
     name: "mydb",
-    parameterGroupName: "default.mysql5.6",
-    password: "bar",
     username: "foo",
+    password: "bar",
+    dbSubnetGroupName: "my_database_subnet_group",
+    parameterGroupName: "default.mysql5.6",
 });
 const latestProdSnapshot = prod.id.apply(id => aws.rds.getSnapshot({
     dbInstanceIdentifier: id,
     mostRecent: true,
-}, { async: true }));
+}));
 // Use the latest production snapshot to create a dev instance.
 const dev = new aws.rds.Instance("dev", {
     instanceClass: "db.t2.micro",
     name: "mydbdev",
     snapshotIdentifier: latestProdSnapshot.id,
-}, { ignoreChanges: ["snapshotIdentifier"] });
+});
 ```
 
 {{% /example %}}
@@ -107,7 +178,7 @@ const dev = new aws.rds.Instance("dev", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#LookupSnapshotArgs">LookupSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#LookupSnapshotResult">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupSnapshotArgs">LookupSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupSnapshotResult">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSnapshot` in the Go SDK.
 

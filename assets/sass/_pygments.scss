@@ -59,15 +59,15 @@
 /* LiteralNumberOct */ .highlight .mo { color: #40a070 }
 /* Operator */ .highlight .o { color: #666666 }
 /* OperatorWord */ .highlight .ow { color: #007020; font-weight: bold }
-/* Comment */ .highlight .c { color: #60a0b0; font-style: italic }
-/* CommentHashbang */ .highlight .ch { color: #60a0b0; font-style: italic }
-/* CommentMultiline */ .highlight .cm { color: #60a0b0; font-style: italic }
-/* CommentSingle */ .highlight .c1 { color: #60a0b0; font-style: italic }
+/* Comment */ .highlight .c { color: #60a0b0; }
+/* CommentHashbang */ .highlight .ch { color: #60a0b0; }
+/* CommentMultiline */ .highlight .cm { color: #60a0b0; }
+/* CommentSingle */ .highlight .c1 { color: #60a0b0; }
 /* CommentSpecial */ .highlight .cs { color: #60a0b0; background-color: #fff0f0 }
 /* CommentPreproc */ .highlight .cp { color: #007020 }
 /* CommentPreprocFile */ .highlight .cpf { color: #007020 }
 /* GenericDeleted */ .highlight .gd { color: #a00000 }
-/* GenericEmph */ .highlight .ge { font-style: italic }
+/* GenericEmph */ .highlight .ge { }
 /* GenericError */ .highlight .gr { color: #ff0000 }
 /* GenericHeading */ .highlight .gh { color: #000080; font-weight: bold }
 /* GenericInserted */ .highlight .gi { color: #00a000 }
@@ -94,7 +94,7 @@
     /* NameTag */ .highlight .nt { color: #f92672 }
     /* OperatorWord */ .highlight .ow { color: #f92672 }
     /* GenericDeleted */ .highlight .gd { color: #f92672 }
-    /* GenericEmph */ .highlight .ge { font-style: italic }
+    /* GenericEmph */ .highlight .ge { }
     /* GenericStrong */ .highlight .gs { font-weight: bold }
 
     .highlight {
@@ -171,6 +171,7 @@
         /* NameException */ .ne,
         /* NameFunction */ .nf,
         /* NameOther */ .nx,
+        /* NameOther */ .n,
         /* GenericInserted */ .gi,
         {
             @apply text-blue-200;

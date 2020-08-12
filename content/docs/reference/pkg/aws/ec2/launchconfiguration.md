@@ -25,7 +25,8 @@ with `name_prefix`.  Example:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
+    mostRecent: true,
     filters: [
         {
             name: "name",
@@ -36,25 +37,25 @@ const ubuntu = pulumi.output(aws.getAmi({
             values: ["hvm"],
         },
     ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
-    instanceType: "t2.micro",
+    owners: ["099720109477"],
+});
+const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     namePrefix: "lc-example-",
+    imageId: ubuntu.then(ubuntu => ubuntu.id),
+    instanceType: "t2.micro",
 });
 const bar = new aws.autoscaling.Group("bar", {
     launchConfiguration: asConf.name,
-    maxSize: 2,
     minSize: 1,
+    maxSize: 2,
 });
 ```
 ```python
 import pulumi
 import pulumi_aws as aws
 
-ubuntu = aws.get_ami(filters=[
+ubuntu = aws.get_ami(most_recent=True,
+    filters=[
         {
             "name": "name",
             "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
@@ -64,16 +65,15 @@ ubuntu = aws.get_ami(filters=[
             "values": ["hvm"],
         },
     ],
-    most_recent=True,
     owners=["099720109477"])
 as_conf = aws.ec2.LaunchConfiguration("asConf",
+    name_prefix="lc-example-",
     image_id=ubuntu.id,
-    instance_type="t2.micro",
-    name_prefix="lc-example-")
+    instance_type="t2.micro")
 bar = aws.autoscaling.Group("bar",
     launch_configuration=as_conf.name,
-    max_size=2,
-    min_size=1)
+    min_size=1,
+    max_size=2)
 ```
 ```csharp
 using Pulumi;
@@ -85,6 +85,7 @@ class MyStack : Stack
     {
         var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
         {
+            MostRecent = true,
             Filters = 
             {
                 new Aws.Inputs.GetAmiFilterArgs
@@ -104,7 +105,6 @@ class MyStack : Stack
                     },
                 },
             },
-            MostRecent = true,
             Owners = 
             {
                 "099720109477",
@@ -112,15 +112,15 @@ class MyStack : Stack
         }));
         var asConf = new Aws.Ec2.LaunchConfiguration("asConf", new Aws.Ec2.LaunchConfigurationArgs
         {
+            NamePrefix = "lc-example-",
             ImageId = ubuntu.Apply(ubuntu => ubuntu.Id),
             InstanceType = "t2.micro",
-            NamePrefix = "lc-example-",
         });
         var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
         {
             LaunchConfiguration = asConf.Name,
-            MaxSize = 2,
             MinSize = 1,
+            MaxSize = 2,
         });
     }
 
@@ -130,9 +130,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -140,6 +140,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
 		ubuntu, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			MostRecent: &opt0,
 			Filters: []aws.GetAmiFilter{
 				aws.GetAmiFilter{
 					Name: "name",
@@ -154,7 +155,6 @@ func main() {
 					},
 				},
 			},
-			MostRecent: &opt0,
 			Owners: []string{
 				"099720109477",
 			},
@@ -163,17 +163,17 @@ func main() {
 			return err
 		}
 		asConf, err := ec2.NewLaunchConfiguration(ctx, "asConf", &ec2.LaunchConfigurationArgs{
+			NamePrefix:   pulumi.String("lc-example-"),
 			ImageId:      pulumi.String(ubuntu.Id),
 			InstanceType: pulumi.String("t2.micro"),
-			NamePrefix:   pulumi.String("lc-example-"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = autoscaling.NewGroup(ctx, "bar", &autoscaling.GroupArgs{
 			LaunchConfiguration: asConf.Name,
-			MaxSize:             pulumi.Int(2),
 			MinSize:             pulumi.Int(1),
+			MaxSize:             pulumi.Int(2),
 		})
 		if err != nil {
 			return err
@@ -200,7 +200,8 @@ for more information or how to launch [Spot Instances](https://www.terraform.io/
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
+    mostRecent: true,
     filters: [
         {
             name: "name",
@@ -211,23 +212,21 @@ const ubuntu = pulumi.output(aws.getAmi({
             values: ["hvm"],
         },
     ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
+    owners: ["099720109477"],
+});
+const asConf = new aws.ec2.LaunchConfiguration("asConf", {
+    imageId: ubuntu.then(ubuntu => ubuntu.id),
     instanceType: "m4.large",
     spotPrice: "0.001",
 });
-const bar = new aws.autoscaling.Group("bar", {
-    launchConfiguration: asConf.name,
-});
+const bar = new aws.autoscaling.Group("bar", {launchConfiguration: asConf.name});
 ```
 ```python
 import pulumi
 import pulumi_aws as aws
 
-ubuntu = aws.get_ami(filters=[
+ubuntu = aws.get_ami(most_recent=True,
+    filters=[
         {
             "name": "name",
             "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
@@ -237,7 +236,6 @@ ubuntu = aws.get_ami(filters=[
             "values": ["hvm"],
         },
     ],
-    most_recent=True,
     owners=["099720109477"])
 as_conf = aws.ec2.LaunchConfiguration("asConf",
     image_id=ubuntu.id,
@@ -255,6 +253,7 @@ class MyStack : Stack
     {
         var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
         {
+            MostRecent = true,
             Filters = 
             {
                 new Aws.Inputs.GetAmiFilterArgs
@@ -274,7 +273,6 @@ class MyStack : Stack
                     },
                 },
             },
-            MostRecent = true,
             Owners = 
             {
                 "099720109477",
@@ -298,9 +296,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -308,6 +306,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
 		ubuntu, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			MostRecent: &opt0,
 			Filters: []aws.GetAmiFilter{
 				aws.GetAmiFilter{
 					Name: "name",
@@ -322,7 +321,6 @@ func main() {
 					},
 				},
 			},
-			MostRecent: &opt0,
 			Owners: []string{
 				"099720109477",
 			},
@@ -421,6 +419,7 @@ class MyStack : Stack
     {
         var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
         {
+            MostRecent = true,
             Filters = 
             {
                 new Aws.Inputs.GetAmiFilterArgs
@@ -440,7 +439,6 @@ class MyStack : Stack
                     },
                 },
             },
-            MostRecent = true,
             Owners = 
             {
                 "099720109477",
@@ -463,8 +461,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -472,6 +470,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
 		ubuntu, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			MostRecent: &opt0,
 			Filters: []aws.GetAmiFilter{
 				aws.GetAmiFilter{
 					Name: "name",
@@ -486,7 +485,6 @@ func main() {
 					},
 				},
 			},
-			MostRecent: &opt0,
 			Owners: []string{
 				"099720109477",
 			},
@@ -513,7 +511,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-ubuntu = aws.get_ami(filters=[
+ubuntu = aws.get_ami(most_recent=True,
+    filters=[
         {
             "name": "name",
             "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
@@ -523,7 +522,6 @@ ubuntu = aws.get_ami(filters=[
             "values": ["hvm"],
         },
     ],
-    most_recent=True,
     owners=["099720109477"])
 as_conf = aws.ec2.LaunchConfiguration("asConf",
     image_id=ubuntu.id,
@@ -538,7 +536,8 @@ as_conf = aws.ec2.LaunchConfiguration("asConf",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
+    mostRecent: true,
     filters: [
         {
             name: "name",
@@ -549,11 +548,10 @@ const ubuntu = pulumi.output(aws.getAmi({
             values: ["hvm"],
         },
     ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
+    owners: ["099720109477"],
+});
+const asConf = new aws.ec2.LaunchConfiguration("asConf", {
+    imageId: ubuntu.then(ubuntu => ubuntu.id),
     instanceType: "t2.micro",
 });
 ```
@@ -576,7 +574,7 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfiguration">NewLaunchConfiguration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfiguration">NewLaunchConfiguration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -650,7 +648,7 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -670,7 +668,7 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -680,7 +678,7 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1779,7 +1777,7 @@ Get an existing LaunchConfiguration resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2843,7 +2841,7 @@ device of the instance. See Block Devices below for details.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEbsBlockDevice.html">output</a> API doc for this type.
@@ -3209,7 +3207,7 @@ device of the instance. See Block Devices below for details.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEphemeralBlockDevice.html">output</a> API doc for this type.
@@ -3335,7 +3333,7 @@ device of the instance. See Block Devices below for details.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationRootBlockDevice.html">output</a> API doc for this type.

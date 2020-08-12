@@ -34,32 +34,32 @@ class MyStack : Stack
         });
         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2a",
             CidrBlock = "10.0.1.0/24",
-            VpcId = main.Id,
         });
         var barSubnet = new Aws.Ec2.Subnet("barSubnet", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2b",
             CidrBlock = "10.0.2.0/24",
-            VpcId = main.Id,
         });
         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
         {
             Password = "SuperSecretPassw0rd",
             Size = "Small",
-            Tags = 
-            {
-                { "Project", "foo" },
-            },
             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
             {
+                VpcId = main.Id,
                 SubnetIds = 
                 {
                     foo.Id,
                     barSubnet.Id,
                 },
-                VpcId = main.Id,
+            },
+            Tags = 
+            {
+                { "Project", "foo" },
             },
         });
     }
@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,17 +88,17 @@ func main() {
 			return err
 		}
 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2a"),
 			CidrBlock:        pulumi.String("10.0.1.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		barSubnet, err := ec2.NewSubnet(ctx, "barSubnet", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2b"),
 			CidrBlock:        pulumi.String("10.0.2.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
@@ -106,15 +106,15 @@ func main() {
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
 			Password: pulumi.String("SuperSecretPassw0rd"),
 			Size:     pulumi.String("Small"),
-			Tags: pulumi.StringMap{
-				"Project": pulumi.String("foo"),
-			},
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+				VpcId: main.ID(),
 				SubnetIds: pulumi.StringArray{
 					foo.ID(),
 					barSubnet.ID(),
 				},
-				VpcId: main.ID(),
+			},
+			Tags: pulumi.StringMap{
+				"Project": pulumi.String("foo"),
 			},
 		})
 		if err != nil {
@@ -134,25 +134,25 @@ import pulumi_aws as aws
 
 main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
 foo = aws.ec2.Subnet("foo",
+    vpc_id=main.id,
     availability_zone="us-west-2a",
-    cidr_block="10.0.1.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.1.0/24")
 bar_subnet = aws.ec2.Subnet("barSubnet",
+    vpc_id=main.id,
     availability_zone="us-west-2b",
-    cidr_block="10.0.2.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.2.0/24")
 bar_directory = aws.directoryservice.Directory("barDirectory",
     password="SuperSecretPassw0rd",
     size="Small",
-    tags={
-        "Project": "foo",
-    },
     vpc_settings={
+        "vpc_id": main.id,
         "subnet_ids": [
             foo.id,
             bar_subnet.id,
         ],
-        "vpc_id": main.id,
+    },
+    tags={
+        "Project": "foo",
     })
 ```
 
@@ -164,31 +164,29 @@ bar_directory = aws.directoryservice.Directory("barDirectory",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = new aws.ec2.Vpc("main", {
-    cidrBlock: "10.0.0.0/16",
-});
+const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
 const foo = new aws.ec2.Subnet("foo", {
+    vpcId: main.id,
     availabilityZone: "us-west-2a",
     cidrBlock: "10.0.1.0/24",
-    vpcId: main.id,
 });
-const barSubnet = new aws.ec2.Subnet("bar", {
+const barSubnet = new aws.ec2.Subnet("barSubnet", {
+    vpcId: main.id,
     availabilityZone: "us-west-2b",
     cidrBlock: "10.0.2.0/24",
-    vpcId: main.id,
 });
-const barDirectory = new aws.directoryservice.Directory("bar", {
+const barDirectory = new aws.directoryservice.Directory("barDirectory", {
     password: "SuperSecretPassw0rd",
     size: "Small",
-    tags: {
-        Project: "foo",
-    },
     vpcSettings: {
+        vpcId: main.id,
         subnetIds: [
             foo.id,
             barSubnet.id,
         ],
-        vpcId: main.id,
+    },
+    tags: {
+        Project: "foo",
     },
 });
 ```
@@ -211,33 +209,33 @@ class MyStack : Stack
         });
         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2a",
             CidrBlock = "10.0.1.0/24",
-            VpcId = main.Id,
         });
         var barSubnet = new Aws.Ec2.Subnet("barSubnet", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2b",
             CidrBlock = "10.0.2.0/24",
-            VpcId = main.Id,
         });
         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
         {
-            Edition = "Standard",
             Password = "SuperSecretPassw0rd",
-            Tags = 
-            {
-                { "Project", "foo" },
-            },
+            Edition = "Standard",
             Type = "MicrosoftAD",
             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
             {
+                VpcId = main.Id,
                 SubnetIds = 
                 {
                     foo.Id,
                     barSubnet.Id,
                 },
-                VpcId = main.Id,
+            },
+            Tags = 
+            {
+                { "Project", "foo" },
             },
         });
     }
@@ -252,8 +250,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -266,34 +264,34 @@ func main() {
 			return err
 		}
 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2a"),
 			CidrBlock:        pulumi.String("10.0.1.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		barSubnet, err := ec2.NewSubnet(ctx, "barSubnet", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2b"),
 			CidrBlock:        pulumi.String("10.0.2.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
-			Edition:  pulumi.String("Standard"),
 			Password: pulumi.String("SuperSecretPassw0rd"),
-			Tags: pulumi.StringMap{
-				"Project": pulumi.String("foo"),
-			},
-			Type: pulumi.String("MicrosoftAD"),
+			Edition:  pulumi.String("Standard"),
+			Type:     pulumi.String("MicrosoftAD"),
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+				VpcId: main.ID(),
 				SubnetIds: pulumi.StringArray{
 					foo.ID(),
 					barSubnet.ID(),
 				},
-				VpcId: main.ID(),
+			},
+			Tags: pulumi.StringMap{
+				"Project": pulumi.String("foo"),
 			},
 		})
 		if err != nil {
@@ -313,26 +311,26 @@ import pulumi_aws as aws
 
 main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
 foo = aws.ec2.Subnet("foo",
+    vpc_id=main.id,
     availability_zone="us-west-2a",
-    cidr_block="10.0.1.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.1.0/24")
 bar_subnet = aws.ec2.Subnet("barSubnet",
+    vpc_id=main.id,
     availability_zone="us-west-2b",
-    cidr_block="10.0.2.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.2.0/24")
 bar_directory = aws.directoryservice.Directory("barDirectory",
-    edition="Standard",
     password="SuperSecretPassw0rd",
-    tags={
-        "Project": "foo",
-    },
+    edition="Standard",
     type="MicrosoftAD",
     vpc_settings={
+        "vpc_id": main.id,
         "subnet_ids": [
             foo.id,
             bar_subnet.id,
         ],
-        "vpc_id": main.id,
+    },
+    tags={
+        "Project": "foo",
     })
 ```
 
@@ -344,32 +342,30 @@ bar_directory = aws.directoryservice.Directory("barDirectory",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = new aws.ec2.Vpc("main", {
-    cidrBlock: "10.0.0.0/16",
-});
+const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
 const foo = new aws.ec2.Subnet("foo", {
+    vpcId: main.id,
     availabilityZone: "us-west-2a",
     cidrBlock: "10.0.1.0/24",
-    vpcId: main.id,
 });
-const barSubnet = new aws.ec2.Subnet("bar", {
+const barSubnet = new aws.ec2.Subnet("barSubnet", {
+    vpcId: main.id,
     availabilityZone: "us-west-2b",
     cidrBlock: "10.0.2.0/24",
-    vpcId: main.id,
 });
-const barDirectory = new aws.directoryservice.Directory("bar", {
-    edition: "Standard",
+const barDirectory = new aws.directoryservice.Directory("barDirectory", {
     password: "SuperSecretPassw0rd",
-    tags: {
-        Project: "foo",
-    },
+    edition: "Standard",
     type: "MicrosoftAD",
     vpcSettings: {
+        vpcId: main.id,
         subnetIds: [
             foo.id,
             barSubnet.id,
         ],
-        vpcId: main.id,
+    },
+    tags: {
+        Project: "foo",
     },
 });
 ```
@@ -392,18 +388,21 @@ class MyStack : Stack
         });
         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2a",
             CidrBlock = "10.0.1.0/24",
-            VpcId = main.Id,
         });
         var bar = new Aws.Ec2.Subnet("bar", new Aws.Ec2.SubnetArgs
         {
+            VpcId = main.Id,
             AvailabilityZone = "us-west-2b",
             CidrBlock = "10.0.2.0/24",
-            VpcId = main.Id,
         });
         var connector = new Aws.DirectoryService.Directory("connector", new Aws.DirectoryService.DirectoryArgs
         {
+            Password = "SuperSecretPassw0rd",
+            Size = "Small",
+            Type = "ADConnector",
             ConnectSettings = new Aws.DirectoryService.Inputs.DirectoryConnectSettingsArgs
             {
                 CustomerDnsIps = 
@@ -418,9 +417,6 @@ class MyStack : Stack
                 },
                 VpcId = main.Id,
             },
-            Password = "SuperSecretPassw0rd",
-            Size = "Small",
-            Type = "ADConnector",
         });
     }
 
@@ -434,8 +430,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -448,22 +444,25 @@ func main() {
 			return err
 		}
 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2a"),
 			CidrBlock:        pulumi.String("10.0.1.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
+			VpcId:            main.ID(),
 			AvailabilityZone: pulumi.String("us-west-2b"),
 			CidrBlock:        pulumi.String("10.0.2.0/24"),
-			VpcId:            main.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = directoryservice.NewDirectory(ctx, "connector", &directoryservice.DirectoryArgs{
+			Password: pulumi.String("SuperSecretPassw0rd"),
+			Size:     pulumi.String("Small"),
+			Type:     pulumi.String("ADConnector"),
 			ConnectSettings: &directoryservice.DirectoryConnectSettingsArgs{
 				CustomerDnsIps: pulumi.StringArray{
 					pulumi.String("A.B.C.D"),
@@ -475,9 +474,6 @@ func main() {
 				},
 				VpcId: main.ID(),
 			},
-			Password: pulumi.String("SuperSecretPassw0rd"),
-			Size:     pulumi.String("Small"),
-			Type:     pulumi.String("ADConnector"),
 		})
 		if err != nil {
 			return err
@@ -496,14 +492,17 @@ import pulumi_aws as aws
 
 main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
 foo = aws.ec2.Subnet("foo",
+    vpc_id=main.id,
     availability_zone="us-west-2a",
-    cidr_block="10.0.1.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.1.0/24")
 bar = aws.ec2.Subnet("bar",
+    vpc_id=main.id,
     availability_zone="us-west-2b",
-    cidr_block="10.0.2.0/24",
-    vpc_id=main.id)
+    cidr_block="10.0.2.0/24")
 connector = aws.directoryservice.Directory("connector",
+    password="SuperSecretPassw0rd",
+    size="Small",
+    type="ADConnector",
     connect_settings={
         "customerDnsIps": ["A.B.C.D"],
         "customerUsername": "Admin",
@@ -512,10 +511,7 @@ connector = aws.directoryservice.Directory("connector",
             bar.id,
         ],
         "vpc_id": main.id,
-    },
-    password="SuperSecretPassw0rd",
-    size="Small",
-    type="ADConnector")
+    })
 ```
 
 {{% /example %}}
@@ -526,20 +522,21 @@ connector = aws.directoryservice.Directory("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = new aws.ec2.Vpc("main", {
-    cidrBlock: "10.0.0.0/16",
-});
+const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
 const foo = new aws.ec2.Subnet("foo", {
+    vpcId: main.id,
     availabilityZone: "us-west-2a",
     cidrBlock: "10.0.1.0/24",
-    vpcId: main.id,
 });
 const bar = new aws.ec2.Subnet("bar", {
+    vpcId: main.id,
     availabilityZone: "us-west-2b",
     cidrBlock: "10.0.2.0/24",
-    vpcId: main.id,
 });
 const connector = new aws.directoryservice.Directory("connector", {
+    password: "SuperSecretPassw0rd",
+    size: "Small",
+    type: "ADConnector",
     connectSettings: {
         customerDnsIps: ["A.B.C.D"],
         customerUsername: "Admin",
@@ -549,9 +546,6 @@ const connector = new aws.directoryservice.Directory("connector", {
         ],
         vpcId: main.id,
     },
-    password: "SuperSecretPassw0rd",
-    size: "Small",
-    type: "ADConnector",
 });
 ```
 
@@ -573,7 +567,7 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#Directory">NewDirectory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#Directory">NewDirectory</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -647,7 +641,7 @@ const connector = new aws.directoryservice.Directory("connector", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -667,7 +661,7 @@ const connector = new aws.directoryservice.Directory("connector", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -677,7 +671,7 @@ const connector = new aws.directoryservice.Directory("connector", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1524,7 +1518,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2336,7 +2330,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Inputs.DirectoryConnectSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Outputs.DirectoryConnectSettings.html">output</a> API doc for this type.
@@ -2642,7 +2636,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Outputs.DirectoryVpcSettings.html">output</a> API doc for this type.

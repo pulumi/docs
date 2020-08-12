@@ -29,18 +29,6 @@ class MyStack : Stack
         var exampleRestApi = new Aws.ApiGateway.RestApi("exampleRestApi", new Aws.ApiGateway.RestApiArgs
         {
         });
-        var exampleDocumentationVersion = new Aws.ApiGateway.DocumentationVersion("exampleDocumentationVersion", new Aws.ApiGateway.DocumentationVersionArgs
-        {
-            Description = "Example description",
-            RestApiId = exampleRestApi.Id,
-            Version = "example_version",
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                "aws_api_gateway_documentation_part.example",
-            },
-        });
         var exampleDocumentationPart = new Aws.ApiGateway.DocumentationPart("exampleDocumentationPart", new Aws.ApiGateway.DocumentationPartArgs
         {
             Location = new Aws.ApiGateway.Inputs.DocumentationPartLocationArgs
@@ -49,6 +37,18 @@ class MyStack : Stack
             },
             Properties = "{\"description\":\"Example\"}",
             RestApiId = exampleRestApi.Id,
+        });
+        var exampleDocumentationVersion = new Aws.ApiGateway.DocumentationVersion("exampleDocumentationVersion", new Aws.ApiGateway.DocumentationVersionArgs
+        {
+            Version = "example_version",
+            RestApiId = exampleRestApi.Id,
+            Description = "Example description",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleDocumentationPart,
+            },
         });
     }
 
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -72,23 +72,23 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = apigateway.NewDocumentationVersion(ctx, "exampleDocumentationVersion", &apigateway.DocumentationVersionArgs{
-			Description: pulumi.String("Example description"),
-			RestApiId:   exampleRestApi.ID(),
-			Version:     pulumi.String("example_version"),
-		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_api_gateway_documentation_part.example",
-		}))
-		if err != nil {
-			return err
-		}
-		_, err = apigateway.NewDocumentationPart(ctx, "exampleDocumentationPart", &apigateway.DocumentationPartArgs{
+		exampleDocumentationPart, err := apigateway.NewDocumentationPart(ctx, "exampleDocumentationPart", &apigateway.DocumentationPartArgs{
 			Location: &apigateway.DocumentationPartLocationArgs{
 				Type: pulumi.String("API"),
 			},
 			Properties: pulumi.String("{\"description\":\"Example\"}"),
 			RestApiId:  exampleRestApi.ID(),
 		})
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewDocumentationVersion(ctx, "exampleDocumentationVersion", &apigateway.DocumentationVersionArgs{
+			Version:     pulumi.String("example_version"),
+			RestApiId:   exampleRestApi.ID(),
+			Description: pulumi.String("Example description"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleDocumentationPart,
+		}))
 		if err != nil {
 			return err
 		}
@@ -105,17 +105,17 @@ import pulumi
 import pulumi_aws as aws
 
 example_rest_api = aws.apigateway.RestApi("exampleRestApi")
-example_documentation_version = aws.apigateway.DocumentationVersion("exampleDocumentationVersion",
-    description="Example description",
-    rest_api_id=example_rest_api.id,
-    version="example_version",
-    opts=ResourceOptions(depends_on=["aws_api_gateway_documentation_part.example"]))
 example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentationPart",
     location={
         "type": "API",
     },
     properties="{\"description\":\"Example\"}",
     rest_api_id=example_rest_api.id)
+example_documentation_version = aws.apigateway.DocumentationVersion("exampleDocumentationVersion",
+    version="example_version",
+    rest_api_id=example_rest_api.id,
+    description="Example description",
+    opts=ResourceOptions(depends_on=[example_documentation_part]))
 ```
 
 {{% /example %}}
@@ -126,19 +126,21 @@ example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentat
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleRestApi = new aws.apigateway.RestApi("example", {});
-const exampleDocumentationPart = new aws.apigateway.DocumentationPart("example", {
+const exampleRestApi = new aws.apigateway.RestApi("exampleRestApi", {});
+const exampleDocumentationPart = new aws.apigateway.DocumentationPart("exampleDocumentationPart", {
     location: {
         type: "API",
     },
     properties: "{\"description\":\"Example\"}",
     restApiId: exampleRestApi.id,
 });
-const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("example", {
-    description: "Example description",
-    restApiId: exampleRestApi.id,
+const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exampleDocumentationVersion", {
     version: "example_version",
-}, { dependsOn: [exampleDocumentationPart] });
+    restApiId: exampleRestApi.id,
+    description: "Example description",
+}, {
+    dependsOn: [exampleDocumentationPart],
+});
 ```
 
 {{% /example %}}
@@ -159,7 +161,7 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersion">NewDocumentationVersion</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersionArgs">DocumentationVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersion">DocumentationVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersion">NewDocumentationVersion</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersionArgs">DocumentationVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersion">DocumentationVersion</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -233,7 +235,7 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -253,7 +255,7 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersionArgs">DocumentationVersionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersionArgs">DocumentationVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -263,7 +265,7 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -582,7 +584,7 @@ Get an existing DocumentationVersion resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDocumentationVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersionState">DocumentationVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationVersion">DocumentationVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDocumentationVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersionState">DocumentationVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DocumentationVersion">DocumentationVersion</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

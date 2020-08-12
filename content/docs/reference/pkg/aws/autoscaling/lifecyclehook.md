@@ -45,18 +45,18 @@ class MyStack : Stack
                 "us-west-2a",
             },
             HealthCheckType = "EC2",
+            TerminationPolicies = 
+            {
+                "OldestInstance",
+            },
             Tags = 
             {
                 new Aws.AutoScaling.Inputs.GroupTagArgs
                 {
                     Key = "Foo",
-                    PropagateAtLaunch = true,
                     Value = "foo-bar",
+                    PropagateAtLaunch = true,
                 },
-            },
-            TerminationPolicies = 
-            {
-                "OldestInstance",
             },
         });
         var foobarLifecycleHook = new Aws.AutoScaling.LifecycleHook("foobarLifecycleHook", new Aws.AutoScaling.LifecycleHookArgs
@@ -68,7 +68,6 @@ class MyStack : Stack
             NotificationMetadata = @"{
   ""foo"": ""bar""
 }
-
 ",
             NotificationTargetArn = "arn:aws:sqs:us-east-1:444455556666:queue1*",
             RoleArn = "arn:aws:iam::123456789012:role/S3Access",
@@ -87,7 +86,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,15 +97,15 @@ func main() {
 				pulumi.String("us-west-2a"),
 			},
 			HealthCheckType: pulumi.String("EC2"),
+			TerminationPolicies: pulumi.StringArray{
+				pulumi.String("OldestInstance"),
+			},
 			Tags: autoscaling.GroupTagArray{
 				&autoscaling.GroupTagArgs{
 					Key:               pulumi.String("Foo"),
-					PropagateAtLaunch: pulumi.Bool(true),
 					Value:             pulumi.String("foo-bar"),
+					PropagateAtLaunch: pulumi.Bool(true),
 				},
-			},
-			TerminationPolicies: pulumi.StringArray{
-				pulumi.String("OldestInstance"),
 			},
 		})
 		if err != nil {
@@ -117,7 +116,7 @@ func main() {
 			DefaultResult:         pulumi.String("CONTINUE"),
 			HeartbeatTimeout:      pulumi.Int(2000),
 			LifecycleTransition:   pulumi.String("autoscaling:EC2_INSTANCE_LAUNCHING"),
-			NotificationMetadata:  pulumi.String(fmt.Sprintf("%v%v%v%v", "{\n", "  \"foo\": \"bar\"\n", "}\n", "\n")),
+			NotificationMetadata:  pulumi.String(fmt.Sprintf("%v%v%v", "{\n", "  \"foo\": \"bar\"\n", "}\n")),
 			NotificationTargetArn: pulumi.String("arn:aws:sqs:us-east-1:444455556666:queue1*"),
 			RoleArn:               pulumi.String("arn:aws:iam::123456789012:role/S3Access"),
 		})
@@ -139,12 +138,12 @@ import pulumi_aws as aws
 foobar_group = aws.autoscaling.Group("foobarGroup",
     availability_zones=["us-west-2a"],
     health_check_type="EC2",
+    termination_policies=["OldestInstance"],
     tags=[{
         "key": "Foo",
-        "propagateAtLaunch": True,
         "value": "foo-bar",
-    }],
-    termination_policies=["OldestInstance"])
+        "propagateAtLaunch": True,
+    }])
 foobar_lifecycle_hook = aws.autoscaling.LifecycleHook("foobarLifecycleHook",
     autoscaling_group_name=foobar_group.name,
     default_result="CONTINUE",
@@ -153,7 +152,6 @@ foobar_lifecycle_hook = aws.autoscaling.LifecycleHook("foobarLifecycleHook",
     notification_metadata="""{
   "foo": "bar"
 }
-
 """,
     notification_target_arn="arn:aws:sqs:us-east-1:444455556666:queue1*",
     role_arn="arn:aws:iam::123456789012:role/S3Access")
@@ -167,17 +165,17 @@ foobar_lifecycle_hook = aws.autoscaling.LifecycleHook("foobarLifecycleHook",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foobarGroup = new aws.autoscaling.Group("foobar", {
+const foobarGroup = new aws.autoscaling.Group("foobarGroup", {
     availabilityZones: ["us-west-2a"],
     healthCheckType: "EC2",
+    terminationPolicies: ["OldestInstance"],
     tags: [{
         key: "Foo",
-        propagateAtLaunch: true,
         value: "foo-bar",
+        propagateAtLaunch: true,
     }],
-    terminationPolicies: ["OldestInstance"],
 });
-const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
+const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobarLifecycleHook", {
     autoscalingGroupName: foobarGroup.name,
     defaultResult: "CONTINUE",
     heartbeatTimeout: 2000,
@@ -209,7 +207,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHook">NewLifecycleHook</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHook">NewLifecycleHook</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -283,7 +281,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -303,7 +301,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -313,7 +311,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -852,7 +850,7 @@ Get an existing LifecycleHook resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLifecycleHook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHookState">LifecycleHookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLifecycleHook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHookState">LifecycleHookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

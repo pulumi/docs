@@ -32,11 +32,12 @@ class MyStack : Stack
         });
         var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
         {
-            PgpKey = "keybase:some_person_that_exists",
             User = lbUser.Name,
+            PgpKey = "keybase:some_person_that_exists",
         });
         var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
         {
+            User = lbUser.Name,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -49,9 +50,7 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
-            User = lbUser.Name,
         });
         this.Secret = lbAccessKey.EncryptedSecret;
     }
@@ -70,7 +69,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,15 +82,15 @@ func main() {
 			return err
 		}
 		lbAccessKey, err := iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
-			PgpKey: pulumi.String("keybase:some_person_that_exists"),
 			User:   lbUser.Name,
+			PgpKey: pulumi.String("keybase:some_person_that_exists"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
 			User:   lbUser.Name,
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -111,9 +110,10 @@ import pulumi_aws as aws
 
 lb_user = aws.iam.User("lbUser", path="/system/")
 lb_access_key = aws.iam.AccessKey("lbAccessKey",
-    pgp_key="keybase:some_person_that_exists",
-    user=lb_user.name)
+    user=lb_user.name,
+    pgp_key="keybase:some_person_that_exists")
 lb_ro = aws.iam.UserPolicy("lbRo",
+    user=lb_user.name,
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -126,9 +126,7 @@ lb_ro = aws.iam.UserPolicy("lbRo",
     }
   ]
 }
-
-""",
-    user=lb_user.name)
+""")
 pulumi.export("secret", lb_access_key.encrypted_secret)
 ```
 
@@ -140,14 +138,13 @@ pulumi.export("secret", lb_access_key.encrypted_secret)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const lbUser = new aws.iam.User("lb", {
-    path: "/system/",
-});
-const lbAccessKey = new aws.iam.AccessKey("lb", {
-    pgpKey: "keybase:some_person_that_exists",
+const lbUser = new aws.iam.User("lbUser", {path: "/system/"});
+const lbAccessKey = new aws.iam.AccessKey("lbAccessKey", {
     user: lbUser.name,
+    pgpKey: "keybase:some_person_that_exists",
 });
-const lbRo = new aws.iam.UserPolicy("lb_ro", {
+const lbRo = new aws.iam.UserPolicy("lbRo", {
+    user: lbUser.name,
     policy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -161,9 +158,7 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
   ]
 }
 `,
-    user: lbUser.name,
 });
-
 export const secret = lbAccessKey.encryptedSecret;
 ```
 
@@ -185,7 +180,7 @@ export const secret = lbAccessKey.encryptedSecret;
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKey">NewAccessKey</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKey">NewAccessKey</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -259,7 +254,7 @@ export const secret = lbAccessKey.encryptedSecret;
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -279,7 +274,7 @@ export const secret = lbAccessKey.encryptedSecret;
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,7 +284,7 @@ export const secret = lbAccessKey.encryptedSecret;
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -544,9 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -585,19 +578,6 @@ prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="sessmtppassword_csharp">
-<a href="#sessmtppassword_csharp" style="color: inherit; text-decoration: inherit;">Ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="sessmtppasswordv4_csharp">
@@ -627,9 +607,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -668,19 +646,6 @@ prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="sessmtppassword_go">
-<a href="#sessmtppassword_go" style="color: inherit; text-decoration: inherit;">Ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="sessmtppasswordv4_go">
@@ -710,9 +675,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -751,19 +714,6 @@ prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="sessmtppassword_nodejs">
-<a href="#sessmtppassword_nodejs" style="color: inherit; text-decoration: inherit;">ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="sessmtppasswordv4_nodejs">
@@ -793,9 +743,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -834,19 +782,6 @@ prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="ses_smtp_password_python">
-<a href="#ses_smtp_password_python" style="color: inherit; text-decoration: inherit;">ses_<wbr>smtp_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="ses_smtp_password_v4_python">
@@ -880,11 +815,11 @@ Get an existing AccessKey resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>encrypted_secret=None<span class="p">, </span>key_fingerprint=None<span class="p">, </span>pgp_key=None<span class="p">, </span>secret=None<span class="p">, </span>ses_smtp_password=None<span class="p">, </span>ses_smtp_password_v4=None<span class="p">, </span>status=None<span class="p">, </span>user=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>encrypted_secret=None<span class="p">, </span>key_fingerprint=None<span class="p">, </span>pgp_key=None<span class="p">, </span>secret=None<span class="p">, </span>ses_smtp_password_v4=None<span class="p">, </span>status=None<span class="p">, </span>user=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKeyState">AccessKeyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKeyState">AccessKeyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1002,9 +937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1045,19 +978,6 @@ judiciously. Alternatively, you may supply a `pgp_key` instead, which will
 prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_sessmtppassword_csharp">
-<a href="#state_sessmtppassword_csharp" style="color: inherit; text-decoration: inherit;">Ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1111,9 +1031,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1154,19 +1072,6 @@ judiciously. Alternatively, you may supply a `pgp_key` instead, which will
 prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_sessmtppassword_go">
-<a href="#state_sessmtppassword_go" style="color: inherit; text-decoration: inherit;">Ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1220,9 +1125,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1263,19 +1166,6 @@ judiciously. Alternatively, you may supply a `pgp_key` instead, which will
 prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_sessmtppassword_nodejs">
-<a href="#state_sessmtppassword_nodejs" style="color: inherit; text-decoration: inherit;">ses<wbr>Smtp<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1329,9 +1219,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
-> **NOTE:** The encrypted secret may be decrypted using the command line,
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1372,19 +1260,6 @@ judiciously. Alternatively, you may supply a `pgp_key` instead, which will
 prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_ses_smtp_password_python">
-<a href="#state_ses_smtp_password_python" style="color: inherit; text-decoration: inherit;">ses_<wbr>smtp_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
-password by applying [AWS's documented conversion
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}AWS SigV2 for SES SMTP passwords isy deprecated.
-Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP password instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

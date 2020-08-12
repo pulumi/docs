@@ -28,19 +28,19 @@ class MyStack : Stack
         var defaultCluster = new Aws.RedShift.Cluster("defaultCluster", new Aws.RedShift.ClusterArgs
         {
             ClusterIdentifier = "tf-redshift-cluster",
-            ClusterType = "single-node",
             DatabaseName = "mydb",
-            MasterPassword = "Mustbe8characters",
             MasterUsername = "foo",
+            MasterPassword = "Mustbe8characters",
             NodeType = "dc1.large",
+            ClusterType = "single-node",
         });
         var defaultSnapshotSchedule = new Aws.RedShift.SnapshotSchedule("defaultSnapshotSchedule", new Aws.RedShift.SnapshotScheduleArgs
         {
+            Identifier = "tf-redshift-snapshot-schedule",
             Definitions = 
             {
                 "rate(12 hours)",
             },
-            Identifier = "tf-redshift-snapshot-schedule",
         });
         var defaultSnapshotScheduleAssociation = new Aws.RedShift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation", new Aws.RedShift.SnapshotScheduleAssociationArgs
         {
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,20 +67,20 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultCluster, err := redshift.NewCluster(ctx, "defaultCluster", &redshift.ClusterArgs{
 			ClusterIdentifier: pulumi.String("tf-redshift-cluster"),
-			ClusterType:       pulumi.String("single-node"),
 			DatabaseName:      pulumi.String("mydb"),
-			MasterPassword:    pulumi.String("Mustbe8characters"),
 			MasterUsername:    pulumi.String("foo"),
+			MasterPassword:    pulumi.String("Mustbe8characters"),
 			NodeType:          pulumi.String("dc1.large"),
+			ClusterType:       pulumi.String("single-node"),
 		})
 		if err != nil {
 			return err
 		}
 		defaultSnapshotSchedule, err := redshift.NewSnapshotSchedule(ctx, "defaultSnapshotSchedule", &redshift.SnapshotScheduleArgs{
+			Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
 			Definitions: pulumi.StringArray{
 				pulumi.String("rate(12 hours)"),
 			},
-			Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
 		})
 		if err != nil {
 			return err
@@ -106,14 +106,14 @@ import pulumi_aws as aws
 
 default_cluster = aws.redshift.Cluster("defaultCluster",
     cluster_identifier="tf-redshift-cluster",
-    cluster_type="single-node",
     database_name="mydb",
-    master_password="Mustbe8characters",
     master_username="foo",
-    node_type="dc1.large")
+    master_password="Mustbe8characters",
+    node_type="dc1.large",
+    cluster_type="single-node")
 default_snapshot_schedule = aws.redshift.SnapshotSchedule("defaultSnapshotSchedule",
-    definitions=["rate(12 hours)"],
-    identifier="tf-redshift-snapshot-schedule")
+    identifier="tf-redshift-snapshot-schedule",
+    definitions=["rate(12 hours)"])
 default_snapshot_schedule_association = aws.redshift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation",
     cluster_identifier=default_cluster.id,
     schedule_identifier=default_snapshot_schedule.id)
@@ -127,19 +127,19 @@ default_snapshot_schedule_association = aws.redshift.SnapshotScheduleAssociation
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.redshift.Cluster("default", {
+const defaultCluster = new aws.redshift.Cluster("defaultCluster", {
     clusterIdentifier: "tf-redshift-cluster",
-    clusterType: "single-node",
     databaseName: "mydb",
-    masterPassword: "Mustbe8characters",
     masterUsername: "foo",
+    masterPassword: "Mustbe8characters",
     nodeType: "dc1.large",
+    clusterType: "single-node",
 });
-const defaultSnapshotSchedule = new aws.redshift.SnapshotSchedule("default", {
-    definitions: ["rate(12 hours)"],
+const defaultSnapshotSchedule = new aws.redshift.SnapshotSchedule("defaultSnapshotSchedule", {
     identifier: "tf-redshift-snapshot-schedule",
+    definitions: ["rate(12 hours)"],
 });
-const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAssociation("default", {
+const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation", {
     clusterIdentifier: defaultCluster.id,
     scheduleIdentifier: defaultSnapshotSchedule.id,
 });
@@ -163,7 +163,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">NewSnapshotScheduleAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociationArgs">SnapshotScheduleAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">SnapshotScheduleAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">NewSnapshotScheduleAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociationArgs">SnapshotScheduleAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">SnapshotScheduleAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -237,7 +237,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -257,7 +257,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociationArgs">SnapshotScheduleAssociationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociationArgs">SnapshotScheduleAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -267,7 +267,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -542,7 +542,7 @@ Get an existing SnapshotScheduleAssociation resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotScheduleAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociationState">SnapshotScheduleAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">SnapshotScheduleAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotScheduleAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociationState">SnapshotScheduleAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift?tab=doc#SnapshotScheduleAssociation">SnapshotScheduleAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

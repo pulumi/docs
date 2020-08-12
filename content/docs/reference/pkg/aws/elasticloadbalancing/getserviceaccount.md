@@ -49,19 +49,18 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
         });
         var bar = new Aws.Elb.LoadBalancer("bar", new Aws.Elb.LoadBalancerArgs
         {
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+            },
             AccessLogs = new Aws.Elb.Inputs.LoadBalancerAccessLogsArgs
             {
                 Bucket = elbLogs.BucketName,
                 Interval = 5,
-            },
-            AvailabilityZones = 
-            {
-                "us-west-2a",
             },
             Listeners = 
             {
@@ -88,8 +87,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,18 +100,18 @@ func main() {
 		}
 		elbLogs, err := s3.NewBucket(ctx, "elbLogs", &s3.BucketArgs{
 			Acl:    pulumi.String("private"),
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Id\": \"Policy\",\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:PutObject\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"arn:aws:s3:::my-elb-tf-test-bucket/AWSLogs/*\",\n", "      \"Principal\": {\n", "        \"AWS\": [\n", "          \"", main.Arn, "\"\n", "        ]\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Id\": \"Policy\",\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:PutObject\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"arn:aws:s3:::my-elb-tf-test-bucket/AWSLogs/*\",\n", "      \"Principal\": {\n", "        \"AWS\": [\n", "          \"", main.Arn, "\"\n", "        ]\n", "      }\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = elb.NewLoadBalancer(ctx, "bar", &elb.LoadBalancerArgs{
+			AvailabilityZones: pulumi.StringArray{
+				pulumi.String("us-west-2a"),
+			},
 			AccessLogs: &elb.LoadBalancerAccessLogsArgs{
 				Bucket:   elbLogs.Bucket,
 				Interval: pulumi.Int(5),
-			},
-			AvailabilityZones: pulumi.StringArray{
-				pulumi.String("us-west-2a"),
 			},
 			Listeners: elb.LoadBalancerListenerArray{
 				&elb.LoadBalancerListenerArgs{
@@ -159,14 +158,13 @@ elb_logs = aws.s3.Bucket("elbLogs",
     }}
   ]
 }}
-
 """)
 bar = aws.elb.LoadBalancer("bar",
+    availability_zones=["us-west-2a"],
     access_logs={
         "bucket": elb_logs.bucket,
         "interval": 5,
     },
-    availability_zones=["us-west-2a"],
     listeners=[{
         "instance_port": 8000,
         "instanceProtocol": "http",
@@ -183,10 +181,10 @@ bar = aws.elb.LoadBalancer("bar",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.elb.getServiceAccount({ async: true }));
-const elbLogs = new aws.s3.Bucket("elb_logs", {
+const main = aws.elb.getServiceAccount({});
+const elbLogs = new aws.s3.Bucket("elbLogs", {
     acl: "private",
-    policy: pulumi.interpolate`{
+    policy: main.then(main => `{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [
@@ -204,14 +202,14 @@ const elbLogs = new aws.s3.Bucket("elb_logs", {
     }
   ]
 }
-`,
+`),
 });
 const bar = new aws.elb.LoadBalancer("bar", {
+    availabilityZones: ["us-west-2a"],
     accessLogs: {
         bucket: elbLogs.bucket,
         interval: 5,
     },
-    availabilityZones: ["us-west-2a"],
     listeners: [{
         instancePort: 8000,
         instanceProtocol: "http",
@@ -243,7 +241,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#GetServiceAccountArgs">GetServiceAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#GetServiceAccountResult">GetServiceAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetServiceAccountArgs">GetServiceAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetServiceAccountResult">GetServiceAccountResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

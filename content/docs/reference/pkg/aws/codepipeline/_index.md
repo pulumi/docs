@@ -24,7 +24,7 @@ Explore the resources and functions of the codepipeline module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -35,7 +35,7 @@ Explore the resources and functions of the codepipeline module in the AWS packag
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.html" title="Pulumi.Aws.CodePipeline">Pulumi.Aws.CodePipeline</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#" title="aws/codepipeline">aws/codepipeline</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#" title="aws/codepipeline">aws/codepipeline</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#" title="@pulumi/aws/codepipeline">@pulumi/aws/codepipeline</a></dd>

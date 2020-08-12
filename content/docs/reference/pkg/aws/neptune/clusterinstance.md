@@ -32,13 +32,13 @@ class MyStack : Stack
     {
         var @default = new Aws.Neptune.Cluster("default", new Aws.Neptune.ClusterArgs
         {
-            ApplyImmediately = true,
-            BackupRetentionPeriod = 5,
             ClusterIdentifier = "neptune-cluster-demo",
             Engine = "neptune",
-            IamDatabaseAuthenticationEnabled = true,
+            BackupRetentionPeriod = 5,
             PreferredBackupWindow = "07:00-09:00",
             SkipFinalSnapshot = true,
+            IamDatabaseAuthenticationEnabled = true,
+            ApplyImmediately = true,
         });
         var example = new List<Aws.Neptune.ClusterInstance>();
         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
@@ -46,10 +46,10 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             example.Add(new Aws.Neptune.ClusterInstance($"example-{range.Value}", new Aws.Neptune.ClusterInstanceArgs
             {
-                ApplyImmediately = true,
                 ClusterIdentifier = @default.Id,
                 Engine = "neptune",
                 InstanceClass = "db.r4.large",
+                ApplyImmediately = true,
             }));
         }
     }
@@ -64,20 +64,20 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := neptune.NewCluster(ctx, "_default", &neptune.ClusterArgs{
-			ApplyImmediately:                 pulumi.Bool(true),
-			BackupRetentionPeriod:            pulumi.Int(5),
 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
 			Engine:                           pulumi.String("neptune"),
-			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+			BackupRetentionPeriod:            pulumi.Int(5),
 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
 			SkipFinalSnapshot:                pulumi.Bool(true),
+			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+			ApplyImmediately:                 pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -85,10 +85,10 @@ func main() {
 		var example []*neptune.ClusterInstance
 		for key0, _ := range 2 {
 			__res, err := neptune.NewClusterInstance(ctx, fmt.Sprintf("example-%v", key0), &neptune.ClusterInstanceArgs{
-				ApplyImmediately:  pulumi.Bool(true),
 				ClusterIdentifier: _default.ID(),
 				Engine:            pulumi.String("neptune"),
 				InstanceClass:     pulumi.String("db.r4.large"),
+				ApplyImmediately:  pulumi.Bool(true),
 			})
 			if err != nil {
 				return err
@@ -108,20 +108,20 @@ import pulumi
 import pulumi_aws as aws
 
 default = aws.neptune.Cluster("default",
-    apply_immediately=True,
-    backup_retention_period=5,
     cluster_identifier="neptune-cluster-demo",
     engine="neptune",
-    iam_database_authentication_enabled=True,
+    backup_retention_period=5,
     preferred_backup_window="07:00-09:00",
-    skip_final_snapshot=True)
+    skip_final_snapshot=True,
+    iam_database_authentication_enabled=True,
+    apply_immediately=True)
 example = []
 for range in [{"value": i} for i in range(0, 2)]:
     example.append(aws.neptune.ClusterInstance(f"example-{range['value']}",
-        apply_immediately=True,
         cluster_identifier=default.id,
         engine="neptune",
-        instance_class="db.r4.large"))
+        instance_class="db.r4.large",
+        apply_immediately=True))
 ```
 
 {{% /example %}}
@@ -132,22 +132,22 @@ for range in [{"value": i} for i in range(0, 2)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.neptune.Cluster("default", {
-    applyImmediately: true,
-    backupRetentionPeriod: 5,
+const _default = new aws.neptune.Cluster("default", {
     clusterIdentifier: "neptune-cluster-demo",
     engine: "neptune",
-    iamDatabaseAuthenticationEnabled: true,
+    backupRetentionPeriod: 5,
     preferredBackupWindow: "07:00-09:00",
     skipFinalSnapshot: true,
+    iamDatabaseAuthenticationEnabled: true,
+    applyImmediately: true,
 });
-const example: aws.neptune.ClusterInstance[] = [];
-for (let i = 0; i < 2; i++) {
-    example.push(new aws.neptune.ClusterInstance(`example-${i}`, {
-        applyImmediately: true,
-        clusterIdentifier: defaultCluster.id,
+const example: aws.neptune.ClusterInstance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    example.push(new aws.neptune.ClusterInstance(`example-${range.value}`, {
+        clusterIdentifier: _default.id,
         engine: "neptune",
         instanceClass: "db.r4.large",
+        applyImmediately: true,
     }));
 }
 ```
@@ -170,7 +170,7 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstance">NewClusterInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstance">NewClusterInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -244,7 +244,7 @@ for (let i = 0; i < 2; i++) {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -264,7 +264,7 @@ for (let i = 0; i < 2; i++) {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ for (let i = 0; i < 2; i++) {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1525,7 +1525,7 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/neptune?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

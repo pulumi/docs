@@ -32,41 +32,42 @@ class MyStack : Stack
         var accepter = new Aws.Provider("accepter", new Aws.ProviderArgs
         {
         });
+        // Accepter's credentials.
         var accepterCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        // Creator's side of the VIF
-        var creator = new Aws.DirectConnect.HostedTransitVirtualInterface("creator", new Aws.DirectConnect.HostedTransitVirtualInterfaceArgs
-        {
-            AddressFamily = "ipv4",
-            BgpAsn = 65352,
-            ConnectionId = "dxcon-zzzzzzzz",
-            OwnerAccountId = accepterCallerIdentity.Apply(accepterCallerIdentity => accepterCallerIdentity.AccountId),
-            Vlan = 4094,
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                "aws_dx_gateway.example",
-            },
-        });
         // Accepter's side of the VIF.
         var example = new Aws.DirectConnect.Gateway("example", new Aws.DirectConnect.GatewayArgs
         {
             AmazonSideAsn = "64512",
         }, new CustomResourceOptions
         {
-            Provider = "aws.accepter",
+            Provider = aws.Accepter,
+        });
+        // Creator's side of the VIF
+        var creator = new Aws.DirectConnect.HostedTransitVirtualInterface("creator", new Aws.DirectConnect.HostedTransitVirtualInterfaceArgs
+        {
+            ConnectionId = "dxcon-zzzzzzzz",
+            OwnerAccountId = accepterCallerIdentity.Apply(accepterCallerIdentity => accepterCallerIdentity.AccountId),
+            Vlan = 4094,
+            AddressFamily = "ipv4",
+            BgpAsn = 65352,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                example,
+            },
         });
         var accepterHostedTransitVirtualInterfaceAcceptor = new Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor", new Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptorArgs
         {
+            VirtualInterfaceId = creator.Id,
             DxGatewayId = example.Id,
             Tags = 
             {
                 { "Side", "Accepter" },
             },
-            VirtualInterfaceId = creator.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.accepter",
+            Provider = aws.Accepter,
         });
     }
 
@@ -80,9 +81,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,31 +97,31 @@ func main() {
 		if err != nil {
 			return err
 		}
+		example, err := directconnect.NewGateway(ctx, "example", &directconnect.GatewayArgs{
+			AmazonSideAsn: pulumi.String("64512"),
+		}, pulumi.Provider(aws.Accepter))
+		if err != nil {
+			return err
+		}
 		creator, err := directconnect.NewHostedTransitVirtualInterface(ctx, "creator", &directconnect.HostedTransitVirtualInterfaceArgs{
-			AddressFamily:  pulumi.String("ipv4"),
-			BgpAsn:         pulumi.Int(65352),
 			ConnectionId:   pulumi.String("dxcon-zzzzzzzz"),
 			OwnerAccountId: pulumi.String(accepterCallerIdentity.AccountId),
 			Vlan:           pulumi.Int(4094),
+			AddressFamily:  pulumi.String("ipv4"),
+			BgpAsn:         pulumi.Int(65352),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_dx_gateway.example",
+			example,
 		}))
 		if err != nil {
 			return err
 		}
-		example, err := directconnect.NewGateway(ctx, "example", &directconnect.GatewayArgs{
-			AmazonSideAsn: pulumi.String("64512"),
-		}, pulumi.Provider("aws.accepter"))
-		if err != nil {
-			return err
-		}
 		_, err = directconnect.NewHostedTransitVirtualInterfaceAcceptor(ctx, "accepterHostedTransitVirtualInterfaceAcceptor", &directconnect.HostedTransitVirtualInterfaceAcceptorArgs{
-			DxGatewayId: example.ID(),
+			VirtualInterfaceId: creator.ID(),
+			DxGatewayId:        example.ID(),
 			Tags: pulumi.StringMap{
 				"Side": pulumi.String("Accepter"),
 			},
-			VirtualInterfaceId: creator.ID(),
-		}, pulumi.Provider("aws.accepter"))
+		}, pulumi.Provider(aws.Accepter))
 		if err != nil {
 			return err
 		}
@@ -138,25 +139,26 @@ import pulumi_aws as aws
 import pulumi_pulumi as pulumi
 
 accepter = pulumi.providers.Aws("accepter")
+# Accepter's credentials.
 accepter_caller_identity = aws.get_caller_identity()
+# Accepter's side of the VIF.
+example = aws.directconnect.Gateway("example", amazon_side_asn=64512,
+opts=ResourceOptions(provider=aws["accepter"]))
 # Creator's side of the VIF
 creator = aws.directconnect.HostedTransitVirtualInterface("creator",
-    address_family="ipv4",
-    bgp_asn=65352,
     connection_id="dxcon-zzzzzzzz",
     owner_account_id=accepter_caller_identity.account_id,
     vlan=4094,
-    opts=ResourceOptions(depends_on=["aws_dx_gateway.example"]))
-# Accepter's side of the VIF.
-example = aws.directconnect.Gateway("example", amazon_side_asn=64512,
-opts=ResourceOptions(provider="aws.accepter"))
+    address_family="ipv4",
+    bgp_asn=65352,
+    opts=ResourceOptions(depends_on=[example]))
 accepter_hosted_transit_virtual_interface_acceptor = aws.directconnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor",
+    virtual_interface_id=creator.id,
     dx_gateway_id=example.id,
     tags={
         "Side": "Accepter",
     },
-    virtual_interface_id=creator.id,
-    opts=ResourceOptions(provider="aws.accepter"))
+    opts=ResourceOptions(provider=aws["accepter"]))
 ```
 
 {{% /example %}}
@@ -168,26 +170,31 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const accepter = new aws.Provider("accepter", {});
-const accepterCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: accepter, async: true }));
+// Accepter's credentials.
+const accepterCallerIdentity = aws.getCallerIdentity({});
 // Accepter's side of the VIF.
-const example = new aws.directconnect.Gateway("example", {
-    amazonSideAsn: "64512",
-}, { provider: accepter });
+const example = new aws.directconnect.Gateway("example", {amazonSideAsn: 64512}, {
+    provider: aws.accepter,
+});
 // Creator's side of the VIF
 const creator = new aws.directconnect.HostedTransitVirtualInterface("creator", {
+    connectionId: "dxcon-zzzzzzzz",
+    ownerAccountId: accepterCallerIdentity.then(accepterCallerIdentity => accepterCallerIdentity.accountId),
+    vlan: 4094,
     addressFamily: "ipv4",
     bgpAsn: 65352,
-    connectionId: "dxcon-zzzzzzzz",
-    ownerAccountId: accepterCallerIdentity.accountId,
-    vlan: 4094,
-}, { dependsOn: [example] });
-const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.HostedTransitVirtualInterfaceAcceptor("accepter", {
+}, {
+    dependsOn: [example],
+});
+const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.HostedTransitVirtualInterfaceAcceptor("accepterHostedTransitVirtualInterfaceAcceptor", {
+    virtualInterfaceId: creator.id,
     dxGatewayId: example.id,
     tags: {
         Side: "Accepter",
     },
-    virtualInterfaceId: creator.id,
-}, { provider: accepter });
+}, {
+    provider: aws.accepter,
+});
 ```
 
 {{% /example %}}
@@ -208,7 +215,7 @@ const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.Host
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">NewHostedTransitVirtualInterfaceAcceptor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorArgs">HostedTransitVirtualInterfaceAcceptorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">HostedTransitVirtualInterfaceAcceptor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">NewHostedTransitVirtualInterfaceAcceptor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorArgs">HostedTransitVirtualInterfaceAcceptorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">HostedTransitVirtualInterfaceAcceptor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -282,7 +289,7 @@ const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.Host
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -302,7 +309,7 @@ const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.Host
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorArgs">HostedTransitVirtualInterfaceAcceptorArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorArgs">HostedTransitVirtualInterfaceAcceptorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +319,7 @@ const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.Host
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -675,7 +682,7 @@ Get an existing HostedTransitVirtualInterfaceAcceptor resource's state with the 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedTransitVirtualInterfaceAcceptor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorState">HostedTransitVirtualInterfaceAcceptorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">HostedTransitVirtualInterfaceAcceptor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedTransitVirtualInterfaceAcceptor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptorState">HostedTransitVirtualInterfaceAcceptorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#HostedTransitVirtualInterfaceAcceptor">HostedTransitVirtualInterfaceAcceptor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

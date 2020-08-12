@@ -110,7 +110,7 @@ console.log(`Password: ${config.require("dbPassword")}`);
 ```python
 import pulumi
 config = pulumi.Config()
-print('Password: %s'.format(config.require('dbPassword')))
+print('Password: {}'.format(config.require('dbPassword')))
 ```
 
 {{% /choosable %}}
@@ -245,10 +245,10 @@ Structured configuration is also supported and can be set using `pulumi config s
 For example:
 
 ```bash
-$ pulumi config set --path data.active true
-$ pulumi config set --path data.nums[0] 1
-$ pulumi config set --path data.nums[1] 2
-$ pulumi config set --path data.nums[2] 3
+$ pulumi config set --path 'data.active' true
+$ pulumi config set --path 'data.nums[0]' 1
+$ pulumi config set --path 'data.nums[1]' 2
+$ pulumi config set --path 'data.nums[2]' 3
 ```
 
 The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:

@@ -42,11 +42,12 @@ node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure con
 # Read the region from the stack's config -- we use it below.
 aws_region="$(pulumi -C infrastructure config get 'aws:region')"
 
-# Push site content to the bucket.
-echo "Synchronizing to $destination_bucket_uri..."
-
-# Make the bucket. If this fails, we can't make the bucket, so we shouldn't proceed.
-aws s3 mb $destination_bucket_uri --region $aws_region
+# Make the bucket. If this fails, there are two explanations, given the way we're naming
+# our buckets: either a previous run failed at some point after creating the bucket, in
+# which case we should simply proceed (to repopulate it), or the bucket was somehow
+# created in another account, in which case subsequent operations on the bucket will also
+# fail, causing this script to exit nonzero. In either case, it's okay to continue.
+aws s3 mb $destination_bucket_uri --region $aws_region || true
 
 # Make the bucket an S3 website.
 aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html
@@ -54,6 +55,7 @@ aws s3 website $destination_bucket_uri --index-document index.html --error-docum
 # Sync the local build directory to the bucket. Note that we do pass the --delete option
 # here, since in most cases, we'll be continually updating a bucket associated with a PR;
 # passing this option keeps the destination bucket clean.
+echo "Synchronizing to $destination_bucket_uri..."
 aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet
 
 echo "Sync complete."

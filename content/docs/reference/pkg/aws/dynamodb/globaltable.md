@@ -40,6 +40,11 @@ class MyStack : Stack
         });
         var us_east_1Table = new Aws.DynamoDB.Table("us-east-1Table", new Aws.DynamoDB.TableArgs
         {
+            HashKey = "myAttribute",
+            StreamEnabled = true,
+            StreamViewType = "NEW_AND_OLD_IMAGES",
+            ReadCapacity = 1,
+            WriteCapacity = 1,
             Attributes = 
             {
                 new Aws.DynamoDB.Inputs.TableAttributeArgs
@@ -48,17 +53,17 @@ class MyStack : Stack
                     Type = "S",
                 },
             },
-            HashKey = "myAttribute",
-            ReadCapacity = 1,
-            StreamEnabled = true,
-            StreamViewType = "NEW_AND_OLD_IMAGES",
-            WriteCapacity = 1,
         }, new CustomResourceOptions
         {
-            Provider = "aws.us-east-1",
+            Provider = aws.Us_east_1,
         });
         var us_west_2Table = new Aws.DynamoDB.Table("us-west-2Table", new Aws.DynamoDB.TableArgs
         {
+            HashKey = "myAttribute",
+            StreamEnabled = true,
+            StreamViewType = "NEW_AND_OLD_IMAGES",
+            ReadCapacity = 1,
+            WriteCapacity = 1,
             Attributes = 
             {
                 new Aws.DynamoDB.Inputs.TableAttributeArgs
@@ -67,14 +72,9 @@ class MyStack : Stack
                     Type = "S",
                 },
             },
-            HashKey = "myAttribute",
-            ReadCapacity = 1,
-            StreamEnabled = true,
-            StreamViewType = "NEW_AND_OLD_IMAGES",
-            WriteCapacity = 1,
         }, new CustomResourceOptions
         {
-            Provider = "aws.us-west-2",
+            Provider = aws.Us_west_2,
         });
         var myTable = new Aws.DynamoDB.GlobalTable("myTable", new Aws.DynamoDB.GlobalTableArgs
         {
@@ -91,11 +91,11 @@ class MyStack : Stack
             },
         }, new CustomResourceOptions
         {
-            Provider = "aws.us-east-1",
+            Provider = aws.Us_east_1,
             DependsOn = 
             {
-                "aws_dynamodb_table.us-east-1",
-                "aws_dynamodb_table.us-west-2",
+                us_east_1Table,
+                us_west_2Table,
             },
         });
     }
@@ -110,8 +110,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -130,34 +130,34 @@ func main() {
 			return err
 		}
 		_, err = dynamodb.NewTable(ctx, "us_east_1Table", &dynamodb.TableArgs{
+			HashKey:        pulumi.String("myAttribute"),
+			StreamEnabled:  pulumi.Bool(true),
+			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+			ReadCapacity:   pulumi.Int(1),
+			WriteCapacity:  pulumi.Int(1),
 			Attributes: dynamodb.TableAttributeArray{
 				&dynamodb.TableAttributeArgs{
 					Name: pulumi.String("myAttribute"),
 					Type: pulumi.String("S"),
 				},
 			},
-			HashKey:        pulumi.String("myAttribute"),
-			ReadCapacity:   pulumi.Int(1),
-			StreamEnabled:  pulumi.Bool(true),
-			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
-			WriteCapacity:  pulumi.Int(1),
-		}, pulumi.Provider("aws.us-east-1"))
+		}, pulumi.Provider(aws.Us-east-1))
 		if err != nil {
 			return err
 		}
 		_, err = dynamodb.NewTable(ctx, "us_west_2Table", &dynamodb.TableArgs{
+			HashKey:        pulumi.String("myAttribute"),
+			StreamEnabled:  pulumi.Bool(true),
+			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+			ReadCapacity:   pulumi.Int(1),
+			WriteCapacity:  pulumi.Int(1),
 			Attributes: dynamodb.TableAttributeArray{
 				&dynamodb.TableAttributeArgs{
 					Name: pulumi.String("myAttribute"),
 					Type: pulumi.String("S"),
 				},
 			},
-			HashKey:        pulumi.String("myAttribute"),
-			ReadCapacity:   pulumi.Int(1),
-			StreamEnabled:  pulumi.Bool(true),
-			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
-			WriteCapacity:  pulumi.Int(1),
-		}, pulumi.Provider("aws.us-west-2"))
+		}, pulumi.Provider(aws.Us-west-2))
 		if err != nil {
 			return err
 		}
@@ -170,9 +170,9 @@ func main() {
 					RegionName: pulumi.String("us-west-2"),
 				},
 			},
-		}, pulumi.Provider("aws.us-east-1"), pulumi.DependsOn([]pulumi.Resource{
-			"aws_dynamodb_table.us-east-1",
-			"aws_dynamodb_table.us-west-2",
+		}, pulumi.Provider(aws.Us-east-1), pulumi.DependsOn([]pulumi.Resource{
+			us_east_1Table,
+			us_west_2Table,
 		}))
 		if err != nil {
 			return err
@@ -193,27 +193,27 @@ import pulumi_pulumi as pulumi
 us_east_1 = pulumi.providers.Aws("us-east-1", region="us-east-1")
 us_west_2 = pulumi.providers.Aws("us-west-2", region="us-west-2")
 us_east_1_table = aws.dynamodb.Table("us-east-1Table",
+    hash_key="myAttribute",
+    stream_enabled=True,
+    stream_view_type="NEW_AND_OLD_IMAGES",
+    read_capacity=1,
+    write_capacity=1,
     attributes=[{
         "name": "myAttribute",
         "type": "S",
     }],
-    hash_key="myAttribute",
-    read_capacity=1,
-    stream_enabled=True,
-    stream_view_type="NEW_AND_OLD_IMAGES",
-    write_capacity=1,
-    opts=ResourceOptions(provider="aws.us-east-1"))
+    opts=ResourceOptions(provider=aws["us-east-1"]))
 us_west_2_table = aws.dynamodb.Table("us-west-2Table",
+    hash_key="myAttribute",
+    stream_enabled=True,
+    stream_view_type="NEW_AND_OLD_IMAGES",
+    read_capacity=1,
+    write_capacity=1,
     attributes=[{
         "name": "myAttribute",
         "type": "S",
     }],
-    hash_key="myAttribute",
-    read_capacity=1,
-    stream_enabled=True,
-    stream_view_type="NEW_AND_OLD_IMAGES",
-    write_capacity=1,
-    opts=ResourceOptions(provider="aws.us-west-2"))
+    opts=ResourceOptions(provider=aws["us-west-2"]))
 my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
     {
         "regionName": "us-east-1",
@@ -222,10 +222,10 @@ my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
         "regionName": "us-west-2",
     },
 ],
-opts=ResourceOptions(provider="aws.us-east-1",
+opts=ResourceOptions(provider=aws["us-east-1"],
     depends_on=[
-        "aws_dynamodb_table.us-east-1",
-        "aws_dynamodb_table.us-west-2",
+        us_east_1_table,
+        us_west_2_table,
     ]))
 ```
 
@@ -237,44 +237,48 @@ opts=ResourceOptions(provider="aws.us-east-1",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const us_east_1 = new aws.Provider("us-east-1", {
-    region: "us-east-1",
-});
-const us_west_2 = new aws.Provider("us-west-2", {
-    region: "us-west-2",
-});
-const us_east_1Table = new aws.dynamodb.Table("us-east-1", {
+const us_east_1 = new aws.Provider("us-east-1", {region: "us-east-1"});
+const us_west_2 = new aws.Provider("us-west-2", {region: "us-west-2"});
+const us_east_1Table = new aws.dynamodb.Table("us-east-1Table", {
+    hashKey: "myAttribute",
+    streamEnabled: true,
+    streamViewType: "NEW_AND_OLD_IMAGES",
+    readCapacity: 1,
+    writeCapacity: 1,
     attributes: [{
         name: "myAttribute",
         type: "S",
     }],
+}, {
+    provider: aws["us-east-1"],
+});
+const us_west_2Table = new aws.dynamodb.Table("us-west-2Table", {
     hashKey: "myAttribute",
-    readCapacity: 1,
     streamEnabled: true,
     streamViewType: "NEW_AND_OLD_IMAGES",
+    readCapacity: 1,
     writeCapacity: 1,
-}, { provider: us_east_1 });
-const us_west_2Table = new aws.dynamodb.Table("us-west-2", {
     attributes: [{
         name: "myAttribute",
         type: "S",
     }],
-    hashKey: "myAttribute",
-    readCapacity: 1,
-    streamEnabled: true,
-    streamViewType: "NEW_AND_OLD_IMAGES",
-    writeCapacity: 1,
-}, { provider: us_west_2 });
-const myTable = new aws.dynamodb.GlobalTable("myTable", {
-    replicas: [
-        {
-            regionName: "us-east-1",
-        },
-        {
-            regionName: "us-west-2",
-        },
+}, {
+    provider: aws["us-west-2"],
+});
+const myTable = new aws.dynamodb.GlobalTable("myTable", {replicas: [
+    {
+        regionName: "us-east-1",
+    },
+    {
+        regionName: "us-west-2",
+    },
+]}, {
+    provider: aws["us-east-1"],
+    dependsOn: [
+        us_east_1Table,
+        us_west_2Table,
     ],
-}, { provider: us_east_1, dependsOn: [us_east_1Table, us_west_2Table] });
+});
 ```
 
 {{% /example %}}
@@ -295,7 +299,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTable">NewGlobalTable</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTable">NewGlobalTable</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -369,7 +373,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -389,7 +393,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -399,7 +403,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -718,7 +722,7 @@ Get an existing GlobalTable resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableState">GlobalTableState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTableState">GlobalTableState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1002,7 +1006,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GlobalTableReplicaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GlobalTableReplica.html">output</a> API doc for this type.

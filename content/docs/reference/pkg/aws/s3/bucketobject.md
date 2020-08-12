@@ -16,41 +16,6 @@ Provides a S3 bucket object resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Uploading a file to a bucket
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const object = new aws.s3.BucketObject("object", {
-    bucket: "your_bucket_name",
-    // The filemd5() function is available in this provider 0.11.12 and later
-    // For this provider 0.11.11 and earlier, use the md5() function and the file() function:
-    // etag = "${md5(file("path/to/file"))}"
-    etag: (() => {
-        throw "tf2pulumi error: NYI: call to filemd5";
-        return (() => { throw "NYI: call to filemd5"; })();
-    })(),
-    key: "new_object_key",
-    source: new pulumi.asset.FileAsset("path/to/file"),
-});
-```
-
-{{% /example %}}
-
 ### Encrypting with KMS Key
 {{% example csharp %}}
 ```csharp
@@ -63,8 +28,8 @@ class MyStack : Stack
     {
         var examplekms = new Aws.Kms.Key("examplekms", new Aws.Kms.KeyArgs
         {
-            DeletionWindowInDays = 7,
             Description = "KMS key 1",
+            DeletionWindowInDays = 7,
         });
         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
         {
@@ -72,10 +37,10 @@ class MyStack : Stack
         });
         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
         {
-            Bucket = examplebucket.Id,
             Key = "someobject",
-            KmsKeyId = examplekms.Arn,
+            Bucket = examplebucket.Id,
             Source = new FileAsset("index.html"),
+            KmsKeyId = examplekms.Arn,
         });
     }
 
@@ -89,16 +54,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		examplekms, err := kms.NewKey(ctx, "examplekms", &kms.KeyArgs{
-			DeletionWindowInDays: pulumi.Int(7),
 			Description:          pulumi.String("KMS key 1"),
+			DeletionWindowInDays: pulumi.Int(7),
 		})
 		if err != nil {
 			return err
@@ -110,10 +75,10 @@ func main() {
 			return err
 		}
 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
-			Bucket:   examplebucket.ID(),
 			Key:      pulumi.String("someobject"),
-			KmsKeyId: examplekms.Arn,
+			Bucket:   examplebucket.ID(),
 			Source:   pulumi.NewFileAsset("index.html"),
+			KmsKeyId: examplekms.Arn,
 		})
 		if err != nil {
 			return err
@@ -131,14 +96,14 @@ import pulumi
 import pulumi_aws as aws
 
 examplekms = aws.kms.Key("examplekms",
-    deletion_window_in_days=7,
-    description="KMS key 1")
+    description="KMS key 1",
+    deletion_window_in_days=7)
 examplebucket = aws.s3.Bucket("examplebucket", acl="private")
 examplebucket_object = aws.s3.BucketObject("examplebucketObject",
-    bucket=examplebucket.id,
     key="someobject",
-    kms_key_id=examplekms.arn,
-    source=pulumi.FileAsset("index.html"))
+    bucket=examplebucket.id,
+    source=pulumi.FileAsset("index.html"),
+    kms_key_id=examplekms.arn)
 ```
 
 {{% /example %}}
@@ -150,17 +115,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const examplekms = new aws.kms.Key("examplekms", {
-    deletionWindowInDays: 7,
     description: "KMS key 1",
+    deletionWindowInDays: 7,
 });
-const examplebucket = new aws.s3.Bucket("examplebucket", {
-    acl: "private",
-});
-const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
-    bucket: examplebucket.id,
+const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
     key: "someobject",
-    kmsKeyId: examplekms.arn,
+    bucket: examplebucket.id,
     source: new pulumi.asset.FileAsset("index.html"),
+    kmsKeyId: examplekms.arn,
 });
 ```
 
@@ -182,10 +145,10 @@ class MyStack : Stack
         });
         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
         {
-            Bucket = examplebucket.Id,
             Key = "someobject",
-            ServerSideEncryption = "aws:kms",
+            Bucket = examplebucket.Id,
             Source = new FileAsset("index.html"),
+            ServerSideEncryption = "aws:kms",
         });
     }
 
@@ -199,7 +162,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -212,10 +175,10 @@ func main() {
 			return err
 		}
 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
-			Bucket:               examplebucket.ID(),
 			Key:                  pulumi.String("someobject"),
-			ServerSideEncryption: pulumi.String("aws:kms"),
+			Bucket:               examplebucket.ID(),
 			Source:               pulumi.NewFileAsset("index.html"),
+			ServerSideEncryption: pulumi.String("aws:kms"),
 		})
 		if err != nil {
 			return err
@@ -234,10 +197,10 @@ import pulumi_aws as aws
 
 examplebucket = aws.s3.Bucket("examplebucket", acl="private")
 examplebucket_object = aws.s3.BucketObject("examplebucketObject",
-    bucket=examplebucket.id,
     key="someobject",
-    server_side_encryption="aws:kms",
-    source=pulumi.FileAsset("index.html"))
+    bucket=examplebucket.id,
+    source=pulumi.FileAsset("index.html"),
+    server_side_encryption="aws:kms")
 ```
 
 {{% /example %}}
@@ -248,14 +211,12 @@ examplebucket_object = aws.s3.BucketObject("examplebucketObject",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplebucket = new aws.s3.Bucket("examplebucket", {
-    acl: "private",
-});
-const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
-    bucket: examplebucket.id,
+const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
     key: "someobject",
-    serverSideEncryption: "aws:kms",
+    bucket: examplebucket.id,
     source: new pulumi.asset.FileAsset("index.html"),
+    serverSideEncryption: "aws:kms",
 });
 ```
 
@@ -277,10 +238,10 @@ class MyStack : Stack
         });
         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
         {
-            Bucket = examplebucket.Id,
             Key = "someobject",
-            ServerSideEncryption = "AES256",
+            Bucket = examplebucket.Id,
             Source = new FileAsset("index.html"),
+            ServerSideEncryption = "AES256",
         });
     }
 
@@ -294,7 +255,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -307,10 +268,10 @@ func main() {
 			return err
 		}
 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
-			Bucket:               examplebucket.ID(),
 			Key:                  pulumi.String("someobject"),
-			ServerSideEncryption: pulumi.String("AES256"),
+			Bucket:               examplebucket.ID(),
 			Source:               pulumi.NewFileAsset("index.html"),
+			ServerSideEncryption: pulumi.String("AES256"),
 		})
 		if err != nil {
 			return err
@@ -329,10 +290,10 @@ import pulumi_aws as aws
 
 examplebucket = aws.s3.Bucket("examplebucket", acl="private")
 examplebucket_object = aws.s3.BucketObject("examplebucketObject",
-    bucket=examplebucket.id,
     key="someobject",
-    server_side_encryption="AES256",
-    source=pulumi.FileAsset("index.html"))
+    bucket=examplebucket.id,
+    source=pulumi.FileAsset("index.html"),
+    server_side_encryption="AES256")
 ```
 
 {{% /example %}}
@@ -343,14 +304,12 @@ examplebucket_object = aws.s3.BucketObject("examplebucketObject",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplebucket = new aws.s3.Bucket("examplebucket", {
-    acl: "private",
-});
-const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
-    bucket: examplebucket.id,
+const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
     key: "someobject",
-    serverSideEncryption: "AES256",
+    bucket: examplebucket.id,
     source: new pulumi.asset.FileAsset("index.html"),
+    serverSideEncryption: "AES256",
 });
 ```
 
@@ -369,24 +328,24 @@ class MyStack : Stack
         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
         {
             Acl = "private",
-            ObjectLockConfiguration = new Aws.S3.Inputs.BucketObjectLockConfigurationArgs
-            {
-                ObjectLockEnabled = "Enabled",
-            },
             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
             {
                 Enabled = true,
             },
+            ObjectLockConfiguration = new Aws.S3.Inputs.BucketObjectLockConfigurationArgs
+            {
+                ObjectLockEnabled = "Enabled",
+            },
         });
         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
         {
-            Bucket = examplebucket.Id,
-            ForceDestroy = true,
             Key = "someobject",
+            Bucket = examplebucket.Id,
+            Source = new FileAsset("important.txt"),
             ObjectLockLegalHoldStatus = "ON",
             ObjectLockMode = "GOVERNANCE",
             ObjectLockRetainUntilDate = "2021-12-31T23:59:60Z",
-            Source = new FileAsset("important.txt"),
+            ForceDestroy = true,
         });
     }
 
@@ -400,7 +359,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -408,24 +367,24 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		examplebucket, err := s3.NewBucket(ctx, "examplebucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
-			ObjectLockConfiguration: &s3.BucketObjectLockConfigurationArgs{
-				ObjectLockEnabled: pulumi.String("Enabled"),
-			},
 			Versioning: &s3.BucketVersioningArgs{
 				Enabled: pulumi.Bool(true),
+			},
+			ObjectLockConfiguration: &s3.BucketObjectLockConfigurationArgs{
+				ObjectLockEnabled: pulumi.String("Enabled"),
 			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
-			Bucket:                    examplebucket.ID(),
-			ForceDestroy:              pulumi.Bool(true),
 			Key:                       pulumi.String("someobject"),
+			Bucket:                    examplebucket.ID(),
+			Source:                    pulumi.NewFileAsset("important.txt"),
 			ObjectLockLegalHoldStatus: pulumi.String("ON"),
 			ObjectLockMode:            pulumi.String("GOVERNANCE"),
 			ObjectLockRetainUntilDate: pulumi.String("2021-12-31T23:59:60Z"),
-			Source:                    pulumi.NewFileAsset("important.txt"),
+			ForceDestroy:              pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -444,20 +403,20 @@ import pulumi_aws as aws
 
 examplebucket = aws.s3.Bucket("examplebucket",
     acl="private",
-    object_lock_configuration={
-        "objectLockEnabled": "Enabled",
-    },
     versioning={
         "enabled": True,
+    },
+    object_lock_configuration={
+        "objectLockEnabled": "Enabled",
     })
 examplebucket_object = aws.s3.BucketObject("examplebucketObject",
-    bucket=examplebucket.id,
-    force_destroy=True,
     key="someobject",
+    bucket=examplebucket.id,
+    source=pulumi.FileAsset("important.txt"),
     object_lock_legal_hold_status="ON",
     object_lock_mode="GOVERNANCE",
     object_lock_retain_until_date="2021-12-31T23:59:60Z",
-    source=pulumi.FileAsset("important.txt"))
+    force_destroy=True)
 ```
 
 {{% /example %}}
@@ -470,21 +429,21 @@ import * as aws from "@pulumi/aws";
 
 const examplebucket = new aws.s3.Bucket("examplebucket", {
     acl: "private",
-    objectLockConfiguration: {
-        objectLockEnabled: "Enabled",
-    },
     versioning: {
         enabled: true,
     },
+    objectLockConfiguration: {
+        objectLockEnabled: "Enabled",
+    },
 });
-const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
-    bucket: examplebucket.id,
-    forceDestroy: true,
+const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
     key: "someobject",
+    bucket: examplebucket.id,
+    source: new pulumi.asset.FileAsset("important.txt"),
     objectLockLegalHoldStatus: "ON",
     objectLockMode: "GOVERNANCE",
     objectLockRetainUntilDate: "2021-12-31T23:59:60Z",
-    source: new pulumi.asset.FileAsset("important.txt"),
+    forceDestroy: true,
 });
 ```
 
@@ -506,7 +465,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObject">NewBucketObject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObjectArgs">BucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObject">BucketObject</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObject">NewBucketObject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectArgs">BucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObject">BucketObject</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -580,7 +539,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -600,7 +559,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObjectArgs">BucketObjectArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectArgs">BucketObjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -610,7 +569,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1837,7 +1796,7 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObjectState">BucketObjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#BucketObject">BucketObject</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectState">BucketObjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObject">BucketObject</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

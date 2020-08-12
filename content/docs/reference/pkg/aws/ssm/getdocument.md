@@ -28,8 +28,8 @@ class MyStack : Stack
     {
         var foo = Output.Create(Aws.Ssm.GetDocument.InvokeAsync(new Aws.Ssm.GetDocumentArgs
         {
-            DocumentFormat = "YAML",
             Name = "AWS-GatherSoftwareInventory",
+            DocumentFormat = "YAML",
         }));
         this.Content = foo.Apply(foo => foo.Content);
     }
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +54,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "YAML"
 		foo, err := ssm.LookupDocument(ctx, &ssm.LookupDocumentArgs{
-			DocumentFormat: &opt0,
 			Name:           "AWS-GatherSoftwareInventory",
+			DocumentFormat: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -73,8 +73,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-foo = aws.ssm.get_document(document_format="YAML",
-    name="AWS-GatherSoftwareInventory")
+foo = aws.ssm.get_document(name="AWS-GatherSoftwareInventory",
+    document_format="YAML")
 pulumi.export("content", foo.content)
 ```
 
@@ -86,12 +86,11 @@ pulumi.export("content", foo.content)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ssm.getDocument({
-    documentFormat: "YAML",
+const foo = aws.ssm.getDocument({
     name: "AWS-GatherSoftwareInventory",
-}, { async: true }));
-
-export const content = foo.content;
+    documentFormat: "YAML",
+});
+export const content = foo.then(foo => foo.content);
 ```
 
 {{% /example %}}
@@ -115,7 +114,7 @@ export const content = foo.content;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#LookupDocumentArgs">LookupDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#LookupDocumentResult">LookupDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#LookupDocumentArgs">LookupDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#LookupDocumentResult">LookupDocumentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDocument` in the Go SDK.
 

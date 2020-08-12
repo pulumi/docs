@@ -35,6 +35,7 @@ class MyStack : Stack
     {
         var rts = await Aws.Ec2.GetRouteTables.InvokeAsync(new Aws.Ec2.GetRouteTablesArgs
         {
+            VpcId = @var.Vpc_id,
             Filters = 
             {
                 new Aws.Ec2.Inputs.GetRouteTablesFilterArgs
@@ -46,7 +47,6 @@ class MyStack : Stack
                     },
                 },
             },
-            VpcId = @var.Vpc_id,
         });
         var route = new List<Aws.Ec2.Route>();
         for (var rangeIndex = 0; rangeIndex < rts.Ids.Length; rangeIndex++)
@@ -54,8 +54,8 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             route.Add(new Aws.Ec2.Route($"route-{range.Value}", new Aws.Ec2.RouteArgs
             {
-                DestinationCidrBlock = "10.0.1.0/22",
                 RouteTableId = rts.Ids[range.Value],
+                DestinationCidrBlock = "10.0.1.0/22",
                 VpcPeeringConnectionId = "pcx-0e9a7a9ecd137dc54",
             }));
         }
@@ -79,16 +79,16 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-rts = aws.ec2.get_route_tables(filters=[{
+rts = aws.ec2.get_route_tables(vpc_id=var["vpc_id"],
+    filters=[{
         "name": "tag:kubernetes.io/kops/role",
         "values": ["private*"],
-    }],
-    vpc_id=var["vpc_id"])
+    }])
 route = []
 for range in [{"value": i} for i in range(0, len(rts.ids))]:
     route.append(aws.ec2.Route(f"route-{range['value']}",
-        destination_cidr_block="10.0.1.0/22",
         route_table_id=rts.ids[range["value"]],
+        destination_cidr_block="10.0.1.0/22",
         vpc_peering_connection_id="pcx-0e9a7a9ecd137dc54"))
 ```
 
@@ -100,20 +100,22 @@ for range in [{"value": i} for i in range(0, len(rts.ids))]:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const rts = pulumi.output(aws.ec2.getRouteTables({
-    filters: [{
-        name: "tag:kubernetes.io/kops/role",
-        values: ["private*"],
-    }],
-    vpcId: var_vpc_id,
-}, { async: true }));
-const route: aws.ec2.Route[] = [];
-for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
-    route.push(new aws.ec2.Route(`r-${i}`, {
-        destinationCidrBlock: "10.0.1.0/22",
-        routeTableId: rts.apply(rts => rts.ids[i]),
-        vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
-    }));
+export = async () => {
+    const rts = await aws.ec2.getRouteTables({
+        vpcId: _var.vpc_id,
+        filters: [{
+            name: "tag:kubernetes.io/kops/role",
+            values: ["private*"],
+        }],
+    });
+    const route: aws.ec2.Route[];
+    for (const range = {value: 0}; range.value < rts.ids.length; range.value++) {
+        route.push(new aws.ec2.Route(`route-${range.value}`, {
+            routeTableId: rts.ids[range.value],
+            destinationCidrBlock: "10.0.1.0/22",
+            vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
+        }));
+    }
 }
 ```
 
@@ -138,7 +140,7 @@ for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesArgs">GetRouteTablesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesResult">GetRouteTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTablesArgs">GetRouteTablesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTablesResult">GetRouteTablesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -583,7 +585,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTablesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetRouteTablesFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetRouteTablesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTablesFilter.html">output</a> API doc for this type.

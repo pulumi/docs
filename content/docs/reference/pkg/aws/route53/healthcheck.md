@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -150,7 +150,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -223,7 +223,6 @@ class MyStack : Stack
     {
         var foobar = new Aws.CloudWatch.MetricAlarm("foobar", new Aws.CloudWatch.MetricAlarmArgs
         {
-            AlarmDescription = "This metric monitors ec2 cpu utilization",
             ComparisonOperator = "GreaterThanOrEqualToThreshold",
             EvaluationPeriods = 2,
             MetricName = "CPUUtilization",
@@ -231,13 +230,14 @@ class MyStack : Stack
             Period = 120,
             Statistic = "Average",
             Threshold = 80,
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
         });
         var foo = new Aws.Route53.HealthCheck("foo", new Aws.Route53.HealthCheckArgs
         {
+            Type = "CLOUDWATCH_METRIC",
             CloudwatchAlarmName = foobar.Name,
             CloudwatchAlarmRegion = "us-west-2",
             InsufficientDataHealthStatus = "Healthy",
-            Type = "CLOUDWATCH_METRIC",
         });
     }
 
@@ -251,15 +251,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foobar, err := cloudwatch.NewMetricAlarm(ctx, "foobar", &cloudwatch.MetricAlarmArgs{
-			AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
 			ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
 			EvaluationPeriods:  pulumi.Int(2),
 			MetricName:         pulumi.String("CPUUtilization"),
@@ -267,15 +266,16 @@ func main() {
 			Period:             pulumi.Int(120),
 			Statistic:          pulumi.String("Average"),
 			Threshold:          pulumi.Float64(80),
+			AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
+			Type:                         pulumi.String("CLOUDWATCH_METRIC"),
 			CloudwatchAlarmName:          foobar.Name,
 			CloudwatchAlarmRegion:        pulumi.String("us-west-2"),
 			InsufficientDataHealthStatus: pulumi.String("Healthy"),
-			Type:                         pulumi.String("CLOUDWATCH_METRIC"),
 		})
 		if err != nil {
 			return err
@@ -293,19 +293,19 @@ import pulumi
 import pulumi_aws as aws
 
 foobar = aws.cloudwatch.MetricAlarm("foobar",
-    alarm_description="This metric monitors ec2 cpu utilization",
     comparison_operator="GreaterThanOrEqualToThreshold",
     evaluation_periods="2",
     metric_name="CPUUtilization",
     namespace="AWS/EC2",
     period="120",
     statistic="Average",
-    threshold="80")
+    threshold="80",
+    alarm_description="This metric monitors ec2 cpu utilization")
 foo = aws.route53.HealthCheck("foo",
+    type="CLOUDWATCH_METRIC",
     cloudwatch_alarm_name=foobar.name,
     cloudwatch_alarm_region="us-west-2",
-    insufficient_data_health_status="Healthy",
-    type="CLOUDWATCH_METRIC")
+    insufficient_data_health_status="Healthy")
 ```
 
 {{% /example %}}
@@ -317,20 +317,20 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
-    alarmDescription: "This metric monitors ec2 cpu utilization",
     comparisonOperator: "GreaterThanOrEqualToThreshold",
-    evaluationPeriods: 2,
+    evaluationPeriods: "2",
     metricName: "CPUUtilization",
     namespace: "AWS/EC2",
-    period: 120,
+    period: "120",
     statistic: "Average",
-    threshold: 80,
+    threshold: "80",
+    alarmDescription: "This metric monitors ec2 cpu utilization",
 });
 const foo = new aws.route53.HealthCheck("foo", {
-    cloudwatchAlarmName: foobar.alarmName,
+    type: "CLOUDWATCH_METRIC",
+    cloudwatchAlarmName: foobar.name,
     cloudwatchAlarmRegion: "us-west-2",
     insufficientDataHealthStatus: "Healthy",
-    type: "CLOUDWATCH_METRIC",
 });
 ```
 
@@ -352,7 +352,7 @@ const foo = new aws.route53.HealthCheck("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheck">NewHealthCheck</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheck">NewHealthCheck</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -426,7 +426,7 @@ const foo = new aws.route53.HealthCheck("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -446,7 +446,7 @@ const foo = new aws.route53.HealthCheck("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -456,7 +456,7 @@ const foo = new aws.route53.HealthCheck("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1483,7 +1483,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

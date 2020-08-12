@@ -35,14 +35,14 @@ class MyStack : Stack
         }));
         var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
         {
+            ZoneId = selected.Apply(selected => selected.ZoneId),
             Name = selected.Apply(selected => $"www.{selected.Name}"),
+            Type = "A",
+            Ttl = 300,
             Records = 
             {
                 "10.0.0.1",
             },
-            Ttl = 300,
-            Type = "A",
-            ZoneId = selected.Apply(selected => selected.ZoneId),
         });
     }
 
@@ -58,7 +58,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,13 +74,13 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "www", &route53.RecordArgs{
-			Name: pulumi.String(fmt.Sprintf("%v%v", "www.", selected.Name)),
+			ZoneId: pulumi.String(selected.ZoneId),
+			Name:   pulumi.String(fmt.Sprintf("%v%v", "www.", selected.Name)),
+			Type:   pulumi.String("A"),
+			Ttl:    pulumi.Int(300),
 			Records: pulumi.StringArray{
 				pulumi.String("10.0.0.1"),
 			},
-			Ttl:    pulumi.Int(300),
-			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(selected.ZoneId),
 		})
 		if err != nil {
 			return err
@@ -100,11 +100,11 @@ import pulumi_aws as aws
 selected = aws.route53.get_zone(name="test.com.",
     private_zone=True)
 www = aws.route53.Record("www",
+    zone_id=selected.zone_id,
     name=f"www.{selected.name}",
-    records=["10.0.0.1"],
-    ttl="300",
     type="A",
-    zone_id=selected.zone_id)
+    ttl="300",
+    records=["10.0.0.1"])
 ```
 
 {{% /example %}}
@@ -115,16 +115,16 @@ www = aws.route53.Record("www",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.route53.getZone({
+const selected = aws.route53.getZone({
     name: "test.com.",
     privateZone: true,
-}, { async: true }));
+});
 const www = new aws.route53.Record("www", {
-    name: pulumi.interpolate`www.${selected.name!}`,
-    records: ["10.0.0.1"],
-    ttl: 300,
+    zoneId: selected.then(selected => selected.zoneId),
+    name: selected.then(selected => `www.${selected.name}`),
     type: "A",
-    zoneId: selected.zoneId!,
+    ttl: "300",
+    records: ["10.0.0.1"],
 });
 ```
 
@@ -149,7 +149,7 @@ const www = new aws.route53.Record("www", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#LookupZoneArgs">LookupZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#LookupZoneResult">LookupZoneResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#LookupZoneArgs">LookupZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#LookupZoneResult">LookupZoneResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupZone` in the Go SDK.
 

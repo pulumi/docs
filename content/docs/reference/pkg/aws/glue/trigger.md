@@ -28,6 +28,7 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
         {
+            Type = "CONDITIONAL",
             Actions = 
             {
                 new Aws.Glue.Inputs.TriggerActionArgs
@@ -46,7 +47,6 @@ class MyStack : Stack
                     },
                 },
             },
-            Type = "CONDITIONAL",
         });
     }
 
@@ -60,27 +60,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Type: pulumi.String("CONDITIONAL"),
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example1.Name),
+					JobName: pulumi.Any(aws_glue_job.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
-						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						JobName: pulumi.Any(aws_glue_job.Example2.Name),
 						State:   pulumi.String("SUCCEEDED"),
 					},
 				},
 			},
-			Type: pulumi.String("CONDITIONAL"),
 		})
 		if err != nil {
 			return err
@@ -98,6 +98,7 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Trigger("example",
+    type="CONDITIONAL",
     actions=[{
         "jobName": aws_glue_job["example1"]["name"],
     }],
@@ -106,8 +107,7 @@ example = aws.glue.Trigger("example",
             "jobName": aws_glue_job["example2"]["name"],
             "state": "SUCCEEDED",
         }],
-    },
-    type="CONDITIONAL")
+    })
 ```
 
 {{% /example %}}
@@ -119,16 +119,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Trigger("example", {
+    type: "CONDITIONAL",
     actions: [{
-        jobName: aws_glue_job_example1.name,
+        jobName: aws_glue_job.example1.name,
     }],
     predicate: {
         conditions: [{
-            jobName: aws_glue_job_example2.name,
+            jobName: aws_glue_job.example2.name,
             state: "SUCCEEDED",
         }],
     },
-    type: "CONDITIONAL",
 });
 ```
 
@@ -146,6 +146,7 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
         {
+            Type = "ON_DEMAND",
             Actions = 
             {
                 new Aws.Glue.Inputs.TriggerActionArgs
@@ -153,7 +154,6 @@ class MyStack : Stack
                     JobName = aws_glue_job.Example.Name,
                 },
             },
-            Type = "ON_DEMAND",
         });
     }
 
@@ -167,19 +167,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Type: pulumi.String("ON_DEMAND"),
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example.Name),
+					JobName: pulumi.Any(aws_glue_job.Example.Name),
 				},
 			},
-			Type: pulumi.String("ON_DEMAND"),
 		})
 		if err != nil {
 			return err
@@ -197,10 +197,10 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Trigger("example",
+    type="ON_DEMAND",
     actions=[{
         "jobName": aws_glue_job["example"]["name"],
-    }],
-    type="ON_DEMAND")
+    }])
 ```
 
 {{% /example %}}
@@ -212,10 +212,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Trigger("example", {
-    actions: [{
-        jobName: aws_glue_job_example.name,
-    }],
     type: "ON_DEMAND",
+    actions: [{
+        jobName: aws_glue_job.example.name,
+    }],
 });
 ```
 
@@ -233,6 +233,8 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
         {
+            Schedule = "cron(15 12 * * ? *)",
+            Type = "SCHEDULED",
             Actions = 
             {
                 new Aws.Glue.Inputs.TriggerActionArgs
@@ -240,8 +242,6 @@ class MyStack : Stack
                     JobName = aws_glue_job.Example.Name,
                 },
             },
-            Schedule = "cron(15 12 * * ? *)",
-            Type = "SCHEDULED",
         });
     }
 
@@ -255,20 +255,20 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
-			Actions: glue.TriggerActionArray{
-				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example.Name),
-				},
-			},
 			Schedule: pulumi.String("cron(15 12 * * ? *)"),
 			Type:     pulumi.String("SCHEDULED"),
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					JobName: pulumi.Any(aws_glue_job.Example.Name),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -286,11 +286,11 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Trigger("example",
+    schedule="cron(15 12 * * ? *)",
+    type="SCHEDULED",
     actions=[{
         "jobName": aws_glue_job["example"]["name"],
-    }],
-    schedule="cron(15 12 * * ? *)",
-    type="SCHEDULED")
+    }])
 ```
 
 {{% /example %}}
@@ -302,11 +302,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Trigger("example", {
-    actions: [{
-        jobName: aws_glue_job_example.name,
-    }],
     schedule: "cron(15 12 * * ? *)",
     type: "SCHEDULED",
+    actions: [{
+        jobName: aws_glue_job.example.name,
+    }],
 });
 ```
 
@@ -324,6 +324,7 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
         {
+            Type = "CONDITIONAL",
             Actions = 
             {
                 new Aws.Glue.Inputs.TriggerActionArgs
@@ -342,7 +343,6 @@ class MyStack : Stack
                     },
                 },
             },
-            Type = "CONDITIONAL",
         });
     }
 
@@ -356,27 +356,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Type: pulumi.String("CONDITIONAL"),
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					CrawlerName: pulumi.String(aws_glue_crawler.Example1.Name),
+					CrawlerName: pulumi.Any(aws_glue_crawler.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
-						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						JobName: pulumi.Any(aws_glue_job.Example2.Name),
 						State:   pulumi.String("SUCCEEDED"),
 					},
 				},
 			},
-			Type: pulumi.String("CONDITIONAL"),
 		})
 		if err != nil {
 			return err
@@ -394,6 +394,7 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Trigger("example",
+    type="CONDITIONAL",
     actions=[{
         "crawlerName": aws_glue_crawler["example1"]["name"],
     }],
@@ -402,8 +403,7 @@ example = aws.glue.Trigger("example",
             "jobName": aws_glue_job["example2"]["name"],
             "state": "SUCCEEDED",
         }],
-    },
-    type="CONDITIONAL")
+    })
 ```
 
 {{% /example %}}
@@ -415,16 +415,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Trigger("example", {
+    type: "CONDITIONAL",
     actions: [{
-        crawlerName: aws_glue_crawler_example1.name,
+        crawlerName: aws_glue_crawler.example1.name,
     }],
     predicate: {
         conditions: [{
-            jobName: aws_glue_job_example2.name,
+            jobName: aws_glue_job.example2.name,
             state: "SUCCEEDED",
         }],
     },
-    type: "CONDITIONAL",
 });
 ```
 
@@ -442,6 +442,7 @@ class MyStack : Stack
     {
         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
         {
+            Type = "CONDITIONAL",
             Actions = 
             {
                 new Aws.Glue.Inputs.TriggerActionArgs
@@ -455,12 +456,11 @@ class MyStack : Stack
                 {
                     new Aws.Glue.Inputs.TriggerPredicateConditionArgs
                     {
-                        CrawlState = "SUCCEEDED",
                         CrawlerName = aws_glue_crawler.Example2.Name,
+                        CrawlState = "SUCCEEDED",
                     },
                 },
             },
-            Type = "CONDITIONAL",
         });
     }
 
@@ -474,27 +474,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Type: pulumi.String("CONDITIONAL"),
 			Actions: glue.TriggerActionArray{
 				&glue.TriggerActionArgs{
-					JobName: pulumi.String(aws_glue_job.Example1.Name),
+					JobName: pulumi.Any(aws_glue_job.Example1.Name),
 				},
 			},
 			Predicate: &glue.TriggerPredicateArgs{
 				Conditions: glue.TriggerPredicateConditionArray{
 					&glue.TriggerPredicateConditionArgs{
+						CrawlerName: pulumi.Any(aws_glue_crawler.Example2.Name),
 						CrawlState:  pulumi.String("SUCCEEDED"),
-						CrawlerName: pulumi.String(aws_glue_crawler.Example2.Name),
 					},
 				},
 			},
-			Type: pulumi.String("CONDITIONAL"),
 		})
 		if err != nil {
 			return err
@@ -512,16 +512,16 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.glue.Trigger("example",
+    type="CONDITIONAL",
     actions=[{
         "jobName": aws_glue_job["example1"]["name"],
     }],
     predicate={
         "conditions": [{
-            "crawlState": "SUCCEEDED",
             "crawlerName": aws_glue_crawler["example2"]["name"],
+            "crawlState": "SUCCEEDED",
         }],
-    },
-    type="CONDITIONAL")
+    })
 ```
 
 {{% /example %}}
@@ -533,16 +533,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.glue.Trigger("example", {
+    type: "CONDITIONAL",
     actions: [{
-        jobName: aws_glue_job_example1.name,
+        jobName: aws_glue_job.example1.name,
     }],
     predicate: {
         conditions: [{
+            crawlerName: aws_glue_crawler.example2.name,
             crawlState: "SUCCEEDED",
-            crawlerName: aws_glue_crawler_example2.name,
         }],
     },
-    type: "CONDITIONAL",
 });
 ```
 
@@ -564,7 +564,7 @@ const example = new aws.glue.Trigger("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Trigger">NewTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">NewTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -638,7 +638,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -658,7 +658,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -668,7 +668,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1295,7 +1295,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1887,7 +1887,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerAction.html">output</a> API doc for this type.
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicate.html">output</a> API doc for this type.
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicateCondition.html">output</a> API doc for this type.
