@@ -54,7 +54,7 @@ jobs:
       - run: make ensure ensure_tools
         working-directory: docs
       - name: run typedoc
-        run: PKGS=${{ github.event.client_payload.project }} NOBUILD=true ./scripts/run_typedoc.sh
+        run: PKGS=${{ github.event.client_payload.project-shortname }} NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: generate resource docs
         run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.project-shortname }}" true "${{ github.event.client_payload.ref }}"
