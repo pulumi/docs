@@ -1,6 +1,6 @@
 ---
 title: "Introducing kube2pulumi: No More YAML"
-date: 2020-08-13
+date: 2020-08-12
 meta_desc: Automatically convert Kubernetes YAML manifests to modern code in TypeScript, Python, C#, and Go.
 meta_image: yaml2code.png
 authors:
