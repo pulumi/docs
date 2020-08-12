@@ -6,265 +6,262 @@ url: /kubernetes
 meta_desc: Pulumi provides a cloud native programming model for Kubernetes deployments and orchestration. Any code, any cloud, any app.
 
 hero:
-    title: Kubernetes with Pulumi
+    title: Kubernetes Superpowers
     body: >
-        Pulumi provides a cloud native programming model for Kubernetes
-        deployments and orchestration: from on-premises to AWS EKS, Microsoft
-        AKS, and Google GKE.
+        Pulumi is the modern platform to manage all of your cloud native infrastructure using familiar engineering
+        tools and workflows. Avoid complex YAML, JSON, and DSLs by using your favorite programming languages and
+        automate your deployments to  Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS),
+        Google Kubernetes Engine (GKE),  DigitalOcean Kubernetes (DOKS), multi-cloud, hybrid and on-premises clusters
+        with leading ecosystem integrations.
 
+video_section:
+  title: Pulumi In Action
+  subtitle: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
+  youtube_video_id: yA40w1ryMu8
+  video_title: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
 
-        Any code, any cloud, any language.
-    code: |
-        import * as kx from "@pulumi/kubernetesx";
+kubernetes_overview:
+    title: Cloud Native Engineering with Pulumi
+    description: |
+        Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
 
-        const pb = new kx.PodBuilder({
-            containers: [{
-                image: "nginx",
-                ports: { http: 80 }
-            }]
-        });
+        With Pulumi for Kubernetes you can:
+    ide:
+        tabs:
+            - title: index.ts
+              language: typescript
+              code: |
+                import * as pulumi from "@pulumi/pulumi";
+                import * as kubernetes from "@pulumi/kubernetes";
 
-        const deployment = new kx.Deployment("nginx", {
-            spec: pb.asDeploymentSpec({ replicas: 3 })
-        });
+                // Create a namespace.
+                const devNamespace = new kubernetes.core.v1.Namespace("devNamespace", {
+                    metadata: {
+                        name: "dev",
+                    },
+                });
 
-        const service = deployment.createService({
-            type: kx.types.ServiceType.LoadBalancer
-        });
+                // Deploy the nginx-ingress Helm chart into the created namespace.
+                const nginxIngress = new kubernetes.helm.v3.Chart("nginx-ingress", {
+                    chart: "nginx-ingress",
+                    namespace: devNamespace.metadata.name,
+                    fetchOpts:{
+                        repo: "https://kubernetes-charts.storage.googleapis.com/",
+                    },
+                });
+            - title: __main__.py
+              language: python
+              code: |
+                import pulumi_kubernetes as kubernetes
 
-        export const serviceIP = service.ip;
+                # Create a namespace.
+                dev_namespace = kubernetes.core.v1.Namespace(
+                    "devNamespace",
+                    metadata={
+                        "name": "dev",
+                    })
 
-sections:
-    - id: what-is-kubernetes
-      label: What is Kubernetes?
-    - id: kubernetes-everywhere
-      label: Kubernetes Everywhere
-    - id: code
-      label: Code
-    - id: get-started
-      label: Get Started
-    - id: contact
-      label: Contact Us
+                # Deploy the nginx-ingress Helm chart into the created namespace.
+                nginx_ingress = kubernetes.helm.v3.Chart(
+                    "nginx-ingress",
+                    kubernetes.helm.v3.ChartOpts(
+                        chart="nginx-ingress",
+                        namespace=dev_namespace.metadata["name"],
+                        fetch_opts=kubernetes.helm.v3.FetchOpts(
+                            repo="https://kubernetes-charts.storage.googleapis.com/",
+                        ),
+                    ),
+                )
+            - title: main.go
+              language: go
+              code: |
+                    package main
 
-examples:
-    - title: Define Kubernetes apps
-      body: >
-          In this example, we use TypeScript to define a trivial app - an nginx image - and
-          deploy 1 replica. Using a real language to define your app enables great IDE support &mdash;
-          compile time checking for instance.
-      code: |
-          import * as k8s from "@pulumi/kubernetes";
+                    import (
+                        corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+                        "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v3"
+                        metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+                        "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+                    )
 
-          const appLabels = { app: "nginx" };
+                    func main() {
+                        pulumi.Run(func(ctx *pulumi.Context) error {
 
-          const deployment = new k8s.apps.v1.Deployment("nginx", {
-              spec: {
-                  replicas: 1,
-                  selector: { matchLabels: appLabels },
-                  template: {
-                      metadata: { labels: appLabels },
-                      spec: {
-                          containers: [{
-                              name: "nginx", image: "nginx"
-                          }]
-                      }
-                  }
-              }
-          });
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
+                            // Create a namespace.
+                            ns, err := corev1.NewNamespace(ctx, "devNamespace", &corev1.NamespaceArgs{
+                                Metadata: &metav1.ObjectMetaArgs{
+                                    Name: pulumi.String("dev"),
+                                },
+                            })
+                            if err != nil {
+                                return err
+                            }
 
-    - title: Improve expressiveness, reduce boilerplate
-      body: >
-          Using real languages means being able to recognize patterns, and abstract them to reusable
-          componenents.
+                            // Deploy the nginx-ingress Helm chart into the created namespace.
+                            _, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
+                                Chart: pulumi.String("nginx-ingress"),
+                                Namespace: ns.Metadata.ApplyT(func(metadata interface{}) string {
+                                    return *metadata.(*metav1.ObjectMeta).Name
+                                }).(pulumi.StringOutput),
+                                FetchArgs: helm.FetchArgs{
+                                    Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+                                },
+                            })
+                            if err != nil {
+                                return err
+                            }
 
-          In this example we take a typical Deployment and Service pattern to create a ServiceDeployment
-          class, simplifying the implementation of the canonical Guestbook app.
-      code: |
-          import * as k8sjs from "./k8sjs";
+                            return nil
+                        })
+                    }
+            - title: MyStack.cs
+              language: csharp
+              code: |
+                using Pulumi;
+                using Kubernetes = Pulumi.Kubernetes;
 
-          let redisLeader = new k8sjs.ServiceDeployment("redis-leader", {
-              image: "redis",
-              ports: [ 6379 ]
-          });
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                        // Create a namespace.
+                        var devNamespace = new Kubernetes.Core.V1.Namespace("devNamespace", new Kubernetes.Types.Inputs.Core.V1.NamespaceArgs
+                        {
+                            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                            {
+                                Name = "dev",
+                            },
+                        });
 
-          let redisReplica = new k8sjs.ServiceDeployment("redis-replica", {
-              image: "pulumi/guestbook-redis-replica",
-              ports: [ 6379 ]
-          });
+                        // Deploy the nginx-ingress Helm chart into the created namespace.
+                        var nginx = new Kubernetes.Helm.V3.Chart("nginx-ingress", new Kubernetes.Helm.ChartArgs
+                        {
+                            Chart = "nginx-ingress",
+                            Namespace = devNamespace.Metadata.Apply(x => x.Name),
+                            FetchOptions = new Kubernetes.Helm.ChartFetchArgs
+                            {
+                                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                            },
+                        });
+                    }
+                }
+    list:
+        - Manage Kubernetes clusters on all major cloud providers.
+        - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
+        - Automate Kubernetes deployments with CI/CD integrations for [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
+        - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
 
-          let frontend = new k8sjs.ServiceDeployment("frontend", {
-              replicas: 3,
-              image: "pulumi/guestbook-php-redis",
-              ports: [ 80 ],
-              loadBalancer: true,
-          });
+    cta: REQUEST MORE INFORMATION
 
-          export let frontendIp = frontend.ipAddress;
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
+superpowers:
+    - title: Run On Any Cloud
+      cta: Learn more
+      cta_url: "/docs/get-started/kubernetes"
+      icon_type: cloud
+      description: |
+       With support for all public clouds and dozens of popular infrastructure service
+       providers including private and hybrid clouds, Pulumi gives you the flexibility
+       to run your Kubernetes clusters and workloads wherever you want to.
 
-    - title: Injecting sidecars using abstraction
-      body: >
-          Abstraction also allows us to do powerful work to simplify more complex configuration.
-          An example of this is the sidecar microservices pattern where a container runs
-          alongside other containers to add some functional value &mdash; logging, proxying etc.
+    - title: Reduce Provisioning Time
+      cta: Learn more
+      cta_url: "/docs/get-started/kubernetes"
+      icon_type: provisioning
+      description: |
+        With Pulumi you are able to take advantage of the features of programming languages,
+        helping you reduce boilerplate code and ultimately ship Kubernetes infrastructure and
+        applications faster with greater consistency.
 
-          In this case we define a simple EnvoyDeployment class that adds an Envoy sidecar to our Kubernetes app.
-      code: |
-          export class EnvoyDeployment extends k8s.apps.v1.Deployment {
-              constructor(name: string, args: k8stypes.apps.v1.Deployment, opts?: pulumi.CustomResourceOptions) {
-                  const pod = args.spec.template.spec;
+    - title: Automate Delivery
+      cta: Learn more
+      cta_url: "/docs/guides/continuous-delivery"
+      icon_type: delivery
+      description: |
+        You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
+        continuously deliver Kubernetes infrastructure and applications. Improve the velocity
+        and visibility into your deployments from simple to complex global environments.
 
-                  // Add an Envoy sidecar container.
-                  pod.containers = pod.containers || [];
-                  pod.containers.push({
-                      name: "envoy",
-                      // `lyft/envoy` does not tag releases. Use a SHA.
-                      image: "lyft/envoy:4640fc028d65a6e2ee18858ebefcaeed24dffa81",
-                      command: ["/usr/local/bin/envoy"],
-                      args: [
-                          "--concurrency 4",
-                          "--config-path /etc/envoy/envoy.json",
-                          "--mode serve"
-                      ],
-                      ports: [{ containerPort: 80, protocol: "TCP" }],
-                      resources: {
-                          limits: { cpu: "1000m", memory: "512Mi" },
-                          requests: { cpu: "100m", memory: "64Mi" }
-                      },
-                      volumeMounts: [{
-                          name: "envoy-conf", mountPath: "/etc/envoy"
-                      }]
-                  });
+    - title: Smart Architecture
+      cta: Learn more
+      cta_url: "/docs/intro/concepts"
+      icon_type: architecture
+      description: |
+        YAML and templated DSLs force you to write the same boilerplate code over and over.
+        Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
+        you can stop reinventing the wheel and start inventing the platforms of the future.
 
-                  // Add a Volume for Envoy's config, as a ConfigMap.
-                  pod.volumes = pod.volumes || [];
-                  pod.volumes.push({
-                      name: "envoy-conf", configMap: { name: "envoy" },
-                  });
+    - title: Be Proactive, Not Reactive
+      cta: Learn more
+      cta_url: "/docs/guides/crossguard"
+      icon_type: policy
+      description: |
+        When you enable Pulumi's Policy as Code feature, you instantly gain the power to
+        prevent mistakes from being deployed. Enforce security, compliance, cost controls,
+        and best practices using policies defined in modern languages.
 
-                  super(name, args, opts);
-              }
-          }
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
+    - title: Reduce Deployment Complexity
+      cta: Learn more
+      cta_url: "/docs/guides/testing"
+      icon_type: testing
+      description: |
+        Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
+        of common tools, frameworks, and techniques to unit, integration, and property test your
+        Kubernetes infrastructure. Ensure your infrastructure is correct before and after deployment.
 
-    - title: Use existing YAML and Helm Charts
-      body: >
-          Pulumi can also process YAML and Helm Charts, adding them to Pulumi programs which unlocks multi-cloud and advanced delivery scenarios.
+detail_sections:
+    - title: Continue using the tools you love
+      description: |
+        Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
+        YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
+      cta: Learn More
+      cta_url: "/blog/new-kubernetes-superpowers"
+      items:
+          - title: Everything In One Place
+            description: Easily make the best use of existing Kubernetes tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
+            icon: fa-tools
 
-          These examples use YAML and Helm to deploy the Kubernetes Guestbook app and Wordpress.
-      code: |
-          // Use YAML.
-          import * as k8s from "@pulumi/kubernetes";
+          - title: Efficient Adoption
+            description: There’s no need to rewrite your existing Kubernetes configurations to get started with Pulumi. You can efficiently adopt existing resources to deploy your application to save time and effort.
+            icon: fa-book
 
-          const guestbook = new k8s.yaml.ConfigGroup(
-              "guestbook", { files: "guestbook/*.yaml" });
+          - title: Secrets Management
+            description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
+            icon: fa-key
 
-          export const frontendIp =
-              guestbook.getResource("v1/Service", "frontend").
-              spec.apply(spec => spec.clusterIP);
+          - title: Pulumi Kubernetes Operator
+            description: The Pulumi Kubernetes Operator gives you a Kubernetes controller that deploys cloud infrastructure for you and your team.
+            icon: fa-people-carry
 
-          // Use Helm.
-          import * as k8s from "@pulumi/kubernetes";
+    - title: Kubernetes Best Practices with Pulumi Crosswalk
+      description: |
+        Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE).
+      cta: Learn More
+      cta_url: "/docs/guides/crosswalk/kubernetes"
+      items:
+          - title: Day 2 and Beyond
+            description: By using Pulumi Crosswalk for Kubernetes, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
+            icon: fa-sun
 
-          const wordpress = new k8s.helm.v2.Chart("wordpress", {
-              repo: "stable",
-              version: "2.1.3",
-              chart: "wordpress"
-          });
+          - title: Accessible Kubernetes
+            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make the Kubernetes API more accessible and approachable to operators and developers of all backgrounds.
+            icon: fa-users
 
-          export const frontendIp = wordpress
-              .getResource("v1/Service", "wpdev-wordpress")
-              .status.apply(status => status.loadBalancer.ingress[0].ip);
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
+          - title: Focus on Delivering Value
+            description: With Pulumi you'll focus more on functionality and business logic of your Kubernetes infrastructure and applications, and less on low-level implementation details.
+            icon: fa-chalkboard-teacher
 
-    - title: Declare managed services alongside Kubernetes
-      body: >
-          Pulumi can be used to combine services. For instance, a Kubernetes cluster and an associated database (such as RDS).
-
-          In this example, we provision and use an AWS S3 bucket from a Kubernetes service.
-      code: |
-          import * as k8s from "@pulumi/kubernetes";
-          import * as aws from "@pulumi/aws";
-
-          const appName = "nginx";
-
-          // nginx config stored in an S3 bucket.
-          const config = new aws.s3.Bucket(`${appName}-config`);
-
-          // nginx container, replicated 1 time.
-          const appLabels = { app: appName };
-          const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-              spec: {
-                  selector: { matchLabels: appLabels },
-                  replicas: 1,
-                  template: {
-                      metadata: { labels: appLabels },
-                      spec: {
-                          initContainers: [
-                              nginxConfigPuller(config.bucketDomainName)
-                          ],
-                          containers: [{
-                              name: appName, image: "nginx:1.15-alpine"
-                          }]
-                      }
-                  }
-              }
-          });
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
-
-    - title: Provision Kubernetes clusters in any cloud
-      body: >
-          Kubernetes can be used in many environments &mdash; local dev, in the data center, self-hosted
-          in the cloud, and as a managed cloud service. Pulumi supports all of those options.
-
-          In this example, we show how to deploy a GKE cluster with configurable settings, which
-          can then be used to deploy apps to.
-      code: |
-          import * as gcp from "@pulumi/gcp";
-          import { nodeCount, nodeMachineType, password, username } from "./config";
-
-          const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
-          export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
-              initialNodeCount: nodeCount,
-              minMasterVersion: engineVersion,
-              nodeVersion: engineVersion,
-              masterAuth: { username, password },
-              nodeConfig: {
-                  machineType: nodeMachineType,
-                  oauthScopes: [
-                      "https://www.googleapis.com/auth/compute",
-                      "https://www.googleapis.com/auth/devstorage.read_only",
-                      "https://www.googleapis.com/auth/logging.write",
-                      "https://www.googleapis.com/auth/monitoring"
-                  ],
-              },
-          });
-
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
+          - title: Avoid Pitfalls
+            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the cluster, its workloads, and underlying resources.
+            icon: fa-pager
 
 contact_us_form:
     section_id: contact
-    hubspot_form_id: 212ce93d-e081-4998-b14b-f26a974da4fb
-    headline: Need help with Kubernetes?
+    hubspot_form_id: 30017141-1093-4b94-b0eb-20aabc08447b
+    headline: Want a demo?
     quote:
-        title: Learn how top engineering teams are using Pulumi to manage and provision Kubernetes clusters in any cloud.
-        name: Harrison Heck
-        name_title: Head of DevOps, Linio
+        title: See why the world’s best engineering teams use Pulumi + Kubernetes to enable true collaboration between developers and operators.
+        name: Fernando Carletti
+        name_title: Head of DevOps, Credijusto
         content: |
-            As the largest eCommerce platform in Latin America, our infrastructure has to be highly stable, well
-            documented and agile. With Pulumi, we're able to develop new infrastructure, change existing infrastructure
-            and more with greater speed and reliability than we've ever had before.
+            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time that it took them previously, by giving them the ability to work with the languages they already know, bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application lifecycle management throughout our organization.
 ---
