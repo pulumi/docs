@@ -17,14 +17,14 @@ controller that deploys cloud infrastructure in Pulumi Stacks for you and your
 team.
 
 These program stacks include virtual machines, block storage,
-managed Kuberentes clusters, API resources, serverless functions and more!
+managed Kubernetes clusters, API resources, serverless functions and more!
 
 <!--more-->
 
 ## Overview
 
 The [Pulumi Kubernetes Operator][pulumi-k8s-op] is an [extension pattern][k8s-ext-pattern] that
-enables Kuberentes users to create a Pulumi [`Stack`][stack] as a first-class API
+enables Kubernetes users to create a Pulumi [`Stack`][stack] as a first-class API
 resource, and use the `StackController` to drive the updates of the Stack until
 success.
 
@@ -663,6 +663,6 @@ with users and the Pulumi team.
 [pulumi-k8s-nginx]: https://github.com/metral/pulumi-nginx
 [pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks
 [p-examples]: https://github.com/pulumi/examples
-[stack]:({{< relref "/docs/intro/concepts/stack" >}})
-[pulumi-config]:({{< relref "/docs/intro/concepts/config" >}})
-[pulumi-providers]:({{< relref "/docs/intro/cloud-providers" >}})
+[stack]:{{< relref "/docs/intro/concepts/stack" >}}
+[pulumi-config]:{{< relref "/docs/intro/concepts/config" >}}
+[pulumi-providers]:{{< relref "/docs/intro/cloud-providers" >}}
