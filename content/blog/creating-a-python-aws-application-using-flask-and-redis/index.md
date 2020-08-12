@@ -7,9 +7,11 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "ecs", "docker"]
 ---
 
-I've recently started developing with Pulumi, and have begun to explore its inner workings and mechanisms. I decided to construct a production-level application, and to document each step that I take and my progress as I go along.
+*Meet Vova Ivanov---one of the Pulumi summer interns. He'll be writing about his experiences learning Pulumi while modernizing a web app and its underlying infrastructure.*
 
 <!--more-->
+
+I've recently started developing with Pulumi, and have begun to explore its inner workings and mechanisms. I decided to construct a production-level application, and to document each step that I take and my progress as I go along.
 
 This blog post features recreating the existing [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
 
