@@ -22,7 +22,6 @@ refactoring, testing, and the ability to use standard language features like var
 abstraction. Pulumi also supports [Helm], [Kustomize], and [YAML], but these tools don't take full advantage of the
 programming language. With `kube2pulumi`, you can realize these benefits without manual conversion work upfront.
 
-
 If you want to try it out right now in your browser, head over to our [Kubernetes to Pulumi Converter]!
 [![Kubernetes to Pulumi Converter](kube2pulumi.png)]({{< relref "/kube2pulumi" >}})
 
