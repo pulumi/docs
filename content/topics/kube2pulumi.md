@@ -37,7 +37,7 @@ form:
     style="font-size: 0.75rem !important; color: #fff !important">kube.yaml</p>
 <textarea id="terraform-code" rows="27"
     class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-y-scroll overflow-x-hidden whitespace-pre"
-    title="Enter a single-file HCL program's text; see the 'UPLOAD' tab for multi-file programs">
+    title="Enter a single-file YAML manifest's text; see the 'UPLOAD' tab for multi-file programs">
 </textarea>
 
 <p class="text-gray-700 text-xs mb-1">
