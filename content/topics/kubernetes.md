@@ -243,7 +243,7 @@ detail_sections:
             icon: fa-sun
 
           - title: Accessible Kubernetes
-            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make theKubernetes API more accessible and approachable to operators and developers of all backgrounds.
+            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make the Kubernetes API more accessible and approachable to operators and developers of all backgrounds.
             icon: fa-users
 
           - title: Focus on Delivering Value
