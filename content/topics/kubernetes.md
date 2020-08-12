@@ -8,15 +8,15 @@ meta_desc: Pulumi provides a cloud native programming model for Kubernetes deplo
 hero:
     title: Kubernetes Superpowers
     body: >
-        Pulumi is the modern platform to manage all of your cloud native infrastructure using familiar engineering
-        tools and workflows. Avoid complex YAML, JSON, and DSLs by using your favorite programming languages and
-        automate your deployments to  Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS),
-        Google Kubernetes Engine (GKE),  DigitalOcean Kubernetes (DOKS), multi-cloud, hybrid and on-premises clusters
-        with leading ecosystem integrations.
+        Pulumi is the modern platform to manage all of your cloud native infrastructure using
+        familiar engineering tools and workflows. Avoid complex YAML, JSON, and DSLs by using
+        your favorite programming languages and automate deployments to AWS, Azure, GCP,
+        multi-cloud, hybrid and on-premises clusters.
+    cta_text: See what's new
 
 video_section:
   title: Pulumi In Action
-  subtitle: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
+  subtitle: Watch how easy it is to set up Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
   youtube_video_id: yA40w1ryMu8
   video_title: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
 
@@ -150,8 +150,8 @@ kubernetes_overview:
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
         - Automate Kubernetes deployments with CI/CD integrations for [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
         - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
-
-    cta: REQUEST MORE INFORMATION
+    cta: Learn More
+    cta_url: "/blog/new-kubernetes-superpowers"
 
 superpowers:
     - title: Run On Any Cloud
@@ -159,9 +159,10 @@ superpowers:
       cta_url: "/docs/get-started/kubernetes"
       icon_type: cloud
       description: |
-       With support for all public clouds and dozens of popular infrastructure service
-       providers including private and hybrid clouds, Pulumi gives you the flexibility
-       to run your Kubernetes clusters and workloads wherever you want to.
+        Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
+        Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
+        (DOKS), and more, with dozens of integrations with popular infrastructure service
+        providers.
 
     - title: Reduce Provisioning Time
       cta: Learn more
