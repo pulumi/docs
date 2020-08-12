@@ -172,6 +172,10 @@ func main() {
 
 {{< /chooser >}}
 
+And best of all - you can try it out yourself at [pulumi.com/kube2pulumi]({{< relref "/kube2pulumi" >}}) to see how easy it is to bring your Kubernetes YAML to Pulumi!
+
+![Kubernetes to Pulumi Converter](kube2pulumi.png)
+
 ## Strongly-Typed Kubernetes CRDs
 
 As the Kubernetes ecosystem grows, projects across the Cloud Native landscape build powerful new extensions on top of the core Kubernetes resource model via [CustomResources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/). These Custom Resources extend the Kubernetes API to provide first-class support for everything from Service Meshes to Storage extensions to Observability infrastructure and much more (including the Pulumi Kubernetes Operator!). While Pulumi offers a strongly-typed API for 100% of the core Kubernetes API, so far it has only exposed these extensions via the weakly-typed and general-purpose `CustomResource` API in Kubernetes.
