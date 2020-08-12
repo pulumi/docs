@@ -326,7 +326,7 @@ It’s never been a more exciting time to get started with Pulumi and Kubernetes
 You can learn more about each of the new capabilities in their corresponding project documentation:
 
 * [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
-* [Strongly-typed CRDs](https://cert-manager.io/docs/installation/kubernetes/)
+* [Strongly-typed CRDs](https://github.com/pulumi/pulumi-kubernetes/tree/master/provider/cmd/crd2pulumi)
 * [kube2pulumi](https://github.com/pulumi/kube2pulumi)
 * [OPA for Pulumi CrossGuard](https://github.com/pulumi/pulumi-policy-opa)
 * [Spinnaker Pulumi Plugin]({{< relref "/blog/unlocking-spinnaker-with-pulumi" >}})
