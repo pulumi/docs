@@ -73,44 +73,44 @@
 
     <!-- Customer logos -->
     <section id="customers" class="mb-16 px-4">
-        <h3 class="my-12 text-center">
+        <h3 class="mt-12 mb-8 text-center">
             Powering top engineering teams
         </h3>
         <div class="container mx-auto">
-            <div class="lg:flex items-center justify-center my-4">
+            <div class="flex flex-col lg:flex-row items-center justify-center my-4">
                 <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
                 </a>
                 <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
                 <a data-track="customer-logo" href="{{ relref . "/case-studies/mercedes-benz" }}">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
                 <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
                 <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
             </div>
             <div class="lg:flex items-center justify-center my-4">
                 <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
                 </a>
                 <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                    <img class="mx-auto my-6 lg:my-2 lg:mx-8 h-10" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
                 <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 md:px-0">
-        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row">
-            <div class="md:w-1/2 text-center">
+    <section id="kubernetes-overview" class="py-8 bg-gray-100 px-4 lg:px-0">
+        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row">
+            <div class="lg:w-1/2 text-center">
                 <div class="text-left">
                     {{ partial "code-tabbed" (dict "tabs" .Params.kubernetes_overview.ide.tabs "chrome" "true" "mode" "dark") }}
                 </div>
@@ -148,7 +148,7 @@
                     </span>
                 </div>
             </div>
-            <div class="mt-16 md:w-1/2 md:pl-12">
+            <div class="mt-16 lg:w-1/2 lg:pl-12">
                 {{ with .Params.kubernetes_overview }}
                     <h2>{{ .title }}</h2>
                     <p>{{ .description }}</p>
@@ -158,7 +158,7 @@
                         {{ end }}
                     </ul>
                     <div class="my-8">
-                        <a id="kubernetes-request-more-information" class="btn block text-center md:inline-block" href="#contact" track-click>
+                        <a id="kubernetes-request-more-information" class="btn block text-center lg:inline-block" href="#contact" track-click>
                             {{ .cta }}
                         </a>
                     </div>
@@ -169,23 +169,23 @@
 
     <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
         <div class="container mx-auto lg:flex justify-center">
-            <ul class="flex flex-col md:flex-row md:flex-wrap items-start list-none p-0">
+            <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
                 {{ $powers := .Params.superpowers }}
                 {{ range $i, $item := $powers }}
-                    <li class="md:w-1/2 md:flex items-start mt-0">
-                        <div class="text-center md:text-left mb-4 md:mb-0">
+                    <li class="lg:w-1/2 lg:flex items-start mt-0">
+                        <div class="text-center lg:text-left mb-4 lg:mb-0">
                             <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
                                 {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
                             </div>
                         </div>
-                        <div class="md:pl-6 md:pr-12">
-                            <h3 class="text-center md:text-left font-normal text-gray-800 text-3xl mt-0" >
+                        <div class="lg:pl-6 lg:pr-12">
+                            <h3 class="text-center lg:text-left font-normal text-gray-800 text-3xl mt-0" >
                                 <a href="{{ relref $pageContext $item.cta_url }}">
                                     <span class="align-middle text-blue-700">{{ $item.title }}</span>
                                 </a>
                             </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed">{{ $item.description }}</p>
-                            <p class="m-0 text-lg text-center md:text-left">
+                            <p class="text-lg text-gray-700 leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
+                            <p class="m-0 text-lg text-center lg:text-left">
                                 <a href="{{ relref $pageContext $item.cta_url }}">
                                     <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
                                     <span class="text-blue-400">&rarr;</span>
@@ -250,32 +250,32 @@
             {{ $ctaButtonColor = "btn-orange" }}
         {{ end }}
 
-        <section id="teams" class="{{ $bgColor }} py-32 px-4">
-            <div class="container md:mx-auto md:flex">
-                <div class="md:w-1/2 md:mr-8">
-                    <h2>{{ $item.title }}</h2>
-                    <p class="text-xl">{{ $item.description }}</p>
-                    <a class="hidden md:inline-block btn block text-center md:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
+        <section class="{{ $bgColor }} pt-24 pb-16 px-4">
+            <div class="container lg:mx-auto lg:flex">
+                <div class="lg:w-1/2 lg:mr-8">
+                    <h2 class="text-center lg:text-left md:px-24 lg:px-0">{{ $item.title }}</h2>
+                    <p class="text-xl md:px-24 lg:px-0">{{ $item.description }}</p>
+                    <a class="hidden btn block text-center lg:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
-                <div class="my-8 md:my-0 md:w-1/2 md:flex flex-wrap">
+                <div class="my-8 lg:my-0 lg:w-1/2 lg:flex flex-wrap">
                     {{ range $i, $row := $item.items }}
-                        <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                            <div class="flex flex-col md:flex-row items-center md:items-start">
-                                <div class="md:w-1/4 text-center">
-                                    <i class="inline-block mb-2 md:mb-0 fas fa-2x {{ $row.icon }} {{ $iconColor }}"></i>
+                        <div class="lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                                <div class="lg:w-1/4 text-center">
+                                    <i class="inline-block mb-2 lg:mb-0 fas fa-2x {{ $row.icon }} {{ $iconColor }}"></i>
                                 </div>
-                                <div class="md:w-3/4">
-                                    <h5 class="text-center md:text-left">{{ $row.title }}</h5>
-                                    <p class="md:text-sm">{{ $row.description }}</p>
+                                <div class="lg:w-3/4">
+                                    <h5 class="text-center lg:text-left">{{ $row.title }}</h5>
+                                    <p class="lg:text-sm md:px-24 lg:px-0">{{ $row.description }}</p>
                                 </div>
                             </div>
                         </div>
                     {{ end }}
                 </div>
             </div>
-            <a class="btn block md:hidden text-center md:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
+            <a class="btn block lg:hidden text-center lg:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                 {{ $item.cta }}
             </a>
         </section>
@@ -302,7 +302,7 @@
         </div>
     {{ end }}
 
-    <section id="get-started" class="bg-gray-100 py-16 px-4 md:px-0">
+    <section id="get-started" class="bg-gray-100 py-16 px-4 lg:px-0">
         <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
             <div class="md:w3-/12 mr-4">
                 <h2>Get Started with Pulumi</h2>
@@ -313,21 +313,21 @@
         </div>
         <div class="container mx-auto max-w-5xl">
             <div class="flex flex-row max-w-full">
-                <a id="get-started-aws" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                <a id="get-started-aws" class="btn bg-white border border-gray-300 hover:bg-white hover:border-gray-400 p-5 mb-5 flex justify-center w-1/2 mr-4"
                     href="{{ relref . "/docs/get-started/aws" }}" track-click>
                     <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
                 </a>
-                <a id="get-started-azure" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                <a id="get-started-azure" class="btn bg-white border border-gray-300 hover:bg-white hover:border-gray-400 p-5 mb-5 flex justify-center w-1/2 ml-4"
                     href="{{ relref . "/docs/get-started/azure" }}" track-click>
                     <img class="h-10" src="/logos/tech/azure.svg" alt="Azure">
                 </a>
             </div>
             <div class="flex flex-row max-w-full">
-                <a id="get-started-gcp" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                <a id="get-started-gcp" class="btn bg-white border border-gray-300 hover:bg-white hover:border-gray-400 p-5 mb-5 flex justify-center w-1/2 mr-4"
                     href="{{ relref . "/docs/get-started/gcp" }}" track-click>
                     <img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud">
                 </a>
-                <a id="get-started-kubernetes" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                <a id="get-started-kubernetes" class="btn bg-white border border-gray-300 hover:bg-white hover:border-gray-400 p-5 mb-5 flex justify-center w-1/2 ml-4"
                     href="{{ relref . "/docs/get-started/kubernetes" }}" track-click>
                     <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
                 </a>
@@ -335,7 +335,7 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-white mb-0 py-16 text-white px-4 md:px-0">
+    <section id="contact" class="bg-white mb-0 py-16 text-white px-4 lg:px-0">
         <div class="container mx-auto max-w-5xl bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
             {{ with .Params.contact_us_form }}
                 <div class="md:flex my-8 md:max-w-32 align-top">
