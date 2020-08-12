@@ -85,17 +85,90 @@ metadata:
 
 Becomes strongly-typed code in Pulumi:
 
-<!-- TODO: Replace with a picker. -->
+{{< chooser language "typescript,python,csharp,go" >}}
 
-```ts
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
 const fooNamespace = new kubernetes.core.v1.Namespace("fooNamespace", {
-    apiVersion: "v1",
-    kind: "Namespace",
     metadata: {
         name: "foo",
     },
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+foo_namespace = kubernetes.core.v1.Namespace("fooNamespace",
+    metadata={
+        "name": "foo",
+    })
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooNamespace = new Kubernetes.Core.V1.Namespace("fooNamespace", new Kubernetes.Types.Inputs.Core.V1.NamespaceArgs
+        {
+            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+            {
+                Name = "foo",
+            },
+        });
+    }
+
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+        corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+        metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+        "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+        pulumi.Run(func(ctx *pulumi.Context) error {
+                _, err := corev1.NewNamespace(ctx, "fooNamespace", &corev1.NamespaceArgs{
+                        Metadata: &metav1.ObjectMetaArgs{
+                                Name: pulumi.String("foo"),
+                        },
+                })
+                if err != nil {
+                        return err
+                }
+                return nil
+        })
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Strongly-Typed Kubernetes CRDs
 
