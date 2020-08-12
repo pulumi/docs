@@ -149,7 +149,7 @@ kubernetes_overview:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
         - Automate Kubernetes deployments with CI/CD integrations for [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
-        - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator).
+        - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
 
     cta: REQUEST MORE INFORMATION
 
@@ -214,7 +214,7 @@ detail_sections:
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
       cta: Learn More
-      cta_url: "/"
+      cta_url: "/blog/new-kubernetes-superpowers"
       items:
           - title: Everything In One Place
             description: Easily make the best use of existing Kubernetes tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
