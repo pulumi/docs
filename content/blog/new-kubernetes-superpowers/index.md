@@ -1,7 +1,7 @@
 ---
 title: "New Kubernetes Superpowers for Cloud Native Infrastructure"
 date: 2020-08-12
-meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment automation, cloud native ecosystem integration, and easy Puulumi adoption."
+meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment automation, cloud native ecosystem integration, and easy Pulumi adoption."
 meta_image: k8s-enhancements.png
 authors:
     - luke-hoban
@@ -31,7 +31,7 @@ Whether you are designing your cloud native delivery platform, looking to enforc
 
 Pulumi is an Infrastructure as Code platform designed from the ground up for the modern cloud. That means deep support for containers, serverless, and Kubernetes, using your favorite programming languages to define, test, and manage your cloud infrastructure. Pulumi supports easy provisioning of Kubernetes clusters in many different managed platforms, including AWS, Azure, GCP, Digital Ocean, Rancher, Linode, and Civo. Additionally, Pulumi can manage resources inside a Kubernetes cluster using the same powerful tools, replacing the need for brittle and unscalable YAML configuration. Best of all, Pulumi combines these into a single cohesive programming model across your cloud infrastructure in managed cloud services *and* in Kubernetes.
 
-Kubernetes has been at the center of many Pulumi-enabled cloud modernization projects, including provisioning managed Kubernetes clusters, connecting them to supporting cloud infrastructure,  enabling platform teams to configure and manage platforms on top of Kubernetes, and allowing teams to replace unmaintainable piles of YAML with code and software-based deployment processes. Hundreds of modern cloud engineering teams have been able to accelerate the move to the cloud and Kubernetes thanks to Pulumi.
+Kubernetes has been at the center of many Pulumi-enabled cloud modernization projects, including provisioning managed Kubernetes clusters, connecting them to supporting cloud infrastructure, enabling platform teams to configure and manage platforms on top of Kubernetes, and allowing teams to replace unmaintainable piles of YAML with code and software-based deployment processes. Hundreds of modern cloud engineering teams have been able to accelerate the move to the cloud and Kubernetes thanks to Pulumi.
 
 ## Pulumi Kubernetes Operator
 
