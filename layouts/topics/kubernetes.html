@@ -5,7 +5,7 @@
                 <h1>{{ .Params.hero.title }}</h1>
                 <p>{{ .Params.hero.body | markdownify }}</p>
                 <p>
-                    <a class="text-blue-200 hover:text-blue-200 font-bold" href="{{ relref . "/blog" }}">
+                    <a class="text-blue-300 hover:text-blue-200 font-bold" href="{{ relref . "/blog" }}">
                         <span class="hover:mr-1">Check out what's new on the Pulumi blog.</span>
                     </a>
                 </p>
@@ -222,7 +222,10 @@
             <h3 class="mt-4 text-4xl text-gray-800">
                 Cloud Engineering Summit
             </h3>
-            <div class="">
+            <p class="py-0 my-0">
+                October 7-8, 2020 &bull; Presented by Pulumi
+            </p>
+            <div>
                 <p class="leading-relaxed mt-6 mb-10 text-2xl text-gray-700">
                     Learn from industry and community experts about how modern teams are
                     leveraging the cloud to innovate faster than ever before.
