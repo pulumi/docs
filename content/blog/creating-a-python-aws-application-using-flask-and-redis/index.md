@@ -1,6 +1,6 @@
 ---
 title: "Creating a Python AWS Application Using Flask and Redis"
-date: 2020-08-11T15:06:26-07:00
+date: 2020-08-13T15:06:26-07:00
 meta_desc: A tutorial on how to create a Python AWS application using Flask, Redis, and Pulumi.
 meta_image: meta.png
 authors: ["vova-ivanov"]
@@ -15,7 +15,29 @@ I've recently started developing with Pulumi, and have begun to explore its inne
 
 This blog post recreates the existing [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
 
-The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`. Since we won't be modifying the application's frontend, we simply copy the `frontend/` folder from the example into our directory.
+The first step is to clone the [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/). We'll use a sparse clone to copy only the `aws-ts-voting-app` directory.
+
+```bash
+$ mkdir examples && cd examples
+$ git init
+$ git remote add origin -f https://github.com/pulumi/examples/
+$ git config core.sparseCheckout true
+$ echo aws-ts-voting-app >> .git/info/sparse-checkout
+$ git pull origin master
+```
+
+The next step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
+
+```bash
+$ mkdir aws-py-voting-app && cd aws-py-voting-app
+$ pulumi new aws-python
+```
+
+Since we won't be modifying the application's frontend, we simply copy the frontend/ folder from the example into our directory.
+
+```bash
+$ cp -r aws-ts-voting-app/frontend/ aws-py-voting-app/frontend
+```
 
 The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following:
 
