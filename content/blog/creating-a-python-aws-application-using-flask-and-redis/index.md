@@ -15,7 +15,15 @@ I've recently started developing with Pulumi, and have begun to explore its inne
 
 This blog post recreates the existing [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
 
-The project structure of our new Python voting app will be similar to the Typescript example, and the biggest difference will be the code describing the cloud infrastructure. Instead of an `index.ts` file, Pulumi will be given a new `__main__.py` file. The first few lines of the file indicate which libraries to import and describe a pair of configuration options used by the application.
+The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`. Since we won't be modifying the application's frontend, we simply copy the `frontend/` folder from the example into our directory.
+
+The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following: 
+
+```
+pulumi-docker>=1.0.0,<3.0.0
+```
+
+The biggest difference between our project and the example is the code describing the cloud infrastructure we want to create. Instead of an `index.ts` file, the project uses a `__main__.py` file. The first few lines of the file will indicate which libraries to import and describe a pair of configuration options used by the application.
 
 ```python
 import json
