@@ -282,6 +282,12 @@
       "package_name": "pulumi_hcloud",
       "pulumi_provider_name": "hcloud",
       "terraform_provider_name": "hcloud"
+    },
+    {
+      "name": "Pulumi Akamai",
+      "package_name": "pulumi_akamai",
+      "pulumi_provider_name": "akamai",
+      "terraform_provider_name": "akamai"
     }
   ]
 }

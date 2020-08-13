@@ -9,6 +9,7 @@ TOOLS_REPOS=(
     "pulumi"
     "pulumi-aiven"
     "pulumi-alicloud"
+    "pulumi-akamai"
     "pulumi-auth0"
     "pulumi-aws"
     "pulumi-awsx"

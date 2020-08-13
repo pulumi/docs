@@ -40,7 +40,7 @@ explore what's possible, you've come to the right place.
 
 ### Network
 
-{{< resource-providers "cloudflare,dnsimple,f5bigip,ns1" >}}
+{{< resource-providers "cloudflare,dnsimple,f5bigip,ns1,akamai" >}}
 
 ### Version Control
 
