@@ -64,6 +64,7 @@ aliases: ["/docs/reference/clouds/"]
 
 ## Network Providers
 
+* [Akamai]({{< relref "./akamai" >}})
 * [Cloudflare]({{< relref "./cloudflare" >}})
 * [DNSimple]({{< relref "./dnsimple" >}})
 * [F5 BIG-IP]({{< relref "./f5bigip" >}})
