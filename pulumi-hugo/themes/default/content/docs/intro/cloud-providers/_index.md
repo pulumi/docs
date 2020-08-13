@@ -60,9 +60,11 @@ aliases: ["/docs/reference/clouds/"]
 * [Datadog]({{< relref "./datadog" >}})
 * [New Relic]({{< relref "./newrelic" >}})
 * [SignalFx]({{< relref "./signalfx" >}})
+* [Wavefront]({{< relref "./wavefront" >}})
 
 ## Network Providers
 
+* [Akamai]({{< relref "./akamai" >}})
 * [Cloudflare]({{< relref "./cloudflare" >}})
 * [DNSimple]({{< relref "./dnsimple" >}})
 * [F5 BIG-IP]({{< relref "./f5bigip" >}})
