@@ -5,6 +5,9 @@ url: /kubernetes
 
 meta_desc: Pulumi provides a cloud native programming model for Kubernetes deployments and orchestration. Any code, any cloud, any app.
 
+aliases:
+  - /cloudnative
+
 hero:
     title: Kubernetes Superpowers
     body: >
