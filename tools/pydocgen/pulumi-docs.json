@@ -284,6 +284,12 @@
       "terraform_provider_name": "hcloud"
     },
     {
+      "name": "Pulumi Wavefront",
+      "package_name": "pulumi_wavefront",
+      "pulumi_provider_name": "wavefront",
+      "terraform_provider_name": "wavefront"
+    },
+    {
       "name": "Pulumi Akamai",
       "package_name": "pulumi_akamai",
       "pulumi_provider_name": "akamai",

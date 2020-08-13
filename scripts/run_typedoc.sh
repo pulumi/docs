@@ -128,6 +128,7 @@ REPOS=(
     "tls,pulumi-tls,sdk/nodejs"
     "vault,pulumi-vault,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
+    "wavefront,pulumi-wavefront,sdk/nodejs"
 )
 
 PIDS=()

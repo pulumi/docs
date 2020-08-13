@@ -36,7 +36,7 @@ explore what's possible, you've come to the right place.
 
 ### Monitoring
 
-{{< resource-providers "datadog,newrelic,signalfx" >}}
+{{< resource-providers "datadog,newrelic,signalfx,wavefront" >}}
 
 ### Network
 
