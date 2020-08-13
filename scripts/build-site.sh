@@ -23,7 +23,7 @@ make build_components
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
-    hugo --minify --templateMetrics --buildDrafts --buildFuture -e $(build_identifier)
+    hugo --minify --templateMetrics --buildDrafts --buildFuture -e "preview"
 else
     hugo --minify --templateMetrics -e production
 fi
