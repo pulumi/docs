@@ -17,7 +17,7 @@ This blog post recreates the existing [Typescript voting app example](https://ww
 
 The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`. Since we won't be modifying the application's frontend, we simply copy the `frontend/` folder from the example into our directory.
 
-The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following: 
+The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following:
 
 ```
 pulumi-docker>=1.0.0,<3.0.0
