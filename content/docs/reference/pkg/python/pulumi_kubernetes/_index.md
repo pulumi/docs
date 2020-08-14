@@ -12,13 +12,13 @@ block_external_search_index: true
 <span id="pulumi-kubernetes"></span><h1>Pulumi Kubernetes<a class="headerlink" href="#module-pulumi_kubernetes" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="pulumi_kubernetes.ConfigFile">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">file_id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigFile creates a set of Kubernetes resources from a Kubernetes YAML file.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulumi_kubernetes.yaml</span> <span class="kn">import</span> <span class="n">ConfigFile</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">ConfigFile</span><span class="p">(</span>
     <span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">file_id</span><span class="o">=</span><span class="s2">&quot;foo.yaml&quot;</span><span class="p">,</span>
+    <span class="n">file</span><span class="o">=</span><span class="s2">&quot;foo.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -50,7 +50,7 @@ block_external_search_index: true
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">ConfigFile</span><span class="p">(</span>
     <span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">file_id</span><span class="o">=</span><span class="s2">&quot;foo.yaml&quot;</span><span class="p">,</span>
+    <span class="n">file</span><span class="o">=</span><span class="s2">&quot;foo.yaml&quot;</span><span class="p">,</span>
     <span class="n">transformations</span><span class="o">=</span><span class="p">[</span><span class="n">make_service_private</span><span class="p">,</span> <span class="n">alias</span><span class="p">,</span> <span class="n">omit_resource</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
@@ -59,7 +59,7 @@ block_external_search_index: true
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – A name for a resource.</p></li>
-<li><p><strong>file_id</strong> (<em>str</em>) – Path or a URL that uniquely identifies a file.</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – Path or a URL that uniquely identifies a file.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</p></li>
 <li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – A set of
 transformations to apply to Kubernetes resource definitions before registering with engine.</p></li>
@@ -184,7 +184,7 @@ may be supplied using any of the following methods:</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulumi_kubernetes.yaml</span> <span class="kn">import</span> <span class="n">ConfigFile</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulumi_kubernetes.yaml</span> <span class="kn">import</span> <span class="n">ConfigGroup</span>
 
 <span class="c1"># Make every service private to the cluster, i.e., turn all services into ClusterIP instead of LoadBalancer.</span>
 <span class="k">def</span> <span class="nf">make_service_private</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>

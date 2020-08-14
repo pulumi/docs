@@ -822,8 +822,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="non_resource_ur_ls_python">
-<a href="#non_resource_ur_ls_python" style="color: inherit; text-decoration: inherit;">non_<wbr>resource_<wbr>ur_<wbr>ls</a>
+        <span id="non_resource_urls_python">
+<a href="#non_resource_urls_python" style="color: inherit; text-decoration: inherit;">non_<wbr>resource_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
