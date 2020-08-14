@@ -2329,16 +2329,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pod_cid_rs_python">
-<a href="#pod_cid_rs_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cid_<wbr>rs</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="pod_cidr_python">
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span> 
@@ -2346,6 +2336,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}PodCIDR represents the pod IP range assigned to the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pod_cidrs_python">
+<a href="#pod_cidrs_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

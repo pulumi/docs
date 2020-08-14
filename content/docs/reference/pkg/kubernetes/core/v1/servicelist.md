@@ -3148,8 +3148,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span id="external_i_ps_python">
-<a href="#external_i_ps_python" style="color: inherit; text-decoration: inherit;">external_<wbr>i_<wbr>ps</a>
+        <span id="external_ips_python">
+<a href="#external_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

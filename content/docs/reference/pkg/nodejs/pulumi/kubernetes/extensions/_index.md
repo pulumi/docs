@@ -3,7 +3,7 @@ title: "Module extensions"
 title_tag: "Module extensions | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "extensions"
 meta_desc: "Explore members of the extensions module in the @pulumi/kubernetes package."
-git_sha: "d7871675b54727f63f1e2254d06653daf06cc8c8"
+git_sha: "2d5f66dff2f98c399f6df3e47fdd05918ad66597"
 block_external_search_index: true
 ---
 

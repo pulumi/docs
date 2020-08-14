@@ -6198,8 +6198,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="target_ww_ns_python">
-<a href="#target_ww_ns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ww_<wbr>ns</a>
+        <span id="target_wwns_python">
+<a href="#target_wwns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>wwns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
