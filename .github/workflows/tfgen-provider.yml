@@ -53,6 +53,13 @@ jobs:
         uses: actions/setup-dotnet@v1
       - run: make ensure ensure_tools
         working-directory: docs
+      - name: Go based tool installs
+        run: |
+          go get -u github.com/cbroglie/mustache
+          go get -u github.com/gobuffalo/packr
+          go get -u github.com/pkg/errors
+          go get -u gopkg.in/russross/blackfriday.v2
+        working-directory: docs
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: ${{ github.event.client_payload.project }}/sdk/nodejs
