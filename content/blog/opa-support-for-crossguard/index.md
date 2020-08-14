@@ -25,11 +25,11 @@ Pulumi [CrossGuard](https://www.pulumi.com/docs/guides/crossguard/) is a policy-
 
 Pulumi's web console offers tools to manage and enforce CrossGuard policy across your organization, ensuring that every infrastructure project is held to a high bar on policy compliance.
 
-CrossGuard policy is enforced during previews, ensuring that policy violations are found during development, not just at deployment time. On top of this, CrossGuard policies are enforced during deployments on each and every individual resource being deployed immediately before changes to that resource are applied. As a result, any change that would violate policy is rejected before it can be applied to your target cloud or Kubernetes environments.
+CrossGuard policy is enforced during previews, ensuring that policy violations are found during development, not just at deployment time. At deployment, policies are enforced on each resource immediately before changes to that resource are applied. As a result, any change that would violate policy is rejected before being applied to your target cloud or Kubernetes environments.
 
 ## What is OPA?
 
-[Open Policy Agent](https://www.openpolicyagent.org/) (OPA) provides policy-based control for cloud native environments. OPA provides a single authoring language (Rego) and policy runtime which can be used to enforce policy in a wide variety of environments including Kubernetes, Envoy, Terraform Kafka, SQL, Linux - and now Pulumi!
+[Open Policy Agent](https://www.openpolicyagent.org/) (OPA) provides policy-based control for cloud native environments. OPA provides a single authoring language (Rego) and policy runtime, which can be used to enforce policy in a wide variety of environments including Kubernetes, Envoy, Terraform Kafka, SQL, Linux - and now Pulumi!
 
 The [Rego language](https://www.openpolicyagent.org/docs/latest/policy-language/) is declarative, easy to use, and expressive - along with good integration in tools like Visual Studio Code.
 
@@ -76,7 +76,7 @@ deny[msg] {
 }
 ```
 
-The rule above uses the standard OPA Rego language to express a rule that enforces that any `Deployment` resource in Kubernetes must have a set of defined labels applied to it. All OPA rules used in Pulumi will be applied to an `input` object which is a JSON representation of the resource inputs for the Pulumi resource being validated. In particular, for a Kubernetes `Deployment` resource, this will have top level `kind`, `apiVersion`, `metadata` and `spec` fields which can be used to query aspects of the resource for policy enforcement.
+The rule above uses the standard OPA Rego language to express a rule that enforces that any `Deployment` resource in Kubernetes must have a set of defined labels applied to it. All OPA rules used in Pulumi will be applied to an `input` object, which is a JSON representation of the resource inputs for the Pulumi resource being validated. In particular, for a Kubernetes `Deployment` resource, this will have top level `kind`, `apiVersion`, `metadata`, and `spec` fields which can be used to query aspects of the resource for policy enforcement.
 
 To test out our rule, we can create a new Pulumi Kubernetes project and deploy it with the policy enforced.
 
@@ -125,7 +125,7 @@ Policy Violations:
     nginx-me0llhgr must include Kubernetes recommended labels: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/#labels
 ```
 
-Note that the preview fails because the policy was violated, preventing me from attempting to deploy this resource to my cluster!
+Note that the preview fails because the policy was violated, preventing me from deploying this resource to my cluster!
 
 The policy defined above has a "mandatory" policy, defined in OPA with `deny`. We can also define "advisory" policies using `warn` rules. For example, if we changed our policy from `deny` to `warn` and rerun - we will see the preview succeed:
 
@@ -191,7 +191,7 @@ Outputs:
 Permalink: https://app.pulumi.com/lukehoban/simple-kubernetes/dev2/updates/1
 ```
 
-We can now navigate to the URL for our update and see that the policy was enforced on this update. Note the badge noting that this deployment was protected by policy enforcement, and the list of policy violations.
+We can now navigate to the URL for our update and see that the policy was enforced. Note the badge showing that this deployment was protected by policy enforcement and the list of policy violations.
 
 ![Pulumi Console Policy Enforcement](./console-policy-enforcement.png)
 
@@ -225,4 +225,4 @@ With support in Visual Studio Code, authoring both your infrastructure and polic
 
 OPA support in Pulumi CrossGuard enables authoring cloud infrastructure policy using a familiar and popular policy authoring language while leveraging Pulumi's CrossGuard platform for policy enforcement from development to production. Along with existing support for TypeScript, JavaScript and Python - Pulumi CrossGuard offers a great breadth of authoring languages to meet the needs of any infrastructure team.
 
-Check out the open source [pulumi-policy-opa](https://github.com/pulumi/pulumi-policy-opa) project to learn more about the OPA integration with CrossGuard. And [get started](https://www.pulumi.com/docs/get-started/) with Pulumi for your modern cloud infrastructure and policy today.
+Check out the open source [pulumi-policy-opa](https://github.com/pulumi/pulumi-policy-opa) project to learn more about the OPA integration with CrossGuard. And [get started]({{< relref "/docs/get-started" >}}) with Pulumi for your modern cloud infrastructure and policy today.
